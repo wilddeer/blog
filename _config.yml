@@ -1,3 +1,14 @@
-name: Your New Jekyll Site
+name: Blog
 markdown: redcarpet
 pygments: true
+
+exclude: ['README.md']
+permalink: /:categories/:title
+
+loc:
+    name:
+        ru: "Блог"
+        en: "Blog"
+    footer:
+        ru: "Работает на Jekyll"
+        en: "Powered by Jekyll"
