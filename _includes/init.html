@@ -1,0 +1,7 @@
+{% assign lang = "ru" %}
+{% assign root = "/" %}
+
+{% if page.categories contains 'en' or page.url contains '/en/' %}
+	{% assign lang = "en" %}
+	{% assign root = "/en/" %}
+{% endif %}

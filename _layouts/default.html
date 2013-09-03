@@ -1,46 +1,40 @@
+{% include init.html %}
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{{ page.title }}</title>
-        <meta name="viewport" content="width=device-width">
+<!--[if lt IE 8]> <html class="no-js ie ie8 ie7"> <![endif]-->
+<!--[if IE 8]> <html class="no-js ie ie8"> <![endif]-->
+<!--[if IE 9]> <html class="no-js ie"> <![endif]-->
+<!--[if !IE]><!--> <html class="no-js"> <!--<![endif]-->
 
-        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
+<head>
+	<meta charset="utf-8">
+	<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="msapplication-tap-highlight" content="no">
 
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/css/main.css">
+	<title>{{ page.title }}</title>
 
-    </head>
-    <body>
+	<!-- styles -->
+	<link rel="stylesheet" href="//dizaina.net/common/css/boilerplate.css">
+	<link rel="stylesheet" href="/css/syntax.css">
+	<link rel="stylesheet" href="/css/main.css">
+	<link rel="stylesheet" href="//dizaina.net/common/css/font-awesome.css"> <!-- Font Awesome is awesome - fortawesome.github.com/Font-Awesome/ -->
 
-        <div class="container">
-          <div class="site">
-            <div class="header">
-              <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-              <a class="extra" href="/">home</a>
-            </div>
+	<!-- header scripts -->
+	<script type="text/javascript" src="//dizaina.net/common/js/modernizr.js"></script>
+</head>
 
-                {{ content }}
+<body>
+	<header>
+		<h1 class="title"><a href="{{ root }}">{{ site.loc.name | map: lang }}</a></h1>
+	</header>
 
-            <div class="footer">
-              <div class="contact">
-                <p>
-                  Your Name<br />
-                  What You Are<br />
-                  your@email.com
-                </p>
-              </div>
-              <div class="contact">
-                <p>
-                  <a href="http://github.com/yourusername/">github.com/yourusername</a><br />
-                  <a href="http://twitter.com/yourusername/">twitter.com/yourusername</a><br />
-                </p>
-              </div>
-            </div>
-          </div>
-        </div> <!-- /container -->
+	<div id="content">
+	{{ content }}
+	</div>
 
-    </body>
+	<footer>
+		{{ site.loc.footer | map: lang }}
+	</footer>
+</body>
 </html>
