@@ -1,15 +1,18 @@
-name: Blog
-markdown: redcarpet
+name: Пироги с фронтендом
+markdown: kramdown
 pygments: true
-relative_permalinks: true
+relative_permalinks: false
 
 exclude: ['README.md']
 permalink: /:categories/:title
 
 loc:
     name:
-        ru: "Блог"
-        en: "Blog"
+        ru: "Пироги с фронтендом"
+        en: "HTML pies"
+    in_lang:
+        ru: "RU"
+        eng: "EN"
     footer:
         ru: "Работает на Jekyll"
         en: "Powered by Jekyll"
