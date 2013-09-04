@@ -1,9 +1,9 @@
 {% include init.html %}
 <!DOCTYPE html>
-<!--[if lt IE 8]> <html class="no-js ie ie8 ie7"> <![endif]-->
-<!--[if IE 8]> <html class="no-js ie ie8"> <![endif]-->
-<!--[if IE 9]> <html class="no-js ie"> <![endif]-->
-<!--[if !IE]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if lt IE 8]> <html class="no-js ie ie8 ie7" lang="{{ lang }}"> <![endif]-->
+<!--[if IE 8]> <html class="no-js ie ie8" lang="{{ lang }}"> <![endif]-->
+<!--[if IE 9]> <html class="no-js ie" lang="{{ lang }}"> <![endif]-->
+<!--[if !IE]><!--> <html class="no-js" lang="{{ lang }}"> <!--<![endif]-->
 
 <head>
 	<meta charset="utf-8">
@@ -22,16 +22,42 @@
 
 	<!-- header scripts -->
 	<script type="text/javascript" src="//dizaina.net/common/js/modernizr.js"></script>
-	</head>
+</head>
 
+{% if page.post %}
+<body class="post">
+{% else %}
 <body>
+{% endif %}
 	<header>
+		<ul class="lang-switcher">
+			{% if lang == "en" %}
+			<li><a href="/">{{ site.loc.in_lang.ru }}</a></li>
+			<li><span>{{ site.loc.in_lang.eng }}</span></li>
+			{% else %}
+			<li><span>{{ site.loc.in_lang.ru }}</span></li>
+			<li><a href="/en/">{{ site.loc.in_lang.eng }}</a></li>
+			{% endif %}
+		</ul>
+
+		<a href="//dizaina.net" class="logo">&empty; dizaina.net</a>
+
+		{% if page.url == root %}
+		<h1 class="title">{{ site.loc.name | map: lang }}</h1>
+		{% else %}
 		<h1 class="title"><a href="{{ root }}">{{ site.loc.name | map: lang }}</a></h1>
+		{% endif %}
 	</header>
 
+	{% if page.post %}
+	<article id="content">
+		{{ content }}
+	</article>
+	{% else %}
 	<div id="content">
-	{{ content }}
+		{{ content }}
 	</div>
+	{% endif %}
 
 	<footer>
 	{{ site.loc.footer | map: lang }}
