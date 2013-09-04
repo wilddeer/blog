@@ -1,6 +1,7 @@
 name: Blog
 markdown: redcarpet
 pygments: true
+relative_permalinks: true
 
 exclude: ['README.md']
 permalink: /:categories/:title
