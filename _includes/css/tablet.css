@@ -1,3 +1,4 @@
+
 /*
  __             __       ___           __      
 /\ \__         /\ \     /\_ \         /\ \__   
@@ -8,33 +9,22 @@
     \/__/\/__/\/_/ \/___/  \/____/\/____/ \/__/                                             
 */
 
-@media all and (min-width: 18em) {
-	html {
-		font-size: 90%;
-	}
-}
-
-@media all and (min-width: 25em) {
-	html {
-		font-size: 100%;
-	}
-
-	.content ul.posts li {
-		padding-left: 1.2rem;
-	}
-
-	.content ul.posts li:before {
-		visibility: visible;
-	}
-}
-
+{% unless include.ie %}
 @media all and (min-width: 30em) {
+{% endunless %}
+
 	.content ul li {
 		padding-left: 2.3rem;
 	}
-}
 
+{% unless include.ie %}
+}
+{% endunless %}
+
+{% unless include.ie %}
 @media all and (min-width: 40em) {
+{% endunless %}
+
 	/* base */
 	h1 {
 		font-size: 3em;
@@ -69,4 +59,7 @@
 	.content ul.posts time:before {
 		content: " — "
 	}
+
+{% unless include.ie %}
 }
+{% endunless %}

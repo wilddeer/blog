@@ -1,3 +1,4 @@
+
 /*
   __                  __      __                     
  /\ \                /\ \    /\ \__                  
@@ -10,17 +11,18 @@
                                                 \/_/ 
 */
 
+{% unless include.ie %}
 @media all and (min-width: 75em) {
+{% endunless %}
+
 	/* base */
 	body > header {
 		margin-top: 0;
 	}
 
 	/* grid */
-	a.logo,
-	a.logo:visited {
+	a.logo {
 		position: absolute;
-		float: right;
 		right: 100%;
 		bottom: 100%;
 		margin-right: -2rem;
@@ -45,4 +47,7 @@
 	.content ul.posts li {
 		padding-left: 0;
 	}
+
+{% unless include.ie %}
 }
+{% endunless %}

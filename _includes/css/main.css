@@ -1,3 +1,4 @@
+
 /*
   _____      _                                  _         _           
  |  __ \    (_)                                | |       | |          
@@ -43,10 +44,6 @@ body {
 	line-height: 1.6;
 	height: 100%;
 	background: #fcfcfa;
-}
-
-body.post {
-	background: #fcfcfa; /*#474840;*/
 }
 
 article > *:first-child {
@@ -226,8 +223,7 @@ ul.lang-switcher li > * {
 	padding: 0.2rem 0.3rem 0.1rem;
 }
 
-a.logo,
-a.logo:visited {
+a.logo {
 	display: inline-block;
 	position: static;
 	background: #faa615;
@@ -236,6 +232,11 @@ a.logo:visited {
 	color: white;
 	text-decoration: none;
 	white-space: nowrap;
+}
+
+a.logo:visited {
+	background: #faa615;
+	color: white;
 }
 
 body.post a.logo,

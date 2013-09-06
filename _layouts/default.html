@@ -19,7 +19,20 @@
 
 	<!-- styles -->
 	<link rel="stylesheet" href="//dizaina.net/common/css/boilerplate.css">
-	<link rel="stylesheet" href="/css/style.css">
+	
+	<!--[if lt IE 8]>
+		<link rel="stylesheet" href="/css/ie7.css">
+		<link rel="stylesheet" href="//dizaina.net/common/css/font-awesome-ie7.css">
+	<![endif]-->
+	
+	<!--[if IE 8]>
+		<link rel="stylesheet" href="/css/ie8.css">
+	<![endif]-->
+
+	<!--[if gt IE 8]><!-->
+		<link rel="stylesheet" href="/css/style.css">
+	<!--<![endif]-->
+	
 	<link rel="stylesheet" href="//dizaina.net/common/css/font-awesome.css"> <!-- Font Awesome is awesome - fortawesome.github.com/Font-Awesome/ -->
 
 	<!-- header scripts -->
@@ -42,7 +55,7 @@
 			{% endif %}
 		</ul>
 
-		<a href="//dizaina.net" class="logo">&empty; dizaina.net</a>
+		<a href="//dizaina.net" class="logo"><span>&empty; </span>dizaina.net</a>
 
 		{% if page.url == root %}
 		<h1 class="title">{{ site.loc.name[lang] }}</h1>
