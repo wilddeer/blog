@@ -11,14 +11,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="msapplication-tap-highlight" content="no">
 
+	{% if page.title == "" %}
+	<title>{{ site.loc.name[lang] }}</title>
+	{% else %}
 	<title>{{ page.title }}</title>
+	{% endif %}
 
 	<!-- styles -->
 	<link rel="stylesheet" href="//dizaina.net/common/css/boilerplate.css">
-	<link rel="stylesheet" href="/css/syntax.css">
-	<link rel="stylesheet" href="/css/main.css">
-	<link rel="stylesheet" href="/css/tablet.css">
-	<link rel="stylesheet" href="/css/desktop.css">
+	<link rel="stylesheet" href="/css/style.css">
 	<link rel="stylesheet" href="//dizaina.net/common/css/font-awesome.css"> <!-- Font Awesome is awesome - fortawesome.github.com/Font-Awesome/ -->
 
 	<!-- header scripts -->
@@ -44,9 +45,9 @@
 		<a href="//dizaina.net" class="logo">&empty; dizaina.net</a>
 
 		{% if page.url == root %}
-		<h1 class="title">{{ site.loc.name | map: lang }}</h1>
+		<h1 class="title">{{ site.loc.name[lang] }}</h1>
 		{% else %}
-		<h1 class="title"><a href="{{ root }}">{{ site.loc.name | map: lang }}</a></h1>
+		<h1 class="title"><a href="{{ root }}">{{ site.loc.name[lang] }}</a></h1>
 		{% endif %}
 	</header>
 
@@ -61,7 +62,7 @@
 	{% endif %}
 
 	<footer>
-	{{ site.loc.footer | map: lang }}
+	{{ site.loc.footer[lang] }}
 	</footer>
 </body>
 </html>
