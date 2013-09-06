@@ -7,7 +7,6 @@
 
 <head>
 	<meta charset="utf-8">
-	<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="msapplication-tap-highlight" content="no">
@@ -18,6 +17,8 @@
 	<link rel="stylesheet" href="//dizaina.net/common/css/boilerplate.css">
 	<link rel="stylesheet" href="/css/syntax.css">
 	<link rel="stylesheet" href="/css/main.css">
+	<link rel="stylesheet" href="/css/tablet.css">
+	<link rel="stylesheet" href="/css/desktop.css">
 	<link rel="stylesheet" href="//dizaina.net/common/css/font-awesome.css"> <!-- Font Awesome is awesome - fortawesome.github.com/Font-Awesome/ -->
 
 	<!-- header scripts -->
@@ -50,11 +51,11 @@
 	</header>
 
 	{% if page.post %}
-	<article id="content">
+	<article class="content">
 		{{ content }}
 	</article>
 	{% else %}
-	<div id="content">
+	<div class="content">
 		{{ content }}
 	</div>
 	{% endif %}

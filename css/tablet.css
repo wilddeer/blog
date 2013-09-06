@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+@media all and (min-width: 18em) {
+	html {
+		font-size: 90%;
+	}
+}
+
+@media all and (min-width: 25em) {
+	html {
+		font-size: 100%;
+	}
+
+	.content ul.posts li {
+		padding-left: 1.2rem;
+	}
+
+	.content ul.posts li:before {
+		visibility: visible;
+	}
+}
+
+@media all and (min-width: 30em) {
+	.content ul li {
+		padding-left: 2.3rem;
+	}
+}
+
+@media all and (min-width: 40em) {
+	/* base */
+	h1 {
+		font-size: 3em;
+	}
+
+	h2 {
+		font-size: 2em;
+	}
+
+	h3 {
+		font-size: 1.5em;
+	}
+
+	h4 {
+		font-size: 1.2em;
+	}
+
+	/* grid */
+	body > header,
+	body > footer,
+	.content > * {
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+
+	.content ul.posts time {
+		display: inline;
+		white-space: nowrap;
+		font-size: 1rem;
+	}
+
+	.content ul.posts time:before {
+		content: " — "
+	}
+}

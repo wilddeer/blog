@@ -11,7 +11,7 @@ permalink: /:categories/:title
 loc:
     name:
         ru: "Утром доделаю"
-        en: "I'll finish in the morning"
+        en: "Will finish in the morning"
     in_lang:
         ru: "RU"
         eng: "EN"
