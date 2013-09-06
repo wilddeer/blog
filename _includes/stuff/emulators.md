@@ -1,0 +1,6 @@
+- [Windows Phone 8](http://www.microsoft.com/ru-ru/download/details.aspx?id=35471)
+- [Windows Phone 7.1](http://www.microsoft.com/ru-ru/download/details.aspx?id=27570) + [обновление до 7.8](http://www.microsoft.com/ru-ru/download/details.aspx?id=36474)
+- [Blackberry](http://us.blackberry.com/sites/developers/resources/simulators.html) (понадобится [VMware Player](https://my.vmware.com/web/vmware/free#desktop_end_user_computing/vmware_player/6_0))
+- [Opera Mobile Classic](http://www.opera.com/ru/developer/mobile-emulator)
+- [Симулятор Opera Mini](http://www.opera.com/ru/developer/opera-mini-simulator) --- Java-приложение. Так выглядит Опера Мини под Симбианом. Есть небольшие отличия в рендеринге от Оперы мини на айОси и Андроиде.
+- [Удаленный доступ к мобилкам Nokia](http://rda.cellulardata.com/devices) через Java-приложение. Придется зарегать учетку. Отрисовка дерганая, отклик тормозной, но глянуть, что из себя представляет телефон и какой там браузер живет --- сойдет.
