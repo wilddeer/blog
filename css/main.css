@@ -76,7 +76,7 @@ h4:first-child {
 }
 
 h1 {
-	font-size: 2.5em;
+	font-size: 3em;
 }
 
 h2 {
@@ -85,6 +85,10 @@ h2 {
 
 h3 {
 	font-size: 1.5em;
+}
+
+h4 {
+	font-size: 1.2em;
 }
 
 p, ul, ol, pre, figure {
@@ -110,11 +114,10 @@ a:hover,
 
 ul {
 	list-style-type: none;
-	padding-left: 0;
 }
 
 li {
-	margin: 1em 0;
+	margin: 1em 0 1em 2em;
 }
 
 #content ul li:before {
@@ -279,12 +282,15 @@ body.post h1.title a:hover {
 
 #content .post-title {
 	margin-top: 0;
-	font-size: 3em;
 }
 
 body.post #content {
 	background: #fff;
 	box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+}
+
+ul.posts li {
+	margin-left: 0;
 }
 
 ul.posts time {

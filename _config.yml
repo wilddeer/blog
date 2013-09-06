@@ -10,8 +10,8 @@ permalink: /:categories/:title
 
 loc:
     name:
-        ru: "Пироги с фронтендом"
-        en: "HTML pies"
+        ru: "Утром доделаю"
+        en: "I'll finish in the morning"
     in_lang:
         ru: "RU"
         eng: "EN"
