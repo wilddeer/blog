@@ -128,8 +128,7 @@ pre {
 	font-size: 0.8em;
 	padding: 1em;
 	overflow: auto;
-	max-height: 20rem;
-	background: #f5f2f0;
+	/*max-height: 20rem;*/
 }
 
 code {
