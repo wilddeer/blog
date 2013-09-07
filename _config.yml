@@ -1,7 +1,5 @@
-name: Пироги с фронтендом
-markdown: rdiscount
-rdiscount:
-  extensions: [smart]
+name: Утром доделаю
+markdown: kramdown
 pygments: true
 relative_permalinks: false
 
