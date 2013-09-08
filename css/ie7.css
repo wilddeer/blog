@@ -1,16 +1,20 @@
 ---
 ---
 @charset "utf-8";
-{% capture ie_stylesheet %}
-	{% include css/imports.css %}
-	{% include css/main.css ie="true" %}
-	{% include css/phone.css ie="true" %}
-	{% include css/tablet.css ie="true" %}
-	{% include css/desktop.css ie="true" %}
-	{% include css/syntax.css %}
-{% endcapture %}
 
-{{ ie_stylesheet | replace:'rem','em' }}
+{% include css/imports.css %}
+
+{% include css/rem-fallback.css %}
+
+{% include css/main.css ie="true" %}
+
+{% include css/phone.css ie="true" %}
+
+{% include css/tablet.css ie="true" %}
+
+{% include css/desktop.css ie="true" %}
+
+{% include css/syntax/github.css %}
 
 {% include css/ie8.css %}
 

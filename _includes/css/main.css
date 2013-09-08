@@ -123,12 +123,17 @@ li {
   width: 1.2rem;
   margin-left: -1.2rem;
 }
-
+	
 pre {
 	font-size: 0.8em;
 	padding: 1em;
 	overflow: auto;
-	/*max-height: 20rem;*/
+	box-shadow: 0 0 5px 0 rgba(64,0,0,0.1);
+	max-height: 30rem;
+}
+
+.no-boxshadow pre {
+	border: 1px solid #f4f2ec;
 }
 
 code {
@@ -246,6 +251,10 @@ body.post a.logo:visited {
 a.logo:hover,
 body.post a.logo:hover {
 	background: #f92672;
+}
+
+.ovi a.logo span {
+	display: none;
 }
 
 h1.title {

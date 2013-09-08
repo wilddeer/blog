@@ -4,6 +4,8 @@
 
 {% include css/imports.css %}
 
+{% include css/rem-fallback.css %}
+
 {% include css/main.css %}
 
 {% include css/phone.css %}
@@ -12,4 +14,4 @@
 
 {% include css/desktop.css %}
 
-{% include css/monokai.css %}
+{% include css/syntax/github.css %}
