@@ -5,6 +5,10 @@ h1: "Тестирование адаптивных сайтов"
 categories: protips
 ---
 
+<figure>
+	<img src="i/whiteboard.jpg">
+</figure>
+
 Как правильно [замечают](http://www.quirksmode.org/blog/archives/2010/02/the_iphone_obse.html) многие хорошие ребята, проверить работоспособность вашего адаптивного творения на айфончике недостаточно (ССЫЛКИ).
 Как минимум, стоит озаботиться несколькими основными платформами: iOS, Android (а там свой зоопарк браузеров), Windows Phone,
 Blackberry.

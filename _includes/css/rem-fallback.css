@@ -1,0 +1,51 @@
+body > header, body > footer, .content > * {
+	padding-right: 32px; /*1rem*/
+	padding-left: 32px; /*1rem*/
+}
+
+ul.lang-switcher {
+	right: 32px; /*2rem*/
+	padding-bottom: 1.59375px; /*0.1rem*/
+}
+
+ul.lang-switcher li {
+	font-size: 13px; /*0.8rem*/
+	margin-left: 8px; /*0.5rem*/
+}
+
+ul.lang-switcher li > * {
+	padding-bottom: 1.59375px; /*0.1rem*/
+	padding-top: 3.1875px; /*0.2rem*/
+	padding-right: 4.796875px; /*0.3rem*/
+	padding-left: 4.796875px; /*0.3rem*/
+}
+
+a.logo {
+	margin-right: -32px; /*-2rem*/
+	font-size: 13px; /*0.8rem*/
+	padding-bottom: 7.1875px; /*0.45rem*/
+	padding-top: 7.1875px; /*0.45rem*/
+	padding-right: 9.59375px; /*0.6rem*/
+	padding-left: 9.59375px; /*0.6rem*/
+}
+
+p, ul, ol, pre, figure, h1, h2, h3, h4 {
+	margin-bottom: 24px; /*1.5rem*/
+}
+
+.content {
+	padding-bottom: 16px; /*1rem*/
+	padding-top: 16px; /*1rem*/
+}
+
+.content ul li {
+	padding-left: 36.796875px; /*1.2rem*/
+}
+
+li {
+	margin-bottom: 16px; /*1rem*/
+}
+
+body > footer {
+	margin-top: 32px; /*2rem*/
+}
