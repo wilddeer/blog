@@ -1,0 +1,12 @@
+{% assign alt = include.a %}
+{% if include.c %}{% assign alt = include.c %}{% endif %}
+<figure>
+	{% if include.p %}
+	<a href="i/{{ include.src }}" target="_blank"><img src="i/p_{{ include.src }}" alt="{{ alt | strip_html }}"></a>
+	{% else %}
+	<img src="i/{{ include.src }}" alt="{{ alt | strip_html }}">
+	{% endif %}
+	{% if include.c %}
+	<figcaption>{{ alt }}</figcaption>
+	{% endif %}
+</figure>

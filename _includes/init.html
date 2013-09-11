@@ -1,7 +1,17 @@
+{% capture whitespaces%}
+
 {% assign lang = "ru" %}
 {% assign root = "/" %}
 
+{% include cats.htm c=page.categories %}
 {% if page.categories contains 'en' or page.url contains '/en/' %}
 	{% assign lang = "en" %}
 	{% assign root = "/en/" %}
 {% endif %}
+
+{% capture content_parsed %}{{ content }}{% endcapture %}
+{% if lang == "ru" %}
+{% capture content_parsed %}{{ content_parsed | replace: '“', '«' | replace: '”', '»' }}{% endcapture %}
+{% endif %}
+
+{% endcapture %}

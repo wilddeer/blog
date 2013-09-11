@@ -67,11 +67,11 @@
 
 	{% if page.post %}
 	<article class="content">
-		{{ content }}
+		{{ content_parsed }}
 	</article>
 	{% else %}
 	<div class="content">
-		{{ content }}
+		{{ content_parsed }}
 	</div>
 	{% endif %}
 
@@ -80,5 +80,6 @@
 	</footer>
 
 	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script src="/js/scripts.js"></script>
 </body>
 </html>

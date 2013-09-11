@@ -2,7 +2,13 @@
 layout: default
 post: true
 ---
-<time class="post-date" datetime="{{ page.date }}">{{ page.date | date_to_string }}</time>
-<h1 class="post-title">{{ page.h1 }}</h1>
+{% include cats.htm c=page.categories %}
+<header>
+	<time class="post-date" datetime="{{ page.date }}">{{ page.date | date_to_string }}</time>
+	{% if site.cats[cats][page.lang] %}
+	<h3 class="post-cat-title"><a href="../">{{ site.cats[cats][page.lang] }}</a></h3>
+	{% endif %}
+	<h1 class="post-title">{{ page.h1 }}</h1>
+</header>
 
 {{ content }}

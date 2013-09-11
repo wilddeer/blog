@@ -6,6 +6,12 @@ relative_permalinks: false
 exclude: ['README.md']
 permalink: /:categories/:title
 
+cats:
+    rare-species:
+        ru: "Редкие звери"
+        en: "Rare species"
+        link: "rare-species"
+
 loc:
     name:
         ru: "Утром доделаю"
