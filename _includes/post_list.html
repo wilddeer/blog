@@ -1,12 +1,18 @@
 <ul class="posts">
 	{% for post in site.posts %}
+		{% include cats.htm c=post.categories %}
+		{% if site.cats[cats][page.lang] and site.cats[cats][page.lang] != page.title %}
+			{% capture cat %}<span class="cat-link">(<a href="{{ site.cats[cats].link }}/">{{site.cats[cats][page.lang]}}</a>)</span>{% endcapture %}
+		{% else %}
+			{% assign cat = "" %}
+		{% endif %}
 		{% if page.url != "/" %}
 			{% if post.url contains page.url %}
-			<li><a href="{{ post.url }}">{{ post.title }}</a><time datetime="{{ post.date }}">{{ post.date | date_to_string }}</time></li>
+			<li><a href="{{ post.url }}">{{ post.title }}</a> {{ cat }}<time datetime="{{ post.date }}">{{ post.date | date_to_string }}</time></li>
 			{% endif %}
 		{% else %}
 			{% unless post.url contains "/en/" %}
-			<li><a href="{{ post.url }}">{{ post.title }}</a><time datetime="{{ post.date }}">{{ post.date | date_to_string }}</time></li>
+			<li><a href="{{ post.url }}">{{ post.title }}</a> {{ cat }}<time datetime="{{ post.date }}">{{ post.date | date_to_string }}</time></li>
 			{% endunless %}
 		{% endif %}
 	{% endfor %}
