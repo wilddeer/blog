@@ -10,6 +10,73 @@
                                                \ \_\ 
                                                 \/_/ 
 */
+{% unless include.ie %}
+@media all and (min-width: 60em) { /* ~960px */
+{% endunless %}
+
+	/* gallery */
+
+	.js-gallery .captions > span {
+		width: auto;
+		height: auto;
+		display: inline-block;
+		padding: 0.3em 0.5em 0.35em;
+		cursor: pointer;
+		margin-right: 1em;
+		margin-bottom: 0.5rem;
+		border: 1px dashed transparent;
+		border-radius: 0.5em;
+		position: relative;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+
+	.js-gallery .captions > span:hover {
+		border-color: #e6e4e1;
+	}
+
+	.js-gallery .captions > span.active {
+		border: 1px solid #dfddd7;
+		background: transparent;
+		box-shadow: none;
+	}
+
+	.csstransforms .js-gallery .captions > span.active:after {
+		position: absolute;
+		content: '';
+		top: 100%;
+		left: 50%;
+		width: 0.6em;
+		height: 0.6em;
+		margin-left: -0.3em;
+		margin-top: -0.35em;
+		background: white;
+		border: 1px solid #dfddd7;
+		border-left: 0;
+		border-top: 0;
+		-webkit-transform: rotate(45deg);
+		-moz-transform: rotate(45deg);
+		-o-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}
+
+	.js-gallery .captions > span > span {
+		display: inline;
+		color: #168cd2;
+		border-bottom: 1px dashed;
+		white-space: nowrap;
+	}
+
+	.js-gallery.active figure figcaption {
+		display: none;
+	}
+
+{% unless include.ie %}
+}
+{% endunless %}
+
 
 {% unless include.ie %}
 @media all and (min-width: 75em) {

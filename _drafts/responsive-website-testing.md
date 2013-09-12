@@ -95,13 +95,26 @@ For fun:
 
 ###Android
 
-В стоковом браузере набираем в адресную строку about:debug. После этого в настройках браузера появляется пункт "Отладка" с разными опциями, в том числе возможностью включить консоль.
+В **стоковом браузере** набираем в адресную строку `about:debug`. После этого в настройках браузера появляется пункт "Отладка" с разными опциями, в том числе возможностью включить консоль.
 
 <div class="js-gallery">
 {% include pic.htm src='android_browser_dev_options.png' c='Опции отладки' p=true %}
 {% include pic.htm src='android_browser_console.png' c='Консоль' p=true %}
 </div>
 
+В **Android Chrome** можно воспользоваться [отладкой через десктопный хром](https://developers.google.com/chrome-developer-tools/docs/remote-debugging):
 
+- Ставим [плагин](https://chrome.google.com/webstore/detail/adb/dpngiggdglpdnjdoaefidgiigpemgage) на десктопный Хром
+- Включаем USB debugging в настройках девайса
+- Подключаем девайс шнурком
+- Профит
 
-##Про роутер
+Получаем полный набор инструментов, как и в десктопной девелоперской панели. Все изменения в реалтайме отображаются на девайсе:
+
+<div class="js-gallery" data-force="true">
+	{% include pic.htm src='chrome-devtools.png' c='Панель разработки' t=true %}
+	{% include pic.htm src='chrome-debug.png' c='Результат на девайсе' p=true t=true %}
+	{% include pic.htm src='chrome-devtools.png' c='Панель разработки' t=true %}
+</div>
+
+##Как протестировать сайт, запущенный на локальном веб-сервере
