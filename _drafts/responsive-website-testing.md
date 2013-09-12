@@ -97,18 +97,18 @@ For fun:
 {% include pic.htm src='android_browser_console.png' c='Консоль' p=true %}
 </div>
 
-В **Android Chrome** можно воспользоваться [отладкой через десктопный хром](https://developers.google.com/chrome-developer-tools/docs/remote-debugging):
+В **Хроме под Андроидом** можно воспользоваться [отладкой через десктопный хром](https://developers.google.com/chrome-developer-tools/docs/remote-debugging):
 
 - Ставим [плагин](https://chrome.google.com/webstore/detail/adb/dpngiggdglpdnjdoaefidgiigpemgage) на десктопный Хром
 - Включаем USB debugging в настройках девайса
 - Подключаем девайс шнурком
 - Профит
 
-Получаем полный набор инструментов, как и в десктопной девелоперской панели. Все изменения в реалтайме отображаются на девайсе:
+Получаем полный набор инструментов, как в десктопной девелоперской панели. Все изменения в реалтайме отображаются на девайсе:
 
 <div class="js-gallery" data-force="true">
-	{% include pic.htm src='chrome-devtools.png' c='Панель разработки' %}
+	{% include pic.htm src='chrome-devtools.png' c='Девтулз' %}
 	{% include pic.htm src='chrome-debug.png' c='Результат на девайсе' p=true %}
 </div>
 
-##Как протестировать сайт, запущенный на локальном веб-сервере
+##Как тестировать сайт, запущенный на локальном веб-сервере
