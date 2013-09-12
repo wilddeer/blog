@@ -165,7 +165,7 @@ pre code {
 
 .js-gallery .captions {
 	font-size: 0.9rem;
-	margin-bottom: 1rem;
+	margin-bottom: 0.5rem;
 	text-align: center;
 	display: none;
 }
@@ -203,7 +203,9 @@ pre code {
 
 .js-gallery .slides {
 	overflow: hidden;
-	margin-bottom: 1.5rem;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	margin-bottom: 1rem;
 	-ms-touch-action: pan-y;
 }
 
@@ -374,13 +376,13 @@ h1.title a {
 	border-bottom: 2px solid;
 }
 
-body.post h1.title a {
+/*body.post h1.title a {
 	color: #a19e91;
 }
 
 body.post h1.title a:hover {
 	color: white;
-}
+}*/
 
 .content {
 	padding-top: 1rem;
