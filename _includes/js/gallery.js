@@ -177,7 +177,7 @@ $.fn.dzGallery = function () {
 			slideBlock = document.createElement('div');
 			slideBlock.className = 'slides';
 
-			for (var i = gallery.self.children.length - 1; i >= 0; i--) {
+			for (var i = 0; i <= gallery.self.children.length - 1; i++) {
 				var slide = gallery.self.children[i],
 					caption = document.createElement('span'),
 					captionText = slide.getElementsByTagName('figcaption')[0].innerText,
