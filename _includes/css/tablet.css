@@ -63,3 +63,31 @@
 {% unless include.ie %}
 }
 {% endunless %}
+
+
+/* HEIGHT STUFF */
+
+{% unless include.ie %}
+@media all and (min-height: 600px) {
+{% endunless %}
+
+	figure img {
+		max-height: 450px;
+	}
+
+{% unless include.ie %}
+}
+{% endunless %}
+
+
+{% unless include.ie %}
+@media all and (min-height: 750px) {
+{% endunless %}
+
+	figure img {
+		max-height: none;
+	}
+
+{% unless include.ie %}
+}
+{% endunless %}

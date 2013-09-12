@@ -19,18 +19,12 @@
 	.js-gallery .captions > span {
 		width: auto;
 		height: auto;
-		display: inline-block;
 		padding: 0.3em 0.5em 0.35em;
-		cursor: pointer;
-		margin-right: 1em;
 		margin-bottom: 0.5rem;
 		border: 1px dashed transparent;
 		border-radius: 0.5em;
 		position: relative;
-		-webkit-user-select: none;
-		-moz-user-select: none;
-		-ms-user-select: none;
-		user-select: none;
+		background: transparent;
 	}
 
 	.js-gallery .captions > span:hover {
@@ -40,7 +34,6 @@
 	.js-gallery .captions > span.active {
 		border: 1px solid #dfddd7;
 		background: transparent;
-		box-shadow: none;
 	}
 
 	.csstransforms .js-gallery .captions > span.active:after {
@@ -51,7 +44,7 @@
 		width: 0.6em;
 		height: 0.6em;
 		margin-left: -0.3em;
-		margin-top: -0.35em;
+		margin-top: -0.3em;
 		background: white;
 		border: 1px solid #dfddd7;
 		border-left: 0;
@@ -113,6 +106,10 @@
 
 	.content ul.posts li {
 		padding-left: 0;
+	}
+
+	figure img {
+		max-height: none;
 	}
 
 {% unless include.ie %}

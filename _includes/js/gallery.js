@@ -4,166 +4,170 @@ $.fn.dzGallery = function () {
 			gallery = {
 				slides: [],
 				captions: [],
-				self: _this
+				self: _this,
+				width: _this.offsetWidth
 			},
 			speed = 300,
+			flickTime = 250,
 			slideWidth,
 			activeSlide,
-			galleryBlock = $(this),
 			captionBlock,
-			slideBlock,
-			imgs = galleryBlock.find('img');
+			slideBlock;
 
 		function changeActiveSlide(n) {
-			console.log(n);
-			if (!gallery.slides[n]) return;
+			if (!gallery.slides[n]) n = activeSlide;
 
-			if (activeSlide !== undefined) {
-				for (var i in gallery.captions) {
-					gallery.captions[i].className = '';
+			if (n !== activeSlide) {
+				if (activeSlide !== undefined) {
+					for (var i in gallery.captions) {
+						gallery.captions[i].className = '';
+					}
 				}
+
+				gallery.captions[n].className = 'active';
 			}
 
-			gallery.captions[n].className = 'active';
-
-			slideBlock.style.webkitTransform = 'translate(-' + slideWidth*n + '%,0)' + 'translateZ(0)';
-			slideBlock.style.msTransform = 
-			slideBlock.style.MozTransform = 
-			slideBlock.style.OTransform = 'translateX(-' + slideWidth*n + '%)';
+			changePos(-n*gallery.width, speed);
 
 			activeSlide = n;
 		}
 
-		/*function refreshStatus() {
-			function widthCheck() {
-				if (_this.scrollWidth > _this.offsetWidth) {
-					console.log(window.innerWidth);
-					if (window.innerWidth > widthThreshold) widthThreshold = window.innerWidth;
-					galleryBlock.addClass('active');
-					galleryActive = true;
-				}
-				else {
-					galleryActive = false;
-				}
-			}
+		function changePos(pos, speed) {
+			var time = speed?speed+'ms':'';
 
-			if (!galleryActive) {
-				widthCheck();
-			}
-			else if (window.innerWidth > widthThreshold) {
-				galleryBlock.removeClass('active');
-				widthCheck();
-			}
-		}*/
+			slideBlock.style.webkitTransitionDuration = 
+			slideBlock.style.MozTransitionDuration = 
+			slideBlock.style.msTransitionDuration = 
+			slideBlock.style.OTransitionDuration = 
+			slideBlock.style.transitionDuration = time;
 
-		/*function watch() {
-			$(window).on('resize orientationchange', function() {
-				refreshStatus();
-			});
-
-			imgs.each(function() {
-				$(this).on('load', function() {
-					refreshStatus();
-				});
-			});
-
-			refreshStatus();
-		}*/
-
-		function newTouch() {
-			slideBlock.addEventListener('touchstart', start, false);
-			slideBlock.addEventListener('touchmove', move, false);
-			slideBlock.addEventListener('touchend', end, false);
+			slideBlock.style.webkitTransform = 'translate('+pos+'px,0)' + 'translateZ(0)';
+			slideBlock.style.msTransform = 
+			slideBlock.style.MozTransform = 
+			slideBlock.style.OTransform = 
+			slideBlock.style.transform = 'translateX('+pos+'px)';
 		}
 
-		function touchScroll() {
-			function animate(block, speed, fallback) {
-				var distance = window.innerWidth;
-				var time = distance/speed;
+		function touchInit() {
+			var start = {},
+				diff = {},
+				isScrolling,
+				p = false,
+				touchInProgress = false,
+				tEvents = {
+					start: 'touchstart',
+					move: 'touchmove',
+					end: 'touchend',
+					cancel: 'touchcancel'
+				};
 
-				block.css('-webkit-transition', '-webkit-transform linear '+time/1000+'s, opacity linear '+time/1000+'s');
-				block.css({
-					'-webkit-transform': 'translate3d(-960px,0,0)',
-					'opacity': '0'
-				});
+			if (window.navigator.msPointerEnabled) {
+				p=true;
 
-				setTimeout(function() {
-					block.css({
-						'-webkit-transform': '',
-						'-webkit-transition': '',
-						'opacity': ''
-					});
-
-					fallback();
-				}, time);
+				tEvents = {
+					start: 'MSPointerDown',
+					move: 'MSPointerMove',
+					end: 'MSPointerUp',
+					cancel: 'MSPointerCancel'
+				};
 			}
 
-			if(Modernizr.touch) {
-				var scrollStartPosX = 0,
-					scrollStartPosY = 0,
-					scrollLastPosX = 0,
-					scrollLastPosY = 0,
-					x,
-					y,
-					lastTime,
-					timeDif;
+			function tStart(event) {
+				if (window.navigator.msPointerEnabled
+					&& (!event.isPrimary || event.pointerType !== event.MSPOINTER_TYPE_TOUCH)) return;
 
-				galleryBlock.on('touchstart', function(e) {
-					e.preventDefault();
+				start = {
+					x: (p?event.clientX:event.touches[0].clientX),
+					y: (p?event.clientY:event.touches[0].clientY),
 
-					scrollStartPosX = e.originalEvent.touches[0].clientX;
-					scrollStartPosY = e.originalEvent.touches[0].clientY;
-					scrollLastPosX = e.originalEvent.touches[0].clientX;
-					scrollLastPosY = e.originalEvent.touches[0].clientY;
+					time: +new Date
+				};
+				
+				isScrolling = undefined;
 
-					lastTime = new Date();
-				});
+				diff = {};
 
-				galleryBlock.on('touchmove', function(e) {
-					e.preventDefault();
+				if (p) touchInProgress = true;
+			}
 
-					var diffX = e.originalEvent.touches[0].clientX - scrollStartPosX;
+			function tMove(event) {
+				if (((event.touches && event.touches.length > 1) || (event.scale && event.scale !== 1)) ||
+					(window.navigator.msPointerEnabled && (!event.isPrimary || !touchInProgress))) return;
 
-					x = scrollLastPosX - e.originalEvent.touches[0].clientX;
-					y = scrollLastPosY - e.originalEvent.touches[0].clientY;
+				diff = {
+					x: (p? event.clientX : event.touches[0].clientX) - start.x,
+					y: (p? event.clientY : event.touches[0].clientY) - start.y
+				}
 
-					scrollLastPosX = e.originalEvent.touches[0].clientX;
-					scrollLastPosY = e.originalEvent.touches[0].clientY;
+				if (isScrolling === undefined) {
+					isScrolling = (Math.abs(diff.x) < Math.abs(diff.y));
+				}
 
-					gallery[activeSlide].slide.css({
-						'-webkit-transform': 'translate3d('+diffX+'px,0,0)'
-					});
+				if (isScrolling) return;
 
-					timeDif = (new Date()).getTime() - lastTime.getTime();
-					lastTime = new Date();
-				});
+				event.preventDefault();
 
-				galleryBlock.on('touchend', function(e) {
-					e.preventDefault();
+				diff.x = 
+				diff.x / 
+					(
+						(!activeSlide && diff.x > 0
+						|| activeSlide == gallery.slides.length - 1 && diff.x < 0)
+						?                      
+						(Math.abs(diff.x)/gallery.width*2 + 1)
+						:
+						1
+					);
+				
+				changePos(diff.x - gallery.width*activeSlide);
+			}
 
-					console.log(e);
+			function tEnd(event) {
+				if (isScrolling ||
+					(window.navigator.msPointerEnabled && !event.isPrimary)) return;
 
-					var	xMod = (x<0?-x:x),
-						yMod = (y<0?-y:y),
-						speed = xMod/timeDif;
+				var duration = Number(+new Date - start.time);
 
-					console.log(x);
-					console.log(speed);
+				if ((duration < flickTime && Math.abs(diff.x) > 20)
+					|| (Math.abs(diff.x) > gallery.width/3)) {
 
-					if (xMod > yMod) {
-						if (x>0) {
-							animate(gallery[activeSlide].slide, speed, function() {
-								changeActiveSlide(activeSlide+1);
-							});
-						}
-						else {
-							animate(gallery[activeSlide].slide, speed, function() {
-								changeActiveSlide(activeSlide-1);
-							});	
-						}
+					if (diff.x < 0) {
+						changeActiveSlide(activeSlide+1);		
 					}
-				});
+					else {
+						changeActiveSlide(activeSlide-1);		
+					}
+
+				}
+				else {
+					changeActiveSlide(activeSlide);
+				}
+
+				if (p) {
+					if (diff.x === undefined) {
+						touchInProgress = false;
+					}
+					else {
+						setTimeout(function() {
+							touchInProgress = false;
+						}, 10)
+					}
+				}
 			}
+
+			slideBlock.addEventListener(tEvents.start, tStart, false);
+			slideBlock.addEventListener(tEvents.move, tMove, false);
+			slideBlock.addEventListener(tEvents.end, tEnd, false);
+			slideBlock.addEventListener(tEvents.cancel, tEnd, false);
+
+			if (p) {
+				slideBlock.addEventListener('click', function(event) {
+					touchInProgress && event.preventDefault();
+				}, false);
+			}
+		}
+		function onWidthChange() {
+			gallery.width = gallery.self.offsetWidth;
+			changePos(-activeSlide*gallery.width);
 		}
 
 		function setup() {
@@ -173,28 +177,25 @@ $.fn.dzGallery = function () {
 			slideBlock = document.createElement('div');
 			slideBlock.className = 'slides';
 
-			galleryBlock.children().each(function() {
-				var slide = this,
-					captionText = $(slide).find('figcaption').text(),
+			for (var i = gallery.self.children.length - 1; i >= 0; i--) {
+				var slide = gallery.self.children[i],
+					caption = document.createElement('span'),
+					captionText = slide.getElementsByTagName('figcaption')[0].innerText,
 					n = gallery.slides.length;
 
 				gallery.slides.push(slide);
 
-				var caption = document.createElement('span');
 				caption.innerHTML = '<span>'+captionText+'</span>';
-				caption.addEventListener('click', function() {changeActiveSlide(n);}, false);
+				caption.addEventListener('click', function(x) {
+					return function() {changeActiveSlide(x);}
+				}(n), false);
 
 				gallery.captions.push(caption);
-			});
+			}
 
 			slideWidth = 100/gallery.slides.length;
 
 			slideBlock.style.width = gallery.slides.length*100+'%';
-			slideBlock.style.webkitTransitionDuration = 
-			slideBlock.style.MozTransitionDuration = 
-			slideBlock.style.msTransitionDuration = 
-			slideBlock.style.OTransitionDuration = 
-			slideBlock.style.transitionDuration = speed + 'ms';
 
 			for (var i in gallery.slides) {
 				slideBlock.appendChild(gallery.slides[i]);
@@ -207,13 +208,14 @@ $.fn.dzGallery = function () {
 
 			changeActiveSlide(0);
 
-			galleryBlock.addClass('active');
+			gallery.self.className += ' active';
+
+			window.addEventListener('resize', onWidthChange, false);
+			window.addEventListener('orientationchange', onWidthChange, false);
 		}
 
 		setup();
 
-		//touchScroll();
-
-		Modernizr.csstransforms && Modernizr.touch && newTouch();
+		Modernizr.csstransforms && (Modernizr.touch || window.navigator.msPointerEnabled) && touchInit();
 	});
 };
