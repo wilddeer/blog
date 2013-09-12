@@ -6,9 +6,7 @@ categories: p
 lang: ru
 ---
 
-<figure>
-	<img src="i/whiteboard.jpg" alt="Доска результатами теста сайта в различных браузерах">
-</figure>
+{% include pic.htm src='whiteboard.jpg' a='Доска результатами теста сайта в различных браузерах' %}
 
 Как правильно [замечают](http://www.quirksmode.org/blog/archives/2010/02/the_iphone_obse.html) многие хорошие ребята, проверить работоспособность вашего адаптивного творения на айфончике недостаточно (ССЫЛКИ).
 Как минимум, стоит озаботиться несколькими основными платформами: iOS, Android (а там свой зоопарк браузеров), Windows Phone,
@@ -30,10 +28,7 @@ Blackberry.
 соответственно, 6, 7 и 8 осликов. IE6 я лично держу для всяких редких случаев. На его полноценную поддержку я давно забил. Делаем еще одну виртуалку на Win 7 (512 Mb оперативки) и ставим туда IE9. Все это хозяйство замечательно летает
 параллельно.
 
-<figure>
-	<img src="i/virtual_machines.jpg">
-	<figcaption>Уи-и-и-и</figcaption>
-</figure>
+{% include pic.htm src='virtual_machines.jpg' c='Уи-и-и-и' %}
 
 В IE10 по умолчанию включено автообновление, поэтому, надеюсь, когда выйдет 11, под десятый не придется делать еще одну виртуалку.
 
@@ -112,9 +107,8 @@ For fun:
 Получаем полный набор инструментов, как и в десктопной девелоперской панели. Все изменения в реалтайме отображаются на девайсе:
 
 <div class="js-gallery" data-force="true">
-	{% include pic.htm src='chrome-devtools.png' c='Панель разработки' t=true %}
-	{% include pic.htm src='chrome-debug.png' c='Результат на девайсе' p=true t=true %}
-	{% include pic.htm src='chrome-devtools.png' c='Панель разработки' t=true %}
+	{% include pic.htm src='chrome-devtools.png' c='Панель разработки' %}
+	{% include pic.htm src='chrome-debug.png' c='Результат на девайсе' p=true %}
 </div>
 
 ##Как протестировать сайт, запущенный на локальном веб-сервере

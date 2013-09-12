@@ -183,8 +183,7 @@ fieldset {
 	padding: 0;
 }
 
-label[for],
-label! > input[type="checkbox"] {
+label[for] {
 	cursor: pointer;
 }
 
