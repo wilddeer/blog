@@ -115,3 +115,44 @@
 {% unless include.ie %}
 }
 {% endunless %}
+
+
+{% unless include.ie %}
+@media all and (min-width: 100em) {
+{% endunless %}
+
+	.js-gallery.active:before {
+		display: block;
+		position: absolute;
+		content: '';
+		top: 0;
+		left: 0;
+		bottom: 0;
+		width: 19%;
+		z-index: 10;
+		background-image: -ms-linear-gradient(left, rgba(255,255,255,1), rgba(255,255,255,0));
+		background-image: -webkit-linear-gradient(left, rgba(255,255,255,1), rgba(255,255,255,0));
+		background-image: -o-linear-gradient(left, rgba(255,255,255,1), rgba(255,255,255,0));
+		background-image: -moz-linear-gradient(left, rgba(255,255,255,1), rgba(255,255,255,0));
+		background-image: linear-gradient(left, rgba(255,255,255,1), rgba(255,255,255,0));
+	}
+
+	.js-gallery.active:after {
+		display: block;
+		position: absolute;
+		content: '';
+		top: 0;
+		right: 0;
+		bottom: 0;
+		width: 19%;
+		z-index: 10;
+		background-image: -ms-linear-gradient(left, rgba(255,255,255,0), rgba(255,255,255,1));
+		background-image: -webkit-linear-gradient(left, rgba(255,255,255,0), rgba(255,255,255,1));
+		background-image: -o-linear-gradient(left, rgba(255,255,255,0), rgba(255,255,255,1));
+		background-image: -moz-linear-gradient(left, rgba(255,255,255,0), rgba(255,255,255,1));
+		background-image: linear-gradient(left, rgba(255,255,255,0), rgba(255,255,255,1));
+	}
+
+{% unless include.ie %}
+}
+{% endunless %}

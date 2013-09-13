@@ -4,8 +4,7 @@ $.fn.dzGallery = function () {
 			gallery = {
 				slides: [],
 				captions: [],
-				self: _this,
-				width: _this.offsetWidth
+				self: _this
 			},
 			speed = 300,
 			flickTime = 250,
@@ -171,6 +170,10 @@ $.fn.dzGallery = function () {
 		}
 
 		function setup() {
+			gallery.self.className += ' active';
+
+			gallery.width = gallery.self.offsetWidth;
+
 			captionBlock = document.createElement('div');
 			captionBlock.className = 'captions';
 
@@ -207,8 +210,6 @@ $.fn.dzGallery = function () {
 			gallery.self.appendChild(slideBlock);
 
 			changeActiveSlide(0);
-
-			gallery.self.className += ' active';
 
 			window.addEventListener('resize', onWidthChange, false);
 			window.addEventListener('orientationchange', onWidthChange, false);
