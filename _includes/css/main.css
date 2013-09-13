@@ -127,7 +127,7 @@ li {
 }
 	
 pre {
-	font-size: 0.8em;
+	font-size: 0.8rem;
 	padding: 1em;
 	overflow: auto;
 	box-shadow: 0 0 5px 0 rgba(64,0,0,0.1);
@@ -149,7 +149,11 @@ pre code {
 	border: 0;
 	border-radius: 0;
 	padding: 0;
-	font-size: 1em;
+	white-space: pre;
+	word-wrap: normal;
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
 }
 
 .gallery,
@@ -177,7 +181,7 @@ pre code {
 	cursor: pointer;
 	margin-right: 1em;
 	background: #e2e0db;
-	border-radius: 0.5rem;
+	border-radius: 1rem;
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
@@ -217,12 +221,11 @@ pre code {
 	outline: none;
 }
 
-.js .js-gallery {
-	margin-left: 0;
-	margin-right: 0;
+.js-gallery.active {
+	position: relative;
 	padding-left: 0;
 	padding-right: 0;
-	max-width: none;
+	max-width: 120rem;
 }
 
 .js-gallery.active {
