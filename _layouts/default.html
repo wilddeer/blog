@@ -10,6 +10,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="msapplication-tap-highlight" content="no">
+	{% if site.dev %}
+	<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+	{% endif %}
 
 	{% if page.title == "" %}
 	<title>{{ site.loc.name[lang] }}</title>
@@ -36,6 +39,9 @@
 	<link rel="stylesheet" href="//dizaina.net/common/css/font-awesome.css"> <!-- Font Awesome is awesome - fortawesome.github.com/Font-Awesome/ -->
 
 	<!-- header scripts -->
+	{% if site.dev %}
+	<script src="http://jsconsole.com/remote.js?D4B3A2E7-98DC-4EE9-A343-488D573CAE1D"></script>
+	{% endif %}
 	<script src="/js/header_scripts.js"></script>
 </head>
 
