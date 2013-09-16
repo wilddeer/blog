@@ -208,6 +208,7 @@ pre code {
 }
 
 .js-gallery .slides {
+	position: relative;
 	overflow: hidden;
 	padding-top: 0.5rem;
 	padding-bottom: 0.5rem;
