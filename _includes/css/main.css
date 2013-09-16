@@ -101,9 +101,9 @@ a:visited {
 a:hover,
 .lang-switcher a:hover,
 .title a:hover {
-  color: #fff;
-  background: #f92672;
-  text-decoration: none;
+	color: #fff;
+	background: #f92672;
+	text-decoration: none;
 }
 
 ul {
@@ -119,11 +119,11 @@ li {
 }
 
 .content ul li:before {
-  content: "— ";
-  position: absolute;
-  display: inline-block;
-  width: 1.2rem;
-  margin-left: -1.2rem;
+	content: "— ";
+	position: absolute;
+	display: inline-block;
+	width: 1.2rem;
+	margin-left: -1.2rem;
 }
 	
 pre {
@@ -155,6 +155,8 @@ pre code {
 	-o-tab-size: 4;
 	tab-size: 4;
 }
+
+/* gallery */
 
 .gallery,
 .js-gallery {
@@ -275,11 +277,11 @@ figure figcaption {
 }
 
 figure * + figcaption {
-	padding-top: 0.8em;
+	padding-top: 0.8rem;
 	padding-bottom: 0;
 }
 
-.tip {
+/*.tip {
 	position: relative;
 	border-bottom: 1px dotted;
 }
@@ -303,7 +305,7 @@ figure * + figcaption {
 
 .tip:hover .tip-content {
 	display: block;
-}
+}*/
 
 /* grid */
 body > header,
