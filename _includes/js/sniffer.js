@@ -6,6 +6,25 @@
 */
 
 var Sniffer = {
+	browser: {
+		/*
+		name
+		version
+		engine
+		*/
+	},
+	os: {
+		/*
+		name
+		version
+		*/
+	},
+	features: {
+		/*
+		bw
+		*/
+	},
+
 	init: function () {
 		this.browser = this.searchString(this.dataBrowser) || '';
 		this.version = this.searchVersion(navigator.userAgent)
@@ -33,18 +52,19 @@ var Sniffer = {
 		for (var i=0;i<data.length;i++)	{
 			var dataString = data[i].string;
 			var dataProp = data[i].prop;
-			this.versionSearchString = data[i].versionSearch || data[i].identity;
+			this.versionSearchString = data[i].versionSearch || data[i].name;
 			if (dataString) {
 				if (dataString.indexOf(data[i].subString) != -1)
-					return data[i].identity;
+					return data[i].name;
 			}
 			else if (dataProp)
-				return data[i].identity;
+				return data[i].name;
 		}
 	},
 	searchVersion: function (dataString) {
 		var index = dataString.indexOf(this.versionSearchString);
 		if (index == -1) return;
+		console.log(dataString.substring(index+this.versionSearchString.length+1));
 		return parseFloat(dataString.substring(index+this.versionSearchString.length+1));
 	},
 	searchOSVersion: function (dataString) {
@@ -54,101 +74,280 @@ var Sniffer = {
 	},
 	dataBrowser: [
 		{
-			string: navigator.userAgent,
-			subString: "Chrome",
-			identity: "chrome"
+			test: [
+				{
+					string: navigator.userAgent,
+					search: 'MSIE'
+				}
+			],
+			browser: {
+				name: 'ie',
+				engine: 'trident'
+			},
+			version: {
+				string: navigator.userAgent,
+				search: 'MSIE'
+			}
 		},
 		{
-			string: navigator.userAgent,
-			subString: "NokiaBrowser",
-			identity: "nokiabrowser"
+			test: [
+				{
+					string: navigator.vendor,
+					search: 'Opera Software'
+				}
+			],
+			browser: {
+				engine: 'webkit',
+				name: 'opera'
+			},
+			version: {
+				string: navigator.userAgent,
+				search: 'OPR'
+			}
 		},
 		{
-			string: navigator.vendor,
-			subString: "Apple",
-			identity: "safari",
-			versionSearch: "Version"
+			test: [
+				{
+					string: navigator.userAgent,
+					search: 'Chrome',
+				}
+			],
+			browser: {
+				engine: 'webkit',
+				name: 'chrome'
+			},
+			version: {
+				string: navigator.userAgent,
+				search: 'Chrome'
+			}
 		},
 		{
-			string: navigator.userAgent,
-			subString: "WebKit",
-			identity: "webkit"
+			test: [
+				{
+					string: navigator.userAgent,
+					search: 'Firefox'
+				}
+			],
+			browser: {
+				name: 'firefox',
+				engine: 'gecko'
+			},
+			version: {
+				string: navigator.userAgent,
+				search: 'Firefox'
+			}
 		},
 		{
-			string: navigator.userAgent,
-			subString: "Opera Mini",
-			identity: "operamini",
-			versionSearch: "Version"
+			test: [
+				{
+					string: navigator.userAgent,
+					search: 'NokiaBrowser'
+				}
+			],
+			browser: {
+				engine: 'webkit',
+				name: 'nokiabrowser'
+			},
+			features: {
+				mobile: true
+			},
+			version: {
+				string: navigator.userAgent,
+				search: 'NokiaBrowser'
+			}
 		},
 		{
-			prop: window.opera,
-			identity: "opera",
-			versionSearch: "Version"
+			test: [
+				{
+					string: navigator.userAgent,
+					search: 'Opera Mini'
+				},
+				{
+					string: navigator.userAgent,
+					search: 'Presto'
+				}
+			],
+			browser: {
+				name: 'operamini',
+				engine: 'presto'
+			},
+			features: {
+				mobile: true
+			},
+			version: {
+				string: navigator.userAgent,
+				search: 'Version'
+			}
+		},
+		/* future proof */
+		{
+			test: [
+				{
+					string: navigator.userAgent,
+					search: 'Opera Mini'
+				},
+				{
+					string: navigator.userAgent,
+					search: 'AppleWebKit'
+				}
+			],
+			browser: {
+				name: 'opera',
+				engine: 'webkit'
+			},
+			features: {
+				mobile: true,
+				serverside: true
+			},
+			version: {
+				string: navigator.userAgent,
+				search: 'Version'
+			}
 		},
 		{
-			string: navigator.userAgent,
-			subString: "Firefox",
-			identity: "firefox"
+			test: [
+				{
+					prop: window.opera
+				}
+			],
+			browser: {
+				name: 'opera',
+				engine: 'presto'
+			},
+			version: {
+				string: navigator.userAgent,
+				search: 'Version'
+			}
 		},
 		{
-			string: navigator.userAgent,
-			subString: "MSIE",
-			identity: "ie",
-			versionSearch: "MSIE"
+			test: [
+				{
+					string: navigator.userAgent,
+					search: 'OviBrowser'
+				}
+			],
+			browser: {
+				name: 'ovi'
+			},
+			features: {
+				mobile: true,
+				serverside: true
+			},
+			version: {
+				string: navigator.userAgent,
+				search: 'OviBrowser'
+			}
 		},
 		{
-			string: navigator.userAgent,
-			subString: "OviBrowser",
-			identity: "ovi"
+			test: [
+				{
+					string: navigator.vendor,
+					search: 'Apple'
+				},
+				{
+					string: navigator.userAgent,
+					search: 'Safari'
+				}
+			],
+			browser: {
+				name: 'safari',
+				engine: 'webkit'
+			},
+			version: {
+				string: navigator.userAgent,
+				search: 'Version'
+			}
 		}
 	],
 	dataOS : [
 		{
-			string: navigator.userAgent,
-			subString: "Windows Phone",
-			identity: "winphone",
-			versionSearch: "Windows Phone"
+			test: [
+				{
+					string: navigator.userAgent,
+					search: "Windows Phone"
+				}
+			],
+			name: "winphone",
+			version: {
+				string: navigator.userAgent,
+				search: "Windows Phone"
+			}
 		},
 		{
-			string: navigator.platform,
-			subString: "Win",
-			identity: "win"
+			test: [
+				{
+					string: navigator.platform,
+					search: "Win"
+				}
+			],
+			name: "win"
 		},
 		{
-			string: navigator.platform,
-			subString: "Mac",
-			identity: "mac"
+			test: [
+				{
+					string: navigator.platform,
+					search: "Mac"
+				}
+			],
+			name: "mac"
 		},
 		{
-			string: navigator.userAgent,
-			subString: "iPhone",
-			identity: "ios"
+			test: [
+				{
+					string: navigator.userAgent,
+					search: "iPhone"
+				}
+			],
+			name: "ios"
 		},
 		{
-			string: navigator.userAgent,
-			subString: "Android",
-			identity: "android",
-			versionSearch: "Android"
+			test: [
+				{
+					string: navigator.userAgent,
+					search: "Android"
+				}
+			],
+			name: "android",
+			version: {
+				string: navigator.userAgent,
+				search: "Android"
+			}
 		},
 		{
-			string: navigator.userAgent,
-			subString: "Symbian",
-			identity: "symbian"
+			test: [
+				{
+					string: navigator.userAgent,
+					search: "Symbian"
+				}
+			],
+			name: "symbian"
 		},
 		{
-			string: navigator.userAgent,
-			subString: "Series40",
-			identity: "symbian"
+			test: [
+				{
+					string: navigator.userAgent,
+					search: "Series40"
+				}
+			],
+			name: "symbian"
 		},
 		{
-			string: navigator.platform,
-			subString: "Linux",
-			identity: "linux"
+			test: [
+				{
+					string: navigator.platform,
+					search: "Linux"
+				}
+			],
+			name: "linux"
 		},
 		{
-			string: navigator.userAgent,
-			subString: "Kindle",
-			identity: "kindle"
+			test: [
+				{
+					string: navigator.userAgent,
+					search: "Kindle"
+				}
+			],
+			name: "kindle"
 		}
 	]
 };

@@ -1,6 +1,15 @@
 body > header, body > footer, .content > * {
-	padding-right: 32px; /*1rem*/
-	padding-left: 32px; /*1rem*/
+	padding-right: 16px; /*1rem*/
+	padding-left: 16px; /*1rem*/
+	max-width: 960px; /*60rem*/
+}
+
+figure * + figcaption {
+	padding-top: 12.796875px; /*0.8rem*/
+}
+
+figure figcaption {
+	padding-bottom: 12.796875px; /*0.8rem*/
 }
 
 ul.lang-switcher {
@@ -42,8 +51,48 @@ p, ul, ol, pre, figure, h1, h2, h3, h4 {
 	padding-left: 36.796875px; /*1.2rem*/
 }
 
+/* pixelizr doesn't work with pseudo-elements */
+.content ul li:before {
+	width: 19px;
+	margin-left: -19px;
+}
+
 li {
 	margin-bottom: 16px; /*1rem*/
+}
+
+.gallery figure, .js-gallery figure {
+	margin-right: 16px; /*1rem*/
+}
+
+.js-gallery.active {
+	max-width: 1920px; /*120rem*/
+}
+
+.js-gallery .captions {
+	font-size: 14px; /*0.9rem*/
+	margin-bottom: 8px; /*0.5rem*/
+}
+
+/* bug: 'auto' isn't considered as override in pixelizr */
+.js-gallery .captions > span {
+	margin-bottom: 8px; /*0.5rem*/
+}
+
+.js-gallery .slides {
+	margin-bottom: 16px; /*1rem*/
+	padding-bottom: 8px; /*0.5rem*/
+	padding-top: 8px; /*0.5rem*/
+}
+
+.js-gallery.active figure {
+	padding-right: 16px; /*1rem*/
+	padding-left: 16px; /*1rem*/
+}
+
+pre {
+	max-height: 480px; /*30rem*/
+	font-size: 13px; /*0.8rem*/
 }
 
 body > footer {
