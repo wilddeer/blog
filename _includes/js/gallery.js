@@ -11,7 +11,8 @@ $.fn.dzGallery = function () {
 			slideWidth,
 			activeSlide,
 			captionBlock,
-			slideBlock;
+			slideBlock,
+			transform = false;
 
 		function changeActiveSlide(n) {
 			if (!gallery.slides[n]) n = activeSlide;
@@ -40,11 +41,16 @@ $.fn.dzGallery = function () {
 			slideBlock.style.OTransitionDuration = 
 			slideBlock.style.transitionDuration = time;
 
-			slideBlock.style.webkitTransform = 'translate('+pos+'px,0)' + 'translateZ(0)';
-			slideBlock.style.msTransform = 
-			slideBlock.style.MozTransform = 
-			slideBlock.style.OTransform = 
-			slideBlock.style.transform = 'translateX('+pos+'px)';
+			if (transform) {
+				slideBlock.style.webkitTransform = 'translate('+pos+'px,0)' + 'translateZ(0)';
+				slideBlock.style.msTransform = 
+				slideBlock.style.MozTransform = 
+				slideBlock.style.OTransform = 
+				slideBlock.style.transform = 'translateX('+pos+'px)';
+			}
+			else {
+				slideBlock.style.left = pos+'px';
+			}
 		}
 
 		function touchInit() {
@@ -172,6 +178,8 @@ $.fn.dzGallery = function () {
 		function setup() {
 			gallery.self.className += ' active';
 
+			if (window.Modernizr && Modernizr.csstransforms) transform = true;
+
 			gallery.width = gallery.self.offsetWidth;
 
 			captionBlock = document.createElement('div');
@@ -217,6 +225,6 @@ $.fn.dzGallery = function () {
 
 		setup();
 
-		Modernizr.csstransforms && (Modernizr.touch || window.navigator.msPointerEnabled) && touchInit();
+		window.Modernizr && Modernizr.csstransitions && (Modernizr.touch || window.navigator.msPointerEnabled) && touchInit();
 	});
 };
