@@ -25,7 +25,8 @@ var Pixelizr = {
 			'fontSize',
 			'lineHeight',
 			'maxHeight',
-			'maxWidth'
+			'maxWidth',
+			'borderRadius'
 		],
 		addProps: [],
 		keepZeros: false
