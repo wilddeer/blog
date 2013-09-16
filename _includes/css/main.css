@@ -130,7 +130,7 @@ pre {
 	font-size: 0.8rem;
 	padding: 1em;
 	overflow: auto;
-	box-shadow: 0 0 5px 0 rgba(64,0,0,0.1);
+	box-shadow: 0 0 5px rgba(64,0,0,0.1);
 	max-height: 30rem;
 }
 
@@ -406,7 +406,7 @@ body.post h1.title a:hover {
 
 body.post .content {
 	background: #fff;
-	box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+	box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 .content ul.posts li {
