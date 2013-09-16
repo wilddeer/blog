@@ -1,24 +1,15 @@
-{% unless include.ie %}
-@media all and (min-width: 60em) { /* ~960px */
-{% endunless %}
+body > header {
+	margin-top: -32px; /*-2rem*/
+}
 
 body > header, body > footer, .content > * {
-	padding-right: 32px; /*1rem*/
-	padding-left: 32px; /*1rem*/
 	max-width: 960px; /*60rem*/
-}
-
-figure * + figcaption {
-	padding-top: 12.796875px; /*0.8rem*/
-}
-
-figure figcaption {
-	padding-bottom: 12.796875px; /*0.8rem*/
+	padding-right: 16px; /*1rem*/
+	padding-left: 16px; /*1rem*/
 }
 
 ul.lang-switcher {
-	right: 32px; /*2rem*/
-	padding-bottom: 1.59375px; /*0.1rem*/
+	padding-top: 3.1875px; /*0.2rem*/
 }
 
 ul.lang-switcher li {
@@ -34,12 +25,15 @@ ul.lang-switcher li > * {
 }
 
 a.logo {
-	margin-right: -32px; /*-2rem*/
 	font-size: 13px; /*0.8rem*/
 	padding-bottom: 7.1875px; /*0.45rem*/
 	padding-top: 7.1875px; /*0.45rem*/
 	padding-right: 9.59375px; /*0.6rem*/
 	padding-left: 9.59375px; /*0.6rem*/
+}
+
+h1.title {
+	padding-top: 8px; /*0.5rem*/
 }
 
 p, ul, ol, pre, figure, h1, h2, h3, h4 {
@@ -51,14 +45,21 @@ p, ul, ol, pre, figure, h1, h2, h3, h4 {
 	padding-top: 16px; /*1rem*/
 }
 
-.content ul li {
-	padding-left: 36.796875px; /*2.3rem*/
+figure * + figcaption {
+	padding-top: 12.796875px; /*0.8rem*/
 }
 
-/* pixelizr doesn't work with pseudo-elements */
+figure figcaption {
+	padding-bottom: 12.796875px; /*0.8rem*/
+}
+
+.content ul li {
+	padding-left: 19.1875px; /*1.2rem*/
+}
+
 .content ul li:before {
-	width: 19px;
-	margin-left: -19px;
+	width: 19.1875px; /*1.2rem*/
+	margin-left: -19.1875px; /*1.2rem*/
 }
 
 li {
@@ -78,9 +79,10 @@ li {
 	margin-bottom: 8px; /*0.5rem*/
 }
 
-/* bug: 'auto' isn't considered as override in pixelizr */
 .js-gallery .captions > span {
-	margin-bottom: 8px; /*0.5rem*/
+	height: 8px; /*0.5rem*/
+	width: 8px; /*0.5rem*/
+	border-radius: 16px; /*1rem*/
 }
 
 .js-gallery .slides {
@@ -102,7 +104,3 @@ pre {
 body > footer {
 	margin-top: 32px; /*2rem*/
 }
-
-{% unless include.ie %}
-}
-{% endunless %}
