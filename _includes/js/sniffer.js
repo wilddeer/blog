@@ -1,8 +1,6 @@
 /*
-	puper druper sniffer version 1.12
-
-	1.11 - added ovi browser, added Series40 os
-	1.12 - added opera mini
+	puper duper sniffer
+	copyright dizaina.net
 */
 
 var Sniffer = {
@@ -22,57 +20,77 @@ var Sniffer = {
 	features: {
 		/*
 		bw
+		mobile
 		*/
 	},
-
+	things: [
+		'browser',
+		'os',
+		'features'
+	],
 	init: function () {
-		this.browser = this.searchString(this.dataBrowser) || '';
-		this.version = this.searchVersion(navigator.userAgent)
-			|| this.searchVersion(navigator.appVersion)
-			|| false;
-		this.os = this.searchString(this.dataOS) || '';
-		this.osVersion = this.searchOSVersion(navigator.userAgent)
-			|| this.searchVersion(navigator.platform)
-			|| false;
+		for (var i = this.things.length - 1; i >= 0; i--) {
+			this.test(this[this.things[i]+'Data']);
+		};
+		
 		this.setClasses();
 	},
 	setClasses: function() {
-		var tag = document.getElementsByTagName('html')[0];
-		var classNames = [tag.className, this.browser, this.os].join(' ');
+		var tag = document.getElementsByTagName('html')[0],
+			className = [tag.className];
 
-		if (this.browser != 'ie') classNames += ' no-ie';
-		if (this.os == 'android' && this.osVersion <= 2.3) classNames += ' android-old';
-		if (this.os == 'kindle' || (this.os == 'winphone' && this.osVersion < 8)) {
-			classNames = classNames.replace('fontface','no-fontface');
+		this.browser.name && className.push(this.browser.name);
+		this.browser.engine && className.push(this.browser.engine);
+		this.os.name && className.push(this.os.name);
+
+		for (var prop in this.features) {
+			className.push(prop);
 		}
 
-		tag.className = classNames;
+		tag.className = className.join(' ');
 	},
-	searchString: function (data) {
-		for (var i=0;i<data.length;i++)	{
-			var dataString = data[i].string;
-			var dataProp = data[i].prop;
-			this.versionSearchString = data[i].versionSearch || data[i].name;
-			if (dataString) {
-				if (dataString.indexOf(data[i].subString) != -1)
-					return data[i].name;
+	test: function(data) {
+		var _this = this;
+		for (var i=0; i<data.length; i++)	{
+			var test = true;
+
+			for (var j=0; j<data[i].test.length; j++) {
+				if (!data[i].test[j].string || !data[i].test[j].search || data[i].test[j].string.indexOf(data[i].test[j].search) == -1) {
+					if (data[i].test[j].prop === undefined) {
+						test = false;
+						break;
+					}
+				}
 			}
-			else if (dataProp)
-				return data[i].name;
+
+			if (test) {
+				_this.apply(data[i]);
+				break;
+			}
 		}
 	},
-	searchVersion: function (dataString) {
-		var index = dataString.indexOf(this.versionSearchString);
-		if (index == -1) return;
-		console.log(dataString.substring(index+this.versionSearchString.length+1));
-		return parseFloat(dataString.substring(index+this.versionSearchString.length+1));
+	apply: function(data) {
+		var _this = this;
+
+		for (var i = _this.things.length - 1; i >= 0; i--) {
+			if (data[_this.things[i]]) {
+				if (data[_this.things[i]].version) {
+					data[_this.things[i]].version = _this.getVersion(data[_this.things[i]].version);
+				}
+
+				for (var prop in data[_this.things[i]]) {
+					_this[_this.things[i]][prop] = data[_this.things[i]][prop];
+				}
+			}
+		};
 	},
-	searchOSVersion: function (dataString) {
-		var index = dataString.indexOf(this.versionSearchString);
-		if (index == -1) return;
-		return parseFloat(dataString.substring(index+this.versionSearchString.length+1));
+	getVersion: function (data) {
+		var index = data.string.indexOf(data.search);
+		if (index == -1) return undefined;
+		return parseFloat(data.string.substring(index+data.search.length));
 	},
-	dataBrowser: [
+	browserData: [
+		// IE
 		{
 			test: [
 				{
@@ -82,13 +100,14 @@ var Sniffer = {
 			],
 			browser: {
 				name: 'ie',
-				engine: 'trident'
-			},
-			version: {
-				string: navigator.userAgent,
-				search: 'MSIE'
+				engine: 'trident',
+				version: {
+					string: navigator.userAgent,
+					search: 'MSIE '
+				}
 			}
 		},
+		// Opera 15+
 		{
 			test: [
 				{
@@ -98,29 +117,31 @@ var Sniffer = {
 			],
 			browser: {
 				engine: 'webkit',
-				name: 'opera'
-			},
-			version: {
-				string: navigator.userAgent,
-				search: 'OPR'
+				name: 'opera',
+				version: {
+					string: navigator.userAgent,
+					search: 'OPR/'
+				}
 			}
 		},
+		// Chrome
 		{
 			test: [
 				{
 					string: navigator.userAgent,
-					search: 'Chrome',
+					search: 'Chrome'
 				}
 			],
 			browser: {
 				engine: 'webkit',
-				name: 'chrome'
-			},
-			version: {
-				string: navigator.userAgent,
-				search: 'Chrome'
+				name: 'chrome',
+				version: {
+					string: navigator.userAgent,
+					search: 'Chrome/'
+				}
 			}
 		},
+		// Firefox
 		{
 			test: [
 				{
@@ -130,13 +151,14 @@ var Sniffer = {
 			],
 			browser: {
 				name: 'firefox',
-				engine: 'gecko'
-			},
-			version: {
-				string: navigator.userAgent,
-				search: 'Firefox'
+				engine: 'gecko',
+				version: {
+					string: navigator.userAgent,
+					search: 'Firefox/'
+				}
 			}
 		},
+		// Nokia Browser (not Nokia Xpress)
 		{
 			test: [
 				{
@@ -146,16 +168,17 @@ var Sniffer = {
 			],
 			browser: {
 				engine: 'webkit',
-				name: 'nokiabrowser'
+				name: 'nokiabrowser',
+				version: {
+					string: navigator.userAgent,
+					search: 'NokiaBrowser/'
+				}
 			},
 			features: {
 				mobile: true
-			},
-			version: {
-				string: navigator.userAgent,
-				search: 'NokiaBrowser'
 			}
 		},
+		// Opera Mini Presto
 		{
 			test: [
 				{
@@ -169,17 +192,17 @@ var Sniffer = {
 			],
 			browser: {
 				name: 'operamini',
-				engine: 'presto'
+				engine: 'presto',
+				version: {
+					string: navigator.userAgent,
+					search: 'Version/'
+				}
 			},
 			features: {
 				mobile: true
-			},
-			version: {
-				string: navigator.userAgent,
-				search: 'Version'
 			}
 		},
-		/* future proof */
+		// Opera Mini Webkit - future proof
 		{
 			test: [
 				{
@@ -188,7 +211,7 @@ var Sniffer = {
 				},
 				{
 					string: navigator.userAgent,
-					search: 'AppleWebKit'
+					search: 'WebKit'
 				}
 			],
 			browser: {
@@ -198,12 +221,9 @@ var Sniffer = {
 			features: {
 				mobile: true,
 				serverside: true
-			},
-			version: {
-				string: navigator.userAgent,
-				search: 'Version'
 			}
 		},
+		// Opera
 		{
 			test: [
 				{
@@ -212,13 +232,14 @@ var Sniffer = {
 			],
 			browser: {
 				name: 'opera',
-				engine: 'presto'
-			},
-			version: {
-				string: navigator.userAgent,
-				search: 'Version'
+				engine: 'presto',
+				version: {
+					string: navigator.userAgent,
+					search: 'Version/'
+				}
 			}
 		},
+		// Ovi Browser = Nokia Xpress
 		{
 			test: [
 				{
@@ -227,127 +248,216 @@ var Sniffer = {
 				}
 			],
 			browser: {
-				name: 'ovi'
+				name: 'ovi',
+				version: {
+					string: navigator.userAgent,
+					search: 'OviBrowser/'
+				}
 			},
 			features: {
 				mobile: true,
 				serverside: true
-			},
-			version: {
-				string: navigator.userAgent,
-				search: 'OviBrowser'
 			}
 		},
+		// some other webkit browser
 		{
 			test: [
 				{
-					string: navigator.vendor,
-					search: 'Apple'
-				},
-				{
 					string: navigator.userAgent,
-					search: 'Safari'
+					search: 'WebKit'
 				}
 			],
 			browser: {
-				name: 'safari',
 				engine: 'webkit'
-			},
-			version: {
-				string: navigator.userAgent,
-				search: 'Version'
 			}
 		}
 	],
-	dataOS : [
+	osData: [
+		// Windows Phone
 		{
 			test: [
 				{
 					string: navigator.userAgent,
-					search: "Windows Phone"
+					search: 'Windows Phone'
 				}
 			],
-			name: "winphone",
-			version: {
-				string: navigator.userAgent,
-				search: "Windows Phone"
+			os: {
+				name: 'winphone',
+				version: {
+					string: navigator.userAgent,
+					search: 'Windows Phone '
+				}
+			},
+			features: {
+				mobile: true
+			}
+		},
+		// Windows
+		{
+			test: [
+				{
+					string: navigator.platform,
+					search: 'Win'
+				}
+			],
+			os: {
+				name: 'win'
+			}
+		},
+		// Mac
+		{
+			test: [
+				{
+					string: navigator.platform,
+					search: 'Mac'
+				}
+			],
+			os: {
+				name: 'mac'
+			}
+		},
+		// iOS
+		{
+			test: [
+				{
+					string: navigator.userAgent,
+					search: 'iPhone'
+				}
+			],
+			os: {
+				name: 'ios',
+				version: {
+					string: navigator.userAgent,
+					search: 'iPhone OS '
+				}
+			},
+			features: {
+				mobile: true
+			}
+		},
+		// Android
+		{
+			test: [
+				{
+					string: navigator.userAgent,
+					search: 'Android'
+				}
+			],
+			os: {
+				name: 'android',
+				version: {
+					string: navigator.userAgent,
+					search: 'Android '
+				}
+			},
+			features: {
+				mobile: true
+			}
+		},
+		// BlackBerry
+		{
+			test: [
+				{
+					string: navigator.platform,
+					search: 'BlackBerry'
+				}
+			],
+			os: {
+				name: 'blackberry',
+				version: {
+					string: navigator.userAgent,
+					search: 'BB'
+				}
+			},
+			features: {
+				mobile: true
+			}
+		},
+		// Symbian
+		{
+			test: [
+				{
+					string: navigator.userAgent,
+					search: 'Symbian'
+				}
+			],
+			os: {
+				name: 'symbian'
+			},
+			features: {
+				mobile: true
+			}
+		},
+		// Symbian
+		{
+			test: [
+				{
+					string: navigator.userAgent,
+					search: 'Series40'
+				}
+			],
+			os: {
+				name: 'symbian'
+			},
+			features: {
+				mobile: true
+			}
+		},
+		// Kindle
+		{
+			test: [
+				{
+					string: navigator.userAgent,
+					search: 'Kindle'
+				}
+			],
+			os: {
+				name: 'kindle',
+				version: {
+					string: navigator.userAgent,
+					search: 'Kindle/'
+				}
+			},
+			features: {
+				bw: true,
+				mobile: true
+			}
+		},
+		// something linux-based, could be anything
+		{
+			test: [
+				{
+					string: navigator.platform,
+					search: 'Linux'
+				}
+			],
+			os: {
+				name: 'linux'
+			}
+		}
+	],
+	featuresData: [
+		{
+			test: [
+				{
+					string: navigator.userAgent,
+					search: 'mobile'
+				}
+			],
+			features: {
+				mobile: true
 			}
 		},
 		{
 			test: [
 				{
-					string: navigator.platform,
-					search: "Win"
-				}
-			],
-			name: "win"
-		},
-		{
-			test: [
-				{
-					string: navigator.platform,
-					search: "Mac"
-				}
-			],
-			name: "mac"
-		},
-		{
-			test: [
-				{
 					string: navigator.userAgent,
-					search: "iPhone"
+					search: 'Mobile'
 				}
 			],
-			name: "ios"
-		},
-		{
-			test: [
-				{
-					string: navigator.userAgent,
-					search: "Android"
-				}
-			],
-			name: "android",
-			version: {
-				string: navigator.userAgent,
-				search: "Android"
+			features: {
+				mobile: true
 			}
-		},
-		{
-			test: [
-				{
-					string: navigator.userAgent,
-					search: "Symbian"
-				}
-			],
-			name: "symbian"
-		},
-		{
-			test: [
-				{
-					string: navigator.userAgent,
-					search: "Series40"
-				}
-			],
-			name: "symbian"
-		},
-		{
-			test: [
-				{
-					string: navigator.platform,
-					search: "Linux"
-				}
-			],
-			name: "linux"
-		},
-		{
-			test: [
-				{
-					string: navigator.userAgent,
-					search: "Kindle"
-				}
-			],
-			name: "kindle"
 		}
 	]
 };

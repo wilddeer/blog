@@ -18,7 +18,10 @@ loc:
         en: "Will finish in the morning"
     in_lang:
         ru: "RU"
-        eng: "EN"
+        en: "EN"
+    original_image:
+        ru: "Посмотреть оригинал"
+        en: "Original image"
     footer:
         ru: "Работает на Jekyll"
         en: "Powered by Jekyll"

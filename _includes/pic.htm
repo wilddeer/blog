@@ -6,9 +6,9 @@
 <figure>
 	{% if include.t %}{{ caption }}{% endif %}
 	{% if include.p %}
-	<a href="i/{{ include.src }}" target="_blank"><img src="i/p_{{ include.src }}" alt="{{ alt | strip_html }}"></a>
+	<a href="i/{{ include.src }}" target="_blank" title="{{ site.loc.original_image[page.lang] }}"><img src="i/p_{{ include.src }}" alt="{{ alt | strip_html }}"></a>
 	{% else %}
-	<a href="i/{{ include.src }}" target="_blank"><img src="i/{{ include.src }}" alt="{{ alt | strip_html }}"></a>
+	<a href="i/{{ include.src }}" target="_blank" title="{{ site.loc.original_image[page.lang] }}"><img src="i/{{ include.src }}" alt="{{ alt | strip_html }}"></a>
 	{% endif %}
 	{% unless include.t %}{{ caption }}{% endunless %}
 </figure>
