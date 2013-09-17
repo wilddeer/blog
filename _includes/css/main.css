@@ -134,6 +134,8 @@ li {
 }
 	
 pre {
+	white-space: pre;
+	word-wrap: normal;
 	font-size: 0.8rem;
 	padding: 1em;
 	overflow: auto;
@@ -153,7 +155,7 @@ code {
 }
 
 pre code {
-	display: block;
+	/*display: block;*/
 	border: 0;
 	border-radius: 0;
 	padding: 0;
