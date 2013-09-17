@@ -1,4 +1,10 @@
 $.fn.dzGallery = function () {
+	if (window.Sniffer &&
+		(
+			Sniffer.browser.name == 'ovi' ||
+			(Sniffer.browser.name == 'ie' && Sniffer.browser.version <= 7)
+		)) return;
+
 	this.each(function() {
 		var _this = this,
 			gallery = {
@@ -11,8 +17,7 @@ $.fn.dzGallery = function () {
 			slideWidth,
 			activeSlide,
 			captionBlock,
-			slideBlock,
-			transform = false;
+			slideBlock;
 
 		function changeActiveSlide(n) {
 			if (!gallery.slides[n]) n = activeSlide;
@@ -41,17 +46,25 @@ $.fn.dzGallery = function () {
 			slideBlock.style.OTransitionDuration = 
 			slideBlock.style.transitionDuration = time;
 
-			if (transform) {
-				slideBlock.style.webkitTransform = 'translate('+pos+'px,0)' + 'translateZ(0)';
-				slideBlock.style.msTransform = 
-				slideBlock.style.MozTransform = 
-				slideBlock.style.OTransform = 
-				slideBlock.style.transform = 'translateX('+pos+'px)';
-			}
-			else {
-				slideBlock.style.left = pos+'px';
-			}
+			slideBlock.style.webkitTransform = 'translate('+pos+'px,0)' + 'translateZ(0)';
+			slideBlock.style.msTransform = 
+			slideBlock.style.MozTransform = 
+			slideBlock.style.OTransform = 
+			slideBlock.style.transform = 'translateX('+pos+'px)';
 		}
+		
+		function changePosFallback(pos, speed) {
+			var time = speed?speed+'ms':'';
+
+			slideBlock.style.webkitTransitionDuration = 
+			slideBlock.style.MozTransitionDuration = 
+			slideBlock.style.msTransitionDuration = 
+			slideBlock.style.OTransitionDuration = 
+			slideBlock.style.transitionDuration = time;
+
+			slideBlock.style.left = pos+'px';
+		}
+			
 
 		function touchInit() {
 			var start = {},
@@ -159,26 +172,36 @@ $.fn.dzGallery = function () {
 				}
 			}
 
-			slideBlock.addEventListener(tEvents.start, tStart, false);
-			slideBlock.addEventListener(tEvents.move, tMove, false);
-			slideBlock.addEventListener(tEvents.end, tEnd, false);
-			slideBlock.addEventListener(tEvents.cancel, tEnd, false);
+			addEvent(slideBlock, tEvents.start, tStart, false);
+			addEvent(slideBlock, tEvents.move, tMove, false);
+			addEvent(slideBlock, tEvents.end, tEnd, false);
+			addEvent(slideBlock, tEvents.cancel, tEnd, false);
 
 			if (p) {
-				slideBlock.addEventListener('click', function(event) {
+				addEvent(slideBlock, 'click', function(event) {
 					touchInProgress && event.preventDefault();
 				}, false);
 			}
 		}
+		
 		function onWidthChange() {
 			gallery.width = gallery.self.offsetWidth;
 			changePos(-activeSlide*gallery.width);
 		}
 
+		function addEvent(el, event, func, bool) {
+			if (el.addEventListener) {
+				el.addEventListener(event, func, bool);
+			}
+			else {
+				el.attachEvent('on'+event, func);
+			}
+		}
+
 		function setup() {
 			gallery.self.className += ' active';
 
-			if (window.Modernizr && Modernizr.csstransforms) transform = true;
+			if (!Modernizr.csstransforms) changePos = changePosFallback;
 
 			gallery.width = gallery.self.offsetWidth;
 
@@ -191,13 +214,14 @@ $.fn.dzGallery = function () {
 			for (var i = 0; i <= gallery.self.children.length - 1; i++) {
 				var slide = gallery.self.children[i],
 					caption = document.createElement('span'),
-					captionText = slide.getElementsByTagName('figcaption')[0].innerText,
+					figcaption = slide.getElementsByTagName('figcaption')[0],
+					captionText = figcaption.textContent || figcaption.innerText,
 					n = gallery.slides.length;
 
 				gallery.slides.push(slide);
 
 				caption.innerHTML = '<span>'+captionText+'</span>';
-				caption.addEventListener('click', function(x) {
+				addEvent(caption, 'click', function(x) {
 					return function() {changeActiveSlide(x);}
 				}(n), false);
 
@@ -219,12 +243,12 @@ $.fn.dzGallery = function () {
 
 			changeActiveSlide(0);
 
-			window.addEventListener('resize', onWidthChange, false);
-			window.addEventListener('orientationchange', onWidthChange, false);
+			addEvent(window, 'resize', onWidthChange, false);
+			addEvent(window, 'orientationchange', onWidthChange, false);
 		}
 
 		setup();
 
-		window.Modernizr && Modernizr.csstransitions && (Modernizr.touch || window.navigator.msPointerEnabled) && touchInit();
+		Modernizr.csstransitions && (Modernizr.touch || window.navigator.msPointerEnabled) && touchInit();
 	});
 };

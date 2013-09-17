@@ -10,37 +10,3 @@ a.logo {
 a.logo span {
 	display: none;
 }
-
-h1.title {
-	padding-top: 15px;
-}
-
-p,
-ul,
-ol,
-pre,
-figure,
-h1,
-h2,
-h3,
-h4 {
-	margin: 0 0 24px 0;
-}
-
-body > header,
-body > footer,
-.content {
-	max-width: 960px;
-	margin-left: auto;
-	margin-right: auto;
-	padding-left: 32px;
-	padding-right: 32px;
-}
-
-.content > * {
-	max-width: 100%;
-	margin-left: 0;
-	margin-right: 0;
-	padding-left: 0;
-	padding-right: 0;
-}

@@ -138,22 +138,24 @@ For fun:
 
 {% highlight js %}
 var customConsole = {
-	log: function(message) {
-		if (message === undefined) message = '<i>undefined</i>';
-		notify.create(message, 'info', 10000);
-	},
-	warn: function(message) {
-		notify.create(message, 'warning', 10000);
-	},
-	error: function(message, source, file) {
-		notify.create([message,source,file].join(' '), 'danger', 10000);
-	}
+    log: function(message) {
+        if (message === undefined) message = '<i>undefined</i>';
+        notify.create(message, 'info', 10000);
+    },
+    warn: function(message) {
+        notify.create(message, 'warning', 10000);
+    },
+    error: function(message, source, file) {
+        notify.create([message,source,file].join(' '), 'danger', 10000);
+    }
 }
 
 if (dev_console) {
-	window.console = customConsole;
+    window.console = customConsole;
 
-	window.onerror = function(message, source, file) {console.error(message, source, file)};
+    window.onerror = function(message, source, file) {
+    	console.error(message, source, file)
+    };
 }
 {% endhighlight %}
 

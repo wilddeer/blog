@@ -4,6 +4,8 @@
 
 {% include css/imports.css %}
 
+{% include css/boilerplate.css %}
+
 {% include css/rem-fallback.css ie="true" %}
 
 {% include css/main.css ie="true" %}
@@ -17,3 +19,5 @@
 {% include css/syntax/github.css %}
 
 {% include css/ie8.css %}
+
+{% include css/print.css %}

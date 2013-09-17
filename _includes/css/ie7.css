@@ -1,26 +1,25 @@
 
 .content ul {
-	padding-left: 40px;
 	list-style-image: url("/i/emdash.gif");
 }
 
 .content ul li {
 	padding-left: 0;
+	margin-left: 40px;
 }
 
 .content ul.posts {
-	padding-left: 0;
 	list-style-image: none;
+}
+
+.content ul.posts li {
+	margin-left: 0;
 }
 
 ul.lang-switcher li {
 	display: inline;
 }
 
-.content ul.posts a {
-	margin-right: 15px;
-}
-
 .content ul.posts time {
-	font-size: 0.8em;
+	font-size: 0.7em;
 }
