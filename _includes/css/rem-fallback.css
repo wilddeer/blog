@@ -69,10 +69,6 @@ li {
 	margin-bottom: 16px; /*1rem*/
 }
 
-.gallery figure, .js-gallery figure {
-	margin-right: 16px; /*1rem*/
-}
-
 .js-gallery.active {
 	max-width: 1920px; /*120rem*/
 }

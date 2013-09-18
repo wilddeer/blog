@@ -2,6 +2,7 @@ $.fn.dzGallery = function () {
 	if (window.Sniffer &&
 		(
 			Sniffer.browser.name == 'ovi' ||
+			Sniffer.browser.name == 'operamini' ||
 			(Sniffer.browser.name == 'ie' && Sniffer.browser.version <= 7)
 		)) return;
 
