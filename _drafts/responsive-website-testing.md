@@ -146,7 +146,7 @@ var customConsole = {
         notify.create(message, 'warning', 10000);
     },
     error: function(message, source, file) {
-        notify.create([message,source,file].join(' '), 'danger', 10000);
+        notify.create([message, source, file].join(' '), 'danger', 10000);
     }
 }
 

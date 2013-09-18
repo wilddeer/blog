@@ -16,7 +16,7 @@
 
 {% include css/desktop.css ie="true" %}
 
-{% include css/syntax/github.css %}
+{% include css/syntax/syntax.css %}
 
 {% include css/ie8.css %}
 

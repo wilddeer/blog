@@ -146,7 +146,7 @@ $.fn.dzGallery = function () {
 				var duration = Number(+new Date - start.time);
 
 				if ((duration < flickTime && Math.abs(diff.x) > 20)
-					|| (Math.abs(diff.x) > gallery.width/3)) {
+					|| (Math.abs(diff.x) > gallery.width/4)) {
 
 					if (diff.x < 0) {
 						changeActiveSlide(activeSlide+1);		
@@ -202,6 +202,7 @@ $.fn.dzGallery = function () {
 			gallery.self.className += ' active';
 
 			if (!Modernizr.csstransforms) changePos = changePosFallback;
+			if (Sniffer.features.bw) speed = 0;
 
 			gallery.width = gallery.self.offsetWidth;
 

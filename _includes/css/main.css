@@ -45,12 +45,29 @@ body {
 	background: #fcfcfa;
 }
 
+html.bw body {
+	color: #000;
+	background: #fff;
+}
+
+html.kindle * {
+	box-shadow: none !important;
+}
+
 html,
 button,
 input,
 select,
 textarea {
 	font-family: 'Scada', sans-serif;
+}
+
+html.kindle,
+html.kindle button,
+html.kindle input,
+html.kindle select,
+html.kindle textarea {
+	font-family: serif;
 }
 
 article > *:first-child {
@@ -94,23 +111,44 @@ h4 {
 	margin: 0 0 1.5rem 0;
 }
 
-a,
-.lang-switcher a:visited,
-.title a:visited {
+a {
 	color: #168cd2;
 	text-decoration: underline;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a {
+	text-decoration: none;
+	border-bottom: 1px solid;
 }
 
 a:visited {
 	color: #7c64b4;
 }
 
-a:hover,
-.lang-switcher a:hover,
-.title a:hover {
+a:hover {
 	color: #fff;
 	background: #f92672;
 	text-decoration: none;
+}
+
+html.bw a,
+html.bw .lang-switcher a,
+html.bw .title a {
+	color: #000;
+}
+
+html.kindle a {
+	text-decoration: none !important;
+	border-bottom: 2px solid;
+}
+
+html.kindle a:hover,
+html.kindle a:active {
+	color: #fff;
+	background: #333;
 }
 
 ul {
@@ -125,6 +163,11 @@ li {
 	padding-left: 1.2rem;
 }
 
+html.kindle .content ul li {
+	padding-left: 25px;
+	padding-left: 1.5rem;
+}
+
 .content ul li:before {
 	content: "— ";
 	position: absolute;
@@ -132,15 +175,21 @@ li {
 	width: 1.2rem;
 	margin-left: -1.2rem;
 }
+
+html.kindle .content ul li:before {
+	width: 25px;
+	margin-left: -25px;
+	width: 1.5rem;
+	margin-left: -1.5rem;
+}
 	
 pre {
 	white-space: pre;
 	word-wrap: normal;
-	font-size: 0.8rem;
 	padding: 1em;
 	overflow: auto;
 	box-shadow: 0 0 5px rgba(64,0,0,0.1);
-	max-height: 250px;
+	/*max-height: 250px;*/
 }
 
 .no-boxshadow pre {
@@ -149,13 +198,20 @@ pre {
 
 code {
 	border: 1px solid #ddd;
-	border-radius: 2px;
-	padding: 0 2px;
-	font-size: 0.9em;
+	border-radius: 0.25em;
+	padding: 0 0.25em;
+	font-size: 0.8em;
+	font-family: Consolas, Monaco, 'Andale Mono', monospace, serif;
 }
 
-pre code {
-	/*display: block;*/
+html.bw code {
+	border-color: #999;
+}
+
+pre code,
+html.bw pre code {
+	font-size: 15px;
+	font-size: 0.9rem;
 	border: 0;
 	border-radius: 0;
 	padding: 0;
@@ -202,21 +258,20 @@ pre code {
 	user-select: none;
 }
 
+html.bw .js-gallery .captions > span {
+	background: #aaa;
+}
+
 .js-gallery .captions > span.active {
 	background: #9b9890;
 }
 
+html.bw .js-gallery .captions > span.active {
+	background: #333;
+}
+
 .js-gallery .captions > span > span {
 	display: none;
-}
-
-.js-gallery .captions > span:hover > span {
-	border-bottom-color: transparent;
-}
-
-.js-gallery .captions > span.active > span {
-	color: inherit;
-	border-bottom-color: transparent;
 }
 
 .js-gallery .slides {
@@ -229,6 +284,7 @@ pre code {
 }
 
 .js-gallery .slides figure {
+	-webkit-tap-highlight-color: transparent;
 	margin-bottom: 0;
 }
 
@@ -266,6 +322,7 @@ pre code {
 
 figure {
 	text-align: center;
+	overflow: hidden;
 }
 
 figure img {
@@ -278,6 +335,10 @@ figure figcaption {
 	font-style: italic;
 	color: #787575;
 	font-size: 0.8em;
+}
+
+html.bw figure figcaption {
+	color: #333;
 }
 
 figure figcaption {
@@ -338,6 +399,10 @@ ul.lang-switcher {
 	color: #a19e91;
 }
 
+html.bw ul.lang-switcher {
+	color: #333;
+}
+
 ul.lang-switcher li {
 	display: inline-block;
 	font-size: 0.8rem;
@@ -347,6 +412,14 @@ ul.lang-switcher li {
 ul.lang-switcher li > * {
 	display: inline-block;
 	padding: 0.2rem 0.3rem 0.1rem;
+}
+
+ul.lang-switcher a:visited {
+	color: #168cd2;
+}
+
+ul.lang-switcher a:hover {
+	color: #fff;
 }
 
 a.logo {
@@ -375,9 +448,15 @@ body.post a.logo:hover {
 	background: #f92672;
 }
 
-.ovi a.logo span,
-.symbian a.logo span {
+html.ovi a.logo span,
+html.symbian a.logo span {
 	display: none;
+}
+
+html.bw a.logo,
+html.bw body.post a.logo {
+	color: #fff;
+	background: #999;
 }
 
 h1.title {
@@ -385,8 +464,16 @@ h1.title {
 }
 
 h1.title a {
-	text-decoration: none !important; /* funck you, kindle */
+	text-decoration: none;
 	border-bottom: 2px solid;
+}
+
+h1.title a:visited {
+	color: #168cd2;
+}
+
+h1.title a:hover {
+	color: #fff;
 }
 
 /*body.post h1.title a {
@@ -416,7 +503,12 @@ body.post .content {
 	box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-.content ul.posts li {
+html.bw body.post .content {
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.content ul.posts li,
+html.kindle .content ul.posts li {
 	padding-left: 0;
 }
 
@@ -430,6 +522,10 @@ body.post .content {
 	font-size: 0.8rem;
 }
 
+html.bw .content ul.posts time {
+	color: #333;
+}
+
 .content ul.posts .cat-link {
 	font-size: 0.8rem;
 }
@@ -438,6 +534,10 @@ body > footer {
 	margin-top: 2rem;
 	font-size: 0.8em;
 	color: #a19e91;
+}
+
+html.bw body > footer {
+	color: #333;
 }
 
 
