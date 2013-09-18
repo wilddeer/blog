@@ -17,6 +17,17 @@
 		padding-left: 2.3rem;
 	}
 
+	.gallery figure,
+	.js-gallery figure {
+		display: inline-block;
+		padding-right: 0.5em;
+		padding-left: 0.5em;
+		max-width: 100%;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
 {% unless include.ie %}
 }
 {% endunless %}

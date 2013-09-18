@@ -35,6 +35,10 @@ html {
 	font-size: 80%;
 }
 
+html.ovi {
+	font-size: 18px;
+}
+
 body {
 	padding: 3em 0;
 	overflow-x: hidden;
@@ -47,6 +51,11 @@ body {
 
 html.bw body {
 	color: #000;
+	background: #fff;
+}
+
+html.ovi body,
+html.operamini body {
 	background: #fff;
 }
 
@@ -192,8 +201,13 @@ pre {
 	/*max-height: 250px;*/
 }
 
-.no-boxshadow pre {
+html.no-boxshadow pre {
 	border: 1px solid #f4f2ec;
+}
+
+html.ovi pre,
+html.operamini pre {
+	padding: 0;
 }
 
 code {
@@ -202,6 +216,10 @@ code {
 	padding: 0 0.25em;
 	font-size: 0.8em;
 	font-family: Consolas, Monaco, 'Andale Mono', monospace, serif;
+}
+
+html.operamini code {
+	font-family: sans-serif;
 }
 
 html.bw code {
@@ -222,19 +240,17 @@ html.bw pre code {
 	tab-size: 4;
 }
 
+html.operamini pre code,
+html.ovi pre code {
+	white-space: pre-wrap;
+}
+
 /* gallery */
 
 .gallery,
 .js-gallery {
 	vertical-align: top;
-	overflow: hidden;
 	text-align: center;
-}
-
-.gallery figure,
-.js-gallery figure {
-	display: inline-block;
-	margin-right: 1rem;
 }
 
 .js-gallery .captions {
@@ -283,11 +299,6 @@ html.bw .js-gallery .captions > span.active {
 	-ms-touch-action: pan-y;
 }
 
-.js-gallery .slides figure {
-	-webkit-tap-highlight-color: transparent;
-	margin-bottom: 0;
-}
-
 .js-gallery .slides figure a {
 	outline: none;
 }
@@ -298,11 +309,12 @@ html.bw .js-gallery .captions > span.active {
 	padding-right: 0;
 	max-width: 120rem;
 	white-space: nowrap;
+	overflow: hidden;
 }
 
 .js-gallery.active figure {
 	width: 100%;
-	margin-right: 0;
+	margin: 0;
 	float: left;
 	position: relative;
 	padding-left: 1rem;
@@ -310,6 +322,7 @@ html.bw .js-gallery .captions > span.active {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent;
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
@@ -322,6 +335,9 @@ html.bw .js-gallery .captions > span.active {
 
 figure {
 	text-align: center;
+}
+
+html.kindle figure {
 	overflow: hidden;
 }
 
@@ -449,7 +465,7 @@ body.post a.logo:hover {
 }
 
 html.ovi a.logo span,
-html.symbian a.logo span {
+html.operamini a.logo span {
 	display: none;
 }
 
