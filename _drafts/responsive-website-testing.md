@@ -154,7 +154,7 @@ if (dev_console) {
     window.console = customConsole;
 
     window.onerror = function(message, source, file) {
-    	console.error(message, source, file)
+        console.error(message, source, file)
     };
 }
 {% endhighlight %}
