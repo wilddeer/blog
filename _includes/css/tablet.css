@@ -75,9 +75,9 @@
 		max-height: 450px;
 	}
 
-	pre {
+	/*pre {
 		max-height: 350px;
-	}
+	}*/
 
 {% unless include.ie %}
 }
@@ -92,9 +92,9 @@
 		max-height: none;
 	}
 
-	pre {
+	/*pre {
 		max-height: 500px;
-	}
+	}*/
 
 {% unless include.ie %}
 }
