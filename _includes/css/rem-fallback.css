@@ -3,8 +3,8 @@
 {% endunless %}
 
 body > header, body > footer, .content > * {
-	padding-right: 32px; /*1rem*/
-	padding-left: 32px; /*1rem*/
+	padding-right: 32px; /*2rem*/
+	padding-left: 32px; /*2rem*/
 	max-width: 960px; /*60rem*/
 }
 
@@ -51,20 +51,6 @@ p, ul, ol, pre, figure, h1, h2, h3, h4 {
 	padding-top: 16px; /*1rem*/
 }
 
-.content ul li {
-	padding-left: 36.796875px; /*2.3rem*/
-}
-
-/* pixelizr doesn't work with pseudo-elements */
-.content ul li:before {
-	width: 19px;
-	margin-left: -19px;
-}
-
-.content ul.posts .cat-link {
-	font-size: 13px; /*0.8rem*/
-}
-
 li {
 	margin-bottom: 16px; /*1rem*/
 }
@@ -79,7 +65,7 @@ li {
 }
 
 /* bug: 'auto' isn't considered as override in pixelizr */
-.js-gallery .captions > span {
+.js-gallery .captions > span.dot {
 	margin-bottom: 8px; /*0.5rem*/
 }
 

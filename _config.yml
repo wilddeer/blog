@@ -23,5 +23,5 @@ loc:
         ru: "Посмотреть оригинал"
         en: "Original image"
     footer:
-        ru: "Работает на Jekyll"
-        en: "Powered by Jekyll"
+        ru: Кое-как работает на <a href="//jekyllrb.com" class="iconlink"><i class="icon-lab"></i> <span>Jekyll</span></a>. Смотрите, это же <a href="//github.com/wilddeer" class="iconlink"><i class="icon-github"></i> <span>GitHub</span></a>!
+        en: Somehow it works on <a href="//jekyllrb.com" class="iconlink"><i class="icon-lab"></i> <span>Jekyll</span></a>. Look, it's <a href="//github.com/wilddeer" class="iconlink"><i class="icon-github"></i> <span>GitHub</span></a>!

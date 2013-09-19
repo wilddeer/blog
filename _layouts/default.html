@@ -23,7 +23,6 @@
 	<!-- styles -->
 	<!--[if lt IE 8]>
 		<link rel="stylesheet" href="/css/ie7.css">
-		<link rel="stylesheet" href="//dizaina.net/common/css/font-awesome-ie7.css">
 	<![endif]-->
 	
 	<!--[if IE 8]>
@@ -33,8 +32,6 @@
 	<!--[if gt IE 8]><!-->
 		<link rel="stylesheet" href="/css/style.css">
 	<!--<![endif]-->
-	
-	<link rel="stylesheet" href="//dizaina.net/common/css/font-awesome.css"> <!-- Font Awesome is awesome - fortawesome.github.com/Font-Awesome/ -->
 
 	<!-- header scripts -->
 	{% if site.jsconsole %}
@@ -79,10 +76,16 @@
 	{% endif %}
 
 	<footer>
-	{{ site.loc.footer[lang] }}
+		{{ site.loc.footer[lang] }}
 	</footer>
 
 	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 	<script src="/js/scripts.js"></script>
+	<!--[if lt IE 8]>
+		<script src="/js/lte-ie7.js"></script>
+	<![endif]-->
+	<!--[if lte IE 8]>
+		<script src="/js/selectivizr.min.js"></script>
+	<![endif]-->
 </body>
 </html>

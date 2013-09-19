@@ -15,8 +15,11 @@ $.fn.dzGallery = function () {
 			},
 			speed = 300,
 			flickTime = 250,
+			touch = false,// Modernizr.csstransitions && (Modernizr.touch || window.navigator.msPointerEnabled),
 			slideWidth,
 			activeSlide,
+			arrowControlPrev,
+			arrowControlNext,
 			captionBlock,
 			slideBlock;
 
@@ -24,13 +27,18 @@ $.fn.dzGallery = function () {
 			if (!gallery.slides[n]) n = activeSlide;
 
 			if (n !== activeSlide) {
-				if (activeSlide !== undefined) {
-					for (var i in gallery.captions) {
-						gallery.captions[i].className = '';
-					}
+				for (var i in gallery.captions) {
+					gallery.captions[i].className = gallery.captions[i].className.replace(' active', '');
 				}
 
-				gallery.captions[n].className = 'active';
+				if (!touch) {
+					arrowControlPrev.removeAttribute('disabled');
+					arrowControlNext.removeAttribute('disabled');
+					if (n == 0) arrowControlPrev.setAttribute('disabled', 'disabled');
+					if (n == gallery.slides.length - 1) arrowControlNext.setAttribute('disabled', 'disabled');
+				}
+
+				gallery.captions[n].className += ' active';
 			}
 
 			changePos(-n*gallery.width, speed);
@@ -200,12 +208,22 @@ $.fn.dzGallery = function () {
 		}
 
 		function setup() {
-			gallery.self.className += ' active';
+			arrowControlPrev = document.createElement('span');
+			arrowControlNext = document.createElement('span');
+			
+			arrowControlPrev.className = 'arr icon-big icon-chevron-left';
+			arrowControlNext.className = 'arr icon-big icon-chevron-right';
+
+			addEvent(arrowControlPrev, 'click', function() {
+				changeActiveSlide(activeSlide-1);
+			}, false);
+
+			addEvent(arrowControlNext, 'click', function() {
+				changeActiveSlide(activeSlide+1);
+			}, false);
 
 			if (!Modernizr.csstransforms) changePos = changePosFallback;
 			if (Sniffer.features.bw) speed = 0;
-
-			gallery.width = gallery.self.offsetWidth;
 
 			captionBlock = document.createElement('div');
 			captionBlock.className = 'captions';
@@ -223,6 +241,7 @@ $.fn.dzGallery = function () {
 				gallery.slides.push(slide);
 
 				caption.innerHTML = '<span>'+captionText+'</span>';
+				caption.className = 'dot';
 				addEvent(caption, 'click', function(x) {
 					return function() {changeActiveSlide(x);}
 				}(n), false);
@@ -234,14 +253,20 @@ $.fn.dzGallery = function () {
 
 			slideBlock.style.width = gallery.slides.length*100+'%';
 
+			!touch && captionBlock.appendChild(arrowControlPrev);
+
 			for (var i in gallery.slides) {
 				slideBlock.appendChild(gallery.slides[i]);
 				gallery.slides[i].style.width = slideWidth+'%';
 				captionBlock.appendChild(gallery.captions[i]);
 			}
 
+			!touch && captionBlock.appendChild(arrowControlNext);
+
+			gallery.self.className += ' active';
 			gallery.self.appendChild(captionBlock);
 			gallery.self.appendChild(slideBlock);
+			gallery.width = gallery.self.offsetWidth;
 
 			changeActiveSlide(0);
 
@@ -251,6 +276,6 @@ $.fn.dzGallery = function () {
 
 		setup();
 
-		Modernizr.csstransitions && (Modernizr.touch || window.navigator.msPointerEnabled) && touchInit();
+		touch && touchInit();
 	});
 };

@@ -1,0 +1,429 @@
+html.no-fontface [class^="icon-"],
+html.no-fontface [class*=" icon-"] {
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+html.no-fontface .icon-glass {
+	background-image: url(/i/icons/14/glass.png);
+}
+html.no-fontface .icon-music {
+	background-image: url(/i/icons/14/music.png);
+}
+html.no-fontface .icon-search {
+	background-image: url(/i/icons/14/search.png);
+}
+html.no-fontface .icon-envelope {
+	background-image: url(/i/icons/14/envelope.png);
+}
+html.no-fontface .icon-heart {
+	background-image: url(/i/icons/14/heart.png);
+}
+html.no-fontface .icon-star {
+	background-image: url(/i/icons/14/star.png);
+}
+html.no-fontface .icon-star-empty {
+	background-image: url(/i/icons/14/star-empty.png);
+}
+html.no-fontface .icon-film {
+	background-image: url(/i/icons/14/film.png);
+	width: 15px;
+}
+html.no-fontface .icon-ok {
+	background-image: url(/i/icons/14/ok.png);
+}
+html.no-fontface .icon-remove {
+	background-image: url(/i/icons/14/remove.png);
+}
+html.no-fontface .icon-zoom-in {
+	background-image: url(/i/icons/14/zoom-in.png);
+}
+html.no-fontface .icon-zoom-out {
+	background-image: url(/i/icons/14/zoom-out.png);
+}
+html.no-fontface .icon-off {
+	background-image: url(/i/icons/14/off.png);
+}
+html.no-fontface .icon-cog {
+	background-image: url(/i/icons/14/cog.png);
+}
+html.no-fontface .icon-trash {
+	background-image: url(/i/icons/14/trash.png);
+}
+html.no-fontface .icon-home {
+	background-image: url(/i/icons/14/home.png);
+}
+html.no-fontface .icon-list-alt {
+	background-image: url(/i/icons/14/list-alt.png);
+}
+html.no-fontface .icon-tag {
+	background-image: url(/i/icons/14/tag.png);
+}
+html.no-fontface .icon-tags {
+	background-image: url(/i/icons/14/tags.png);
+	width: 15px;
+}
+html.no-fontface .icon-book {
+	background-image: url(/i/icons/14/book.png);
+}
+html.no-fontface .icon-picture {
+	background-image: url(/i/icons/14/picture.png);
+	width: 15px;
+}
+html.no-fontface .icon-pencil {
+	background-image: url(/i/icons/14/pencil.png);
+}
+html.no-fontface .icon-map-marker {
+	background-image: url(/i/icons/14/map-marker.png);
+}
+html.no-fontface .icon-share {
+	background-image: url(/i/icons/14/share.png);
+}
+html.no-fontface .icon-step-backward {
+	background-image: url(/i/icons/14/step-backward.png);
+}
+html.no-fontface .icon-fast-backward {
+	background-image: url(/i/icons/14/fast-backward.png);
+}
+html.no-fontface .icon-backward {
+	background-image: url(/i/icons/14/backward.png);
+}
+html.no-fontface .icon-play {
+	background-image: url(/i/icons/14/play.png);
+}
+html.no-fontface .icon-pause {
+	background-image: url(/i/icons/14/pause.png);
+}
+html.no-fontface .icon-stop {
+	background-image: url(/i/icons/14/stop.png);
+}
+html.no-fontface .icon-forward {
+	background-image: url(/i/icons/14/forward.png);
+}
+html.no-fontface .icon-fast-forward {
+	background-image: url(/i/icons/14/fast-forward.png);
+}
+html.no-fontface .icon-step-forward {
+	background-image: url(/i/icons/14/step-forward.png);
+}
+html.no-fontface .icon-eject {
+	background-image: url(/i/icons/14/eject.png);
+}
+html.no-fontface .icon-chevron-left {
+	background-image: url(/i/icons/14/chevron-left.png);
+}
+html.no-fontface .icon-chevron-right {
+	background-image: url(/i/icons/14/chevron-right.png);
+}
+html.no-fontface .icon-remove-circle {
+	background-image: url(/i/icons/14/remove-circle.png);
+}
+html.no-fontface .icon-ok-circle {
+	background-image: url(/i/icons/14/ok-circle.png);
+}
+html.no-fontface .icon-ban-circle {
+	background-image: url(/i/icons/14/ban-circle.png);
+}
+html.no-fontface .icon-arrow-left {
+	background-image: url(/i/icons/14/arrow-left.png);
+}
+html.no-fontface .icon-arrow-right {
+	background-image: url(/i/icons/14/arrow-right.png);
+}
+html.no-fontface .icon-arrow-up {
+	background-image: url(/i/icons/14/arrow-up.png);
+}
+html.no-fontface .icon-arrow-down {
+	background-image: url(/i/icons/14/arrow-down.png);
+}
+html.no-fontface .icon-share-alt {
+	background-image: url(/i/icons/14/share-alt.png);
+}
+html.no-fontface .icon-resize-full {
+	background-image: url(/i/icons/14/resize-full.png);
+}
+html.no-fontface .icon-resize-small {
+	background-image: url(/i/icons/14/resize-small.png);
+}
+html.no-fontface .icon-eye-open {
+	background-image: url(/i/icons/14/eye-open.png);
+}
+html.no-fontface .icon-eye-close {
+	background-image: url(/i/icons/14/eye-close.png);
+}
+html.no-fontface .icon-warning-sign {
+	background-image: url(/i/icons/14/warning-sign.png);
+}
+html.no-fontface .icon-random {
+	background-image: url(/i/icons/14/random.png);
+}
+html.no-fontface .icon-comment {
+	background-image: url(/i/icons/14/comment.png);
+}
+html.no-fontface .icon-chevron-up {
+	background-image: url(/i/icons/14/chevron-up.png);
+}
+html.no-fontface .icon-chevron-down {
+	background-image: url(/i/icons/14/chevron-down.png);
+}
+html.no-fontface .icon-retweet {
+	background-image: url(/i/icons/14/retweet.png);
+	width: 15px;
+}
+html.no-fontface .icon-twitter-sign {
+	background-image: url(/i/icons/14/twitter-sign.png);
+}
+html.no-fontface .icon-facebook-sign {
+	background-image: url(/i/icons/14/facebook-sign.png);
+}
+html.no-fontface .icon-camera-retro {
+	background-image: url(/i/icons/14/camera-retro.png);
+}
+html.no-fontface .icon-cogs {
+	background-image: url(/i/icons/14/cogs.png);
+	width: 15px;
+}
+html.no-fontface .icon-comments {
+	background-image: url(/i/icons/14/comments.png);
+}
+html.no-fontface .icon-heart-empty {
+	background-image: url(/i/icons/14/heart-empty.png);
+}
+html.no-fontface .icon-external-link {
+	background-image: url(/i/icons/14/external-link.png);
+}
+html.no-fontface .icon-twitter {
+	background-image: url(/i/icons/14/twitter.png);
+}
+html.no-fontface .icon-rss {
+	background-image: url(/i/icons/14/rss.png);
+}
+html.no-fontface .icon-hdd {
+	background-image: url(/i/icons/14/hdd.png);
+}
+html.no-fontface .icon-circle-arrow-left {
+	background-image: url(/i/icons/14/circle-arrow-left.png);
+}
+html.no-fontface .icon-circle-arrow-right {
+	background-image: url(/i/icons/14/circle-arrow-right.png);
+}
+html.no-fontface .icon-circle-arrow-up {
+	background-image: url(/i/icons/14/circle-arrow-up.png);
+}
+html.no-fontface .icon-circle-arrow-down {
+	background-image: url(/i/icons/14/circle-arrow-down.png);
+}
+html.no-fontface .icon-globe {
+	background-image: url(/i/icons/14/globe.png);
+}
+html.no-fontface .icon-cloud {
+	background-image: url(/i/icons/14/cloud.png);
+	width: 15px;
+}
+html.no-fontface .icon-reorder {
+	background-image: url(/i/icons/14/reorder.png);
+}
+html.no-fontface .icon-list-ul {
+	background-image: url(/i/icons/14/list-ul.png);
+}
+html.no-fontface .icon-list-ol {
+	background-image: url(/i/icons/14/list-ol.png);
+}
+html.no-fontface .icon-google-plus-sign {
+	background-image: url(/i/icons/14/google-plus-sign.png);
+}
+html.no-fontface .icon-google-plus {
+	background-image: url(/i/icons/14/google-plus.png);
+}
+html.no-fontface .icon-caret-down {
+	background-image: url(/i/icons/14/caret-down.png);
+}
+html.no-fontface .icon-caret-up {
+	background-image: url(/i/icons/14/caret-up.png);
+}
+html.no-fontface .icon-caret-left {
+	background-image: url(/i/icons/14/caret-left.png);
+}
+html.no-fontface .icon-caret-right {
+	background-image: url(/i/icons/14/caret-right.png);
+}
+html.no-fontface .icon-sort {
+	background-image: url(/i/icons/14/sort.png);
+}
+html.no-fontface .icon-sort-down {
+	background-image: url(/i/icons/14/sort-down.png);
+}
+html.no-fontface .icon-sort-up {
+	background-image: url(/i/icons/14/sort-up.png);
+}
+html.no-fontface .icon-envelope-alt {
+	background-image: url(/i/icons/14/envelope-alt.png);
+}
+html.no-fontface .icon-comment-alt {
+	background-image: url(/i/icons/14/comment-alt.png);
+}
+html.no-fontface .icon-comments-alt {
+	background-image: url(/i/icons/14/comments-alt.png);
+}
+html.no-fontface .icon-umbrella {
+	background-image: url(/i/icons/14/umbrella.png);
+}
+html.no-fontface .icon-cloud-download {
+	background-image: url(/i/icons/14/cloud-download.png);
+	width: 15px;
+}
+html.no-fontface .icon-cloud-upload {
+	background-image: url(/i/icons/14/cloud-upload.png);
+	width: 15px;
+}
+html.no-fontface .icon-file-alt {
+	background-image: url(/i/icons/14/file-alt.png);
+}
+html.no-fontface .icon-double-angle-left {
+	background-image: url(/i/icons/14/double-angle-left.png);
+}
+html.no-fontface .icon-double-angle-right {
+	background-image: url(/i/icons/14/double-angle-right.png);
+}
+html.no-fontface .icon-double-angle-up {
+	background-image: url(/i/icons/14/double-angle-up.png);
+}
+html.no-fontface .icon-double-angle-down {
+	background-image: url(/i/icons/14/double-angle-down.png);
+}
+html.no-fontface .icon-angle-left {
+	background-image: url(/i/icons/14/angle-left.png);
+}
+html.no-fontface .icon-angle-right {
+	background-image: url(/i/icons/14/angle-right.png);
+}
+html.no-fontface .icon-angle-up {
+	background-image: url(/i/icons/14/angle-up.png);
+}
+html.no-fontface .icon-angle-down {
+	background-image: url(/i/icons/14/angle-down.png);
+}
+html.no-fontface .icon-desktop {
+	background-image: url(/i/icons/14/desktop.png);
+	width: 15px;
+}
+html.no-fontface .icon-laptop {
+	background-image: url(/i/icons/14/laptop.png);
+	width: 15px;
+}
+html.no-fontface .icon-tablet {
+	background-image: url(/i/icons/14/tablet.png);
+}
+html.no-fontface .icon-mobile {
+	background-image: url(/i/icons/14/mobile.png);
+}
+html.no-fontface .icon-flag-alt {
+	background-image: url(/i/icons/14/flag-alt.png);
+}
+html.no-fontface .icon-terminal {
+	background-image: url(/i/icons/14/terminal.png);
+}
+html.no-fontface .icon-code {
+	background-image: url(/i/icons/14/code.png);
+}
+html.no-fontface .icon-chevron-sign-left {
+	background-image: url(/i/icons/14/chevron-sign-left.png);
+}
+html.no-fontface .icon-chevron-sign-right {
+	background-image: url(/i/icons/14/chevron-sign-right.png);
+}
+html.no-fontface .icon-chevron-sign-up {
+	background-image: url(/i/icons/14/chevron-sign-up.png);
+}
+html.no-fontface .icon-chevron-sign-down {
+	background-image: url(/i/icons/14/chevron-sign-down.png);
+}
+html.no-fontface .icon-html5 {
+	background-image: url(/i/icons/14/html5.png);
+}
+html.no-fontface .icon-rss-sign {
+	background-image: url(/i/icons/14/rss-sign.png);
+}
+html.no-fontface .icon-play-sign {
+	background-image: url(/i/icons/14/play-sign.png);
+}
+html.no-fontface .icon-ticket {
+	background-image: url(/i/icons/14/ticket.png);
+}
+html.no-fontface .icon-check-sign {
+	background-image: url(/i/icons/14/check-sign.png);
+}
+html.no-fontface .icon-youtube {
+	background-image: url(/i/icons/14/youtube.png);
+}
+html.no-fontface .icon-long-arrow-down {
+	background-image: url(/i/icons/14/long-arrow-down.png);
+}
+html.no-fontface .icon-long-arrow-up {
+	background-image: url(/i/icons/14/long-arrow-up.png);
+}
+html.no-fontface .icon-long-arrow-left {
+	background-image: url(/i/icons/14/long-arrow-left.png);
+}
+html.no-fontface .icon-long-arrow-right {
+	background-image: url(/i/icons/14/long-arrow-right.png);
+}
+html.no-fontface .icon-apple {
+	background-image: url(/i/icons/14/apple.png);
+}
+html.no-fontface .icon-windows {
+	background-image: url(/i/icons/14/windows.png);
+}
+html.no-fontface .icon-android {
+	background-image: url(/i/icons/14/android.png);
+}
+html.no-fontface .icon-linux {
+	background-image: url(/i/icons/14/linux.png);
+}
+html.no-fontface .icon-female {
+	background-image: url(/i/icons/14/female.png);
+}
+html.no-fontface .icon-male {
+	background-image: url(/i/icons/14/male.png);
+}
+html.no-fontface .icon-bug {
+	background-image: url(/i/icons/14/bug.png);
+}
+html.no-fontface .icon-vk {
+	background-image: url(/i/icons/14/vk.png);
+	width: 15px;
+}
+html.no-fontface .icon-fire {
+	background-image: url(/i/icons/14/fire.png);
+	width: 16px;
+}
+html.no-fontface .icon-lab {
+	background-image: url(/i/icons/14/lab.png);
+}
+html.no-fontface .icon-github {
+	background-image: url(/i/icons/14/github.png);
+}
+html.no-fontface .icon-windows2 {
+	background-image: url(/i/icons/14/windows2.png);
+}
+html.no-fontface .icon-html52 {
+	background-image: url(/i/icons/14/html52.png);
+}
+html.no-fontface .icon-chrome {
+	background-image: url(/i/icons/14/chrome.png);
+}
+html.no-fontface .icon-firefox {
+	background-image: url(/i/icons/14/firefox.png);
+	width: 15px;
+}
+html.no-fontface .icon-IE {
+	background-image: url(/i/icons/14/IE.png);
+}
+html.no-fontface .icon-opera {
+	background-image: url(/i/icons/14/opera.png);
+}
+html.no-fontface .icon-safari {
+	background-image: url(/i/icons/14/safari.png);
+}
