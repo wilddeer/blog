@@ -18,6 +18,8 @@
 
 {% include css/syntax/syntax.css %}
 
+{% include css/font.css %}
+
 {% include css/ie8.css %}
 
 {% include css/print.css %}

@@ -32,14 +32,13 @@
 	}
 
 	.content ul.posts li {
-		padding-left: 19px;
-		padding-left: 1.2rem;
+		padding-left: 1.1em;
 	}
 
-	html.kindle .content ul.posts li {
+	/*html.kindle .content ul.posts li {
 		padding-left: 25px;
 		padding-left: 1.5rem;
-	}
+	}*/
 
 	.content ul.posts li:before {
 		visibility: visible;

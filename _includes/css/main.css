@@ -89,7 +89,6 @@ h3,
 h4 {
 	font-weight: normal;
 	line-height: 1.2em;
-	/*margin: 1em 0 0 0;*/
 }
 
 h1 {
@@ -123,6 +122,19 @@ h4 {
 a {
 	color: #168cd2;
 	text-decoration: underline;
+}
+
+a.iconlink {
+	text-decoration: none;
+}
+
+a.iconlink span {
+	text-decoration: underline;
+}
+
+a.iconlink:hover span,
+a.iconlink:active span  {
+	text-decoration: none;
 }
 
 h1 a,
@@ -169,28 +181,29 @@ li {
 }
 
 .content ul li {
-	padding-left: 1.2rem;
+	padding-left: 1.1em;
 }
 
-html.kindle .content ul li {
+/*html.kindle .content ul li {
 	padding-left: 25px;
 	padding-left: 1.5rem;
-}
+}*/
 
 .content ul li:before {
-	content: "— ";
+	content: "—";
 	position: absolute;
 	display: inline-block;
-	width: 1.2rem;
-	margin-left: -1.2rem;
+	width: 0.75em;
+	margin-left: -1em;
+	overflow: hidden;
 }
 
-html.kindle .content ul li:before {
+/*html.kindle .content ul li:before {
 	width: 25px;
 	margin-left: -25px;
 	width: 1.5rem;
 	margin-left: -1.5rem;
-}
+}*/
 	
 pre {
 	white-space: pre;
@@ -198,7 +211,6 @@ pre {
 	padding: 1em;
 	overflow: auto;
 	box-shadow: 0 0 5px rgba(64,0,0,0.1);
-	/*max-height: 250px;*/
 }
 
 html.no-boxshadow pre {
@@ -208,6 +220,8 @@ html.no-boxshadow pre {
 html.ovi pre,
 html.operamini pre {
 	padding: 0;
+	border: none;
+	box-shadow: none;
 }
 
 code {
@@ -262,35 +276,79 @@ html.ovi pre code {
 
 .js-gallery .captions > span {
 	display: inline-block;
-	width: 0.5rem;
-	height: 0.5rem;
 	cursor: pointer;
-	margin-right: 1em;
-	background: #e2e0db;
-	border-radius: 1rem;
+	vertical-align: middle;
+}
+
+.js-gallery .captions > span.arr {
+	padding-right: 1rem;
+	padding-left: 1rem;
+	color: #9b9890;
+	font-size: 1.5rem;
+	width: auto;
+	height: auto;
+}
+
+html.no-fontface .js-gallery .captions > span.arr {
+	opacity: 0.7;
+}
+
+html.bw .js-gallery .captions > span.arr {
+	color: #000;
+}
+
+.js-gallery .captions > span.arr:first-of-type {
+	float: left;
+}
+
+.js-gallery .captions > span.arr:last-of-type {
+	float: right;
+}
+
+.js-gallery .captions > span.arr[disabled] {
+	color: #dfdddd;
+	cursor: default;
+}
+
+html.no-fontface .js-gallery .captions > span.arr[disabled] {
+	opacity: 0.2;
+}
+
+html.bw .js-gallery .captions > span.arr[disabled] {
+	color: #999;
+}
+
+.js-gallery .captions > span.dot {
+	margin-right: 0.5em;
+	margin-left: 0.5em;
+	width: 0.6rem;
+	height: 0.6rem;
+	border-radius: 1.2rem;
+	border: 1px solid #9b9890;
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
 }
 
-html.bw .js-gallery .captions > span {
-	background: #aaa;
+html.bw .js-gallery .captions > span.dot {
+	border-color: #000;
 }
 
-.js-gallery .captions > span.active {
+.js-gallery .captions > span.dot.active {
 	background: #9b9890;
 }
 
-html.bw .js-gallery .captions > span.active {
-	background: #333;
+html.bw .js-gallery .captions > span.dot.active {
+	background: #000;
 }
 
-.js-gallery .captions > span > span {
+.js-gallery .captions > span.dot > span {
 	display: none;
 }
 
 .js-gallery .slides {
+	z-index: 0;
 	position: relative;
 	overflow: hidden;
 	padding-top: 0.5rem;
@@ -308,7 +366,6 @@ html.bw .js-gallery .captions > span.active {
 	padding-left: 0;
 	padding-right: 0;
 	max-width: 120rem;
-	white-space: nowrap;
 	overflow: hidden;
 }
 
@@ -535,7 +592,7 @@ html.kindle .content ul.posts li {
 .content ul.posts time {
 	font-style: italic;
 	display: block;
-	font-size: 0.8rem;
+	font-size: 0.7em;
 }
 
 html.bw .content ul.posts time {
@@ -543,7 +600,7 @@ html.bw .content ul.posts time {
 }
 
 .content ul.posts .cat-link {
-	font-size: 0.8rem;
+	font-size: 0.7em;
 }
 
 body > footer {
@@ -554,20 +611,4 @@ body > footer {
 
 html.bw body > footer {
 	color: #333;
-}
-
-
-/* bonus stuff */
-.clear-fix:before,
-.clear-fix:after {
-	display: table;
-	content: "";
-}
-
-.clear-fix:after {
-	clear: both;
-}
-
-.clear-fix {
-	zoom: 1;
 }

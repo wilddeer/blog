@@ -53,23 +53,6 @@ figure figcaption {
 	padding-bottom: 12.796875px; /*0.8rem*/
 }
 
-.content ul li {
-	padding-left: 19.1875px; /*1.2rem*/
-}
-
-.content ul li:before {
-	width: 19.1875px; /*1.2rem*/
-	margin-left: -19.1875px; /*1.2rem*/
-}
-
-.content ul.posts time {
-	font-size: 13px; /*0.8rem*/
-}
-
-.content ul.posts .cat-link {
-	font-size: 13px; /*0.8rem*/
-}
-
 li {
 	margin-bottom: 16px; /*1rem*/
 }
@@ -83,7 +66,13 @@ li {
 	margin-bottom: 8px; /*0.5rem*/
 }
 
-.js-gallery .captions > span {
+.js-gallery .captions > span.arr {
+	padding-right: 16px;
+	padding-left: 16px;
+	font-size: 24px;
+}
+
+.js-gallery .captions > span.dot {
 	height: 8px; /*0.5rem*/
 	width: 8px; /*0.5rem*/
 	border-radius: 16px; /*1rem*/
