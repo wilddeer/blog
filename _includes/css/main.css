@@ -40,7 +40,7 @@ html.ovi {
 }
 
 body {
-	padding: 3em 0;
+	padding: 1.5em 0;
 	overflow-x: hidden;
 	font-size: 1.15em;
 	color: #403333;
@@ -184,11 +184,6 @@ li {
 	padding-left: 1.1em;
 }
 
-/*html.kindle .content ul li {
-	padding-left: 25px;
-	padding-left: 1.5rem;
-}*/
-
 .content ul li:before {
 	content: "—";
 	position: absolute;
@@ -197,13 +192,6 @@ li {
 	margin-left: -1em;
 	overflow: hidden;
 }
-
-/*html.kindle .content ul li:before {
-	width: 25px;
-	margin-left: -25px;
-	width: 1.5rem;
-	margin-left: -1.5rem;
-}*/
 	
 pre {
 	white-space: pre;
@@ -423,33 +411,7 @@ figure * + figcaption {
 	padding-bottom: 0;
 }
 
-/*.tip {
-	position: relative;
-	border-bottom: 1px dotted;
-}
-
-.tip .tip-content {
-	display: none;
-	position: absolute;
-	bottom: 100%;
-	left: 0;
-	border-radius: 5px;
-	padding: 5px;
-	line-height: 1em;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
-
-.tip-content:not(code) {
-	background: #fff;
-	border: 1px solid #ddd;
-}
-
-.tip:hover .tip-content {
-	display: block;
-}*/
-
-/* grid */
+/* blocks */
 body > header,
 body > footer,
 .content > * {
@@ -460,15 +422,10 @@ body > footer,
 	padding-right: 1rem;
 }
 
-body > header {
-	position: relative;
-	margin-top: -2rem;
-}
-
 ul.lang-switcher {
 	float: right;
 	margin: 0;
-	padding: 0.2rem 0 0 0;
+	padding: 0.2rem 0 0 1rem;
 	color: #a19e91;
 }
 
@@ -532,10 +489,6 @@ html.bw body.post a.logo {
 	background: #999;
 }
 
-h1.title {
-	padding-top: 0.5rem;
-}
-
 h1.title a {
 	text-decoration: none;
 	border-bottom: 2px solid;
@@ -547,15 +500,8 @@ h1.title a:visited {
 
 h1.title a:hover {
 	color: #fff;
+	border-color: #f92672;
 }
-
-/*body.post h1.title a {
-	color: #a19e91;
-}
-
-body.post h1.title a:hover {
-	color: white;
-}*/
 
 .content {
 	padding-top: 1rem;

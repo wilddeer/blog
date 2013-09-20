@@ -5,91 +5,15 @@
 body > header, body > footer, .content > * {
 	padding-right: 32px; /*2rem*/
 	padding-left: 32px; /*2rem*/
-	max-width: 960px; /*60rem*/
-}
-
-figure * + figcaption {
-	padding-top: 12.796875px; /*0.8rem*/
-}
-
-figure figcaption {
-	padding-bottom: 12.796875px; /*0.8rem*/
-}
-
-ul.lang-switcher {
-	right: 32px; /*2rem*/
-	padding-bottom: 1.59375px; /*0.1rem*/
-}
-
-ul.lang-switcher li {
-	font-size: 13px; /*0.8rem*/
-	margin-left: 8px; /*0.5rem*/
-}
-
-ul.lang-switcher li > * {
-	padding-bottom: 1.59375px; /*0.1rem*/
-	padding-top: 3.1875px; /*0.2rem*/
-	padding-right: 4.796875px; /*0.3rem*/
-	padding-left: 4.796875px; /*0.3rem*/
 }
 
 a.logo {
 	margin-right: -32px; /*-2rem*/
-	font-size: 13px; /*0.8rem*/
-	padding-bottom: 7.1875px; /*0.45rem*/
-	padding-top: 7.1875px; /*0.45rem*/
-	padding-right: 9.59375px; /*0.6rem*/
-	padding-left: 9.59375px; /*0.6rem*/
-}
-
-p, ul, ol, pre, figure, h1, h2, h3, h4 {
-	margin: 0 0 24px 0; /*1.5rem*/
-}
-
-.content {
-	padding-bottom: 16px; /*1rem*/
-	padding-top: 16px; /*1rem*/
-}
-
-li {
-	margin-bottom: 16px; /*1rem*/
-}
-
-.js-gallery.active {
-	max-width: 1920px; /*120rem*/
-}
-
-.js-gallery .captions {
-	font-size: 14px; /*0.9rem*/
-	margin-bottom: 8px; /*0.5rem*/
 }
 
 /* bug: 'auto' isn't considered as override in pixelizr */
 .js-gallery .captions > span.dot {
 	margin-bottom: 8px; /*0.5rem*/
-}
-
-.js-gallery .slides {
-	margin-bottom: 16px; /*1rem*/
-	padding-bottom: 8px; /*0.5rem*/
-	padding-top: 8px; /*0.5rem*/
-}
-
-.js-gallery.active figure {
-	padding-right: 16px; /*1rem*/
-	padding-left: 16px; /*1rem*/
-}
-
-/*pre {
-	max-height: 480px;
-}*/
-
-pre code {
-	font-size: 14px;
-}
-
-body > footer {
-	margin-top: 32px; /*2rem*/
 }
 
 {% unless include.ie %}
