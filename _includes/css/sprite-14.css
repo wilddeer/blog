@@ -6,6 +6,10 @@ html.no-fontface [class*=" icon-"] {
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
 }
+html.ovi [class^="icon-"],
+html.ovi [class*=" icon-"] {
+	margin-left: 3px;
+}
 html.no-fontface .icon-glass {
 	background-image: url(/i/icons/14/glass.png);
 }
