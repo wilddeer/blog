@@ -15,7 +15,7 @@ $.fn.dzGallery = function () {
 			},
 			speed = 300,
 			flickTime = 250,
-			touch = false,// Modernizr.csstransitions && (Modernizr.touch || window.navigator.msPointerEnabled),
+			touch = Modernizr.csstransitions && (Modernizr.touch || window.navigator.msPointerEnabled),
 			slideWidth,
 			activeSlide,
 			arrowControlPrev,
