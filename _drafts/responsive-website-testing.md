@@ -48,9 +48,13 @@ Blackberry.
 
 ПЕРЕРАБОТАТЬ
 
-Мой подход к покупке девайсов был такой: купить устройства на разных платформах с разным назначением, и хотя бы одно должно быть планшетом (другой вьюпорт). В результате были куплены планшет Galaxy Tab 2 с андроидом 4.1, мобилка HTC 8x на WP8 и iPod Touch 5.
+Моя первоначальная идея купить по устройству на каждой из популярных операционных систем (iOS, Android, Windows Phone) осуществилась и переросла в собирательство редких девайсов с браузером на борту.
 
-Потом появились Nexus 4 (мобилка с андроидом), Kindle Keyboard со своим черно-белым вебкитом (одна из тех железок, под которые стоит адаптировать сайты просто из спортивного интереса) и Nokia Asha 501 (мобилка на модифицированной S40 с ужасным Ovi браузером и Оперой мини на JAVA). Еще из Китая едет нонеймовая мобилка с андроидом 2.3 и Nintendo DSi, который я заказал после прочтения [вот этой статьи](http://maban.co.uk/73).
+Так в коллекции появились Kindle Keyboard и Kindle Paperwhite со своими черно-белыми вебкитами и Nokia Asha 501 (мобилка на модифицированной S40 с ужасным Ovi браузером и Оперой мини на JAVA).
+
+Еще в пути из Китая нонеймовая мобилка с Андроидом 2.3 и Nintendo DSi, которую я заказал после прочтения [вот этой статьи](http://maban.co.uk/73).
+
+В планах несправедливо забытая Blackberry, что-то с Win 8 и тачскрином, какая-нибудь мобилка с Нокиевским браузером.
 
 {% include pic.htm src='zoo.jpg' c='Зоопарк' %}
 
@@ -139,22 +143,24 @@ For fun:
 {% highlight js %}
 var customConsole = {
     log: function(message) {
-        if (message === undefined) message = '<i>undefined</i>';
-        notify.create(message, 'info', 10000);
+        this.add(message, 'info');
     },
     warn: function(message) {
-        notify.create(message, 'warning', 10000);
+        this.add(message, 'warning');
     },
     error: function(message, source, file) {
-        notify.create([message, source, file].join(' '), 'danger', 10000);
+        this.add([message, source, file].join('<br>'), 'error');
+    },
+    add: function(message, type) {
+        if (typeof message !== 'string') message = '<i>' + typeof message + '</i>';
+        document.getElementById('console').innerHTML += '<p class=' + type + '>' + message + '</p>';
     }
 }
 
 if (dev_console) {
     window.console = customConsole;
-
     window.onerror = function(message, source, file) {
-        console.error(message, source, file)
+        console.error(message, source, file);
     };
 }
 {% endhighlight %}
