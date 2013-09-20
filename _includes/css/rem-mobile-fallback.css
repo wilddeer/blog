@@ -1,7 +1,3 @@
-body > header {
-	margin-top: -32px; /*-2rem*/
-}
-
 body > header, body > footer, .content > * {
 	max-width: 960px; /*60rem*/
 	padding-right: 16px; /*1rem*/
@@ -9,7 +5,7 @@ body > header, body > footer, .content > * {
 }
 
 ul.lang-switcher {
-	padding-top: 3.1875px; /*0.2rem*/
+	padding: 3.1875px 0 0 16px; /*0.2rem*/  /*1rem*/
 }
 
 ul.lang-switcher li {
@@ -30,10 +26,6 @@ a.logo {
 	padding-top: 7.1875px; /*0.45rem*/
 	padding-right: 9.59375px; /*0.6rem*/
 	padding-left: 9.59375px; /*0.6rem*/
-}
-
-h1.title {
-	padding-top: 8px; /*0.5rem*/
 }
 
 p, ul, ol, pre, figure, h1, h2, h3, h4 {
@@ -88,10 +80,6 @@ li {
 	padding-right: 16px; /*1rem*/
 	padding-left: 16px; /*1rem*/
 }
-
-/*pre {
-	max-height: 480px;
-}*/
 
 pre code {
 	font-size: 14px; /*0.9rem*/
