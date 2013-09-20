@@ -13,6 +13,19 @@
 @media all and (min-width: 30em) {
 {% endunless %}
 
+	body {
+		padding: 1.5em 0;
+	}
+
+	ul.lang-switcher {
+		float: right;
+		padding: 0.2em 0 0 1em;
+	}
+
+	ul.lang-switcher li {
+		margin: 0 0 0 0.5em;
+	}
+
 	.content ul li {
 		padding-left: 2.2em;
 	}

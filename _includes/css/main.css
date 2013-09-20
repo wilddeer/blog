@@ -40,7 +40,7 @@ html.ovi {
 }
 
 body {
-	padding: 1.5em 0;
+	padding: 0.5em 0 1.5em 0;
 	overflow-x: hidden;
 	font-size: 1.15em;
 	color: #403333;
@@ -192,6 +192,10 @@ li {
 	margin-left: -1em;
 	overflow: hidden;
 }
+
+html.operamini .content ul li:before {
+	overflow: visible;
+}
 	
 pre {
 	white-space: pre;
@@ -199,6 +203,7 @@ pre {
 	padding: 1em;
 	overflow: auto;
 	box-shadow: 0 0 5px rgba(64,0,0,0.1);
+	-webkit-overflow-scrolling: touch;
 }
 
 html.no-boxshadow pre {
@@ -423,9 +428,8 @@ body > footer,
 }
 
 ul.lang-switcher {
-	float: right;
 	margin: 0;
-	padding: 0.2rem 0 0 1rem;
+	padding: 0 0 1em 0;
 	color: #a19e91;
 }
 
@@ -435,20 +439,21 @@ html.bw ul.lang-switcher {
 
 ul.lang-switcher li {
 	display: inline-block;
-	font-size: 0.8rem;
-	margin: 0 0 0 0.5rem;
+	font-size: 0.7em;
+	margin: 0 0.5em 0 0;
 }
 
 ul.lang-switcher li > * {
 	display: inline-block;
-	padding: 0.2rem 0.3rem 0.1rem;
+	padding: 0.2em 0.3em 0.1em;
 }
 
 ul.lang-switcher a:visited {
 	color: #168cd2;
 }
 
-ul.lang-switcher a:hover {
+ul.lang-switcher a:hover,
+ul.lang-switcher a:active {
 	color: #fff;
 }
 
