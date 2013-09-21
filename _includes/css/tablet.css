@@ -200,10 +200,6 @@
 		max-height: 450px;
 	}
 
-	/*pre {
-		max-height: 350px;
-	}*/
-
 {% unless include.ie %}
 }
 {% endunless %}
@@ -216,10 +212,6 @@
 	figure img {
 		max-height: none;
 	}
-
-	/*pre {
-		max-height: 500px;
-	}*/
 
 {% unless include.ie %}
 }
