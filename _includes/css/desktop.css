@@ -20,20 +20,19 @@
 		margin-top: 0;
 	}
 
-	/* grid */
-	a.logo {
-		position: absolute;
-		right: 100%;
-		bottom: 100%;
-		margin-right: -2rem;
-	}
-
+	/* blocks */
 	.content ul.posts li {
 		padding-left: 0;
 	}
 
 	figure img {
 		max-height: none;
+	}
+
+	.gallery figure,
+	.js-gallery figure {
+		padding-right: 1em;
+		padding-left: 1em;
 	}
 
 {% unless include.ie %}

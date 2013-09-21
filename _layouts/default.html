@@ -46,7 +46,7 @@
 <body>
 {% endif %}
 	<header>
-		<ul class="lang-switcher">
+		<!--ul class="lang-switcher">
 			{% if lang == "en" %}
 			<li><a href="/">{{ site.loc.in_lang.ru }}</a></li>
 			<li><span>{{ site.loc.in_lang.en }}</span></li>
@@ -54,9 +54,7 @@
 			<li><span>{{ site.loc.in_lang.ru }}</span></li>
 			<li><a href="/en/">{{ site.loc.in_lang.en }}</a></li>
 			{% endif %}
-		</ul>
-
-		<!--a href="//dizaina.net" class="logo"><span>&empty; </span>dizaina.net</a-->
+		</ul-->
 
 		{% if page.url == root %}
 		<h1 class="title">{{ site.loc.name[lang] }}</h1>
@@ -76,7 +74,8 @@
 	{% endif %}
 
 	<footer>
-		{{ site.loc.footer[lang] }}
+		<p>{{ site.loc.footer[lang] }}</p>
+		<p><a href="//dizaina.net" class="logo"><span>&empty; </span>dizaina.net</a></p>
 	</footer>
 
 	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
