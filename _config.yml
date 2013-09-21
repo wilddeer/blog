@@ -9,8 +9,14 @@ permalink: /:categories/:title
 cats:
     rare-species:
         ru: "Редкие звери"
+        in: "Редких зверях"
         en: "Rare species"
         link: "rare-species"
+    experiments:
+        ru: "Эксперименты"
+        in: "Экспериментах"
+        en: "experiments"
+        link: "experiments"
 
 loc:
     name:
@@ -22,6 +28,9 @@ loc:
     original_image:
         ru: "Посмотреть оригинал"
         en: "Original image"
+    published:
+        ru: 'Опубликовано'
+        en: 'Published'
     footer:
-        ru: Кое-как работает на <a href="//jekyllrb.com" class="iconlink"><i class="icon-lab"></i>&nbsp;<span>Jekyll</span></a>. Смотрите, это же <a href="//github.com/wilddeer" class="iconlink"><i class="icon-github"></i>&nbsp;<span>GitHub</span></a>!
-        en: Somehow it works on <a href="//jekyllrb.com" class="iconlink"><i class="icon-lab"></i>&nbsp;<span>Jekyll</span></a>. Look, it's <a href="//github.com/wilddeer" class="iconlink"><i class="icon-github"></i>&nbsp;<span>GitHub</span></a>!
+        ru: Работает на <a href="//jekyllrb.com" class="iconlink"><i class="icon-lab"></i>&nbsp;<span>Jekyll</span></a>. Смотрите, это же <a href="//github.com/wilddeer" class="iconlink"><i class="icon-github"></i>&nbsp;<span>GitHub</span></a>!
+        en: Powered by <a href="//jekyllrb.com" class="iconlink"><i class="icon-lab"></i>&nbsp;<span>Jekyll</span></a>. Look, it's <a href="//github.com/wilddeer" class="iconlink"><i class="icon-github"></i>&nbsp;<span>GitHub</span></a>!

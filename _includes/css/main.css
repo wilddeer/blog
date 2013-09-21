@@ -40,7 +40,7 @@ html.ovi {
 }
 
 body {
-	padding: 0.5em 0 1.5em 0;
+	padding: 0.5em 0 0;
 	overflow-x: hidden;
 	font-size: 1.15em;
 	color: #403333;
@@ -260,6 +260,14 @@ html.ovi pre code {
 	text-align: center;
 }
 
+.js-gallery.active {
+	position: relative;
+	padding-left: 0;
+	padding-right: 0;
+	max-width: 120rem;
+	overflow: hidden;
+}
+
 .js-gallery .captions {
 	font-size: 0.9rem;
 	margin-bottom: 0.5rem;
@@ -348,25 +356,16 @@ html.bw .js-gallery .captions > span.dot.active {
 	padding-bottom: 0.5rem;
 	margin-bottom: 1rem;
 	-ms-touch-action: pan-y;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	backface-visibility: hidden;
 }
 
-.js-gallery .slides figure a {
-	outline: none;
-}
-
-.js-gallery.active {
-	position: relative;
-	padding-left: 0;
-	padding-right: 0;
-	max-width: 120rem;
-	overflow: hidden;
-}
-
-.js-gallery.active figure {
+.js-gallery.active .slides figure {
 	width: 100%;
 	margin: 0;
 	float: left;
-	position: relative;
 	padding-left: 1rem;
 	padding-right: 1rem;
 	-webkit-box-sizing: border-box;
@@ -377,6 +376,26 @@ html.bw .js-gallery .captions > span.dot.active {
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+}
+
+.js-gallery.active .slides figure > a,
+.js-gallery.active .slides figure > a:hover,
+.js-gallery.active .slides figure > a:active,
+.js-gallery.active .slides figure > a:focus {
+	outline: none;
+	background: transparent;
+}
+
+.js-gallery.active .captions,
+.js-gallery.active .slides,
+.js-gallery.active .slides figure,
+.js-gallery.active .slides figure a,
+.js-gallery.active .slides figure img,
+.js-gallery.active .slides figure figcaption {
+	-webkit-transform: translate3d(0,0,0);
+	-ms-transform: translate3d(0,0,0);
+	-moz-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
 }
 
 .js-gallery.active .captions {
@@ -459,7 +478,6 @@ ul.lang-switcher a:active {
 
 a.logo {
 	display: inline-block;
-	position: static;
 	background: #faa615;
 	padding: 0.45rem 0.6rem;
 	font-size: 0.8rem;
@@ -513,11 +531,6 @@ h1.title a:hover {
 	padding-bottom: 1rem;
 }
 
-.content .post-date {
-	display: block;
-	color: #787575
-}
-
 .content .post-cat-title {
 	margin-bottom: 0;
 }
@@ -554,6 +567,12 @@ html.bw .content ul.posts time {
 	font-size: 0.7em;
 }
 
+.content .meta {
+	font-size: 0.8em;
+	color: #a19e91;
+	margin-bottom: 0;
+}
+
 body > footer {
 	margin-top: 2rem;
 	font-size: 0.8em;
@@ -562,4 +581,28 @@ body > footer {
 
 html.bw body > footer {
 	color: #333;
+}
+
+/* forms */
+
+input {
+	border: 1px solid #c9c9c9;
+	border-radius: 0.2em;
+	padding: 0.2em 0.5em;
+	box-shadow: inset 0 0.1em 0.1em rgba(0,0,0,0.1);
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+	-moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+	-ms-transition: border linear 0.2s, box-shadow linear 0.2s;
+	-o-transition: border linear 0.2s, box-shadow linear 0.2s;
+	transition: border linear 0.2s, box-shadow linear 0.2s;
+}
+
+input:focus {
+	border-color: #168cd2;
+	outline: none;
+	box-shadow: inset 0 0.1em 0.1em rgba(0,0,0,0.1),
+				0 0 0.2em rgba(22,140,210,0.5);
 }

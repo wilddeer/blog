@@ -26,4 +26,6 @@
 
 {% include css/sprite-24.css %}
 
+{% include css/animations.css %}
+
 {% include css/print.css %}

@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(function() {
 	
 	$('.js-gallery').dzGallery();
 	$('pre').dzScrollFallback();
@@ -15,6 +15,11 @@ $(document).ready(function() {
 			'border-bottom': '2px solid'
 		});
 	}
+
+	/* loading delayed stuff */
+	for (var i = 0; i < dzDelayed.length; i++) {
+		dzDelayed[i]();
+	};
 
 	/* google analytics */
 	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

@@ -7,11 +7,6 @@ body > header, body > footer, .content > * {
 	padding-left: 32px; /*2rem*/
 }
 
-a.logo {
-	margin-right: -32px; /*-2rem*/
-}
-
-/* bug: 'auto' isn't considered as override in pixelizr */
 .js-gallery .captions > span.dot {
 	margin-bottom: 8px; /*0.5rem*/
 }

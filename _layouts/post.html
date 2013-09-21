@@ -3,12 +3,17 @@ layout: default
 post: true
 ---
 {% include cats.htm c=page.categories %}
-<header>
-	<time class="post-date" datetime="{{ page.date }}">{{ page.date | date_to_string }}</time>
-	{% if site.cats[cats][page.lang] %}
-	<h3 class="post-cat-title"><a href="../">{{ site.cats[cats][page.lang] }}</a></h3>
-	{% endif %}
-	<h1 class="post-title">{{ page.h1 }}</h1>
-</header>
 
 {{ content }}
+
+<p class="meta">
+	{{ site.loc.published[page.lang] }} <time class="post-date" datetime="{{ page.date }}">{% include date.htm d=page.date %}</time>
+
+	{% if site.cats[cats] %}
+		{% if page.lang == 'ru' %}
+			в <a href="../" class="iconlink">«<span>{{ site.cats[cats].in }}</span>»</a>
+		{% else %}
+			in <a href="../" class="iconlink">“<span>{{ site.cats[cats].en }}</span>”</a>
+		{% endif %}
+	{% endif %}
+</p>
