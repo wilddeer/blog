@@ -114,7 +114,7 @@ dzDelayed.push(function() {
 </div>
 
 <p class="pep-constols-holder">
-    <label><input type="checkbox" id="async" checked> Ассинхронно</label>
+    <label><input type="checkbox" id="async" checked> Асинхронно</label>
     <label><input type="checkbox" id="sharp"> Плавная анимация</label>
 </p>
 
