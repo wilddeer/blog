@@ -10,16 +10,22 @@ lang: ru
     .pepyaka {
         text-align: center;
         padding: 3em 1em;
-        margin-top: 0.5em;
+        margin-left: 0;
+        margin-right: 0;
+        max-width: 100%;
         margin-bottom: 2em;
         box-shadow: inset 0 0 1.5em rgba(15,15,0,0.2),
                     inset 0 0.3em 0.3em rgba(15,15,0,0.2);
-        border-radius: 1em;
         background-size: 2.8em 2.8em;
         background-color: #ebe7d7;
         background-image: -webkit-linear-gradient(0deg, rgba(0,0,0,.05) 50%, transparent 50%, transparent);
         background-image: -moz-linear-gradient(0deg, rgba(0,0,0,.05) 50%, transparent 50%, transparent);
         background-image: linear-gradient(90deg, rgba(0,0,0,.05) 50%, transparent 50%, transparent);
+    }
+
+    .pep-input-holder {
+        margin-top: 1em;
+        margin-bottom: 2em;
     }
 
     #pep_input {
@@ -65,11 +71,9 @@ dzDelayed.push(function() {
 });
 </script>
 
-<div class="pepyaka">
-    <span class="pep0">Я</span><span class="pep2">р</span><span class="pep4">р</span><span class="pep3">р</span><span class="pep1">!</span>
-</div>
+<p class="pep-input-holder"><input value="Яррр!" id="pep_input" placeholder="Запепячить"></p>
 
-<input value="Яррр!" id="pep_input" placeholder="Запепячить">
+{% include snippets/pepyaka-font.htm %}
 
 Мой старый эпилептичный шрифт с [Пепяки](//pepyaka.su), воссозданный средствами CSS3.
 
@@ -86,9 +90,7 @@ CSS-кода неприлично много. Основная проблема 
 HTML:
 
 {% highlight html cssclass=codewrap %}
-<div class="pepyaka">
-    <span class="pep0">Я</span><span class="pep2">р</span><span class="pep4">р</span><span class="pep3">р</span><span class="pep1">!</span>
-</div>
+{% include snippets/pepyaka-font.htm %}
 {% endhighlight %}
 
 CSS:
