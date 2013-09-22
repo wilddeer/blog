@@ -145,6 +145,14 @@ h4 a {
 	border-bottom: 1px solid;
 }
 
+html.kindle h1 a,
+html.kindle h2 a,
+html.kindle h3 a,
+html.kindle h4 a {
+	text-decoration: underline;
+	border-bottom: none;
+}
+
 a:visited {
 	color: #7c64b4;
 }
@@ -161,13 +169,8 @@ html.bw .title a {
 	color: #000;
 }
 
-html.kindle a {
-	text-decoration: none !important;
-	border-bottom: 2px solid;
-}
-
-html.kindle a:hover,
-html.kindle a:active {
+html.bw a:hover,
+html.bw a:active {
 	color: #fff;
 	background: #333;
 }
@@ -204,6 +207,11 @@ pre {
 	overflow: auto;
 	box-shadow: 0 0 5px rgba(64,0,0,0.1);
 	-webkit-overflow-scrolling: touch;
+}
+
+html.kindle pre {
+	margin-left: 2em;
+	margin-right: 2em;
 }
 
 html.no-boxshadow pre {
@@ -513,7 +521,7 @@ html.bw body.post a.logo {
 }
 
 h1.title a {
-	text-decoration: none;
+	text-decoration: none !important; /* kindle won't listen without important */
 	border-bottom: 2px solid;
 }
 
