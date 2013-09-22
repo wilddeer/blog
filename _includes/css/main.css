@@ -527,8 +527,8 @@ h1.title a:hover {
 }
 
 .content {
-	padding-top: 1rem;
-	padding-bottom: 1rem;
+	padding-top: 1em;
+	padding-bottom: 1em;
 }
 
 .content .post-cat-title {
