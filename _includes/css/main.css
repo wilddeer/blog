@@ -545,7 +545,7 @@ h1.title a:hover {
 
 body.post .content {
 	background: #fff;
-	box-shadow: 0 0 10px rgba(0,0,0,0.1);
+	box-shadow: 0 0 10px rgba(100,80,0,0.12);
 }
 
 html.bw body.post .content {

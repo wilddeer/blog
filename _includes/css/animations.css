@@ -110,11 +110,6 @@
 	}
 }
 
-
-/*
-	opera cannot into hover animations
-	ie10 and latest ff work without prefixes
-*/
 .logo:focus,
 .logo:hover,
 .logo:active {
