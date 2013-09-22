@@ -5,12 +5,12 @@ $(function() {
 
 	/* OH MY GLOBE WHAT AM I DOIN */
 	if (Sniffer.os.name == 'kindle' && Sniffer.os.version < 4) {
-		$('a').each(function() {
+		$('.title a').each(function() {
 			$(this).html('<span>'+$(this).html()+'</span>');
 		});
 
-		$('a').css('color', 'transparent');
-		$('a > span').css({
+		$('.title > a').css('color', 'transparent');
+		$('.title > a > span').css({
 			'color': 'black',
 			'border-bottom': '2px solid'
 		});
