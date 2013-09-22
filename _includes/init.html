@@ -15,4 +15,16 @@
 {% endif %}
 {% capture content_parsed %}{{ content_parsed | replace: ' — ', '&nbsp;— ' | replace: ' – ', '&nbsp;– ' }}{% endcapture %}
 
+{% capture js %}
+{% include js/compiled/scripts.js %}
+{% endcapture %}
+
+{% assign js_hash = js | size %}
+
+{% capture js_h %}
+{% include js/compiled/header_scripts.js %}
+{% endcapture %}
+
+{% assign js_h_hash = js_h | size %}
+
 {% endcapture %}

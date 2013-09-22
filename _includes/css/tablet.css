@@ -14,7 +14,7 @@
 {% endunless %}
 
 	body {
-		padding: 1.5em 0;
+		padding: 1.5em 0 0;
 	}
 
 	ul.lang-switcher {
@@ -39,6 +39,17 @@
 		-webkit-box-sizing: border-box;
 		-moz-box-sizing: border-box;
 		box-sizing: border-box;
+	}
+
+	/* forms */
+	textarea,
+	input {
+		font-size: 1.1em;
+	}
+
+	textarea.big,
+	input.big {
+		font-size: 1.2em;
 	}
 
 {% unless include.ie %}
