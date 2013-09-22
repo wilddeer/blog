@@ -35,6 +35,17 @@
 		padding-left: 1em;
 	}
 
+	/* forms */
+	textarea,
+	input {
+		font-size: 1em;
+	}
+
+	textarea.big,
+	input.big {
+		font-size: 1.2em;
+	}
+
 {% unless include.ie %}
 }
 {% endunless %}
