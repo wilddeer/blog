@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Пепякошрифт средствами css-анимаций"
-h1: "Пепякошрифт средствами css-анимаций"
 categories: experiments
 lang: ru
 ---
