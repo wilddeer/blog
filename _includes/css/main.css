@@ -544,8 +544,7 @@ html.bw body.post .content {
 	box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
-.content ul.posts li,
-html.kindle .content ul.posts li {
+.content ul.posts li {
 	padding-left: 0;
 }
 
