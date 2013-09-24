@@ -205,6 +205,7 @@ pre {
 	word-wrap: normal;
 	padding: 1em;
 	overflow: auto;
+	-webkit-box-shadow: 0 0 5px rgba(64,0,0,0.1);
 	box-shadow: 0 0 5px rgba(64,0,0,0.1);
 	-webkit-overflow-scrolling: touch;
 }
@@ -222,6 +223,7 @@ html.ovi pre,
 html.operamini pre {
 	padding: 0;
 	border: none;
+	-webkit-box-shadow: none;
 	box-shadow: none;
 }
 
@@ -421,6 +423,7 @@ html.kindle figure {
 figure img {
 	max-width: 100%;
 	max-height: 350px;
+	-webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
 	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
 }
 
@@ -545,10 +548,12 @@ h1.title a:hover {
 
 body.post .content {
 	background: #fff;
+	-webkit-box-shadow: 0 0 10px rgba(100,80,0,0.12);
 	box-shadow: 0 0 10px rgba(100,80,0,0.12);
 }
 
 html.bw body.post .content {
+	-webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5);
 	box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
@@ -611,6 +616,7 @@ input[type="color"] {
 	border: 1px solid #c9c9c9;
 	border-radius: 0.2em;
 	padding: 0.2em 0.5em;
+	-webkit-box-shadow: inset 0 0.1em 0.1em rgba(0,0,0,0.1);
 	box-shadow: inset 0 0.1em 0.1em rgba(0,0,0,0.1);
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
@@ -639,6 +645,8 @@ input[type="tel"]:focus,
 input[type="color"]:focus {
 	border-color: #168cd2;
 	outline: none;
+	-webkit-box-shadow: inset 0 0.1em 0.1em rgba(0,0,0,0.1),
+						0 0 0.2em rgba(22,140,210,0.5);
 	box-shadow: inset 0 0.1em 0.1em rgba(0,0,0,0.1),
 				0 0 0.2em rgba(22,140,210,0.5);
 }
@@ -646,4 +654,26 @@ input[type="color"]:focus {
 textarea.big,
 input.big {
 	font-size: 1.3em;
+}
+
+
+/* console */
+
+#console p {
+	color: white;
+	padding: 0.5em;
+	margin: 0;
+	border-bottom: 1px solid white;
+}
+
+#console .info {
+	background: #1d7ebc;
+}
+
+#console .warning {
+	background: #eec507;
+}
+
+#console .error {
+	background: #ee6907;
 }

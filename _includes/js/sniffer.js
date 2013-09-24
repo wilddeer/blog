@@ -21,6 +21,7 @@ var Sniffer = {
 		/*
 		bw
 		mobile
+		serverside
 		*/
 	},
 	things: [
@@ -224,6 +225,30 @@ var Sniffer = {
 				serverside: true
 			}
 		},
+		// Nintendo Browser
+		{
+			test: [
+				{
+					string: navigator.userAgent,
+					search: 'Opera'
+				},
+				{
+					string: navigator.userAgent,
+					search: 'Nintendo'
+				}
+			],
+			browser: {
+				name: 'nintendobrowser',
+				engine: 'presto',
+				version: {
+					string: navigator.userAgent,
+					search: 'Opera/'
+				}
+			},
+			features: {
+				mobile: true
+			}
+		},
 		// Opera
 		{
 			test: [
@@ -421,6 +446,21 @@ var Sniffer = {
 			},
 			features: {
 				bw: true,
+				mobile: true
+			}
+		},
+		// Nintendo DSi
+		{
+			test: [
+				{
+					string: navigator.userAgent,
+					search: 'Nintendo DSi'
+				}
+			],
+			os: {
+				name: 'dsi'
+			},
+			features: {
 				mobile: true
 			}
 		},

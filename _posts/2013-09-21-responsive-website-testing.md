@@ -158,7 +158,7 @@ var customConsole = {
         this.add([message, source, file].join('<br>'), 'error');
     },
     add: function(message, type) {
-        if (typeof message !== 'string') message = '<i>' + typeof message + '</i>';
+        if (typeof message !== 'string') message = '<i>' + message + '</i>';
         document.getElementById('console').innerHTML += '<p class=' + type + '>' + message + '</p>';
     }
 }

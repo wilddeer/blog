@@ -15,7 +15,7 @@ cats:
     experiments:
         ru: "Эксперименты"
         in: "Экспериментах"
-        en: "experiments"
+        en: "Experiments"
         link: "experiments"
 
 loc:

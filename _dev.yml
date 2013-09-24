@@ -1,2 +1,3 @@
 dev: true
-jsconsole: true
+jsconsole: false
+console: true
