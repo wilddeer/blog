@@ -1,5 +1,7 @@
 $.fn.dzScrollFallback = function() {
-	if (Sniffer.os.name == 'android' && Sniffer.os.version < 3 && Sniffer.browser.engine == 'webkit') {
+	if (Sniffer.os.name == 'android' && 
+		((Sniffer.os.version < 3 && Sniffer.browser.engine == 'webkit') ||
+		(Sniffer.browser.engine == 'presto' && Sniffer.browser.name == 'opera'))) {
 		this.each(function() {
 			var _this = this,
 				last = {},

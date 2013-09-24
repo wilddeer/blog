@@ -45,6 +45,9 @@
 {% else %}
 <body>
 {% endif %}
+	{% if site.console %}
+		<div id="console"></div>
+	{% endif %}
 	<header>
 		<!--ul class="lang-switcher">
 			{% if lang == "en" %}

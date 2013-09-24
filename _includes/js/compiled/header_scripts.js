@@ -1,3 +1,7 @@
+{% if site.console %}
+	{% include js/console.js %}
+{% endif %}
+
 {% include js/modernizr.js %}
 
 {% include js/modernizr.bonus.js %}
