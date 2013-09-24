@@ -8,6 +8,8 @@
 
 {% include js/tools.js %}
 
+{% include js/metrika.js %}
+
 {% include js/init.js %}
 
 {% if site.dev %}{% include js/pixelizr.js %}{% endif %}
