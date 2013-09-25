@@ -32,5 +32,5 @@ loc:
         ru: 'Опубликовано'
         en: 'Published'
     footer:
-        ru: Работает на <a href="//jekyllrb.com" class="iconlink"><i class="icon-lab"></i>&nbsp;<span>Jekyll</span></a>. Смотрите, это же <a href="//github.com/wilddeer" class="iconlink"><i class="icon-github"></i>&nbsp;<span>GitHub</span></a>!
-        en: Powered by <a href="//jekyllrb.com" class="iconlink"><i class="icon-lab"></i>&nbsp;<span>Jekyll</span></a>. Look, it's <a href="//github.com/wilddeer" class="iconlink"><i class="icon-github"></i>&nbsp;<span>GitHub</span></a>!
+        ru: <a href="/" class="iconlink">«<span>Утром доделаю</span>»</a> работает на <a href="//jekyllrb.com" class="iconlink"><i class="icon-lab"></i>&nbsp;<span>Jekyll</span></a>. Смотрите, это же <a href="//github.com/wilddeer" class="iconlink"><i class="icon-github"></i>&nbsp;<span>GitHub</span></a>!
+        en: <a href="/" class="iconlink">“<span>Will finish in the morning</span>”</a> is powered by <a href="//jekyllrb.com" class="iconlink"><i class="icon-lab"></i>&nbsp;<span>Jekyll</span></a>. Look, it's <a href="//github.com/wilddeer" class="iconlink"><i class="icon-github"></i>&nbsp;<span>GitHub</span></a>!

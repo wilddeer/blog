@@ -205,7 +205,6 @@ pre {
 	word-wrap: normal;
 	padding: 1em;
 	overflow: auto;
-	-webkit-box-shadow: 0 0 5px rgba(64,0,0,0.1);
 	box-shadow: 0 0 5px rgba(64,0,0,0.1);
 	-webkit-overflow-scrolling: touch;
 }

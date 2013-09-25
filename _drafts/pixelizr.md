@@ -15,6 +15,29 @@ lang: ru
 Как правильно [замечают](http://www.quirksmode.org/blog/archives/2010/02/the_iphone_obse.html) многие хорошие ребята, проверить работоспособность вашего адаптивного творения на айфончике недостаточно. Как минимум, стоит озаботиться несколькими основными платформами: iOS, Android (а там свой зоопарк браузеров), Windows Phone,
 Blackberry.
 
+Очень примитивный пример:
+
+{% highlight js %}
+var customConsole = {
+	log: function(message) {
+		if (message === undefined) message = '<i>undefined</i>';
+		notify.create(message, 'info', 10000);
+	},
+	warn: function(message) {
+		notify.create(message, 'warning', 10000);
+	},
+	error: function(message, source, file) {
+		notify.create([message,source,file].join(' '), 'danger', 10000);
+	}
+}
+
+if (dev_console) {
+	window.console = customConsole;
+
+	window.onerror = function(message, source, file) {console.error(message, source, file)};
+}
+{% endhighlight %}
+
 Если вы Лев Толстой не только на словах, то все перечисленное --- ваш обязательный
 минимум, который вы радостно расширяете любыми попадающимися под руку железками и эмуляторами.
 
