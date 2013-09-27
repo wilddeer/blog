@@ -1,18 +1,10 @@
-{% include init.html %}
-<!DOCTYPE html>
-<!--[if lt IE 8]> <html class="no-js ie ie8 ie7" lang="{{ lang }}"> <![endif]-->
-<!--[if IE 8]> <html class="no-js ie ie8" lang="{{ lang }}"> <![endif]-->
-<!--[if IE 9]> <html class="no-js ie" lang="{{ lang }}"> <![endif]-->
-<!--[if !IE]><!--> <html class="no-js" lang="{{ lang }}"> <!--<![endif]-->
-
+{% include init.html %}<!DOCTYPE html>
+<!--[if lte IE 9]> <html class="no-js ie9" lang="{{ lang }}"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="{{ lang }}"> <!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="msapplication-tap-highlight" content="no">
-	{% if site.dev %}
-	<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
-	{% endif %}
 
 	{% if page.title == "" %}
 	<title>{{ site.loc.name[lang] }}</title>
