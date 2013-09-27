@@ -1,14 +1,14 @@
 {% capture whitespaces %}
 {% assign alt = include.a %}
 
-{% if include.c %}
-	{% assign alt = include.c %}
-{% else %}
+{% if include.a %}
 	{% assign alt = include.a %}
+{% else %}
+	{% assign alt = include.c %}
 {% endif %}
 
 {% if include.c %}
-	{% capture caption %}<figcaption>{{ alt }}</figcaption>{% endcapture %}
+	{% capture caption %}<figcaption>{{ include.c }}</figcaption>{% endcapture %}
 {% else %}
 	{% assign caption = '' %}
 {% endif %}

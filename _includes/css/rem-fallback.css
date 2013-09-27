@@ -1,14 +1,14 @@
 {% unless include.ie %}
-@media all and (min-width: 60em) { /* ~960px */
+@media all and (min-width: 40em) { /* ~960px */
 {% endunless %}
 
-body > header, body > footer, .content > * {
+body > header,
+body > footer,
+.content > *,
+.js-gallery .captions > span.arr,
+table.specification {
 	padding-right: 32px; /*2rem*/
 	padding-left: 32px; /*2rem*/
-}
-
-.js-gallery .captions > span.dot {
-	margin-bottom: 8px; /*0.5rem*/
 }
 
 {% unless include.ie %}

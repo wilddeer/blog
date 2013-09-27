@@ -112,6 +112,7 @@ ul,
 ol,
 pre,
 figure,
+table,
 h1,
 h2,
 h3,
@@ -128,12 +129,12 @@ a.iconlink {
 	text-decoration: none;
 }
 
-a.iconlink span {
+a.iconlink > span {
 	text-decoration: underline;
 }
 
-a.iconlink:hover span,
-a.iconlink:active span  {
+a.iconlink:hover > span,
+a.iconlink:active > span  {
 	text-decoration: none;
 }
 
@@ -210,8 +211,7 @@ pre {
 }
 
 html.kindle pre {
-	margin-left: 2em;
-	margin-right: 2em;
+	max-height: 17em;
 }
 
 html.no-boxshadow pre {
@@ -445,7 +445,11 @@ figure * + figcaption {
 	padding-bottom: 0;
 }
 
-/* blocks */
+/*
+------
+blocks
+------
+*/
 body > header,
 body > footer,
 .content > * {
@@ -594,8 +598,71 @@ html.bw body > footer {
 	color: #333;
 }
 
-/* forms */
+/*
+------
+tables
+------
+*/
+table {
+	width: 100%;
+	padding: 0;
+}
 
+table.specification {
+	margin-top: 2.2em;
+	margin-bottom: 2.2em;
+	padding: 0;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+table.specification,
+table.specification thead,
+table.specification tbody,
+table.specification tr,
+table.specification td {
+	display: block;
+	width: auto;
+}
+
+html.ie9 table.specification {
+	width: 100%;
+}
+
+td,
+th {
+	padding: 0.3em 0.5em;
+	text-align: left;
+}
+
+table.specification td,
+table.specification th {
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+th {
+	font-weight: bold;
+}
+
+tr {
+	border-top: 1px solid #ddd;
+}
+
+tbody tr:last-child {
+	border-bottom: 1px solid #ddd;
+}
+
+tbody tr:nth-child(odd) {
+	background: #f8f8f8;
+}
+
+/*
+-----
+forms
+-----
+*/
 textarea,
 input[type="text"],
 input[type="password"],
