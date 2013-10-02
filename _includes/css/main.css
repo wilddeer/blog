@@ -68,7 +68,7 @@ button,
 input,
 select,
 textarea {
-	font-family: 'Scada', sans-serif;
+	font-family: 'Scada Webfont', sans-serif;
 }
 
 html.kindle,
@@ -76,7 +76,7 @@ html.kindle button,
 html.kindle input,
 html.kindle select,
 html.kindle textarea {
-	font-family: serif;
+	font-family: sans-serif;
 }
 
 article > *:first-child {
@@ -598,6 +598,10 @@ html.bw body > footer {
 	color: #333;
 }
 
+body > footer ul.footer-links {
+	padding: 0;
+}
+
 /*
 ------
 tables
@@ -654,8 +658,20 @@ tbody tr:last-child {
 	border-bottom: 1px solid #ddd;
 }
 
+html.bw tr {
+	border-top: 1px solid #999;
+}
+
+html.bw tbody tr:last-child {
+	border-bottom: 1px solid #999;
+}
+
 tbody tr:nth-child(odd) {
 	background: #f8f8f8;
+}
+
+html.bw tbody tr:nth-child(odd) {
+	background: transparent;
 }
 
 /*

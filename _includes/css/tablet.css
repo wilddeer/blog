@@ -227,6 +227,21 @@
 		display: none;
 	}
 
+	/* blocks */
+
+	body > footer ul.footer-links li {
+		display: inline-block;
+		margin: 0;
+	}
+
+	body > footer ul.footer-links li:after {
+		content: ' • ';
+	}
+
+	body > footer ul.footer-links li:last-child:after {
+		content: '';
+	}
+
 {% unless include.ie %}
 }
 {% endunless %}
