@@ -76,13 +76,13 @@ IE7 тоже пора отправлять на свалку, но обычно 
 - Прошлые версии iOS
 - Прошлые версии Blackberry
 - Nokia Browser
-- Ovi browser (Nokia Xpress)
 
 For fun:
 
 - Kindle Keyboard, Touch & Paperwhite
 - Sony PSP, PS Vita
 - Nintendo DSi, 3DS
+- Ovi browser (Nokia Xpress)
 - Steam Big Picture browser
 - Телеки со смарт-тв, холодильники с интернетом, любые другие железки и эмуляторы, до которых дотянутся руки
 

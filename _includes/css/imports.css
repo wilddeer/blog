@@ -1,2 +1,77 @@
 
-@import url(http://fonts.googleapis.com/css?family=Scada:400italic,700italic,400,700&subset=latin,cyrillic);
+/*@import url(http://fonts.googleapis.com/css?family=Scada:400italic,700italic,400,700&subset=latin,cyrillic);*/
+
+@font-face {
+	font-family: 'Scada Webfont';
+	font-style: normal;
+	font-weight: 400;
+	src: url('/font/scada.eot');
+	src: local('☺'),
+		 url('/font/scada.woff') format('woff'),
+		 url('/font/scada.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Scada Webfont';
+	font-style: normal;
+	font-weight: 700;
+	src: url('/font/scada-bold.eot');
+	src: local('☺'),
+		 url('/font/scada-bold.woff') format('woff'),
+		 url('/font/scada-bold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Scada Webfont';
+	font-style: italic;
+	font-weight: 400;
+	src: url('/font/scada-italic.eot');
+	src: local('☺'),
+		 url('/font/scada-italic.woff') format('woff'),
+		 url('/font/scada-italic.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Scada Webfont';
+	font-style: italic;
+	font-weight: 700;
+	src: url('/font/scada-bold-italic.eot');
+	src: local('☺'),
+		 url('/font/scada-bold-italic.woff') format('woff'),
+		 url('/font/scada-bold-italic.ttf') format('truetype');
+}
+
+/* android 2.x fix */
+@media all and (max-device-width: 480px) {
+	@font-face {
+		font-family: 'Scada Webfont';
+		font-style: normal;
+		font-weight: 400;
+		src: url('/font/scada.woff') format('woff'),
+			 url('/font/scada.ttf') format('truetype');
+	}
+
+	@font-face {
+		font-family: 'Scada Webfont';
+		font-style: normal;
+		font-weight: 700;
+		src: url('/font/scada-bold.woff') format('woff'),
+			 url('/font/scada-bold.ttf') format('truetype');
+	}
+
+	@font-face {
+		font-family: 'Scada Webfont';
+		font-style: italic;
+		font-weight: 400;
+		src: url('/font/scada-italic.woff') format('woff'),
+			 url('/font/scada-italic.ttf') format('truetype');
+	}
+
+	@font-face {
+		font-family: 'Scada Webfont';
+		font-style: italic;
+		font-weight: 700;
+		src: url('/font/scada-bold-italic.woff') format('woff'),
+			 url('/font/scada-bold-italic.ttf') format('truetype');
+	}
+}
