@@ -27,4 +27,22 @@
 
 {% assign js_h_hash = js_h | size %}
 
+{% capture style %}
+{% include css/compiled/style.css %}
+{% endcapture %}
+
+{% assign style_hash = style | size %}
+
+{% capture ie8_style %}
+{% include css/compiled/ie8.css %}
+{% endcapture %}
+
+{% assign ie8_style_hash = ie8_style | size %}
+
+{% capture ie7_style %}
+{% include css/compiled/ie7.css %}
+{% endcapture %}
+
+{% assign ie7_style_hash = ie7_style | size %}
+
 {% endcapture %}
