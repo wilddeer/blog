@@ -208,8 +208,8 @@ $.fn.dzGallery = function () {
 		}
 
 		function setup() {
-			arrowControlPrev = document.createElement('span');
-			arrowControlNext = document.createElement('span');
+			arrowControlPrev = document.createElement('button');
+			arrowControlNext = document.createElement('button');
 			
 			arrowControlPrev.className = 'arr icon-big icon-chevron-left';
 			arrowControlNext.className = 'arr icon-big icon-chevron-right';
@@ -233,8 +233,9 @@ $.fn.dzGallery = function () {
 
 			for (var i = 0; i <= gallery.self.children.length - 1; i++) {
 				var slide = gallery.self.children[i],
-					caption = document.createElement('span'),
+					caption = document.createElement('button'),
 					figcaption = slide.getElementsByTagName('figcaption')[0],
+					links = slide.getElementsByTagName('a'),
 					captionText = figcaption.textContent || figcaption.innerText,
 					n = gallery.slides.length;
 
@@ -245,6 +246,25 @@ $.fn.dzGallery = function () {
 				addEvent(caption, 'click', function(x) {
 					return function() {changeActiveSlide(x);}
 				}(n), false);
+
+				/*
+				Solves tabbing problems:
+				Cycles through links found in the slide and switches to current slide
+				when link is focused. Also resets scrollLeft of the gallery block.
+
+				SetTimeout solves chrome's bug.
+				*/
+				for (var j = links.length - 1; j >= 0; j--) {
+					addEvent(links[j], 'focus', function(x) {
+						return function() {
+							gallery.self.scrollLeft = 0;
+							setTimeout(function() {
+								gallery.self.scrollLeft = 0;
+							}, 0);
+							changeActiveSlide(x);
+						}
+					}(n), false);
+				};
 
 				gallery.captions.push(caption);
 			}

@@ -10,3 +10,7 @@ a.logo {
 a.logo span {
 	display: none;
 }
+
+figure.info > p:after {
+	font-size: 1.8em;
+}

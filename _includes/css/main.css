@@ -125,6 +125,11 @@ a {
 	text-decoration: underline;
 }
 
+.pseudo-link {
+	color: #168cd2;
+	border-bottom: 1px dashed;
+}
+
 a.iconlink {
 	text-decoration: none;
 }
@@ -162,6 +167,33 @@ a:hover {
 	color: #fff;
 	background: #f92672;
 	text-decoration: none;
+}
+
+.pseudo-link:hover {
+	color: #fff;
+	background: #f92672;
+	border-bottom-color: transparent;
+}
+
+figure.info {
+	text-align: left;
+}
+
+figure.info > p {
+	position: relative;
+	font-size: 0.8em;
+	background: #f5f5f5;
+	padding: 1em;
+	border-radius: 0.5em;
+}
+
+html.bw figure.info > p {
+	background: transparent;
+	border: 1px solid #999;
+}
+
+figure a:focus img {
+	outline: thin dotted;
 }
 
 html.bw a,
@@ -261,7 +293,88 @@ html.ovi pre code {
 	white-space: pre-wrap;
 }
 
-/* gallery */
+/*
+-----
+forms
+-----
+*/
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"] {
+	font-size: 1.2em;
+	border: 1px solid #c9c9c9;
+	border-radius: 0.2em;
+	padding: 0.2em 0.5em;
+	-webkit-box-shadow: inset 0 0.1em 0.1em rgba(0,0,0,0.1);
+	box-shadow: inset 0 0.1em 0.1em rgba(0,0,0,0.1);
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+	-moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+	-ms-transition: border linear 0.2s, box-shadow linear 0.2s;
+	-o-transition: border linear 0.2s, box-shadow linear 0.2s;
+	transition: border linear 0.2s, box-shadow linear 0.2s;
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus {
+	border-color: #168cd2;
+	outline: none;
+	-webkit-box-shadow: inset 0 0.1em 0.1em rgba(0,0,0,0.1),
+						0 0 0.2em rgba(22,140,210,0.5);
+	box-shadow: inset 0 0.1em 0.1em rgba(0,0,0,0.1),
+				0 0 0.2em rgba(22,140,210,0.5);
+}
+
+textarea.big,
+input.big {
+	font-size: 1.3em;
+}
+
+button.pseudo-link {
+	background: transparent;
+	border: 0;
+	padding: 0;
+}
+
+/*
+-------
+gallery
+-------
+*/
+figure > a,
+figure > a:hover,
+figure > a:active,
+figure > a:focus {
+	outline: none;
+	background: transparent;
+}
 
 .gallery,
 .js-gallery {
@@ -284,13 +397,17 @@ html.ovi pre code {
 	display: none;
 }
 
-.js-gallery .captions > span {
+.js-gallery .captions > button {
 	display: inline-block;
 	cursor: pointer;
 	vertical-align: middle;
+	line-height: 1.6;
+	padding: 0;
+	background: transparent;
+	border: 0;
 }
 
-.js-gallery .captions > span.arr {
+.js-gallery .captions > button.arr {
 	padding-right: 1rem;
 	padding-left: 1rem;
 	color: #9b9890;
@@ -299,36 +416,36 @@ html.ovi pre code {
 	height: auto;
 }
 
-html.no-fontface .js-gallery .captions > span.arr {
+html.no-fontface .js-gallery .captions > button.arr {
 	opacity: 0.7;
 }
 
-html.bw .js-gallery .captions > span.arr {
+html.bw .js-gallery .captions > button.arr {
 	color: #000;
 }
 
-.js-gallery .captions > span.arr:first-of-type {
+.js-gallery .captions > button.arr:first-of-type {
 	float: left;
 }
 
-.js-gallery .captions > span.arr:last-of-type {
+.js-gallery .captions > button.arr:last-of-type {
 	float: right;
 }
 
-.js-gallery .captions > span.arr[disabled] {
+.js-gallery .captions > button.arr[disabled] {
 	color: #dfdddd;
 	cursor: default;
 }
 
-html.no-fontface .js-gallery .captions > span.arr[disabled] {
+html.no-fontface .js-gallery .captions > button.arr[disabled] {
 	opacity: 0.2;
 }
 
-html.bw .js-gallery .captions > span.arr[disabled] {
+html.bw .js-gallery .captions > button.arr[disabled] {
 	color: #999;
 }
 
-.js-gallery .captions > span.dot {
+.js-gallery .captions > button.dot {
 	margin-right: 0.5em;
 	margin-left: 0.5em;
 	width: 0.6rem;
@@ -341,19 +458,19 @@ html.bw .js-gallery .captions > span.arr[disabled] {
 	user-select: none;
 }
 
-html.bw .js-gallery .captions > span.dot {
+html.bw .js-gallery .captions > button.dot {
 	border-color: #000;
 }
 
-.js-gallery .captions > span.dot.active {
+.js-gallery .captions > button.dot.active {
 	background: #9b9890;
 }
 
-html.bw .js-gallery .captions > span.dot.active {
+html.bw .js-gallery .captions > button.dot.active {
 	background: #000;
 }
 
-.js-gallery .captions > span.dot > span {
+.js-gallery .captions > button.dot > span {
 	display: none;
 }
 
@@ -385,14 +502,6 @@ html.bw .js-gallery .captions > span.dot.active {
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
-}
-
-.js-gallery.active .slides figure > a,
-.js-gallery.active .slides figure > a:hover,
-.js-gallery.active .slides figure > a:active,
-.js-gallery.active .slides figure > a:focus {
-	outline: none;
-	background: transparent;
 }
 
 .js-gallery.active .captions,
@@ -672,70 +781,6 @@ tbody tr:nth-child(odd) {
 
 html.bw tbody tr:nth-child(odd) {
 	background: transparent;
-}
-
-/*
------
-forms
------
-*/
-textarea,
-input[type="text"],
-input[type="password"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="week"],
-input[type="number"],
-input[type="email"],
-input[type="url"],
-input[type="search"],
-input[type="tel"],
-input[type="color"] {
-	font-size: 1.2em;
-	border: 1px solid #c9c9c9;
-	border-radius: 0.2em;
-	padding: 0.2em 0.5em;
-	-webkit-box-shadow: inset 0 0.1em 0.1em rgba(0,0,0,0.1);
-	box-shadow: inset 0 0.1em 0.1em rgba(0,0,0,0.1);
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-	-webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
-	-moz-transition: border linear 0.2s, box-shadow linear 0.2s;
-	-ms-transition: border linear 0.2s, box-shadow linear 0.2s;
-	-o-transition: border linear 0.2s, box-shadow linear 0.2s;
-	transition: border linear 0.2s, box-shadow linear 0.2s;
-}
-
-textarea:focus,
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="datetime"]:focus,
-input[type="datetime-local"]:focus,
-input[type="date"]:focus,
-input[type="month"]:focus,
-input[type="time"]:focus,
-input[type="week"]:focus,
-input[type="number"]:focus,
-input[type="email"]:focus,
-input[type="url"]:focus,
-input[type="search"]:focus,
-input[type="tel"]:focus,
-input[type="color"]:focus {
-	border-color: #168cd2;
-	outline: none;
-	-webkit-box-shadow: inset 0 0.1em 0.1em rgba(0,0,0,0.1),
-						0 0 0.2em rgba(22,140,210,0.5);
-	box-shadow: inset 0 0.1em 0.1em rgba(0,0,0,0.1),
-				0 0 0.2em rgba(22,140,210,0.5);
-}
-
-textarea.big,
-input.big {
-	font-size: 1.3em;
 }
 
 

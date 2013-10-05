@@ -26,6 +26,26 @@
 		margin: 0 0 0 0.5em;
 	}
 
+	figure.info > p {
+		padding: 1em 1em 1em 3em;
+	}
+
+	figure.info > p:after {
+		content: 'i';
+		font-weight: bold;
+		font-family: Consolas, Monaco, 'Andale Mono', monospace, serif;
+		font-size: 2em;
+		position: absolute;
+		top: 0.1em;
+		left: 0.5em;
+		margin-top: 0.1em;
+		color: #d5d0d0;
+	}
+
+	html.bw figure.info > p:after {
+		color: #999;
+	}
+
 	.content ul li {
 		padding-left: 2.2em;
 	}
@@ -97,7 +117,7 @@
 
 	/* gallery */
 
-	.js-gallery .captions > span.arr {
+	.js-gallery .captions > button.arr {
 		padding-right: 2rem;
 		padding-left: 2rem;
 	}
@@ -143,11 +163,11 @@
 
 	/* gallery */
 
-	.js-gallery .captions > span.arr {
+	.js-gallery .captions > button.arr {
 		display: none;
 	}
 
-	.js-gallery .captions > span.dot {
+	.js-gallery .captions > button.dot {
 		width: auto;
 		height: auto;
 		padding: 0.3em 0.5em 0.35em;
@@ -158,29 +178,29 @@
 		background: transparent;
 	}
 
-	html.bw .js-gallery .captions > span.dot {
+	html.bw .js-gallery .captions > button.dot {
 		background: transparent;
 	}
 
-	.js-gallery .captions > span.dot:hover {
+	.js-gallery .captions > button.dot:hover {
 		border-color: #e6e4e1;
 	}
 
-	html.bw .js-gallery .captions > span.dot:hover {
+	html.bw .js-gallery .captions > button.dot:hover {
 		border-color: #aaa;
 	}
 
-	.js-gallery .captions > span.dot.active {
+	.js-gallery .captions > button.dot.active {
 		border: 1px solid #dfddd7;
 		background: transparent;
 	}
 
-	html.bw .js-gallery .captions > span.dot.active {
+	html.bw .js-gallery .captions > button.dot.active {
 		border-color: #333;
 		background: transparent;
 	}
 
-	html.csstransforms .js-gallery .captions > span.dot.active:after {
+	html.csstransforms .js-gallery .captions > button.dot.active:after {
 		position: absolute;
 		content: '';
 		top: 100%;
@@ -199,26 +219,26 @@
 		transform: rotate(45deg);
 	}
 
-	html.csstransforms.bw .js-gallery .captions > span.dot.active:after {
+	html.csstransforms.bw .js-gallery .captions > button.dot.active:after {
 		border-color: #333;
 	}
 
-	.js-gallery .captions > span.dot > span {
+	.js-gallery .captions > button.dot > span {
 		display: inline;
 		color: #168cd2;
 		border-bottom: 1px dashed;
 		white-space: nowrap;
 	}
 
-	html.bw .js-gallery .captions > span.dot > span {
+	html.bw .js-gallery .captions > button.dot > span {
 		color: #000;
 	}
 
-	.js-gallery .captions > span.dot:hover > span {
+	.js-gallery .captions > button.dot:hover > span {
 		border-bottom-color: transparent;
 	}
 
-	.js-gallery .captions > span.dot.active > span {
+	.js-gallery .captions > button.dot.active > span {
 		color: inherit;
 		border-bottom-color: transparent;
 	}
