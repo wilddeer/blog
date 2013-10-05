@@ -2,6 +2,10 @@ body {
 	min-width: 960px;
 }
 
+figure.info > p {
+	padding-left: 1em;
+}
+
 .content ul {
 	list-style-image: url("/i/emdash.gif");
 }
