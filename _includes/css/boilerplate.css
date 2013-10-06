@@ -51,13 +51,13 @@ body {
 	margin: 0;
 }
 
-a:focus {
+/*a:focus {
 	outline: thin dotted;
-}
+}*/
 
 :active,
 :hover {
-	outline: 0;
+	outline: none;
 }
 
 abbr[title] {
