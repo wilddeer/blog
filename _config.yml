@@ -4,7 +4,7 @@ pygments: true
 relative_permalinks: false
 
 exclude: ['README.md']
-permalink: /:categories/:title
+permalink: /:categories/:title/
 
 cats:
     rare-species:
