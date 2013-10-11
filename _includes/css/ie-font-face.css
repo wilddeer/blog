@@ -1,0 +1,27 @@
+@font-face {
+	font-family: 'Scada Webfont';
+	font-style: normal;
+	font-weight: 400;
+	src: url('/font/scada.eot');
+}
+
+@font-face {
+	font-family: 'Scada Webfont';
+	font-style: normal;
+	font-weight: 700;
+	src: url('/font/scada-bold.eot');
+}
+
+@font-face {
+	font-family: 'Scada Webfont';
+	font-style: italic;
+	font-weight: 400;
+	src: url('/font/scada-italic.eot');
+}
+
+@font-face {
+	font-family: 'Scada Webfont';
+	font-style: italic;
+	font-weight: 700;
+	src: url('/font/scada-bold-italic.eot');
+}
