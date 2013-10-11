@@ -2,7 +2,7 @@ body {
 	min-width: 960px;
 }
 
-figure.info > p {
+figure.info > div {
 	padding-left: 1em;
 }
 

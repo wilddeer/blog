@@ -3,7 +3,6 @@
 	font-family: 'Scada Webfont';
 	font-style: normal;
 	font-weight: 400;
-	src: url('/font/scada.eot');
 	src: url('/font/scada.woff') format('woff'),
 		 url('/font/scada.ttf') format('truetype');
 }
@@ -12,7 +11,6 @@
 	font-family: 'Scada Webfont';
 	font-style: normal;
 	font-weight: 700;
-	src: url('/font/scada-bold.eot');
 	src: url('/font/scada-bold.woff') format('woff'),
 		 url('/font/scada-bold.ttf') format('truetype');
 }
@@ -21,7 +19,6 @@
 	font-family: 'Scada Webfont';
 	font-style: italic;
 	font-weight: 400;
-	src: url('/font/scada-italic.eot');
 	src: url('/font/scada-italic.woff') format('woff'),
 		 url('/font/scada-italic.ttf') format('truetype');
 }
@@ -30,7 +27,6 @@
 	font-family: 'Scada Webfont';
 	font-style: italic;
 	font-weight: 700;
-	src: url('/font/scada-bold-italic.eot');
 	src: url('/font/scada-bold-italic.woff') format('woff'),
 		 url('/font/scada-bold-italic.ttf') format('truetype');
 }

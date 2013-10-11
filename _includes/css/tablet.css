@@ -26,11 +26,11 @@
 		margin: 0 0 0 0.5em;
 	}
 
-	figure.info > p {
+	figure.info > div {
 		padding: 1em 1em 1em 3em;
 	}
 
-	figure.info > p:after {
+	figure.info > div:after {
 		content: 'i';
 		font-weight: bold;
 		font-family: Consolas, Monaco, 'Andale Mono', monospace, serif;
@@ -42,7 +42,7 @@
 		color: #d5d0d0;
 	}
 
-	html.bw figure.info > p:after {
+	html.bw figure.info > div:after {
 		color: #999;
 	}
 

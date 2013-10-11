@@ -183,15 +183,21 @@ figure.info {
 	text-align: left;
 }
 
-figure.info > p {
+figure.info > div {
 	position: relative;
 	font-size: 0.8em;
-	background: #f5f5f5;
+	background: #fcfcfa;
 	padding: 1em;
 	border-radius: 0.5em;
+	-webkit-box-shadow: inset 0 0 10px rgba(100,80,0,0.12);
+	box-shadow: inset 0 0 10px rgba(100,80,0,0.12);
 }
 
-html.bw figure.info > p {
+figure.info > div > p:last-child {
+	margin-bottom: 0;
+}
+
+html.bw figure.info > div {
 	background: transparent;
 	border: 1px solid #999;
 }
