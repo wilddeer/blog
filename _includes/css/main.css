@@ -147,6 +147,20 @@ a.iconlink:active > span  {
 	text-decoration: none;
 }
 
+html.fontface a.external {
+	position: relative;
+	padding-right: 0.8em;
+}
+
+html.fontface a.external:after {
+	position: absolute;
+	right: 0;
+	top: 0;
+	font-size: 0.6em;
+	font-family: 'icomoon-dizaina';
+	content: "\e06d";
+}
+
 h1 a,
 h2 a,
 h3 a,
@@ -797,6 +811,17 @@ tbody tr:nth-child(odd) {
 html.bw tbody tr:nth-child(odd) {
 	background: transparent;
 }
+
+td.true {
+	color: #393;
+	background: #efffe5;
+}
+
+td.false {
+	color: #933;
+	background: #ffede5;
+}
+
 
 
 /* console */
