@@ -105,7 +105,8 @@
 	/* blocks */
 	body > header,
 	body > footer,
-	.content > * {
+	.content > *,
+	.content > .table-holder {
 		padding-left: 2rem;
 		padding-right: 2rem;
 	}
