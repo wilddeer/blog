@@ -34,7 +34,7 @@ Kindle Keyboard (он же Kindle 3) --- читалка от Амазона с e
 	<table>
 		<thead>
 			<tr>
-				<th>Свойство</th>
+				<th>Фича</th>
 				<th>Тест</th>
 				<th>Реальный результат</th>
 			</tr>
