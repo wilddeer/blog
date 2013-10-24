@@ -35,7 +35,7 @@ Kindle Paperwhite --- новая Амазоновская читалка с e-in
 	<table>
 		<thead>
 			<tr>
-				<th>Свойство</th>
+				<th>Фича</th>
 				<th>Тест</th>
 				<th>Реальный результат</th>
 			</tr>
