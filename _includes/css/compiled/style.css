@@ -20,10 +20,6 @@
 
 {% include css/font.css %}
 
-{% include css/sprite-14.css %}
-
-{% include css/sprite-24.css %}
-
 {% include css/animations.css %}
 
 {% include css/print.css %}

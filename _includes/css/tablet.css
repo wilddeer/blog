@@ -30,13 +30,18 @@
 		padding: 1em 1em 1em 3em;
 	}
 
-	figure.info > div:after {
-		content: 'i';
+	html.no-fontface figure.info > div {
+		padding: 1em;
+	}
+
+	figure.info > div:before {
+		display: block;
+		/*content: 'i';
 		font-weight: bold;
-		font-family: Consolas, Monaco, 'Andale Mono', monospace, serif;
-		font-size: 2em;
+		font-family: Consolas, Monaco, 'Andale Mono', monospace, serif;*/
+		font-size: 1.5em;
 		position: absolute;
-		top: 0.1em;
+		top: 0.58em;
 		left: 0.5em;
 		margin-top: 0.1em;
 		color: #d5d0d0;

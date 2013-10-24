@@ -17,7 +17,7 @@ lang: ru
 
 Кнопка воспринимает событие `click`, стили `:hover` и `:active` и попадает в общий _taborder_ точно так же, как и ссылка. Невероятно!
 
-<figure class="info"><div markdown="1">
+<figure class="info"><div class="icon-umbrella" markdown="1">
 Можно также использовать любой другой тег, например `span`, но он не попадет в *taborder*, а событие *click* не будет вызываться по нажатию энтера и пробела, что убивает все преимущества кнопки в плане _accessibility_.
 
 Можно добавить спану аттрибут `taborder="0"` и повесить обработчики на нажатие пробела и энтера, а можно не париться и сделать `button`, который еще и семантически более уместен.
@@ -81,7 +81,7 @@ dzDelayed.push(function() {
 
 Твиттер встал на путь истины и стал потихоньку исправлять свои косяки. Профиль юзера можно открыть в новой вкладке --- гут. Кнопочка *refresh* в сайдбаре и кнопка нового твита используют `button` --- тоже гут (а можно было и ссылку на форму нового твита сделать).
 
-Тем не менее, постоянно попадаются `< a href="#">`. Ссылки *reply*, *retweet* и *favourite* никуда не ведут, [а](https://twitter.com/intent/tweet?in_reply_to=386573856179113985) [могли](https://twitter.com/intent/retweet?tweet_id=386573856179113985) [бы](https://twitter.com/intent/favorite?tweet_id=386573856179113985).
+Тем не менее, постоянно попадаются `<a href="#">`. Ссылки *reply*, *retweet* и *favourite* никуда не ведут, [а](https://twitter.com/intent/tweet?in_reply_to=386573856179113985) [могли](https://twitter.com/intent/retweet?tweet_id=386573856179113985) [бы](https://twitter.com/intent/favorite?tweet_id=386573856179113985).
 
 ###Google+
 
@@ -100,4 +100,6 @@ dzDelayed.push(function() {
 ##Ссылки по теме
 
 - <a class="iconlink" href="http://pepelsbey.net/pres/push-it/">«<span>Жми сюда!</span>»</a>, *Вадим Макеев*
+- <a class="iconlink" href="http://adactio.com/journal/6022/">«<span>When is a link not a link?</span>»</a>, *Jeremy Keith*
+- [The Missing Link](http://shaundunne.com/the-missing-link/), *Shaun Dunne*
 - [Javascript Madness: Mouse Events](http://unixpapa.com/js/mouse.html), *Jan Wolter*

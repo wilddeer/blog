@@ -207,6 +207,10 @@ figure.info > div {
 	box-shadow: inset 0 0 10px rgba(100,80,0,0.12);
 }
 
+figure.info > div:before {
+	display: none;
+}
+
 figure.info > div > p:last-child {
 	margin-bottom: 0;
 }
@@ -278,7 +282,6 @@ html.ovi pre,
 html.operamini pre {
 	padding: 0;
 	border: none;
-	-webkit-box-shadow: none;
 	box-shadow: none;
 }
 
@@ -745,6 +748,16 @@ body > footer ul.footer-links {
 tables
 ------
 */
+.content > .table-holder {
+	overflow: auto;
+	padding: 0;
+	margin-bottom: 1.5rem;
+}
+
+.content > .table-holder table {
+	margin-bottom: 0;
+}
+
 table {
 	width: 100%;
 	padding: 0;

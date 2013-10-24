@@ -1,23 +1,23 @@
 ---
 layout: post
-title: "Браузер Kindle Paperwhite"
+title: "Браузер Nintendo 3DS"
 categories: rare-species
 lang: ru
 ---
 
-#Браузер Kindle Paperwhite {#header}
+#Браузер Nintendo 3DS {#header}
 
-{% include pic.htm src='device.jpg' a='Kindle Paperwhite' %}
+{% include pic.htm src='3ds.jpg' a='Nintendo 3DS' %}
 
 {:.specification}
-| *Разрешение экрана* | 768 &times; 1024 |
-| *Размер вьюпорта* | 758 &times; 899 |
+| *Верхний экран* | 400 &times; 240|
+| *Нижний экран* | 320 &times; 240 |
+| *Размер вьюпорта* | 416 &times; 480 |
 | *Браузер* | На движке WebKit |
-| *User Agent (javascript)* | `Mozilla/5.0 (X11; ; U; Linux armv7l; en-us) AppleWebKit/534.26+ (KHTML, like Gecko) Version/5.0 Safari/534.26+` |
-| *User Agent (http header)* | `Mozilla/5.0 (X11; U; Linux armv7l like Android; en-us) AppleWebKit/531.2+ (KHTML, like Gecko) Version/5.0 Safari/533.2+ Kindle/3.0+` |
-| *[Acid3](http://acid3.acidtests.org/)* | 100/100 |
-| *[HTML5 Test](http://html5test.com/)* | 235+2/500 |
-| *[CSS3 Test](http://css3test.com/)* | 45% |
+| *User Agent* | `Mozilla/5.0 (Nintendo 3DS; U; ; ru) Version/1.7552.EU` |
+| *[Acid3](http://acid3.acidtests.org/)* | 92/100 |
+| *[HTML5 Test](http://html5test.com/)* | 109/500 |
+| *[CSS3 Test](http://css3test.com/)* | 39% |
 
 Kindle Paperwhite --- новая Амазоновская читалка с e-ink тачскрином. Как и в [Kindle Keyboard](/rare-species/kindle-keyboard/), в читалке есть браузер.
 
@@ -188,3 +188,6 @@ html.kindle * {
 ##Итого {#conclusion}
 
 ##Ссылки по теме {#related_links}
+
+- [Nintendo 3DS browser](https://en.wikipedia.org/wiki/Internet_Browser_(Nintendo_3DS)), *Wikipedia*
+- [Nintendo 3DS](http://console.maban.co.uk/device/3ds) на *Game console browsers*
