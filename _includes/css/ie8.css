@@ -11,6 +11,6 @@ a.logo span {
 	display: none;
 }
 
-figure.info > div:after {
-	font-size: 1.8em;
+figure.info > div:before {
+	font-size: 1.2em;
 }

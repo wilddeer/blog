@@ -34,3 +34,8 @@ ul.lang-switcher li {
 html.ie9 table.specification {
 	width: 960px;
 }
+
+i[class^="icon-"],
+i[class*=" icon-"] {
+	display: none;
+}
