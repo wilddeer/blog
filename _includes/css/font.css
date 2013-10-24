@@ -22,8 +22,8 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-[class^="icon-"],
-[class*=" icon-"] {
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
 	font-family: 'icomoon-dizaina';
 	speak: none;
 	font-style: normal;
@@ -446,5 +446,10 @@
 html.no-fontface [class^="icon-"]:before,
 html.no-fontface [class*=" icon-"]:before {
 	content: '';
+	display: none;
+}
+
+html.no-fontface i[class^="icon-"],
+html.no-fontface i[class*=" icon-"] {
 	display: none;
 }

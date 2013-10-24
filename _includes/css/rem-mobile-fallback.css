@@ -16,6 +16,10 @@ p, ul, ol, pre, figure, h1, h2, h3, h4, table {
 	margin: 0 0 24px 0; /*1.5rem*/
 }
 
+.content > .table-holder {
+	margin-bottom: 24px;
+}
+
 figure * + figcaption {
 	padding-top: 12.796875px; /*0.8rem*/
 }

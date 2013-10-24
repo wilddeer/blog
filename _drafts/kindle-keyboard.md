@@ -26,91 +26,93 @@ Kindle Keyboard (он же Kindle 3) --- читалка от Амазона с e
 
 Браузер прекрасно переваривает яваскрипт, хорошо справляется со страницами средней сложности, но начинает заметно тормозить и брыкаться на перегруженных большими изображениями сайтах. Сказывается небольшой объем оперативки.
 
-###Тесты {#feature-tests}
+###Поддержка фич {#feature-tests}
 
-Фичи тестировались [Модернайзером](//modernizr.com). [Полная табличка моих тестов](https://docs.google.com/spreadsheet/ccc?key=0AjA1cIs8C8MGdFdyQ0lMQnhMbHJEeVZpMW9XejhzU2c&usp=sharing#gid=0).
+<small>Фичи тестировались [Модернайзером](//modernizr.com). [Полная таблица моих тестов](https://docs.google.com/spreadsheet/ccc?key=0AjA1cIs8C8MGdFdyQ0lMQnhMbHJEeVZpMW9XejhzU2c&usp=sharing#gid=0) на гугл доксах.</small>
 
-<table>
-	<thead>
-		<tr>
-			<th>Свойство</th>
-			<th>Тест</th>
-			<th>Реальный результат</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>backgroundsize</td>
-			<td class="true">True</td>
-			<td class="true">True</td>
-		</tr>
-		<tr>
-			<td>bgsizecover</td>
-			<td class="false">False</td>
-			<td class="false">False</td>
-		</tr>
-		<tr>
-			<td>borderradius</td>
-			<td class="true">True</td>
-			<td class="true">True</td>
-		</tr>
-		<tr>
-			<td>boxshadow</td>
-			<td class="true">True</td>
-			<td class="false">False</td>
-		</tr>
-		<tr>
-			<td>boxsizing </td>
-			<td class="true">True</td>
-			<td class="true">True</td>
-		</tr>
-		<tr>
-			<td>cssanimations</td>
-			<td class="true">True</td>
-			<td class="true">True</td>
-		</tr>
-		<tr>
-			<td>csstransforms</td>
-			<td class="true">True</td>
-			<td class="true">True</td>
-		</tr>
-		<tr>
-			<td>csstransforms3d</td>
-			<td class="false">False</td>
-			<td class="false">False</td>
-		</tr>
-		<tr>
-			<td>csstransitions</td>
-			<td class="true">True</td>
-			<td class="true">True</td>
-		</tr>
-		<tr>
-			<td>fontface</td>
-			<td class="true">True</td>
-			<td class="true">True</td>
-		</tr>
-		<tr>
-			<td>mediaqueries</td>
-			<td class="true">True</td>
-			<td class="true">True</td>
-		</tr>
-		<tr>
-			<td>opacity</td>
-			<td class="true">True</td>
-			<td class="true">True</td>
-		</tr>
-		<tr>
-			<td>rgba</td>
-			<td class="true">True</td>
-			<td class="true">True</td>
-		</tr>
-		<tr>
-			<td>touch</td>
-			<td class="false">False</td>
-			<td class="false">False</td>
-		</tr>
-	</tbody>
-</table>
+<div class="table-holder">
+	<table>
+		<thead>
+			<tr>
+				<th>Свойство</th>
+				<th>Тест</th>
+				<th>Реальный результат</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>backgroundsize</td>
+				<td class="true">True</td>
+				<td class="true">True</td>
+			</tr>
+			<tr>
+				<td>bgsizecover</td>
+				<td class="false">False</td>
+				<td class="false">False</td>
+			</tr>
+			<tr>
+				<td>borderradius</td>
+				<td class="true">True</td>
+				<td class="true">True</td>
+			</tr>
+			<tr>
+				<td>boxshadow</td>
+				<td class="true">True</td>
+				<td class="false">False</td>
+			</tr>
+			<tr>
+				<td>boxsizing </td>
+				<td class="true">True</td>
+				<td class="true">True</td>
+			</tr>
+			<tr>
+				<td>cssanimations</td>
+				<td class="true">True</td>
+				<td class="true">True</td>
+			</tr>
+			<tr>
+				<td>csstransforms</td>
+				<td class="true">True</td>
+				<td class="true">True</td>
+			</tr>
+			<tr>
+				<td>csstransforms3d</td>
+				<td class="false">False</td>
+				<td class="false">False</td>
+			</tr>
+			<tr>
+				<td>csstransitions</td>
+				<td class="true">True</td>
+				<td class="true">True</td>
+			</tr>
+			<tr>
+				<td>fontface</td>
+				<td class="true">True</td>
+				<td class="true">True</td>
+			</tr>
+			<tr>
+				<td>mediaqueries</td>
+				<td class="true">True</td>
+				<td class="true">True</td>
+			</tr>
+			<tr>
+				<td>opacity</td>
+				<td class="true">True</td>
+				<td class="true">True</td>
+			</tr>
+			<tr>
+				<td>rgba</td>
+				<td class="true">True</td>
+				<td class="true">True</td>
+			</tr>
+			<tr>
+				<td>touch</td>
+				<td class="false">False</td>
+				<td class="false">False</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
 
 Забавно, что девайс поддерживает анимации и транзишены. Качество [анимации](/experiments/pepyaka-font-using-css-animations/) на e-ink дисплее полностью передается скриншотом:
 
