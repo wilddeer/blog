@@ -8,6 +8,8 @@
 
 {% include js/tools.js %}
 
+{% include js/test-console.js %}
+
 {% include js/metrika.js %}
 
 {% include js/init.js %}

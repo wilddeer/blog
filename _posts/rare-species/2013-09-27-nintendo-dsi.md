@@ -172,4 +172,4 @@ jQuery не работает начиная с версии 1.9.1 и выше. �
 
 - [Using the Nintendo DSi browser](http://maban.co.uk/73), *Anna Debenham*
 - [Nintendo DS & DSi Browser](http://en.wikipedia.org/wiki/Nintendo_DS_%26_DSi_Browser), *Wikipedia*
-- [Nintendo DSi](http://console.maban.co.uk/device/dsi) на *Game console browsers*
+- [Nintendo DSi](http://console.maban.co.uk/device/dsi) на *Game Console Browsers*

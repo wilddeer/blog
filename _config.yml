@@ -17,6 +17,11 @@ cats:
         in: "Экспериментах"
         en: "Experiments"
         link: "experiments"
+    scripts:
+        ru: "Скрипты"
+        in: "Скриптах"
+        en: "Scripts"
+        link: "scripts"
 
 loc:
     name:

@@ -10,6 +10,23 @@
                                                \ \_\ 
                                                 \/_/ 
 */
+{% unless include.ie %}
+@media all and (min-width: 65em) {
+{% endunless %}
+	blockquote > * {
+		padding-left: 1em;
+		padding-right: 1em;
+	}
+
+	body > header,
+	body > footer,
+	.content > * {
+		padding-left: 0;
+		padding-right: 0;
+	}
+{% unless include.ie %}
+}
+{% endunless %}
 
 {% unless include.ie %}
 @media all and (min-width: 75em) {
