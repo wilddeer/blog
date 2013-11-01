@@ -117,6 +117,7 @@ ol,
 pre,
 figure,
 table,
+blockquote
 h1,
 h2,
 h3,
@@ -177,6 +178,13 @@ html.kindle h4 a {
 	border-bottom: none;
 }
 
+h1 a.iconlink span,
+h2 a.iconlink span,
+h3 a.iconlink span,
+h4 a.iconlink span {
+	text-decoration: none;
+}
+
 a:visited {
 	color: #7c64b4;
 }
@@ -191,6 +199,17 @@ a:hover {
 	color: #fff;
 	background: #f92672;
 	border-bottom-color: transparent;
+}
+
+blockquote {
+	font-style: italic;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	background: #f5f5f5;
+}
+
+blockquote p:last-child {
+	margin-bottom: 0;
 }
 
 figure.info {
@@ -838,22 +857,28 @@ td.false {
 
 
 /* console */
+#test_console {
+	margin-bottom: 1.5rem;
+}
 
-#console p {
-	color: white;
+#test_console p {
+	font-size: 0.8em;
+	font-family: Consolas, Monaco, 'Andale Mono', monospace, serif;
 	padding: 0.5em;
 	margin: 0;
 	border-bottom: 1px solid white;
 }
 
-#console .info {
-	background: #1d7ebc;
+#test_console .info {
+	background: #f5f5f5;
 }
 
-#console .warning {
+#test_console .warning {
+	color: white;
 	background: #eec507;
 }
 
-#console .error {
+#test_console .error {
+	color: white;
 	background: #ee6907;
 }

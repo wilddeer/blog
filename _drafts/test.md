@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Пикселизр ми"
+title: "Тестовый пост"
 lang: ru
 ---
 
