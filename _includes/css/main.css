@@ -304,6 +304,29 @@ html.operamini pre {
 	box-shadow: none;
 }
 
+kbd {
+	background: #f9f9f9;
+	border: 0.08em solid #ddd;
+	border-radius: 0.25em;
+	padding: 0 0.25em;
+	margin: 0 0.2em;
+	font-size: 0.75em;
+	font-family: inherit;
+	box-shadow: 0 0.2em 0 0.1em #ddd,
+				inset 0 0 0 0.1em #fff;
+	white-space: nowrap;
+}
+
+html.boxshadow kbd {
+	vertical-align: 0.1em;
+}
+
+html.bw kbd {
+	background: #fff;
+	border-color: #999;
+	box-shadow: 0 0.2em 0 0.1em #999;
+}
+
 code {
 	border: 1px solid #ddd;
 	border-radius: 0.25em;
