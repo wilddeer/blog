@@ -1,5 +1,10 @@
 $(function() {
-	
+
+
+	$('.js-peppermint').Peppermint({
+		bullets: true,
+		slideshow: false
+	});
 	$('.js-gallery').dzGallery();
 	$('pre').dzScrollFallback();
 

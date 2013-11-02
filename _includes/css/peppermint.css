@@ -1,0 +1,102 @@
+/* required */
+.peppermint.active {
+	position: relative;
+	overflow: hidden;
+}
+
+.peppermint.active .captions {
+	font-size: 0.9rem;
+	margin-bottom: 0.5rem;
+	text-align: center;
+	display: none;
+}
+
+.peppermint.active .slides {
+	z-index: 0;
+	position: relative;
+	overflow: hidden;
+	-ms-touch-action: pan-y;
+}
+
+.peppermint.active .slides > * {
+	float: left;
+	margin: 0;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent;
+}
+
+.peppermint.active .captions,
+.peppermint.active .slides,
+.peppermint.active .slides * {
+	-webkit-transform: translate3d(0,0,0);
+	-ms-transform: translate3d(0,0,0);
+	-moz-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+/* bonus */
+.peppermint {
+	text-align: center;
+	max-width: none;
+}
+
+.peppermint figure {
+	margin: 0 0 1.5em 0;
+}
+
+.peppermint figure img {
+	vertical-align: top;
+	max-height: 400px;
+	-webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.peppermint figure figcaption {
+	font-style: italic;
+	color: #787575;
+	font-size: 0.8em;
+}
+
+.peppermint.active {
+	margin-bottom: 1.5em;
+}
+
+/* bullets */
+.peppermint.active nav {
+	margin-top: 0.6em;
+}
+
+.peppermint.active > nav > span {
+	display: inline-block;
+	padding: 0.4em;
+	cursor: pointer;
+	line-height: 0.1;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.peppermint.active > nav > span > span {
+	display: inline-block;
+	padding: 0;
+	width: 10px;
+	height: 10px;
+	border-radius: 10px;
+	border: 1px solid #9b9890;
+	background: transparent;
+}
+
+.peppermint.active > nav > span.active > span {
+	background: #9b9890;
+}
+
+.peppermint.active > nav > span:active {
+	outline: none;
+}

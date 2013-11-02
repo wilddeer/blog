@@ -4,6 +4,8 @@
 
 {% include js/gallery.js %}
 
+{% include js/peppermint.js %}
+
 {% include js/scroll-fallback.js %}
 
 {% include js/tools.js %}

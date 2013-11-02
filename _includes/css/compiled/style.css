@@ -16,6 +16,8 @@
 
 {% include css/desktop.css %}
 
+{% include css/peppermint.css %}
+
 {% include css/syntax/syntax.css %}
 
 {% include css/font.css %}

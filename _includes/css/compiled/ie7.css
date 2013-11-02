@@ -16,6 +16,8 @@
 
 {% include css/desktop.css ie="true" %}
 
+{% include css/peppermint.css ie="true" %}
+
 {% include css/syntax/syntax.css %}
 
 {% include css/font.css %}
