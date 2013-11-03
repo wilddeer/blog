@@ -2,6 +2,21 @@ body {
 	min-width: 960px;
 }
 
+h1 a,
+h2 a,
+h3 a,
+h4 a {
+	text-decoration: underline;
+	border-bottom: none;
+}
+
+h1 a.iconlink span,
+h2 a.iconlink span,
+h3 a.iconlink span,
+h4 a.iconlink span {
+	text-decoration: underline;
+}
+
 figure.info > div {
 	padding-left: 1em;
 }

@@ -11,13 +11,6 @@
 */
 
 /* base styles */
-* {
-	-o-tap-highlight-color: transparent;
-	-moz-tap-highlight-color: transparent;
-	-webkit-tap-highlight-color: transparent;
-	tap-highlight-color: transparent;
-}
-
 ::-moz-selection {
 	background: #bbd9ff;
 	color: inherit;
@@ -128,6 +121,9 @@ h4 {
 a {
 	color: #168cd2;
 	text-decoration: underline;
+	-moz-tap-highlight-color: transparent;
+	-webkit-tap-highlight-color: transparent;
+	tap-highlight-color: transparent;
 }
 
 .pseudo-link {
@@ -279,6 +275,29 @@ li {
 html.operamini .content ul li:before {
 	overflow: visible;
 }
+
+kbd {
+	background: #f9f9f9;
+	border: 0.08em solid #ddd;
+	border-radius: 0.25em;
+	padding: 0 0.25em;
+	font-size: 0.75em;
+	font-family: inherit;
+	box-shadow: 0 0.2em 0 0.1em #ddd,
+				inset 0 0 0 0.1em #fff;
+	white-space: nowrap;
+}
+
+html.boxshadow kbd {
+	vertical-align: 0.1em;
+	margin: 0 0.2em;
+}
+
+html.bw kbd {
+	background: #fff;
+	border-color: #999;
+	box-shadow: 0 0.2em 0 0.1em #999;
+}
 	
 pre {
 	white-space: pre;
@@ -302,29 +321,6 @@ html.operamini pre {
 	padding: 0;
 	border: none;
 	box-shadow: none;
-}
-
-kbd {
-	background: #f9f9f9;
-	border: 0.08em solid #ddd;
-	border-radius: 0.25em;
-	padding: 0 0.25em;
-	margin: 0 0.2em;
-	font-size: 0.75em;
-	font-family: inherit;
-	box-shadow: 0 0.2em 0 0.1em #ddd,
-				inset 0 0 0 0.1em #fff;
-	white-space: nowrap;
-}
-
-html.boxshadow kbd {
-	vertical-align: 0.1em;
-}
-
-html.bw kbd {
-	background: #fff;
-	border-color: #999;
-	box-shadow: 0 0.2em 0 0.1em #999;
 }
 
 code {
