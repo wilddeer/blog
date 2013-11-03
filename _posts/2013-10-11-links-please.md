@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Links, please"
-categories: p
 lang: ru
 ---
 

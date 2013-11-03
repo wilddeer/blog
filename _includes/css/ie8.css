@@ -14,3 +14,20 @@ a.logo span {
 figure.info > div:before {
 	font-size: 1.2em;
 }
+
+body > header,
+body > footer,
+.content > * {
+	padding-left: 24px;
+	padding-right: 24px;
+}
+
+.content > blockquote {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.content > blockquote > * {
+	padding-left: 24px;
+	padding-right: 24px;
+}
