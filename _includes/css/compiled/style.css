@@ -8,6 +8,10 @@
 
 {% include css/rem-fallback.css %}
 
+{% include peppermint/peppermint.required.css %}
+
+{% include peppermint/peppermint.suggested.css %}
+
 {% include css/main.css %}
 
 {% include css/phone.css %}
@@ -15,8 +19,6 @@
 {% include css/tablet.css %}
 
 {% include css/desktop.css %}
-
-{% include css/peppermint.css %}
 
 {% include css/syntax/syntax.css %}
 

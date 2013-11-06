@@ -36,34 +36,11 @@ li {
 	margin-bottom: 16px; /*1rem*/
 }
 
-.js-gallery.active {
-	max-width: 1920px; /*120rem*/
+.peppermint.active {
+	margin-bottom: 24px;
 }
 
-.js-gallery .captions {
-	font-size: 14px; /*0.9rem*/
-	margin-bottom: 8px; /*0.5rem*/
-}
-
-.js-gallery .captions > span.arr {
-	padding-right: 16px;
-	padding-left: 16px;
-	font-size: 24px;
-}
-
-.js-gallery .captions > span.dot {
-	height: 8px; /*0.5rem*/
-	width: 8px; /*0.5rem*/
-	border-radius: 16px; /*1rem*/
-}
-
-.js-gallery .slides {
-	margin-bottom: 16px; /*1rem*/
-	padding-bottom: 8px; /*0.5rem*/
-	padding-top: 8px; /*0.5rem*/
-}
-
-.js-gallery.active figure {
+.peppermint figure {
 	padding-right: 16px; /*1rem*/
 	padding-left: 16px; /*1rem*/
 }
