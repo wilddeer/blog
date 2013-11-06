@@ -1,3 +1,6 @@
 [submodule "_includes/peppermint"]
 	path = _includes/peppermint
 	url = https://github.com/wilddeer/Peppermint.git
+[submodule "_includes/sniffer"]
+	path = _includes/sniffer
+	url = https://github.com/wilddeer/Sniffer.git
