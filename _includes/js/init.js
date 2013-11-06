@@ -2,10 +2,9 @@ $(function() {
 
 
 	$('.js-peppermint').Peppermint({
-		bullets: true,
-		slideshow: false
+		dots: true
 	});
-	$('.js-gallery').dzGallery();
+	
 	$('pre').dzScrollFallback();
 
 	/* OH MY GLOBE WHAT AM I DOIN */

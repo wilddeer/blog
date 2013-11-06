@@ -9,41 +9,54 @@ lang: ru
   .stage.peppermint {
     margin-top: -1em;
     padding: 1.5em 0 1em 0;
-    background: #333;
-    /*background-image: -webkit-linear-gradient(-90deg, #121212, #303030);
-    background-image: -moz-linear-gradient(-90deg, #121212, #303030);
-    background-image: linear-gradient(180deg, #121212, #303030);*/
-    box-shadow: inset 0 0 1.5em rgba(0,0,0,0.2),
-                inset 0 0.3em 0.3em rgba(0,0,0,0.2);
+    background: #252525;
+    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
   }
 
-  .stage.peppermint figure > a {
-    display: inline-block;
-    border-radius: 0.3em;
-    box-shadow: inset 0 0 3px red;
+  .stage.peppermint figure:last-child {
+    margin-bottom: 0;
   }
 
-  .stage.peppermint figure img {
-    border-radius: 0.3em;
-    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  .stage.peppermint figure figcaption {
+    font-size: 0.7em;
+    color: #fff;
+  }
+
+  .stage.peppermint ul.dots li span {
+    background: #fff;
+  }
+
+  .stage.peppermint ul.dots li.active span {
+    background: transparent;
+    border-color: #fff;
   }
 </style>
 
-<div class="stage peppermint js-peppermint" id="peppermint">
+<script>
+  dzDelayed.push(function() {
+    $('#peppermint').Peppermint({
+      dots: true,
+      slideshow: true
+    });
+  });
+</script>
+
+<div class="stage peppermint" id="peppermint">
   <figure>
-    <a href="i/1.jpg" target="_blank"><img src="i/p1.jpg" alt="Кот!"></a>
+    <a href="/pics/peppermint/1.jpg" target="_blank"><img src="/pics/peppermint/p1.jpg" alt="Кот!"></a>
 
     <figcaption>Кот!</figcaption>
   </figure>
 
   <figure>
-    <a href="i/2.jpg" target="_blank"><img src="i/p2.jpg" alt="Еще кот!"></a>
+    <a href="/pics/peppermint/2.jpg" target="_blank"><img src="/pics/peppermint/p2.jpg" alt="Еще кот!"></a>
 
     <figcaption>Еще кот!</figcaption>
   </figure>
 
   <figure>
-    <a href="i/3.jpg" target="_blank"><img src="i/p3.jpg" alt="Опять кот!"></a>
+    <a href="/pics/peppermint/3.jpg" target="_blank"><img src="/pics/peppermint/p3.jpg" alt="Опять кот!"></a>
 
     <figcaption>Опять кот!</figcaption>
   </figure>

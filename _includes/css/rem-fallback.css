@@ -6,7 +6,6 @@ body > header,
 body > footer,
 .content > *,
 .content > .table-holder,
-.js-gallery .captions > span.arr,
 table.specification {
 	padding-right: 32px; /*2rem*/
 	padding-left: 32px; /*2rem*/
