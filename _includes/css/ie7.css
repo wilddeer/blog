@@ -50,6 +50,19 @@ html.ie9 table.specification {
 	width: 960px;
 }
 
+.peppermint figure {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.peppermint.active > ul.dots {
+	list-style-image: none;
+}
+
+.peppermint.active > ul.dots > li {
+	display: inline;
+}
+
 i[class^="icon-"],
 i[class*=" icon-"] {
 	display: none;
