@@ -277,6 +277,8 @@ html.operamini .content ul li:before {
 }
 
 kbd {
+	display: inline-block;
+	line-height: 1.25;
 	background: #f9f9f9;
 	border: 0.08em solid #ddd;
 	border-radius: 0.25em;
