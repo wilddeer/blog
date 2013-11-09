@@ -1,8 +1,8 @@
 ---
 layout: default
-title: "Все через жопу"
+title: "Чиним интернет"
 lang: ru
-permalink: /everything-done-wrong/
+permalink: /internet-maintenance/
 ---
 
 ##{{ page.title }}

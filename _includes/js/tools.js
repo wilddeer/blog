@@ -14,6 +14,7 @@ function moveCursorToEnd(el) {
     }
 }
 
+/* for the glory of JekPot! (https://twitter.com/JekPot) */
 function antiJekpotRandom(min, max, old) {
     var rand = Math.floor((Math.random()*(max-min+1))+min);
 

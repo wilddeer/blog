@@ -22,6 +22,12 @@ cats:
         in: "Скриптах"
         en: "Scripts"
         link: "scripts"
+    internet-maintenance:
+        ru: "Чиним интернет"
+        in: "Чиним интернет"
+        in_r: true
+        en: "Internet maintenance"
+        link: "internet-maintenance"
 
 loc:
     name:

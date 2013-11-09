@@ -235,10 +235,6 @@ html.bw figure.info > div {
 	border: 1px solid #999;
 }
 
-figure a:focus img {
-	outline: thin dotted;
-}
-
 html.bw a,
 html.bw .lang-switcher a,
 html.bw .title a {
@@ -253,6 +249,7 @@ html.bw a:active {
 
 ul {
 	list-style-type: none;
+	padding-left: 0;
 }
 
 li {
@@ -272,6 +269,15 @@ li {
 	overflow: hidden;
 }
 
+.content ul.nopadding li {
+	padding-left: 0;
+}
+
+.content ul.nopadding li:before {
+	content: "";
+	display: none;
+}
+
 html.operamini .content ul li:before {
 	overflow: visible;
 }
@@ -282,10 +288,10 @@ kbd {
 	background: #f9f9f9;
 	border: 0.08em solid #ddd;
 	border-radius: 0.25em;
-	padding: 0 0.25em;
+	padding: 0 0.25em 0.1em;
 	font-size: 0.75em;
 	font-family: inherit;
-	box-shadow: 0 0.2em 0 0.1em #ddd,
+	box-shadow: 0 0.15em 0 0.1em #ddd,
 				inset 0 0 0 0.1em #fff;
 	white-space: nowrap;
 }

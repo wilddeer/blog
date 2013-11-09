@@ -2,7 +2,7 @@
 
 {% include js/jquery-1.10.2.min.js %}
 
-{% include peppermint/peppermint.js %}
+{% include peppermint/peppermint.min.js %}
 
 {% include js/scroll-fallback.js %}
 

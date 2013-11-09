@@ -21,12 +21,14 @@ lang: ru
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    align-items: stretch;
     -ms-flex-align: stretch;
+    -webkit-align-items: stretch;
+    align-items: stretch;
+    min-height: 16em;
   }
 
   html.no-flexbox .stage.peppermint .slides {
-    height: 22em;
+    height: 20em;
   }
 
   .stage.peppermint figure {
@@ -40,6 +42,11 @@ lang: ru
     -ms-flex-pack: center;
     justify-content: center;
     padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    margin-bottom: 0;
+  }
+
+  .stage.peppermint.active figure {
     padding-bottom: 3em;
   }
 
@@ -76,27 +83,32 @@ lang: ru
     border-color: #fff;
   }
 
+  .stage.peppermint code {
+    border-color: #fff;
+  }
+
   .stage.peppermint a,
   .stage.peppermint a:hover,
   .stage.peppermint a:active {
-    color: #3fa0b5;
     background: transparent;
+    color: #fff;
   }
 
-  .stage.peppermint .slide1 {
+  .stage.peppermint .yellow {
     background: #fdeb75;
     color: #333;
   }
 
-  .stage.peppermint .slide1 h1 {
+  .stage.peppermint .yellow h1 {
     margin-bottom: 0;
   }
 
-  .stage.peppermint .slide1 h3 {
+  .stage.peppermint .yellow h3 {
     margin-bottom: 2em;
   }
 
-  .stage.peppermint .slide1 a.github {
+  .stage.peppermint .yellow a.github {
+    color: #3fa0b5;
     text-decoration: none;
     padding: 0.5em 1em;
     border: 1px solid;
@@ -108,11 +120,11 @@ lang: ru
     text-shadow: 1px 1px 0 rgba(255,255,255,0.3);
   }
 
-  .stage.peppermint .slide1 a.github:hover {
+  .stage.peppermint .yellow a.github:hover {
     background: rgba(255,50,50,0.05);
   }
 
-  .stage.peppermint .slide2 {
+  .stage.peppermint .red {
     color: #fff;
     background: #ca5d40 url("/pics/peppermint/red.jpg") 50% 50%;
     background-size: auto 100%;
@@ -120,24 +132,35 @@ lang: ru
     background-size: cover;
   }
 
-  .stage.peppermint .slide3 {
+  .stage.peppermint .gray {
+    background: #e0e0e0;
+    background-size: auto 100%;
+    -moz-background-size: cover;
+    background-size: cover;
+  }
+
+  .stage.peppermint .blue {
     color: #fff;
-    text-shadow: 1px 1px 2px rgba(89,135,198,0.5);
+    text-shadow: 1px 1px 2px rgba(89,135,198,0.6);
     background: #5988c6 url("/pics/peppermint/blue.jpg") 50% 50%;
     background-size: auto 100%;
     -moz-background-size: cover;
     background-size: cover;
   }
 
-  .stage.peppermint .slide3 h1 {
+  .stage.peppermint .blue h1 {
     line-height: 1.6;
   }
 
-  .stage.peppermint .slide3 a {
+  .stage.peppermint .blue p a,
+  .stage.peppermint .blue p a:hover,
+  .stage.peppermint .red p a,
+  .stage.peppermint .red p a:hover {
     color: #fff;
+    text-decoration: underline;
   }
 
-  .stage.peppermint .slide3 kbd {
+  .stage.peppermint kbd {
     color: #333;
     text-shadow: none;
   }
@@ -167,55 +190,167 @@ lang: ru
   dzDelayed.push(function() {
     $('#peppermint').Peppermint({
       dots: true,
-      slideshow: false,
-      slideshowInterval: 7000
+      slideshow: true,
+      slideshowInterval: 7000,
+      stopSlideshowAfterInteraction: true
     });
   });
 </script>
 
 <div class="stage peppermint" id="peppermint">
-  <figure class="slide1">
+  <figure class="yellow">
     <h1>Peppermint.js</h1>
     <h3>Правильный тач-слайдер</h3>
     <p><a href="https://github.com/wilddeer/Peppermint" class="github"><i class="icon-github">&nbsp;</i>Забрать с ГитХаба</a></p>
   </figure>
 
-  <figure class="slide2">
+  <figure class="red">
       <h1>Быстрый, легкий, расширяемый</h1>
+      <p>5 Кб, оптимизированные на скорость <code>touch</code>-функции, <a href="#api">API</a> для расширений</p>
+  </figure>
+
+  <figure class="gray">
+      <h1>Работает везде</h1>
       <p>Работает на <i class="icon-apple">&nbsp;</i>айфонах, <i class="icon-android">&nbsp;</i>андроидах, <i class="icon-windows">&nbsp;</i>винфонах. Не зависит от сторонних библиотек. Работает в <i class="icon-IE">&nbsp;</i>IE7+.</p>
   </figure>
 
-  <figure class="slide3">
-    <h1><a href="#accessibility">Дружит</a> с кнопкой <kbd>Tab</kbd></h1>
+  <figure class="blue">
+    <h1><a href="/internet-maintenance/sliders-and-tab-button/">Дружит</a> с кнопкой <kbd>Tab</kbd></h1>
     
   </figure>
 </div>
 
-#[Peppermint.js](https://github.com/wilddeer/Peppermint) {#header}
+[Peppermint.js](https://github.com/wilddeer/Peppermint) --- еще один тач-слайдер. Только круче.
 
-##Peppermint.js --- тач-слайдер {#subheader}
+- Работает с [тачэвентами](http://www.w3.org/TR/touch-events/), [поинтерэвентами](http://www.w3.org/TR/pointerevents/), старыми [поинтерэвентами из IE10](http://msdn.microsoft.com/en-us/library/ie/hh673557(v=vs.85).aspx)
+- Работает на андроидах, айфонах, винфонах, блекберри и в 8 винде
+- Не зависит от сторонних библиотек. Если находит jQuery, регистрирует себя в качестве плагина.
+- Работает в IE7+ без анимаций, с анимациями начиная с IE10
+- 5 Кб кода
+- Оптимизированные на скорость выполнения `touch`-функции
+- [API](#api) и callback-функции для расширений
+- Работает с клавиатурой, [не ломается](/internet-maintenance/sliders-and-tab-button/) от кнопки <kbd>Tab</kbd>
 
-##Доступность использования {#accessibility}
+##Комплект {#kit}
 
+{:.nopadding}
+- <a href="https://raw.github.com/wilddeer/Peppermint/master/peppermint.min.js" class="iconlink"><i class="icon-cloud-download"> </i><span>peppermint.min.js</span></a> --- минифицированный скрипт для продакшена
+- <a href="https://raw.github.com/wilddeer/Peppermint/master/peppermint.required.css" class="iconlink"><i class="icon-cloud-download"> </i><span>peppermint.required.css</span></a> --- обязательный набор стилей для корректной работы слайдера
+- <a href="https://raw.github.com/wilddeer/Peppermint/master/peppermint.suggested.css" class="iconlink"><i class="icon-cloud-download"> </i><span>peppermint.suggested.css</span></a> --- дефолтный набор стилей, чтобы было с чего начать
 
+##Запуск {#usage}
+
+HTML разметка:
+
+{% highlight html cssclass=codewrap %}
+<div class="peppermint" id="peppermint">
+  <figure> ... </figure>
+
+  <figure> ... </figure>
+
+  <figure> ... </figure>
+</div>
+{% endhighlight %}
+
+Javascript:
 
 {% highlight js cssclass=codewrap %}
-Sniffer = {
-  browser: {
-    name,
-    engine,
-    version
-  },
-  os: {
-    name,
-    version
-  },
-  features: {
-    bw: true/undefined, /* black-and-white */
-    mobile: true/undefined,
-    serverside: true/undefined /* serverside js & rendering, a-la Opera Mini */
-  }
+var slider = Peppermint(document.getElementById('peppermint'));
+{% endhighlight %}
+
+Или javascript + jQuery:
+
+{% highlight js cssclass=codewrap %}
+$('.peppermint').Peppermint();
+{% endhighlight %}
+
+Вместо `figure` можно использовать любой другой тег. Если используете `figure`, не забудьте подключить [html5shiv](https://github.com/aFarkas/html5shiv), чтобы старые IE не удивлялись HTML5-тегам.
+
+Внутрь каждого слайда можно положить все что захочется.
+
+##Настройки {#settings}
+
+В качестве второго параметра (первого в случае использования jQuery) в Peppermint можно передать объект с настройками. Настройки по умолчанию:
+
+{% highlight js cssclass=codewrap %}
+{
+  //скорость перехода между слайдами, мс
+  speed: 300,
+
+  //скорость перехода между слайдами после тача, мс
+  touchSpeed: 300,
+
+  //слайдшоу
+  slideshow: false,
+
+  //интервал переключения слайдов, мс
+  slideshowInterval: 4000,
+
+  //останавливать слайдшоу после переключения слайда пользователем
+  stopSlideshowAfterInteraction: false,
+
+  //начальный слайд
+  startSlide: 0,
+
+  //показывать точки
+  dots: false,
+
+  //Callback-функция, вызывается при смене слайда.
+  //В качестве параметра получает номер слайда.
+  onSlideChange: undefined,
+
+  //Callback-функция, вызывается пойсле завершения установки.
+  //В качестве параметра получает количество слайдов.
+  onSetup: undefined
 }
 {% endhighlight %}
 
-<a href="https://github.com/wilddeer/Sniffer/blob/master/README.md" class="iconlink"><i class="icon-book"> </i><span>Последняя версия документации</span></a>
+Пример использования:
+
+{% highlight js cssclass=codewrap %}
+var slider = Peppermint(document.getElementById('peppermint'), {
+  dots: true,
+  slideshow: true,
+  speed: 500,
+  slideshowInterval: 5000,
+  stopSlideshowAfterInteraction: true,
+  onSetup: function(n) {
+    console.log('Peppermint setup done. Slides found: ' + n);
+  }
+});
+{% endhighlight %}
+
+##API {#api}
+
+При инициализации Peppermint возвращает объект с функциями, которые можно использовать для управления слайдером и расширения функционала:
+
+`slideTo(n)` --- перейти к слайду `n`;
+
+`next()` --- следующий слайд;
+
+`prev()` --- предыдущий слайд;
+
+`start()` --- запустить слайдшоу;
+
+`stop()` --- остановить слайдшоу;
+
+`pause()` --- приостановить слайдшоу до следующей смены слайда;
+
+`getCurrentPos()` --- получить номер текущего слайда;
+
+`getSlidesNumber()` --- получить общее количество слайдов;
+
+`recalcWidth()` --- пересчитать ширину слайдера и слайдов. Полезно при изменении ширины контейнера. При ресайзе окна и смене ориентации девайса пересчет ширины запустится сам.
+
+Пример использования:
+
+{% highlight js cssclass=codewrap %}
+var slider = Peppermint(document.getElementById('peppermint')),
+    rightArr = document.getElementById('right-arr'),
+    leftArr = document.getElementById('left-arr');
+
+rightArr.addEventListener('click', slider.next, false);
+leftArr.addEventListener('click', slider.prev, false);
+{% endhighlight %}
+
+<a href="https://github.com/wilddeer/Peppermint/blob/master/README.md" class="iconlink"><i class="icon-book"> </i><span>Последняя версия документации</span></a>
