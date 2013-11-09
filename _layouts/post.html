@@ -11,7 +11,7 @@ post: true
 
 	{% if site.cats[cats] %}
 		{% if page.lang == 'ru' %}
-			в <a href="../" class="iconlink">«<span>{{ site.cats[cats].in }}</span>»</a>
+			в {% if site.cats[cats].in_r == true %}рубрике {% endif %}<a href="../" class="iconlink">«<span>{{ site.cats[cats].in }}</span>»</a>
 		{% else %}
 			in <a href="../" class="iconlink">“<span>{{ site.cats[cats].en }}</span>”</a>
 		{% endif %}
