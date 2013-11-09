@@ -18,26 +18,34 @@ lang: ru
 
   .stage.peppermint .slides {
     padding: 0;
+    display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-align: stretch;
+    -webkit-box-align: stretch;
     -webkit-align-items: stretch;
     align-items: stretch;
+  }
+
+  html.blackberry .stage.peppermint .slides {
     min-height: 16em;
   }
 
-  html.no-flexbox .stage.peppermint .slides {
+  html.no-flexbox.no-flexboxlegacy .stage.peppermint .slides {
     height: 20em;
   }
 
   .stage.peppermint figure {
+    display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -50,7 +58,7 @@ lang: ru
     padding-bottom: 3em;
   }
 
-  html.no-flexbox .stage.peppermint figure {
+  html.no-flexbox.no-flexboxlegacy .stage.peppermint figure {
     height: 100%;
   }
 
@@ -126,23 +134,27 @@ lang: ru
 
   .stage.peppermint .red {
     color: #fff;
-    background: #ca5d40 url("/pics/peppermint/red.jpg") 50% 50%;
+    background: #ca5d40 url("/pics/peppermint/red.jpg") 50% 50% no-repeat;
     background-size: auto 100%;
     -moz-background-size: cover;
     background-size: cover;
   }
 
-  .stage.peppermint .gray {
-    background: #e0e0e0;
-    background-size: auto 100%;
-    -moz-background-size: cover;
-    background-size: cover;
+  .stage.peppermint .green {
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(150,214,73,0.4);
+    background-image: linear-gradient(90deg, rgba(255,255,255,.08) 50%, transparent 50%),
+                      linear-gradient(90deg, rgba(255,255,255,.14) 50%, transparent 50%),
+                      linear-gradient(90deg, transparent 50%, rgba(255,255,255,.18) 50%),
+                      linear-gradient(90deg, transparent 50%, rgba(255,255,255,.2) 50%);
+    background-size: 13px, 29px, 37px, 53px;
+    background-color: #8bcc3c;
   }
 
   .stage.peppermint .blue {
     color: #fff;
     text-shadow: 1px 1px 2px rgba(89,135,198,0.6);
-    background: #5988c6 url("/pics/peppermint/blue.jpg") 50% 50%;
+    background: #5988c6 url("/pics/peppermint/blue.jpg") 50% 50% no-repeat;
     background-size: auto 100%;
     -moz-background-size: cover;
     background-size: cover;
@@ -206,10 +218,10 @@ lang: ru
 
   <figure class="red">
       <h1>Быстрый, легкий, расширяемый</h1>
-      <p>5 Кб, оптимизированные на скорость <code>touch</code>-функции, <a href="#api">API</a> для расширений</p>
+      <p>5 Кб, быстрый и плавный тач, <a href="#api">API</a> для расширений</p>
   </figure>
 
-  <figure class="gray">
+  <figure class="green">
       <h1>Работает везде</h1>
       <p>Работает на <i class="icon-apple">&nbsp;</i>айфонах, <i class="icon-android">&nbsp;</i>андроидах, <i class="icon-windows">&nbsp;</i>винфонах. Не зависит от сторонних библиотек. Работает в <i class="icon-IE">&nbsp;</i>IE7+.</p>
   </figure>

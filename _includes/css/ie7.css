@@ -59,10 +59,6 @@ html.ie9 table.specification {
 	list-style-image: none;
 }
 
-.peppermint.active > ul.dots > li {
-	display: inline;
-}
-
 i[class^="icon-"],
 i[class*=" icon-"] {
 	display: none;
