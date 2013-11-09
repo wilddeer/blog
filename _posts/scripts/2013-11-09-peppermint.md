@@ -172,6 +172,11 @@ lang: ru
     text-decoration: underline;
   }
 
+  html.winphone .stage.peppermint .blue,
+  html.winphone .stage.peppermint .green {
+    text-shadow: none;
+  }
+
   .stage.peppermint kbd {
     color: #333;
     text-shadow: none;
