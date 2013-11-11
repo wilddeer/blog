@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "JS sliders and Tab button"
+title: "JS sliders and the Tab key"
 categories: en internet-maintenance
 lang: en
 ---
 
-#JS sliders and the <kbd>Tab</kbd> button {#header}
+#JS sliders and the <kbd>Tab</kbd> key {#header}
 
-Almost every JS slider has one particularly funny bug: the <kbd>Tab</kbd> button breaks them. The slider will inevitably break if a link, placed in one of the slides, cathes focus. Some examples on a [slider that doesn't break](/en/scripts/peppermint/) (oh, the irony):
+Almost every JS slider has one particularly funny bug: the <kbd>Tab</kbd> key breaks them. The slider will inevitably break if a link, placed in one of the slides, cathes focus. Some examples on a [slider that doesn't break](/en/scripts/peppermint/) (oh, the irony):
 
 <div class="peppermint js-peppermint">
   {% include pic.htm src='apple.jpg' p=true a='Broken slider at apple.com' c='Broken slider at <a href="http://apple.com">apple.com</a>' %}
