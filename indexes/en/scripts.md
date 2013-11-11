@@ -1,8 +1,8 @@
 ---
 layout: default
-lang: ru
-cat: internet-maintenance
-permalink: /internet-maintenance/
+lang: en
+cat: scripts
+permalink: /en/scripts/
 ---
 
 ##{{ site.cats[page.cat][page.lang] }}

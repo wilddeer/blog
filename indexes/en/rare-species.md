@@ -1,8 +1,8 @@
 ---
 layout: default
-lang: ru
-cat: internet-maintenance
-permalink: /internet-maintenance/
+lang: en
+cat: rare-species
+permalink: /en/rare-species/
 ---
 
 ##{{ site.cats[page.cat][page.lang] }}
