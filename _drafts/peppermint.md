@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Тач-слайдер Peppermint.js"
-categories: scripts
-lang: ru
+title: "Peppermint touch slider"
+categories: en scripts
+lang: en
 ---
 
 <style>
@@ -217,48 +217,48 @@ lang: ru
 <div class="stage peppermint" id="peppermint">
   <figure class="yellow">
     <h1>Peppermint.js</h1>
-    <h3>Правильный тач-слайдер</h3>
-    <p><a href="https://github.com/wilddeer/Peppermint" class="github"><i class="icon-github">&nbsp;</i>Забрать с ГитХаба</a></p>
+    <h3>Proper touch slider</h3>
+    <p><a href="https://github.com/wilddeer/Peppermint" class="github"><i class="icon-github">&nbsp;</i>Get it on GitHub</a></p>
   </figure>
 
   <figure class="red">
-      <h1>Быстрый, легкий, расширяемый</h1>
-      <p>5 Кб, быстрый и плавный тач, <a href="#api">API</a> для расширений</p>
+      <h1>Fast, lightweight &amp; extensible</h1>
+      <p>5 Kb, fast &amp; smooth touch, <a href="#api">API</a> for extensibility</p>
   </figure>
 
   <figure class="green">
-      <h1>Работает везде</h1>
-      <p>Работает на <i class="icon-apple">&nbsp;</i>айфонах, <i class="icon-android">&nbsp;</i>андроидах, <i class="icon-windows">&nbsp;</i>винфонах. Не зависит от сторонних библиотек. Работает в <i class="icon-IE">&nbsp;</i>IE7+.</p>
+      <h1>Works on everything</h1>
+      <p>Works on <i class="icon-apple">&nbsp;</i>iPhones, <i class="icon-android">&nbsp;</i>Androids, <i class="icon-windows">&nbsp;</i>Winphones. Library agnostic. <i class="icon-IE">&nbsp;</i>IE7+ compatible.</p>
   </figure>
 
   <figure class="blue">
-    <h1><a href="/internet-maintenance/sliders-and-tab-button/">Дружит</a> с кнопкой <kbd>Tab</kbd></h1>
+    <h1><a href="/en/internet-maintenance/sliders-and-tab-button/">On good terms</a> with <kbd>Tab</kbd> button</h1>
     
   </figure>
 </div>
 
-[Peppermint.js](https://github.com/wilddeer/Peppermint) --- еще один тач-слайдер. Только круче.
+[Peppermint.js](https://github.com/wilddeer/Peppermint) -- Yet another touch slider. Only better.
 
-- Работает с [тачэвентами](http://www.w3.org/TR/touch-events/), [поинтерэвентами](http://www.w3.org/TR/pointerevents/), старыми [поинтерэвентами из IE10](http://msdn.microsoft.com/en-us/library/ie/hh673557(v=vs.85).aspx)
-- Работает на андроидах, айфонах, винфонах, блекберри и в 8 винде
-- Работает в IE7+ без анимаций, с анимациями начиная с IE10
-- Не зависит от сторонних библиотек. Если находит jQuery, регистрирует себя в качестве плагина.
-- Использует CSS3 трансформы и анимации
-- 5 Кб кода
-- Оптимизированные на скорость выполнения `touch`-функции
-- [API](#api) и callback-функции для расширений
-- Работает с клавиатурой, [не ломается](/internet-maintenance/sliders-and-tab-button/) от кнопки <kbd>Tab</kbd>
+- Works with [Touch Events](http://www.w3.org/TR/touch-events/), [Pointer Events](http://www.w3.org/TR/pointerevents/), old [IE10 Point Erevents](http://msdn.microsoft.com/en-us/library/ie/hh673557(v=vs.85).aspx)
+- Works on iPhones, Androids, Windows Phones, Blackberries, Windows 8 devices
+- IE7+ compatible, IE10+ with animations
+- Library agnostic. If jQuery is available, registers itself as a plugin.
+- Uses CSS3 transforms &amp; animations
+- Only 5 Kb minified
+- Perfomance-optimized `touch` functions
+- API and callback functions for extensibility
+- [Doesn't break](/en/internet-maintenance/sliders-and-tab-button/) when <kbd>tab</kbd>&rsquo;bing
 
-##Комплект {#kit}
+##Kit
 
 {:.nopadding}
-- <a href="https://raw.github.com/wilddeer/Peppermint/master/peppermint.min.js" class="iconlink"><i class="icon-cloud-download"> </i><span>peppermint.min.js</span></a> --- минифицированный скрипт для продакшена
-- <a href="https://raw.github.com/wilddeer/Peppermint/master/peppermint.required.css" class="iconlink"><i class="icon-cloud-download"> </i><span>peppermint.required.css</span></a> --- обязательный набор стилей для корректной работы слайдера
-- <a href="https://raw.github.com/wilddeer/Peppermint/master/peppermint.suggested.css" class="iconlink"><i class="icon-cloud-download"> </i><span>peppermint.suggested.css</span></a> --- дефолтный набор стилей, чтобы было с чего начать (не включает обязательные стили!)
+- <a href="https://raw.github.com/wilddeer/Peppermint/master/peppermint.min.js" class="iconlink"><i class="icon-cloud-download"> </i><span>peppermint.min.js</span></a> -- minified production script
+- <a href="https://raw.github.com/wilddeer/Peppermint/master/peppermint.required.css" class="iconlink"><i class="icon-cloud-download"> </i><span>peppermint.required.css</span></a> -- styles required for proper functioning
+- <a href="https://raw.github.com/wilddeer/Peppermint/master/peppermint.suggested.css" class="iconlink"><i class="icon-cloud-download"> </i><span>peppermint.suggested.css</span></a> -- default styles to start with (required styles not included!)
 
-##Запуск {#usage}
+##Usage
 
-HTML разметка:
+HTML markup:
 
 {% highlight html cssclass=codewrap %}
 <div class="peppermint" id="peppermint">
@@ -276,57 +276,57 @@ Javascript:
 var slider = Peppermint(document.getElementById('peppermint'));
 {% endhighlight %}
 
-Или javascript + jQuery:
+Or javascript + jQuery:
 
 {% highlight js cssclass=codewrap %}
 $('.peppermint').Peppermint();
 {% endhighlight %}
 
-Вместо `figure` можно использовать любой другой тег. Если используете `figure`, не забудьте подключить [html5shiv](https://github.com/aFarkas/html5shiv), чтобы старые IE не удивлялись HTML5-тегам.
+You are free to use any other tag instead of `figure`. When using `figure`, don't forget to include [html5shiv](https://github.com/aFarkas/html5shiv), otherwise it won't work in old IEs.
 
-Внутрь каждого слайда можно положить все что захочется.
+Place anything you want within the slides.
 
-##Настройки {#settings}
+##Settings
 
-В качестве второго параметра (первого в случае использования jQuery) в Peppermint можно передать объект с настройками. Настройки по умолчанию:
+Peppermint can take settings object as an optional second parameter (first when using jQuery). Default settings:
 
 {% highlight js cssclass=codewrap %}
 {
-  //скорость перехода между слайдами, мс
+  //transition time when changing slides, ms
   speed: 300,
 
-  //скорость перехода между слайдами после тача, мс
+  //transition time when changing slides after touch, ms
   touchSpeed: 300,
 
-  //включить слайдшоу
+  //slideshow enabled
   slideshow: false,
 
-  //интервал переключения слайдов, мс
+  //slideshow interval, ms
   slideshowInterval: 4000,
 
-  //останавливать слайдшоу после переключения слайда пользователем
+  //stop slideshow after user interaction with the slider
   stopSlideshowAfterInteraction: false,
 
-  //начальный слайд
+  //starting slide
   startSlide: 0,
 
-  //показывать точки
+  //show dots
   dots: false,
 
-  //точки перед слайдами
+  //dots before slides
   dotsFirst: false,
 
-  //Callback-функция, вызывается при смене слайда.
-  //В качестве параметра получает номер слайда.
+  //Callback function, runs at slide change.
+  //Receives slide number as a parameter.
   onSlideChange: undefined,
 
-  //Callback-функция, вызывается пойсле завершения установки.
-  //В качестве параметра получает количество слайдов.
+  //Callback function, runs at setup end.
+  //Receives total number of slides as a parameter.
   onSetup: undefined
 }
 {% endhighlight %}
 
-Пример использования:
+Example:
 
 {% highlight js cssclass=codewrap %}
 var slider = Peppermint(document.getElementById('peppermint'), {
@@ -341,29 +341,29 @@ var slider = Peppermint(document.getElementById('peppermint'), {
 });
 {% endhighlight %}
 
-##API {#api}
+##API
 
-При инициализации Peppermint возвращает объект с функциями, которые можно использовать для управления слайдером и расширения функционала:
+Peppermint exposes a set of functions upon installation. These functions can be used to controll the slider externally:
 
-`slideTo(n)` --- перейти к слайду `n`;
+`slideTo(n)` -- change active slide to `n`;
 
-`next()` --- следующий слайд;
+`next()` -- next slide;
 
-`prev()` --- предыдущий слайд;
+`prev()` -- previous slide;
 
-`start()` --- запустить слайдшоу;
+`start()` -- start slideshow;
 
-`stop()` --- остановить слайдшоу;
+`stop()` -- stop slideshow;
 
-`pause()` --- приостановить слайдшоу до следующей смены слайда;
+`pause()` -- pause slideshow until the next slide change;
 
-`getCurrentPos()` --- получить номер текущего слайда;
+`getCurrentPos()` -- get current slide number;
 
-`getSlidesNumber()` --- получить общее количество слайдов;
+`getSlidesNumber()` -- get total number of slides;
 
-`recalcWidth()` --- пересчитать ширину слайдера и слайдов. Полезно при изменении ширины контейнера. При ресайзе окна и смене ориентации девайса пересчет ширины запустится сам.
+`recalcWidth()` -- recalculate the slider's and slides' widths. Usefull when the container width is changed. Width recalculation runs automatically on window resize and device orientation change.
 
-Пример использования:
+Example:
 
 {% highlight js cssclass=codewrap %}
 var slider = Peppermint(document.getElementById('peppermint')),
@@ -374,6 +374,6 @@ rightArr.addEventListener('click', slider.next, false);
 leftArr.addEventListener('click', slider.prev, false);
 {% endhighlight %}
 
-##Лицензия {#license}
+##License
 
 [MIT license](http://opensource.org/licenses/MIT).

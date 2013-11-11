@@ -1,10 +1,10 @@
 ---
 layout: default
-title: "Редкие звери"
 lang: ru
+cat: rare-species
 permalink: /rare-species/
 ---
 
-##{{ page.title }}
+##{{ site.cats[page.cat][page.lang] }}
 
 {% include post_list.html %}

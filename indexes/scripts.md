@@ -1,10 +1,10 @@
 ---
 layout: default
-title: "Скрипты"
 lang: ru
+cat: scripts
 permalink: /scripts/
 ---
 
-##{{ page.title }}
+##{{ site.cats[page.cat][page.lang] }}
 
 {% include post_list.html %}

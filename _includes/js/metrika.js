@@ -1,8 +1,7 @@
 (function (d, w, c) {
     (w[c] = w[c] || []).push(function() {
         try {
-            w.yaCounter22402831 = new Ya.Metrika({id:22402831,
-                    accurateTrackBounce:true});
+            w.yaCounter22402831 = new Ya.Metrika({id:22402831});
         } catch(e) { }
     });
 

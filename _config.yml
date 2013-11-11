@@ -6,6 +6,10 @@ relative_permalinks: false
 exclude: ['README.md']
 permalink: /:categories/:title/
 
+path:
+    ru: "/"
+    en: "/en/"
+
 cats:
     rare-species:
         ru: "Редкие звери"
@@ -41,7 +45,7 @@ loc:
         en: "Original image"
     published:
         ru: 'Опубликовано'
-        en: 'Published'
+        en: 'Published on'
     footer:
         ru:
             - <a href="/" class="iconlink">«<span>Утром доделаю</span>»</a> работает на <a href="//jekyllrb.com" class="iconlink"><i class="icon-lab">&nbsp;</i><span>Jekyll</span></a>

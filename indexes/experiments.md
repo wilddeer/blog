@@ -1,10 +1,10 @@
 ---
 layout: default
-title: "Эксперименты"
 lang: ru
+cat: experiments
 permalink: /experiments/
 ---
 
-##{{ page.title }}
+##{{ site.cats[page.cat][page.lang] }}
 
 {% include post_list.html %}
