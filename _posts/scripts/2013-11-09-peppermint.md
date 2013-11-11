@@ -232,7 +232,7 @@ lang: ru
   </figure>
 
   <figure class="blue">
-    <h1><a href="/internet-maintenance/sliders-and-tab-button/">Дружит</a> с кнопкой <kbd>Tab</kbd></h1>
+    <h1><a href="/internet-maintenance/js-sliders-and-the-tab-key/">Дружит</a> с кнопкой <kbd>Tab</kbd></h1>
     
   </figure>
 </div>
@@ -247,7 +247,7 @@ lang: ru
 - 5 Кб кода
 - Оптимизированные на скорость выполнения `touch`-функции
 - [API](#api) и callback-функции для расширений
-- Работает с клавиатурой, [не ломается](/internet-maintenance/sliders-and-tab-button/) от кнопки <kbd>Tab</kbd>
+- Работает с клавиатурой, [не ломается](/internet-maintenance/js-sliders-and-the-tab-key/) от кнопки <kbd>Tab</kbd>
 
 ##Комплект {#kit}
 
