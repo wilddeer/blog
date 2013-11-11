@@ -17,7 +17,7 @@ Almost every JS slider got one particularly funny bug: <kbd>Tab</kbd> button bre
 
 Here's the catch: when a link hidden by `overflow: hidden` catches focus, browser scrolls the content of the block so that you can see the link. Yes, blocks with `overflow: hidden` also have `scrollLeft` property, and they act just like `overflow: auto` blocks.
 
-To adress the problem, we need to gather the links from each of the slides and bind `focus` event listener to each of them. When the event fires, we switch the slide to one containing the link and reset `scrollLeft` of the container:
+To adress the problem, we need to gather the links from each of the slides and bind `focus` event listener to each of them. We then need to switch the slide to one containing the link and reset `scrollLeft` of the container when the event fires:
 
 {% highlight js cssclass=codewrap %}
 for (var j = links.length - 1; j >= 0; j--) {
@@ -34,7 +34,7 @@ for (var j = links.length - 1; j >= 0; j--) {
 };
 {% endhighlight %}
 
-"Dots" under the slider should also be keyboard friendly. Not to make a fuss over the solution, it's enough to make them <kbd>Tab</kbd>&rsquo;bable (set attribute `tabindex="0"`) and switch to a particular slide when enter is pressed.
+"Dots" under the slider should also be keyboard friendly. Not to make a fuss over the solution, it's enough to make them <kbd>Tab</kbd>&rsquo;bable (set attribute `tabindex="0"`) and switch to a particular slide when <kbd>Enter</kbd> is pressed.
 
 Also worth mentioning that it's, of course, unacceptable to turn off the `outline` for focused dots. But we still want to get rid of it when using mouse. I use two methods to deal with it: first, get rid of the `outline` for `:active` items. No more outline when mouse button is pressed:
 
