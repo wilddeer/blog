@@ -206,6 +206,7 @@ lang: ru
 <script>
   dzDelayed.push(function() {
     $('#peppermint').Peppermint({
+      mouseDrag: true,
       dots: true,
       slideshow: true,
       slideshowInterval: 7000,
@@ -239,12 +240,12 @@ lang: ru
 
 [Peppermint.js](https://github.com/wilddeer/Peppermint) --- еще один тач-слайдер. Только круче.
 
-- Работает с [тачэвентами](http://www.w3.org/TR/touch-events/), [поинтерэвентами](http://www.w3.org/TR/pointerevents/), старыми [поинтерэвентами из IE10](http://msdn.microsoft.com/en-us/library/ie/hh673557(v=vs.85).aspx)
+- Работает с мышью, [тачэвентами](http://www.w3.org/TR/touch-events/), [поинтерэвентами](http://www.w3.org/TR/pointerevents/), старыми [поинтерэвентами из IE10](http://msdn.microsoft.com/en-us/library/ie/hh673557(v=vs.85).aspx)
 - Работает на андроидах, айфонах, винфонах, блекберри и в 8 винде
-- Работает в IE7+ без анимаций, с анимациями начиная с IE10
+- Работает в IE7+
 - Не зависит от сторонних библиотек. Если находит jQuery, регистрирует себя в качестве плагина.
-- Использует CSS3 трансформы и анимации
-- 5 Кб кода
+- Использует CSS3 трансформы и транзишены с фоллбеком на анимацию по таймеру
+- 6 Кб кода
 - Оптимизированные на скорость выполнения `touch`-функции
 - [API](#api) и callback-функции для расширений
 - Работает с клавиатурой, [не ломается](/internet-maintenance/js-sliders-and-the-tab-key/) от кнопки <kbd>Tab</kbd>
@@ -315,6 +316,14 @@ $('.peppermint').Peppermint();
 
   //точки перед слайдами
   dotsFirst: false,
+
+  //использовать мышь
+  mouseDrag: false,
+
+  //Префикс для служебных классов слайдера,
+  //таких как `active`, `mouse` и `drag`.
+  //Не забудьте поменять стили соответствующим образом!
+  cssPrefix: '',
 
   //Callback-функция, вызывается при смене слайда.
   //В качестве параметра получает номер слайда.
