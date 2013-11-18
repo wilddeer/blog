@@ -224,7 +224,7 @@ lang: en
 
   <figure class="red">
       <h1>Fast, lightweight &amp; extensible</h1>
-      <p>5 Kb, fast &amp; smooth touch, <a href="#api">API</a> for extensibility</p>
+      <p>6 Kb, fast &amp; smooth touch, <a href="#api">API</a> for extensibility</p>
   </figure>
 
   <figure class="green">
