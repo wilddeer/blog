@@ -13,7 +13,7 @@ lang: ru
     margin-top: -1em;
     margin-bottom: 24px;
     margin-bottom: 1.5rem;
-    background: #dcdcdc;
+    background: #f0f0f0;
   }
 
   .stage.peppermint .slides {
