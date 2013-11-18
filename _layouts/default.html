@@ -8,10 +8,14 @@
 
 	<link rel="shortcut icon" href="/favicon.ico">
 
-	{% if page.title == "" %}
-	<title>{{ site.loc.name[lang] }}</title>
-	{% else %}
+	{% if page.title %}
 	<title>{{ page.title }}</title>
+	{% else %}
+		{% if site.cats[page.cat][page.lang] %}
+	<title>{{ site.cats[page.cat][page.lang] }}</title>
+		{% else %}
+	<title>{{ site.loc.name[lang] }}</title>
+		{% endif %}
 	{% endif %}
 
 	<!-- styles -->
