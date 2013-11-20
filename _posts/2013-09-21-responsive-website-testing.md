@@ -7,11 +7,13 @@ lang: ru
 
 {% include pic.htm src='whiteboard.jpg' a='Доска с результатами теста сайта в различных браузерах' %}
 
-Как правильно [замечают](http://www.quirksmode.org/blog/archives/2010/02/the_iphone_obse.html) многие хорошие ребята, проверить работоспособность вашего адаптивного творения на айфончике недостаточно. Как минимум, стоит озаботиться несколькими основными платформами: iOS, Android (а там свой зоопарк браузеров), Windows Phone,
+Как правильно замечают [многие](http://www.quirksmode.org/blog/archives/2010/02/the_iphone_obse.html) [хорошие ребята](http://bradfrostweb.com/blog/mobile/support-vs-optimization/), проверить работоспособность вашего адаптивного творения на айфончике недостаточно. Как минимум, стоит озаботиться несколькими основными платформами: iOS, Android (а там свой зоопарк браузеров), Windows Phone,
 Blackberry.
 
 Если вы Лев Толстой не только на словах, то все перечисленное --- ваш обязательный
 минимум, который вы радостно расширяете любыми попадающимися под руку железками и эмуляторами.
+
+Не забывайте, что чем больше вы используете [принцип прогрессивного улучшения](https://en.wikipedia.org/wiki/Progressive_enhancement), грамотные фоллбеки и [ненавязчивый javascript](https://en.wikipedia.org/wiki/Unobtrusive_JavaScript), тем проще будет тестировать и исправлять сайт на всем зоопарке железок, и тем лучше будет выглядеть сайт там, где вы его даже не задумывались протестировать.
 
 ##Коротко про десктопные браузеры
 
@@ -59,7 +61,7 @@ IE7 тоже пора отправлять на свалку, но обычно 
 
 Покупайте девайсы, отбирайте старье у друзей, заказывайте редкие штуки на [dx.com](//dx.com) и [ебее](//ebay.com). Разводите свой зоопарк.
 
-###Где тестировать
+###На чем тестировать
 
 Обязательный набор:
 
@@ -224,3 +226,10 @@ server {
 ##TL;DR
 
 Тестируйте ваши сайты на максимальном количестве доступных железок и эмуляторов. Используйте новые фишки HTML5 и возможности конкретных устройств, но не забывайте о грамотных фоллбеках.
+
+##Ссылки по теме
+
+- [The iPhone obsession](http://www.quirksmode.org/blog/archives/2010/02/the_iphone_obse.html), *Peter-Paul Koch*
+- [Support Vs Optimization](http://bradfrostweb.com/blog/mobile/support-vs-optimization/), *Brad Frost*
+- [Unobtrusive JavaScript](https://en.wikipedia.org/wiki/Unobtrusive_JavaScript), *Wikipedia*
+- [Progressive enhancement](https://en.wikipedia.org/wiki/Progressive_enhancement), *Wikipedia*
