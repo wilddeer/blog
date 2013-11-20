@@ -20,7 +20,7 @@ lang: en
 
 Nintendo DSi is a portable gaming console with two screens. Bottom screen is a resistive touchscreen, the top one isn't. Console's UI and touchscreen qualities assume that you use it with a stylus.
 
-It's pretty underpowered, with a 133 MHz processor and just 16 Mb of RAM. Internet connection is done via WiFi. Console's browser is based on Opera (not Opera Mini, i.&nbsp;e. it doesn't proxy it's traffic through Opera's serverside thingy).
+It's pretty underpowered, with a 133 MHz processor and just 16 Mb of RAM. Internet connection is done via WiFi. Console's browser is based on Opera (not Opera Mini, i.&nbsp;e. it doesn't proxy its traffic through Opera's serverside thingy).
 
 There are two ways the browser can display a page. The first is for regular, not mobile-optimized sites. One of the screens is used to display a whole zoomed-out page, the other shows a zoomed-in highlighted area:
 
