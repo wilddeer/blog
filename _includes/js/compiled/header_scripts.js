@@ -6,7 +6,7 @@
 
 {% include js/modernizr.bonus.js %}
 
-{% include sniffer/sniffer.js %}
+{% include sniffer/sniffer.min.js %}
 
 {% include js/sniffer.bonus.js %}
 
