@@ -191,6 +191,18 @@ a:hover {
 	text-decoration: none;
 }
 
+html.bw a,
+html.bw .lang-switcher a,
+html.bw .title a {
+	color: #000;
+}
+
+html.bw a:hover,
+html.bw a:active {
+	color: #fff;
+	background: #333;
+}
+
 .pseudo-link:hover {
 	color: #fff;
 	background: #f92672;
@@ -210,9 +222,6 @@ blockquote p:last-child {
 
 figure.info {
 	text-align: left;
-}
-
-figure.info > div {
 	position: relative;
 	font-size: 0.8em;
 	background: #fcfcfa;
@@ -222,29 +231,17 @@ figure.info > div {
 	box-shadow: inset 0 0 10px rgba(100,80,0,0.12);
 }
 
-figure.info > div:before {
+figure.info:before {
 	display: none;
 }
 
-figure.info > div > p:last-child {
+figure.info > p:last-child {
 	margin-bottom: 0;
 }
 
-html.bw figure.info > div {
+html.bw figure.info {
 	background: transparent;
 	border: 1px solid #999;
-}
-
-html.bw a,
-html.bw .lang-switcher a,
-html.bw .title a {
-	color: #000;
-}
-
-html.bw a:hover,
-html.bw a:active {
-	color: #fff;
-	background: #333;
 }
 
 ul {
@@ -490,11 +487,13 @@ blocks
 body > header,
 body > footer,
 .content > * {
+	width: 92%;
 	max-width: 60rem;
 	margin-left: auto;
 	margin-right: auto;
-	padding-left: 1rem;
-	padding-right: 1rem;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 ul.lang-switcher {
@@ -646,7 +645,7 @@ tables
 */
 .content > .table-holder {
 	overflow: auto;
-	padding: 0;
+	width: 100%;
 	margin-bottom: 1.5rem;
 }
 
@@ -689,8 +688,10 @@ th {
 
 table.specification td,
 table.specification th {
-	padding-left: 1rem;
-	padding-right: 1rem;
+	width: 92%;
+	margin: 0 auto;
+	padding-left: 0;
+	padding-right: 0;
 }
 
 th {
@@ -735,6 +736,7 @@ td.false {
 /* peppermint */
 .peppermint {
 	max-width: none;
+	width: 100%;
 }
 
 .peppermint figure {

@@ -1,7 +1,5 @@
 body > header, body > footer, .content > * {
 	max-width: 960px; /*60rem*/
-	padding-right: 16px; /*1rem*/
-	padding-left: 16px; /*1rem*/
 }
 
 a.logo {

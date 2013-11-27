@@ -26,19 +26,16 @@
 		margin: 0 0 0 0.5em;
 	}
 
-	figure.info > div {
+	figure.info {
 		padding: 1em 1em 1em 3em;
 	}
 
-	html.no-fontface figure.info > div {
+	html.no-fontface figure.info {
 		padding: 1em;
 	}
 
-	figure.info > div:before {
+	figure.info:before {
 		display: block;
-		/*content: 'i';
-		font-weight: bold;
-		font-family: Consolas, Monaco, 'Andale Mono', monospace, serif;*/
 		font-size: 1.5em;
 		position: absolute;
 		top: 0.58em;
@@ -47,7 +44,7 @@
 		color: #d5d0d0;
 	}
 
-	html.bw figure.info > div:after {
+	html.bw figure.info:before {
 		color: #999;
 	}
 
@@ -106,14 +103,6 @@
 	}
 
 	/* blocks */
-	body > header,
-	body > footer,
-	.content > *,
-	.content > .table-holder {
-		padding-left: 2rem;
-		padding-right: 2rem;
-	}
-
 	.content ul.posts time {
 		display: inline;
 		white-space: nowrap;
@@ -125,9 +114,12 @@
 	}
 
 	/* tables */
+	.content > .table-holder {
+		width: 92%;
+	}
+
 	table.specification {
-		padding-left: 2rem;
-		padding-right: 2rem;
+		width: 92%;
 	}
 
 	table.specification tr {

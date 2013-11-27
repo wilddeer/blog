@@ -11,6 +11,7 @@ lang: ru
         padding: 3em 1em;
         margin-left: 0;
         margin-right: 0;
+        width: 100%;
         max-width: 100%;
         margin-bottom: 0.5em;
         box-shadow: inset 0 0 1.5em rgba(15,15,0,0.2),
