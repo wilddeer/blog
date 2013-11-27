@@ -305,6 +305,7 @@ html.bw kbd {
 }
 	
 pre {
+	background: #fff;
 	white-space: pre;
 	word-wrap: normal;
 	padding: 1em;

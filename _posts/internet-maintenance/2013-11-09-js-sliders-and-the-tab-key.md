@@ -17,22 +17,30 @@ lang: ru
 
 Дело в том, что при фокусировании ссылки, скрытой за `overflow: hidden`, браузер заботлибо промотает вам содержимое блока, чтобы ссылка оказалась в поле зрения. Да, у блоков с `overflow: hidden` тоже есть `scrollLeft`, и он работает так же, как и в случае с `overflow: auto`.
 
-Решение: собираем ссылки из каждого слайда и вешаем на каждую событие `focus`. Когда событие случается, переключаем слайд на тот, в котором найдена ссылка, и сбрасываем `scrollLeft` контейнера слайдов:
+Решение: ловим событие `focus` внутри слайдов. Когда событие случается, переключаем слайд на тот, в котором произошло событие, и сбрасываем `scrollLeft` контейнера слайдов. Событие `focus` не бабблится, поэтому используем капчуринг, чтобы поймать его на уровне слайдов ([почитать про бабблинг и капчуринг](http://www.quirksmode.org/js/events_order.html)). Для старых IE используем фоллбек в виде события `focusin`, которое бабблится.
+
+Выполняем для каждого слайда:
 
 {% highlight js cssclass=codewrap %}
-for (var j = links.length - 1; j >= 0; j--) {
-  addEvent(links[j], 'focus', function(x) {
-    return function() {
-      _this.scrollLeft = 0;
-      //В вебките скролл выставляется позже события. Решается нулевым таймаутом.
-      setTimeout(function() {
-        _this.scrollLeft = 0;
-      }, 0);
-      changeActiveSlide(x);
-    }
-  }(i), false); //i -- номер слайда
+//Сначала фоллбек для старых IE
+slide.onfocusin = function() {
+  //Сбрасываем скролл
+  _this.scrollLeft = 0;
+  //И еще раз с нулевым таймаутом, потому что в вебките скролл выставляется позже события.
+  //Первый ресет оставляем, чтобы в других браузерах не дергалось.
+  setTimeout(function() {
+    _this.scrollLeft = 0;
+  }, 0);
+
+  //Переключаем на слайд, к которому привязано событие
+  changeActiveSlide(i);
 };
+
+//Используем привязанную к `onfocusin` функцию уже в нормальном `addEventListener`
+if (slide.addEventListener) slide.addEventListener('focus', slide.onfocusin, true); //`true` включает капчуринг
 {% endhighlight %}
+
+Можно было бы обойтись событием `focusin`, но Firefox до сих пор [не поддерживает его](https://bugzilla.mozilla.org/show_bug.cgi?id=687787) >:(
 
 "Точки" под слайдером тоже должны дружить с клавиатурой. Чтобы не городить огород, достаточно просто сделать их доступными для табуляции (для этого выставляем им аттрибут `tabindex="0"`) и включать нужный слайд по нажатию энтера.
 
@@ -47,9 +55,9 @@ for (var j = links.length - 1; j >= 0; j--) {
 Второй --- снимать фокус после клика мышью:
 
 {% highlight js cssclass=codewrap %}
-addEvent(dot, 'click', (function(x, b) {
+addEvent(dot, 'click', (function(x, d) {
   return function() {
-    b.blur(); //снимаем фокус с точки
+    d.blur(); //снимаем фокус с точки
     changeActiveSlide(x); //переключаем слайд
     
     ...
@@ -57,5 +65,15 @@ addEvent(dot, 'click', (function(x, b) {
   };
 })(i, dot), false);
 {% endhighlight %}
+
+<figure class="info icon-code" markdown="1">
+Выше используется простая универсальная функция `addEvent`:
+
+{% highlight js cssclass=codewrap %}
+function addEvent(el, event, func, bool) {
+  el.addEventListener? el.addEventListener(event, func, !!bool): el.attachEvent('on'+event, func);
+}
+{% endhighlight %}
+</figure>
 
 Теперь слайдер адекватно работает с клавиатурой и исполняет (вроде бы) необходимый минимум <a href="http://www.w3.org/Translations/WCAG20-ru/" class="iconlink">"<span>Руководства по обеспечению доступности веб-контента</span>"</a>. Такие дела.

@@ -17,22 +17,32 @@ Almost every JS slider has one particularly funny bug: the <kbd>Tab</kbd> key br
 
 Here's the catch: when a link hidden by `overflow: hidden` catches focus, browser scrolls the content of the block so you can see the link. Yes, blocks with `overflow: hidden` also have `scrollLeft` property and they act just like `overflow: auto` blocks.
 
-To adress the problem, we need to gather the links from each slide and bind `focus` event listener to each one of them. We then need to switch the slide to one containing the link and reset `scrollLeft` of the container when the event fires:
+To adress the problem, we need to capture the `focus` events occuring inside of the slides. We then need to switch the slide to one containing the event and reset `scrollLeft` of the container.
+
+Since `focus` events don't bubble, event capturing is used to register them ([read about event bubbling and capturing](http://www.quirksmode.org/js/events_order.html)). For older IEs `focusein` event (which bubbles) is used as a fallback.
+
+Run for each slide:
 
 {% highlight js cssclass=codewrap %}
-for (var j = links.length - 1; j >= 0; j--) {
-  addEvent(links[j], 'focus', function(x) {
-    return function() {
-      _this.scrollLeft = 0;
-      //Zero timeout solves WebKit's issue where `scrollLeft` is set after the event
-      setTimeout(function() {
-        _this.scrollLeft = 0;
-      }, 0);
-      changeActiveSlide(x);
-    }
-  }(i), false); //i -- slide number
+//IE fallback first
+slide.onfocusin = function() {
+  //Reset the scroll
+  _this.scrollLeft = 0;
+  //WebKit sets the scroll after the event, we need to reset it with zero timeout.
+  //Keep the first reset to prevent jittering in other browsers
+  setTimeout(function() {
+    _this.scrollLeft = 0;
+  }, 0);
+
+  //switch to the slide containing the event
+  changeActiveSlide(i);
 };
+
+//Now use the function bound to `onfocusin` in a regular `addEventListener`
+if (slide.addEventListener) slide.addEventListener('focus', slide.onfocusin, true); //`true` turns on the capturing
 {% endhighlight %}
+
+We could do fine with just a `focusin` event, but Firefox [still doesn't support it](https://bugzilla.mozilla.org/show_bug.cgi?id=687787) >:(
 
 "Dots" under the slider should also be keyboard friendly. Not to make a fuss over the solution, it's enough to make them <kbd>Tab</kbd>&rsquo;able (set attribute `tabindex="0"`) and switch to a particular slide when <kbd>Enter</kbd> is pressed.
 
@@ -47,9 +57,9 @@ Also worth mentioning that it's, of course, unacceptable to turn off the `outlin
 Second, defocus the item after mouse click:
 
 {% highlight js cssclass=codewrap %}
-addEvent(dot, 'click', (function(x, b) {
+addEvent(dot, 'click', (function(x, d) {
   return function() {
-    b.blur(); //defocus the dot
+    d.blur(); //defocus the dot
     changeActiveSlide(x); //change the slide
     
     ...
@@ -57,5 +67,15 @@ addEvent(dot, 'click', (function(x, b) {
   };
 })(i, dot), false);
 {% endhighlight %}
+
+<figure class="info icon-code" markdown="1">
+Simple and universal `addEvent` function is used above:
+
+{% highlight js cssclass=codewrap %}
+function addEvent(el, event, func, bool) {
+  el.addEventListener? el.addEventListener(event, func, !!bool): el.attachEvent('on'+event, func);
+}
+{% endhighlight %}
+</figure>
 
 Now our slider properly works with the keyboard and seems to meet the requirements of <a href="http://www.w3.org/TR/WCAG20/" class="iconlink">"<span>Web Content Accessibility Guidelines</span>"</a>. So it goes.
