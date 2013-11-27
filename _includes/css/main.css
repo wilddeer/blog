@@ -235,7 +235,8 @@ figure.info:before {
 	display: none;
 }
 
-figure.info > p:last-child {
+figure.info > :last-child,
+figure.info > :last-child pre {
 	margin-bottom: 0;
 }
 
