@@ -2,7 +2,8 @@ $(function() {
 
 
 	$('.js-peppermint').Peppermint({
-		dots: true
+		dots: true,
+		mouseDrag: true
 	});
 	
 	$('pre').dzScrollFallback();
