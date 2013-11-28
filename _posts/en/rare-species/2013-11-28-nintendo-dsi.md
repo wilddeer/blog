@@ -30,7 +30,7 @@ You can swap the screen functions and drag the selection rectangle on the bottom
 
 {% include pic.htm src='browser2.jpg' a="Regular mode with swapped screen functions" %}
 
-The second mode is for mobile-optimized websites. It uses the top screen as an extension of the bottom one. The page starts on the bottom screen, the top screen starts blank and it fills up as you scroll:
+The second mode is for mobile-optimized websites. It uses the top screen as an extension of the bottom one. The page starts on the bottom screen, the top screen starts blank and fills up as you scroll:
 
 {% include pic.htm src='browser3.jpg' a='Mobile-optimized mode' %}
 
