@@ -729,11 +729,11 @@ smooth transitions
 Async wobbling styles
 
 Defining different colors and shadows for each `pep` class isn't
-necessary, but it gives colorful letters at the beginning, while waiting
+necessary, but it gives colorful letters at the start, while waiting
 for initial `animation-delay` to pass.
 
-You can delete them and have cleaner stylesheet at the price of
-same-colored letters at the beginning of the animation.
+They can be omitted at the price of
+same-colored letters at the start of the animation.
 */
 
 .async .pep0 {
