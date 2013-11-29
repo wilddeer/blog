@@ -1,3 +1,35 @@
+.pepyaka {
+    font-family: 'Book Antiqua', 'Georgia', serif;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+.pepyaka > * {
+    display: inline-block;
+    font-size: 4em;
+    letter-spacing: 0.2em;
+    -webkit-animation-duration: 0.4s;
+    animation-duration: 0.4s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: pep;
+    animation-name: pep;
+    color: #1be5a0;
+    text-shadow:    -0.05em 0 0 #000000,
+                    -0.03em -0.03em 0 #000000,
+                    0 -0.05em 0 #000000,
+                    0.03em -0.03em 0 #000000,
+                    0.05em 0 0 #000000,
+                    0.03em 0.03em 0 #000000,
+                    0 0.05em 0 #000000,
+                    -0.03em 0.03em 0 #000000;
+}
+
+.pepyaka.smooth > * {
+    -webkit-animation-name: pep-smooth;
+    animation-name: pep-smooth;
+}
+
 /*
 -----------------
 sharp transitions
@@ -692,39 +724,6 @@ smooth transitions
     }
 }
 
-.pepyaka {
-    font-family: 'Georgia', serif;
-    -webkit-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
-}
-
-.pepyaka > * {
-    display: inline-block;
-    font-size: 4em;
-    letter-spacing: 0.2em;
-    -webkit-animation-duration: 0.4s;
-    animation-duration: 0.4s;
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-    -webkit-animation-name: pep;
-    animation-name: pep;
-    color: #1be5a0;
-    text-shadow:    -0.05em 0 0 #000000,
-                    -0.03em -0.03em 0 #000000,
-                    0 -0.05em 0 #000000,
-                    0.03em -0.03em 0 #000000,
-                    0.05em 0 0 #000000,
-                    0.03em 0.03em 0 #000000,
-                    0 0.05em 0 #000000,
-                    -0.03em 0.03em 0 #000000;
-}
-
-.pepyaka.smooth > * {
-    -webkit-animation-name: pep-smooth;
-    animation-name: pep-smooth;
-}
-
-
 /*
 Async wobbling styles
 
@@ -735,7 +734,6 @@ for initial `animation-delay` to pass.
 They can be omitted at the price of
 same-colored letters at the start of the animation.
 */
-
 .async .pep0 {
     /* nothing here */
 }
