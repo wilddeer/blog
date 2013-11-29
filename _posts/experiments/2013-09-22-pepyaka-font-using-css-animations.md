@@ -44,6 +44,11 @@ lang: ru
         display: inline-block;
         margin: 0.2em 0.5em 0 0.5em;
     }
+
+    html.no-js .pep-input-holder,
+    html.no-js .pep-constols-holder {
+        display: none;
+    }
 </style>
 
 <script>
@@ -58,16 +63,13 @@ dzDelayed.push(function() {
         asyncInput = $('#async'),
         sharpInput = $('#sharp'),
         canExecEvent = true,
-        oldVal,
+        val = pepInput[0].value,
         oldRand;
 
-    function redraw(force) {
-        var result = '',
-            val = pepInput[0].value;
+    function redraw() {
+        var result = '';
 
-        if (!force && (!canExecEvent || oldVal == val)) return;
-
-        oldVal = val;
+        val = pepInput[0].value;
 
         for (var i = 0; i < val.length; i++) {
             var rand = antiJekpotRandom(0, 7, oldRand);
@@ -88,20 +90,20 @@ dzDelayed.push(function() {
     }
 
     pepInput.on('change input keyup blur', function() {
-        redraw();
+        if (canExecEvent && val != pepInput[0].value) redraw();
     })
+    
     asyncInput.on('change', function() {
         pepBox.toggleClass('async');
-        redraw(true);
+        redraw();
     });
 
     sharpInput.on('change', function() {
         pepBox.toggleClass('smooth');
-        redraw(true);
+        redraw();
     });
 
     moveCursorToEnd(pepInput[0]);
-    redraw();
 });
 </script>
 
@@ -111,6 +113,7 @@ dzDelayed.push(function() {
 
 <div class="pep-holder">
     <p class="pepyaka async">
+        <span class="pep5">Я</span><span class="pep2">р</span><span class="pep7">р</span><span class="pep3">р</span><span class="pep0">!</span>
     </p>
 </div>
 
