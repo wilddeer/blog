@@ -40,7 +40,7 @@ Mobile-optimized mode is activated with an appropriate viewport meta-tag, e.&nbs
 
 ###Feature tests
 
-<small>Feature tests done with [Modernizr](//modernizr.com). [Full table of my tests](https://docs.google.com/spreadsheet/ccc?key=0AjA1cIs8C8MGdFdyQ0lMQnhMbHJEeVZpMW9XejhzU2c&usp=sharing#gid=0) on google docs.</small>
+<small>Feature tests are done with [Modernizr](//modernizr.com). [Full table of my tests](https://docs.google.com/spreadsheet/ccc?key=0AjA1cIs8C8MGdFdyQ0lMQnhMbHJEeVZpMW9XejhzU2c&usp=sharing#gid=0) on google docs.</small>
 
 <div class="table-holder">
 	<table>
