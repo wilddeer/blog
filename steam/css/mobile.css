@@ -199,8 +199,8 @@ PAGES
 }
 
 .store-game-page .main > header {
-	padding: 16px 0 8px; /* fallback */ 
-	padding: 1rem 0 0.5rem;
+	padding: 24px 0 8px; /* fallback */ 
+	padding: 1.5rem 0 0.5rem;
 	overflow: hidden; /* clearfix */
 }
 
@@ -217,11 +217,21 @@ PAGES
 	margin-top: 1em;
 }
 
-.store-game-page .main .game-gallery {
+.store-game-page .game-gallery {
 	width: 100%;
 }
 
-.store-game-page .main .dlc-notice {
+.store-game-page .game-purchase-options {
+	width: auto;
+}
+
+.store-game-page .dlc-notice {
+	margin-left: auto;
+	margin-right: auto;
+	width: 94%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 	position: relative;
 	padding: 16px; /* fallback */
 	padding: 1rem;
@@ -234,7 +244,7 @@ PAGES
 	background-image: linear-gradient(#411541, #260e29);
 }
 
-.store-game-page .main .dlc-notice:before {
+.store-game-page .dlc-notice:before {
 	content: '';
 	position: absolute;
 	display: block;
@@ -246,7 +256,7 @@ PAGES
 	border-top-width: 0;
 }
 
-.store-game-page .main .dlc-notice:after {
+.store-game-page .dlc-notice:after {
 	content: '';
 	position: absolute;
 	display: block;
@@ -258,16 +268,15 @@ PAGES
 	border-top-width: 0;
 }
 
-.store-game-page .main .dlc-notice h2,
-.store-game-page .main .dlc-notice > *:last-child {
+.store-game-page .dlc-notice h2,
+.store-game-page .dlc-notice > *:last-child {
 	margin: 0;
 }
 
-.store-game-page .main .game-purchase {
-	width: 100%;
+.store-game-page .game-purchase-option {
 	position: relative;
-	padding: 16px 0; /* fallback */
-	padding: 1rem 0;
+	padding: 16px 0 8px; /* fallback */
+	padding: 1rem 0 0.5rem;
 	margin-bottom: 1.5em;
 	border: solid #4b4b4b;
 	border-width: 1px 0;
@@ -275,7 +284,7 @@ PAGES
 	background: rgba(40,40,40,0.95);
 }
 
-.store-game-page .main .game-purchase > * {
+.store-game-page .game-purchase-option > * {
 	width: 94%;
 	margin-left: auto;
 	margin-right: auto;
@@ -284,19 +293,56 @@ PAGES
 	box-sizing: border-box;
 }
 
-.store-game-page .main .game-share .wishlist-form {
+.store-game-page .game-share .wishlist-form {
 	display: inline;
 }
 
-.store-game-page .main .game-share .add-to-wishlist,
-.store-game-page .main .game-share .share {
+.store-game-page .game-share .add-to-wishlist,
+.store-game-page .game-share .share {
 	color: white;
 }
 
-.store-game-page .main .sale-notice {
+.store-game-page dl.game-details dt {
+	color: #999;
+	display: inline;
+}
+
+.store-game-page dl.game-details dd {
+	display: inline;
+	margin-left: 0;
+}
+
+.store-game-page dl.game-details dd:after {
+	content: ' •';
+}
+
+.store-game-page dl.game-details dd:last-child:after {
+	content: '';
+}
+
+.store-game-page .sale-notice {
 	color: #7cb8e4;
 }
 
-.store-game-page .main .notice {
+.store-game-page .notice {
 	font-size: 0.8em;
+}
+
+/*
+GRID
+*/
+.grid-row {
+	width: 100%;
+}
+
+.grid-row:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.grid-row > * {
+	width: 94%;
+	margin-left: auto;
+	margin-right: auto;
 }

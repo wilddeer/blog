@@ -15,4 +15,9 @@
 		max-width: 65rem;
 	}
 
+	/* store game page */
+	.store-game-page .main {
+		margin-top: 1.5em;
+	}
+
 }

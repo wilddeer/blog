@@ -41,17 +41,6 @@
 			<h1><span class="game-icon" style="background-image: url(i/game.icon.jpg);"></span>Dishonored: Extremely Long Title Super Duper Puper DLC</h1>
 		</header>
 
-		<div class="game-share">
-			<form class="wishlist-form" action="#link-to-wishlist" method="get">
-				<input type="hidden" name="product_id" value="12345">
-				<button type="submit" class="pseudo-link add-to-wishlist">Add to wishlist</button>
-			</form>
-
-			<span>•</span>
-
-			<button class="pseudo-link share">Share</button>
-		</div>
-
 		<section class="game-gallery peppermint js-peppermint">
 			<figure>
 				<a href="i/1.jpg" target="_blank"><img src="i/1.jpg"></a>
@@ -78,36 +67,67 @@
 			</figure>
 		</section>
 
-		<div class="dlc-notice">
-			<h2>Downloadable Content</h2>
+		<div class="grid-row">
+			<section class="game-purchase-options">
+				<div class="dlc-notice">
+					<h2>Downloadable Content</h2>
 
-			<p>Requires the base game <a href="#">Dishonored</a> on Steam in order to play.</p>
-		</div>
-
-		<div class="game-purchase">
-			<h2>Buy <a href="#">Dishonored - Game of the Year Edition</a></h2>
-
-			<p class="notice">Notice: This version only contains English, Russian, Hungarian, Czech, and Polish languages</p>
-
-			<p class="notice">Notice: This game is not giftable in your territory.</p>
-
-			<p class="sale-notice">DAILY DEAL! Offer ends in 22:23:11</p>
-
-			<div class="price-area">
-				<div class="discount">
-					-66%
+					<p>Requires the base game <a href="#">Dishonored</a> on Steam in order to play.</p>
 				</div>
 
-				<div class="price">
-					<del class="original-price">$49.99</del>
-					<span class="final-price">$32.99</span>
+				<div class="game-purchase-option">
+					<h2>Buy <a href="#">Dishonored - Game of the Year Edition</a></h2>
+
+					<p class="notice">Notice: This version only contains English, Russian, Hungarian, Czech, and Polish languages</p>
+
+					<p class="notice">Notice: This game is not giftable in your territory.</p>
+
+					<p class="sale-notice">DAILY DEAL! Offer ends in 22:23:11</p>
+
+					<div class="price-area">
+						<div class="discount">
+							-66%
+						</div>
+
+						<div class="price">
+							<del class="original-price">$49.99</del>
+							<span class="final-price">$32.99</span>
+						</div>
+
+						<form class="purchase-form" action="#link-to-cart" method="get">
+							<input type="hidden" name="product_id" value="12345">
+							<button type="submit" class="btn green add-to-cart">Add to cart</button>
+						</form>
+					</div>
+				</div>
+			</section>
+
+			<aside class="game-meta">
+				<div class="game-share">
+					<form class="wishlist-form" action="#link-to-wishlist" method="get">
+						<input type="hidden" name="product_id" value="12345">
+						<button type="submit" class="pseudo-link add-to-wishlist">Add to wishlist</button>
+					</form>
+
+					<span>•</span>
+
+					<button class="pseudo-link share">Share</button>
 				</div>
 
-				<form class="purchase-form" action="#link-to-cart" method="get">
-					<input type="hidden" name="product_id" value="12345">
-					<button type="submit" class="btn green add-to-cart">Add to cart</button>
-				</form>
-			</div>
+				<dl class="game-details">
+					<dt>Genre:</dt>
+					<dd><a href="#">Action</a>, <a href="#">Adventure</a></dd>
+
+					<dt>Developer:</dt>
+					<dd><a href="#">Arkane Studios</a></dd>
+
+					<dt>Publisher:</dt>
+					<dd><a href="#">Bethesda Softworks</a></dd>
+
+					<dt>Release date:</dt>
+					<dd>13 Aug 2013</dd>
+				</dl>
+			</aside>
 		</div>
 
 		<section class="game-description">
