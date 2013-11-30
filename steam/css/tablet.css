@@ -1,0 +1,66 @@
+@media all and (min-width: 30em) { /* 480 */
+
+	/* base */
+	h1 {
+		font-size: 2.1em;
+	}
+
+	h2 {
+		font-size: 1.6em;
+	}
+
+	h3 {
+		font-size: 1.25em;
+	}
+
+	h4 {
+		font-size: 1.15em;
+	}
+
+	/* store game page */
+	.store-game-page {
+		background-size: auto 700px;
+	}
+
+	.store-game-page .main .game-purchase {
+		width: 94%;
+		border-width: 1px;
+		padding: 16px; /* fallback */
+		padding: 1rem;
+	}
+
+	.store-game-page .main .game-purchase > * {
+		width: auto;
+	}
+
+}
+
+@media all and (min-width: 45em) {
+	
+	/* store game page */
+	.store-game-page .main > header .price-area {
+		float: right;
+		margin-top: 0.1em;
+		margin-left: 1.5em;
+	}
+
+	.store-game-page .main > header h1 {
+		position: relative;
+		padding-left: 40px; /* fallback */
+		padding-left: 2.5rem;
+	}
+
+	.store-game-page .main > header h1 .game-icon {
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 0.1em;
+		width: 32px; /* fallback */
+		height: 32px; /* fallback */
+		width: 2rem;
+		height: 2rem;
+		box-shadow: inset 0 0 5px rgba(0,0,0,0.3),
+					inset 0 0 1px #000;
+	}
+
+}
