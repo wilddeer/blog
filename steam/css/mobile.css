@@ -44,10 +44,6 @@ blockquote {
 	margin: 0 0 1.2em 0;
 }
 
-li {
-	margin: 0 0 1em 0;
-}
-
 h1,
 h2,
 h3,
@@ -72,10 +68,24 @@ h4 {
 	font-size: 1.08em;
 }
 
+ul {
+	padding-left: 1.3em;
+}
+
+@media all and (min-width: 45em) {
+	ul {
+		padding-left: 2.5em;
+	}
+}
+
 nav ul {
 	list-style-type: none;
 	padding: 0;
 	margin: 0;
+}
+
+li {
+	margin: 0 0 1em 0;
 }
 
 dl dt {
@@ -115,6 +125,10 @@ tr {
 CLASSES
 */
 /* sizes */
+.big {
+	font-size: 1.2em;
+}
+
 .small {
 	font-size: 0.8em;
 }
@@ -140,7 +154,7 @@ CLASSES
 .btn {
 	border: 0;
 	padding: 0.5em;
-	border-radius: 0.15em;
+	border-radius: 0.2em;
 	-webkit-box-shadow: inset 0 1px 1px rgba(255,255,255,0.7),
 						inset 0 -1px 1px -1px rgba(0,0,0,0.3),
 						0 1px 3px rgba(0, 0, 0, 0.2);
@@ -169,11 +183,39 @@ CLASSES
 	box-shadow: inset 0 0.15em 0.15em 0.1em rgba(0,0,0,0.3);
 }
 
-.btn.green {
+.btn-green {
 	background-color: #9ee345;
 	background-image: -webkit-linear-gradient(#9ee345, #4e6d23);
 	background-image: -moz-linear-gradient(#9ee345, #4e6d23);
 	background-image: linear-gradient(#9ee345, #4e6d23);
+}
+
+.btn-green-hover:hover {
+	background-color: #9ee345;
+	background-image: -webkit-linear-gradient(#9ee345, #4e6d23);
+	background-image: -moz-linear-gradient(#9ee345, #4e6d23);
+	background-image: linear-gradient(#9ee345, #4e6d23);
+}
+
+.btn-red-hover:hover {
+	background-color: #e35845;
+	background-image: -webkit-linear-gradient(#e35845, #6d2323);
+	background-image: -moz-linear-gradient(#e35845, #6d2323);
+	background-image: linear-gradient(#e35845, #6d2323);
+}
+
+.btn-flat {
+	box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1);
+	background-image: -webkit-linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2));
+	background-image: -moz-linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2));
+	background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2));
+}
+
+.btn-flat:hover {
+	background-position: 0 0;
+	background-image: -webkit-linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3));
+	background-image: -moz-linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3));
+	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3));
 }
 
 .btn-rounded {
@@ -183,7 +225,7 @@ CLASSES
 
 .btn-small {
 	font-size: 0.9em;
-	padding: 0.25em;
+	padding: 0.25em 0.5em;
 }
 
 .btn-rounded.btn-small {
@@ -292,6 +334,57 @@ li[class*="icon-"]:before {
 /*
 MODULES
 */
+/* user */
+.user {
+	display: inline-block;
+	text-decoration: none;
+}
+
+.user .userpic {
+	margin-right: 0.4em;
+	border-radius: 50%;
+	border: 3px solid #aaa;
+	overflow: hidden;
+	vertical-align: middle;
+}
+
+.user .username {
+	vertical-align: middle;
+	text-decoration: underline;
+}
+
+.user.user-online .userpic {
+	border-color: #7cb8e4;
+}
+
+.user.user-ingame .userpic {
+	border-color: #94de35;
+}
+
+/* review */
+.user-review .meta {
+	margin-bottom: 1.5em;
+}
+
+.user-review .user {
+	vertical-align: middle;
+	margin-right: 0.3em;
+}
+
+.user-review .playtime {
+	color: #666;
+	vertical-align: middle;
+}
+
+.user-review .additional-info {
+	color: #999;
+	font-size: 0.9em;
+}
+
+.user-review .vote {
+	font-size: 0.9em;
+}
+
 /* price area */
 .price-area > * {
 	margin-bottom: 0.5em;
@@ -335,6 +428,11 @@ LAYOUT
 /*
 GRID
 */
+.grid-base .grid-base {
+	margin-left: 0;
+	margin-right: 0;
+}
+
 .grid-base > * {
 	margin-left: 3%;
 	margin-right: 3%;
@@ -576,4 +674,13 @@ ul.game-feature-list li:before {
 
 ul.game-links {
 	list-style-type: none;
+}
+
+.game-customer-reviews {
+	padding: 1.5em 0;
+	background: #222;
+}
+
+.game-customer-reviews .browse-all-link {
+	float: right;
 }
