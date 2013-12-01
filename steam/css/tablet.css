@@ -14,33 +14,13 @@
 	}
 
 	h4 {
-		font-size: 1.15em;
+		font-size: 1.1em;
 	}
 
 	/* store game page */
 	.store-game-page {
 		background-size: auto 700px;
 	}
-
-	.store-game-page .game-purchase-options {
-		float: left;
-		width: 60%;
-	}
-
-	.store-game-page .dlc-notice {
-		width: auto;
-	}
-
-	.store-game-page .game-purchase-option {
-		border-width: 1px;
-		padding: 16px 16px 8px; /* fallback */
-		padding: 1rem 1rem 0.5rem;
-	}
-
-	.store-game-page .game-purchase-option > * {
-		width: auto;
-	}
-
 }
 
 @media all and (min-width: 45em) {
@@ -63,7 +43,7 @@
 		margin-right: 8px;
 		width: 32px; /* fallback */
 		height: 32px; /* fallback */
-		vertical-align: -3px;
+		vertical-align: -0.1em;
 		box-shadow: inset 0 0 5px rgba(0,0,0,0.3),
 					inset 0 0 1px #000;
 	}

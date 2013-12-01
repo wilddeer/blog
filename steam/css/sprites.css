@@ -1,0 +1,79 @@
+[class*="icon-"]:before {
+	content: '';
+	display: inline-block;
+	width: 17px;
+	height: 16px;
+	margin: 0 0.15em;
+	background-image: url(../i/sprites.svg);
+	background-repeat: no-repeat;
+	vertical-align: text-top;
+}
+.icon-heart:before {
+	background-position: 0 0;
+}
+.icon-ok:before {
+	background-position: -32px 0;
+}
+.icon-remove:before {
+	background-position: -64px 0;
+}
+.icon-list:before {
+	background-position: -95px 0;
+}
+.icon-user:before {
+	background-position: -125px 0;
+}
+.icon-certificate:before {
+	background-position: -157px 0;
+}
+.icon-thumbs-down:before {
+	background-position: -188px 0;
+}
+.icon-thumbs-up:before {
+	background-position: -219px 0;
+}
+.icon-circle-arrow-down:before {
+	background-position: -249px 0;
+}
+.icon-gamepad:before {
+	background-position: -280px 0;
+}
+.icon-apple:before {
+	background-position: -313px 0;
+}
+.icon-windows:before {
+	background-position: -342px 0;
+}
+.icon-linux:before {
+	background-position: -373px 0;
+}
+.icon-cloud:before {
+	background-position: -403px 0;
+}
+.icon-share:before {
+	background-position: -436px 0;
+}
+.icon-shopping-cart:before {
+	background-position: -467px 0;
+}
+.icon-external-link:before {
+	background-position: 0 -36px;
+}
+.icon-list-alt:before {
+	background-position: -32px -32px;
+}
+.icon-link:before {
+	background-position: -64px -32px;
+}
+.icon-calendar:before {
+	background-position: -95px -32px;
+}
+.icon-calendar-empty:before {
+	background-position: -127px -32px;
+}
+.icon-thumbs-up2:before {
+	background-position: -158px -32px;
+}
+.icon-thumbs-down2:before {
+	background-position: -188px -32px;
+}
