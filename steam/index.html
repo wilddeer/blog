@@ -28,18 +28,7 @@
 <body class="store-game-page" style="background-image: url(i/page.bg.jpg); background-color: #1e231f;">
 	<article class="main grid-base">
 		<header>
-			<div class="price-area">
-				<span class="discount">-33%</span><span class="price"><del class="original-price">$49.99</del> <span class="final-price">$32.99</span></span>
-
-				<form class="purchase-form" action="#link-to-cart" method="get">
-					<input type="hidden" name="product_id" value="12345">
-					<button type="submit" class="btn btn-green add-to-cart">Add to cart</button>
-				</form>
-
-				<p class="small info">Autumn sale! Offer ends December 3.</p>
-			</div>
-
-			<h1><span class="game-icon" style="background-image: url(i/game.icon.jpg);"></span>Dishonored: Extremely Long Title Super Duper Puper DLC</h1>
+			<h1><span class="game-icon" style="background-image: url(i/game.icon.jpg);"></span>Dishonored: The Brigmore Witches</h1>
 		</header>
 
 		<section class="game-gallery peppermint js-peppermint grid-fullwidth">
@@ -70,30 +59,53 @@
 
 		<div class="grid-cell">
 			<div class="grid-col-6">
-				<div class="game-dlc-notice">
-					<h3>Downloadable Content</h3>
+				<section class="game-purchase-options">
+					<section class="game-purchase-option hidden-tablet game-buy-share">
+						<div class="price-area">
+							<span class="discount">-33%</span><span class="price"><del class="original-price">$49.99</del> <span class="final-price">$32.99</span></span>
 
-					<p class="small">Requires the base game <a href="#">Dishonored</a> on Steam in order to play.</p>
-				</div>
+							<form class="purchase-form" action="#link-to-cart" method="get">
+								<input type="hidden" name="product_id" value="12345">
+								<button type="submit" class="btn btn-green add-to-cart">Add to cart</button>
+							</form>
 
-				<div class="game-purchase-option">
-					<h3>Buy <a href="#">Dishonored - Game of the Year Edition</a></h3>
+							<p class="small info">Autumn sale! Offer ends December 3.</p>
+						</div>
 
-					<p class="small insignificant">Notice: This version only contains English, Russian, Hungarian, Czech, and Polish languages</p>
+						<p class="hr">or</p>
 
-					<p class="small insignificant">Notice: This game is not giftable in your territory.</p>
-
-					<div class="price-area">
-						<span class="discount">-66%</span><span class="price"><del class="original-price">$49.99</del> <span class="final-price">$32.99</span></span>
-
-						<form class="purchase-form" action="#link-to-cart" method="get">
+						<form class="wishlist-form" action="#link-to-wishlist" method="get">
 							<input type="hidden" name="product_id" value="12345">
-							<button type="submit" class="btn btn-green add-to-cart">Add to cart</button>
+							<button type="submit" class="btn add-to-wishlist icon-b-heart">Add to wishlist</button>
 						</form>
+					</section>
 
-						<p class="small info">Daily deal! Offer ends in 22:23:11.</p>
+					<div class="game-dlc-notice">
+						<h3>Downloadable Content</h3>
+
+						<p class="small">Requires the base game <a href="#">Dishonored</a> on Steam in order to play.</p>
 					</div>
-				</div>
+
+					<div class="game-purchase-option">
+						<h3 class="purchase-header">Buy <a href="#">Dishonored - Game of the Year Edition</a></h3>
+
+						<p class="purchase-notice small insignificant">Notice: This version only contains English, Russian, Hungarian, Czech, and Polish languages</p>
+
+						<p class="purchase-notice small insignificant">Notice: This game is not giftable in your territory.</p>
+
+						<div class="price-area">
+
+							<span class="discount">-66%</span><span class="price"><del class="original-price">$49.99</del> <span class="final-price">$32.99</span></span>
+
+							<form class="purchase-form" action="#link-to-cart" method="get">
+								<input type="hidden" name="product_id" value="12345">
+								<button type="submit" class="btn btn-green add-to-cart">Add to cart</button>
+							</form>
+
+							<p class="sale-notice small info">Daily deal! Offer ends in 22:23:11.</p>
+						</div>
+					</div>
+				</section>
 
 				<section class="game-description">
 					<h2>About the Game</h2>
@@ -133,36 +145,59 @@
 			</div>
 
 			<aside class="game-meta grid-col-4">
-				<div class="game-share">
-					<form class="wishlist-form" action="#link-to-wishlist" method="get">
-						<input type="hidden" name="product_id" value="12345">
-						<button type="submit" class="btn add-to-wishlist icon-heart">Add to wishlist</button>
-					</form>
+				<section class="game-buy-share">
+					<div class="price-area">
+						<p class="small info">Autumn sale! Offer ends December 3.</p>
+
+						<span class="discount">-33%</span><span class="price"><del class="original-price">$49.99</del> <span class="final-price">$32.99</span></span>
+
+						<form class="purchase-form" action="#link-to-cart" method="get">
+							<input type="hidden" name="product_id" value="12345">
+							<button type="submit" class="btn btn-green add-to-cart">Add to cart</button>
+						</form>
+					</div>
 
 					<p class="hr">or</p>
 
-					<button class="btn btn-rounded btn-small share icon-share">Share &amp; embed</button>
-				</div>
+					<form class="wishlist-form" action="#link-to-wishlist" method="get">
+						<input type="hidden" name="product_id" value="12345">
+						<button type="submit" class="btn add-to-wishlist icon-b-heart">Add to wishlist</button>
+					</form>
 
-				<dl class="game-details">
-					<dt>Platform:</dt>
-					<dd><span class="icon-windows">Windows</span></dd>
+					<!--button class="btn btn-rounded btn-small share icon-b-share">Share &amp; embed</button-->
+				</section>
 
-					<dt>Genre:</dt>
-					<dd><a href="#">Action</a>, <a href="#">Adventure</a></dd>
+				<section class="game-details">
+					<dl>
+						<dt>Platform:</dt>
+						<dd><span class="icon-b-windows">Windows</span></dd>
 
-					<dt>Developer:</dt>
-					<dd><a href="#">Arkane Studios</a></dd>
+						<dt>Genre:</dt>
+						<dd><a href="#">Action</a>, <a href="#">Adventure</a></dd>
 
-					<dt>Publisher:</dt>
-					<dd><a href="#">Bethesda Softworks</a></dd>
+						<dt>Developer:</dt>
+						<dd><a href="#">Arkane Studios</a></dd>
 
-					<dt>Release date:</dt>
-					<dd>13 Aug 2013</dd>
-				</dl>
+						<dt>Publisher:</dt>
+						<dd><a href="#">Bethesda Softworks</a></dd>
 
-				<div class="table-wrap">
-					<table class="game-languages">
+						<dt>Release date:</dt>
+						<dd>13 Aug 2013</dd>
+					</dl>
+				</section>
+
+				<section class="game-links">
+					<ul>
+						<li><a href="#" class="icon-b-link icon-b-after-external-link">Visit the website</a></li>
+
+						<li><a href="#" class="icon-b-list-alt">View update history</a></li>
+
+						<li><a href="#" class="icon-b-calendar-empty">Read related news</a></li>
+					</ul>
+				</section>
+
+				<section class="game-languages table-wrap">
+					<table>
 						<thead>
 							<tr>
 								<th>Language</th>
@@ -175,63 +210,123 @@
 						<tbody>
 							<tr>
 								<td>English</td>
-								<td class="icon-ok"></td>
-								<td class="icon-ok"></td>
-								<td class="icon-ok"></td>
+								<td class="icon-b-ok"></td>
+								<td class="icon-b-ok"></td>
+								<td class="icon-b-ok"></td>
 							</tr>
 
 							<tr>
 								<td>German</td>
-								<td class="icon-ok"></td>
+								<td class="icon-b-ok"></td>
 								<td></td>
-								<td class="icon-ok"></td>
+								<td class="icon-b-ok"></td>
 							</tr>
 
 							<tr>
 								<td>French</td>
-								<td class="icon-ok"></td>
+								<td class="icon-b-ok"></td>
 								<td></td>
 								<td></td>
 							</tr>
 
 							<tr>
 								<td>Italian</td>
-								<td class="icon-ok"></td>
+								<td class="icon-b-ok"></td>
 								<td></td>
 								<td></td>
 							</tr>
 
 							<tr>
 								<td>Spanish</td>
-								<td class="icon-ok"></td>
+								<td class="icon-b-ok"></td>
 								<td></td>
 								<td></td>
 							</tr>
 						</tbody>
 					</table>
-				</div>
+				</section>
 
-				<ul class="game-feature-list">
-					<li class="icon-user">Single-player</li>
+				<section class="game-feature-list">
+					<ul>
+						<li class="icon-b-user">Single-player</li>
 
-					<li class="icon-certificate">Steam Achievements</li>
+						<li class="icon-b-certificate">Steam Achievements</li>
 
-					<li class="icon-list">Steam Leaderboards</li>
+						<li class="icon-b-th-list">Steam Leaderboards</li>
 
-					<li class="icon-cloud">Steam Cloud</li>
+						<li class="icon-b-cloud">Steam Cloud</li>
 
-					<li class="icon-circle-arrow-down">Downloadable Content</li>
+						<li class="icon-b-download-alt">Downloadable Content</li>
 
-					<li class="icon-gamepad">Controller Support</li>
-				</ul>
+						<li class="icon-b-gamepad">Controller Support</li>
+					</ul>
+				</section>
 
-				<ul class="game-links">
-					<li><a href="#" class="icon-link external">Visit the website</a></li>
+				<p class="hr">Community</p>
 
-					<li><a href="#" class="icon-list-alt">View update history</a></li>
+				<section class="game-friends">
+					<h4><a href="#">12 friends</a> want this game:</h4>
 
-					<li><a href="#" class="icon-calendar-empty">Read related news</a></li>
-				</ul>
+					<ul>
+						<li>
+							<a href="#" class="user">
+								<img class="userpic" src="i/userpic4.jpg"><span class="username">PotM of the Moon</span>
+							</a>
+						</li>
+
+						<li>
+							<a href="#" class="user user-ingame">
+								<img class="userpic" src="i/userpic5.jpg"><span class="username">[x] JekPot</span>
+							</a>
+						</li>
+
+						<li>
+							<a href="#" class="user user-online">
+								<img class="userpic" src="i/userpic2.jpg"><span class="username">Extremely long nickname</span>
+							</a>
+						</li>
+
+						<li>
+							<a href="#" class="user">
+								<img class="userpic" src="i/userpic1.jpg"><span class="username">Rocco Siffredi</span>
+							</a>
+						</li>
+
+						<li>
+							<a href="#" class="user user-ingame">
+								<img class="userpic" src="i/userpic6.jpg"><span class="username">lollapalooza</span>
+							</a>
+						</li>
+
+						<li>
+							<a href="#" class="user user-ingame">
+								<img class="userpic" src="i/userpic3.jpg"><span class="username">PotM of the Moon</span>
+							</a>
+						</li>
+					</ul>
+
+					<h4><a href="#">3 friends</a> already own this game:</h4>
+
+					<ul>
+						<li>
+							<a href="#" class="user">
+								<img class="userpic" src="i/userpic4.jpg"><span class="username">PotM of the Moon</span>
+							</a>
+						</li>
+
+						<li>
+							<a href="#" class="user user-ingame">
+								<img class="userpic" src="i/userpic5.jpg"><span class="username">[x] JekPot</span>
+							</a>
+						</li>
+
+						<li>
+							<a href="#" class="user user-online">
+								<img class="userpic" src="i/userpic2.jpg"><span class="username">Extremely long nickname</span>
+							</a>
+						</li>
+					</ul>
+				</section>
 			</aside>
 		</div>
 
@@ -290,40 +385,42 @@
 		</section>
 
 		<section class="game-customer-reviews grid-base">
-			<header>
-				<a href="#" class="small browse-all-link">Browse all 11 reviews</a>
-				<h2>Helpful customer reviews</h2>
+			<header class="grid-cell">
+				<h2 class="grid-col-7">Helpful customer reviews</h2>
+				<a href="#" class="grid-col-3 grid-text-right small browse-all-link">Browse all 11 reviews</a>
 			</header>
 
 			<article class="user-review">
 				<header class="meta">
 					<p>
-						<a href="#" class="user user-online">
-							<img class="userpic" src="i/userpic1.jpg">
-							
-							<span class="username big">Spiritus</span>
+						<a href="#" class="user user-online big">
+							<img class="userpic" src="i/userpic5.jpg"><span class="username">Spiritus</span>
 						</a>
 
 						<span class="playtime">played for 54 hours</span>
 					</p>
 
-					<p class="additional-info"><span class="green icon-thumbs-up">Recommended</span> • 422 products in account • 5 of 6 people (83%) found this review helpful</p>
+					<p class="additional-info"><span class="green icon-b-thumbs-up2">Recommended</span> • 422 products in account • 5 of 6 people (83%) found this review helpful</p>
 				</header>
 
-				<p>Continuing from where The Knife of Dunwall left off, The Brigmore Witches once again places you in the role of Daud, offering three more levels, two new factions to face and new gadgets and powers to utilize and an ending that changes not only your fate, but also influences the fate of the city.</p>
+				<div class="review-text minimized">
+					<p>Continuing from where The Knife of Dunwall left off, The Brigmore Witches once again places you in the role of Daud, offering three more levels, two new factions to face and new gadgets and powers to utilize and an ending that changes not only your fate, but also influences the fate of the city.</p>
 
-				<p>The level design and gameplay flow has improved by multitudes from tKoD, levels feel more fluid and are much more fun to move through. Brigmore Witches also introduces "Corrupted" Bone Charms, which offer powerful bonuses at the cost of a debuff, these charms offer a new factor to your inventory, making the player consider the pros and cons of equipping them based on their own respective playstyle. One of the most unique additions is the option to disguise yourself in the first mission, allowing you to move through the first area unhindered so long as you don't do anything suspicious.</p>
+					<p>The level design and gameplay flow has improved by multitudes from tKoD, levels feel more fluid and are much more fun to move through. Brigmore Witches also introduces "Corrupted" Bone Charms, which offer powerful bonuses at the cost of a debuff, these charms offer a new factor to your inventory, making the player consider the pros and cons of equipping them based on their own respective playstyle. One of the most unique additions is the option to disguise yourself in the first mission, allowing you to move through the first area unhindered so long as you don't do anything suspicious.</p>
 
-				<p>But the greatest aspect of The Brigmore Witches is the exposition given to Corvo from the point of view from Daud. Depending on your chosen Chaos level from tKoD your encounters with Corvo vary from mercy to a bloody demise.</p>
+					<p>But the greatest aspect of The Brigmore Witches is the exposition given to Corvo from the point of view from Daud. Depending on your chosen Chaos level from tKoD your encounters with Corvo vary from mercy to a bloody demise.</p>
 
-				<p>Dishonored: The Brigmore Witches is an enjoyable and solid expansion to the game, and like it's predecessor it is only $10.00, which is a very agreeable price for this much content packaged into three levels.</p>
+					<p>Dishonored: The Brigmore Witches is an enjoyable and solid expansion to the game, and like it's predecessor it is only $10.00, which is a very agreeable price for this much content packaged into three levels.</p>
+				</div>
 
-				<footer>
-					<p class="additional-info">Posted: 14 August 2013</p>
-					<p class="vote">
+				<p class="review-expand"><button class="pseudo-link icon-a-angle-down"><span>Expand</span></button></p>
+
+				<footer class="grid-cell">
+					<p class="additional-info grid-col-5">Posted: 14 August 2013</p>
+					<p class="vote grid-col-5 grid-text-right">
 						Was this review helpful?
-						<button class="btn btn-hover-green btn-small btn-flat icon-thumbs-up">Yes</button>
-						<button class="btn btn-hover-red btn-small btn-flat icon-thumbs-down">No</button>
+						<button class="btn btn-hover-green btn-small btn-flat icon-b-thumbs-up2">Yes</button>
+						<button class="btn btn-hover-red btn-small btn-flat icon-b-thumbs-down2">No</button>
 					</p>
 				</footer>
 			</article>
@@ -331,28 +428,61 @@
 			<article class="user-review">
 				<header class="meta">
 					<p>
-						<a href="#" class="user user-ingame">
-							<img class="userpic" src="i/userpic2.jpg">
-							
-							<span class="username big">Haxavier</span>
+						<a href="#" class="user user-ingame big">
+							<img class="userpic" src="i/userpic2.jpg"><span class="username">Haxavier</span>
 						</a>
 
 						<span class="playtime">played for 11 hours</span>
 					</p>
 
-					<p class="additional-info"><span class="red icon-thumbs-down">Not recommended</span> • 186 products in account • 3 of 3 people (100%) found this review helpful</p>
+					<p class="additional-info"><span class="red icon-b-thumbs-down2">Not recommended</span> • 186 products in account • 3 of 3 people (100%) found this review helpful</p>
 				</header>
 
-				<p>This is a fantastic DLC for the price. Don't believe anyone who tells you otherwise.</p>
+				<div class="review-text">
+					<p>This is a fantastic DLC for the price. Don't believe anyone who tells you otherwise.</p>
 
-				<p>Like, this is some Looking Glass Studios-tier stuff here. The second and third mission especially - they pour on a truly stunning amount of lore, atmosphere, and intensity. I must recommend that you first play the other DLC, The Knife of Dunwall. Both are some of the highest-quality DLC missions I've ever played in any game.</p>
+					<p>Like, this is some Looking Glass Studios-tier stuff here. The second and third mission especially - they pour on a truly stunning amount of lore, atmosphere, and intensity. I must recommend that you first play the other DLC, The Knife of Dunwall. Both are some of the highest-quality DLC missions I've ever played in any game.</p>
+				</div>
 
-				<footer>
-					<p class="additional-info">Posted: 14 August 2013</p>
-					<p class="vote">
+				<p class="review-expand"><button class="pseudo-link icon-a-angle-down"><span>Expand</span></button></p>
+
+				<footer class="grid-cell">
+					<p class="additional-info grid-col-5">Posted: 14 August 2013</p>
+					<p class="vote grid-col-5 grid-text-right">
 						Was this review helpful?
-						<button class="btn btn-hover-green btn-small btn-flat icon-thumbs-up">Yes</button>
-						<button class="btn btn-hover-red btn-small btn-flat icon-thumbs-down">No</button>
+						<button class="btn btn-hover-green btn-small btn-flat icon-b-thumbs-up2">Yes</button>
+						<button class="btn btn-hover-red btn-small btn-flat active icon-b-thumbs-down2">No</button>
+					</p>
+				</footer>
+			</article>
+
+			<article class="user-review">
+				<header class="meta">
+					<p>
+						<a href="#" class="user big">
+							<img class="userpic" src="i/userpic4.jpg"><span class="username ">Haxavier</span>
+						</a>
+
+						<span class="playtime">played for 11 hours</span>
+					</p>
+
+					<p class="additional-info"><span class="green icon-b-thumbs-up2">Recommended</span> • 186 products in account • 3 of 3 people (100%) found this review helpful</p>
+				</header>
+
+				<div class="review-text">
+					<p>This is a fantastic DLC for the price. Don't believe anyone who tells you otherwise.</p>
+
+					<p>Like, this is some Looking Glass Studios-tier stuff here. The second and third mission especially - they pour on a truly stunning amount of lore, atmosphere, and intensity. I must recommend that you first play the other DLC, The Knife of Dunwall. Both are some of the highest-quality DLC missions I've ever played in any game.</p>
+				</div>
+
+				<p class="review-expand"><button class="pseudo-link icon-a-angle-down"><span>Expand</span></button></p>
+
+				<footer class="grid-cell">
+					<p class="additional-info grid-col-5">Posted: 14 August 2013</p>
+					<p class="vote grid-col-5 grid-text-right">
+						Was this review helpful?
+						<button class="btn btn-hover-green btn-small btn-flat active icon-b-thumbs-up2">Yes</button>
+						<button class="btn btn-hover-red btn-small btn-flat icon-b-thumbs-down2">No</button>
 					</p>
 				</footer>
 			</article>

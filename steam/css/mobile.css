@@ -118,7 +118,7 @@ th {
 tr {
 	border-bottom: 1px solid;
 	border-color: #333; /* fallback */
-	border-color: rgba(80,80,80,0.5);
+	border-color: rgba(255,255,255,0.1);
 }
 
 /* 
@@ -158,6 +158,13 @@ CLASSES
 	color: #666;
 }
 
+/* responsive */
+@media all and (min-width: 45em) {
+	.hidden-tablet {
+		display: none;
+	}
+}
+
 /* buttons */
 .btn {
 	border: 0;
@@ -186,7 +193,8 @@ CLASSES
 	background-position: 0 0.5em;
 }
 
-.btn:active {
+.btn:active,
+.btn.active {
 	-webkit-box-shadow: inset 0 0.15em 0.15em 0.1em rgba(0,0,0,0.3);
 	box-shadow: inset 0 0.15em 0.15em 0.1em rgba(0,0,0,0.3);
 }
@@ -198,14 +206,18 @@ CLASSES
 	background-image: linear-gradient(#9ee345, #4e6d23);
 }
 
-.btn-hover-green:hover {
+.btn-hover-green:hover,
+.btn-hover-green:active,
+.btn-hover-green.active {
 	background-color: #9ee345;
 	background-image: -webkit-linear-gradient(#9ee345, #4e6d23);
 	background-image: -moz-linear-gradient(#9ee345, #4e6d23);
 	background-image: linear-gradient(#9ee345, #4e6d23);
 }
 
-.btn-hover-red:hover {
+.btn-hover-red:hover,
+.btn-hover-red:active,
+.btn-hover-red.active {
 	background-color: #e35845;
 	background-image: -webkit-linear-gradient(#e35845, #6d2323);
 	background-image: -moz-linear-gradient(#e35845, #6d2323);
@@ -219,7 +231,9 @@ CLASSES
 	background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2));
 }
 
-.btn-flat:hover {
+.btn-flat:hover,
+.btn-flat:active,
+.btn-flat.active {
 	background-position: 0 0;
 	background-image: -webkit-linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3));
 	background-image: -moz-linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3));
@@ -240,6 +254,13 @@ CLASSES
 	padding: 0.25em 0.75em;
 }
 
+.btn[disabled],
+.bnt.disabled {
+	opacity: 0.65;
+	pointer-events: none;
+}
+
+/* pseudo links */
 .pseudo-link {
 	display: inline;
 	margin: 0;
@@ -250,33 +271,40 @@ CLASSES
 	border-bottom: 1px dashed;
 }
 
-.btn[disabled],
-.bnt.disabled {
-	opacity: 0.65;
-	pointer-events: none;
+.pseudo-link:hover {
+	color: #2ac6ed;
 }
 
-/* external link */
-a.external:after {
-	content: '';
-	display: inline-block;
-	width: 8px;
-	height: 16px;
-	margin-left: 0.1em;
-	background-image: url(../i/sprites.svg);
-	background-repeat: no-repeat;
-	vertical-align: text-top;
-	background-position: 0 -36px;
+.pseudo-link[class*="icon-"] {
+	border-bottom: none;
+}
+
+.pseudo-link[class*="icon-"] > span {
+	border-bottom: 1px dashed;
 }
 
 /*icon links */
-a[class*="icon-"] {
+a[class*="icon-b-"],
+.pseudo-link[class*="icon-b-"] {
 	padding-left: 20px;
 }
 
-a[class*="icon-"]:before {
+a[class*="icon-b-"]:before,
+.pseudo-link[class*="icon-b-"]:before {
 	margin-left: -20px;
 	margin-right: 4px;
+	vertical-align: -2px;
+}
+
+a[class*="icon-a-"],
+.pseudo-linka[class*="icon-a-"] {
+	padding-right: 20px;
+}
+
+a[class*="icon-a-"]:after,
+.pseudo-linka[class*="icon-a-"]:after {
+	margin-right: -20px;
+	margin-left: 4px;
 	vertical-align: -2px;
 }
 
@@ -295,7 +323,7 @@ li[class*="icon-"]:before {
 
 /* hr */
 .hr {
-	margin: 0.3em 0;
+	margin: 0 0 0.5em;
 	position: relative;
 	overflow: hidden;
 	white-space: nowrap;
@@ -310,7 +338,9 @@ li[class*="icon-"]:before {
 	width: 50%;
 	height: 0;
 	vertical-align: middle;
-	border-bottom: 1px solid rgba(255,255,255,0.5);
+	border-bottom: 1px solid;
+	border-color: #464646; /* fallback */
+	border-color: rgba(255,255,255,0.2);
 }
 
 .hr:before {
@@ -345,15 +375,25 @@ MODULES
 /* user */
 .user {
 	display: inline-block;
+	max-width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 	text-decoration: none;
+	color: #aaa;
 }
 
 .user .userpic {
+	display: inline-block;
 	margin-right: 0.4em;
 	border-radius: 50%;
+	background: #aaa;
 	border: 3px solid #aaa;
-	overflow: hidden;
 	vertical-align: middle;
+}
+
+.user.user-square .userpic {
+	border-radius: 10%;
 }
 
 .user .username {
@@ -361,12 +401,49 @@ MODULES
 	text-decoration: underline;
 }
 
+.user:hover .userpic {
+	background: #c0c0c0;
+	border-color: #c0c0c0;
+}
+
+.user:hover {
+	color: #c0c0c0;
+}
+
 .user.user-online .userpic {
+	background: #7cb8e4;
 	border-color: #7cb8e4;
 }
 
+.user.user-online {
+	color: #7cb8e4;
+}
+
+.user.user-online:hover .userpic {
+	background: #92cdf8;
+	border-color: #92cdf8;
+}
+
+.user.user-online:hover {
+	color: #92cdf8;
+}
+
 .user.user-ingame .userpic {
+	background: #94de35;
 	border-color: #94de35;
+}
+
+.user.user-ingame {
+	color: #94de35;
+}
+
+.user.user-ingame:hover .userpic {
+	background: #aef651;
+	border-color: #aef651;
+}
+
+.user.user-ingame:hover {
+	color: #aef651;
 }
 
 /* review */
@@ -381,7 +458,7 @@ MODULES
 
 .user-review .playtime {
 	color: #666;
-	vertical-align: middle;
+	vertical-align: text-top;
 }
 
 .user-review .additional-info {
@@ -389,8 +466,53 @@ MODULES
 	font-size: 0.9em;
 }
 
+html.js .user-review .review-text.minimized {
+	position: relative;
+	max-height: 190px;
+	overflow: hidden;
+}
+
+html.js .user-review .review-text.minimized:after {
+	content: '';
+	pointer-events: none;
+	position: absolute;
+	display: block;
+	bottom: 0;
+	width: 100%;
+	height: 5em;
+	background-repeat: repeat-x;
+	background-position: 0 100%;
+	background-image: url(../i/reviews-fade.png); /* fallback */
+	background-image: -webkit-linear-gradient(transparent, #222);
+	background-image: -moz-linear-gradient(transparent, #222);
+	background-image: linear-gradient(transparent, #222);
+}
+
+.user-review .review-expand {
+	margin-top: 0.5em;
+	font-size: 0.9em;
+	display: none;
+}
+
+html.js .user-review .review-text.minimized + .review-expand {
+	display: block;
+}
+
+.user-review > footer {
+	border-top: 1px solid #333;
+	padding-top: 1em;
+}
+
+.user-review > footer p {
+	margin-bottom: 0;
+}
+
 .user-review .vote {
 	font-size: 0.9em;
+}
+
+.user-review .vote button {
+	margin-left: 0.2em;
 }
 
 /* price area */
@@ -423,6 +545,13 @@ MODULES
 .price-area .price .original-price {
 	text-decoration: line-through;
 	color: #999;
+}
+
+@media all and (min-width: 45em) {
+	.price-area .sale-notice {
+		display: inline-block;
+		vertical-align: middle;
+	}
 }
 
 /*
@@ -479,6 +608,10 @@ GRID
 		margin-right: 0;
 	}
 
+	[class*="grid-col-"].grid-text-right {
+		text-align: right;
+	}
+
 	.grid-col-1 {
 		width: 7.3%;
 	}
@@ -523,12 +656,32 @@ PAGES
 .store-game-page {
 	background-position: 50% 0;
 	background-repeat: no-repeat;
-	background-size: auto 500px;
+	background-size: 50em auto;
+}
+
+@media all and (min-width: 30em) {
+	.store-game-page {
+		background-size: 80em auto;
+	}
+}
+
+@media all and (min-width: 70em) {
+	.store-game-page {
+		background-size: 100em auto;
+	}
+}
+
+@media all and (min-width: 100em) {
+	.store-game-page {
+		background-size: 100% auto;
+	}
 }
 
 .store-game-page .main {
-	background: url("i/transparent50.png"); /* fallback */
-	background: rgba(0,0,0,0.5);
+	background: url("../i/transparent50.png"); /* fallback */
+	background: rgba(0,0,0,0.6);
+	-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
 .store-game-page .main > header {
@@ -541,11 +694,6 @@ PAGES
 	display: none;
 }
 
-.store-game-page .main > header h1 {
-	margin-top: 0;
-	margin-bottom: 0;
-}
-
 .store-game-page .main > header .price-area {
 	margin-top: 1em;
 }
@@ -554,17 +702,21 @@ PAGES
 	width: 100%;
 }
 
+.game-purchase-options > * {
+	margin-bottom: 1.5em;
+}
+
 .game-dlc-notice {
 	position: relative;
 	padding: 16px; /* fallback */
 	padding: 1rem;
-	margin-bottom: 1.5em;
-	border: 1px solid #6b2269;
+	border: 1px solid;
+	border-color: #6b2269 #6b2269 #6b2250 #6b2269;
 	border-radius: 0.3em;
 	background: #3f153f; /* fallback */
-	background-image: -webkit-linear-gradient(#411541, #260e29);
-	background-image: -moz-linear-gradient(#411541, #260e29);
-	background-image: linear-gradient(#411541, #260e29);
+	background-image: -webkit-linear-gradient(#411541, #290e23);
+	background-image: -moz-linear-gradient(#411541, #290e23);
+	background-image: linear-gradient(#411541, #290e23);
 }
 
 .game-dlc-notice:before {
@@ -596,105 +748,149 @@ PAGES
 }
 
 .game-purchase-option {
-	overflow: hidden; /* clearfix */
-	padding: 16px 16px 8px; /* fallback */
-	padding: 1rem 1rem 0.5rem;
-	margin-bottom: 1.5em;
 	border: 1px solid;
-	border-color: #4b4b4b; /* fallback */
-	border-color: rgba(120,120,120,0.6);
-	background: #222; /* fallback */
-	background: rgba(45,45,45,0.85);
+	border-color: rgba(255,255,255,0.1);
+	overflow: hidden; /* clearfix */
+	background: url(../i/transparent-gray.png); /* fallback */
+	background: rgba(64,64,64,0.3);
+	padding: 1em 1em 0.5em;
 }
 
-.game-purchase-option > * {
+.game-purchase-option .purchase-header {
 	margin: 0;
 }
 
-/*@media all and (min-width: 45em) {
-	.game-purchase-option .price-area {
-		float: right;
-		margin-top: 0.1em;
-		margin-left: 1.5em;
-	}
-}*/
+.game-purchase-option .purchase-notice {
+	margin: 0;
+}
 
-.game-meta > * {
+.game-purchase-option .price-area {
+	margin-top: 0.5em;
+}
+
+.game-meta {
+	background: url(../i/transparent-gray.png); /* fallback */
+	background: rgba(64,64,64,0.3);
+	padding: 1em;
+}
+
+.game-meta > section {
 	margin-bottom: 24px; /* fallback */
 	margin-bottom: 1.5rem;
 }
 
-.game-share {
+.game-meta > p.hr {
+	margin-bottom: 1em;
+}
+
+.game-buy-share {
 	text-align: center;
 }
 
-.game-share .add-to-wishlist {
+.game-buy-share .add-to-wishlist {
 	width: 100%;
 }
-
-/*dl.game-details dt {
-	color: #999;
-	display: inline;
-}
-
-dl.game-details dd {
-	display: inline;
-	margin-left: 0;
-}
-
-dl.game-details dd:after {
-	content: ' •';
-}
-
-dl.game-details dd:last-child:after {
-	content: '';
-}
-
-@media all and (min-width: 45em) {
-	dl.game-details dd:after {
-		content: '';
-		display: table;
-		clear: both;
-	}
-}*/
 
 .game-languages {
 	font-size: 0.8em;
 }
 
-ul.game-feature-list {
+.game-feature-list ul {
 	padding-left: 0;
 }
 
-ul.game-feature-list li {
+.game-feature-list ul li {
 	margin-bottom: 0.5em;
 	padding: 0.3em 0.5em;
 	border-radius: 0.2em;
-	background: #222; /* fallback */
-	background: rgba(35,35,35,0.85);
-	box-shadow: inset 0 0.2em 0.15em rgba(0,0,0,0.3);
+	border: 1px solid;
+	border-color: #333; /* fallback */
+	border-color: rgba(255,255,255,0.1);
 }
 
-ul.game-feature-list li:before {
+.game-feature-list ul li:before {
 	position: static;
 	margin: 0 0.5em 0 0;
 }
 
-ul.game-links {
+.game-links ul {
 	list-style-type: none;
+	padding-left: 0;
+}
+
+.game-links ul li {
+	margin-bottom: 0.5em;
+}
+
+.game-friends ul {
+	font-size: 0.9em;
+	overflow: hidden; /* clearfix */
+	list-style-type: none;
+	padding-left: 0;
+}
+
+.game-friends ul li {
+	float: left;
+	width: 100%;
+	padding-right: 1em;
+	margin-bottom: 1em;
+	line-height: 0.5;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+@media all and (min-width: 23em) {
+	.game-friends ul li {
+		width: 50%;
+	}
+}
+
+@media all and (min-width: 35em) {
+	.game-friends ul li {
+		width: 33.33%;
+	}
+}
+
+@media all and (min-width: 45em) {
+	.game-friends ul li {
+		width: 100%;
+	}
+}
+
+@media all and (min-width: 57em) {
+	.game-friends ul li {
+		width: 50%;
+	}
+}
+
+.game-sys-req {
+	margin-top: 16px; /* fallback */
+	margin-bottom: 16px; /* fallback */
+	margin-top: 1rem;
+	margin-bottom: 1rem;
 }
 
 .game-customer-reviews {
-	margin-top: 1.5em;
-	margin-bottom: 1.5em;
+	margin-top: 16px; /* fallback */
+	margin-bottom: 16px; /* fallback */
+	margin-top: 1rem;
+	margin-bottom: 1rem;
 	padding: 1.5em 0 0 0;
 	background: #222;
 }
 
-.game-customer-reviews .browse-all-link {
-	float: right;
+.game-customer-reviews header {
+	margin-bottom: 24px; /* fallabck */
+	margin-bottom: 1.5rem;
+}
+
+.game-customer-reviews header h2 {
+	margin-bottom: 0;
 }
 
 .game-customer-reviews article {
-	margin-bottom: 3em;
+	padding: 1em;
+	border: 1px solid #333;
+	margin-bottom: 2em;
 }

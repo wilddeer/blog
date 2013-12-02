@@ -16,11 +16,7 @@
 	h4 {
 		font-size: 1.1em;
 	}
-
-	/* store game page */
-	.store-game-page {
-		background-size: auto 700px;
-	}
+	
 }
 
 @media all and (min-width: 45em) {

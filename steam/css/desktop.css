@@ -1,10 +1,6 @@
 @media all and (min-width: 70em) { /* 1120 */
 
-	/* store game page */
-	.store-game-page {
-		background-size: 100% auto;
-	}
-
+	
 }
 
 @media all and (min-width: 75em) {
