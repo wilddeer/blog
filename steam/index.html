@@ -16,9 +16,12 @@
 	<link rel="stylesheet" type="text/css" href="../_includes/css/boilerplate.css">
 	<link rel="stylesheet" type="text/css" href="../_includes/peppermint/peppermint.required.css">
 	<link rel="stylesheet" type="text/css" href="../_includes/peppermint/peppermint.suggested.css">
-	<link rel="stylesheet" type="text/css" href="css/mobile.css">
-	<link rel="stylesheet" type="text/css" href="css/tablet.css">
-	<link rel="stylesheet" type="text/css" href="css/desktop.css">
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/classes.css">
+	<link rel="stylesheet" type="text/css" href="css/modules.css">
+	<link rel="stylesheet" type="text/css" href="css/layout.css">
+	<link rel="stylesheet" type="text/css" href="css/grid.css">
+	<link rel="stylesheet" type="text/css" href="css/page.css">
 	<link rel="stylesheet" type="text/css" href="css/sprites.css">
 	
 	<!-- header scripts -->
@@ -31,45 +34,75 @@
 			<h1><span class="game-icon" style="background-image: url(i/game.icon.jpg);"></span>Dishonored: The Brigmore Witches</h1>
 		</header>
 
-		<section class="game-gallery peppermint js-peppermint grid-fullwidth">
-			<figure>
-				<a href="i/1.jpg" target="_blank"><img src="i/1.jpg"></a>
-			</figure>
+		<section class="gallery grid-fullwidth peppermint js-peppermint inactive">
+			<div class="slides">
+				<figure>
+					<a href="i/1.jpg" target="_blank"><img src="i/1.jpg"></a>
+				</figure>
 
-			<figure>
-				<a href="i/2.jpg" target="_blank"><img src="i/2.jpg"></a>
-			</figure>
+				<figure>
+					<a href="i/2.jpg" target="_blank"><img src="i/2.jpg"></a>
+				</figure>
 
-			<figure>
-				<a href="i/3.jpg" target="_blank"><img src="i/3.jpg"></a>
-			</figure>
+				<figure>
+					<a href="i/3.jpg" target="_blank"><img src="i/3.jpg"></a>
+				</figure>
 
-			<figure>
-				<a href="i/4.jpg" target="_blank"><img src="i/4.jpg"></a>
-			</figure>
+				<figure>
+					<a href="i/4.jpg" target="_blank"><img src="i/4.jpg"></a>
+				</figure>
 
-			<figure>
-				<a href="i/5.jpg" target="_blank"><img src="i/5.jpg"></a>
-			</figure>
+				<figure>
+					<a href="i/5.jpg" target="_blank"><img src="i/5.jpg"></a>
+				</figure>
 
-			<figure>
-				<a href="i/6.jpg" target="_blank"><img src="i/6.jpg"></a>
-			</figure>
+				<figure>
+					<a href="i/6.jpg" target="_blank"><img src="i/6.jpg"></a>
+				</figure>
+			</div>
+
+			<div class="thumbs">
+				<ul>
+					<li tabindex="0" class="thumb">
+						<img src="i/p1.jpg">
+					</li>
+
+					<li tabindex="0" class="thumb">
+						<img src="i/p2.jpg">
+					</li>
+
+					<li tabindex="0" class="thumb">
+						<img src="i/p3.jpg">
+					</li>
+
+					<li tabindex="0" class="thumb">
+						<img src="i/p4.jpg">
+					</li>
+
+					<li tabindex="0" class="thumb">
+						<img src="i/p5.jpg">
+					</li>
+
+					<li tabindex="0" class="thumb">
+						<img src="i/p6.jpg">
+					</li>
+				</ul>
+			</div>
 		</section>
 
 		<div class="grid-cell">
 			<div class="grid-col-6">
 				<section class="game-purchase-options">
-					<section class="game-purchase-option hidden-tablet game-buy-share">
+					<div class="game-purchase-option hidden-tablet game-buy-share">
 						<div class="price-area">
+							<p class="small info">Autumn sale! Offer ends December 3.</p>
+
 							<span class="discount">-33%</span><span class="price"><del class="original-price">$49.99</del> <span class="final-price">$32.99</span></span>
 
 							<form class="purchase-form" action="#link-to-cart" method="get">
 								<input type="hidden" name="product_id" value="12345">
 								<button type="submit" class="btn btn-green add-to-cart">Add to cart</button>
 							</form>
-
-							<p class="small info">Autumn sale! Offer ends December 3.</p>
 						</div>
 
 						<p class="hr">or</p>
@@ -78,7 +111,7 @@
 							<input type="hidden" name="product_id" value="12345">
 							<button type="submit" class="btn add-to-wishlist icon-b-heart">Add to wishlist</button>
 						</form>
-					</section>
+					</div>
 
 					<div class="game-dlc-notice">
 						<h3>Downloadable Content</h3>
@@ -94,6 +127,7 @@
 						<p class="purchase-notice small insignificant">Notice: This game is not giftable in your territory.</p>
 
 						<div class="price-area">
+							<p class="small info">Daily deal! Offer ends in 22:23:11.</p>
 
 							<span class="discount">-66%</span><span class="price"><del class="original-price">$49.99</del> <span class="final-price">$32.99</span></span>
 
@@ -101,51 +135,53 @@
 								<input type="hidden" name="product_id" value="12345">
 								<button type="submit" class="btn btn-green add-to-cart">Add to cart</button>
 							</form>
-
-							<p class="sale-notice small info">Daily deal! Offer ends in 22:23:11.</p>
 						</div>
 					</div>
 				</section>
 
 				<section class="game-description">
-					<h2>About the Game</h2>
+					<div class="description-text minimized">
+						<h2>About the Game</h2>
 
-					<p>Continue your journey as the legendary assassin, Daud, in Dishonored: The Brigmore Witches. Access Daud’s weapons, gadgets, allies and supernatural abilities once more, and bring his twisted narrative that began with The Knife of Dunwall to a close.</p>
+						<p>Continue your journey as the legendary assassin, Daud, in Dishonored: The Brigmore Witches. Access Daud’s weapons, gadgets, allies and supernatural abilities once more, and bring his twisted narrative that began with The Knife of Dunwall to a close.</p>
 
-					<p>After discovering the identity and intentions of Delilah, the leader of the Brigmore Witch coven, you set out to disrupt her from completing a powerful ritual that will spell your doom. Having already been betrayed by your lieutenant, Billie Lurk, you must rely on feuding gang factions—the Dead Eels and the Hatters—to negotiate your way through previously unseen districts of Dunwall en route to Delilah’s stronghold. Regardless of the way you reach your destination, one thing is for certain – you will finally answer for your treacherous actions and fall before the mercy, or punishment, of the Royal Bodyguard and Assassin, Corvo Attano.</p>
+						<p>After discovering the identity and intentions of Delilah, the leader of the Brigmore Witch coven, you set out to disrupt her from completing a powerful ritual that will spell your doom. Having already been betrayed by your lieutenant, Billie Lurk, you must rely on feuding gang factions—the Dead Eels and the Hatters—to negotiate your way through previously unseen districts of Dunwall en route to Delilah’s stronghold. Regardless of the way you reach your destination, one thing is for certain – you will finally answer for your treacherous actions and fall before the mercy, or punishment, of the Royal Bodyguard and Assassin, Corvo Attano.</p>
 
-					<h3>Features</h3>
+						<h3>Features</h3>
 
-					<ul>
-						<li>
-							<h4>New Powers, Weapons and Gadgets</h4>
+						<ul>
+							<li>
+								<h4>New Powers, Weapons and Gadgets</h4>
 
-							<p>The mark of the Outsider empowers you with unique supernatural abilities. Quickly draw your enemies towards you and suspend them helplessly in air or use them as a human shield with ‘Pull’. Call upon the Whalers to assist in combat with ‘Summon Assassin’ and track down hidden Runes and Bone Charms with ‘Void Gaze’. To aid in your dangerous exploits your customized arsenal of weapons and gadgets will include Chokedust to daze your enemies, whale oil-powered Stun Mines to shock your targets, and a concealed Wristbow to launch sleep darts and explosive bolts.</p>
-						</li>
+								<p>The mark of the Outsider empowers you with unique supernatural abilities. Quickly draw your enemies towards you and suspend them helplessly in air or use them as a human shield with ‘Pull’. Call upon the Whalers to assist in combat with ‘Summon Assassin’ and track down hidden Runes and Bone Charms with ‘Void Gaze’. To aid in your dangerous exploits your customized arsenal of weapons and gadgets will include Chokedust to daze your enemies, whale oil-powered Stun Mines to shock your targets, and a concealed Wristbow to launch sleep darts and explosive bolts.</p>
+							</li>
 
-						<li>
-							<h4>Explore More of Dunwall</h4>
+							<li>
+								<h4>Explore More of Dunwall</h4>
 
-							<p>Make your way through Draper’s Ward and explore its streets, hazardous sewers and the two rival gangs’ home bases: the textile mills and the boat docks. Revisit the rotting Coldridge Prison, which you must infiltrate in order to free the dangerous but imprisoned leader of the Dead Eels gang. Finally, attack the gothic Brigmore Manor, where Delilah and her Brigmore Witches dwell and await your reckoning.</p>
-						</li>
+								<p>Make your way through Draper’s Ward and explore its streets, hazardous sewers and the two rival gangs’ home bases: the textile mills and the boat docks. Revisit the rotting Coldridge Prison, which you must infiltrate in order to free the dangerous but imprisoned leader of the Dead Eels gang. Finally, attack the gothic Brigmore Manor, where Delilah and her Brigmore Witches dwell and await your reckoning.</p>
+							</li>
 
-						<li>
-							<h4>Choose Your Path</h4>
+							<li>
+								<h4>Choose Your Path</h4>
 
-							<p>In your quest to thwart Delilah’s plans, approach each mission with your own style. Your redemption – or your turn towards darkness – depends on your skills and the decisions you make. Determine your ultimate fate as you conclude Daud’s journey in The Brigmore Witches.</p>
-						</li>
+								<p>In your quest to thwart Delilah’s plans, approach each mission with your own style. Your redemption – or your turn towards darkness – depends on your skills and the decisions you make. Determine your ultimate fate as you conclude Daud’s journey in The Brigmore Witches.</p>
+							</li>
 
-						<li>
-							<h4>Persistent Playthrough</h4>
-							
-							<p>Continue your journey from The Knife of Dunwall through The Brigmore Witches in the truest sense. Your power, weapon and item upgrades, Chaos level, and player actions from The Knife of Dunwall will carry over via a compatible save file option.</p>
-						</li>
-					</ul>
+							<li>
+								<h4>Persistent Playthrough</h4>
+								
+								<p>Continue your journey from The Knife of Dunwall through The Brigmore Witches in the truest sense. Your power, weapon and item upgrades, Chaos level, and player actions from The Knife of Dunwall will carry over via a compatible save file option.</p>
+							</li>
+						</ul>
+					</div>
+
+					<p class="expand"><button class="pseudo-link icon-a-angle-down"><span>Expand</span></button></p>
 				</section>
 			</div>
 
-			<aside class="game-meta grid-col-4">
-				<section class="game-buy-share">
+			<aside class="game-info grid-col-4">
+				<section class="game-buy-share hidden-mobile">
 					<div class="price-area">
 						<p class="small info">Autumn sale! Offer ends December 3.</p>
 
@@ -167,34 +203,36 @@
 					<!--button class="btn btn-rounded btn-small share icon-b-share">Share &amp; embed</button-->
 				</section>
 
-				<section class="game-details">
-					<dl>
-						<dt>Platform:</dt>
-						<dd><span class="icon-b-windows">Windows</span></dd>
+				<div class="grid-cell">
+					<section class="game-details">
+						<dl>
+							<dt>Platform:</dt>
+							<dd><span class="icon-b-windows">Windows</span></dd>
 
-						<dt>Genre:</dt>
-						<dd><a href="#">Action</a>, <a href="#">Adventure</a></dd>
+							<dt>Genre:</dt>
+							<dd><a href="#">Action</a>, <a href="#">Adventure</a></dd>
 
-						<dt>Developer:</dt>
-						<dd><a href="#">Arkane Studios</a></dd>
+							<dt>Developer:</dt>
+							<dd><a href="#">Arkane Studios</a></dd>
 
-						<dt>Publisher:</dt>
-						<dd><a href="#">Bethesda Softworks</a></dd>
+							<dt>Publisher:</dt>
+							<dd><a href="#">Bethesda Softworks</a></dd>
 
-						<dt>Release date:</dt>
-						<dd>13 Aug 2013</dd>
-					</dl>
-				</section>
+							<dt>Release date:</dt>
+							<dd>13 Aug 2013</dd>
+						</dl>
+					</section>
 
-				<section class="game-links">
-					<ul>
-						<li><a href="#" class="icon-b-link icon-b-after-external-link">Visit the website</a></li>
+					<section class="game-links">
+						<ul>
+							<li><a href="#" class="icon-b-link icon-b-after-external-link">Visit the website</a></li>
 
-						<li><a href="#" class="icon-b-list-alt">View update history</a></li>
+							<li><a href="#" class="icon-b-list-alt">View update history</a></li>
 
-						<li><a href="#" class="icon-b-calendar-empty">Read related news</a></li>
-					</ul>
-				</section>
+							<li><a href="#" class="icon-b-calendar-empty">Read related news</a></li>
+						</ul>
+					</section>
+				</div>
 
 				<section class="game-languages table-wrap">
 					<table>
@@ -270,37 +308,37 @@
 					<ul>
 						<li>
 							<a href="#" class="user">
-								<img class="userpic" src="i/userpic4.jpg"><span class="username">PotM of the Moon</span>
+								<span class="userpic"><img src="i/userpic4.jpg"></span><span class="username">PotM of the Moon</span>
 							</a>
 						</li>
 
 						<li>
 							<a href="#" class="user user-ingame">
-								<img class="userpic" src="i/userpic5.jpg"><span class="username">[x] JekPot</span>
+								<span class="userpic"><img src="i/userpic5.jpg"></span><span class="username">[x] JekPot</span>
 							</a>
 						</li>
 
 						<li>
 							<a href="#" class="user user-online">
-								<img class="userpic" src="i/userpic2.jpg"><span class="username">Extremely long nickname</span>
+								<span class="userpic"><img src="i/userpic2.jpg"></span><span class="username">Extremely long nickname</span>
 							</a>
 						</li>
 
 						<li>
 							<a href="#" class="user">
-								<img class="userpic" src="i/userpic1.jpg"><span class="username">Rocco Siffredi</span>
+								<span class="userpic"><img src="i/userpic1.jpg"></span><span class="username">Rocco Siffredi</span>
 							</a>
 						</li>
 
 						<li>
 							<a href="#" class="user user-ingame">
-								<img class="userpic" src="i/userpic6.jpg"><span class="username">lollapalooza</span>
+								<span class="userpic"><img src="i/userpic6.jpg"></span><span class="username">lollapalooza</span>
 							</a>
 						</li>
 
 						<li>
 							<a href="#" class="user user-ingame">
-								<img class="userpic" src="i/userpic3.jpg"><span class="username">PotM of the Moon</span>
+								<span class="userpic"><img src="i/userpic3.jpg"></span><span class="username">PotM of the Moon</span>
 							</a>
 						</li>
 					</ul>
@@ -310,19 +348,19 @@
 					<ul>
 						<li>
 							<a href="#" class="user">
-								<img class="userpic" src="i/userpic4.jpg"><span class="username">PotM of the Moon</span>
+								<span class="userpic"><img src="i/userpic4.jpg"></span><span class="username">PotM of the Moon</span>
 							</a>
 						</li>
 
 						<li>
 							<a href="#" class="user user-ingame">
-								<img class="userpic" src="i/userpic5.jpg"><span class="username">[x] JekPot</span>
+								<span class="userpic"><img src="i/userpic5.jpg"></span><span class="username">[x] JekPot</span>
 							</a>
 						</li>
 
 						<li>
 							<a href="#" class="user user-online">
-								<img class="userpic" src="i/userpic2.jpg"><span class="username">Extremely long nickname</span>
+								<span class="userpic"><img src="i/userpic2.jpg"></span><span class="username">Extremely long nickname</span>
 							</a>
 						</li>
 					</ul>
@@ -394,7 +432,7 @@
 				<header class="meta">
 					<p>
 						<a href="#" class="user user-online big">
-							<img class="userpic" src="i/userpic5.jpg"><span class="username">Spiritus</span>
+							<span class="userpic"><img src="i/userpic5.jpg"></span><span class="username">Spiritus</span>
 						</a>
 
 						<span class="playtime">played for 54 hours</span>
@@ -417,11 +455,26 @@
 
 				<footer class="grid-cell">
 					<p class="additional-info grid-col-5">Posted: 14 August 2013</p>
-					<p class="vote grid-col-5 grid-text-right">
-						Was this review helpful?
-						<button class="btn btn-hover-green btn-small btn-flat icon-b-thumbs-up2">Yes</button>
-						<button class="btn btn-hover-red btn-small btn-flat icon-b-thumbs-down2">No</button>
-					</p>
+					
+					<div class="vote grid-col-5 grid-text-right">
+						<span class="vote-question">Was this review helpful?</span>
+
+						<span class="vote-buttons">
+							<form class="vote-form" action="#vote" method="get">
+								<input type="hidden" name="action" value="review_vote">
+								<input type="hidden" name="id" value="111">
+								<input type="hidden" name="score" value="1">
+								<button type="submit" class="btn btn-hover-green btn-small btn-flat icon-b-thumbs-up2">Yes</button>
+							</form>
+
+							<form class="vote-form" action="#vote" method="get">
+								<input type="hidden" name="action" value="review_vote">
+								<input type="hidden" name="id" value="111">
+								<input type="hidden" name="score" value="0">
+								<button class="btn btn-hover-red btn-small btn-flat icon-b-thumbs-down2">No</button>
+							</form>
+						</span>
+					</div>
 				</footer>
 			</article>
 
@@ -429,7 +482,7 @@
 				<header class="meta">
 					<p>
 						<a href="#" class="user user-ingame big">
-							<img class="userpic" src="i/userpic2.jpg"><span class="username">Haxavier</span>
+							<span class="userpic"><img src="i/userpic2.jpg"></span><span class="username">Haxavier</span>
 						</a>
 
 						<span class="playtime">played for 11 hours</span>
@@ -448,11 +501,26 @@
 
 				<footer class="grid-cell">
 					<p class="additional-info grid-col-5">Posted: 14 August 2013</p>
-					<p class="vote grid-col-5 grid-text-right">
-						Was this review helpful?
-						<button class="btn btn-hover-green btn-small btn-flat icon-b-thumbs-up2">Yes</button>
-						<button class="btn btn-hover-red btn-small btn-flat active icon-b-thumbs-down2">No</button>
-					</p>
+
+					<div class="vote grid-col-5 grid-text-right">
+						<span class="vote-question">Was this review helpful?</span>
+
+						<span class="vote-buttons">
+							<form class="vote-form" action="#vote" method="get">
+								<input type="hidden" name="action" value="review_vote">
+								<input type="hidden" name="id" value="111">
+								<input type="hidden" name="score" value="1">
+								<button type="submit" class="btn btn-hover-green btn-small btn-flat icon-b-thumbs-up2">Yes</button>
+							</form>
+
+							<form class="vote-form" action="#vote" method="get">
+								<input type="hidden" name="action" value="review_vote">
+								<input type="hidden" name="id" value="111">
+								<input type="hidden" name="score" value="0">
+								<button class="btn btn-hover-red btn-small btn-flat active icon-b-thumbs-down2">No</button>
+							</form>
+						</span>
+					</div>
 				</footer>
 			</article>
 
@@ -460,7 +528,7 @@
 				<header class="meta">
 					<p>
 						<a href="#" class="user big">
-							<img class="userpic" src="i/userpic4.jpg"><span class="username ">Haxavier</span>
+							<span class="userpic"><img src="i/userpic4.jpg"></span><span class="username ">Haxavier</span>
 						</a>
 
 						<span class="playtime">played for 11 hours</span>
@@ -479,11 +547,26 @@
 
 				<footer class="grid-cell">
 					<p class="additional-info grid-col-5">Posted: 14 August 2013</p>
-					<p class="vote grid-col-5 grid-text-right">
-						Was this review helpful?
-						<button class="btn btn-hover-green btn-small btn-flat active icon-b-thumbs-up2">Yes</button>
-						<button class="btn btn-hover-red btn-small btn-flat icon-b-thumbs-down2">No</button>
-					</p>
+					
+					<div class="vote grid-col-5 grid-text-right">
+						<span class="vote-question">Was this review helpful?</span>
+
+						<span class="vote-buttons">
+							<form class="vote-form" action="#vote" method="get">
+								<input type="hidden" name="action" value="review_vote">
+								<input type="hidden" name="id" value="111">
+								<input type="hidden" name="score" value="1">
+								<button type="submit" class="btn btn-hover-green btn-small btn-flat active icon-b-thumbs-up2">Yes</button>
+							</form>
+
+							<form class="vote-form" action="#vote" method="get">
+								<input type="hidden" name="action" value="review_vote">
+								<input type="hidden" name="id" value="111">
+								<input type="hidden" name="score" value="0">
+								<button class="btn btn-hover-red btn-small btn-flat icon-b-thumbs-down2">No</button>
+							</form>
+						</span>
+					</div>
 				</footer>
 			</article>
 		</section>

@@ -5,9 +5,13 @@
 	width: 17px;
 	height: 16px;
 	margin: 0 0.15em;
-	background-image: url(../i/sprites.svg);
+	background-image: url(../i/sprites.png);
 	background-repeat: no-repeat;
 	vertical-align: text-top;
+}
+html.svg [class*="icon-b-"]:before,
+html.svg [class*="icon-a-"]:after {
+	background-image: url(../i/sprites.svg);
 }
 i[class*="icon-b-"]:before,
 i[class*="icon-a-"]:after {
@@ -88,7 +92,7 @@ i[class*="icon-a-"]:after {
 }
 .icon-b-download-alt:before,
 .icon-a-download-alt:after {
-	background-position: 1px -31px;
+	background-position: 1px -32px;
 }
 .icon-b-download:before,
 .icon-a-download:after {
@@ -328,7 +332,7 @@ i[class*="icon-a-"]:after {
 }
 .icon-b-link:before,
 .icon-a-link:after {
-	background-position: -423px -128px;
+	background-position: -422px -128px;
 }
 .icon-b-cloud:before,
 .icon-a-cloud:after {
@@ -444,7 +448,7 @@ i[class*="icon-a-"]:after {
 }
 .icon-b-gamepad:before,
 .icon-a-gamepad:after {
-	background-position: -325px -192px;
+	background-position: -325px -194px;
 }
 .icon-b-flag-alt:before,
 .icon-a-flag-alt:after {

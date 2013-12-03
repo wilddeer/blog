@@ -68,6 +68,24 @@ h4 {
 	font-size: 1.08em;
 }
 
+@media all and (min-width: 30em) {
+	h1 {
+		font-size: 2.1em;
+	}
+
+	h2 {
+		font-size: 1.6em;
+	}
+
+	h3 {
+		font-size: 1.25em;
+	}
+
+	h4 {
+		font-size: 1.1em;
+	}
+}
+
 ul {
 	padding-left: 1.3em;
 }
@@ -88,20 +106,19 @@ li {
 	margin: 0 0 1em 0;
 }
 
+dl {
+	overflow: hidden; /* clearfix */
+}
+
 dl dt {
+	padding-right: 0.2em;
+	float: left;
 	color: #999;
-	display: inline;
+	clear: both;
 }
 
 dl dd {
-	display: inline;
 	margin-left: 0;
-}
-
-dl dd:after {
-	content: '';
-	display: table;
-	clear: both;
 }
 
 /* tables */
@@ -159,9 +176,17 @@ CLASSES
 }
 
 /* responsive */
+.hidden-mobile {
+	display: none;
+}
+
 @media all and (min-width: 45em) {
 	.hidden-tablet {
 		display: none;
+	}
+
+	.hidden-mobile {
+		display: block;
 	}
 }
 
@@ -372,6 +397,71 @@ li[class*="icon-"]:before {
 /*
 MODULES
 */
+/* gallery */
+.gallery.peppermint.inactive {
+	white-space: nowrap;
+	overflow: auto;
+}
+
+.gallery.peppermint.inactive figure {
+	display: inline-block;
+	margin-bottom: 0;
+}
+
+.gallery.peppermint.inactive figure img {
+	max-width: 100vw;
+}
+
+.gallery .thumbs {
+	text-align: center;
+	overflow: auto;
+	display: none;
+}
+
+@media all and (min-width: 45em) {
+	.gallery .dots {
+		display: none;
+	}
+
+	.gallery.peppermint.active .thumbs {
+		display: block;
+	}
+}
+
+.gallery .thumbs ul {
+	white-space: nowrap;
+	list-style-type: none;
+	padding-top: 8px;
+	padding-left: 0;
+	margin-bottom: 0;
+}
+
+.gallery .thumbs ul li {
+	position: relative;
+	display: inline-block;
+	border: 2px solid;
+	border-color: transparent;
+	margin-bottom: 0;
+	cursor: pointer;
+}
+
+.gallery .thumbs ul li.active {
+	border-color: #7CB8E4;
+}
+
+.gallery .thumbs ul li.active:after {
+	content: '';
+	position: absolute;
+	display: block;
+	top: -8px;
+	left: 50%;
+	margin-left: -4px;
+	width: 0;
+	border: 8px solid;
+	border-color: transparent transparent #7CB8E4 transparent;
+	border-top-width: 0;
+}
+
 /* user */
 .user {
 	display: inline-block;
@@ -381,6 +471,7 @@ MODULES
 	text-overflow: ellipsis;
 	text-decoration: none;
 	color: #aaa;
+	vertical-align: middle;
 }
 
 .user .userpic {
@@ -390,9 +481,19 @@ MODULES
 	background: #aaa;
 	border: 3px solid #aaa;
 	vertical-align: middle;
+	overflow: hidden;
+}
+
+.user .userpic img {
+	border-radius: 50%;
+	vertical-align: top;
 }
 
 .user.user-square .userpic {
+	border-radius: 10%;
+}
+
+.user.user-square .userpic img {
 	border-radius: 10%;
 }
 
@@ -483,9 +584,9 @@ html.js .user-review .review-text.minimized:after {
 	background-repeat: repeat-x;
 	background-position: 0 100%;
 	background-image: url(../i/reviews-fade.png); /* fallback */
-	background-image: -webkit-linear-gradient(transparent, #222);
-	background-image: -moz-linear-gradient(transparent, #222);
-	background-image: linear-gradient(transparent, #222);
+	background-image: -webkit-linear-gradient(rgba(34,34,34,0), rgba(34,34,34,255));
+	background-image: -moz-linear-gradient(rgba(34,34,34,0), rgba(34,34,34,255));
+	background-image: linear-gradient(rgba(34,34,34,0), rgba(34,34,34,255));
 }
 
 .user-review .review-expand {
@@ -511,8 +612,20 @@ html.js .user-review .review-text.minimized + .review-expand {
 	font-size: 0.9em;
 }
 
+.user-review .vote-question {
+	margin-right: 0.3em;
+}
+
+.user-review .vote-buttons {
+	display: inline-block;
+}
+
+.user-review .vote-form {
+	display: inline;
+}
+
 .user-review .vote button {
-	margin-left: 0.2em;
+	margin-right: 0.2em;
 }
 
 /* price area */
@@ -547,19 +660,20 @@ html.js .user-review .review-text.minimized + .review-expand {
 	color: #999;
 }
 
-@media all and (min-width: 45em) {
-	.price-area .sale-notice {
-		display: inline-block;
-		vertical-align: middle;
-	}
-}
-
 /*
 LAYOUT
 */
 .main {
 	margin-left: auto;
 	margin-right: auto;
+}
+
+@media all and (min-width: 75em) {
+	.main {
+		width: 90%;
+		max-width: 1040px; /* fallback */
+		max-width: 85rem;
+	}
 }
 
 /*
@@ -665,9 +779,13 @@ PAGES
 	}
 }
 
-@media all and (min-width: 70em) {
+@media all and (min-width: 75em) {
 	.store-game-page {
 		background-size: 100em auto;
+	}
+
+	.store-game-page .main {
+		margin-top: 1.5em;
 	}
 }
 
@@ -678,13 +796,16 @@ PAGES
 }
 
 .store-game-page .main {
-	background: url("../i/transparent50.png"); /* fallback */
-	background: rgba(0,0,0,0.6);
+	background: url(../i/transparent50.png); /* fallback */
+	background: -webkit-linear-gradient(rgba(0,0,0,0.6) 700px, rgba(17,17,17,255) 1000px);
+	background: -moz-linear-gradient(rgba(0,0,0,0.6) 700px, rgba(17,17,17,255) 1000px);
+	background: linear-gradient(rgba(0,0,0,0.6) 700px, rgba(17,17,17,255) 1000px);
 	-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
 .store-game-page .main > header {
+	text-align: center;
 	padding: 24px 0 8px; /* fallback */ 
 	padding: 1.5rem 0 0.5rem;
 	overflow: hidden; /* clearfix */
@@ -698,8 +819,28 @@ PAGES
 	margin-top: 1em;
 }
 
-.game-gallery {
-	width: 100%;
+.store-game-page section,
+.store-game-page aside {
+	margin-bottom: 24px; /* fallback */
+	margin-bottom: 1.5rem;
+}
+
+@media all and (min-width: 45em) {
+	.store-game-page .main > header h1 {
+		padding-left: 40px; /* fallback */
+		padding-left: 2.5rem;
+	}
+
+	.store-game-page .main > header h1 .game-icon {
+		display: inline-block;
+		margin-left: -40px;
+		margin-right: 8px;
+		width: 32px; /* fallback */
+		height: 32px; /* fallback */
+		vertical-align: -0.1em;
+		box-shadow: inset 0 0 5px rgba(0,0,0,0.3),
+					inset 0 0 1px #000;
+	}
 }
 
 .game-purchase-options > * {
@@ -749,37 +890,72 @@ PAGES
 
 .game-purchase-option {
 	border: 1px solid;
-	border-color: rgba(255,255,255,0.1);
+	border-color: #4d4d4d;
 	overflow: hidden; /* clearfix */
-	background: url(../i/transparent-gray.png); /* fallback */
-	background: rgba(64,64,64,0.3);
+	background: #262626;
+	background: rgba(45,45,45,0.8);
 	padding: 1em 1em 0.5em;
 }
 
-.game-purchase-option .purchase-header {
-	margin: 0;
-}
-
-.game-purchase-option .purchase-notice {
-	margin: 0;
+.game-purchase-option > * {
+	margin-bottom: 8px; /* fallback */
+	margin-bottom: 0.5rem;
 }
 
 .game-purchase-option .price-area {
-	margin-top: 0.5em;
+	margin-bottom: 0;
 }
 
-.game-meta {
+html.js .game-description .description-text.minimized {
+	position: relative;
+	max-height: 300px;
+	overflow: hidden;
+}
+
+html.js .game-description .description-text.minimized:after {
+	content: '';
+	pointer-events: none;
+	position: absolute;
+	display: block;
+	bottom: 0;
+	width: 100%;
+	height: 5em;
+	background-repeat: repeat-x;
+	background-position: 0 100%;
+	background-image: url(../i/fade.png); /* fallback */
+	background-image: -webkit-linear-gradient(rgba(17,17,17,0), rgba(17,17,17,255));
+	background-image: -moz-linear-gradient(rgba(17,17,17,0), rgba(17,17,17,255));
+	background-image: linear-gradient(rgba(17,17,17,0), rgba(17,17,17,255));
+}
+
+.game-description .expand {
+	font-size: 0.9em;
+	display: none;
+}
+
+html.js .game-description .description-text.minimized + .expand {
+	display: block;
+}
+
+@media all and (min-width: 45em) {
+	html.js .game-description .description-text.minimized {
+		max-height: none;
+	}
+
+	html.js .game-description .description-text.minimized:after,
+	html.js .game-description .description-text.minimized + .expand {
+		display: none;
+	}
+}
+
+.game-info {
 	background: url(../i/transparent-gray.png); /* fallback */
 	background: rgba(64,64,64,0.3);
-	padding: 1em;
+	padding: 1em 1em 0;
+	overflow: hidden;
 }
 
-.game-meta > section {
-	margin-bottom: 24px; /* fallback */
-	margin-bottom: 1.5rem;
-}
-
-.game-meta > p.hr {
+.game-info > p.hr {
 	margin-bottom: 1em;
 }
 
@@ -793,6 +969,10 @@ PAGES
 
 .game-languages {
 	font-size: 0.8em;
+}
+
+.game-feature-list {
+	font-size: 0.9em;
 }
 
 .game-feature-list ul {
@@ -811,6 +991,41 @@ PAGES
 .game-feature-list ul li:before {
 	position: static;
 	margin: 0 0.5em 0 0;
+}
+
+.game-details dl {
+	margin-bottom: 0;
+}
+
+@media all and (min-width: 30em) {
+	.game-details,
+	.game-links {
+		float: left;
+		width: 50%;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+	.game-details {
+		padding-right: 16px; /* fallback */
+		padding-right: 1rem;
+	}
+
+	.game-links {
+		padding-left: 16px; /* fallback */
+		padding-left: 1rem;
+	}
+}
+
+@media all and (min-width: 45em) {
+	.game-details,
+	.game-links {
+		float: none;
+		width: auto;
+		padding-left: 0;
+		padding-right: 0;
+	}
 }
 
 .game-links ul {
@@ -834,7 +1049,6 @@ PAGES
 	width: 100%;
 	padding-right: 1em;
 	margin-bottom: 1em;
-	line-height: 0.5;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;

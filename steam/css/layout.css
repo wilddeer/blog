@@ -1,0 +1,15 @@
+/*
+LAYOUT
+*/
+.main {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@media all and (min-width: 75em) {
+	.main {
+		width: 90%;
+		max-width: 1040px; /* fallback */
+		max-width: 85rem;
+	}
+}

@@ -1,0 +1,139 @@
+@charset "utf-8";
+
+/* base */
+body {
+	font-size: 100%;
+	word-wrap: break-word;
+	background: #000;
+	padding-bottom: 150px;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #f5f5f5;
+	line-height: 1.6;
+}
+
+a {
+	color: #1f98df;
+}
+
+a:hover {
+	color: #2ac6ed;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-weight: normal;
+	line-height: 1.2;
+}
+
+p,
+ul,
+ol,
+dl,
+pre,
+figure,
+blockquote {
+	margin: 0 0 1.2em 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	margin: 0 0 19px 0; /* fallback */
+	margin: 0 0 1.2rem 0;
+}
+
+h1 {
+	font-size: 1.8em;
+}
+
+h2 {
+	font-size: 1.4em;
+}
+
+h3 {
+	font-size: 1.2em;
+}
+
+h4 {
+	font-size: 1.08em;
+}
+
+@media all and (min-width: 30em) {
+	h1 {
+		font-size: 2.1em;
+	}
+
+	h2 {
+		font-size: 1.6em;
+	}
+
+	h3 {
+		font-size: 1.25em;
+	}
+
+	h4 {
+		font-size: 1.1em;
+	}
+}
+
+ul {
+	padding-left: 1.3em;
+}
+
+@media all and (min-width: 45em) {
+	ul {
+		padding-left: 2.5em;
+	}
+}
+
+nav ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	margin: 0 0 1em 0;
+}
+
+dl {
+	overflow: hidden; /* clearfix */
+}
+
+dl dt {
+	padding-right: 0.2em;
+	float: left;
+	color: #999;
+	clear: both;
+}
+
+dl dd {
+	margin-left: 0;
+}
+
+/* tables */
+table {
+	width: 100%;
+}
+
+td,
+th {
+	padding: 0.3em 0.5em;
+	text-align: left;
+}
+
+tr {
+	border-bottom: 1px solid;
+	border-color: #333; /* fallback */
+	border-color: rgba(255,255,255,0.1);
+}
