@@ -3,7 +3,9 @@ $(function() {
 	/* init the gallery */
 	$('.js-peppermint').each(function() {
 		var slidesBlock = $(this).find('.slides')[0],
-			thumbs = $(this).find('.thumb');
+			thumbs = $(this).find('.thumb'),
+			arrPrev = $(this).find('.arrow-prev'),
+			arrNext = $(this).find('.arrow-next');
 
 		var gallery = Peppermint(this, {
 			slidesContainer: slidesBlock,
@@ -22,7 +24,7 @@ $(function() {
 			}
 		});
 
-		/* bind clicks & enter press to thumbs */
+		/* bind click & enter handler to thumbs */
 		for (var i = thumbs.length - 1; i >= 0; i--) {
 			$(thumbs[i]).on('click keyup', function(n) {
 				return function(event) {
@@ -33,6 +35,34 @@ $(function() {
 				};
 			}(i));
 		};
+
+		/* bind click handlers to arrows */
+		//var eventType = (window.Modernizr && Modernizr.touch? 'touchend' : 'click');
+
+		arrPrev.on('touchend', function(event) {
+			arrPrev.off('click');
+			arrNext.off('click');
+			gallery.prev();
+		});
+
+		arrNext.on('touchend', function(event) {
+			arrPrev.off('click');
+			arrNext.off('click');
+			gallery.next();
+		});
+
+		arrPrev.on('click', function(event) {
+			gallery.prev();
+		});
+
+		arrNext.on('click', function(event) {
+			gallery.next();
+		});
+
+		function offClicks() {
+			arrPrev.off('click');
+			arrNext.off('click');
+		}
 	});
 
 	/* prevent focus*/

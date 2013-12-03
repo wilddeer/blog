@@ -38,16 +38,16 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1237"
-     inkscape:window-height="767"
+     inkscape:window-width="2560"
+     inkscape:window-height="1028"
      id="namedview508"
      showgrid="false"
-     inkscape:zoom="2.9761905"
-     inkscape:cx="173.20939"
-     inkscape:cy="82.030377"
-     inkscape:window-x="98"
-     inkscape:window-y="102"
-     inkscape:window-maximized="0"
+     inkscape:zoom="5.952381"
+     inkscape:cx="29.403166"
+     inkscape:cy="157.06068"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
      inkscape:current-layer="svg2" />
   <g
      transform="translate(0 0)"
@@ -314,16 +314,16 @@
      id="g132">
     <path
        d="M6.625 14.045l-5.821-5.813q-0.33-0.33-0.33-0.808t0.33-0.808l5.821-5.813q0.33-0.33 0.808-0.33t0.808 0.33l0.67 0.67q0.33 0.33 0.33 0.808t-0.33 0.808l-4.339 4.339 4.339 4.33q0.33 0.339 0.33 0.813t-0.33 0.804l-0.67 0.67q-0.33 0.33-0.808 0.33t-0.808-0.33z"
-       fill="#f5f5f5"
-       id="path134" />
+       id="path134"
+       fill="#f5f5f5" />
   </g>
   <g
      transform="translate(33 64)"
      id="g136">
     <path
        d="M9.813 7.429q0 0.464-0.33 0.813l-5.821 5.813q-0.33 0.33-0.804 0.33t-0.804-0.33l-0.679-0.67q-0.33-0.348-0.33-0.813 0-0.473 0.33-0.804l4.339-4.339-4.339-4.33q-0.33-0.348-0.33-0.813 0-0.473 0.33-0.804l0.679-0.67q0.321-0.339 0.804-0.339t0.804 0.339l5.821 5.813q0.33 0.33 0.33 0.804z"
-       fill="#f5f5f5"
-       id="path138" />
+       id="path138"
+       fill="#f5f5f5" />
   </g>
   <g
      transform="translate(66 64)"

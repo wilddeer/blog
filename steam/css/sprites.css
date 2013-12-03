@@ -526,3 +526,20 @@ i[class*="icon-a-"]:after {
 .icon-a-reddit:after {
 	background-position: -423px -224px;
 }
+
+
+.icon-big[class*="icon-b-"]:before,
+.icon-big[class*="icon-a-"]:after {
+	width: 34px;
+	height: 32px;
+	background-size: 1008px 480px;
+}
+
+.icon-big.icon-b-chevron-left:before,
+.icon-big.icon-a-chevron-left:after {
+	background-position: 6px -128px;
+}
+.icon-big.icon-b-chevron-right:before,
+.icon-big.icon-a-chevron-right:after {
+	background-position: -60px -128px;
+}

@@ -61,6 +61,10 @@ PAGE
 }
 
 @media all and (min-width: 45em) {
+	.store-game-page .main > header {
+		text-align: left;
+	}
+
 	.store-game-page .main > header h1 {
 		padding-left: 40px; /* fallback */
 		padding-left: 2.5rem;
@@ -200,6 +204,14 @@ html.js .game-description .description-text.minimized + .expand {
 
 .game-buy-share .add-to-wishlist {
 	width: 100%;
+	max-width: 20em;
+}
+
+.game-buy-share p.hr {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	max-width: 25em;
 }
 
 .game-languages {
@@ -310,6 +322,12 @@ html.js .game-description .description-text.minimized + .expand {
 @media all and (min-width: 57em) {
 	.game-friends ul li {
 		width: 50%;
+	}
+}
+
+@media all and (min-width: 85em) {
+	.game-friends ul li {
+		width: 33.33%;
 	}
 }
 
