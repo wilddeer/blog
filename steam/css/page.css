@@ -10,7 +10,13 @@ PAGE
 
 @media all and (min-width: 30em) {
 	.store-game-page {
-		background-size: 80em auto;
+		background-size: 65em auto;
+	}
+}
+
+@media all and (min-width: 45em) {
+	.store-game-page {
+		background-size: 75em auto;
 	}
 }
 
@@ -21,6 +27,12 @@ PAGE
 
 	.store-game-page .main {
 		margin-top: 1.5em;
+		background: url(../i/transparent50.png); /* fallback */
+		background: -webkit-linear-gradient(rgba(0,0,0,0.6) 700px, rgba(17,17,17,255) 1000px);
+		background: -moz-linear-gradient(rgba(0,0,0,0.6) 700px, rgba(17,17,17,255) 1000px);
+		background: linear-gradient(rgba(0,0,0,0.6) 700px, rgba(17,17,17,255) 1000px);
+		-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+		box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 	}
 }
 
@@ -28,15 +40,6 @@ PAGE
 	.store-game-page {
 		background-size: 100% auto;
 	}
-}
-
-.store-game-page .main {
-	background: url(../i/transparent50.png); /* fallback */
-	background: -webkit-linear-gradient(rgba(0,0,0,0.6) 700px, rgba(17,17,17,255) 1000px);
-	background: -moz-linear-gradient(rgba(0,0,0,0.6) 700px, rgba(17,17,17,255) 1000px);
-	background: linear-gradient(rgba(0,0,0,0.6) 700px, rgba(17,17,17,255) 1000px);
-	-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-	box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
 .store-game-page .main > header {
@@ -345,6 +348,15 @@ html.js .game-description .description-text.minimized + .expand {
 	margin-bottom: 1rem;
 	padding: 1.5em 0 0 0;
 	background: #222;
+}
+
+@media all and (min-width: 75em) {
+	.game-customer-reviews > header,
+	.game-customer-reviews > article {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 60em;
+	}
 }
 
 .game-customer-reviews header {

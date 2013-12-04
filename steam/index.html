@@ -16,6 +16,7 @@
 	<link rel="stylesheet" type="text/css" href="../_includes/css/boilerplate.css">
 	<link rel="stylesheet" type="text/css" href="../_includes/peppermint/peppermint.required.css">
 	<link rel="stylesheet" type="text/css" href="../_includes/peppermint/peppermint.suggested.css">
+	<link rel="stylesheet" type="text/css" href="css/slime.css">
 	<link rel="stylesheet" type="text/css" href="css/base.css">
 	<link rel="stylesheet" type="text/css" href="css/classes.css">
 	<link rel="stylesheet" type="text/css" href="css/modules.css">
@@ -23,12 +24,24 @@
 	<link rel="stylesheet" type="text/css" href="css/grid.css">
 	<link rel="stylesheet" type="text/css" href="css/page.css">
 	<link rel="stylesheet" type="text/css" href="css/sprites.css">
+	<style>
+		body {
+			background-image: url(i/page.bg.mob.jpg);
+		}
+
+		@media all and (min-width: 75em) {
+			body {
+				background-color: #1e231f;
+				background-image: url(i/page.bg.jpg);
+			}
+		}
+	</style>
 	
 	<!-- header scripts -->
 	<script type="text/javascript" src="../_includes/js/modernizr.js"></script>
 </head>
 
-<body class="store-game-page" style="background-image: url(i/page.bg.jpg); background-color: #1e231f;">
+<body class="store-game-page">
 	<article class="main grid-base">
 		<header>
 			<h1><span class="game-icon" style="background-image: url(i/game.icon.jpg);"></span>Dishonored: The Brigmore Witches</h1>
@@ -60,36 +73,86 @@
 					<figure>
 						<a href="i/6.jpg" target="_blank"><img src="i/6.jpg"></a>
 					</figure>
+
+
+					<figure>
+						<a href="i/1.jpg" target="_blank"><img src="i/1.jpg"></a>
+					</figure>
+
+					<figure>
+						<a href="i/2.jpg" target="_blank"><img src="i/2.jpg"></a>
+					</figure>
+
+					<figure>
+						<a href="i/3.jpg" target="_blank"><img src="i/3.jpg"></a>
+					</figure>
+
+					<figure>
+						<a href="i/4.jpg" target="_blank"><img src="i/4.jpg"></a>
+					</figure>
+
+					<figure>
+						<a href="i/5.jpg" target="_blank"><img src="i/5.jpg"></a>
+					</figure>
+
+					<figure>
+						<a href="i/6.jpg" target="_blank"><img src="i/6.jpg"></a>
+					</figure>
 				</div>
 
-				<span class="arrow-prev icon-b-chevron-left icon-big"></span>
-				<span class="arrow-next icon-b-chevron-right icon-big"></span>
+				<span class="arrow-prev icon-b-chevron-left icon-big shown"></span>
+				<span class="arrow-next icon-b-chevron-right icon-big shown"></span>
 			</div>
 
-			<div class="thumbs">
+			<div class="thumbs slime js-slime inactive">
 				<ul>
 					<li tabindex="0" class="thumb">
-						<img src="i/p1.jpg">
+						<img width="115" height="65" src="i/p1.jpg">
 					</li>
 
 					<li tabindex="0" class="thumb">
-						<img src="i/p2.jpg">
+						<img width="115" height="65" src="i/p2.jpg">
 					</li>
 
 					<li tabindex="0" class="thumb">
-						<img src="i/p3.jpg">
+						<img width="115" height="65" src="i/p3.jpg">
 					</li>
 
 					<li tabindex="0" class="thumb">
-						<img src="i/p4.jpg">
+						<img width="115" height="65" src="i/p4.jpg">
 					</li>
 
 					<li tabindex="0" class="thumb">
-						<img src="i/p5.jpg">
+						<img width="115" height="65" src="i/p5.jpg">
 					</li>
 
 					<li tabindex="0" class="thumb">
-						<img src="i/p6.jpg">
+						<img width="115" height="65" src="i/p6.jpg">
+					</li>
+
+
+					<li tabindex="0" class="thumb">
+						<img width="115" height="65" src="i/p1.jpg">
+					</li>
+
+					<li tabindex="0" class="thumb">
+						<img width="115" height="65" src="i/p2.jpg">
+					</li>
+
+					<li tabindex="0" class="thumb">
+						<img width="115" height="65" src="i/p3.jpg">
+					</li>
+
+					<li tabindex="0" class="thumb">
+						<img width="115" height="65" src="i/p4.jpg">
+					</li>
+
+					<li tabindex="0" class="thumb">
+						<img width="115" height="65" src="i/p5.jpg">
+					</li>
+
+					<li tabindex="0" class="thumb">
+						<img width="115" height="65" src="i/p6.jpg">
 					</li>
 				</ul>
 			</div>
@@ -586,6 +649,7 @@
 	<!-- le scripts -->
 	<script type="text/javascript" src="../_includes/js/jquery-1.10.2.min.js"></script>
 	<script type="text/javascript" src="../_includes/peppermint/peppermint.min.js"></script>
+	<script type="text/javascript" src="js/slime.js"></script>
 	<script type="text/javascript" src="js/init.js"></script>
 
 </body>

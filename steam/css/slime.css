@@ -1,0 +1,49 @@
+.slime.active {
+	position: relative;
+	overflow: hidden;
+	padding-left: 0;
+	padding-right: 0;
+	-ms-touch-action: pan-y;
+	touch-action: pan-y;
+	-webkit-tap-highlight-color: transparent;
+	tap-highlight-color: transparent;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	cursor: move;
+	cursor: -webkit-grab;
+	cursor: -moz-grab;
+	cursor: grab;
+}
+
+.slime.active .scroller {
+	max-width: none;
+	width: auto;
+	position: relative;
+}
+
+.slime.active a:active,
+.slime.active a:active img {
+	outline: none;
+}
+
+.slime.active,
+.slime.active .scroller {
+	-webkit-transform: translate3d(0,0,0);
+	-ms-transform: translate3d(0,0,0);
+	-moz-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.slime.active.drag,
+.slime.active.drag * {
+	cursor: move;
+	cursor: -webkit-grabbing;
+	cursor: -moz-grabbing;
+	cursor: grabbing;
+}

@@ -156,11 +156,11 @@ i[class*="icon-a-"]:after {
 }
 .icon-b-chevron-left:before,
 .icon-a-chevron-left:after {
-	background-position: 0 -64px;
+	background-position: 3px -64px;
 }
 .icon-b-chevron-right:before,
 .icon-a-chevron-right:after {
-	background-position: -33px -64px;
+	background-position: -30px -64px;
 }
 .icon-b-arrow-left:before,
 .icon-a-arrow-left:after {
@@ -528,18 +528,20 @@ i[class*="icon-a-"]:after {
 }
 
 
-.icon-big[class*="icon-b-"]:before,
-.icon-big[class*="icon-a-"]:after {
-	width: 34px;
-	height: 32px;
-	background-size: 1008px 480px;
-}
+@media all and (min-width: 35em) {
+	.icon-big[class*="icon-b-"]:before,
+	.icon-big[class*="icon-a-"]:after {
+		width: 34px;
+		height: 32px;
+		background-size: 1008px 480px;
+	}
 
-.icon-big.icon-b-chevron-left:before,
-.icon-big.icon-a-chevron-left:after {
-	background-position: 6px -128px;
-}
-.icon-big.icon-b-chevron-right:before,
-.icon-big.icon-a-chevron-right:after {
-	background-position: -60px -128px;
+	.icon-big.icon-b-chevron-left:before,
+	.icon-big.icon-a-chevron-left:after {
+		background-position: 6px -128px;
+	}
+	.icon-big.icon-b-chevron-right:before,
+	.icon-big.icon-a-chevron-right:after {
+		background-position: -60px -128px;
+	}
 }

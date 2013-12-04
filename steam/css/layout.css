@@ -9,7 +9,7 @@ LAYOUT
 @media all and (min-width: 75em) {
 	.main {
 		width: 90%;
-		max-width: 1040px; /* fallback */
-		max-width: 85rem;
+		max-width: 1280px; /* fallback */
+		max-width: 80rem;
 	}
 }
