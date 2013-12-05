@@ -1,13 +1,16 @@
 function Slime(_this, options) {
-	var o = options || {},
+	var noop = function() {},
+		o = options || {},
 		transitionSpeed = 300,
 		contentBlock,
 		contentWidth,
 		slimeWidth,
 		positionMin,
+		eHandler,
 		currentPosition = 0;
 
 	o.cssPrefix = o.cssPrefix || '';
+	o.onClick = o.onClick || noop;
 
 	var classes = {
 		inactive: o.cssPrefix + 'inactive',
@@ -127,13 +130,13 @@ function Slime(_this, options) {
 	function touchInit() {
 		var startPosition;
 
-		eventBurrito(_this, {
+		eHandler = eventBurrito(_this, {
 			start: function(event, start) {
 				//firefox doesn't want to apply the cursor from `:active` CSS rule, have to add a class :-/
 				addClass(_this, classes.drag);
 				startPosition = currentPosition;
 			},
-			move: function(event, start, diff) {
+			move: function(event, start, diff, speed) {
 				var linearPosition = startPosition + diff.x,
 					overlap = Math.max(linearPosition, 0) || Math.min((linearPosition - positionMin), 0);
 
@@ -142,38 +145,46 @@ function Slime(_this, options) {
 				//change the position of the slider appropriately
 				changePos(startPosition + diff.x);
 			},
-			end: function(event, start, diff) {
-				if (diff.x) {
-					if (currentPosition > 0) {
-						changePos(0, transitionSpeed);
-					}
-					else if (currentPosition < positionMin) {
-						changePos(positionMin, transitionSpeed);
-					}
-					/*var duration = Number(+new Date - start.time), //duration of the touch move
-						ratio = Math.abs(diff.x)/slider.width,
-						//How many slides to skip. Remainder > 0.25 counts for one slide.
-						skip = Math.floor(ratio) + (ratio - Math.floor(ratio) > 0.25?1:0),
-						//Super duper formula to detect a flick.
-						//First, it's got to be fast enough.
-						//Second, if `skip==0`, 20px move is enough to switch to the next slide.
-						//If `skip>0`, it's enough to slide to the middle of the slide minus `slider.width/9` to skip even further.
-						flick = duration < flickThreshold+flickThreshold*skip/1.8 && Math.abs(diff.x) - skip*slider.width > (skip?-slider.width/9:20);
-
-					skip += (flick?1:0);
-
-					if (diff.x < 0) {
-						changeActiveSlide(activeSlide+skip, o.touchSpeed);
-					}
-					else {
-						changeActiveSlide(activeSlide-skip, o.touchSpeed);	
-					}
-
-					o.stopSlideshowAfterInteraction && stopSlideshow();*/
-				}
-
+			end: function(event, start, diff, speed) {
 				//remove the drag class
 				removeClass(_this, classes.drag);
+
+				/*if (currentPosition > 0) {
+					changePos(0, transitionSpeed);
+				}
+				else if (currentPosition < positionMin) {
+					changePos(positionMin, transitionSpeed);
+				}
+				else if (Math.abs(speed.x) > 0.15) {*/
+					var posDiff = speed.x*transitionSpeed/1.5;
+					var targetPosition = currentPosition + posDiff;
+
+					var targetOverlap = Math.abs(Math.max(targetPosition, 0) || Math.min((targetPosition - positionMin), 0));
+					var overlap = Math.min(targetOverlap / 5, 150);
+					var overlapDiff = targetOverlap - overlap;
+					var targetSpeed = Math.max(0, transitionSpeed - (overlapDiff / (Math.abs(posDiff) + 1))*transitionSpeed);
+
+					console.log(targetSpeed);
+
+					if (targetPosition > 0) {
+						targetSpeed && changePos(overlap, targetSpeed);
+						setTimeout(function() {
+							changePos(0, transitionSpeed);
+						}, targetSpeed);
+					}
+					else if (targetPosition < positionMin) {
+						targetSpeed && changePos(positionMin - overlap, targetSpeed);
+						setTimeout(function() {
+							changePos(positionMin, transitionSpeed);
+						}, targetSpeed);
+					}
+					else {
+						changePos(targetPosition, transitionSpeed);
+					}
+				/*}*/
+			},
+			click: function(event) {
+				o.onClick(event);
 			}
 		});
 	}
@@ -209,4 +220,10 @@ function Slime(_this, options) {
 	}
 
 	setup();
+
+	return {
+		getClicksAllowed: function() {
+			return eHandler.getClicksAllowed();
+		}
+	}
 }

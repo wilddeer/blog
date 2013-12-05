@@ -40,9 +40,7 @@ $(function() {
 			}
 		});
 
-		var thumbScroller = Slime(thumbBlock[0], {
-			
-		});
+		var thumbScroller = Slime(thumbBlock[0]);
 
 		slidesNumber = gallery.getSlidesNumber();
 
@@ -50,7 +48,7 @@ $(function() {
 		for (var i = thumbs.length - 1; i >= 0; i--) {
 			$(thumbs[i]).on('click keyup', function(n) {
 				return function(event) {
-					if (event.type == 'click' || event.keyCode == 13) {
+					if (thumbScroller.getClicksAllowed() && (event.type == 'click' || event.keyCode == 13)) {
 						gallery.slideTo(n);
 						gallery.stop();
 					}

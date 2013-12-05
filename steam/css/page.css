@@ -243,18 +243,25 @@ html.js .game-description .description-text.minimized + .expand {
 	margin: 0 0.5em 0 0;
 }
 
-.game-details dl {
+.game-details dl,
+.game-links ul {
 	margin-bottom: 0;
+}
+
+.game-details,
+.game-links {
+	font-size: 0.9em;
+	float: left;
+	width: 100%;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 @media all and (min-width: 30em) {
 	.game-details,
 	.game-links {
-		float: left;
 		width: 50%;
-		-moz-box-sizing: border-box;
-		-webkit-box-sizing: border-box;
-		box-sizing: border-box;
 	}
 
 	.game-details {
@@ -271,10 +278,26 @@ html.js .game-description .description-text.minimized + .expand {
 @media all and (min-width: 45em) {
 	.game-details,
 	.game-links {
-		float: none;
-		width: auto;
+		width: 100%;
 		padding-left: 0;
 		padding-right: 0;
+	}
+}
+
+@media all and (min-width: 80em) {
+	.game-details,
+	.game-links {
+		width: 50%;
+	}
+
+	.game-details {
+		padding-right: 16px; /* fallback */
+		padding-right: 0.5rem;
+	}
+
+	.game-links {
+		padding-left: 16px; /* fallback */
+		padding-left: 0.5rem;
 	}
 }
 
@@ -350,7 +373,7 @@ html.js .game-description .description-text.minimized + .expand {
 	background: #222;
 }
 
-@media all and (min-width: 75em) {
+@media all and (min-width: 65em) {
 	.game-customer-reviews > header,
 	.game-customer-reviews > article {
 		margin-left: auto;
