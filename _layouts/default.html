@@ -20,22 +20,19 @@
 
 	<!-- styles -->
 	<!--[if lt IE 8]>
-		<link rel="stylesheet" href="/css/ie7.css?{{ ie7_style_hash }}">
+		<link rel="stylesheet" href="/css/ie7.css">
 	<![endif]-->
 	
 	<!--[if IE 8]>
-		<link rel="stylesheet" href="/css/ie8.css?{{ ie8_style_hash }}">
+		<link rel="stylesheet" href="/css/ie8.css">
 	<![endif]-->
 
 	<!--[if gt IE 8]><!-->
-		<link rel="stylesheet" href="/css/style.css?{{ style_hash }}">
+		<link rel="stylesheet" href="/css/style.css?{{ site.header_scripts.js }}">
 	<!--<![endif]-->
 
 	<!-- header scripts -->
-	{% if site.jsconsole %}
-	<script src="http://jsconsole.com/remote.js?D4B3A2E7-98DC-4EE9-A343-488D573CAE1D"></script>
-	{% endif %}
-	<script src="/js/header_scripts.js?{{ js_h_hash }}"></script>
+	<script src="/js/header_scripts.js?{{ site.header_scripts.js }}"></script>
 </head>
 
 {% if page.post %}
@@ -83,7 +80,7 @@
 		<p><a href="//dizaina.net" class="logo"><span>&empty; </span>dizaina.net</a></p>
 	</footer>
 
-	<script src="/js/scripts.js?{{ js_hash }}"></script>
+	<script src="/js/scripts.js"></script>
 	<!--[if lte IE 8]>
 		<script src="/js/selectivizr.min.js"></script>
 	<![endif]-->

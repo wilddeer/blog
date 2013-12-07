@@ -1,6 +1,5 @@
 $(function() {
 
-
 	$('.js-peppermint').Peppermint({
 		dots: true,
 		mouseDrag: true
@@ -25,9 +24,4 @@ $(function() {
 	for (var i = 0; i < dzDelayed.length; i++) {
 		dzDelayed[i]();
 	};
-	
-
-	{% if site.dev %}
-		console.log(Pixelizr.run());
-	{% endif %}
 });
