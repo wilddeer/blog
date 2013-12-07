@@ -57,7 +57,7 @@ module.exports = function(grunt) {
 						'_src/css/ie8.css',
 					],
 
-					'steam/css/styles.css': [
+					'css/steam/styles.css': [
 						'_src/css/normalize.css',
 						'_src/peppermint/peppermint.required.css',
 						'_src/peppermint/peppermint.suggested.css',
@@ -92,7 +92,11 @@ module.exports = function(grunt) {
 						'_src/js/head.js',
 					],
 
-					'steam/js/scripts.js': [
+					'js/selectivizr.min.js': [
+						'_src/js/selectivizr.min.js',
+					],
+
+					'js/steam/scripts.js': [
 						'_src/js/jquery-1.10.2.min.js',
 						'_src/peppermint/peppermint.min.js',
 						'_src/js/slime.js',
@@ -101,17 +105,17 @@ module.exports = function(grunt) {
 						'_src/steam/js/init.js',
 					],
 
-					'steam/js/modernizr.js': [
+					'js/steam/modernizr.js': [
 						'_src/js/modernizr.js',
 					],
 				},
 			},
 
-			yml: {
+			cfg: {
 				files: {
 					'_config.yml': [
-						'_src/yml/config.yml',
-						'_src/yml/map.yml',
+						'_src/config.yml',
+						'temp/map.yml',
 					]
 				}
 			}
@@ -127,7 +131,7 @@ module.exports = function(grunt) {
 
 			steam: {
 				files: {
-					'steam/css/ie.css': ['steam/css/styles.css']
+					'css/steam/ie.css': ['css/steam/styles.css']
 				}
 			}
 		},
@@ -141,15 +145,15 @@ module.exports = function(grunt) {
 				options: {
 					basedir: 'js/'
 				},
-				src: 'js/*.js'
+				src: 'js/**/*.js'
 			},
 			css: {
 				options: {
 					basedir: 'css/'
 				},
-				src: 'css/*.css'
+				src: 'css/**/*.css'
 			},
-			steam: {
+			/*steam: {
 				options: {
 					basedir: '',
 					hashmap: 'temp/map.json'
@@ -159,13 +163,13 @@ module.exports = function(grunt) {
 					'steam/css/ie.css',
 					'steam/js/scripts.js'
 				]
-			}
+			}*/
 		},
 
 		convert: {
 			json2yaml: {
 				src: ['temp/map.json'],
-				dest: '_src/yml/map.yml'
+				dest: 'temp/map.yml'
 			}
 		},
 
@@ -182,7 +186,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-comment-media-queries');
 	grunt.loadNpmTasks('grunt-convert');
 
-	grunt.registerTask('build', ['concat:css', 'concat:js', 'comment-media-queries', 'hashify', 'convert', 'concat:yml']);
+	grunt.registerTask('build', ['concat:css', 'concat:js', 'comment-media-queries', 'hashify', 'convert', 'concat:cfg']);
 	grunt.registerTask('w', ['build', 'watch']);
 	grunt.registerTask('default', 'build');
 };

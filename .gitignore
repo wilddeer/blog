@@ -1,5 +1,6 @@
-_site
-node_modules
-temp
-css/dist
-js/dist
+_config.yml
+/_site
+/node_modules
+/temp
+/css
+/js
