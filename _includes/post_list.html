@@ -1,4 +1,5 @@
 <ul class="posts">
+	{% capture whitespaces %}
 	{% for post in site.posts %}
 		{% include cats.htm c=post.categories %}
 		{% if site.cats[cats] and site.cats[cats].link != page.cat %}
@@ -8,8 +9,15 @@
 		{% endif %}
 		{% if post.lang == page.lang %}
 			{% if (post.categories contains page.cat) or (page.cat == false) %}
+			{% capture pst %}
 			<li><a href="{{ post.url }}">{{ post.title }}</a> {{ cat }} <time datetime="{{ post.date }}">{% include date.htm d=post.date %}</time></li>
+			{% endcapture%}
 			{% endif %}
+		{% else %}
+			{% assign pst = "" %}
 		{% endif %}
+		{% capture postlist %}{{postlist}}{{pst}}{% endcapture %}}
 	{% endfor %}
-</ul>
+	{% endcapture %}
+	{{ postlist }}
+		</ul>

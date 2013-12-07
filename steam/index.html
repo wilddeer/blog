@@ -1,3 +1,5 @@
+---
+---
 <!doctype html>
 <!--[if lt IE 8]> <html class="no-js ie ie8 ie7"> <![endif]-->
 <!--[if IE 8]> <html class="no-js ie ie8"> <![endif]-->
@@ -13,7 +15,13 @@
 	<title>Steam store game page demo</title>
 
 	<!-- styles -->
-	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<!--[if lt IE 9]>
+		<link rel="stylesheet" href="css/ie.css?{{ site['steam/css/ie.css'] }}">
+	<![endif]-->
+	<!--[if gt IE 8]><!-->
+		<link rel="stylesheet" type="text/css" href="css/styles.css?{{ site['steam/css/styles.css'] }}">
+	<!--<![endif]-->
+
 	<style>
 		body {
 			background-image: url(i/page.bg.mob.jpg);
@@ -28,7 +36,7 @@
 	</style>
 	
 	<!-- header scripts -->
-	<script type="text/javascript" src="/js/modernizr.js"></script>
+	<script type="text/javascript" src="js/modernizr.js"></script>
 </head>
 
 <body class="store-game-page">
@@ -640,7 +648,7 @@
 	<!--[if lte IE 8]>
 		<script src="/js/selectivizr.min.js"></script>
 	<![endif]-->
-	<script type="text/javascript" src="js/scripts.js"></script>
+	<script type="text/javascript" src="js/scripts.js?{{ site['steam/js/scripts.js'] }}"></script>
 
 </body>
 </html>

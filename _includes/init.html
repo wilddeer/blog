@@ -15,34 +15,4 @@
 {% endif %}
 {% capture content_parsed %}{{ content_parsed | replace: ' — ', '&nbsp;— ' | replace: ' – ', '&nbsp;– ' | replace: ' &#8212; ', '&nbsp;&#8212; ' | replace: ' &#8211; ', '&nbsp;&#8211; ' }}{% endcapture %}
 
-{% capture js %}
-{% include js/compiled/scripts.js %}
-{% endcapture %}
-
-{% assign js_hash = js | size %}
-
-{% capture js_h %}
-{% include js/compiled/header_scripts.js %}
-{% endcapture %}
-
-{% assign js_h_hash = js_h | size %}
-
-{% capture style %}
-{% include css/compiled/style.css %}
-{% endcapture %}
-
-{% assign style_hash = style | size %}
-
-{% capture ie8_style %}
-{% include css/compiled/ie8.css %}
-{% endcapture %}
-
-{% assign ie8_style_hash = ie8_style | size %}
-
-{% capture ie7_style %}
-{% include css/compiled/ie7.css %}
-{% endcapture %}
-
-{% assign ie7_style_hash = ie7_style | size %}
-
 {% endcapture %}

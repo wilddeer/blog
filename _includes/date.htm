@@ -1,12 +1,7 @@
-{% capture date %}
-{{ include.d | date: "%B %-d, %Y" }}
-{% endcapture %}
+{% capture whitespaces %}
+{% capture date %}{{ include.d | date: "%B %-d, %Y" }}{% endcapture %}
 
 {% if page.lang == 'ru' %}
-{% capture date %}
-{{ include.d | date: "%-d %B %Y" }}
-{% endcapture %}
-{{ date | replace: 'January', 'января' | replace: 'February', 'февраля' | replace: 'March', 'марта' | replace: 'April', 'апреля' | replace: 'May', 'мая' | replace: 'June', 'июня' | replace: 'July', 'июля' | replace: 'August', 'августа' | replace: 'September', 'сентября' | replace: 'October', 'октября' | replace: 'November', 'ноября' | replace: 'December', 'декабря' |}}
-{% else %}
-{{ date }}
+{% capture date %}{{ include.d | date: "%-d %B %Y" | replace: 'January', 'января' | replace: 'February', 'февраля' | replace: 'March', 'марта' | replace: 'April', 'апреля' | replace: 'May', 'мая' | replace: 'June', 'июня' | replace: 'July', 'июля' | replace: 'August', 'августа' | replace: 'September', 'сентября' | replace: 'October', 'октября' | replace: 'November', 'ноября' | replace: 'December', 'декабря' }}{% endcapture %}
 {% endif %}
+{% endcapture%}{{ date }}

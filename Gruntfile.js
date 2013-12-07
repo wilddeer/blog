@@ -12,7 +12,7 @@ module.exports = function(grunt) {
 				files: {
 					'css/style.css': [
 						'_src/css/font-face.css',
-						'_src/css/boilerplate.css',
+						'_src/css/normalize.css',
 						'_src/css/rem-mobile-fallback.css',
 						'_src/peppermint/peppermint.required.css',
 						'_src/peppermint/peppermint.suggested.css',
@@ -28,7 +28,7 @@ module.exports = function(grunt) {
 
 					'temp/ie7.css': [
 						'_src/css/ie-font-face.css',
-						'_src/css/boilerplate.css',
+						'_src/css/normalize.css',
 						'_src/css/rem-mobile-fallback.css',
 						'_src/peppermint/peppermint.required.css',
 						'_src/peppermint/peppermint.suggested.css',
@@ -44,7 +44,7 @@ module.exports = function(grunt) {
 
 					'temp/ie8.css': [
 						'_src/css/ie-font-face.css',
-						'_src/css/boilerplate.css',
+						'_src/css/normalize.css',
 						'_src/css/rem-mobile-fallback.css',
 						'_src/peppermint/peppermint.required.css',
 						'_src/peppermint/peppermint.suggested.css',
@@ -55,6 +55,19 @@ module.exports = function(grunt) {
 						'_src/css/syntax/syntax.css',
 						'_src/css/font.css',
 						'_src/css/ie8.css',
+					],
+
+					'steam/css/styles.css': [
+						'_src/css/normalize.css',
+						'_src/peppermint/peppermint.required.css',
+						'_src/peppermint/peppermint.suggested.css',
+						'_src/steam/css/base.css',
+						'_src/steam/css/classes.css',
+						'_src/steam/css/modules.css',
+						'_src/steam/css/grid.css',
+						'_src/steam/css/layout.css',
+						'_src/steam/css/page.css',
+						'_src/steam/css/sprites.css'
 					],
 				},
 			},
@@ -78,6 +91,19 @@ module.exports = function(grunt) {
 						'_src/js/sniffer.bonus.js',
 						'_src/js/head.js',
 					],
+
+					'steam/js/scripts.js': [
+						'_src/js/jquery-1.10.2.min.js',
+						'_src/peppermint/peppermint.min.js',
+						'_src/js/slime.js',
+						'_src/steam/js/collapser.js',
+						'_src/steam/js/tools.js',
+						'_src/steam/js/init.js',
+					],
+
+					'steam/js/modernizr.js': [
+						'_src/js/modernizr.js',
+					],
 				},
 			},
 
@@ -92,12 +118,18 @@ module.exports = function(grunt) {
 		},
 
 		'comment-media-queries': {
-			ie7: {
+			ie: {
 				files: {
 					'css/ie7.css': ['temp/ie7.css'],
 					'css/ie8.css': ['temp/ie8.css']
 				}
 			},
+
+			steam: {
+				files: {
+					'steam/css/ie.css': ['steam/css/styles.css']
+				}
+			}
 		},
 
 		hashify: {
@@ -116,6 +148,17 @@ module.exports = function(grunt) {
 					basedir: 'css/'
 				},
 				src: 'css/*.css'
+			},
+			steam: {
+				options: {
+					basedir: '',
+					hashmap: 'temp/map.json'
+				},
+				src: [
+					'steam/css/styles.css',
+					'steam/css/ie.css',
+					'steam/js/scripts.js'
+				]
 			}
 		},
 
@@ -127,15 +170,8 @@ module.exports = function(grunt) {
 		},
 
 		watch: {
-			js: {
-				files: ['_src/**.js'],
-				tasks: ['concat:js', 'concat:headJs']
-			},
-
-			css: {
-				files: ['_src/**.js'],
-				tasks: ['concat:css', 'concat:ie7', 'concat:ie8']
-			},
+			files: ['_src/**/*.js','_src/**/*.css'],
+			tasks: ['build']
 		},
 	});
 
@@ -147,6 +183,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-convert');
 
 	grunt.registerTask('build', ['concat:css', 'concat:js', 'comment-media-queries', 'hashify', 'convert', 'concat:yml']);
-	/*grunt.registerTask('w', ['build', 'watch']);*/
+	grunt.registerTask('w', ['build', 'watch']);
 	grunt.registerTask('default', 'build');
 };

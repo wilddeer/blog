@@ -161,7 +161,7 @@ function Slime(_this, options) {
 	function touchInit() {
 		var startPosition;
 
-		burrito = eventBurrito(_this, {
+		burrito = EventBurrito(_this, {
 			clickTolerance: 5,
 			start: function(event, start) {
 				//firefox doesn't want to apply the cursor from `:active` CSS rule, have to add a class :-/

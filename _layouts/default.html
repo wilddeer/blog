@@ -20,19 +20,19 @@
 
 	<!-- styles -->
 	<!--[if lt IE 8]>
-		<link rel="stylesheet" href="/css/ie7.css">
+		<link rel="stylesheet" href="/css/ie7.css?{{ site['ie7.css'] }}">
 	<![endif]-->
 	
 	<!--[if IE 8]>
-		<link rel="stylesheet" href="/css/ie8.css">
+		<link rel="stylesheet" href="/css/ie8.css?{{ site['ie8.css'] }}">
 	<![endif]-->
 
 	<!--[if gt IE 8]><!-->
-		<link rel="stylesheet" href="/css/style.css?{{ site.header_scripts.js }}">
+		<link rel="stylesheet" href="/css/style.css?{{ site['style.css'] }}">
 	<!--<![endif]-->
 
 	<!-- header scripts -->
-	<script src="/js/header_scripts.js?{{ site.header_scripts.js }}"></script>
+	<script src="/js/header_scripts.js?{{ site['header_scripts.js'] }}"></script>
 </head>
 
 {% if page.post %}
@@ -80,7 +80,7 @@
 		<p><a href="//dizaina.net" class="logo"><span>&empty; </span>dizaina.net</a></p>
 	</footer>
 
-	<script src="/js/scripts.js"></script>
+	<script src="/js/scripts.js?{{ site['scripts.js'] }}"></script>
 	<!--[if lte IE 8]>
 		<script src="/js/selectivizr.min.js"></script>
 	<![endif]-->
