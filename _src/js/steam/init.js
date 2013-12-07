@@ -1,4 +1,5 @@
 $(function() {
+	var body = $('body');
 
 	/* init the gallery */
 	$('.js-peppermint').each(function() {
@@ -7,9 +8,10 @@ $(function() {
 			thumbs = $(this).find('.thumb'),
 			arrPrev = $(this).find('.arrow-prev'),
 			arrNext = $(this).find('.arrow-next'),
-			body = $('body'),
 			slidesNumber,
 			currentSlide;
+
+		var scroller = Slime(thumbBlock[0]);
 
 		var gallery = Peppermint(this, {
 			slidesContainer: slidesBlock[0],
@@ -26,6 +28,8 @@ $(function() {
 
 				$(thumbs[n]).addClass('active');
 
+				scroller.moveElementToViewport(thumbs[n], 24);
+
 				arrPrev.removeClass('disabled');
 				arrNext.removeClass('disabled');
 
@@ -40,15 +44,13 @@ $(function() {
 			}
 		});
 
-		var thumbScroller = Slime(thumbBlock[0]);
-
 		slidesNumber = gallery.getSlidesNumber();
 
 		/* bind click & enter handler to thumbs */
 		for (var i = thumbs.length - 1; i >= 0; i--) {
 			$(thumbs[i]).on('click keyup', function(n) {
 				return function(event) {
-					if (thumbScroller.getClicksAllowed() && (event.type == 'click' || event.keyCode == 13)) {
+					if (scroller.getClicksAllowed() && (event.type == 'click' || event.keyCode == 13)) {
 						gallery.slideTo(n);
 						gallery.stop();
 					}
@@ -56,16 +58,24 @@ $(function() {
 			}(i));
 		};
 
-		arrPrev.on('touchend.prev click.prev', function(event) {
+		arrPrev.on('touchend click.prev keyup', function(event) {
+			if (event.type == 'keyup' && event.keyCode !== 13) return;
+
 			prev();
+
 			/* prevent zooming and clicking after touch */
 			event.preventDefault();
+			event.stopPropagation();
 		});
 
-		arrNext.on('touchend.next click.next', function(event) {
+		arrNext.on('touchend click.next keyup', function(event) {
+			if (event.type == 'keyup' && event.keyCode !== 13) return;
+
 			next();
+
 			/* prevent zooming and clicking after touch */
 			event.preventDefault();
+			event.stopPropagation();
 		});
 
 		/* remove click handlers when using touch */
@@ -77,21 +87,24 @@ $(function() {
 			arrNext.off('click.next');
 		});
 
-		arrPrev.on('click', function(event) {
-			event.stopPropagation();
-		});
-
-		arrNext.on('click', function(event) {
-			event.stopPropagation();
-		});
-
 		/* touch check */
-		slidesBlock.one('mouseout', function(event) {
-			arrNext.removeClass('shown');
-			arrPrev.removeClass('shown');
-			arrNext.addClass('auto');
-			arrPrev.addClass('auto');
-		});
+		if (!!window.navigator.pointerEnabled || !!window.navigator.msPointerEnabled) {
+			body.one('pointermove MSPointerMove', function(event) {
+				if (event.pointerType == (event.MSPOINTER_TYPE_MOUSE || 'mouse')) {
+					autoArrows();
+				}
+			});
+		}
+		else {
+			body.one('mousemove.touchtest', function(event) {
+				body.off('touchstart.touchtest');
+				autoArrows();
+			});
+
+			body.one('touchstart.touchtest', function(event) {
+				body.off('mousemove.touchtest');
+			});
+		}
 
 		function prev() {
 			if (currentSlide == 0) return;
@@ -116,15 +129,26 @@ $(function() {
 			arrNext.removeClass('shown');
 			arrPrev.removeClass('shown');
 		}
+
+		function autoArrows() {
+			arrNext.removeClass('shown');
+			arrPrev.removeClass('shown');
+			arrNext.addClass('auto');
+			arrPrev.addClass('auto');
+		}
 	});
 
 	/* prevent focus*/
-	$('body').on('click', function(event) {
+	addEvent(body[0], 'click', function(event) {
 		if ((document.activeElement.tagName == 'BUTTON' ||
 			document.activeElement.getAttribute('tabindex'))
 			&& event.clientX !== 0 && event.clientY !== 0 && event.offsetX !== 0 && event.offsetY !== 0) {
 			document.activeElement.blur();
 		}
-	});
+	}, true);
+
+	/* collapser */
+	$('.user-review .review-text').collapser(320);
+	$('.game-description .description-text').collapser(450);
 
 });

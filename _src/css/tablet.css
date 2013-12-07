@@ -9,10 +9,7 @@
     \/__/\/__/\/_/ \/___/  \/____/\/____/ \/__/                                             
 */
 
-{% unless include.ie %}
 @media all and (min-width: 30em) {
-{% endunless %}
-
 	body {
 		padding: 1.5em 0 0;
 	}
@@ -76,15 +73,9 @@
 	input.big {
 		font-size: 1.2em;
 	}
-
-{% unless include.ie %}
 }
-{% endunless %}
 
-{% unless include.ie %}
 @media all and (min-width: 40em) {
-{% endunless %}
-
 	/* base */
 	h1 {
 		font-size: 3em;
@@ -146,16 +137,10 @@
 	table.specification th:last-child {
 		width: 65%;
 	}
-
-{% unless include.ie %}
 }
-{% endunless %}
 
-{% unless include.ie %}
 @media all and (min-width: 50em) {
-{% endunless %}
 	/* blocks */
-
 	body > footer ul.footer-links li {
 		display: inline-block;
 		margin: 0;
@@ -168,35 +153,17 @@
 	body > footer ul.footer-links li:last-child:after {
 		content: '';
 	}
-
-{% unless include.ie %}
 }
-{% endunless %}
-
 
 /* HEIGHT STUFF */
-
-{% unless include.ie %}
 @media all and (min-height: 600px) {
-{% endunless %}
-
 	figure img {
 		max-height: 450px;
 	}
-
-{% unless include.ie %}
 }
-{% endunless %}
 
-
-{% unless include.ie %}
 @media all and (min-height: 750px) {
-{% endunless %}
-
 	figure img {
 		max-height: none;
 	}
-
-{% unless include.ie %}
 }
-{% endunless %}

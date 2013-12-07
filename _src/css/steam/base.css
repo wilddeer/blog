@@ -137,3 +137,12 @@ tr {
 	border-color: #333; /* fallback */
 	border-color: rgba(255,255,255,0.1);
 }
+
+/* forms */
+button:focus {
+	outline: 1px dotted;
+}
+
+button:active {
+	outline: none;
+}

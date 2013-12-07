@@ -135,7 +135,6 @@ PAGE
 	border-color: #4d4d4d;
 	overflow: hidden; /* clearfix */
 	background: #262626;
-	background: rgba(45,45,45,0.8);
 	padding: 1em 1em 0.5em;
 }
 
@@ -148,13 +147,13 @@ PAGE
 	margin-bottom: 0;
 }
 
-html.js .game-description .description-text.minimized {
+html.js .game-description .description-text.collapsed {
 	position: relative;
-	max-height: 300px;
+	max-height: 350px;
 	overflow: hidden;
 }
 
-html.js .game-description .description-text.minimized:after {
+html.js .game-description .description-text.collapsed:after {
 	content: '';
 	pointer-events: none;
 	position: absolute;
@@ -175,29 +174,34 @@ html.js .game-description .description-text.minimized:after {
 	display: none;
 }
 
-html.js .game-description .description-text.minimized + .expand {
+html.js .game-description .description-text.collapsed + .expand {
 	display: block;
 }
 
 @media all and (min-width: 45em) {
-	html.js .game-description .description-text.minimized {
+	html.js .game-description .description-text.collapsed {
 		max-height: none;
 	}
 
-	html.js .game-description .description-text.minimized:after,
-	html.js .game-description .description-text.minimized + .expand {
+	html.js .game-description .description-text.collapsed:after,
+	html.js .game-description .description-text.collapsed + .expand {
 		display: none;
 	}
 }
 
-.game-info {
-	background: url(../i/transparent-gray.png); /* fallback */
-	background: rgba(64,64,64,0.3);
+.game-sidebar {
+	background: #1e1e1e;
 	padding: 1em 1em 0;
 	overflow: hidden;
 }
 
-.game-info > p.hr {
+@media all and (min-width: 45em) {
+	.game-sidebar {
+		background: rgba(64,64,64,0.3);
+	}
+}
+
+.game-sidebar > p.hr {
 	margin-bottom: 1em;
 }
 

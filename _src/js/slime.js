@@ -2,14 +2,16 @@ function Slime(_this, options) {
 	var noop = function() {},
 		o = options || {},
 		transitionSpeed = 300,
+		animationTimer,
 		contentBlock,
 		contentWidth,
 		slimeWidth,
 		positionMin,
-		eHandler,
+		burrito,
 		currentPosition = 0;
 
 	o.cssPrefix = o.cssPrefix || '';
+	o.borderPadding = o.borderPadding || 24;
 	o.onClick = o.onClick || noop;
 
 	var classes = {
@@ -65,11 +67,13 @@ function Slime(_this, options) {
 		contentBlock.style.OTransitionDuration = 
 		contentBlock.style.transitionDuration = time;
 
-		setPos(pos);
+		setPos(Math.floor(pos));
 	}
 
 	//fallback to `setInterval` animation for UAs with no CSS transitions
 	function changePosFallback(pos, speed) {
+		pos = Math.floor(pos);
+
 		animationTimer && clearInterval(animationTimer);
 
 		if (!speed) {
@@ -126,11 +130,39 @@ function Slime(_this, options) {
 		currentPosition = pos;
 	}
 
+	function scrollTo(pos) {
+		if (pos > 0) {
+			pos = 0;
+		}
+		else if (pos < positionMin) {
+			pos = positionMin;
+		}
+
+		changePos(pos, transitionSpeed);
+	}
+
+	function scrollToElement(element) {
+		scrollTo(-element.offsetLeft);
+	}
+
+	function moveElementToViewport(element, padding) {
+		var pos = -element.offsetLeft + (padding || o.borderPadding),
+			width = element.offsetWidth + 2*(padding || o.borderPadding);
+
+		if (currentPosition < pos) {
+			scrollTo(pos);	
+		}
+		else if (currentPosition - slimeWidth > pos - width) {
+			scrollTo(pos - width + slimeWidth);
+		}
+	}
+
 	//init touch events
 	function touchInit() {
 		var startPosition;
 
-		eHandler = eventBurrito(_this, {
+		burrito = eventBurrito(_this, {
+			clickTolerance: 5,
 			start: function(event, start) {
 				//firefox doesn't want to apply the cursor from `:active` CSS rule, have to add a class :-/
 				addClass(_this, classes.drag);
@@ -139,6 +171,8 @@ function Slime(_this, options) {
 			move: function(event, start, diff, speed) {
 				var linearPosition = startPosition + diff.x,
 					overlap = Math.max(linearPosition, 0) || Math.min((linearPosition - positionMin), 0);
+
+				if (Math.abs(diff.x) < 6 && diff.time < 150) return;
 
 				diff.x -= overlap - overlap / (Math.abs(overlap)/slimeWidth*2 + 1);
 
@@ -149,39 +183,35 @@ function Slime(_this, options) {
 				//remove the drag class
 				removeClass(_this, classes.drag);
 
-				/*if (currentPosition > 0) {
-					changePos(0, transitionSpeed);
+				if (Math.abs(diff.x) < 6 && diff.time < 150) return;
+
+				if (Math.abs(speed.x) < 0.5) speed.x /= 2;
+
+				speed.x /= 2;
+
+				var posDiff = speed.x*Math.pow(Math.abs(speed.x), 0.5)*transitionSpeed/1.5;
+				var targetPosition = currentPosition + posDiff;
+
+				var targetOverlap = Math.abs(Math.max(targetPosition, 0) || Math.min((targetPosition - positionMin), 0));
+				var overlap = Math.min(targetOverlap / 5, 150);
+				var overlapDiff = targetOverlap - overlap;
+				var targetSpeed = Math.max(0, transitionSpeed - (overlapDiff / (Math.abs(posDiff) + 1))*transitionSpeed);
+
+				if (targetPosition > 0) {
+					targetSpeed && changePos(overlap, targetSpeed);
+					setTimeout(function() {
+						changePos(0, transitionSpeed);
+					}, targetSpeed);
 				}
-				else if (currentPosition < positionMin) {
-					changePos(positionMin, transitionSpeed);
+				else if (targetPosition < positionMin) {
+					targetSpeed && changePos(positionMin - overlap, targetSpeed);
+					setTimeout(function() {
+						changePos(positionMin, transitionSpeed);
+					}, targetSpeed);
 				}
-				else if (Math.abs(speed.x) > 0.15) {*/
-					var posDiff = speed.x*transitionSpeed/1.5;
-					var targetPosition = currentPosition + posDiff;
-
-					var targetOverlap = Math.abs(Math.max(targetPosition, 0) || Math.min((targetPosition - positionMin), 0));
-					var overlap = Math.min(targetOverlap / 5, 150);
-					var overlapDiff = targetOverlap - overlap;
-					var targetSpeed = Math.max(0, transitionSpeed - (overlapDiff / (Math.abs(posDiff) + 1))*transitionSpeed);
-
-					console.log(targetSpeed);
-
-					if (targetPosition > 0) {
-						targetSpeed && changePos(overlap, targetSpeed);
-						setTimeout(function() {
-							changePos(0, transitionSpeed);
-						}, targetSpeed);
-					}
-					else if (targetPosition < positionMin) {
-						targetSpeed && changePos(positionMin - overlap, targetSpeed);
-						setTimeout(function() {
-							changePos(positionMin, transitionSpeed);
-						}, targetSpeed);
-					}
-					else {
-						changePos(targetPosition, transitionSpeed);
-					}
-				/*}*/
+				else {
+					changePos(targetPosition, transitionSpeed);
+				}
 			},
 			click: function(event) {
 				o.onClick(event);
@@ -191,7 +221,7 @@ function Slime(_this, options) {
 
 	function getWidths() {
 		slimeWidth = _this.offsetWidth;
-		contentWidth = contentBlock.scrollWidth;
+		contentWidth = _this.scrollWidth;
 		positionMin = slimeWidth - contentWidth;
 	}
 
@@ -199,9 +229,17 @@ function Slime(_this, options) {
 		//If the UA doesn't support css transforms or transitions -- use fallback functions.
 		//Separate functions instead of checks for better performance.
 		if (!support.transforms || !!window.opera) setPos = setPosFallback;
-		if (!support.transitions) changePos = changePosFallback;
+		if (!support.transitions || !!window.opera) changePos = changePosFallback;
 
 		contentBlock = _this.children[0];
+
+		addEvent(_this, 'focus', _this.onfocusin = function(event) {
+			_this.scrollLeft = 0;
+			setTimeout(function() {
+				_this.scrollLeft = 0;
+			}, 0);
+			event.target && moveElementToViewport(event.target);
+		}, true);
 
 		/* set classes */
 		addClass(contentBlock, classes.scroller);
@@ -223,7 +261,13 @@ function Slime(_this, options) {
 
 	return {
 		getClicksAllowed: function() {
-			return eHandler.getClicksAllowed();
-		}
+			return burrito.getClicksAllowed();
+		},
+
+		scrollTo: scrollTo,
+
+		scrollToElement: scrollToElement,
+
+		moveElementToViewport: moveElementToViewport
 	}
 }

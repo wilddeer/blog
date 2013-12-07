@@ -9,10 +9,10 @@
 	background-repeat: no-repeat;
 	vertical-align: text-top;
 }
-html.svg [class*="icon-b-"]:before,
+/*html.svg [class*="icon-b-"]:before,
 html.svg [class*="icon-a-"]:after {
 	background-image: url(../i/sprites.svg);
-}
+}*/
 i[class*="icon-b-"]:before,
 i[class*="icon-a-"]:after {
 	margin-left: 0;
@@ -531,17 +531,23 @@ i[class*="icon-a-"]:after {
 @media all and (min-width: 35em) {
 	.icon-big[class*="icon-b-"]:before,
 	.icon-big[class*="icon-a-"]:after {
-		width: 34px;
-		height: 32px;
-		background-size: 1008px 480px;
+		width: 26px;
+		height: 24px;
+		background-size: 756px 360px;
+		background-image: url(../i/sprites@2.png);
 	}
+
+	/*html.svg [class*="icon-b-"]:before,
+	html.svg [class*="icon-a-"]:after {
+		background-image: url(../i/sprites.svg);
+	}*/
 
 	.icon-big.icon-b-chevron-left:before,
 	.icon-big.icon-a-chevron-left:after {
-		background-position: 6px -128px;
+		background-position: 4px -96px;
 	}
 	.icon-big.icon-b-chevron-right:before,
 	.icon-big.icon-a-chevron-right:after {
-		background-position: -60px -128px;
+		background-position: -45px -96px;
 	}
 }

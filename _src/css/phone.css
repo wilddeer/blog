@@ -11,22 +11,13 @@
     \/_/                                 
 */
 
-{% unless include.ie %}
 @media all and (min-width: 18em) {
-{% endunless %}
-
 	html {
 		font-size: 90%;
 	}
-
-{% unless include.ie %}
 }
-{% endunless %}
 
-{% unless include.ie %}
 @media all and (min-width: 25em) {
-{% endunless %}
-
 	html {
 		font-size: 100%;
 	}
@@ -38,7 +29,4 @@
 	.content ul.posts li:before {
 		visibility: visible;
 	}
-
-{% unless include.ie %}
 }
-{% endunless %}

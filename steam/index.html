@@ -13,17 +13,7 @@
 	<title>Steam store game page demo</title>
 
 	<!-- styles -->
-	<link rel="stylesheet" type="text/css" href="../_includes/css/boilerplate.css">
-	<link rel="stylesheet" type="text/css" href="../_includes/peppermint/peppermint.required.css">
-	<link rel="stylesheet" type="text/css" href="../_includes/peppermint/peppermint.suggested.css">
-	<link rel="stylesheet" type="text/css" href="css/slime.css">
-	<link rel="stylesheet" type="text/css" href="css/base.css">
-	<link rel="stylesheet" type="text/css" href="css/classes.css">
-	<link rel="stylesheet" type="text/css" href="css/modules.css">
-	<link rel="stylesheet" type="text/css" href="css/layout.css">
-	<link rel="stylesheet" type="text/css" href="css/grid.css">
-	<link rel="stylesheet" type="text/css" href="css/page.css">
-	<link rel="stylesheet" type="text/css" href="css/sprites.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
 	<style>
 		body {
 			background-image: url(i/page.bg.mob.jpg);
@@ -38,7 +28,7 @@
 	</style>
 	
 	<!-- header scripts -->
-	<script type="text/javascript" src="../_includes/js/modernizr.js"></script>
+	<script type="text/javascript" src="/js/modernizr.js"></script>
 </head>
 
 <body class="store-game-page">
@@ -100,62 +90,12 @@
 					</figure>
 				</div>
 
-				<span class="arrow-prev icon-b-chevron-left icon-big shown"></span>
-				<span class="arrow-next icon-b-chevron-right icon-big shown"></span>
+				<span tabindex="0" class="arrow-prev icon-b-chevron-left icon-big shown"></span>
+				<span tabindex="0" class="arrow-next icon-b-chevron-right icon-big shown"></span>
 			</div>
 
 			<div class="thumbs slime js-slime inactive">
 				<ul>
-					<li tabindex="0" class="thumb">
-						<img width="115" height="65" src="i/p1.jpg">
-					</li>
-
-					<li tabindex="0" class="thumb">
-						<img width="115" height="65" src="i/p2.jpg">
-					</li>
-
-					<li tabindex="0" class="thumb">
-						<img width="115" height="65" src="i/p3.jpg">
-					</li>
-
-					<li tabindex="0" class="thumb">
-						<img width="115" height="65" src="i/p4.jpg">
-					</li>
-
-					<li tabindex="0" class="thumb">
-						<img width="115" height="65" src="i/p5.jpg">
-					</li>
-
-					<li tabindex="0" class="thumb">
-						<img width="115" height="65" src="i/p6.jpg">
-					</li>
-
-
-					<li tabindex="0" class="thumb">
-						<img width="115" height="65" src="i/p1.jpg">
-					</li>
-
-					<li tabindex="0" class="thumb">
-						<img width="115" height="65" src="i/p2.jpg">
-					</li>
-
-					<li tabindex="0" class="thumb">
-						<img width="115" height="65" src="i/p3.jpg">
-					</li>
-
-					<li tabindex="0" class="thumb">
-						<img width="115" height="65" src="i/p4.jpg">
-					</li>
-
-					<li tabindex="0" class="thumb">
-						<img width="115" height="65" src="i/p5.jpg">
-					</li>
-
-					<li tabindex="0" class="thumb">
-						<img width="115" height="65" src="i/p6.jpg">
-					</li>
-
-
 					<li tabindex="0" class="thumb">
 						<img width="115" height="65" src="i/p1.jpg">
 					</li>
@@ -258,7 +198,7 @@
 				</section>
 
 				<section class="game-description">
-					<div class="description-text minimized">
+					<div class="description-text">
 						<h2>About the Game</h2>
 
 						<p>Continue your journey as the legendary assassin, Daud, in Dishonored: The Brigmore Witches. Access Daud’s weapons, gadgets, allies and supernatural abilities once more, and bring his twisted narrative that began with The Knife of Dunwall to a close.</p>
@@ -298,7 +238,7 @@
 				</section>
 			</div>
 
-			<aside class="game-info grid-col-4">
+			<aside class="game-sidebar grid-col-4">
 				<section class="game-buy-share hidden-mobile">
 					<div class="price-area">
 						<p class="small info">Autumn sale! Offer ends December 3.</p>
@@ -543,7 +483,9 @@
 		<section class="game-customer-reviews grid-base">
 			<header class="grid-cell">
 				<h2 class="grid-col-7">Helpful customer reviews</h2>
-				<a href="#" class="grid-col-3 grid-text-right small browse-all-link">Browse all 11 reviews</a>
+				<div class="grid-col-3 grid-text-right">
+					<a href="#" class="small">Browse all 11 reviews</a>
+				</div>
 			</header>
 
 			<article class="user-review">
@@ -559,7 +501,7 @@
 					<p class="additional-info"><span class="green icon-b-thumbs-up2">Recommended</span> • 422 products in account • 5 of 6 people (83%) found this review helpful</p>
 				</header>
 
-				<div class="review-text minimized">
+				<div class="review-text">
 					<p>Continuing from where The Knife of Dunwall left off, The Brigmore Witches once again places you in the role of Daud, offering three more levels, two new factions to face and new gadgets and powers to utilize and an ending that changes not only your fate, but also influences the fate of the city.</p>
 
 					<p>The level design and gameplay flow has improved by multitudes from tKoD, levels feel more fluid and are much more fun to move through. Brigmore Witches also introduces "Corrupted" Bone Charms, which offer powerful bonuses at the cost of a debuff, these charms offer a new factor to your inventory, making the player consider the pros and cons of equipping them based on their own respective playstyle. One of the most unique additions is the option to disguise yourself in the first mission, allowing you to move through the first area unhindered so long as you don't do anything suspicious.</p>
@@ -569,7 +511,7 @@
 					<p>Dishonored: The Brigmore Witches is an enjoyable and solid expansion to the game, and like it's predecessor it is only $10.00, which is a very agreeable price for this much content packaged into three levels.</p>
 				</div>
 
-				<p class="review-expand"><button class="pseudo-link icon-a-angle-down"><span>Expand</span></button></p>
+				<p class="expand"><button class="pseudo-link icon-a-angle-down"><span>Expand</span></button></p>
 
 				<footer class="grid-cell">
 					<p class="additional-info grid-col-5">Posted: 14 August 2013</p>
@@ -615,7 +557,7 @@
 					<p>Like, this is some Looking Glass Studios-tier stuff here. The second and third mission especially - they pour on a truly stunning amount of lore, atmosphere, and intensity. I must recommend that you first play the other DLC, The Knife of Dunwall. Both are some of the highest-quality DLC missions I've ever played in any game.</p>
 				</div>
 
-				<p class="review-expand"><button class="pseudo-link icon-a-angle-down"><span>Expand</span></button></p>
+				<p class="expand"><button class="pseudo-link icon-a-angle-down"><span>Expand</span></button></p>
 
 				<footer class="grid-cell">
 					<p class="additional-info grid-col-5">Posted: 14 August 2013</p>
@@ -661,7 +603,7 @@
 					<p>Like, this is some Looking Glass Studios-tier stuff here. The second and third mission especially - they pour on a truly stunning amount of lore, atmosphere, and intensity. I must recommend that you first play the other DLC, The Knife of Dunwall. Both are some of the highest-quality DLC missions I've ever played in any game.</p>
 				</div>
 
-				<p class="review-expand"><button class="pseudo-link icon-a-angle-down"><span>Expand</span></button></p>
+				<p class="expand"><button class="pseudo-link icon-a-angle-down"><span>Expand</span></button></p>
 
 				<footer class="grid-cell">
 					<p class="additional-info grid-col-5">Posted: 14 August 2013</p>
@@ -694,13 +636,11 @@
 		</section>
 	</article>
 
-
-
 	<!-- le scripts -->
-	<script type="text/javascript" src="../_includes/js/jquery-1.10.2.min.js"></script>
-	<script type="text/javascript" src="../_includes/peppermint/peppermint.min.js"></script>
-	<script type="text/javascript" src="js/slime.js"></script>
-	<script type="text/javascript" src="js/init.js"></script>
+	<!--[if lte IE 8]>
+		<script src="/js/selectivizr.min.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="js/scripts.js"></script>
 
 </body>
 </html>

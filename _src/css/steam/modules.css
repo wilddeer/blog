@@ -4,6 +4,7 @@ MODULES
 /* gallery */
 .gallery.peppermint.inactive {
 	white-space: nowrap;
+	word-wrap: normal;
 	overflow: auto;
 }
 
@@ -30,10 +31,11 @@ MODULES
 	background: rgba(0,0,0,0); /* ie mobile fix */
 	visibility: hidden;
 	position: absolute;
-	display: inline-block;
-	top: 0;
+	display: none;
+	top: 50%;
 	width: 40px;
-	height: 100%;
+	height: 40px;
+	margin-top: -20px;
 	opacity: 0;
 	cursor: pointer;
 	-webkit-transition-duration: 0.3s;
@@ -48,7 +50,7 @@ MODULES
 
 .gallery.peppermint.active .viewport .arrow-prev,
 .gallery.peppermint.active .viewport .arrow-next {
-	visibility: visible;
+	display: block;
 }
 
 .gallery .viewport .arrow-prev:before,
@@ -74,7 +76,7 @@ MODULES
 
 	.gallery .viewport .arrow-prev:before,
 	.gallery .viewport .arrow-next:before {
-		margin-top: -16px;
+		margin-top: -12px;
 	}
 
 	.gallery .viewport .arrow-prev:before {
@@ -102,6 +104,7 @@ MODULES
 .gallery .viewport:hover .arrow-next.auto,
 .gallery .viewport .arrow-prev.shown,
 .gallery .viewport .arrow-next.shown {
+	visibility: visible;
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
 	opacity: 1;
@@ -133,7 +136,7 @@ MODULES
 		display: none;
 	}
 
-	.gallery.peppermint.active .thumbs.active {
+	html.js .gallery .thumbs.active {
 		display: block;
 	}
 }
@@ -162,6 +165,7 @@ MODULES
 
 .gallery .thumbs ul {
 	white-space: nowrap;
+	word-wrap: normal;
 	list-style-type: none;
 	padding: 0.5em 0;
 	margin-bottom: 0;
@@ -174,6 +178,9 @@ MODULES
 	border-color: transparent;
 	margin-bottom: 0;
 	cursor: pointer;
+	/* ie7 fallback */
+	*display: inline;
+	zoom: 1;
 }
 
 .gallery .thumbs ul li:first-child {
@@ -206,6 +213,7 @@ MODULES
 	display: inline-block;
 	max-width: 100%;
 	white-space: nowrap;
+	word-wrap: normal;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	text-decoration: none;
@@ -214,6 +222,7 @@ MODULES
 }
 
 .user .userpic {
+	position: relative;
 	display: inline-block;
 	margin-right: 0.4em;
 	border-radius: 50%;
@@ -223,15 +232,25 @@ MODULES
 	overflow: hidden;
 }
 
+.user .userpic:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	border-radius: 50%;
+	box-shadow: inset 0 0 3px 1px rgba(0,0,0,0.6);
+	display: block;
+}
+
 .user .userpic img {
 	border-radius: 50%;
 	vertical-align: top;
 }
 
-.user.user-square .userpic {
-	border-radius: 10%;
-}
-
+.user.user-square .userpic,
+.user.user-square .userpic:after,
 .user.user-square .userpic img {
 	border-radius: 10%;
 }
@@ -307,13 +326,13 @@ MODULES
 	font-size: 0.9em;
 }
 
-html.js .user-review .review-text.minimized {
+html.js .user-review .review-text.collapsed {
 	position: relative;
-	max-height: 190px;
+	max-height: 220px;
 	overflow: hidden;
 }
 
-html.js .user-review .review-text.minimized:after {
+html.js .user-review .review-text.collapsed:after {
 	content: '';
 	pointer-events: none;
 	position: absolute;
@@ -329,13 +348,13 @@ html.js .user-review .review-text.minimized:after {
 	background-image: linear-gradient(rgba(34,34,34,0), rgba(34,34,34,255));
 }
 
-.user-review .review-expand {
+.user-review .expand {
 	margin-top: 0.5em;
 	font-size: 0.9em;
 	display: none;
 }
 
-html.js .user-review .review-text.minimized + .review-expand {
+html.js .user-review .review-text.collapsed + .expand {
 	display: block;
 }
 

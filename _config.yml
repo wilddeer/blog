@@ -3,7 +3,7 @@ markdown: kramdown
 pygments: true
 relative_permalinks: false
 
-exclude: ['README.md']
+exclude: ['README.md','node_modules','temp','package.json','Gruntfile.js']
 permalink: /:categories/:title/
 
 path:
