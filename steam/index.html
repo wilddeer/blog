@@ -17,23 +17,30 @@
 	<!-- styles -->
 	<!--[if lt IE 9]>
 		<link rel="stylesheet" href="/css/steam/ie.css?{{ site['steam\ie.css'] }}">
-	<![endif]-->
-	<!--[if gt IE 8]><!-->
-		<link rel="stylesheet" type="text/css" href="/css/steam/styles.css?{{ site['steam\styles.css'] }}">
-	<!--<![endif]-->
 
-	<style>
-		body {
-			background-image: url(i/page.bg.mob.jpg);
-		}
-
-		@media all and (min-width: 75em) {
+		<style>
 			body {
 				background-color: #1e231f;
 				background-image: url(i/page.bg.jpg);
 			}
-		}
-	</style>
+		</style>
+	<![endif]-->
+	<!--[if gt IE 8]><!-->
+		<link rel="stylesheet" type="text/css" href="/css/steam/styles.css?{{ site['steam\styles.css'] }}">
+
+		<style>
+			body {
+				background-image: url(i/page.bg.mob.jpg);
+			}
+
+			@media all and (min-width: 75em) {
+				body {
+					background-color: #1e231f;
+					background-image: url(i/page.bg.jpg);
+				}
+			}
+		</style>
+	<!--<![endif]-->
 	
 	<!-- header scripts -->
 	<script type="text/javascript" src="/js/steam/modernizr.js"></script>

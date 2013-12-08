@@ -122,6 +122,13 @@ MODULES
 	opacity: 0.3;
 }
 
+html.no-opacity .gallery .viewport:hover .arrow-prev.auto.disabled,
+html.no-opacity .gallery .viewport:hover .arrow-next.auto.disabled,
+html.no-opacity .gallery .viewport .arrow-prev.shown.disabled,
+html.no-opacity .gallery .viewport .arrow-next.shown.disabled {
+	display: none;
+}
+
 .gallery .thumbs {
 	display: none;
 }

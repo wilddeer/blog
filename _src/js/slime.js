@@ -233,7 +233,7 @@ function Slime(_this, options) {
 
 		contentBlock = _this.children[0];
 
-		addEvent(_this, 'focus', _this.onfocusin = function(event) {
+		addEvent(_this, 'focus', function(event) {
 			_this.scrollLeft = 0;
 			setTimeout(function() {
 				_this.scrollLeft = 0;

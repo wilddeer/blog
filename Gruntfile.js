@@ -61,6 +61,7 @@ module.exports = function(grunt) {
 						'_src/css/normalize.css',
 						'_src/peppermint/peppermint.required.css',
 						'_src/peppermint/peppermint.suggested.css',
+						'_src/css/slime.css',
 						'_src/steam/css/base.css',
 						'_src/steam/css/classes.css',
 						'_src/steam/css/modules.css',
@@ -98,7 +99,7 @@ module.exports = function(grunt) {
 
 					'js/steam/scripts.js': [
 						'_src/js/jquery-1.10.2.min.js',
-						'_src/peppermint/peppermint.min.js',
+						'_src/peppermint/peppermint.js',
 						'_src/js/slime.js',
 						'_src/steam/js/collapser.js',
 						'_src/steam/js/tools.js',
