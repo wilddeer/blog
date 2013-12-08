@@ -219,7 +219,7 @@ html.js .game-description .description-text.collapsed + .expand {
 	margin-left: auto;
 	margin-right: auto;
 	width: 100%;
-	max-width: 25em;
+	max-width: 20em;
 }
 
 .game-languages {

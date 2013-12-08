@@ -231,7 +231,6 @@ html.no-opacity .gallery .viewport .arrow-next.shown.disabled {
 .user .userpic {
 	position: relative;
 	display: inline-block;
-	margin-right: 0.4em;
 	border-radius: 50%;
 	background: #aaa;
 	border: 3px solid #aaa;
@@ -263,8 +262,11 @@ html.no-opacity .gallery .viewport .arrow-next.shown.disabled {
 }
 
 .user .username {
-	vertical-align: middle;
 	text-decoration: underline;
+}
+
+.user .userpic + .username {
+	margin-left: 0.4em;
 }
 
 .user:hover .userpic {

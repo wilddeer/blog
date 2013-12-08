@@ -11,21 +11,34 @@ lang: ru
     font-size: 16px;
     color: white;
     background: #222;
-    padding: 1.5em 1em;
+    padding: 3em 4%;
     font-family: Arial, Helvetica, sans-serif;
     color: #f5f5f5;
     margin-bottom: 1.5em;
   }
 
   .steam-demo.white {
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
     background: transparent;
   }
 
   @media all and (min-width: 40em) {
     .steam-demo {
       width: 92%;
-      padding: 1.5em;
+      padding-left: 1.5em;
+      padding-right: 1.5em;
     }
+  }
+
+  .steam-demo a,
+  .steam-demo a:visited {
+    color: #1f98df;
+  }
+
+  .steam-demo a:hover {
+    background: transparent;
+    color: #2ac6ed;
   }
 
   .steam-demo p {
@@ -38,6 +51,22 @@ lang: ru
 
   .steam-demo .small {
     font-size: 0.8em;
+  }
+
+  .steam-demo .user:visited {
+    color: #aaa;
+  }
+
+  .steam-demo .user.user-online:visited {
+    color: #7cb8e4;
+  }
+
+  .steam-demo .user.user-ingame:visited {
+    color: #94de35;
+  }
+
+  .no-js .js-controls {
+    display: none;
   }
 
   .js-controls {
@@ -104,7 +133,7 @@ dzDelayed.push(function() {
 
 Старые браузеры получат блок без градиента и круглых уголков, не велика беда.
 
-Проблема с недостаточно гибким дизайном не заканчивается одним блоком. Долгое время блоки с ценами, рассчитанные на доллары, разваливались в русском магазине. Сейчас проблема решена, но блоки с фиксированной шириной все еще попадаются:
+Проблема с недостаточно гибким дизайном не заканчивается одним блоком. Долгое время блоки с ценами, рассчитанные на доллары, разваливались в русском магазине. Сейчас проблема по большей части решена, но блоки с фиксированной шириной все еще попадаются:
 
 {% include pic.htm src='price-overflowed.png' a='Переполненный блок с ценой' c="Стим не выдержит еще одного обвала рубля :-)" %}
 
@@ -203,7 +232,7 @@ dzDelayed.push(function() {
 {% highlight html cssclass=codewrap %}
 <div class="price-area">
   <span class="price">
-    <span>$5.99</span>
+    $5.99
   </span>
 </div>
 {% endhighlight %}
@@ -213,22 +242,116 @@ dzDelayed.push(function() {
 <div class="steam-demo white">
   <div class="price-area" style="font-size: 1.5em;">
     <span class="price">
-      <span>¥ 999</span>
+      ¥ 999
     </span>
   </div>
 
   <div class="price-area" style="font-size: 1.2em;">
     <span class="price">
-      <span>599 руб.</span>
+      599 руб.
     </span>
   </div>
 
   <div class="price-area">
     <span class="price">
-      <span>$5.99</span>
+      $5.99
     </span>
   </div>
 </div>
 
+Та же история с любыми повторяющимися блоками. Например, блок с юзерпиком и именем пользователя:
 
+<style>
+{% include snippets/steam-user.css %}
+</style>
 
+<div class="steam-demo">
+  <p>
+    <a href="#" class="user" style="font-size: 0.6em;">
+      <span class="userpic"><img src="/steam/i/userpic4.jpg"></span><span class="username">Username</span>
+    </a>
+
+    <a href="#" class="user user-online">
+      <span class="userpic"><img src="/steam/i/userpic4.jpg"></span><span class="username">Username</span>
+    </a>
+
+    <a href="#" class="user user-ingame" style="font-size: 1.4em;">
+      <span class="userpic"><img src="/steam/i/userpic4.jpg"></span><span class="username">Username</span>
+    </a>
+  </p>
+
+  <p>
+    <a href="#" class="user" style="font-size: 0.6em;">
+      <span class="userpic"><img src="/steam/i/userpic4.jpg" width="16" height="16"></span><span class="username">Username</span>
+    </a>
+
+    <a href="#" class="user user-online">
+      <span class="userpic"><img src="/steam/i/userpic4.jpg"></span><span class="username">Username</span>
+    </a>
+
+    <a href="#" class="user user-ingame" style="font-size: 1.4em;">
+      <span class="userpic"><img src="/steam/i/userpic4.jpg" width="64" height="64"></span><span class="username">Username</span>
+    </a>
+  </p>
+
+  <p>
+    Square
+    <a href="#" class="user user-online user-square">
+      <span class="userpic"><img src="/steam/i/userpic4.jpg"></span><span class="username">Username</span>
+    </a>,
+
+    just userpic
+    <a href="#" class="user user-online">
+      <span class="userpic"><img src="/steam/i/userpic4.jpg"></span>
+    </a>
+
+    or just
+    <a href="#" class="user user-ingame">
+      <span class="username">name</span>
+    </a>
+  </p>
+</div>
+
+###Ссылки и кнопки
+
+Присутствуют все классический ошибки, собранные мной в [посте про ссылки](/links-please/). Вот ссылка "View all screenshots":
+
+{% highlight html cssclass=codewrap %}
+<a class="linkbar" href="javascript:screenshot_popup('http://store.steampowered.com/screenshot/view/205100/0?snr=1_5_9__400', 800, 635, 0, 0);">...</a>
+{% endhighlight %}
+
+А вот кнопка предыдущего спотлайта на главной:
+
+{% highlight html cssclass=codewrap %}
+<a href="javascript:PrevSpotlight( 2 );"><img src="http://cdn4.store.steampowered.com/public/images/v5/ico_navArrow_left.gif"> Prev</a>
+{% endhighlight %}
+
+А вот такие посты в центре сообщества игры:
+
+{% include pic.htm src='hub-post.png' a='Пост в центре сообщества игры' %}
+
+выглядят в коде вот так:
+
+{% highlight html cssclass=codewrap %}
+<div class="apphub_Card interactable" style="float: left; width: 468px; height: 345px;" onclick="ShowModalContent( 'http://steamcommunity.com/app/205100/discussions/0/648813728349716360/?insideModal=1', 'Read at http://steamcommunity.com/app/205100/discussions/0/648813728349716360/', 'http://steamcommunity.com/app/205100/discussions/0/648813728349716360/' );">
+
+  ...
+
+</div>
+{% endhighlight %}
+
+Мало того, что эти посты открываются в ужасных модальных окнах (их, кстати, придумали люди, которые ненавидят вкладки), так еще их совсем никак нельзя открыть по-нормальному, ведь это не ссылка. А еще там инлайновые стили и жирный инлайновый вызов функции.
+
+А можно было сделать весь блок ссылкой и открывать попап (если ну прям очень хочется попап) только по нажатию левой кнопки.
+
+###Доступность использования
+
+Многие элементы управления не фокусируются, а это значит, что на них нельзя попасть <kbd>Tab</kbd>-ом, о них не узнают штуки для голосового управления и скринридеры.
+
+А еще, [как я уже писал](/internet-maintenance/js-sliders-and-the-tab-key/), слайдер разваливается при использовании кнопки <kbd>Tab</kbd>.
+
+###Интерфейс и навигация
+
+С навигацией все довольно плохо, много нелогичных и непоследовательных моментов. Сайту нужен хороший UI-дизайнер, чтобы перетрясти всю навигацию и продумать интерфейсы.
+
+Так как я на дизайнера интерфейсов слабо похож, останавливаться на этом моменте не буду.
