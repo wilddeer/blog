@@ -27,7 +27,7 @@ PAGE
 
 	.store-game-page .main {
 		margin-top: 1.5em;
-		background: url(../i/transparent50.png); /* fallback */
+		background: url(/steam/i/transparent50.png); /* fallback */
 		background: -webkit-linear-gradient(rgba(0,0,0,0.6) 700px, rgba(17,17,17,255) 1000px);
 		background: -moz-linear-gradient(rgba(0,0,0,0.6) 700px, rgba(17,17,17,255) 1000px);
 		background: linear-gradient(rgba(0,0,0,0.6) 700px, rgba(17,17,17,255) 1000px);
@@ -163,7 +163,7 @@ html.js .game-description .description-text.collapsed:after {
 	height: 5em;
 	background-repeat: repeat-x;
 	background-position: 0 100%;
-	background-image: url(../i/fade.png); /* fallback */
+	background-image: url(/steam/i/fade.png); /* fallback */
 	background-image: -webkit-linear-gradient(rgba(17,17,17,0), rgba(17,17,17,255));
 	background-image: -moz-linear-gradient(rgba(17,17,17,0), rgba(17,17,17,255));
 	background-image: linear-gradient(rgba(17,17,17,0), rgba(17,17,17,255));

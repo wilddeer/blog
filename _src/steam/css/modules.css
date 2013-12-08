@@ -342,7 +342,7 @@ html.js .user-review .review-text.collapsed:after {
 	height: 5em;
 	background-repeat: repeat-x;
 	background-position: 0 100%;
-	background-image: url(../i/reviews-fade.png); /* fallback */
+	background-image: url(/steam/i/reviews-fade.png); /* fallback */
 	background-image: -webkit-linear-gradient(rgba(34,34,34,0), rgba(34,34,34,255));
 	background-image: -moz-linear-gradient(rgba(34,34,34,0), rgba(34,34,34,255));
 	background-image: linear-gradient(rgba(34,34,34,0), rgba(34,34,34,255));

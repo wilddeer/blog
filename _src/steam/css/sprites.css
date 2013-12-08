@@ -5,14 +5,14 @@
 	width: 17px;
 	height: 16px;
 	margin: 0 0.15em;
-	background-image: url(../i/sprites.png);
+	background-image: url(/steam/i/sprites.png);
 	background-repeat: no-repeat;
 	vertical-align: text-top;
 }
-/*html.svg [class*="icon-b-"]:before,
+html.svg [class*="icon-b-"]:before,
 html.svg [class*="icon-a-"]:after {
-	background-image: url(../i/sprites.svg);
-}*/
+	background-image: url(/steam/i/sprites.svg);
+}
 i[class*="icon-b-"]:before,
 i[class*="icon-a-"]:after {
 	margin-left: 0;
@@ -534,13 +534,13 @@ i[class*="icon-a-"]:after {
 		width: 26px;
 		height: 24px;
 		background-size: 756px 360px;
-		background-image: url(../i/sprites@2.png);
+		background-image: url(/steam/i/sprites@2.png);
 	}
 
-	/*html.svg [class*="icon-b-"]:before,
+	html.svg [class*="icon-b-"]:before,
 	html.svg [class*="icon-a-"]:after {
-		background-image: url(../i/sprites.svg);
-	}*/
+		background-image: url(/steam/i/sprites.svg);
+	}
 
 	.icon-big.icon-b-chevron-left:before,
 	.icon-big.icon-a-chevron-left:after {
