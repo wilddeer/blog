@@ -395,34 +395,56 @@ html.js .user-review .review-text.collapsed + .expand {
 }
 
 /* price area */
-.price-area > * {
+.price-area {
+	display: inline-block;
+	overflow: hidden; /* clearfix */
+	vertical-align: top;
 	margin-bottom: 0.5em;
 }
 
 .price-area .discount {
+	float: left;
+	height: 2.5em;
+	line-height: 2.5em;
+	padding: 0 0.5em;
 	background: #94de35;
-	vertical-align: middle;
-	font-weight: bold;
-	display: inline-block;
-	vertical-align: middle;
-	padding: 0.5em;
+}
+
+.price-area .discount > span {
+	font-size: 1.8em;
 }
 
 .price-area .price {
+	float: left;
+	overflow: hidden; /* clearfix */
+	height: 2.5em;
+	line-height: 2.5em;
+	padding: 0 0.5em;
 	margin-right: 0.5em;
 	background: #111;
-	display: inline-block;
-	vertical-align: middle;
-	padding: 0.5em;
-}
-
-.price-area .purchase-form {
-	display: inline-block;
-	vertical-align: middle;
 }
 
 .price-area .price .original-price {
-	font-size: 0.8em;
+	display: block;
+	line-height: 1.1em;
 	text-decoration: line-through;
 	color: #999;
+	text-align: left;
+}
+
+.price-area .price .original-price > span {
+	font-size: 0.8em;
+}
+
+.price-area .price .final-price {
+	display: block;
+	line-height: 1.2em;
+	text-align: left;
+}
+
+/* purchase button */
+.game-purchase-button-form {
+	display: inline-block;
+	vertical-align: top;
+	margin-bottom: 0.5em;
 }
