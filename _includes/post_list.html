@@ -12,6 +12,8 @@
 			{% capture pst %}
 			<li><a href="{{ post.url }}">{{ post.title }}</a> {{ cat }} <time datetime="{{ post.date }}">{% include date.htm d=post.date %}</time></li>
 			{% endcapture%}
+			{% else %}
+				{% assign pst = "" %}
 			{% endif %}
 		{% else %}
 			{% assign pst = "" %}
