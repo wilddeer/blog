@@ -127,6 +127,10 @@ html.no-opacity .gallery .viewport .arrow-next.shown.disabled {
 
 .gallery .thumbs {
 	display: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 @media all and (min-width: 45em) {

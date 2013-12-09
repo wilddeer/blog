@@ -1,13 +1,6 @@
 .user {
-	display: inline-block;
-	max-width: 100%;
-	white-space: nowrap;
-	word-wrap: normal;
-	overflow: hidden;
-	text-overflow: ellipsis;
 	text-decoration: none;
 	color: #aaa;
-	vertical-align: middle;
 }
 
 .user .userpic {

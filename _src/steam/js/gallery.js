@@ -9,7 +9,7 @@ $.fn.steamGallery = function() {
 			slidesNumber,
 			currentSlide;
 
-		/* init thumb scroller and save its API */
+		/* init the thumb scroller and save its API */
 		var scroller = Slime(thumbsBlock[0]);
 
 		/* init the slider and save its API */
@@ -26,7 +26,7 @@ $.fn.steamGallery = function() {
 
 				thumbs.eq(n).addClass('active');
 
-				/* move active thumb to viewport, if it's not there */
+				/* move active thumb to the viewport, if it's not there */
 				scroller.moveElementToViewport(thumbs[n], 24);
 
 				/* see if an arrow should be disabled */

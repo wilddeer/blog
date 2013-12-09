@@ -131,6 +131,10 @@ html.no-opacity .gallery .viewport .arrow-next.shown.disabled {
 
 .gallery .thumbs {
 	display: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 @media all and (min-width: 45em) {
@@ -217,15 +221,8 @@ html.no-opacity .gallery .viewport .arrow-next.shown.disabled {
 
 /* user */
 .user {
-	display: inline-block;
-	max-width: 100%;
-	white-space: nowrap;
-	word-wrap: normal;
-	overflow: hidden;
-	text-overflow: ellipsis;
 	text-decoration: none;
 	color: #aaa;
-	vertical-align: middle;
 }
 
 .user .userpic {
