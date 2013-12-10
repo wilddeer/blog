@@ -120,9 +120,9 @@ lang: ru
 
 <p style="text-align: center; font-size: 2.5em;"><a href="/steam/">Бдыщ</a></p>
 
-А теперь про проблемы сайта Стима и как я их решал, по полочкам:
+А теперь про проблемы сайта Стима и как их решить, по полочкам:
 
-##Мобильная версия не нужна
+##Урезанная мобильная версия
 
 Мобильная версия сайта стима не распознает половину мобильных девайсов и не обладает и половиной функционала полной версии. Например, недавно добавленные пользовательские обзоры игр полностью отсутствуют в мобильной версии.
 
@@ -132,9 +132,7 @@ lang: ru
 
 В особо сложных ситуациях можно использовать комбинированный подход: генерировать на сервере часть страницы по-разному в зависимости от устройства. В частности, это актуально для размера картинок.
 
-###Mobile first
-
-Следуя принципу Mobile first, сначала делаем стили для мобильных устройств, а затем, применяя media queries, "наращиваем" стили с увеличением размера экрана. Так браузеры, не понимающие
+Я сверстал страницу по принципу mobile first, то есть базовые стили для маленьких экранов, на которые с ростом размера экрана постепенно наращиваются дополнительные стили. Пара интересных моментов:
 
 ###"Адаптируем" галерею
 
@@ -163,7 +161,7 @@ dzDelayed.push(function() {
 
 Оформляем все в виде jQuery-плагина:
 
-{% highlight js cssclass=codewrap %}
+{% highlight js cssclass=codewrap_maxheight %}
 {% include snippets/steam-gallery.js %}
 {% endhighlight %}
 
@@ -197,9 +195,11 @@ dzDelayed.push(function() {
 <!--<![endif]-->
 {% endhighlight %}
 
+Чтобы мобильники еще больше нас любили, убираем для них почти все тени, полупрозрачные фоны заменяем на непрозрачные.
+
 ##Контент подчиняется дизайну
 
-Вот, например, блок про DLC:
+Вот так, например, сейчас выглядит блок про DLC на сайте Стима:
 
 {% include pic.htm src='dlc-block.png' a='Блок про DLC' %}
 
@@ -378,56 +378,68 @@ dzDelayed.push(function() {
 {% include snippets/steam-user.css %}
 </style>
 
-<div class="steam-demo">
+<div class="steam-demo" style="text-align: center;">
   <p>
-    <a href="#" class="user" style="font-size: 0.6em;">
-      <span class="userpic"><img src="/steam/i/userpic4.jpg"></span><span class="username">Username</span>
-    </a>
-
-    <a href="#" class="user user-online">
-      <span class="userpic"><img src="/steam/i/userpic4.jpg"></span><span class="username">Username</span>
-    </a>
-
-    <a href="#" class="user user-ingame" style="font-size: 1.4em;">
-      <span class="userpic"><img src="/steam/i/userpic4.jpg"></span><span class="username">Username</span>
+    <a href="#" class="user" style="font-size: 0.66em;">
+      <span class="userpic"><img src="/steam/i/userpic1.jpg" width="22" height="22"></span><span class="username">Username</span>
     </a>
   </p>
 
   <p>
-    <a href="#" class="user" style="font-size: 0.6em;">
-      <span class="userpic"><img src="/steam/i/userpic4.jpg" width="16" height="16"></span><span class="username">Username</span>
-    </a>
-
     <a href="#" class="user user-online">
-      <span class="userpic"><img src="/steam/i/userpic4.jpg"></span><span class="username">Username</span>
-    </a>
-
-    <a href="#" class="user user-ingame" style="font-size: 1.4em;">
-      <span class="userpic"><img src="/steam/i/userpic4.jpg" width="64" height="64"></span><span class="username">Username</span>
+      <span class="userpic"><img src="/steam/i/userpic4.jpg" width="32" height="32"></span><span class="username">Username</span>
     </a>
   </p>
 
   <p>
-    Square
-    <a href="#" class="user user-online user-square">
-      <span class="userpic"><img src="/steam/i/userpic4.jpg"></span><span class="username">Username</span>
-    </a>,
-
-    just userpic
-    <a href="#" class="user user-online">
-      <span class="userpic"><img src="/steam/i/userpic4.jpg"></span>
+    <a href="#" class="user user-ingame" style="font-size: 1.5em;">
+      <span class="userpic"><img src="/steam/i/userpic-med.jpg" width="48" height="48"></span><span class="username">Username</span>
     </a>
+  </p>
 
-    or just
-    <a href="#" class="user user-ingame">
-      <span class="username">name</span>
+  <p>
+    <a href="#" class="user user-online" style="font-size: 2.25em;">
+      <span class="userpic"><img src="/steam/i/userpic-big.jpg" width="72" height="72"></span><span class="username">Username</span>
+    </a>
+  </p>
+
+  <p>
+    <a href="#" class="user user-ingame user-square" style="font-size: 2.25em;">
+      <span class="userpic"><img src="/steam/i/userpic-big2.jpg" width="72" height="72"></span><span class="username">Username</span>
+    </a>
+  </p>
+
+  <p>
+    <a href="#" class="user user-online user-square" style="font-size: 1.5em;">
+      <span class="userpic"><img src="/steam/i/userpic-med2.jpg" width="48" height="48"></span><span class="username">Username</span>
+    </a>
+  </p>
+
+  <p>
+    <a href="#" class="user user-square">
+      <span class="userpic"><img src="/steam/i/userpic3.jpg" width="32" height="32"></span><span class="username">Username</span>
+    </a>
+  </p>
+
+  <p>
+    <a href="#" class="user user-ingame user-square" style="font-size: 0.66em;">
+      <span class="userpic"><img src="/steam/i/userpic6.jpg" width="22" height="22"></span><span class="username">Username</span>
     </a>
   </p>
 </div>
 
-##Ссылки и кнопки
+Чтобы придерживаться принципа универсального кода, важно грамотно структурировать стили и понять, какая часть стилей за что отвечает. Я для себя вывел такую систему:
 
-Присутствуют все классический ошибки, собранные мной в [посте про ссылки](/links-please/). Вот ссылка "View all screenshots":
+- **Базовые стили** --- основной шрифт, стили базовых элементов, базовые отступы и размеры шрифтов в параграфах, заголовках, списках и т. п.
+- **Вспомогательные классы** --- модификаторы размера кегля (побольше, поменьше), цвет информационных сообщений, ошибок, предупреждений, другие универсальные утилитарные классы.
+- **Разметка** --- базовые блоки (лэйаут) страницы.
+- **Сетка (грид)**. Я не люблю строгие сетки. В демке сетка используется как вспомогательный набор классов, чтобы не повторять одно и то же много раз. В любой момент можно забить на сетку и написать кастомных стилей для блока, чем я и пользуюсь.
+- **Модули** --- это как раз отдельные повторяющиеся блоки, базовые стили которых не должны зависеть от контекста (но могут быть изменены стилями контекста, см. далее). Модули могут вкладываться друг в друга.
+- **Стили страницы** --- стили специфичных для страницы блоков. Это как раз то место, где можно модифицировать стили модулей, расположенных в конкретных блоках страницы.
+
+##"Навязчивый" яваскрипт
+
+Присутствуют все классический ошибки, собранные мной в [посте про ссылки](/links-please/). Вот ссылка "View all screenshots", которая и не ссылка вовсе, так как никуда не ведет:
 
 {% highlight html cssclass=codewrap %}
 <a class="linkbar" href="javascript:screenshot_popup('http://store.steampowered.com/screenshot/view/205100/0?snr=1_5_9__400', 800, 635, 0, 0);">...</a>
@@ -439,11 +451,11 @@ dzDelayed.push(function() {
 <a href="javascript:PrevSpotlight( 2 );"><img src="http://cdn4.store.steampowered.com/public/images/v5/ico_navArrow_left.gif"> Prev</a>
 {% endhighlight %}
 
-А вот такие посты в центре сообщества:
+А еще есть вот такие посты в центре сообщества:
 
 {% include pic.htm src='hub-post.png' a='Пост в центре сообщества игры' %}
 
-выглядят в коде вот так:
+Их код выглядит так:
 
 {% highlight html cssclass=codewrap %}
 <div class="apphub_Card interactable" style="float: left; width: 468px; height: 345px;" onclick="ShowModalContent( 'http://steamcommunity.com/app/205100/discussions/0/648813728349716360/?insideModal=1', 'Read at http://steamcommunity.com/app/205100/discussions/0/648813728349716360/', 'http://steamcommunity.com/app/205100/discussions/0/648813728349716360/' );">
@@ -476,15 +488,15 @@ dzDelayed.push(function() {
 <div class="steam-demo fullwidth">
   <section class="gallery peppermint steam-demo-peppermint inactive">
     <figure>
-      <a href="i/1.jpg" target="_blank"><img src="/steam/i/m1.jpg"></a>
+      <a href="/steam/i/1.jpg" target="_blank"><img src="/steam/i/m1.jpg"></a>
     </figure>
 
     <figure>
-      <a href="i/2.jpg" target="_blank"><img src="/steam/i/m2.jpg"></a>
+      <a href="/steam/i/2.jpg" target="_blank"><img src="/steam/i/m2.jpg"></a>
     </figure>
 
     <figure>
-      <a href="i/3.jpg" target="_blank"><img src="/steam/i/m3.jpg"></a>
+      <a href="/steam/i/3.jpg" target="_blank"><img src="/steam/i/m3.jpg"></a>
     </figure>
   </section>
 </div>
@@ -516,3 +528,72 @@ dzDelayed.push(function() {
 
 Так как я на дизайнера интерфейсов слабо похож, останавливаться на этом моменте не буду.
 
+##Еще по мелочам
+
+Если сжать страницу демки до мобильных размеров, можно заметить, что блок покупки и добавки в избранное исчезает из сайдбара и появляется новый, под галереей. Так как это два разных блока, выполняющих одну функцию, их состояние надо как-то синхронизировать. Для этого используется очень простой принцип событий.
+
+Рассмотрим на примере. Сначала типичный для такого случая сценарий действий: юзер нажимает кнопку "Добавить в избранное", идет запрос на сервер, сервер возвращает `success`, мы меняем состояние блока. Как-то так:
+
+{% highlight js cssclass=codewrap %}
+addForm.steamAjaxForm({
+  success: function() {
+    _this.addClass(whishlistedClass);
+  }
+});
+
+removeForm.steamAjaxForm({
+  success: function() {
+    _this.removeClass(whishlistedClass);
+  }
+});
+{% endhighlight %}
+
+Здесь нужно поменять две вещи: во-первых, вместо изменения класса блока мы будем генерировать специальные собития; во-вторых, надо подписаться на эти события и уже в обработчике события менять класс блока:
+
+{% highlight js cssclass=codewrap %}
+addForm.steamAjaxForm({
+  success: function() {
+    steamEvents.invoke('gameAddedToWishlist');
+  }
+});
+
+removeForm.steamAjaxForm({
+  success: function() {
+    steamEvents.invoke('gameRemovedFromWishlist');
+  }
+});
+
+steamEvents.subscribe('gameAddedToWishlist', function() {
+  _this.addClass(whishlistedClass);
+});
+
+steamEvents.subscribe('gameRemovedFromWishlist', function() {
+  _this.removeClass(whishlistedClass);
+});
+{% endhighlight %}
+
+Все. Оба блока среагируют на событие и поменяют состояние. Код `steamEvents` до безобразия прост:
+
+{% highlight js cssclass=codewrap %}
+var steamEvents = {
+  events: {
+
+  },
+
+  subscribe: function(eventName, handler) {
+    if (!this.events[eventName]) this.events[eventName] = [];
+
+    this.events[eventName].push(handler);
+  },
+
+  invoke: function(eventName) {
+    if (!this.events[eventName]) return;
+
+    for (var i = this.events[eventName].length - 1; i >= 0; i--) {
+      this.events[eventName][i]();
+    };
+  }
+}
+{% endhighlight %}
+
+Таким же образом можно реализовать взаимодействие многих элементов на странице. Это особенно удобно, если элементы никак не завязаны в коде.

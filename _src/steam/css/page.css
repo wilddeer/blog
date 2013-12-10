@@ -210,9 +210,12 @@ html.js .game-description .description-text.collapsed + .expand {
 	text-align: center;
 }
 
-.game-buy-share .add-to-wishlist {
+.game-buy-share .add-to-wishlist,
+.game-buy-share .remove-from-wishlist {
 	width: 100%;
 	max-width: 20em;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .game-buy-share p.hr {
@@ -220,6 +223,23 @@ html.js .game-description .description-text.collapsed + .expand {
 	margin-right: auto;
 	width: 100%;
 	max-width: 20em;
+}
+
+.game-wishlist .remove-from-wishlist-form {
+	display: none;
+}
+
+.game-wishlist.game-in-whishlist .remove-from-wishlist-form {
+	display: block;
+}
+
+.game-wishlist.game-in-whishlist .add-to-wishlist-form {
+	display: none;
+}
+
+.game-wishlist .add-to-wishlist-form p,
+.game-wishlist .remove-from-wishlist-form p {
+	margin-bottom: 0.5em;
 }
 
 .game-languages {

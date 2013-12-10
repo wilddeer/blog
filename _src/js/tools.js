@@ -21,3 +21,15 @@ function antiJekpotRandom(min, max, old) {
     /* sick recursion! */
     return (rand == old?antiJekpotRandom(min, max, old):rand);
 }
+
+function addEvent(el, event, func, bool) {
+    if (!event) return;
+
+    el.addEventListener? el.addEventListener(event, func, !!bool): el.attachEvent('on'+event, func);
+}
+
+function removeEvent(el, event, func, bool) {
+    if (!event) return;
+
+    el.removeEventListener? el.removeEventListener(event, func, !!bool): el.detachEvent('on'+event, func);
+}

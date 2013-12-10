@@ -153,18 +153,13 @@ CLASSES
 	border: none;
 	background: transparent;
 	color: #168cd2;
-	border-bottom: 1px dashed;
 }
 
 .pseudo-link:hover {
 	color: #2ac6ed;
 }
 
-.pseudo-link[class*="icon-"] {
-	border-bottom: none;
-}
-
-.pseudo-link[class*="icon-"] > span {
+.pseudo-link > span {
 	border-bottom: 1px dashed;
 }
 

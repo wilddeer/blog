@@ -134,4 +134,4 @@ $.fn.steamGallery = function() {
 	});
 
 	return this;
-}
+};

@@ -126,11 +126,6 @@ a {
 	tap-highlight-color: transparent;
 }
 
-.pseudo-link {
-	color: #168cd2;
-	border-bottom: 1px dashed;
-}
-
 a.iconlink {
 	text-decoration: none;
 }
@@ -201,12 +196,6 @@ html.bw a:hover,
 html.bw a:active {
 	color: #fff;
 	background: #333;
-}
-
-.pseudo-link:hover {
-	color: #fff;
-	background: #f92672;
-	border-bottom-color: transparent;
 }
 
 blockquote {
@@ -313,6 +302,10 @@ pre {
 	overflow: auto;
 	box-shadow: 0 0 5px rgba(64,0,0,0.1);
 	-webkit-overflow-scrolling: touch;
+}
+
+.codewrap_maxheight pre {
+	max-height: 30em;
 }
 
 html.kindle pre {
@@ -429,10 +422,18 @@ input.big {
 	font-size: 1.3em;
 }
 
-button.pseudo-link {
+.pseudo-link {
 	background: transparent;
 	border: 0;
 	padding: 0;
+	color: #168cd2;
+	border-bottom: 1px dashed;
+}
+
+.pseudo-link:hover {
+	color: #fff;
+	background: #f92672;
+	border-bottom-color: transparent;
 }
 
 /*

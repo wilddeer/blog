@@ -185,17 +185,28 @@
 							</span>
 						</div>
 
-						<form class="game-purchase-button-form" action="#link-to-cart" method="get">
+						<form class="add-to-cart-form js-add-to-cart-form" action="#link-to-cart" method="post">
 							<input type="hidden" name="product_id" value="12345">
 							<button type="submit" class="btn btn-green add-to-cart">Add to cart</button>
 						</form>
 
 						<p class="hr">or</p>
 
-						<form class="wishlist-form" action="#link-to-wishlist" method="get">
-							<input type="hidden" name="product_id" value="12345">
-							<button type="submit" class="btn add-to-wishlist icon-b-heart">Add to wishlist</button>
-						</form>
+						<div class="game-wishlist js-wishlist-game">
+							<form class="add-to-wishlist-form js-add-to-wishlist-form" action="#link-to-wishlist" method="post">
+								<input type="hidden" name="product_id" value="12345">
+								
+								<p><button type="submit" class="btn btn-hover-green add-to-wishlist icon-b-heart">Add to wishlist</button></p>
+							</form>
+
+							<form class="remove-from-wishlist-form js-remove-from-wishlist-form" action="#link-to-wishlist" method="post">
+								<input type="hidden" name="product_id" value="12345">
+
+								<p><button type="submit" class="btn btn-hover-red remove-from-wishlist icon-b-remove">Remove from wishlist</button></p>
+
+								<p class="small">Already on your <a href="#">wishlist</a></p>
+							</form>
+						</div>
 					</div>
 
 					<div class="game-dlc-notice">
@@ -224,7 +235,7 @@
 							</span>
 						</div>
 
-						<form class="game-purchase-button-form" action="#link-to-cart" method="get">
+						<form class="game-purchase-button-form js-form" action="#link-to-cart" method="post">
 							<input type="hidden" name="product_id" value="12345">
 							<button type="submit" class="btn btn-green add-to-cart">Add to cart</button>
 						</form>
@@ -268,7 +279,7 @@
 						</ul>
 					</div>
 
-					<p class="expand"><button class="pseudo-link icon-a-angle-down"><span>Expand</span></button></p>
+					<p class="expand"><button class="pseudo-link icon-a-angle-down expand-button"><span>Expand</span></button></p>
 				</section>
 			</div>
 
@@ -287,17 +298,26 @@
 						</span>
 					</div>
 
-					<form class="game-purchase-button-form" action="#link-to-cart" method="get">
+					<form class="game-purchase-button-form js-form" action="#link-to-cart" method="post">
 						<input type="hidden" name="product_id" value="12345">
 						<button type="submit" class="btn btn-green add-to-cart">Add to cart</button>
 					</form>
 
 					<p class="hr">or</p>
 
-					<form class="wishlist-form" action="#link-to-wishlist" method="get">
-						<input type="hidden" name="product_id" value="12345">
-						<button type="submit" class="btn add-to-wishlist icon-b-heart">Add to wishlist</button>
-					</form>
+					<div class="game-wishlist js-wishlist-game">
+						<form class="add-to-wishlist-form js-add-to-wishlist-form" action="#link-to-wishlist" method="post">
+							<input type="hidden" name="product_id" value="12345">
+							
+							<p><button type="submit" class="btn btn-hover-green add-to-wishlist icon-b-heart">Add to wishlist</button></p>
+						</form>
+
+						<form class="remove-from-wishlist-form js-remove-from-wishlist-form" action="#link-to-wishlist" method="post">
+							<p><button type="submit" class="btn btn-hover-red remove-from-wishlist icon-b-remove">Remove from wishlist</button></p>
+
+							<p class="small">Already on your <a href="#">wishlist</a></p>
+						</form>
+					</div>
 
 					<!--button class="btn btn-rounded btn-small share icon-b-share">Share &amp; embed</button-->
 				</section>
@@ -552,7 +572,7 @@
 					<p>Dishonored: The Brigmore Witches is an enjoyable and solid expansion to the game, and like it's predecessor it is only $10.00, which is a very agreeable price for this much content packaged into three levels.</p>
 				</div>
 
-				<p class="expand"><button class="pseudo-link icon-a-angle-down"><span>Expand</span></button></p>
+				<p class="expand"><button class="pseudo-link icon-a-angle-down expand-button"><span>Expand</span></button></p>
 
 				<footer class="grid-cell">
 					<p class="additional-info grid-col-5">Posted: 14 August 2013</p>
@@ -561,14 +581,14 @@
 						<span class="vote-question">Was this review helpful?</span>
 
 						<span class="vote-buttons">
-							<form class="vote-form" action="#vote" method="get">
+							<form class="vote-form js-form" action="#vote" method="post">
 								<input type="hidden" name="action" value="review_vote">
 								<input type="hidden" name="id" value="111">
 								<input type="hidden" name="score" value="1">
 								<button type="submit" class="btn btn-hover-green btn-small btn-flat icon-b-thumbs-up2">Yes</button>
 							</form>
 
-							<form class="vote-form" action="#vote" method="get">
+							<form class="vote-form js-form" action="#vote" method="post">
 								<input type="hidden" name="action" value="review_vote">
 								<input type="hidden" name="id" value="111">
 								<input type="hidden" name="score" value="0">
@@ -598,7 +618,7 @@
 					<p>Like, this is some Looking Glass Studios-tier stuff here. The second and third mission especially - they pour on a truly stunning amount of lore, atmosphere, and intensity. I must recommend that you first play the other DLC, The Knife of Dunwall. Both are some of the highest-quality DLC missions I've ever played in any game.</p>
 				</div>
 
-				<p class="expand"><button class="pseudo-link icon-a-angle-down"><span>Expand</span></button></p>
+				<p class="expand"><button class="pseudo-link icon-a-angle-down expand-button"><span>Expand</span></button></p>
 
 				<footer class="grid-cell">
 					<p class="additional-info grid-col-5">Posted: 14 August 2013</p>
@@ -607,14 +627,14 @@
 						<span class="vote-question">Was this review helpful?</span>
 
 						<span class="vote-buttons">
-							<form class="vote-form" action="#vote" method="get">
+							<form class="vote-form js-form" action="#vote" method="post">
 								<input type="hidden" name="action" value="review_vote">
 								<input type="hidden" name="id" value="111">
 								<input type="hidden" name="score" value="1">
 								<button type="submit" class="btn btn-hover-green btn-small btn-flat icon-b-thumbs-up2">Yes</button>
 							</form>
 
-							<form class="vote-form" action="#vote" method="get">
+							<form class="vote-form js-form" action="#vote" method="post">
 								<input type="hidden" name="action" value="review_vote">
 								<input type="hidden" name="id" value="111">
 								<input type="hidden" name="score" value="0">
@@ -644,7 +664,7 @@
 					<p>Like, this is some Looking Glass Studios-tier stuff here. The second and third mission especially - they pour on a truly stunning amount of lore, atmosphere, and intensity. I must recommend that you first play the other DLC, The Knife of Dunwall. Both are some of the highest-quality DLC missions I've ever played in any game.</p>
 				</div>
 
-				<p class="expand"><button class="pseudo-link icon-a-angle-down"><span>Expand</span></button></p>
+				<p class="expand"><button class="pseudo-link icon-a-angle-down expand-button"><span>Expand</span></button></p>
 
 				<footer class="grid-cell">
 					<p class="additional-info grid-col-5">Posted: 14 August 2013</p>
@@ -653,14 +673,14 @@
 						<span class="vote-question">Was this review helpful?</span>
 
 						<span class="vote-buttons">
-							<form class="vote-form" action="#vote" method="get">
+							<form class="vote-form js-form" action="#vote" method="post">
 								<input type="hidden" name="action" value="review_vote">
 								<input type="hidden" name="id" value="111">
 								<input type="hidden" name="score" value="1">
 								<button type="submit" class="btn btn-hover-green btn-small btn-flat active icon-b-thumbs-up2">Yes</button>
 							</form>
 
-							<form class="vote-form" action="#vote" method="get">
+							<form class="vote-form js-form" action="#vote" method="post">
 								<input type="hidden" name="action" value="review_vote">
 								<input type="hidden" name="id" value="111">
 								<input type="hidden" name="score" value="0">

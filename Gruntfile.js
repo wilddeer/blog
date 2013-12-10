@@ -80,6 +80,7 @@ module.exports = function(grunt) {
 						'_src/peppermint/peppermint.min.js',
 						'_src/js/slime.js',
 						'_src/js/scroll-fallback.js',
+						'_src/js/collapser.js',
 						'_src/js/tools.js',
 						'_src/js/test-console.js',
 						'_src/js/metrika.js',
@@ -100,10 +101,13 @@ module.exports = function(grunt) {
 
 					'js/steam/scripts.js': [
 						'_src/js/jquery-1.10.2.min.js',
+						'_src/steam/js/events.js',
 						'_src/peppermint/peppermint.js',
 						'_src/js/slime.js',
 						'_src/steam/js/collapser.js',
 						'_src/steam/js/gallery.js',
+						'_src/steam/js/ajax-forms.js',
+						'_src/steam/js/wishlist.js',
 						'_src/steam/js/tools.js',
 						'_src/steam/js/init.js',
 					],

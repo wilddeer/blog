@@ -4,6 +4,12 @@ $(function() {
 	/* init the gallery */
 	$('.js-peppermint').steamGallery();
 
+	/* ajax froms */
+	$('.js-form').steamAjaxForm();
+
+	/* wishlist button */
+	$('.js-wishlist-game').steamWishlistBlock();
+
 	/* prevent focus*/
 	addEvent(body[0], 'click', function(event) {
 		if ((document.activeElement.tagName == 'BUTTON' ||
