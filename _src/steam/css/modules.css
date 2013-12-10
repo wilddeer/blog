@@ -442,7 +442,7 @@ html.js .user-review .review-text.collapsed + .expand {
 }
 
 /* purchase button */
-.game-purchase-button-form {
+.add-to-cart-form {
 	display: inline-block;
 	vertical-align: top;
 	margin-bottom: 0.5em;

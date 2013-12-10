@@ -7,8 +7,11 @@ $(function() {
 	/* ajax froms */
 	$('.js-form').steamAjaxForm();
 
-	/* wishlist button */
-	$('.js-wishlist-game').steamWishlistBlock();
+	/* wishlist buttons */
+	$('.js-game-share').steamAddToWishlist();
+
+	/* add to cart buttons */
+	$('.js-game-buy').steamAddToCart();
 
 	/* prevent focus*/
 	addEvent(body[0], 'click', function(event) {

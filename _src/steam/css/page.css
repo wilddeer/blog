@@ -144,10 +144,6 @@ PAGE
 	margin-bottom: 0.5rem;
 }
 
-.game-purchase-option .price-area {
-	margin-bottom: 0;
-}
-
 html.js .game-description .description-text.collapsed {
 	position: relative;
 	max-height: 350px;
@@ -225,21 +221,20 @@ html.js .game-description .description-text.collapsed + .expand {
 	max-width: 20em;
 }
 
-.game-wishlist .remove-from-wishlist-form {
+.game-buy-share .remove-from-wishlist-form,
+.game-buy-share .already-in-wishlist-message,
+.game-buy-share .already-in-cart-message {
 	display: none;
 }
 
-.game-wishlist.game-in-whishlist .remove-from-wishlist-form {
+.game-buy-share.game-in-wishlist .remove-from-wishlist-form,
+.game-buy-share.game-in-wishlist .already-in-wishlist-message,
+.game-buy-share.game-in-cart .already-in-cart-message {
 	display: block;
 }
 
-.game-wishlist.game-in-whishlist .add-to-wishlist-form {
+.game-buy-share.game-in-wishlist .add-to-wishlist-form {
 	display: none;
-}
-
-.game-wishlist .add-to-wishlist-form p,
-.game-wishlist .remove-from-wishlist-form p {
-	margin-bottom: 0.5em;
 }
 
 .game-languages {

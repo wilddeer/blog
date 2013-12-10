@@ -1,9 +1,9 @@
-$.fn.steamWishlistBlock = function(callbacks) {
+$.fn.steamAddToWishlist = function() {
 	$(this).each(function() {
 		var _this = $(this),
 			addForm = _this.find('.js-add-to-wishlist-form'),
 			removeForm = _this.find('.js-remove-from-wishlist-form'),
-			whishlistedClass = 'game-in-whishlist';
+			whishlistedClass = 'game-in-wishlist';
 
 		addForm.steamAjaxForm({
 			success: function() {

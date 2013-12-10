@@ -108,6 +108,7 @@ module.exports = function(grunt) {
 						'_src/steam/js/gallery.js',
 						'_src/steam/js/ajax-forms.js',
 						'_src/steam/js/wishlist.js',
+						'_src/steam/js/add-to-cart.js',
 						'_src/steam/js/tools.js',
 						'_src/steam/js/init.js',
 					],

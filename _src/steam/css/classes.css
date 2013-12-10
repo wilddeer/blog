@@ -52,6 +52,9 @@ CLASSES
 
 /* buttons */
 .btn {
+	display: inline-block;
+	color: #f5f5f5;
+	text-decoration: none;
 	border: 0;
 	padding: 0.5em;
 	border-radius: 0.2em;
@@ -75,6 +78,7 @@ CLASSES
 }
 
 .btn:hover {
+	color: #f5f5f5;
 	background-position: 0 0.5em;
 }
 
@@ -89,6 +93,20 @@ CLASSES
 	background-image: -webkit-linear-gradient(#9ee345, #4e6d23);
 	background-image: -moz-linear-gradient(#9ee345, #4e6d23);
 	background-image: linear-gradient(#9ee345, #4e6d23);
+}
+
+.btn-red {
+	background-color: #e35845;
+	background-image: -webkit-linear-gradient(#e35845, #6d2323);
+	background-image: -moz-linear-gradient(#e35845, #6d2323);
+	background-image: linear-gradient(#e35845, #6d2323);
+}
+
+.btn-blue {
+	background-color: #567198;
+	background-image: -webkit-linear-gradient(#567198, #31425b);
+	background-image: -moz-linear-gradient(#567198, #31425b);
+	background-image: linear-gradient(#567198, #31425b);
 }
 
 .btn-hover-green:hover,
@@ -164,7 +182,7 @@ CLASSES
 }
 
 /*icon links */
-a[class*="icon-b-"],
+/*a[class*="icon-b-"],
 .pseudo-link[class*="icon-b-"] {
 	padding-left: 20px;
 }
@@ -187,6 +205,22 @@ a[class*="icon-a-"]:after,
 	margin-left: 4px;
 	vertical-align: -2px;
 }
+
+a.btn[class*="icon-b-"] {
+	padding-left: 0;
+}
+
+a.btn[class*="icon-a-"] {
+	padding-right: 0;
+}
+
+a.btn[class*="icon-b-"]:before {
+	margin-left: 0;
+}
+
+a.btn[class*="icon-a-"]:after {
+	margin-right: 0;
+}*/
 
 /* icon lists */
 li[class*="icon-"] {

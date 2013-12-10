@@ -166,7 +166,7 @@
 		<div class="grid-cell">
 			<div class="grid-col-6">
 				<section class="game-purchase-options">
-					<div class="hidden-tablet game-buy-share">
+					<div class="hidden-tablet game-buy-share js-game-buy js-game-share">
 						<p class="small info">Autumn sale! Offer ends December 3.</p>
 
 						<div class="price-area">
@@ -187,26 +187,26 @@
 
 						<form class="add-to-cart-form js-add-to-cart-form" action="#link-to-cart" method="post">
 							<input type="hidden" name="product_id" value="12345">
-							<button type="submit" class="btn btn-green add-to-cart">Add to cart</button>
+							<button type="submit" class="btn btn-green add-to-cart js-add-to-cart">Add to cart</button>
 						</form>
+
+						<a href="#" class="btn btn-blue icon-b-shopping-cart">In cart</a>
+
+						<p class="small already-in-cart-message">Added to cart. <a href="#">Checkout now?</a></p>
 
 						<p class="hr">or</p>
 
-						<div class="game-wishlist js-wishlist-game">
-							<form class="add-to-wishlist-form js-add-to-wishlist-form" action="#link-to-wishlist" method="post">
-								<input type="hidden" name="product_id" value="12345">
-								
-								<p><button type="submit" class="btn btn-hover-green add-to-wishlist icon-b-heart">Add to wishlist</button></p>
-							</form>
+						<form class="add-to-wishlist-form js-add-to-wishlist-form" action="#link-to-wishlist" method="post">
+							<input type="hidden" name="product_id" value="12345">
+							
+							<button type="submit" class="btn btn-hover-green add-to-wishlist icon-b-heart">Add to wishlist</button>
+						</form>
 
-							<form class="remove-from-wishlist-form js-remove-from-wishlist-form" action="#link-to-wishlist" method="post">
-								<input type="hidden" name="product_id" value="12345">
+						<form class="remove-from-wishlist-form js-remove-from-wishlist-form" action="#link-to-wishlist" method="post">
+							<button type="submit" class="btn btn-hover-red remove-from-wishlist icon-b-remove">Remove from wishlist</button>
+						</form>
 
-								<p><button type="submit" class="btn btn-hover-red remove-from-wishlist icon-b-remove">Remove from wishlist</button></p>
-
-								<p class="small">Already on your <a href="#">wishlist</a></p>
-							</form>
-						</div>
+						<p class="small already-in-wishlist-message">Already on your <a href="#">wishlist</a></p>
 					</div>
 
 					<div class="game-dlc-notice">
@@ -215,7 +215,7 @@
 						<p class="small">Requires the base game <a href="#">Dishonored</a> on Steam in order to play.</p>
 					</div>
 
-					<div class="game-purchase-option">
+					<div class="game-purchase-option js-game-buy">
 						<h3 class="purchase-header">Buy <a href="#">Dishonored - Game of the Year Edition</a></h3>
 
 						<p class="purchase-notice small insignificant">Notice: This version only contains English, Russian, Hungarian, Czech, and Polish languages</p>
@@ -235,10 +235,12 @@
 							</span>
 						</div>
 
-						<form class="game-purchase-button-form js-form" action="#link-to-cart" method="post">
+						<form class="add-to-cart-form js-add-to-cart-form" action="#link-to-cart" method="post">
 							<input type="hidden" name="product_id" value="12345">
-							<button type="submit" class="btn btn-green add-to-cart">Add to cart</button>
+							<button type="submit" class="btn btn-green add-to-cart js-add-to-cart">Add to cart</button>
 						</form>
+
+						<p class="small already-in-cart-message">Added to cart. <a href="#">Checkout now?</a></p>
 					</div>
 				</section>
 
@@ -284,7 +286,7 @@
 			</div>
 
 			<aside class="game-sidebar grid-col-4">
-				<section class="game-buy-share hidden-mobile">
+				<section class="game-buy-share js-game-buy js-game-share hidden-mobile">
 					<p class="small info">Autumn sale! Offer ends December 3.</p>
 
 					<div class="price-area">
@@ -298,26 +300,26 @@
 						</span>
 					</div>
 
-					<form class="game-purchase-button-form js-form" action="#link-to-cart" method="post">
+					<form class="add-to-cart-form js-add-to-cart-form" action="#link-to-cart" method="post">
 						<input type="hidden" name="product_id" value="12345">
-						<button type="submit" class="btn btn-green add-to-cart">Add to cart</button>
+						<button type="submit" class="btn btn-green add-to-cart js-add-to-cart">Add to cart</button>
 					</form>
+
+					<p class="small already-in-cart-message">Added to cart. <a href="#">Checkout now?</a></p>
 
 					<p class="hr">or</p>
 
-					<div class="game-wishlist js-wishlist-game">
-						<form class="add-to-wishlist-form js-add-to-wishlist-form" action="#link-to-wishlist" method="post">
-							<input type="hidden" name="product_id" value="12345">
-							
-							<p><button type="submit" class="btn btn-hover-green add-to-wishlist icon-b-heart">Add to wishlist</button></p>
-						</form>
+					<form class="add-to-wishlist-form js-add-to-wishlist-form" action="#link-to-wishlist" method="post">
+						<input type="hidden" name="product_id" value="12345">
+						
+						<button type="submit" class="btn btn-hover-green add-to-wishlist icon-b-heart">Add to wishlist</button>
+					</form>
 
-						<form class="remove-from-wishlist-form js-remove-from-wishlist-form" action="#link-to-wishlist" method="post">
-							<p><button type="submit" class="btn btn-hover-red remove-from-wishlist icon-b-remove">Remove from wishlist</button></p>
+					<form class="remove-from-wishlist-form js-remove-from-wishlist-form" action="#link-to-wishlist" method="post">
+						<button type="submit" class="btn btn-hover-red remove-from-wishlist icon-b-remove">Remove from wishlist</button>
+					</form>
 
-							<p class="small">Already on your <a href="#">wishlist</a></p>
-						</form>
-					</div>
+					<p class="small already-in-wishlist-message">Already on your <a href="#">wishlist</a></p>
 
 					<!--button class="btn btn-rounded btn-small share icon-b-share">Share &amp; embed</button-->
 				</section>
