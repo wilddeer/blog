@@ -57,7 +57,7 @@ module.exports = function(grunt) {
 						'_src/css/ie8.css',
 					],
 
-					'css/steam/styles.css': [
+					'css/steam_styles.css': [
 						'_src/css/normalize.css',
 						'_src/peppermint/peppermint.required.css',
 						'_src/peppermint/peppermint.suggested.css',
@@ -99,7 +99,7 @@ module.exports = function(grunt) {
 						'_src/js/selectivizr.min.js',
 					],
 
-					'js/steam/scripts.js': [
+					'js/steam_scripts.js': [
 						'_src/js/jquery-1.10.2.min.js',
 						'_src/steam/js/events.js',
 						'_src/peppermint/peppermint.js',
@@ -113,7 +113,7 @@ module.exports = function(grunt) {
 						'_src/steam/js/init.js',
 					],
 
-					'js/steam/modernizr.js': [
+					'js/modernizr.js': [
 						'_src/js/modernizr.js',
 					],
 				},
@@ -139,7 +139,7 @@ module.exports = function(grunt) {
 
 			steam: {
 				files: {
-					'css/steam/ie.css': ['css/steam/styles.css']
+					'css/steam_ie.css': ['css/steam/styles.css']
 				}
 			}
 		},
@@ -153,13 +153,13 @@ module.exports = function(grunt) {
 				options: {
 					basedir: 'js/'
 				},
-				src: 'js/**/*.js'
+				src: 'js/*.js'
 			},
 			css: {
 				options: {
 					basedir: 'css/'
 				},
-				src: 'css/**/*.css'
+				src: 'css/*.css'
 			},
 			/*steam: {
 				options: {
