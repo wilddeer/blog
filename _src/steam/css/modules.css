@@ -441,9 +441,47 @@ html.js .user-review .review-text.collapsed + .expand {
 	text-align: left;
 }
 
-/* purchase button */
-.add-to-cart-form {
+/* add to cart area */
+.add-to-cart-area .add-to-cart-form {
 	display: inline-block;
 	vertical-align: top;
 	margin-bottom: 0.5em;
+}
+
+.add-to-cart-area .add-to-cart-button,
+.add-to-cart-area .in-cart-button {
+	min-width: 6em;
+}
+
+.add-to-cart-area .in-cart-button {
+	display: none;
+	vertical-align: top;
+	margin-bottom: 0.5em;
+}
+
+.add-to-cart-area.game-in-cart .add-to-cart-form {
+	display: none;
+}
+
+.add-to-cart-area.game-in-cart .in-cart-button {
+	display: inline-block;
+}
+
+/* add to wishlist area */
+.add-to-wishlist-area .already-on-wishlist-message {
+	margin: 0.5em 0;
+}
+
+.add-to-wishlist-area .remove-from-wishlist-form,
+.add-to-wishlist-area .already-on-wishlist-message {
+	display: none;
+}
+
+.add-to-wishlist-area.game-in-wishlist .remove-from-wishlist-form,
+.add-to-wishlist-area.game-in-wishlist .already-on-wishlist-message {
+	display: block;
+}
+
+.add-to-wishlist-area.game-in-wishlist .add-to-wishlist-form {
+	display: none;
 }

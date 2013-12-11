@@ -221,22 +221,6 @@ html.js .game-description .description-text.collapsed + .expand {
 	max-width: 20em;
 }
 
-.game-buy-share .remove-from-wishlist-form,
-.game-buy-share .already-in-wishlist-message,
-.game-buy-share .already-in-cart-message {
-	display: none;
-}
-
-.game-buy-share.game-in-wishlist .remove-from-wishlist-form,
-.game-buy-share.game-in-wishlist .already-in-wishlist-message,
-.game-buy-share.game-in-cart .already-in-cart-message {
-	display: block;
-}
-
-.game-buy-share.game-in-wishlist .add-to-wishlist-form {
-	display: none;
-}
-
 .game-languages {
 	font-size: 0.8em;
 }

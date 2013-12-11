@@ -1,9 +1,8 @@
 $.fn.steamAddToCart = function() {
 	$(this).each(function() {
 		var _this = $(this),
-			gameId = _this.attr('data-id') || '',
+			gameId = _this.attr('data-game-id') || '',
 			addForm = _this.find('.js-add-to-cart-form'),
-			addButton = addForm.find('.js-add-to-cart'),
 			whishlistedClass = 'game-in-cart';
 
 		addForm.steamAjaxForm({
@@ -14,7 +13,6 @@ $.fn.steamAddToCart = function() {
 
 		steamEvents.subscribe('gameAddedToCart'+gameId, function() {
 			_this.addClass(whishlistedClass);
-			addButton.attr('disabled', 'disabled');
 		});
 	});
 

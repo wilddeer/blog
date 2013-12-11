@@ -8,10 +8,10 @@ $(function() {
 	$('.js-form').steamAjaxForm();
 
 	/* wishlist buttons */
-	$('.js-game-share').steamAddToWishlist();
+	$('.js-add-to-wishlist-area').steamAddToWishlist();
 
 	/* add to cart buttons */
-	$('.js-game-buy').steamAddToCart();
+	$('.js-add-to-cart-area').steamAddToCart();
 
 	/* prevent focus*/
 	addEvent(body[0], 'click', function(event) {
