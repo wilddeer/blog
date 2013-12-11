@@ -181,47 +181,6 @@ CLASSES
 	border-bottom: 1px dashed;
 }
 
-/*icon links */
-/*a[class*="icon-b-"],
-.pseudo-link[class*="icon-b-"] {
-	padding-left: 20px;
-}
-
-a[class*="icon-b-"]:before,
-.pseudo-link[class*="icon-b-"]:before {
-	margin-left: -20px;
-	margin-right: 4px;
-	vertical-align: -2px;
-}
-
-a[class*="icon-a-"],
-.pseudo-linka[class*="icon-a-"] {
-	padding-right: 20px;
-}
-
-a[class*="icon-a-"]:after,
-.pseudo-linka[class*="icon-a-"]:after {
-	margin-right: -20px;
-	margin-left: 4px;
-	vertical-align: -2px;
-}
-
-a.btn[class*="icon-b-"] {
-	padding-left: 0;
-}
-
-a.btn[class*="icon-a-"] {
-	padding-right: 0;
-}
-
-a.btn[class*="icon-b-"]:before {
-	margin-left: 0;
-}
-
-a.btn[class*="icon-a-"]:after {
-	margin-right: 0;
-}*/
-
 /* icon lists */
 li[class*="icon-"] {
 	position: relative;

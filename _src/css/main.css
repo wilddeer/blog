@@ -114,8 +114,17 @@ blockquote,
 h1,
 h2,
 h3,
-h4 {
+h4,
+hgroup {
+	margin: 0 0 24px 0; /* fallback */
 	margin: 0 0 1.5rem 0;
+}
+
+hgroup h1,
+hgroup h2,
+hgroup h3,
+hgroup h4 {
+	margin-bottom: 0;
 }
 
 a {
