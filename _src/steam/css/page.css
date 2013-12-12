@@ -127,8 +127,8 @@ PAGE
 }
 
 .game-dlc-notice > h3,
-.game-dlc-notice > p:last-child {
-	margin: 0;
+.game-dlc-notice > *:last-child {
+	margin-bottom: 0;
 }
 
 .game-purchase-option {

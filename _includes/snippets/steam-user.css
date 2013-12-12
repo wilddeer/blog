@@ -1,90 +1,90 @@
 .user {
-	text-decoration: none;
-	color: #aaa;
+    text-decoration: none;
+    color: #aaa;
 }
 
 .user .userpic {
-	position: relative;
-	display: inline-block;
-	border-radius: 50%;
-	background: #aaa;
-	border: 3px solid #aaa;
-	vertical-align: middle;
-	overflow: hidden;
+    position: relative;
+    display: inline-block;
+    border-radius: 50%;
+    background: #aaa;
+    border: 3px solid #aaa;
+    vertical-align: middle;
+    overflow: hidden;
 }
 
 .user .userpic:after {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	border-radius: 50%;
-	box-shadow: inset 0 0 3px 1px rgba(0,0,0,0.6);
-	display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 50%;
+    box-shadow: inset 0 0 3px 1px rgba(0,0,0,0.6);
+    display: block;
 }
 
 .user .userpic img {
-	border-radius: 50%;
-	vertical-align: top;
+    border-radius: 50%;
+    vertical-align: top;
 }
 
 .user.user-square .userpic,
 .user.user-square .userpic:after,
 .user.user-square .userpic img {
-	border-radius: 10%;
+    border-radius: 10%;
 }
 
 .user .username {
-	text-decoration: underline;
+    text-decoration: underline;
 }
 
 .user .userpic + .username {
-	margin-left: 0.4em;
+    margin-left: 0.4em;
 }
 
 .user:hover .userpic {
-	background: #c0c0c0;
-	border-color: #c0c0c0;
+    background: #c0c0c0;
+    border-color: #c0c0c0;
 }
 
 .user:hover {
-	color: #c0c0c0;
+    color: #c0c0c0;
 }
 
 .user.user-online .userpic {
-	background: #7cb8e4;
-	border-color: #7cb8e4;
+    background: #7cb8e4;
+    border-color: #7cb8e4;
 }
 
 .user.user-online {
-	color: #7cb8e4;
+    color: #7cb8e4;
 }
 
 .user.user-online:hover .userpic {
-	background: #92cdf8;
-	border-color: #92cdf8;
+    background: #92cdf8;
+    border-color: #92cdf8;
 }
 
 .user.user-online:hover {
-	color: #92cdf8;
+    color: #92cdf8;
 }
 
 .user.user-ingame .userpic {
-	background: #94de35;
-	border-color: #94de35;
+    background: #94de35;
+    border-color: #94de35;
 }
 
 .user.user-ingame {
-	color: #94de35;
+    color: #94de35;
 }
 
 .user.user-ingame:hover .userpic {
-	background: #aef651;
-	border-color: #aef651;
+    background: #aef651;
+    border-color: #aef651;
 }
 
 .user.user-ingame:hover {
-	color: #aef651;
+    color: #aef651;
 }

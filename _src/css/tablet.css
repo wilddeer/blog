@@ -160,10 +160,20 @@
 	figure img {
 		max-height: 450px;
 	}
+
+	.codewrap_maxheight pre {
+		max-height: 25em;
+	}
+
 }
 
 @media all and (min-height: 750px) {
 	figure img {
 		max-height: none;
 	}
+
+	.codewrap_maxheight pre {
+		max-height: 30em;
+	}
+
 }

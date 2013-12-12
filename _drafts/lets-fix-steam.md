@@ -6,126 +6,126 @@ lang: ru
 ---
 
 <style>
-  .steam-demo {
-    width: 100%;
-    font-size: 16px;
-    color: white;
-    background: #222;
-    padding: 3em 4%;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #f5f5f5;
-    margin-bottom: 1.5em;
-  }
-
-  .steam-demo.white {
-    padding-top: 1.5em;
-    padding-bottom: 1.5em;
-    background: transparent;
-  }
-
-  .steam-demo.fullwidth {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  @media all and (min-width: 40em) {
     .steam-demo {
-      width: 92%;
-      padding-left: 1.5em;
-      padding-right: 1.5em;
+        width: 100%;
+        font-size: 16px;
+        color: white;
+        background: #222;
+        padding: 3em 4%;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #f5f5f5;
+        margin-bottom: 1.5em;
     }
-  }
 
-  .steam-demo a,
-  .steam-demo a:visited {
-    color: #1f98df;
-  }
+    .steam-demo.white {
+        padding-top: 1.5em;
+        padding-bottom: 1.5em;
+        background: transparent;
+    }
 
-  .steam-demo a:hover {
-    text-decoration: underline;
-    background: transparent;
-    color: #2ac6ed;
-  }
+    .steam-demo.fullwidth {
+        padding-left: 0;
+        padding-right: 0;
+    }
 
-  .steam-demo p {
-    margin: 0 0 1.2em 0;
-  }
+    @media all and (min-width: 40em) {
+        .steam-demo {
+            width: 92%;
+            padding-left: 1.5em;
+            padding-right: 1.5em;
+        }
+    }
 
-  .steam-demo h3 {
-    font-size: 1.25em;
-  }
+    .steam-demo a,
+    .steam-demo a:visited {
+        color: #1f98df;
+    }
 
-  .steam-demo .small {
-    font-size: 0.8em;
-  }
+    .steam-demo a:hover {
+        text-decoration: underline;
+        background: transparent;
+        color: #2ac6ed;
+    }
 
-  .steam-demo .user:visited {
-    color: #aaa;
-  }
+    .steam-demo p {
+        margin: 0 0 1.2em 0;
+    }
 
-  .steam-demo .user.user-online:visited {
-    color: #7cb8e4;
-  }
+    .steam-demo h3 {
+        font-size: 1.25em;
+    }
 
-  .steam-demo .user.user-ingame:visited {
-    color: #94de35;
-  }
+    .steam-demo .small {
+        font-size: 0.8em;
+    }
 
-  .steam-demo .user:visited:hover {
-    color: #c0c0c0;
-  }
+    .steam-demo .user:visited {
+        color: #aaa;
+    }
 
-  .steam-demo .user.user-online:visited:hover {
-    color: #92cdf8;
-  }
+    .steam-demo .user.user-online:visited {
+        color: #7cb8e4;
+    }
 
-  .steam-demo .user.user-ingame:visited:hover {
-    color: #aef651;
-  }
+    .steam-demo .user.user-ingame:visited {
+        color: #94de35;
+    }
 
-  .steam-demo .thumbs ul li {
-    padding-left: 0;
-  }
+    .steam-demo .user:visited:hover {
+        color: #c0c0c0;
+    }
 
-  .steam-demo .thumbs ul li:before {
-    content: '';
-    display: none;
-  }
+    .steam-demo .user.user-online:visited:hover {
+        color: #92cdf8;
+    }
 
-  .steam-demo .peppermint.active {
-    margin-bottom: 0;
-  }
+    .steam-demo .user.user-ingame:visited:hover {
+        color: #aef651;
+    }
 
-  .steam-demo .steam-demo-peppermint.active .dots {
-    display: block;
-  }
+    .steam-demo .thumbs ul li {
+        padding-left: 0;
+    }
 
-  .steam-demo .peppermint.active figure {
-    padding: 0;
-  }
+    .steam-demo .thumbs ul li:before {
+        content: '';
+        display: none;
+    }
 
-  .no-js .js-controls {
-    display: none;
-  }
+    .steam-demo .peppermint.active {
+        margin-bottom: 0;
+    }
 
-  .js-controls {
-    text-align: center;
-  }
+    .steam-demo .steam-demo-peppermint.active .dots {
+        display: block;
+    }
 
-  .problem {
-    color: #ca3f27;
-  }
+    .steam-demo .peppermint.active figure {
+        padding: 0;
+    }
 
-  .solution {
-    color: #8bca27;
-  }
+    .no-js .js-controls {
+        display: none;
+    }
+
+    .js-controls {
+        text-align: center;
+    }
+
+    .problem {
+        color: #ca3f27;
+    }
+
+    .solution {
+        color: #8bca27;
+    }
 </style>
 
 #Чиним Steam {#header}
 
-[Стим](http://store.steampowered.com/) всем хорош, но сайт у них ужасный. Все классные идеи чуваков из Валва получают то или иное воплощение на сайте, но реализация фронтэнда страдает.
+[Стим](http://store.steampowered.com/) всем хорош, но сайт у ребят ужасный. Все классные идеи чуваков из Валва, получившие то или иное воплощение на сайте, страдают от плохой реализации фронтэнда.
 
-Пришло время сделать свой стим, с преферансом и блудницами. Я взял для издевательств [страницу игры](http://store.steampowered.com/app/212894/) в магазине и переделал ее. Переделка не полная, не стал переделывать шапку и футер стима (лень), а так же отсутствуют некоторые элементы, присутствующие на оригинальной странице. Дизайн какой есть, чукча не дизайнер.
+Пришло время сделать свой стим, с преферансом и блудницами. Я взял для издевательств [страницу игры](http://store.steampowered.com/app/212894/) в магазине и переделал ее. Переделка не полная, не стал переделывать шапку и футер стима (лень), а также отсутствуют некоторые элементы, присутствующие на оригинальной странице. Дизайн какой есть, чукча не дизайнер.
 
 В общем, вот что вышло:
 
@@ -134,8 +134,8 @@ lang: ru
 А теперь про проблемы сайта Стима и как я их решал, по полочкам:
 
 <hgroup>
-  <h4 class="problem">Проблема</h4>
-  <h2>Урезанная мобильная версия</h2>
+    <h4 class="problem">Проблема</h4>
+    <h2>Урезанная мобильная версия</h2>
 </hgroup>
 
 Мобильная версия сайта не распознает многие мобильные девайсы и не обладает и половиной функционала полной версии. Например, недавно добавленные пользовательские обзоры игр полностью отсутствуют в мобильной версии.
@@ -143,8 +143,8 @@ lang: ru
 Между тем давать мобильным пользователям обрезанный функционал --- очень плохая практика. Пользователь, зашедший с мобильника, хочет использовать все возможностями сайта, так же как и пользователь на десктопе. Есть [очень хорошая и короткая книжка](http://www.abookapart.com/products/mobile-first) по этому поводу.
 
 <hgroup>
-  <h4 class="solution">Решение</h4>
-  <h2>Адаптивная верстка</h2>
+    <h4 class="solution">Решение</h4>
+    <h2>Адаптивная верстка</h2>
 </hgroup>
 
 Делаем адаптивную демку. Адаптивная верстка увеличвает время и сложность разработки, зато весь функционал сайта будет доступен сразу на любом устройстве, а поддержка и добавление фич упростится. В особо сложных ситуациях можно использовать комбинированный подход: генерировать на сервере часть страницы по-разному в зависимости от устройства. Например, можно отдвать на разные устройства картинки разных размеров.
@@ -161,8 +161,8 @@ lang: ru
 
 <script>
 dzDelayed.push(function() {
-  {% include snippets/steam-gallery.js %}
-  $('.js-steam-peppermint').steamGallery();
+    {% include snippets/steam-gallery.js %}
+    $('.js-steam-peppermint').steamGallery();
 });
 </script>
 
@@ -174,7 +174,7 @@ dzDelayed.push(function() {
 
 После загрузки страницы следим за движением мышки. Если случается `mousemove`, переключаем класс, чтобы стрелки показывались по наведению мыши, и перестаем следить. Если `touchstart`, оставляем стрелки видимыми и тоже перестаем следить. Для тачэвентов своя логика: просто смотрим, какой тип указателя использует юзер.
 
-Весь этот огород ради одной простой вещи: юзер может использовать мышь на тач-устройстве (с появлением нетбуков на андроиде и 8 винде это особенно акутально), поэтому определить наличие тача недостаточно. А еще графический планшет часто включает тач-эвенты в браузерах.
+Весь этот огород ради одной простой вещи: юзер может использовать мышь на тач-устройстве (с появлением нетбуков на андроиде и 8 винде это особенно акутально), поэтому определить наличие тача недостаточно. А еще графический планшет, подключенный к компьютеру, часто включает тач-эвенты в браузерах.
 
 Оформляем все в виде jQuery-плагина:
 
@@ -184,30 +184,30 @@ dzDelayed.push(function() {
 
 ###Фон
 
-Делаем фон на всю страницу. Чтобы мобильные устройства не расстраивались от большого полупрозрачного блока, применяем хитрость: заменяем для них фон на другой, маленький и затемненный (его несложно сгенерировать на сервере из большого), а полупрозрачный фон у блока с контентом отключаем. Сравните [полный](/steam/i/page.bg.jpg) и [мобильный](/steam/i/page.bg.mob.jpg) варианты фона.
+Делаем фон на всю страницу. Чтобы мобильные устройства не расстраивались от блока с контентом с полупрозрачным фоном, применяем хитрость: заменяем для них фон страницы на другой, уменьшенный и затемненный (его несложно сгенерировать на сервере из большого), а полупрозрачный фон у блока с контентом отключаем. Сравните [полный](/steam/i/page.bg.jpg) и [мобильный](/steam/i/page.bg.mob.jpg) варианты фона.
 
 Так как у каждой страницы в магазине фон разный, кладем стиль прямо в шапку страницы, не забыв учесть старые ИЕ, не понимающие media queries:
 
 {% highlight html cssclass=codewrap %}
 <!--[if lt IE 9]>
 <style>
-  body {
-    background-color: #1e231f;
-    background-image: url(i/page.bg.jpg);
-  }
+    body {
+        background-color: #1e231f;
+        background-image: url(i/page.bg.jpg);
+    }
 </style>
 <![endif]-->
 <!--[if gt IE 8]><!-->
 <style>
-  body {
-    background-image: url(i/page.bg.mob.jpg);
-  }
-  @media all and (min-width: 75em) {
     body {
-      background-color: #1e231f;
-      background-image: url(i/page.bg.jpg);
+        background-image: url(i/page.bg.mob.jpg);
     }
-  }
+    @media all and (min-width: 75em) {
+        body {
+            background-color: #1e231f;
+            background-image: url(i/page.bg.jpg);
+        }
+    }
 </style>
 <!--<![endif]-->
 {% endhighlight %}
@@ -215,23 +215,23 @@ dzDelayed.push(function() {
 Чтобы мобильники еще больше нас любили, убираем для них почти все тени, полупрозрачные фоны заменяем на непрозрачные.
 
 <hgroup>
-  <h4 class="problem">Проблема</h4>
-  <h2>Контент подчиняется дизайну</h2>
+    <h4 class="problem">Проблема</h4>
+    <h2>Контент подчиняется дизайну</h2>
 </hgroup>
 
 Вот так, например, сейчас выглядит блок про DLC на сайте Стима:
 
 {% include pic.htm src='dlc-block.png' a='Блок про DLC' %}
 
-Что будет, если фраза удлинится в 2 раза? Что получится, если потом перевести эту фразу на язык, в котором она станет еще длиннее? Вот что:
+Что будет, если фразу удлинить в 2 раза? Что получится, если потом перевести эту фразу на язык, в котором она станет еще длиннее? Вот что:
 
 {% include pic.htm src='dlc-block-overflowed.png' c='Блок про DLC развалился :-(' %}
 
 У блока фиксированная высота и ширина (ширина непонятно зачем, ведь у родительского блока точно такая же ширина), а на фоне [картинка](http://cdn4.store.steampowered.com/public/images/v5/game_area_dlc.png). Даже в то время, когда не было классных CSS3-свойств, можно было сделать подобный блок резиновым. С костылями, но без особых проблем.
 
 <hgroup>
-  <h4 class="solution">Решение</h4>
-  <h2>Подчиняем дизайн контенту</h2>
+    <h4 class="solution">Решение</h4>
+    <h2>Подчиняем дизайн контенту</h2>
 </hgroup>
 
 <style>
@@ -246,15 +246,15 @@ dzDelayed.push(function() {
 
 <script>
 dzDelayed.push(function() {
-  var i = 0;
+    var i = 0;
 
-  $('#fill-it').click(function() {
-    $('.game-dlc-notice').append('<p class="small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet nulla non est malesuada, vitae dapibus libero congue. Integer cursus magna ut neque commodo fermentum sed a enim. Ut pharetra urna facilisis laoreet iaculis. Sed sapien nulla, venenatis sit amet magna eu, ultrices aliquam nibh.</p>');
+    $('#fill-it').click(function() {
+        $('.game-dlc-notice').append('<p class="small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet nulla non est malesuada, vitae dapibus libero congue. Integer cursus magna ut neque commodo fermentum sed a enim. Ut pharetra urna facilisis laoreet iaculis. Sed sapien nulla, venenatis sit amet magna eu, ultrices aliquam nibh.</p>');
 
-    if (i++ > 3) {
-      $(this).text('ну прекрати!').attr('disabled','disabled');
-    }
-  });
+        if (i++ > 3) {
+            $(this).text('ну прекрати!').attr('disabled','disabled');
+        }
+    });
 });
 </script>
 
@@ -281,15 +281,15 @@ dzDelayed.push(function() {
 Это наталкивает нас на еще одну проблему:
 
 <hgroup>
-  <h4 class="problem">Проблема</h4>
-  <h2>Неуниверсальный код</h2>
+    <h4 class="problem">Проблема</h4>
+    <h2>Неуниверсальный код</h2>
 </hgroup>
 
 Два одинаковых по виду блока используют совершенно разную верстку, хотя, по сути, должны быть идентичны.
 
 <hgroup>
-  <h4 class="solution">Решение</h4>
-  <h2>Делаем код универсальным</h2>
+    <h4 class="solution">Решение</h4>
+    <h2>Делаем код универсальным</h2>
 </hgroup>
 
 Делаем универсальный блок с ценой:
@@ -378,32 +378,32 @@ dzDelayed.push(function() {
 
 {% highlight html cssclass=codewrap %}
 <div class="price-area">
-  <span class="price">
-    $5.99
-  </span>
+    <span class="price">
+        $5.99
+    </span>
 </div>
 {% endhighlight %}
 
 И все работает.
 
 <div class="steam-demo white">
-  <div class="price-area" style="font-size: 1.5em;">
-    <span class="price">
-      ¥ 999
-    </span>
-  </div>
+    <div class="price-area" style="font-size: 1.5em;">
+        <span class="price">
+            ¥ 999
+        </span>
+    </div>
 
-  <div class="price-area" style="font-size: 1.2em;">
-    <span class="price">
-      599 руб.
-    </span>
-  </div>
+    <div class="price-area" style="font-size: 1.2em;">
+        <span class="price">
+            599 руб.
+        </span>
+    </div>
 
-  <div class="price-area">
-    <span class="price">
-      $5.99
-    </span>
-  </div>
+    <div class="price-area">
+        <span class="price">
+            $5.99
+        </span>
+    </div>
 </div>
 
 Та же история с любыми повторяющимися блоками. Например, блок с юзерпиком и именем пользователя:
@@ -499,16 +499,16 @@ dzDelayed.push(function() {
 {% highlight html cssclass=codewrap %}
 <div class="apphub_Card interactable" style="float: left; width: 468px; height: 345px;" onclick="ShowModalContent( 'http://steamcommunity.com/app/205100/discussions/0/648813728349716360/?insideModal=1', 'Read at http://steamcommunity.com/app/205100/discussions/0/648813728349716360/', 'http://steamcommunity.com/app/205100/discussions/0/648813728349716360/' );">
 
-  ...
+    ...
 
 </div>
 {% endhighlight %}
 
-Мало того, что эти посты открываются в ужасных модальных окнах (их, кстати, придумали люди, которые ненавидят вкладки), так еще их совсем никак нельзя открыть по-нормальному, ведь это не ссылка. А еще там инлайновые стили и жирный инлайновый вызов функции.
+Мало того, что эти посты открываются в ужасных модальных окнах (их, кстати, придумали люди, которые ненавидят вкладки), так еще их совсем никак нельзя открыть по-нормальному, ведь это не ссылка. Не говоря уже об инлайновых стилях и жирном инлайновом вызове функции.
 
 <hgroup>
-  <h4 class="solution">Решение</h4>
-  <h2 markdown="1">Делаем яваскрипт [ненавязчивым](https://en.wikipedia.org/wiki/Unobtrusive_JavaScript)</h2>
+    <h4 class="solution">Решение</h4>
+    <h2 markdown="1">Делаем яваскрипт [ненавязчивым](https://en.wikipedia.org/wiki/Unobtrusive_JavaScript)</h2>
 </hgroup>
 
 Весь блок можно сделать ссылкой и открывать попап (если ну прям очень хочется попап) только по нажатию левой кнопки.
@@ -518,8 +518,8 @@ dzDelayed.push(function() {
 Кроме всего перечисленного, "навязчивый" яваскрипт напрямую ведет к еще одной проблеме:
 
 <hgroup>
-  <h4 class="problem">Проблема</h4>
-  <h2>Низкая отказоустойчивость</h2>
+    <h4 class="problem">Проблема</h4>
+    <h2>Низкая отказоустойчивость</h2>
 </hgroup>
 
 Что произойдет, если упадет CDN-сервер со скриптами? Если один из скриптов выполнится с ошибкой? Правильно, половина функционала сайта просто перестанет работать. А могла бы работать, хоть и не так хорошо, как со скриптами.
@@ -529,40 +529,40 @@ dzDelayed.push(function() {
 {% include pic.htm src='gallery-nojs.jpg' a='Галерея при выключенном яваскрипте' %}
 
 <hgroup>
-  <h4 class="solution">Решение</h4>
-  <h2>Используем грамотные фоллбеки</h2>
+    <h4 class="solution">Решение</h4>
+    <h2>Используем грамотные фоллбеки</h2>
 </hgroup>
 
 Кладем картинки из галереи в блок с горизонтальным скроллом, который после инициализации превратится в нормальную галерею. Так как элементы управления без яваскрипта бесполезны, их не стоит показывать до инициализации:
 
 <div class="steam-demo fullwidth">
-  <section class="gallery peppermint steam-demo-peppermint inactive">
-    <figure>
-      <a href="/steam/i/1.jpg" target="_blank"><img src="/steam/i/m1.jpg"></a>
-    </figure>
+    <section class="gallery peppermint steam-demo-peppermint inactive">
+        <figure>
+            <a href="/steam/i/1.jpg" target="_blank"><img src="/steam/i/m1.jpg"></a>
+        </figure>
 
-    <figure>
-      <a href="/steam/i/2.jpg" target="_blank"><img src="/steam/i/m2.jpg"></a>
-    </figure>
+        <figure>
+            <a href="/steam/i/2.jpg" target="_blank"><img src="/steam/i/m2.jpg"></a>
+        </figure>
 
-    <figure>
-      <a href="/steam/i/3.jpg" target="_blank"><img src="/steam/i/m3.jpg"></a>
-    </figure>
-  </section>
+        <figure>
+            <a href="/steam/i/3.jpg" target="_blank"><img src="/steam/i/m3.jpg"></a>
+        </figure>
+    </section>
 </div>
 
 <p class="js-controls"><button id="launch-it">Запусти меня</button></p>
 
 <script>
 dzDelayed.push(function() {
-  $('#launch-it').click(function() {
-    $('.steam-demo-peppermint').Peppermint({
-      dots: true,
-      mouseDrag: true
-    });
+    $('#launch-it').click(function() {
+        $('.steam-demo-peppermint').Peppermint({
+            dots: true,
+            mouseDrag: true
+        });
 
-    $(this).attr('disabled','disabled');
-  });
+        $(this).attr('disabled','disabled');
+    });
 });
 </script>
 
@@ -584,7 +584,7 @@ dzDelayed.push(function() {
 
 ###Скорость загрузки
 
-При загрузки страницы игры в Стиме происходит 120 обращений к серверу, из них 92 картинки, 18 скриптов и 8 стилей. Причем все скрипты грузятся в шапке сайта, что сильно затормаживает отрисовку страницы.
+При загрузке страницы игры в Стиме происходит 120 обращений к серверу, из них 92 картинки, 18 скриптов и 8 стилей. Причем все скрипты грузятся в шапке сайта, что сильно затормаживает отрисовку страницы.
 
 Объединяем стили и скрипты в один файл, загружаем стили в шапке, а скрипты перед закрывающим тегом `</html>` (кроме Модернайзера, его кладем в шапку, так как он влияет на стили страницы). Объединяем картинки в спрайт. Там, где можно, используем CSS3-фичи вместо картинок.
 
@@ -594,17 +594,19 @@ dzDelayed.push(function() {
 
 С навигацией все довольно плохо, много нелогичных и непоследовательных моментов. Сайту нужен хороший UI-дизайнер, чтобы перетрясти всю навигацию и продумать интерфейсы.
 
-Так как я на дизайнера интерфейсов слабо похож, останавливаться на этом моменте не буду.
+Так как я на дизайнера интерфейсов слабо тяну, останавливаться на этом моменте не буду.
 
 ##Итого
 
-Теперь сайт адаптивный, соответствует принципам [прогрессивного улучшения](https://en.wikipedia.org/wiki/Progressive_enhancement) и [ненавязчивого яваскрипта](https://en.wikipedia.org/wiki/Unobtrusive_JavaScript), отказоустойчив, работает в ИЕ8+ и практически на всех мобильных девайсах.
+**Что сделано:** адаптивная демка, соответствующая принципам [прогрессивного улучшения](https://en.wikipedia.org/wiki/Progressive_enhancement) и [ненавязчивого яваскрипта](https://en.wikipedia.org/wiki/Unobtrusive_JavaScript), с повышенной отказоустойчивостью. Работает в ИЕ8+ и практически на всех мобильных девайсах и браузерах.
+
+**Что не сделано:** шапка, футер, HTML5-видео с фоллбеком на флеш (для трейлеров игрушек), пропущена пара блоков, присутствующих на оригинальной странице.
 
 Разминка объявляется законченной.
 
 ##Бонус-пак
 
-Код пункта главного меню Стима:
+Код одного из пунктов главного меню Стима:
 
 {% highlight html cssclass=codewrap %}
 <a class="menuitem supernav" href="http://store.steampowered.com/" data-tooltip-content="

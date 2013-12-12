@@ -314,7 +314,7 @@ pre {
 }
 
 .codewrap_maxheight pre {
-	max-height: 30em;
+	max-height: 20em;
 }
 
 html.kindle pre {
