@@ -224,7 +224,7 @@ lang: ru
 
   <figure class="red">
       <h1>Быстрый, легкий, расширяемый</h1>
-      <p>6 Кб, быстрый и плавный тач, <a href="#api">API</a> для расширений</p>
+      <p>7,5 Кб, быстрый и плавный тач, <a href="#api">API</a> для расширений</p>
   </figure>
 
   <figure class="green">
@@ -245,7 +245,7 @@ lang: ru
 - Работает в IE7+
 - Не зависит от сторонних библиотек. Если находит jQuery, регистрирует себя в качестве плагина.
 - Использует CSS3 трансформы и транзишены с фоллбеком на анимации по таймеру
-- 6 Кб кода
+- 7,5 Кб кода
 - Оптимизированные на скорость выполнения `touch`-функции
 - [API](#api) и callback-функции для расширений
 - Работает с клавиатурой, [не ломается](/internet-maintenance/js-sliders-and-the-tab-key/) от кнопки <kbd>Tab</kbd>
@@ -262,7 +262,7 @@ lang: ru
 HTML разметка:
 
 {% highlight html cssclass=codewrap %}
-<div class="peppermint" id="peppermint">
+<div class="peppermint inactive" id="peppermint">
   <figure> ... </figure>
 
   <figure> ... </figure>
@@ -282,6 +282,8 @@ var slider = Peppermint(document.getElementById('peppermint'));
 {% highlight js cssclass=codewrap %}
 $('.peppermint').Peppermint();
 {% endhighlight %}
+
+Класс `inactive` не обязателен. Он заменяется на `active` во время установки.
 
 Вместо `figure` можно использовать любой другой тег. Если используете `figure`, не забудьте подключить [html5shiv](https://github.com/aFarkas/html5shiv), чтобы старые IE не удивлялись HTML5-тегам.
 
@@ -321,7 +323,7 @@ $('.peppermint').Peppermint();
   mouseDrag: false,
 
   //Префикс для служебных классов слайдера,
-  //таких как `active`, `mouse` и `drag`.
+  //таких как `inactive`, `active`, `mouse` и `drag`.
   //Не забудьте поменять стили соответствующим образом!
   cssPrefix: '',
 

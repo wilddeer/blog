@@ -224,7 +224,7 @@ lang: en
 
   <figure class="red">
       <h1>Fast, lightweight &amp; extensible</h1>
-      <p>6 Kb, fast &amp; smooth touch, <a href="#api">API</a> for extensibility</p>
+      <p>7.5 Kb, fast &amp; smooth touch, <a href="#api">API</a> for extensibility</p>
   </figure>
 
   <figure class="green">
@@ -245,7 +245,7 @@ lang: en
 - IE7+ compatible
 - Library agnostic. If jQuery is available, registers itself as a plugin.
 - Uses CSS3 transforms &amp; animations, falls back to timer animations when necessary
-- Only 6 Kb minified
+- Only 7.5 Kb minified
 - Perfomance-optimized `touch` functions
 - API and callback functions for extensibility
 - [Doesn't break](/en/internet-maintenance/js-sliders-and-the-tab-key/) when <kbd>tab</kbd>&rsquo;bing
@@ -262,7 +262,7 @@ lang: en
 HTML markup:
 
 {% highlight html cssclass=codewrap %}
-<div class="peppermint" id="peppermint">
+<div class="peppermint inactive" id="peppermint">
   <figure> ... </figure>
 
   <figure> ... </figure>
@@ -282,6 +282,8 @@ Or javascript + jQuery:
 {% highlight js cssclass=codewrap %}
 $('.peppermint').Peppermint();
 {% endhighlight %}
+
+`inactive` class is not required. It is replaced with `active` during setup.
 
 You are free to use any other tag instead of `figure`. When using `figure`, don't forget to include [html5shiv](https://github.com/aFarkas/html5shiv), otherwise it won't work in old IEs.
 
@@ -321,7 +323,7 @@ Peppermint can take settings object as an optional second parameter (first when 
   mouseDrag: false,
 
   //Prefix to be used with peppermint classes,
-  //such as `active`, `mouse` and `drag`.
+  //such as `inactive`, `active`, `mouse` and `drag`.
   //Don't forget to change the stylesheet appropriately!
   cssPrefix: '',
 
