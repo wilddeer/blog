@@ -105,7 +105,7 @@ module.exports = function(grunt) {
 					'js/steam_scripts.js': [
 						'_src/js/jquery-1.10.2.min.js',
 						'_src/steam/js/events.js',
-						'_src/peppermint/peppermint.js',
+						'_src/peppermint/peppermint.min.js',
 						'_src/js/slime.js',
 						'_src/steam/js/collapser.js',
 						'_src/steam/js/gallery.js',
@@ -119,7 +119,6 @@ module.exports = function(grunt) {
 
 					'js/steam_header_scripts.js': [
 						'_src/js/modernizr.js',
-						'_src/sniffer/sniffer.min.js',
 					],
 				},
 			},

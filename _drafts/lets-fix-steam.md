@@ -417,49 +417,49 @@ dzDelayed.push(function() {
 <div class="steam-demo" style="text-align: center;">
   <p>
     <a href="#" class="user" style="font-size: 0.66em;">
-      <span class="userpic"><img src="/steam/i/userpic1.jpg" width="22" height="22"></span><span class="username">Username</span>
+      <span class="userpic"><img src="/steam/i/userpic1.jpg"></span><span class="username">Username</span>
     </a>
   </p>
 
   <p>
     <a href="#" class="user user-online">
-      <span class="userpic"><img src="/steam/i/userpic4.jpg" width="32" height="32"></span><span class="username">Username</span>
+      <span class="userpic"><img src="/steam/i/userpic4.jpg"></span><span class="username">Username</span>
     </a>
   </p>
 
   <p>
     <a href="#" class="user user-ingame" style="font-size: 1.5em;">
-      <span class="userpic"><img src="/steam/i/userpic-med.jpg" width="48" height="48"></span><span class="username">Username</span>
+      <span class="userpic"><img src="/steam/i/userpic-med.jpg"></span><span class="username">Username</span>
     </a>
   </p>
 
   <p>
     <a href="#" class="user user-online" style="font-size: 2.25em;">
-      <span class="userpic"><img src="/steam/i/userpic-big.jpg" width="72" height="72"></span><span class="username">Username</span>
+      <span class="userpic"><img src="/steam/i/userpic-big.jpg"></span><span class="username">Username</span>
     </a>
   </p>
 
   <p>
     <a href="#" class="user user-ingame user-square" style="font-size: 2.25em;">
-      <span class="userpic"><img src="/steam/i/userpic-big2.jpg" width="72" height="72"></span><span class="username">Username</span>
+      <span class="userpic"><img src="/steam/i/userpic-big2.jpg"></span><span class="username">Username</span>
     </a>
   </p>
 
   <p>
     <a href="#" class="user user-online user-square" style="font-size: 1.5em;">
-      <span class="userpic"><img src="/steam/i/userpic-med2.jpg" width="48" height="48"></span><span class="username">Username</span>
+      <span class="userpic"><img src="/steam/i/userpic-med2.jpg"></span><span class="username">Username</span>
     </a>
   </p>
 
   <p>
     <a href="#" class="user user-square">
-      <span class="userpic"><img src="/steam/i/userpic3.jpg" width="32" height="32"></span><span class="username">Username</span>
+      <span class="userpic"><img src="/steam/i/userpic3.jpg"></span><span class="username">Username</span>
     </a>
   </p>
 
   <p>
     <a href="#" class="user user-ingame user-square" style="font-size: 0.66em;">
-      <span class="userpic"><img src="/steam/i/userpic6.jpg" width="22" height="22"></span><span class="username">Username</span>
+      <span class="userpic"><img src="/steam/i/userpic6.jpg"></span><span class="username">Username</span>
     </a>
   </p>
 </div>

@@ -10,14 +10,15 @@
 	vertical-align: text-top;
 }
 
-html.svg [class*="icon-b-"]:before,
-html.svg [class*="icon-a-"]:after {
-	background-image: url(/steam/i/sprites.svg);
-}
-
-html.presto [class*="icon-b-"]:before,
-html.presto [class*="icon-a-"]:after {
-	background-image: url(/steam/i/sprites.png);
+@media
+(-webkit-min-device-pixel-ratio: 1.3),
+(-o-min-device-pixel-ratio: 13/10),
+(min-resolution: 120dpi) {
+	html.backgroundsize [class*="icon-b-"]:before,
+	html.backgroundsize [class*="icon-a-"]:after {
+		background-size: 504px 240px;
+		background-image: url(/steam/i/sprites@2x.png);
+	}
 }
 
 i[class*="icon-b-"]:before,
@@ -536,30 +537,16 @@ i[class*="icon-a-"]:after {
 
 
 @media all and (min-width: 35em) {
-	.icon-big[class*="icon-b-"]:before,
-	.icon-big[class*="icon-a-"]:after {
-		width: 26px;
-		height: 24px;
-		background-size: 756px 360px;
-		background-image: url(/steam/i/sprites@2.png);
-	}
-
-	html.svg .icon-big[class*="icon-b-"]:before,
-	html.svg .icon-big[class*="icon-a-"]:after {
-		background-image: url(/steam/i/sprites.svg);
-	}
-
-	html.presto .icon-big[class*="icon-b-"]:before,
-	html.presto .icon-big[class*="icon-a-"]:after {
-		background-image: url(/steam/i/sprites@2.png);
-	}
-
 	.icon-big.icon-b-chevron-left:before,
 	.icon-big.icon-a-chevron-left:after {
-		background-position: 4px -96px;
+		width: 14px;
+		height: 21px;
+		background-position: -455px -219px;
 	}
 	.icon-big.icon-b-chevron-right:before,
 	.icon-big.icon-a-chevron-right:after {
-		background-position: -45px -96px;
+		width: 14px;
+		height: 21px;
+		background-position: -488px -219px;
 	}
 }

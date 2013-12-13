@@ -27,7 +27,8 @@ PAGE
 
 	.store-game-page .main {
 		margin-top: 1.5em;
-		background: url(/steam/i/transparent50.png); /* fallback */
+		background: url(/steam/i/transparent70.png); /* fallback */
+		background: rgba(0,0,0,0.7);
 		background: -webkit-linear-gradient(rgba(0,0,0,0.6) 700px, rgba(22,22,22,0.7) 1000px);
 		background: -moz-linear-gradient(rgba(0,0,0,0.6) 700px, rgba(22,22,22,0.7) 1000px);
 		background: linear-gradient(rgba(0,0,0,0.6) 700px, rgba(22,22,22,0.7) 1000px);
@@ -315,7 +316,6 @@ html.js .game-description .description-text.collapsed + .expand {
 }
 
 .game-friends ul {
-	font-size: 0.9em;
 	overflow: hidden; /* clearfix */
 	list-style-type: none;
 	padding-left: 0;
@@ -338,6 +338,10 @@ html.js .game-description .description-text.collapsed + .expand {
 	white-space: nowrap;
 	word-wrap: normal;
 	overflow: hidden;
+}
+
+.game-friends ul li .user .username {
+	font-size: 0.9em;
 }
 
 @media all and (min-width: 23em) {

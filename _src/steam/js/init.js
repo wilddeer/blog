@@ -1,6 +1,4 @@
 $(function() {
-	var body = $('body');
-
 	/* init the gallery */
 	$('.js-peppermint').steamGallery();
 
@@ -16,17 +14,17 @@ $(function() {
 	/* user reviews */
 	$('.js-user-review').steamUserReview();
 
-	/* prevent focus*/
-	addEvent(body[0], 'click', function(event) {
+	/* collapser */
+	$('.user-review .review-text').collapser(320);
+	$('.game-description .description-text').collapser(450);
+
+	/* prevent focus after clicks */
+	addEvent(document.getElementsByTagName('body')[0], 'click', function(event) {
 		if ((document.activeElement.tagName == 'BUTTON' ||
 			document.activeElement.getAttribute('tabindex'))
 			&& event.clientX !== 0 && event.clientY !== 0 && event.offsetX !== 0 && event.offsetY !== 0) {
 			document.activeElement.blur();
 		}
 	}, true);
-
-	/* collapser */
-	$('.user-review .review-text').collapser(320);
-	$('.game-description .description-text').collapser(450);
 
 });
