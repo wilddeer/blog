@@ -27,7 +27,6 @@
 	background: rgba(0,0,0,0); /* ie mobile fix */
 	visibility: hidden;
 	position: absolute;
-	display: none;
 	top: 50%;
 	width: 40px;
 	height: 40px;
@@ -44,9 +43,9 @@
 	tap-highlight-color: transparent;
 }
 
-.gallery.peppermint.active .viewport .arrow-prev,
-.gallery.peppermint.active .viewport .arrow-next {
-	display: block;
+.gallery.peppermint.inactive .viewport .arrow-prev,
+.gallery.peppermint.inactive .viewport .arrow-next {
+	display: none;
 }
 
 .gallery .viewport .arrow-prev:before,
@@ -257,8 +256,8 @@ i[class*="icon-a-"]:after {
 		background-image: url(/steam/i/sprites@2.png);
 	}
 
-	html.svg [class*="icon-b-"]:before,
-	html.svg [class*="icon-a-"]:after {
+	html.svg .icon-big[class*="icon-b-"]:before,
+	html.svg .icon-big[class*="icon-a-"]:after {
 		background-image: url(/steam/i/sprites.svg);
 	}
 

@@ -18,8 +18,7 @@
 }
 
 .slime.active .scroller {
-	max-width: none;
-	width: auto;
+	display: inline-block;
 	position: relative;
 }
 

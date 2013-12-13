@@ -3,7 +3,7 @@ function Slime(_this, options) {
 		o = options || {},
 		transitionSpeed = 300,
 		animationTimer,
-		contentBlock,
+		scrollerBlock,
 		contentWidth,
 		slimeWidth,
 		positionMin,
@@ -61,11 +61,11 @@ function Slime(_this, options) {
 	function changePos(pos, speed) {
 		var time = speed?speed+'ms':'';
 
-		contentBlock.style.webkitTransitionDuration = 
-		contentBlock.style.MozTransitionDuration = 
-		contentBlock.style.msTransitionDuration = 
-		contentBlock.style.OTransitionDuration = 
-		contentBlock.style.transitionDuration = time;
+		scrollerBlock.style.webkitTransitionDuration = 
+		scrollerBlock.style.MozTransitionDuration = 
+		scrollerBlock.style.msTransitionDuration = 
+		scrollerBlock.style.OTransitionDuration = 
+		scrollerBlock.style.transitionDuration = time;
 
 		setPos(Math.floor(pos));
 	}
@@ -114,18 +114,18 @@ function Slime(_this, options) {
 
 	//sets the position of the slider (in px)
 	function setPos(pos) {
-		contentBlock.style.webkitTransform = 'translate('+pos+'px,0) translateZ(0)';
-		contentBlock.style.msTransform = 
-		contentBlock.style.MozTransform = 
-		contentBlock.style.OTransform = 
-		contentBlock.style.transform = 'translateX('+pos+'px)';
+		scrollerBlock.style.webkitTransform = 'translate('+pos+'px,0) translateZ(0)';
+		scrollerBlock.style.msTransform = 
+		scrollerBlock.style.MozTransform = 
+		scrollerBlock.style.OTransform = 
+		scrollerBlock.style.transform = 'translateX('+pos+'px)';
 
 		currentPosition = pos;
 	}
 
 	//`setPos` fallback for UAs with no CSS transforms support
 	function setPosFallback(pos) {
-		contentBlock.style.left = pos+'px';
+		scrollerBlock.style.left = pos+'px';
 
 		currentPosition = pos;
 	}
@@ -219,9 +219,14 @@ function Slime(_this, options) {
 		});
 	}
 
+	function widthChanged() {
+		getWidths();
+		scrollTo(currentPosition);
+	}
+
 	function getWidths() {
 		slimeWidth = _this.offsetWidth;
-		contentWidth = _this.scrollWidth;
+		contentWidth = scrollerBlock.offsetWidth;
 		positionMin = slimeWidth - contentWidth;
 	}
 
@@ -231,7 +236,7 @@ function Slime(_this, options) {
 		if (!support.transforms || !!window.opera) setPos = setPosFallback;
 		if (!support.transitions || !!window.opera) changePos = changePosFallback;
 
-		contentBlock = _this.children[0];
+		scrollerBlock = _this.children[0];
 
 		addEvent(_this, 'focus', function(event) {
 			_this.scrollLeft = 0;
@@ -242,7 +247,7 @@ function Slime(_this, options) {
 		}, true);
 
 		/* set classes */
-		addClass(contentBlock, classes.scroller);
+		addClass(scrollerBlock, classes.scroller);
 		addClass(_this, classes.active);
 		removeClass(_this, classes.inactive);
 
@@ -253,8 +258,8 @@ function Slime(_this, options) {
 		touchInit();
 
 		/* watch for width changes */
-		addEvent(window, 'resize', getWidths);
-		addEvent(window, 'orientationchange', getWidths);
+		addEvent(window, 'resize', widthChanged);
+		addEvent(window, 'orientationchange', widthChanged);
 	}
 
 	setup();

@@ -59,6 +59,7 @@ lang: ru
         font-size: 0.8em;
     }
 
+    .steam-demo .user,
     .steam-demo .user:visited {
         color: #aaa;
     }
@@ -71,6 +72,7 @@ lang: ru
         color: #94de35;
     }
 
+    .steam-demo .user:hover,
     .steam-demo .user:visited:hover {
         color: #c0c0c0;
     }
@@ -225,7 +227,7 @@ dzDelayed.push(function() {
 
 Что будет, если фразу удлинить в 2 раза? Что получится, если потом перевести эту фразу на язык, в котором она станет еще длиннее? Вот что:
 
-{% include pic.htm src='dlc-block-overflowed.png' c='Блок про DLC развалился :-(' %}
+{% include pic.htm src='dlc-block-overflowed.png' c='Блок про DLC порвало :-(' %}
 
 У блока фиксированная высота и ширина (ширина непонятно зачем, ведь у родительского блока точно такая же ширина), а на фоне [картинка](http://cdn4.store.steampowered.com/public/images/v5/game_area_dlc.png). Даже в то время, когда не было классных CSS3-свойств, можно было сделать подобный блок резиновым. С костылями, но без особых проблем.
 

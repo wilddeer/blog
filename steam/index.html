@@ -1,6 +1,6 @@
 ---
 ---
-<!doctype html>
+<!DOCTYPE html>
 <!--[if lt IE 8]> <html class="no-js ie ie8 ie7"> <![endif]-->
 <!--[if IE 8]> <html class="no-js ie ie8"> <![endif]-->
 <!--[if IE 9]> <html class="no-js ie"> <![endif]-->
@@ -20,7 +20,7 @@
 
 		<style>
 			body {
-				background-color: #21100d;
+				background-color: #1e231f;
 				background-image: url(i/page.bg.jpg);
 			}
 		</style>
@@ -43,7 +43,7 @@
 	<!--<![endif]-->
 	
 	<!-- header scripts -->
-	<script type="text/javascript" src="/js/modernizr.js"></script>
+	<script type="text/javascript" src="/js/steam_header_scripts.js?{{ site['steam_header_scripts.js'] }}"></script>
 </head>
 
 <body class="store-game-page">
@@ -567,7 +567,7 @@
 				</div>
 			</header>
 
-			<article class="user-review">
+			<article class="user-review js-user-review">
 				<header class="meta">
 					<p>
 						<a href="#" class="user user-online big">
@@ -577,7 +577,7 @@
 						<span class="playtime">played for 54 hours</span>
 					</p>
 
-					<p class="additional-info"><span class="green icon-b-thumbs-up2">Recommended</span> • 422 products in account • 5 of 6 people (83%) found this review helpful</p>
+					<p class="additional-info"><span class="green icon-b-thumbs-up2">Recommended</span> • 422 products in account • <span class="js-found-helpful">3</span> of <span class="js-total">3</span> people (<span class="js-found-helpful-percent">100</span>%) found this review helpful</p>
 				</header>
 
 				<div class="review-text">
@@ -599,25 +599,25 @@
 						<span class="vote-question">Was this review helpful?</span>
 
 						<span class="vote-buttons">
-							<form class="vote-form js-form" action="#vote" method="post">
+							<form class="vote-form js-vote-form-yes" action="#vote" method="post">
 								<input type="hidden" name="action" value="review_vote">
 								<input type="hidden" name="id" value="111">
 								<input type="hidden" name="score" value="1">
-								<button type="submit" class="btn btn-hover-green btn-small btn-flat icon-b-thumbs-up2">Yes</button>
+								<button type="submit" class="btn btn-hover-green btn-small btn-flat icon-b-thumbs-up2 js-vote-button-yes">Yes</button>
 							</form>
 
-							<form class="vote-form js-form" action="#vote" method="post">
+							<form class="vote-form js-vote-form-no" action="#vote" method="post">
 								<input type="hidden" name="action" value="review_vote">
 								<input type="hidden" name="id" value="111">
 								<input type="hidden" name="score" value="0">
-								<button class="btn btn-hover-red btn-small btn-flat icon-b-thumbs-down2">No</button>
+								<button class="btn btn-hover-red btn-small btn-flat icon-b-thumbs-down2 js-vote-button-no">No</button>
 							</form>
 						</span>
 					</div>
 				</footer>
 			</article>
 
-			<article class="user-review">
+			<article class="user-review js-user-review">
 				<header class="meta">
 					<p>
 						<a href="#" class="user user-ingame big">
@@ -627,7 +627,7 @@
 						<span class="playtime">played for 11 hours</span>
 					</p>
 
-					<p class="additional-info"><span class="red icon-b-thumbs-down2">Not recommended</span> • 186 products in account • 3 of 3 people (100%) found this review helpful</p>
+					<p class="additional-info"><span class="red icon-b-thumbs-down2">Not recommended</span> • 186 products in account • <span class="js-found-helpful">3</span> of <span class="js-total">3</span> people (<span class="js-found-helpful-percent">100</span>%) found this review helpful</p>
 				</header>
 
 				<div class="review-text">
@@ -645,25 +645,25 @@
 						<span class="vote-question">Was this review helpful?</span>
 
 						<span class="vote-buttons">
-							<form class="vote-form js-form" action="#vote" method="post">
+							<form class="vote-form js-vote-form-yes" action="#vote" method="post">
 								<input type="hidden" name="action" value="review_vote">
 								<input type="hidden" name="id" value="111">
 								<input type="hidden" name="score" value="1">
-								<button type="submit" class="btn btn-hover-green btn-small btn-flat icon-b-thumbs-up2">Yes</button>
+								<button type="submit" class="btn btn-hover-green btn-small btn-flat icon-b-thumbs-up2 js-vote-button-yes">Yes</button>
 							</form>
 
-							<form class="vote-form js-form" action="#vote" method="post">
+							<form class="vote-form js-vote-form-no" action="#vote" method="post">
 								<input type="hidden" name="action" value="review_vote">
 								<input type="hidden" name="id" value="111">
 								<input type="hidden" name="score" value="0">
-								<button class="btn btn-hover-red btn-small btn-flat active icon-b-thumbs-down2">No</button>
+								<button class="btn btn-hover-red btn-small btn-flat active icon-b-thumbs-down2 js-vote-button-no">No</button>
 							</form>
 						</span>
 					</div>
 				</footer>
 			</article>
 
-			<article class="user-review">
+			<article class="user-review js-user-review">
 				<header class="meta">
 					<p>
 						<a href="#" class="user big">
@@ -673,7 +673,7 @@
 						<span class="playtime">played for 11 hours</span>
 					</p>
 
-					<p class="additional-info"><span class="green icon-b-thumbs-up2">Recommended</span> • 186 products in account • 3 of 3 people (100%) found this review helpful</p>
+					<p class="additional-info"><span class="green icon-b-thumbs-up2">Recommended</span> • 186 products in account • <span class="js-found-helpful">3</span> of <span class="js-total">3</span> people (<span class="js-found-helpful-percent">100</span>%) found this review helpful</p>
 				</header>
 
 				<div class="review-text">
@@ -691,18 +691,18 @@
 						<span class="vote-question">Was this review helpful?</span>
 
 						<span class="vote-buttons">
-							<form class="vote-form js-form" action="#vote" method="post">
+							<form class="vote-form js-vote-form-yes" action="#vote" method="post">
 								<input type="hidden" name="action" value="review_vote">
 								<input type="hidden" name="id" value="111">
 								<input type="hidden" name="score" value="1">
-								<button type="submit" class="btn btn-hover-green btn-small btn-flat active icon-b-thumbs-up2">Yes</button>
+								<button type="submit" class="btn btn-hover-green btn-small btn-flat active icon-b-thumbs-up2 js-vote-button-yes">Yes</button>
 							</form>
 
-							<form class="vote-form js-form" action="#vote" method="post">
+							<form class="vote-form js-vote-form-no" action="#vote" method="post">
 								<input type="hidden" name="action" value="review_vote">
 								<input type="hidden" name="id" value="111">
 								<input type="hidden" name="score" value="0">
-								<button class="btn btn-hover-red btn-small btn-flat icon-b-thumbs-down2">No</button>
+								<button class="btn btn-hover-red btn-small btn-flat icon-b-thumbs-down2 js-vote-button-no">No</button>
 							</form>
 						</span>
 					</div>

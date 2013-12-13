@@ -95,7 +95,7 @@ $.fn.steamGallery = function() {
         //If mouse is used, enable autohiding arrows.
         if (!!window.navigator.pointerEnabled || !!window.navigator.msPointerEnabled) {
             body.one('pointermove MSPointerMove', function(event) {
-                if (event.pointerType == (event.MSPOINTER_TYPE_MOUSE || 'mouse')) {
+                if (event.pointerType == event.MSPOINTER_TYPE_MOUSE || event.pointerType == 'mouse') {
                     autoArrows();
                 }
             });

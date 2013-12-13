@@ -16,6 +16,7 @@ module.exports = function(grunt) {
 						'_src/css/rem-mobile-fallback.css',
 						'_src/peppermint/peppermint.required.css',
 						'_src/peppermint/peppermint.suggested.css',
+						'_src/css/slime.css',
 						'_src/css/main.css',
 						'_src/css/phone.css',
 						'_src/css/tablet.css',
@@ -32,6 +33,7 @@ module.exports = function(grunt) {
 						'_src/css/rem-mobile-fallback.css',
 						'_src/peppermint/peppermint.required.css',
 						'_src/peppermint/peppermint.suggested.css',
+						'_src/css/slime.css',
 						'_src/css/main.css',
 						'_src/css/phone.css',
 						'_src/css/tablet.css',
@@ -48,6 +50,7 @@ module.exports = function(grunt) {
 						'_src/css/rem-mobile-fallback.css',
 						'_src/peppermint/peppermint.required.css',
 						'_src/peppermint/peppermint.suggested.css',
+						'_src/css/slime.css',
 						'_src/css/main.css',
 						'_src/css/phone.css',
 						'_src/css/tablet.css',
@@ -109,12 +112,14 @@ module.exports = function(grunt) {
 						'_src/steam/js/ajax-forms.js',
 						'_src/steam/js/wishlist.js',
 						'_src/steam/js/add-to-cart.js',
+						'_src/steam/js/user-review.js',
 						'_src/steam/js/tools.js',
 						'_src/steam/js/init.js',
 					],
 
-					'js/modernizr.js': [
+					'js/steam_header_scripts.js': [
 						'_src/js/modernizr.js',
+						'_src/sniffer/sniffer.min.js',
 					],
 				},
 			},
@@ -139,7 +144,7 @@ module.exports = function(grunt) {
 
 			steam: {
 				files: {
-					'css/steam_ie.css': ['css/steam/styles.css']
+					'css/steam_ie.css': ['css/steam_styles.css']
 				}
 			}
 		},

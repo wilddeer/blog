@@ -31,7 +31,6 @@ MODULES
 	background: rgba(0,0,0,0); /* ie mobile fix */
 	visibility: hidden;
 	position: absolute;
-	display: none;
 	top: 50%;
 	width: 40px;
 	height: 40px;
@@ -48,9 +47,9 @@ MODULES
 	tap-highlight-color: transparent;
 }
 
-.gallery.peppermint.active .viewport .arrow-prev,
-.gallery.peppermint.active .viewport .arrow-next {
-	display: block;
+.gallery.peppermint.inactive .viewport .arrow-prev,
+.gallery.peppermint.inactive .viewport .arrow-next {
+	display: none;
 }
 
 .gallery .viewport .arrow-prev:before,
@@ -443,14 +442,14 @@ html.js .user-review .review-text.collapsed + .expand {
 
 /* add to cart area */
 .add-to-cart-area .add-to-cart-form {
-	display: inline-block;
-	vertical-align: top;
-	margin-bottom: 0.5em;
+	display: inline;
 }
 
 .add-to-cart-area .add-to-cart-button,
 .add-to-cart-area .in-cart-button {
 	min-width: 6em;
+	vertical-align: top;
+	margin-bottom: 0.5em;
 }
 
 .add-to-cart-area .in-cart-button {

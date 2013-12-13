@@ -13,6 +13,9 @@ $(function() {
 	/* add to cart buttons */
 	$('.js-add-to-cart-area').steamAddToCart();
 
+	/* user reviews */
+	$('.js-user-review').steamUserReview();
+
 	/* prevent focus*/
 	addEvent(body[0], 'click', function(event) {
 		if ((document.activeElement.tagName == 'BUTTON' ||

@@ -3,7 +3,15 @@ $.fn.steamAjaxForm = function(callbacks) {
 
 	$(this).on('submit', function() {
 		/* ajax here */
-		callbacks.success && callbacks.success();
+
+		/* fake data */
+		data = {
+			totalVoted: 150,
+			foundHelpful: 122,
+			foundHelpfulPercent: 81
+		};
+		
+		callbacks.success && callbacks.success(data);
 		return false;
 	});
 
