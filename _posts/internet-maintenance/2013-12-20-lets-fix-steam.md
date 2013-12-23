@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Let's fix Steam"
-categories: en internet-maintenance
-lang: en
+title: "Чиним Steam"
+categories: internet-maintenance
+lang: ru
 ---
 
 <style>
@@ -123,18 +123,9 @@ lang: en
     }
 </style>
 
-#Let's fix Steam {#header}
-
-Everything is good about [Steam](http://store.steampowered.com/), except for it's website. All the great ideas impersonated on Steam's website suffer from poor frontend implementation.
+#Чиним Steam {#header}
 
 [Стим](http://store.steampowered.com/) всем хорош, но сайт у ребят ужасный. Все классные идеи чуваков из Валва, получившие то или иное воплощение на сайте, страдают от плохой реализации фронтэнда.
-
-It's time to make our own Steam, with blackjack and hookers. I picked up a [game page](http://store.steampowered.com/app/212894/) for mockeries and remade it. It's not a full remake, I omitted Steam's header and footer, I also skipped some of the elements present on the original page. Design is not my forte, I did my best.
-
-Without further ado, here's the result:
-
-<p class="demo" style="text-align: center;"><a href="/steam/" style="font-size: 2.5em;">Demo</a></p>
-
 
 Пришло время сделать свой стим, с преферансом и блудницами. Я взял для издевательств [страницу игры](http://store.steampowered.com/app/212894/) в магазине и переделал ее. Переделка не полная, не стал переделывать шапку и футер стима (лень), а также отсутствуют некоторые элементы, присутствующие на оригинальной странице. Дизайн какой есть, чукча не дизайнер.
 
@@ -142,41 +133,27 @@ Without further ado, here's the result:
 
 <p class="demo" style="text-align: center;"><a href="/steam/" style="font-size: 2.5em;">Демка</a></p>
 
-And now about the things that make Steam's website bad and how I tried to solve them:
-
 А теперь про проблемы сайта Стима и как я их решал, по полочкам:
 
 <hgroup>
-    <h4 class="problem">Problem</h4>
-    <h2>Incomplete mobile version</h2>
+    <h4 class="problem">Проблема</h4>
+    <h2>Урезанная мобильная версия</h2>
 </hgroup>
 
-Steam's mobile website doesn't recognize a lot of mobile devices and doesn't have half of the functions of desktop version. It doesn't have recently added user reviews, for instance.
-
 Мобильная версия сайта не распознает многие мобильные девайсы и не обладает и половиной функционала полной версии. Например, недавно добавленные пользовательские обзоры игр полностью отсутствуют в мобильной версии.
-
-Meanwhile it's considered a pretty terrible practice to limit the functionality of your mobile website. Mobile users should be able to use all the functions available in the so called "full" version. Both versions should be "full" versions, actually. There's [a pretty good and short book](http://www.abookapart.com/products/mobile-first) on this theme.
 
 Между тем давать мобильным пользователям обрезанный функционал --- очень плохая практика. Пользователь, зашедший с мобильника, хочет использовать все возможностями сайта, так же как и пользователь на десктопе. Есть [очень хорошая и короткая книжка](http://www.abookapart.com/products/mobile-first) по этому поводу.
 
 <hgroup>
-    <h4 class="solution">Solution</h4>
-    <h2>Responsive design</h2>
+    <h4 class="solution">Решение</h4>
+    <h2>Адаптивная верстка</h2>
 </hgroup>
 
-Responsive design increases the time and complexity of the development, but, on the bright side, it allowes the whole functionality of the site to be available on any device and removes the need to maintein both versions and bother about adding new features to both of them. You still can use the combined approach in particularly difficult situations: generate part of the page on the server differently depending on the device, e. g. serve different picture sizes to different devices, or even substitute some of the templates with more simple or complex ones.
-
-Делаем адаптивную демку. Адаптивная верстка увеличвает время и сложность разработки, зато весь функционал сайта будет доступен сразу на любом устройстве, а поддержка и добавление фич упростится. В особо сложных ситуациях можно использовать комбинированный подход: генерировать на сервере часть страницы по-разному в зависимости от устройства. Например, можно отдавать на разные устройства картинки разных размеров.
-
-My demo is using mobile first principles, i.&nbsp;e. base styles for small screens, media queries for larger ones.
+Делаем адаптивную демку. Адаптивная верстка увеличивает время и сложность разработки, зато весь функционал сайта будет доступен сразу на любом устройстве, а поддержка и добавление фич упростится. В особо сложных ситуациях можно использовать комбинированный подход: генерировать на сервере часть страницы по-разному в зависимости от устройства. Например, можно отдавать на разные устройства картинки разных размеров.
 
 Демка сделана по принципу mobile first, то есть базовые стили для маленьких экранов, на которые с ростом размера экрана постепенно наращиваются дополнительные стили.
 
-###Making the gallery responsive
-
 ###"Адаптируем" галерею
-
-New screenshot gallery should work on any device, with any type of touch events. I used my [Peppermint touch slider](/scripts/peppermint/) for this purpose. I slso made a scroller for the thumbs based on the event unifying code from Peppermint (which I detached into a [separate script](https://github.com/wilddeer/Event-Burrito)). Now you can drag both the screenshots and the thumbs with a mouse or using touch:
 
 Галерея со скриншотами должна работать на любых устройствах, с любым типом тач-эвентов. Меняем ее на [Peppermint](/scripts/peppermint/), добавляем превьюшки, дописываем скроллер превьюшек, взяв за основу код работы с событиями из пепперминта (который я, кстати, выделил в [отдельный скрипт](https://github.com/wilddeer/Event-Burrito)). Теперь и скришноты, и превьюшки можно проматывать как мышкой, так и тачем. Связываем слайдер и превьюшки, добавляем стрелочки:
 
@@ -195,15 +172,11 @@ dzDelayed.push(function() {
 {% include snippets/steam-gallery.htm %}
 </div>
 
-Thumbs are replaced with the dots on small screens (you can see the dots by shrinking the browser window).
-
 На маленьких экранах меняем превьюшки на точки (на точки можно посмотреть, если сжать окно браузера).
 
 После загрузки страницы следим за движением мышки. Если случается `mousemove`, переключаем класс, чтобы стрелки показывались по наведению мыши, и перестаем следить. Если `touchstart`, оставляем стрелки видимыми и тоже перестаем следить. Для тачэвентов своя логика: просто смотрим, какой тип указателя использует юзер.
 
 Весь этот огород ради одной простой вещи: юзер может использовать мышь на тач-устройстве (с появлением нетбуков на андроиде и 8 винде это особенно акутально), поэтому определить наличие тача недостаточно. А еще графический планшет, подключенный к компьютеру, часто включает тач-эвенты в браузерах.
-
-Everything combined and wrapped in a jQuery extension:
 
 Оформляем все в виде jQuery-плагина:
 
@@ -211,15 +184,9 @@ Everything combined and wrapped in a jQuery extension:
 {% include snippets/steam-gallery.js %}
 {% endhighlight %}
 
-###Background
-
 ###Фон
 
-I made a full-page background. To make mobile devices happier i give ’em smaller background pic. Compare the [full](/steam/i/page.bg.jpg) and [mobile](/steam/i/page.bg.mob.jpg) variants.
-
-Делаем фон на всю страницу. Чтобы мобильные устройства не расстраивались от блока с контентом с полупрозрачным фоном, применяем хитрость: заменяем для них фон страницы на другой, уменьшенный и затемненный (его несложно сгенерировать на сервере из большого), а полупрозрачный фон у блока с контентом отключаем. Сравните [полный](/steam/i/page.bg.jpg) и [мобильный](/steam/i/page.bg.mob.jpg) варианты фона.
-
-Since every store page have its own background, I put the style directly into the `head` of the page. I also took into account old IEs, which don't understant media queries:
+Делаем фон на всю страницу. Чтобы мобильные устройства не расстраивались от большой картинки, отдаем им картинку поменьше. Сравните [полный](/steam/i/page.bg.jpg) и [мобильный](/steam/i/page.bg.mob.jpg) варианты фона.
 
 Так как у каждой страницы в магазине фон разный, кладем стиль прямо в шапку страницы, не забыв учесть старые ИЕ, не понимающие media queries:
 
@@ -247,34 +214,26 @@ Since every store page have its own background, I put the style directly into th
 <!--<![endif]-->
 {% endhighlight %}
 
-To make mobile devices love the site even more I disabled the shadows and made the backgrounds opaque where possible.
-
 Чтобы мобильники еще больше нас любили, убираем для них почти все тени, полупрозрачные фоны заменяем на непрозрачные.
 
 <hgroup>
-    <h4 class="problem">Problem</h4>
-    <h2>Content obeys the design</h2>
+    <h4 class="problem">Проблема</h4>
+    <h2>Контент подчиняется дизайну</h2>
 </hgroup>
-
-Here's the DLC info block in its current form:
 
 Вот так, например, сейчас выглядит блок про DLC на сайте Стима:
 
 {% include pic.htm src='dlc-block.png' a='Блок про DLC' %}
 
-What happens if the phrase is twice as big? What happens when you then translate this phrase into the language in which it will be even longer? Here's what:
-
 Что будет, если фразу удлинить в 2 раза? Что получится, если потом перевести эту фразу на язык, в котором она станет еще длиннее? Вот что:
 
-{% include pic.htm src='dlc-block-overflowed.png' c='DLC block is overflowed :-(' %}
-
-This block has fixed width and height (no idea why the width is even defined, since it's the same as the parent's) and [a picture](http://cdn4.store.steampowered.com/public/images/v5/game_area_dlc.png) on the background. Even back in the days when there were no fancy CSS3 features you could make this block fluid. You would need a sprite and some hacks, but everything was made with hacks back then.
+{% include pic.htm src='dlc-block-overflowed.png' c='Блок про DLC порвало :-(' %}
 
 У блока фиксированная высота и ширина (ширина непонятно зачем, ведь у родительского блока точно такая же ширина), а на фоне [картинка](http://cdn4.store.steampowered.com/public/images/v5/game_area_dlc.png). Даже в то время, когда не было классных CSS3-свойств, можно было сделать подобный блок резиновым. С костылями, но без особых проблем.
 
 <hgroup>
-    <h4 class="solution">Solution</h4>
-    <h2>Design obeys the content</h2>
+    <h4 class="solution">Решение</h4>
+    <h2>Подчиняем дизайн контенту</h2>
 </hgroup>
 
 <style>
@@ -285,7 +244,7 @@ This block has fixed width and height (no idea why the width is even defined, si
 {% include snippets/steam-dlc.htm %}
 </div>
 
-<p class="js-controls"><button id="fill-it">fill me, baby</button></p>
+<p class="js-controls"><button id="fill-it">наполни меня</button></p>
 
 <script>
 dzDelayed.push(function() {
@@ -295,13 +254,11 @@ dzDelayed.push(function() {
         $('.game-dlc-notice').append('<p class="small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet nulla non est malesuada, vitae dapibus libero congue. Integer cursus magna ut neque commodo fermentum sed a enim. Ut pharetra urna facilisis laoreet iaculis. Sed sapien nulla, venenatis sit amet magna eu, ultrices aliquam nibh.</p>');
 
         if (i++ > 3) {
-            $(this).text('oh stop it, you!').attr('disabled','disabled');
+            $(this).text('ну прекрати!').attr('disabled','disabled');
         }
     });
 });
 </script>
-
-One block, a header, a paragraph and a bunch of styles:
 
 Все удовольствие одним блоком. Заголовок, параграф и пачка стилей:
 
@@ -313,41 +270,29 @@ One block, a header, a paragraph and a bunch of styles:
 {% include snippets/steam-dlc.css %}
 {% endhighlight %}
 
-Old browsers won't render the gradient and the rounded corners, not big deal.
-
 Старые браузеры получат блок без градиента и круглых уголков, не велика беда.
-
-The problem with the unflexible static markup is not limited to one block. Price blocks designed for dollar prices used to break in Russian shop. It's not the case now, for the most part, but there are still quite a bunch of static unflexible blocks:
 
 Проблема с недостаточно гибким дизайном не заканчивается одним блоком. Долгое время блоки с ценами, рассчитанные на доллары, разваливались в русском магазине. Сейчас проблема по большей части решена, но блоки с фиксированной шириной все еще попадаются:
 
-{% include pic.htm src='price-overflowed.png' a='Overflowed price block' c="Steam won't handle yet another ruble collapse :-)" %}
-
-There is a similar block in the neighborhood, which, surprisingly enough, is feeling great in the unusual circumstances:
+{% include pic.htm src='price-overflowed.png' a='Переполненный блок с ценой' c="Стим не выдержит еще одного обвала рубля :-)" %}
 
 По соседству живет другой такой же по виду блок, который, однако, прекрасно чувствует себя в нестандартных условиях:
 
 {% include pic.htm src='proper-price-block.png' a='Правильный блок с ценой'%}
 
-This leads us to another problem:
-
 Это наталкивает нас на еще одну проблему:
 
 <hgroup>
-    <h4 class="problem">Problem</h4>
-    <h2>Nonuniversal code</h2>
+    <h4 class="problem">Проблема</h4>
+    <h2>Неуниверсальный код</h2>
 </hgroup>
-
-Two similar looking blocks are using completely different markup, although, in fact, they must be identical.
 
 Два одинаковых по виду блока используют совершенно разную верстку, хотя, по сути, должны быть идентичны.
 
 <hgroup>
-    <h4 class="solution">Solution</h4>
-    <h2>Make the code universal</h2>
+    <h4 class="solution">Решение</h4>
+    <h2>Делаем код универсальным</h2>
 </hgroup>
-
-Let's make the universal price block:
 
 Делаем универсальный блок с ценой:
 
@@ -421,8 +366,6 @@ Let's make the universal price block:
   </div>
 </div>
 
-Now it's enough to vary the font size to make a block of an appropriate size. All the properties are set in relative `em` units. Price values are wrapped in additional `span`’s, so you can set a specific font size for them without affecting the metrics of the parental block:
-
 Для изменения размера блока достаточно изменить размер шрифта. Все метрики выставлены в `em`’ах и изменяются пропорционально шрифту. Значения завернуты в дополнительные спаны, чтобы можно было выставить для них размер шрифта не побив метрики родительского блока:
 
 {% highlight html cssclass=codewrap %}
@@ -433,8 +376,6 @@ Now it's enough to vary the font size to make a block of an appropriate size. Al
 {% include snippets/price-area.css %}
 {% endhighlight %}
 
-Sale is over? Set the regular price and get rid of everything unnecessary in the markup: 
-
 Кончились скидки? Выставляем цену без скидок. Убираем все лишнее из верстки:
 
 {% highlight html cssclass=codewrap %}
@@ -444,8 +385,6 @@ Sale is over? Set the regular price and get rid of everything unnecessary in the
     </span>
 </div>
 {% endhighlight %}
-
-And everything just works.
 
 И все работает.
 
@@ -468,8 +407,6 @@ And everything just works.
         </span>
     </div>
 </div>
-
-Same is applicable to any repeating blocks, e.&nbsp;g. user blocks:
 
 Та же история с любыми повторяющимися блоками. Например, блок с юзерпиком и именем пользователя:
 
@@ -527,16 +464,7 @@ Same is applicable to any repeating blocks, e.&nbsp;g. user blocks:
   </p>
 </div>
 
-To adhere to the principle of universal code, it is important to properly structure the styles and to understand which part of styles serves what purpose. I brought myself to the following system:
-
 Чтобы придерживаться принципа универсального кода, важно грамотно структурировать стили и понять, какая часть стилей за что отвечает. Я для себя вывел такую систему:
-
-- **Base styles** -- base font, paragraph, headings and list styles, etc.
-- **Utility classes** -- font size modifiers (a little bigger, a little smaller), info, warning and error colors, other universal utility stuff.
-- **Layout** -- header, footer, sidebars, content blocks, other non-page specific base blocks.
-- **Grid**. I don't like restrictive grids. In this demo, I use a simple grid as a bunch of helper classes to avoid repeating the same bunch of styles over and over. I deviate from the grid all the time to write a bunch of custom classes for a specific block.
-- **Modules** -- this are the guys I was talking about. Modules are repeating blocks, their base styles should not depend on the context (but can be modified by the styles of the context, see below). Modules can be nested.
-- **Page styles** -- styles of the blocks specific to the page. This is the place where you can modify the styles of the modules located in a specific block on the page.
 
 - **Базовые стили** --- основной шрифт, стили базовых элементов, отступы и размеры шрифтов в параграфах, заголовках, списках и т. п.
 - **Вспомогательные классы** --- модификаторы размера кегля (побольше, поменьше), цвет информационных сообщений, ошибок, предупреждений, другие универсальные утилитарные классы.
@@ -546,15 +474,11 @@ To adhere to the principle of universal code, it is important to properly struct
 - **Стили страницы** --- стили специфичных для страницы блоков. Это как раз то место, где можно модифицировать стили модулей, расположенных в конкретных блоках страницы.
 
 <hgroup>
-  <h4 class="problem">Problem</h4>
-  <h2>“Obtrusive” javascript</h2>
+  <h4 class="problem">Проблема</h4>
+  <h2>«Навязчивый» яваскрипт</h2>
 </hgroup>
 
-Substitution of the basic HTML functions with scripts and lack of proper fallbacks leads to a dreadful situation where the habitual functions of those elements are completely lost.
-
 Подмена базовых функций HTML скриптами и отсутствие фоллбеков приводит к тому, что стандартный функционал элементов полностью теряется.
-
-Steam's website contains all the classic mistakes collected in my [post about proper link usage](/en/links-please/). Here's, for instance, "View all screenshots" links, which isn't actually a link, since it doesn't lead anywhere:
 
 На сайте Стима присутствуют все классический ошибки, собранные мной в [посте про ссылки](/links-please/). Вот, например, ссылка "View all screenshots", которая и не ссылка вовсе, так как никуда не ведет:
 
@@ -562,21 +486,15 @@ Steam's website contains all the classic mistakes collected in my [post about pr
 <a class="linkbar" href="javascript:screenshot_popup('http://store.steampowered.com/screenshot/view/205100/0?snr=1_5_9__400', 800, 635, 0, 0);">...</a>
 {% endhighlight %}
 
-And here's a "previous spotlight" button made of an `a` element:
-
 А вот кнопка предыдущего спотлайта на главной, сделанная из элемента `a`:
 
 {% highlight html cssclass=codewrap %}
 <a href="javascript:PrevSpotlight( 2 );"><img src="http://cdn4.store.steampowered.com/public/images/v5/ico_navArrow_left.gif"> Prev</a>
 {% endhighlight %}
 
-Another example -- community hub posts:
-
 А еще есть вот такие посты в центре сообщества:
 
 {% include pic.htm src='hub-post.png' a='Пост в центре сообщества игры' %}
-
-Their code looks like this:
 
 Их код выглядит так:
 
@@ -588,18 +506,12 @@ Their code looks like this:
 </div>
 {% endhighlight %}
 
-Not only they open in horrible modal popups (which, by the way, are invented by the people who hate tabs), they also can't be opened in a regular way, since they aren't links. Not to mention inline styles and huge inline function call.
-
 Мало того, что эти посты открываются в ужасных модальных окнах (их, кстати, придумали люди, которые ненавидят вкладки), так еще их совсем никак нельзя открыть по-нормальному, ведь это не ссылка. Не говоря уже об инлайновых стилях и жирном инлайновом вызове функции.
 
 <hgroup>
-    <h4 class="solution">Solution</h4>
-    <h2 markdown="1">Make the javascript [unobtrusive](https://en.wikipedia.org/wiki/Unobtrusive_JavaScript)</h2>
+    <h4 class="solution">Решение</h4>
+    <h2 markdown="1">Делаем яваскрипт [ненавязчивым](https://en.wikipedia.org/wiki/Unobtrusive_JavaScript)</h2>
 </hgroup>
-
-Whole block can be made of an `a` element and a popup (if you desperately want a popup) should only be opened if the left mouse button is pressed without any modifier keys.
-
-Same is applicable to other UI elements: if the element leads somewhere, make a link. You can then apply any handler to it, just don't prevent opening it in a new tab. If an element does some action within the page, use a `button`. More details and examples in my [post about proper links](/en/links-please/).
 
 Весь блок можно сделать ссылкой и открывать попап (если ну прям очень хочется попап) только по нажатию левой кнопки.
 
