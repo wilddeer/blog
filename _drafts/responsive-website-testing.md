@@ -8,6 +8,10 @@ lang: en
 
 {% include pic.htm src='whiteboard.jpg' a='Доска с результатами теста сайта в различных браузерах' %}
 
+As many good fellows have noticed, it's not enought to test your responsive creation on an iPhone. You should at least bother to check it on several major platforms: iOS, Android (which has a swarm of different browsers), Windows Phone, Blackberry.
+
+If you are tough enough, all the above is your absolute minimum, which you happily extend with everything that comes to hand.
+
 Как правильно замечают [многие](http://www.quirksmode.org/blog/archives/2010/02/the_iphone_obse.html) [хорошие ребята](http://bradfrostweb.com/blog/mobile/support-vs-optimization/), проверить работоспособность вашего адаптивного творения на айфончике недостаточно. Как минимум, стоит озаботиться несколькими основными платформами: iOS, Android (а там свой зоопарк браузеров), Windows Phone,
 Blackberry.
 
@@ -15,16 +19,26 @@ Blackberry.
 минимум, который вы радостно расширяете любыми попадающимися под руку железками и эмуляторами.
 
 <figure class="info icon-comment-alt" markdown="1">
+The more you use the principle of [progressive enhancement](https://en.wikipedia.org/wiki/Progressive_enhancement), [proper fallbacks](https://en.wikipedia.org/wiki/Fault_tolerance) and [unobtrusive javascript](https://en.wikipedia.org/wiki/Unobtrusive_JavaScript), the easier it is to test and fix the site on different devices, and the better the site will look on the devices you didn't event think to test on.
+
 Чем больше вы используете [принцип прогрессивного улучшения](https://en.wikipedia.org/wiki/Progressive_enhancement), [грамотные фоллбеки](https://en.wikipedia.org/wiki/Fault_tolerance) и [ненавязчивый javascript](https://en.wikipedia.org/wiki/Unobtrusive_JavaScript), тем проще тестировать и исправлять сайт на всем зоопарке железок, и тем лучше сайт будет выглядеть там, где вы его даже не задумывались протестировать.
 </figure>
 
-##Коротко про десктопные браузеры
+##Briefly about desktop browsers
 
 ###Windows
 
+First things first, latest stable versions of Firefox, Chrome, Opera, Safari, IE, plus Opera 12 (on Presto), that's all clear. After a year or so Presto engine will be gone for good :-(
+
 Первым делом --- последние стабильные версии Firefox, Chrome, Opera, Safari, IE, плюс Opera 12, с этим все ясно. Через годик-полтора о 12 Опере и движке Presto можно будет забыть насовсем :-(
 
+The main problem, as usual, comes with IE. IE users are distributed almost evenly between three version of the browser. You can't install several version of IE on one system, different "IE testers" are all crap. Even if they work, they still don't show the native XP font rendering and form elements.
+
 Основной затык, как всегда, с IE. Юзеры почти равномерно размазаны по трем версиям браузера. Несколько версий IE держать в системе нельзя, всякие ИЕ-тестеры --- лажа. Даже если заработают, родной икспишный рендеринг шрифтов с их помощью увидеть не получится.
+
+The solution is to have a bunch of virtual machines. Grab the [VirtualBox](https://www.virtualbox.org/wiki/Downloads), clone two winXP machines, give ’em 196 Mb of RAM and install latest IE7 and IE8. It's, actually, a good time to send IE7 to the dump, but I keep it for rare ocasions, since some of my scripts support it and I need to test new builds once in a while.
+
+Clone another two machines running Win 7 (give ’em 512 Mb of RAM) and install IE9 and IE10. All this stuff works simultaneously pretty effortlessly:
 
 Выход --- ставим VirtualBox, клонируем три виртуалки с winXP, отдаем
 им по 192 Mb оперативки и ставим,
@@ -35,7 +49,9 @@ IE7 тоже пора отправлять на свалку, но обычно 
 Делаем еще одну виртуалку на Win 7 (512 Mb оперативки) и ставим туда IE9. Все это хозяйство замечательно летает
 параллельно:
 
-{% include pic.htm src='virtual_machines.jpg' c='Уи-и-и-и' %}
+{% include pic.htm src='virtual_machines.jpg' c='Whe-e-e-e!' %}
+
+I still hope the IE's autoupdate (it was added in IE10) will make the difference some day and we won't need to keep all this VMs. It's not the case as of now.
 
 <del>Надеюсь, автообновление IE10 избавит меня от еще одной виртуалки, когда выйдет IE11.</del> Пока что не избавило.
 
@@ -43,11 +59,20 @@ IE7 тоже пора отправлять на свалку, но обычно 
 
 ###Linux & Mac
 
+It's also worth having a VM with some distributive and, if possible, a Mac would also be good. Same browsers have significant differences when it comes to rendering system specific stuff, such as font smoothing, form elements and cursors.
+
 Стоит также иметь виртуалку с каким-нибудь дистрибутивом Линукса, и, если есть возможность, ухватить железку с OS X. Отличия рендеринга в одних и тех же браузерах в разных системах незначительны, пока дело не доходит до системных компонентов. Например, значительно отличается поведение элементов форм, рендеринг шрифтов и внешний вид курсоров.
 
-##Мобильные устройства
+##Mobile devices
+
+The main rule: if it's possible to test on a real device -- test on a device. Here's a couple of reasons:
 
 Первое правило: есть возможность тестировать на железке, а не на эмуляторе, --- тестируйте на железке. Вот пара причин:
+
+- You can't touch the emulator. Text size, size of the UI elements, touch responsiveness, etc. -- all of this things can be adequately tested only on a real device.
+- Emulator's performance often differs from the performance of a real device. You won't see the lags and memory overflows, animation speed and script performance will differ.
+- Lots of buggy and inconvenient emulators.
+- Lack of emulators for rare devices.
 
 - Эмулятор не потрогать. Размер текста, ссылок, кнопок, работу тача в целом можно адекватно оценить только на устройстве.
 - Производительность эмулятора часто не соответствует производительности железки. Не получится увидеть тормоза и переполнение памяти на слабых устройствах, не оценить скорость отрисовки анимаций и работы скриптов.
