@@ -29,7 +29,7 @@ $.fn.steamGallery = function() {
                 /* move active thumb to the viewport, if it's not there */
                 scroller.moveElementToViewport(thumbs[n], 24);
 
-                /* see if one of the arrows should be disabled */
+                /* see if an arrow should be disabled */
                 arrPrev.removeClass('disabled');
                 arrNext.removeClass('disabled');
 
@@ -50,7 +50,7 @@ $.fn.steamGallery = function() {
 
         /* bind click & enter handlers to thumbs */
         for (var i = thumbs.length - 1; i >= 0; i--) {
-            $(thumbs).eq(i).on('click keyup', function(n) {
+            $(thumbs[i]).on('click keyup', function(n) {
                 return function(event) {
                     if (scroller.getClicksAllowed() && (event.type == 'click' || event.keyCode == 13)) {
                         gallery.slideTo(n);
@@ -60,9 +60,8 @@ $.fn.steamGallery = function() {
             }(i));
         };
 
-        //bind event handlers to arrows
-        //`touchend` is used because, unlike `click`, it doesn't have lag on touch devices
-        arrPrev.on('touchend click.prev keyup', function(event) {
+        // bind event handlers to arrows
+        arrPrev.on('click keyup', function(event) {
             if (event.type == 'keyup' && event.keyCode !== 13) return;
 
             prev();
@@ -72,7 +71,7 @@ $.fn.steamGallery = function() {
             event.stopPropagation();
         });
 
-        arrNext.on('touchend click.next keyup', function(event) {
+        arrNext.on('click keyup', function(event) {
             if (event.type == 'keyup' && event.keyCode !== 13) return;
 
             next();
@@ -82,36 +81,6 @@ $.fn.steamGallery = function() {
             event.stopPropagation();
         });
 
-        /* unbind click handlers when touch is used */
-        arrPrev.one('touchend', function(event) {
-            arrPrev.off('click.prev');
-        });
-
-        arrNext.one('touchend', function(event) {
-            arrNext.off('click.next');
-        });
-
-        //Touch check.
-        //If mouse is used, enable autohiding arrows.
-        if (!!window.navigator.pointerEnabled || !!window.navigator.msPointerEnabled) {
-            body.one('pointermove MSPointerMove', function(event) {
-                if (event.pointerType == event.MSPOINTER_TYPE_MOUSE || event.pointerType == 'mouse') {
-                    autoArrows();
-                }
-            });
-        }
-        else {
-            body.one('mousemove.touchtest', function(event) {
-                body.off('touchstart.touchtest');
-                autoArrows();
-            });
-
-            body.one('touchstart.touchtest', function(event) {
-                body.off('mousemove.touchtest');
-            });
-        }
-
-        /* next slide */
         function prev() {
             if (currentSlide == 0) return;
 
@@ -119,18 +88,11 @@ $.fn.steamGallery = function() {
             gallery.stop();
         }
 
-        /* previous slide */
         function next() {
             if (currentSlide == slidesNumber - 1) return;
             
             gallery.next();
             gallery.stop();
-        }
-
-        /* enable autohiding arrows */
-        function autoArrows() {
-            arrNext.removeClass('shown').addClass('auto');
-            arrPrev.removeClass('shown').addClass('auto');
         }
     });
 
