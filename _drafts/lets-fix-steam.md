@@ -362,7 +362,7 @@ Let's make the universal price block:
   </div>
 </div>
 
-Now it's enough to vary the font size to make a block of an appropriate size. All the properties are set in relative `em` units. Price values are wrapped in additional `span`’s, so you can set a specific font size for them without affecting the metrics of the parental block:
+Now it's enough to vary the font size to make a block of an appropriate size. All the properties are set in relative `em` units. Price values are wrapped in additional `span`’s, so you can set a specific font size for them without affecting the properties of the parental block:
 
 {% highlight html cssclass=codewrap %}
 {% include snippets/price-area.htm %}
@@ -372,7 +372,7 @@ Now it's enough to vary the font size to make a block of an appropriate size. Al
 {% include snippets/price-area.css %}
 {% endhighlight %}
 
-Sale is over? Set the regular price and get rid of everything unnecessary in the markup: 
+Sale is over? Set the regular price and get rid of unnecessary stuff in the markup: 
 
 {% highlight html cssclass=codewrap %}
 <div class="price-area">
@@ -404,7 +404,7 @@ And everything just works.
     </div>
 </div>
 
-Same is applicable to any repeating blocks, e.&nbsp;g. user blocks:
+Same is applicable to any repeating block, e.&nbsp;g. user block:
 
 <style>
 {% include snippets/steam-user.css %}
@@ -460,9 +460,9 @@ Same is applicable to any repeating blocks, e.&nbsp;g. user blocks:
   </p>
 </div>
 
-To adhere to the principle of universal code, it is important to properly structure the styles and to understand which part of styles serves what purpose. I brought myself to the following system:
+To adhere to the principle of universal code, it is important to properly structure your styles and to understand what purpose each part of the styles serves. I brought myself to the following system:
 
-- **Base styles** -- base font, paragraph, headings and list styles, etc.
+- **Base styles** -- base font and colors, styles for paragraphs, headings, lists, etc.
 - **Utility classes** -- font size modifiers (a little bigger, a little smaller), info, warning and error colors, other universal utility stuff.
 - **Layout** -- header, footer, sidebars, content blocks, other non-page specific base blocks.
 - **Grid**. I don't like restrictive grids. In this demo, I use a simple grid as a bunch of helper classes to avoid repeating the same bunch of styles over and over. I deviate from the grid all the time to write a bunch of custom classes for a specific block.
