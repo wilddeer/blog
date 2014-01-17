@@ -133,7 +133,7 @@ Without further ado, here's the result:
 
 <p class="demo" style="text-align: center;"><a href="/steam/" style="font-size: 2.5em;">Demo</a></p>
 
-And now on the things that I considered bad and how I tried to fix them:
+And now on the problems of current Steam's website and how I tried to fix them:
 
 <hgroup>
     <h4 class="problem">Problem</h4>
