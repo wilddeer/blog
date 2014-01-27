@@ -31,7 +31,7 @@ If you really want to put `onclick="location.href='...'"` in your element, stop,
 
 The only case when you can (and should) bind a js handler to a link -- if a link actually leads somewhere. In this case, the handler should only trigger for left mouse button clicks without modifier keys.
 
-Classic example: photo thumbnails. When you click on a thumbnail -- large photo is shown on top of the content. If you click it with a mouse wheel or <kbd>ctrl</kbd>-click it -- new tab with large photo is opened. Context menu also works just fine. Users with disabled&nbsp;/ broken js get a working link on a photo. Everybody is happy:
+Classic example: photo thumbnails. When you click on a thumbnail -- large photo is shown on top of the content. If you click it with the mouse wheel or <kbd>ctrl</kbd>-click it -- new tab with large photo is opened. Context menu also works just fine. Users with disabled&nbsp;/ broken js get a working link on a photo. Everybody is happy:
 
 HTML:
 
@@ -73,13 +73,13 @@ There are many more cases where you should keep the functionality of a link. Her
 
 ####Extended functionality
 
-I accidentally came across this one when [metacritic](http://www.metacritic.com/game/pc/limbo)'s scripts refused to load for me. *Expand* button under the user reviews is, in fact, a link with a GET parameter, e.&nbsp;g. `?user_review_id=1713311`. If javascript is disabled or (in my case) broken, the server will serve you the same page with an expanded review. This is a great example of [unobtrusive js](https://en.wikipedia.org/wiki/Unobtrusive_JavaScript) at work, saving website's functionality while CDN server is down.
+I accidentally came across this one when [metacritic](http://www.metacritic.com/game/pc/limbo)'s scripts refused to load for me. *Expand* button under user reviews is, in fact, a link with a GET parameter, e.&nbsp;g. `?user_review_id=1713311`. If javascript is disabled or (in my case) broken, the server will serve you the same page with an expanded review. This is a great example of [unobtrusive js](https://en.wikipedia.org/wiki/Unobtrusive_JavaScript) at work, saving website's functionality while CDN server is down.
 
 ##Bad guys
 
 ####Twitter
 
-Twitter resolved to follow the straight and narrow and began to gradually correct their rubbish. We can finally open the user profile in a new tab -- good. *Refresh* button in the sidebar and *compose new tweet* button are both using `button` element -- also good (would be actually better if it was a link leading to a separate page with a form to compose a new tweet).
+Twitter resolved to follow the straight and narrow and began to gradually correct their rubbish. We can finally open user profiles in a new tab -- good. *Refresh* button in the sidebar and *compose new tweet* button are both using `button` element -- also good (would be actually better if the last one was a link leading to a separate page with a form to compose a new tweet).
 
 Nonetheless, there are still lots of `<a href="#">` nonsense. *Reply*, *retweet* and *favourite* links aren't pointing anywhere, while [they](https://twitter.com/intent/tweet?in_reply_to=386573856179113985) [definitely](https://twitter.com/intent/retweet?tweet_id=386573856179113985) [could](https://twitter.com/intent/favorite?tweet_id=386573856179113985).
 
@@ -93,7 +93,7 @@ It's dreadful. `javascript:;` in `href`s, none of the links can be opened in a n
 
 ##TL;DR
 
-Use `button` for actions on the page, `a` for links and actions that have a fallback URL.
+Use `button` for actions within the page, `a` for links and actions that have a fallback URL.
 
 Despite the fact that nowadays it's nearly impossible to find a device without javascript, there still is a good chance that javascript either executes with errors, or just doesn't load. In this case good [unobtrusive js](https://en.wikipedia.org/wiki/Unobtrusive_JavaScript) and proper fallbacks will save the day and the functionality of your site.
 

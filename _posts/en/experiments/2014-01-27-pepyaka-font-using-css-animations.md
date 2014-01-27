@@ -124,7 +124,7 @@ dzDelayed.push(function() {
 
 My old epileptic font from [Pepyaka](http://pepyaka.su), remade using CSS3 animations.
 
-Obscene amount of styles. Unlike `box-shadow`, `text-shadow` don't have `spread` parameter, so I had to emulate the stroke using eight shadows. Moreover, you can't just change the color of the shadows, so I also had to redefine all eight shadows in each keyframe.
+Had to use an obscene amount of styles. Unlike `box-shadow`, `text-shadow` doesn't have `spread` parameter, so I had to emulate the stroke using eight shadows. Moreover, you can't just change the color of the shadows, so I also had to redefine all eight shadows in each keyframe.
 
 On the bright side, latest Presto-based Opera and latest Firefox don't require prefixes for animations, and IE10 had always worked without them, so I dropped every prefix but `-webkit`.
 

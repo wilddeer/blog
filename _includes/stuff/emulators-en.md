@@ -7,4 +7,4 @@
 - [Nokia Asha](http://developer.nokia.com/Develop/asha/java/downloads.xhtml) with Ovi browser.
 - [Nokia Symbian emulators](http://developer.nokia.com/info/sw.nokia.com/id/ec866fab-4b76-49f6-b5a5-af0631419e9c/S60_All_in_One_SDKs.html) (Symbian Belle with Nokia Browser is particulary interesting)
 - [Nokia remote device access](http://rda.cellulardata.com/devices) via the Java application. Requires an account. It's pretty laggy, but it's enough to check out the phone and it's browser.
-- [Firefox OS Simulator](https://addons.mozilla.org/firefox/addon/firefox-os-simulator/) as a Firefox plugin.
+- [Firefox OS Simulator](https://addons.mozilla.org/firefox/addon/firefox-os-simulator/) in the form of a Firefox plugin.

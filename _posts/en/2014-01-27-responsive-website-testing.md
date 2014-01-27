@@ -20,11 +20,11 @@ The more you use the principle of [progressive enhancement](https://en.wikipedia
 
 ###Windows
 
-First things first, latest stable versions of Firefox, Chrome, Opera, Safari, IE, plus Opera 12 (on Presto), that's all clear. After a year or so Presto engine will be gone for good :-(
+First things first, latest stable versions of Firefox, Chrome, Opera, IE, plus Opera 12 (on Presto), that's all clear. After a year or so Presto engine will be gone for good :-(
 
-The main problem, as usual, comes with IE. IE users are distributed almost evenly between three version of the browser. You can't install several version of IE on one system, different "IE testers" are all crap. Even if they work, they still don't show native XP font rendering and form elements.
+The main problem, as usual, comes with IE. IE users are distributed almost evenly between three version of the browser. You can't install several version of IE on the same system, different "IE testers" are all crap. Even if they work, they still don't show native XP font rendering and form elements.
 
-The solution is to have a bunch of virtual machines. Grab the [VirtualBox](https://www.virtualbox.org/wiki/Downloads), clone two winXP machines, give ’em 196 Mb of RAM and install latest IE7 and IE8. It's, actually, a good time to send IE7 to the dump, but I keep it for rare ocasions, since some of my scripts support it and I need to test new builds once in a while.
+The solution here is to have a bunch of virtual machines. Grab [VirtualBox](https://www.virtualbox.org/wiki/Downloads), clone two winXP machines, give ’em 196 Mb of RAM and install latest IE7 and IE8. It's, actually, a good time to send IE7 to the dump, but I keep it for rare ocasions, since some of my scripts support it and I need to test new builds once in a while.
 
 Clone another two machines running Win 7 (give ’em 512 Mb of RAM) and install IE9 and IE10. All this stuff works simultaneously pretty effortlessly:
 
@@ -40,7 +40,7 @@ It's also worth having a VM with some linux distributive and, if possible, a Mac
 
 The main rule here: if it's possible to test on a real device -- test on a device. Here's a couple of reasons:
 
-- You can't touch the emulator. Text size, size of the UI elements, touch responsiveness, etc. -- all of this things can be adequately tested only on a real device.
+- You can't touch the emulator. Text size, size of the UI elements, touch responsiveness, etc. -- all of these things can be adequately tested only on a real device.
 - Emulator's performance often differs from the performance of a real device. You won't see the lags and memory overflows, animation speed and script performance will differ.
 - Lots of buggy and inconvenient emulators.
 - Lack of emulators for rare devices.
@@ -64,7 +64,7 @@ Mandatory:
 - Windows Phone 8
 - Blackberry 10
 
-Bonus pack in order of subjective importance:
+Bonus pack in the order of subjective importance:
 
 - Opera Mini Java app
 - Windows Phone 7.8
@@ -98,7 +98,7 @@ In the **stock browser**, type `about:debug` in the adress bar. This will lead t
 
 In **Android Chrome**, you can use [remote debugging](https://developers.google.com/chrome-developer-tools/docs/remote-debugging):
 
-- Install [the desktop Chrome plugin](https://chrome.google.com/webstore/detail/adb/dpngiggdglpdnjdoaefidgiigpemgage)
+- Install [the ADB plugin for desktop Chrome](https://chrome.google.com/webstore/detail/adb/dpngiggdglpdnjdoaefidgiigpemgage)
 - Enable USB debugging in device's settings
 - Connect the device via USB
 - Profit
@@ -122,12 +122,12 @@ Just like on Android, full devtools are available.
 Blackberry has [remote debugging via web-based webkit devtools](https://developer.blackberry.com/html5/documentation/web_inspector_overview_1553586_11.html):
 
 - Connect the device via USB or connect it to your computer's network via WiFi.
-- Turn on web inspector in the device's browser setting. You'll also see the IP adress and port there. If you're using the emulator, the IP adress won't appear, but you can look for it in the emulator controller, in the bottom of the window (the controller comes with the emulator as a separate program). Port in this case will be 1337.
+- Turn on the web inspector in the device's browser setting. You'll also see the IP adress and port there. If you're using the emulator, the IP adress won't appear, but you can look for it in the emulator controller, in the bottom of the window (the controller comes with the emulator as a separate program). Port in this case will be 1337.
 - Go to `IP:Port` from a desktop browser. You should recieve a page with webkit devtools.
 
 Web-based webkit devtools work properly only in webkit-based browsers.
 
-{% include pic.htm src='blackberry-debugging.png' c='Blackberry browser remote debugging' %}
+{% include pic.htm src='blackberry-debugging.png' c='Remote debugging in Blackberry browser' %}
 
 ###[Jsconsole.com](http://jsconsole.com/)
 
@@ -170,7 +170,7 @@ Modify it to your own taste and needs.
 
 ##Testing a website running on a local web server on mobile devices
 
-The easiest way is to connect everithing to the same WiFi router. You should also set fixed IP adress for your computer, since it hafe a tendency to change unexpectadly and make all of your mobile bookmarks useless. Put this very IP to your web server config, e.&nbsp;g. enginx:
+The easiest way is to connect everithing to the same WiFi router. You should also set fixed IP adress for your computer, since it have a tendency to change unexpectadly and make all of your mobile bookmarks useless. Then use this very IP in your webserver's config, e.&nbsp;g. enginx:
 
 {% highlight text cssclass=codewrap %}
 server {
@@ -193,7 +193,7 @@ That is Opera Mini. And Ovi, if you are desperate enough.
 
 The problem with proxy browser is that you can't test your site on a local server, since it should be visible on the internet.
 
-My approach is to create a test subdomain with http authentication on the hosting server and pull current version of the site using git once in a while. The site will be accessible by proxy browsers and remain password protected at the same time. An example config for http authentication (for Apache this time):
+My approach here is to create a test subdomain with http authentication on the hosting server and pull current version of the site using git once in a while. The site will be accessible by proxy browsers and remain password protected at the same time. An example config for http authentication (for Apache this time):
 
 {% highlight text cssclass=codewrap %}
 <VirtualHost *:80>
