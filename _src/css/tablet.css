@@ -104,6 +104,12 @@
 		content: " — "
 	}
 
+	.content > blockquote {
+		width: 92%;
+		padding-left: 1em;
+		padding-right: 1em;
+	}
+
 	/* tables */
 	.content > .table-holder {
 		width: 92%;

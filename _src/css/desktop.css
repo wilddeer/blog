@@ -11,11 +11,6 @@
                                                 \/_/ 
 */
 @media all and (min-width: 65em) {
-	blockquote > * {
-		padding-left: 1em;
-		padding-right: 1em;
-	}
-
 	body > header,
 	body > footer,
 	.content > * {
