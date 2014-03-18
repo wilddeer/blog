@@ -256,7 +256,7 @@ dzDelayed.push(function() {
 });
 </script>
 
-All we meed is one block and a bunch of styles:
+All we need is one block and a bunch of styles:
 
 {% highlight html cssclass=codewrap %}
 {% include snippets/steam-dlc.htm %}
