@@ -7,3 +7,6 @@
 [submodule "_src/burrito"]
 	path = _src/burrito
 	url = https://github.com/wilddeer/Event-Burrito.git
+[submodule "_includes/ios7-switch"]
+	path = _includes/ios7-switch
+	url = https://github.com/wilddeer/ios7-switch.git
