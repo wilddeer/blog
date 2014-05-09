@@ -18,7 +18,7 @@ lang: en
         margin: 0.5rem 1rem;
     }
 
-    .button-demo .line-sample {
+    .button-demo .ios7-switch.line-sample {
         display: block;
         font-size: 1.2em;
         text-align: left;
@@ -34,16 +34,12 @@ lang: en
         user-select: none;
     }
 
-    .button-demo .line-sample:focus {
-        border: 1px solid red;
-    }
-
     .button-demo .line-sample span {
         float: right;
         font-size: 1.5em;
     }
 
-{% include ios7-switch/ios7-switch.css %}
+{% include ios7-switch/ios7-switch.modernizr.css %}
 </style>
 
 <figure class="button-demo">
@@ -83,7 +79,6 @@ iOS7 switch imitation. Made it initially for new [Pepyaka](http://pepyaka.su), d
 - no shitty scripts, pure CSS,
 - the most accurate copy of iOS7 switch behavior, includes `:active` state styles (haven't seen those in any other implementation),
 - made with `em`s, sizes approprietaly to the font size,
-- supports IE9+, falls back to regular checkbox in older browsers,
 - keyboard accessible.
 
 <a href="https://github.com/wilddeer/ios7-switch" class="iconlink"><i class="icon-github"> </i><span>Fork me, baby</span></a>
@@ -116,6 +111,14 @@ or something similar, you get the idea.
 {% endhighlight %}
 
 ###Issues
+
+Doesn't work in older browsers with no `box-shadow` support (IE8 and lower, Android 3.x and lower). It's easy enough to make a fallback to a regular checkbox. For instance, using [Modernizr](http://modernizr.com) test:
+
+{% highlight js cssclass=codewrap %}
+Modernizr.addTest('unprefixed-boxshadow', Modernizr.testProp('boxShadow', '1px 1px', true));
+{% endhighlight %}
+
+and modified stylesheet -- <a href="https://github.com/wilddeer/ios7-switch/blob/master/ios7-switch.modernizr.css" class="iconlink"><i class="icon-cloud-download"> </i><span>ios7-switch.modernizr.css</span></a>.
 
 Has some rounding error problems in some browsers at some font sizes. Tweak the font size a bit to get rid of those.
 

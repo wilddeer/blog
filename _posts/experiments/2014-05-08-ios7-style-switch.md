@@ -18,7 +18,7 @@ lang: ru
         margin: 0.5rem 1rem;
     }
 
-    .button-demo .line-sample {
+    .button-demo .ios7-switch.line-sample {
         display: block;
         font-size: 1.2em;
         text-align: left;
@@ -34,16 +34,12 @@ lang: ru
         user-select: none;
     }
 
-    .button-demo .line-sample:focus {
-        border: 1px solid red;
-    }
-
     .button-demo .line-sample span {
         float: right;
         font-size: 1.5em;
     }
 
-{% include ios7-switch/ios7-switch.css %}
+{% include ios7-switch/ios7-switch.modernizr.css %}
 </style>
 
 <figure class="button-demo">
@@ -84,7 +80,6 @@ lang: ru
 - никаких дурацких скриптов, чистый CSS,
 - наиболее точное воспроизведение поведения переключателя из айОси, включает стили для состояния `:active` (чего я не нашел ни в одной другой имитации),
 - все размеры в `em`-ах, размер переключателя зависит от размера текста,
-- работает в ИЕ9+, в предыдущих версиях превращается в обычный чекбокс,
 - доступен с клавиатуры.
 
 <a href="https://github.com/wilddeer/ios7-switch" class="iconlink"><i class="icon-github"> </i><span>Форк ми, бейби</span></a>
@@ -116,7 +111,15 @@ lang: ru
 {% include ios7-switch/ios7-switch.css %}
 {% endhighlight %}
 
-###Баги
+###Проблемы
+
+Не работает в браузерах, не поддерживающих `box-shadow` (ИЕ8 и ниже, Андроид 3.x и ниже). Можно сделать фоллбек на обычный чекбокс, например, с помощью [Модернайзера](http://modernizr.com). Пишем тест:
+
+{% highlight js cssclass=codewrap %}
+Modernizr.addTest('unprefixed-boxshadow', Modernizr.testProp('boxShadow', '1px 1px', true));
+{% endhighlight %}
+
+и используем модифицированный CSS --- <a href="https://github.com/wilddeer/ios7-switch/blob/master/ios7-switch.modernizr.css" class="iconlink"><i class="icon-cloud-download"> </i><span>ios7-switch.modernizr.css</span></a>.
 
 Есть проблемы с ошибками округления в некоторых браузерах при определенных размерах шрифта. Обходятся небольшими твиками размера шрифта.
 
