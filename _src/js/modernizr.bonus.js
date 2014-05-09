@@ -13,3 +13,5 @@ Modernizr.addTest('pointerevents', function () {
 	}
 	return bool;
 });
+
+Modernizr.addTest('unprefixed-boxshadow', Modernizr.testProp('boxShadow', '1px 1px', true));
