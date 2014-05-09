@@ -50,8 +50,10 @@ loc:
         ru:
             - <a href="/" class="iconlink">«<span>Утром доделаю</span>»</a> работает на <a href="//jekyllrb.com" class="iconlink"><i class="icon-lab">&nbsp;</i><span>Jekyll</span></a>
             - Сорс бложека и другие штуки на <a href="//github.com/wilddeer" class="iconlink"><i class="icon-github">&nbsp;</i><span>ГитХабе</span></a>
+            - Анонсы постов и вебдев фигня в <a href="https://twitter.com/wildir" class="iconlink"><i class="icon-twitter">&nbsp;</i><span>Твиттере</span></a>
             - Комментарии, баги, замечания&nbsp;&rarr; <a href="mailto:wd@dizaina.net" class="iconlink"><i class="icon-envelope">&nbsp;</i><span>wd@dizaina.net</span></a>
         en:
             - <a href="/en/" class="iconlink">“<span>Will finish in the morning</span>”</a> is powered by <a href="//jekyllrb.com" class="iconlink"><i class="icon-lab">&nbsp;</i><span>Jekyll</span></a>
             - Blog’s source&nbsp;& other stuff on <a href="//github.com/wilddeer" class="iconlink"><i class="icon-github">&nbsp;</i><span>GitHub</span></a>
+            - Post announcements&nbsp;&amp; various webdev junk on <a href="https://twitter.com/wildir" class="iconlink"><i class="icon-twitter">&nbsp;</i><span>Twitter</span></a>
             - Comments, bugs&nbsp;& remarks&nbsp;&rarr; <a href="mailto:wd@dizaina.net" class="iconlink"><i class="icon-envelope">&nbsp;</i><span>wd@dizaina.net</span></a>
