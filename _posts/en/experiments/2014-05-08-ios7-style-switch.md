@@ -110,7 +110,7 @@ or something similar, you get the idea.
 {% include ios7-switch/ios7-switch.css %}
 {% endhighlight %}
 
-###Issues
+###Caveats
 
 Doesn't work in older browsers with no `box-shadow` support (IE8 and lower, Android 3.x and lower). It's easy enough to make a fallback to regular checkboxes. For instance, using [Modernizr](http://modernizr.com) test
 
