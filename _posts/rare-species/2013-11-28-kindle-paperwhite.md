@@ -10,13 +10,13 @@ lang: ru
 {% include pic.htm src='device.jpg' a='Kindle Paperwhite' %}
 
 {:.specification}
-| *Разрешение экрана* | 768 &times; 1024 |
+| *Разрешение экрана* | 768 &times; 1024, 16 оттенков серого |
 | *Размер вьюпорта* | 758 &times; 899 |
 | *Браузер* | На движке WebKit |
 | *User Agent (javascript)* | `Mozilla/5.0 (X11; ; U; Linux armv7l; en-us) AppleWebKit/534.26+ (KHTML, like Gecko) Version/5.0 Safari/534.26+` |
 | *User Agent (http header)* | `Mozilla/5.0 (X11; U; Linux armv7l like Android; en-us) AppleWebKit/531.2+ (KHTML, like Gecko) Version/5.0 Safari/533.2+ Kindle/3.0+` |
 | *[Acid3](http://acid3.acidtests.org/)* | 100/100 |
-| *[HTML5 Test](http://html5test.com/)* | 235+2/500 |
+| *[HTML5 Test](http://html5test.com/)* | [212/555](http://html5test.com/s/9957252018bec558.html) |
 | *[CSS3 Test](http://css3test.com/)* | 45% |
 
 Kindle Paperwhite --- новая Амазоновская читалка с e-ink тачскрином. Девайс оборудован вайфаем, есть модели с 3G.
@@ -77,22 +77,27 @@ Sniffer.browser.engine == 'webkit' && navigator.userAgent.indexOf('armv7l') != -
 			<tr>
 				<td>cssanimations</td>
 				<td class="true">True</td>
+				<td class="true">True <small>(-webkit-)</small></td>
+			</tr>
+			<tr>
+				<td>cssgradients</td>
 				<td class="true">True</td>
+				<td class="true">True <small>(-webkit-)</small></td>
 			</tr>
 			<tr>
 				<td>csstransforms</td>
 				<td class="true">True</td>
-				<td class="true">True</td>
+				<td class="true">True <small>(-webkit-)</small></td>
 			</tr>
 			<tr>
 				<td>csstransforms3d</td>
 				<td class="false">False</td>
-				<td class="false">False</td>
+				<td class="true">True <small>(-webkit-)</small></td>
 			</tr>
 			<tr>
 				<td>csstransitions</td>
 				<td class="true">True</td>
-				<td class="true">True</td>
+				<td class="true">True <small>(-webkit-)</small></td>
 			</tr>
 			<tr>
 				<td>fontface</td>
@@ -111,6 +116,11 @@ Sniffer.browser.engine == 'webkit' && navigator.userAgent.indexOf('armv7l') != -
 			</tr>
 			<tr>
 				<td>rgba</td>
+				<td class="true">True</td>
+				<td class="true">True</td>
+			</tr>
+			<tr>
+				<td>textshadow</td>
 				<td class="true">True</td>
 				<td class="true">True</td>
 			</tr>
