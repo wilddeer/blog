@@ -750,6 +750,25 @@ td.false {
 	background: #ffede5;
 }
 
+td.bug {
+	color: #A49528;
+	background: #FFFECA;
+}
+
+td.true small,
+td.false small,
+td.bug small {
+	font-size: 0.7em;
+}
+
+td.true small {
+	color: #9ed39e;
+}
+
+td.bug small {
+	color: #C1AE42;
+}
+
 
 /* peppermint */
 .peppermint {
