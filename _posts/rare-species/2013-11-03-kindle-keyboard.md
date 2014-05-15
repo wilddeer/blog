@@ -15,7 +15,7 @@ lang: ru
 | *Браузер* | На движке WebKit |
 | *User Agent* | `Mozilla/5.0 (Linux; U; en-US) AppleWebKit/528.5+ (KHTML, like Gecko, Safari/528.5+) Version/4.0 Kindle/3.0 (screen 600x800; rotate)` |
 | *[Acid3](http://acid3.acidtests.org/)* | 99/100 |
-| *[HTML5 Test](http://html5test.com/)* | 68/500 |
+| *[HTML5 Test](http://html5test.com/)* | [59/555](http://html5test.com/s/af89ab2018cb33eb.html) |
 | *[CSS3 Test](http://css3test.com/)* | 35% |
 
 Kindle Keyboard (он же Kindle 3) --- читалка от Амазона с e-ink экраном (без тача) и qwerty-клавиатурой. В читалку встроен экспериментальный браузер.
@@ -53,7 +53,7 @@ Kindle Keyboard (он же Kindle 3) --- читалка от Амазона с e
 			<tr>
 				<td>borderradius</td>
 				<td class="true">True</td>
-				<td class="true">True</td>
+				<td class="true">True <small>(-webkit-)</small></td>
 			</tr>
 			<tr>
 				<td>boxshadow</td>
@@ -63,32 +63,37 @@ Kindle Keyboard (он же Kindle 3) --- читалка от Амазона с e
 			<tr>
 				<td>boxsizing </td>
 				<td class="true">True</td>
-				<td class="true">True</td>
+				<td class="true">True <small>(-webkit-)</small></td>
 			</tr>
 			<tr>
 				<td>cssanimations</td>
 				<td class="true">True</td>
+				<td class="true">True <small>(-webkit-)</small></td>
+			</tr>
+			<tr>
+				<td>cssgradients</td>
 				<td class="true">True</td>
+				<td class="false">False</td>
 			</tr>
 			<tr>
 				<td>csstransforms</td>
 				<td class="true">True</td>
-				<td class="true">True</td>
+				<td class="true">True <small>(-webkit-)</small></td>
 			</tr>
 			<tr>
 				<td>csstransforms3d</td>
 				<td class="false">False</td>
-				<td class="false">False</td>
+				<td class="true">True <small>(-webkit-)</small></td>
 			</tr>
 			<tr>
 				<td>csstransitions</td>
 				<td class="true">True</td>
-				<td class="true">True</td>
+				<td class="true">True <small>(-webkit-)</small></td>
 			</tr>
 			<tr>
 				<td>fontface</td>
 				<td class="true">True</td>
-				<td class="true">True</td>
+				<td class="true">True <small>(только .svg)</small></td>
 			</tr>
 			<tr>
 				<td>mediaqueries</td>
@@ -104,6 +109,11 @@ Kindle Keyboard (он же Kindle 3) --- читалка от Амазона с e
 				<td>rgba</td>
 				<td class="true">True</td>
 				<td class="true">True</td>
+			</tr>
+			<tr>
+				<td>textshadow</td>
+				<td class="true">True</td>
+				<td class="bug">True <small>(без блюра)</small></td>
 			</tr>
 			<tr>
 				<td>touch</td>
@@ -140,7 +150,7 @@ Kindle Keyboard (он же Kindle 3) --- читалка от Амазона с e
 
 ###Скролл {#scroll}
 
-Блоки со скроллом можно проскролливать курсором: он залипает внутри блока, пока не просроллит его до конца в выбранном направлении:
+Блоки со скроллом можно проскролливать курсором: он залипает внутри блока, пока не проскроллит его до конца в выбранном направлении:
 
 {% include pic.htm src='screen-scroll.gif' a='Блок со скроллом' %}
 
