@@ -14,7 +14,8 @@
 	{% assign caption = '' %}
 {% endif %}
 {% endcapture %}
-<figure>
+{% if include.float %}<div>{% endif %}
+<figure{% if include.float %} class="float-{{ include.float }}"{% endif %}>
 	{% if include.t %}{{ caption }}{% endif %}
 	{% if include.p %}
 	<a href="/pics/{{slug}}/{{ include.src }}" target="_blank" title="{{ site.loc.original_image[page.lang] }}"><img src="/pics/{{slug}}/p_{{ include.src }}" alt="{{ alt | strip_html }}"></a>
@@ -23,3 +24,4 @@
 	{% endif %}
 	{% unless include.t %}{{ caption }}{% endunless %}
 </figure>
+{% if include.float %}</div>{% endif %}
