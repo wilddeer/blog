@@ -15,7 +15,7 @@ lang: en
 | *Browser* | Opera (Presto) |
 | *User Agent* | `Opera/9.50 (Nintendo DSi; Opera/507; U; en-US)` |
 | *[Acid3](http://acid3.acidtests.org/)* | 59/100 |
-| *[HTML5 Test](http://html5test.com/)* | 94/500 |
+| *[HTML5 Test](http://html5test.com/)* | [82/555](http://html5test.com/s/0329d12018b68bd6.html) |
 | *[CSS3 Test](http://css3test.com/)* | Failed to run |
 
 Nintendo DSi is a portable gaming console with two screens. Bottom screen is a resistive touchscreen, the top one isn't. Console's UI and touchscreen qualities assume that you use it with a stylus.
@@ -40,14 +40,14 @@ Mobile-optimized mode is activated with an appropriate viewport meta-tag, e.&nbs
 
 ###Feature tests
 
-<small>Feature tests are done with [Modernizr](//modernizr.com). [Full table of my tests](https://docs.google.com/spreadsheet/ccc?key=0AjA1cIs8C8MGdFdyQ0lMQnhMbHJEeVZpMW9XejhzU2c&usp=sharing#gid=0) on google docs.</small>
+<small>Feature tests are done using [Modernizr](//modernizr.com). [Full table of my tests](https://docs.google.com/spreadsheet/ccc?key=0AjA1cIs8C8MGdFdyQ0lMQnhMbHJEeVZpMW9XejhzU2c&usp=sharing#gid=0) on google docs.</small>
 
 <div class="table-holder">
 	<table>
 		<thead>
 			<tr>
 				<th>Feature</th>
-				<th markdown="1">Test</th>
+				<th>Test</th>
 				<th>Actual result</th>
 			</tr>
 		</thead>
@@ -79,6 +79,11 @@ Mobile-optimized mode is activated with an appropriate viewport meta-tag, e.&nbs
 			</tr>
 			<tr>
 				<td>cssanimations</td>
+				<td class="false">False</td>
+				<td class="false">False</td>
+			</tr>
+			<tr>
+				<td>cssgradients</td>
 				<td class="false">False</td>
 				<td class="false">False</td>
 			</tr>
@@ -118,6 +123,11 @@ Mobile-optimized mode is activated with an appropriate viewport meta-tag, e.&nbs
 				<td class="false">False</td>
 			</tr>
 			<tr>
+				<td>textshadow</td>
+				<td class="true">True</td>
+				<td class="bug">True <small>(no blur)</small></td>
+			</tr>
+			<tr>
 				<td>touch</td>
 				<td class="false">False</td>
 				<td class="false">False</td>
@@ -126,7 +136,7 @@ Mobile-optimized mode is activated with an appropriate viewport meta-tag, e.&nbs
 	</table>
 </div>
 
-As expected, the browser's support for fancy new features isn't huge: it supports `Media queries`, `opacity` and `box-sizing`. [Modernizr](//modernizr.com)'s `box-sizing` test returns a false negative result. Turns out, the browser understands the CSS-property, but doesn't react in any way to the `style.boxSizing` javascript property (including the Opera-prefixed variant).
+As expected, the browser's support for fancy new features isn't huge: it supports `Media queries`, `opacity`, `box-sizing` and `text-shadow` without blur. [Modernizr](//modernizr.com)'s `box-sizing` test returns a false negative result. Turns out, the browser understands the CSS-property, but doesn't react in any way to the `style.boxSizing` javascript property (including the Opera-prefixed variant).
 
 ###Fonts
 
@@ -146,15 +156,13 @@ Pages can be scrolled with the D-pad, using dragscroll or with a constantly visi
 
 ###Forms
 
-Surprisingly enough, the browser supports quite a bunch of new input types: `url`, `email`, `datetime`, `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range`:
+Surprisingly enough, the browser's support for new input types is reasonable. It supports `url`, `email`, `datetime`, `date`, `month`, `week`, `time`, `datetime-local`, `number` and `range`:
 
 {% include pic.htm src='form.jpg' a='Input fields of different types' %}
 
 All the fields are validated according to their types when the form is submitted, `pattern` validation also works. Datepicker is buggy:
 
 {% include pic.htm src='datepicker.jpg' c='In an attempt to fit into available space, the datepicker becomes a mess' %}
-
-It only happens to the datepicker in `date` fields. Datepickers in other fields don't hesitate to go partly offscreen and thus are looking good.
 
 ###jQuery
 
