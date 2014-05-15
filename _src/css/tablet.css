@@ -159,6 +159,13 @@
 	body > footer ul.footer-links li:last-child:after {
 		content: '';
 	}
+
+	/* figures */
+	figure.float-right {
+		float: right;
+		width: auto;
+		margin: 0 0 1.5em 1.5em;
+	}
 }
 
 /* HEIGHT STUFF */
