@@ -13,10 +13,10 @@ lang: ru
 | *Верхний экран* | 400 &times; 240|
 | *Нижний экран* | 320 &times; 240 |
 | *Размер вьюпорта* | 416 &times; 480 |
-| *Браузер* | На движке WebKit |
+| *Браузер* | NetFront (WebKit) |
 | *User Agent* | `Mozilla/5.0 (Nintendo 3DS; U; ; ru) Version/1.7552.EU` |
 | *[Acid3](http://acid3.acidtests.org/)* | 92/100 |
-| *[HTML5 Test](http://html5test.com/)* | 109/500 |
+| *[HTML5 Test](http://html5test.com/)* | [97/555](http://html5test.com/s/3c77232018f49fcc.html) |
 | *[CSS3 Test](http://css3test.com/)* | 39% |
 
 Nintendo 3DS --- портативная игровая консоль из последней линейки. Как и предшественник, [Nintendo DSi](/rare-species/nintendo-dsi), 3DS обладает двумя экранами. Верхний экран способен работать в режиме 3D, однако на браузере это никак не отражается. Нижний экран, как и в DSi, --- резистивный тачскин, заточенный под управление стилусом.
@@ -62,27 +62,32 @@ Nintendo 3DS --- портативная игровая консоль из по�
 			<tr>
 				<td>boxsizing </td>
 				<td class="true">True</td>
-				<td class="true">True</td>
+				<td class="true">True <small>(-webkit-)</small></td>
 			</tr>
 			<tr>
 				<td>cssanimations</td>
 				<td class="true">True</td>
+				<td class="true">True <small>(-webkit-)</small></td>
+			</tr>
+			<tr>
+				<td>cssgradients</td>
 				<td class="true">True</td>
+				<td class="false">False</td>
 			</tr>
 			<tr>
 				<td>csstransforms</td>
 				<td class="true">True</td>
-				<td class="true">True</td>
+				<td class="true">True <small>(-webkit-)</small></td>
 			</tr>
 			<tr>
 				<td>csstransforms3d</td>
 				<td class="false">False</td>
-				<td class="false">False</td>
+				<td class="true">True <small>(-webkit-)</small></td>
 			</tr>
 			<tr>
 				<td>csstransitions</td>
 				<td class="true">True</td>
-				<td class="true">True</td>
+				<td class="true">True <small>(-webkit-)</small></td>
 			</tr>
 			<tr>
 				<td>fontface</td>
@@ -103,6 +108,11 @@ Nintendo 3DS --- портативная игровая консоль из по�
 				<td>rgba</td>
 				<td class="true">True</td>
 				<td class="true">True</td>
+			</tr>
+			<tr>
+				<td>textshadow</td>
+				<td class="true">True</td>
+				<td class="false">False</td>
 			</tr>
 			<tr>
 				<td>touch</td>
