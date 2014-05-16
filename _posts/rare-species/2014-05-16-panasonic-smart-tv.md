@@ -40,8 +40,6 @@ lang: ru
 
 {% include pic.htm src='acid.jpg' a='Acid3 test result' %}
 
-[HTML5 Test](http://html5test.com/) теперь сохраняет результаты тестирования для каждого девайса, можно [посмотреть подробно результаты всех тестов](http://html5test.com/s/cdd96d20133ac84a.html).
-
 ###Поддержка фич {#feature-tests}
 
 <small>Фичи тестировались [Модернайзером](//modernizr.com). [Полная таблица моих тестов](https://docs.google.com/spreadsheet/ccc?key=0AjA1cIs8C8MGdFdyQ0lMQnhMbHJEeVZpMW9XejhzU2c&usp=sharing#gid=0) на гугл доксах.</small>
