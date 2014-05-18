@@ -14,7 +14,7 @@ lang: en
 {:.specification}
 | *Screen resolution* | 1920 &times; 1080 |
 | *Viewport size* | 1256 &times; 630 |
-| *Browser* | Modified Chrome |
+| *Browser* | WebKit-powered |
 | *User Agent* | `Mozilla/5.0 (X11; FreeBSD; U; Viera; ru-RU) AppleWebKit/537.11 (KHTML, like Gecko) Viera/3.3.2 Chrome/23.0.1271.97 Safari/537.11` |
 | *[Acid3](http://acid3.acidtests.org/)* | 100/100, with bugs |
 | *[HTML5 Test](http://html5test.com/)* | [333/555](http://html5test.com/s/cdd96d20133ac84a.html) |
