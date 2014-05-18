@@ -6,7 +6,7 @@
 
 .pepyaka > * {
     display: inline-block;
-    font-size: 4em;
+    font-size: 3.5em;
     letter-spacing: 0.2em;
     -webkit-animation-duration: 0.4s;
     animation-duration: 0.4s;
@@ -46,7 +46,7 @@ sharp transitions
                         0.03em 0.03em 0 #000000,
                         0 0.05em 0 #000000,
                         -0.03em 0.03em 0 #000000;
-        -webkit-transform: translate(0.025em,-0.025em);
+        -webkit-transform: translate(0.037em,-0.037em);
     }
 
     12.4% {
@@ -59,7 +59,7 @@ sharp transitions
                         0.03em 0.03em 0 #000000,
                         0 0.05em 0 #000000,
                         -0.03em 0.03em 0 #000000;
-        -webkit-transform: translate(0.025em,-0.025em);
+        -webkit-transform: translate(0.037em,-0.037em);
     }
 
     12.5% {
@@ -72,7 +72,7 @@ sharp transitions
                         0.03em 0.03em 0 #1be5a0,
                         0 0.05em 0 #1be5a0,
                         -0.03em 0.03em 0 #1be5a0;
-        -webkit-transform: translate(-0.04em,0.05em);
+        -webkit-transform: translate(-0.05em,0.06em);
     }
 
     24.9% {
@@ -85,7 +85,7 @@ sharp transitions
                         0.03em 0.03em 0 #1be5a0,
                         0 0.05em 0 #1be5a0,
                         -0.03em 0.03em 0 #1be5a0;
-        -webkit-transform: translate(-0.04em,0.05em);
+        -webkit-transform: translate(-0.05em,0.06em);
     }
 
     25% {
@@ -98,7 +98,7 @@ sharp transitions
                         0.03em 0.03em 0 #b33aff,
                         0 0.05em 0 #b33aff,
                         -0.03em 0.03em 0 #b33aff;
-        -webkit-transform: translate(-0.025em,-0.05em);
+        -webkit-transform: translate(-0.037em,-0.075em);
     }
 
     37.4% {
@@ -111,7 +111,7 @@ sharp transitions
                         0.03em 0.03em 0 #b33aff,
                         0 0.05em 0 #b33aff,
                         -0.03em 0.03em 0 #b33aff;
-        -webkit-transform: translate(-0.025em,-0.05em);
+        -webkit-transform: translate(-0.037em,-0.075em);
     }
 
     37.5% {
@@ -124,7 +124,7 @@ sharp transitions
                         0.03em 0.03em 0 #fffe00,
                         0 0.05em 0 #fffe00,
                         -0.03em 0.03em 0 #fffe00;
-        -webkit-transform: translate(0.025em,-0.025em);
+        -webkit-transform: translate(0.037em,-0.037em);
     }
 
     49.9% {
@@ -137,7 +137,7 @@ sharp transitions
                         0.03em 0.03em 0 #fffe00,
                         0 0.05em 0 #fffe00,
                         -0.03em 0.03em 0 #fffe00;
-        -webkit-transform: translate(0.025em,-0.025em);
+        -webkit-transform: translate(0.037em,-0.037em);
     }
 
     50% {
@@ -176,7 +176,7 @@ sharp transitions
                         0.03em 0.03em 0 #62e51b,
                         0 0.05em 0 #62e51b,
                         -0.03em 0.03em 0 #62e51b;
-        -webkit-transform: translate(-0.05em,-0.012em);
+        -webkit-transform: translate(-0.075em,-0.018em);
     }
 
     74.9% {
@@ -189,7 +189,7 @@ sharp transitions
                         0.03em 0.03em 0 #62e51b,
                         0 0.05em 0 #62e51b,
                         -0.03em 0.03em 0 #62e51b;
-        -webkit-transform: translate(-0.05em,-0.012em);
+        -webkit-transform: translate(-0.075em,-0.018em);
     }
 
     75% {
@@ -202,7 +202,7 @@ sharp transitions
                         0.03em 0.03em 0 #2751ef,
                         0 0.05em 0 #2751ef,
                         -0.03em 0.03em 0 #2751ef;
-        -webkit-transform: translate(0.038em,-0.038em);
+        -webkit-transform: translate(0.057em,-0.057em);
     }
 
     87.4% {
@@ -215,7 +215,7 @@ sharp transitions
                         0.03em 0.03em 0 #2751ef,
                         0 0.05em 0 #2751ef,
                         -0.03em 0.03em 0 #2751ef;
-        -webkit-transform: translate(0.038em,-0.038em);
+        -webkit-transform: translate(0.057em,-0.057em);
     }
 
     87.5% {
@@ -228,7 +228,7 @@ sharp transitions
                         0.03em 0.03em 0 #ffc600,
                         0 0.05em 0 #ffc600,
                         -0.03em 0.03em 0 #ffc600;
-        -webkit-transform: translate(-0.05em,0.05em);
+        -webkit-transform: translate(-0.060em,0.060em);
     }
 
     99.9% {
@@ -241,7 +241,7 @@ sharp transitions
                         0.03em 0.03em 0 #ffc600,
                         0 0.05em 0 #ffc600,
                         -0.03em 0.03em 0 #ffc600;
-        -webkit-transform: translate(-0.05em,0.05em);
+        -webkit-transform: translate(-0.060em,0.060em);
     }
 
     to {
@@ -254,7 +254,7 @@ sharp transitions
                         0.03em 0.03em 0 #000000,
                         0 0.05em 0 #000000,
                         -0.03em 0.03em 0 #000000;
-        -webkit-transform: translate(0.012em,-0.012em);
+        -webkit-transform: translate(0.018em,-0.018em);
     }
 }
 
@@ -269,7 +269,7 @@ sharp transitions
                         0.03em 0.03em 0 #000000,
                         0 0.05em 0 #000000,
                         -0.03em 0.03em 0 #000000;
-        transform: translate(0.025em,-0.025em);
+        transform: translate(0.037em,-0.037em);
     }
 
     12.4% {
@@ -282,7 +282,7 @@ sharp transitions
                         0.03em 0.03em 0 #000000,
                         0 0.05em 0 #000000,
                         -0.03em 0.03em 0 #000000;
-        transform: translate(0.025em,-0.025em);
+        transform: translate(0.037em,-0.037em);
     }
 
     12.5% {
@@ -295,7 +295,7 @@ sharp transitions
                         0.03em 0.03em 0 #1be5a0,
                         0 0.05em 0 #1be5a0,
                         -0.03em 0.03em 0 #1be5a0;
-        transform: translate(-0.04em,0.05em);
+        transform: translate(-0.05em,0.06em);
     }
 
     24.9% {
@@ -308,7 +308,7 @@ sharp transitions
                         0.03em 0.03em 0 #1be5a0,
                         0 0.05em 0 #1be5a0,
                         -0.03em 0.03em 0 #1be5a0;
-        transform: translate(-0.04em,0.05em);
+        transform: translate(-0.05em,0.06em);
     }
 
     25% {
@@ -321,7 +321,7 @@ sharp transitions
                         0.03em 0.03em 0 #b33aff,
                         0 0.05em 0 #b33aff,
                         -0.03em 0.03em 0 #b33aff;
-        transform: translate(-0.025em,-0.05em);
+        transform: translate(-0.037em,-0.075em);
     }
 
     37.4% {
@@ -334,7 +334,7 @@ sharp transitions
                         0.03em 0.03em 0 #b33aff,
                         0 0.05em 0 #b33aff,
                         -0.03em 0.03em 0 #b33aff;
-        transform: translate(-0.025em,-0.05em);
+        transform: translate(-0.037em,-0.075em);
     }
 
     37.5% {
@@ -347,7 +347,7 @@ sharp transitions
                         0.03em 0.03em 0 #fffe00,
                         0 0.05em 0 #fffe00,
                         -0.03em 0.03em 0 #fffe00;
-        transform: translate(0.025em,-0.025em);
+        transform: translate(0.037em,-0.037em);
     }
 
     49.9% {
@@ -360,7 +360,7 @@ sharp transitions
                         0.03em 0.03em 0 #fffe00,
                         0 0.05em 0 #fffe00,
                         -0.03em 0.03em 0 #fffe00;
-        transform: translate(0.025em,-0.025em);
+        transform: translate(0.037em,-0.037em);
     }
 
     50% {
@@ -399,7 +399,7 @@ sharp transitions
                         0.03em 0.03em 0 #62e51b,
                         0 0.05em 0 #62e51b,
                         -0.03em 0.03em 0 #62e51b;
-        transform: translate(-0.05em,-0.012em);
+        transform: translate(-0.075em,-0.018em);
     }
 
     74.9% {
@@ -412,7 +412,7 @@ sharp transitions
                         0.03em 0.03em 0 #62e51b,
                         0 0.05em 0 #62e51b,
                         -0.03em 0.03em 0 #62e51b;
-        transform: translate(-0.05em,-0.012em);
+        transform: translate(-0.075em,-0.018em);
     }
 
     75% {
@@ -425,7 +425,7 @@ sharp transitions
                         0.03em 0.03em 0 #2751ef,
                         0 0.05em 0 #2751ef,
                         -0.03em 0.03em 0 #2751ef;
-        transform: translate(0.038em,-0.038em);
+        transform: translate(0.057em,-0.057em);
     }
 
     87.4% {
@@ -438,7 +438,7 @@ sharp transitions
                         0.03em 0.03em 0 #2751ef,
                         0 0.05em 0 #2751ef,
                         -0.03em 0.03em 0 #2751ef;
-        transform: translate(0.038em,-0.038em);
+        transform: translate(0.057em,-0.057em);
     }
 
     87.5% {
@@ -451,7 +451,7 @@ sharp transitions
                         0.03em 0.03em 0 #ffc600,
                         0 0.05em 0 #ffc600,
                         -0.03em 0.03em 0 #ffc600;
-        transform: translate(-0.05em,0.05em);
+        transform: translate(-0.060em,0.060em);
     }
 
     99.9% {
@@ -464,7 +464,7 @@ sharp transitions
                         0.03em 0.03em 0 #ffc600,
                         0 0.05em 0 #ffc600,
                         -0.03em 0.03em 0 #ffc600;
-        transform: translate(-0.05em,0.05em);
+        transform: translate(-0.060em,0.060em);
     }
 
     to {
@@ -477,7 +477,7 @@ sharp transitions
                         0.03em 0.03em 0 #000000,
                         0 0.05em 0 #000000,
                         -0.03em 0.03em 0 #000000;
-        transform: translate(0.012em,-0.012em);
+        transform: translate(0.018em,-0.018em);
     }
 }
 
@@ -497,7 +497,7 @@ smooth transitions
                         0.03em 0.03em 0 #000000,
                         0 0.05em 0 #000000,
                         -0.03em 0.03em 0 #000000;
-        -webkit-transform: translate(0.025em,-0.025em);
+        -webkit-transform: translate(0.037em,-0.037em);
     }
 
     12.5% {
@@ -510,7 +510,7 @@ smooth transitions
                         0.03em 0.03em 0 #1be5a0,
                         0 0.05em 0 #1be5a0,
                         -0.03em 0.03em 0 #1be5a0;
-        -webkit-transform: translate(-0.04em,0.05em);
+        -webkit-transform: translate(-0.05em,0.06em);
     }
 
     25% {
@@ -523,7 +523,7 @@ smooth transitions
                         0.03em 0.03em 0 #b33aff,
                         0 0.05em 0 #b33aff,
                         -0.03em 0.03em 0 #b33aff;
-        -webkit-transform: translate(-0.025em,-0.05em);
+        -webkit-transform: translate(-0.037em,-0.075em);
     }
 
     37.5% {
@@ -536,7 +536,7 @@ smooth transitions
                         0.03em 0.03em 0 #fffe00,
                         0 0.05em 0 #fffe00,
                         -0.03em 0.03em 0 #fffe00;
-        -webkit-transform: translate(0.025em,-0.025em);
+        -webkit-transform: translate(0.037em,-0.037em);
     }
 
     50% {
@@ -562,7 +562,7 @@ smooth transitions
                         0.03em 0.03em 0 #62e51b,
                         0 0.05em 0 #62e51b,
                         -0.03em 0.03em 0 #62e51b;
-        -webkit-transform: translate(-0.05em,-0.012em);
+        -webkit-transform: translate(-0.075em,-0.018em);
     }
 
     75% {
@@ -575,7 +575,7 @@ smooth transitions
                         0.03em 0.03em 0 #2751ef,
                         0 0.05em 0 #2751ef,
                         -0.03em 0.03em 0 #2751ef;
-        -webkit-transform: translate(0.038em,-0.038em);
+        -webkit-transform: translate(0.057em,-0.057em);
     }
 
     87.5% {
@@ -588,7 +588,7 @@ smooth transitions
                         0.03em 0.03em 0 #ffc600,
                         0 0.05em 0 #ffc600,
                         -0.03em 0.03em 0 #ffc600;
-        -webkit-transform: translate(-0.05em,0.05em);
+        -webkit-transform: translate(-0.060em,0.060em);
     }
 
     to {
@@ -601,7 +601,7 @@ smooth transitions
                         0.03em 0.03em 0 #000000,
                         0 0.05em 0 #000000,
                         -0.03em 0.03em 0 #000000;
-        -webkit-transform: translate(0.012em,-0.012em);
+        -webkit-transform: translate(0.018em,-0.018em);
     }
 }
 
@@ -616,7 +616,7 @@ smooth transitions
                         0.03em 0.03em 0 #000000,
                         0 0.05em 0 #000000,
                         -0.03em 0.03em 0 #000000;
-        transform: translate(0.025em,-0.025em);
+        transform: translate(0.037em,-0.037em);
     }
 
     12.5% {
@@ -629,7 +629,7 @@ smooth transitions
                         0.03em 0.03em 0 #1be5a0,
                         0 0.05em 0 #1be5a0,
                         -0.03em 0.03em 0 #1be5a0;
-        transform: translate(-0.04em,0.05em);
+        transform: translate(-0.05em,0.06em);
     }
 
     25% {
@@ -642,7 +642,7 @@ smooth transitions
                         0.03em 0.03em 0 #b33aff,
                         0 0.05em 0 #b33aff,
                         -0.03em 0.03em 0 #b33aff;
-        transform: translate(-0.025em,-0.05em);
+        transform: translate(-0.037em,-0.075em);
     }
 
     37.5% {
@@ -655,7 +655,7 @@ smooth transitions
                         0.03em 0.03em 0 #fffe00,
                         0 0.05em 0 #fffe00,
                         -0.03em 0.03em 0 #fffe00;
-        transform: translate(0.025em,-0.025em);
+        transform: translate(0.037em,-0.037em);
     }
 
     50% {
@@ -681,7 +681,7 @@ smooth transitions
                         0.03em 0.03em 0 #62e51b,
                         0 0.05em 0 #62e51b,
                         -0.03em 0.03em 0 #62e51b;
-        transform: translate(-0.05em,-0.012em);
+        transform: translate(-0.075em,-0.018em);
     }
 
     75% {
@@ -694,7 +694,7 @@ smooth transitions
                         0.03em 0.03em 0 #2751ef,
                         0 0.05em 0 #2751ef,
                         -0.03em 0.03em 0 #2751ef;
-        transform: translate(0.038em,-0.038em);
+        transform: translate(0.057em,-0.057em);
     }
 
     87.5% {
@@ -707,7 +707,7 @@ smooth transitions
                         0.03em 0.03em 0 #ffc600,
                         0 0.05em 0 #ffc600,
                         -0.03em 0.03em 0 #ffc600;
-        transform: translate(-0.05em,0.05em);
+        transform: translate(-0.060em,0.060em);
     }
 
     to {
@@ -720,7 +720,7 @@ smooth transitions
                         0.03em 0.03em 0 #000000,
                         0 0.05em 0 #000000,
                         -0.03em 0.03em 0 #000000;
-        transform: translate(0.012em,-0.012em);
+        transform: translate(0.018em,-0.018em);
     }
 }
 
