@@ -80,6 +80,7 @@ IE7 тоже пора отправлять на свалку, но обычно 
 - Windows Phone 7.8
 - Прошлые версии iOS
 - Прошлые версии Blackberry
+- Android 3.x
 - Nokia Browser
 
 For fun:

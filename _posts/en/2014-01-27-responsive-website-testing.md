@@ -45,7 +45,7 @@ The main rule here: if it's possible to test on a real device -- test on a devic
 - Lots of buggy and inconvenient emulators.
 - Lack of emulators for rare devices.
 
-My initial idea to buy a device working on each of the popular operating systems (iOS, Android, Windows Phone) realized and turned into gathering of rare devices with a browser on board.
+My initial idea to buy a device working on each of the popular operating systems (iOS, Android, Windows Phone) realized and turned into gathering of rare devices with browser on board.
 
 My collection now contains Kindle Keyboard and Kindle Paperwhite with their grayscale webkits, Nokia Asha 501 (a phone on modified S40 with horrible Ovi browser and not so horrible Opera Mini working on Java), Nintendo DSi bought after reading [this article](http://maban.co.uk/73), Nintendo 3DS, PS Vita and lots of other rare and not so rare stuff.
 
@@ -53,7 +53,7 @@ My collection now contains Kindle Keyboard and Kindle Paperwhite with their gray
 
 It's important to note, though, that any large project can't be properly tested on all of them. The main goal here is not to support each and every device, but to properly optimize the site, make it adaptive in a flexible way. The site shouldn't necessarily work equally on each device, but it's important to ensure the availability of content and get rid of the nastiest bugs, possibly avoiding UA sniffing (although it's hard at times).
 
-The possibility to touch and test your project on different devices gives a valuable information on the adequacy of the UI, availability of necessary fallbacks, typical bugs encountered on different devices, etc. All this allows you to create good universal development patterns and apply them in the future, reducing the need for testing to a minimum.
+The possibility to touch and test your project on different devices gives valuable information on the adequacy of the UI, availability of necessary fallbacks, typical bugs encountered on different devices, etc. All this allows you to create good universal development patterns and apply them in the future, reducing the need for testing to a minimum.
 
 ###Where to test
 
@@ -64,12 +64,13 @@ Mandatory:
 - Windows Phone 8
 - Blackberry 10
 
-Bonus pack in the order of subjective importance:
+Bonus pack in order of subjective importance:
 
 - Opera Mini Java app
 - Windows Phone 7.8
 - Older versions of iOS
 - Older versions of Blackberry
+- Default browser on Android 3.x
 - Nokia Browser
 
 For fun:
@@ -79,7 +80,7 @@ For fun:
 - Nintendo DSi, 3DS
 - Ovi browser (Nokia Xpress)
 - Steam Big Picture browser
-- Smart TVs, refrigerators, any other hardware and emulators at your hands.
+- Smart TVs, refrigerators, any other hardware and emulators you can get your hand on
 
 ###Where to get the emulators
 
