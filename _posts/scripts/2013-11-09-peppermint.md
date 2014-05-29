@@ -320,7 +320,7 @@ $('.peppermint').Peppermint();
   dotsFirst: false,
 
   //разрешить перетаскивать слайды мышкой
-  mouseDrag: false,
+  mouseDrag: true,
 
   //Префикс для служебных классов слайдера,
   //таких как `inactive`, `active`, `mouse` и `drag`.
