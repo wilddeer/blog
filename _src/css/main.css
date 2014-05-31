@@ -781,18 +781,18 @@ td.bug small {
 	padding-right: 1rem;
 }
 
-.peppermint.active {
+.peppermint-active {
 	margin-bottom: 1.5rem;
 }
 
-html.bw .peppermint.active > ul.dots > li > span {
+html.bw .peppermint-active > ul.peppermint-dots > li > span {
 	background: #000;
 	width: 12px;
 	height: 12px;
 	margin: -6px 0 0 -6px;
 }
 
-html.bw .peppermint.active > ul.dots > li.active > span {
+html.bw .peppermint-active > ul.peppermint-dots > li.peppermint-active > span {
 	border: 1px solid #000;
 	background: transparent;
 	width: 14px;
@@ -800,12 +800,16 @@ html.bw .peppermint.active > ul.dots > li.active > span {
 	margin: -8px 0 0 -8px;
 }
 
-.peppermint.active > ul.dots > li:before {
+.peppermint-active > ul.peppermint-dots > li {
+	padding: 0.5em;
+}
+
+.peppermint-active > ul.peppermint-dots > li:before {
 	display: none;
 	content: '';
 }
 
-html.bw .peppermint.active .slides {
+html.bw .peppermint-active .peppermint-slides {
 	-webkit-transition-duration: 0ms !important;
 	transition-duration: 0ms !important;
 }
