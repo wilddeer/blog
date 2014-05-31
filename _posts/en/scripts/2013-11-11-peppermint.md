@@ -25,7 +25,7 @@ lang: en
   <figure class="yellow">
     <h1>Peppermint.js</h1>
     <h3>Proper touch slider</h3>
-    <p><a href="https://github.com/wilddeer/Peppermint" class="github"><i class="icon-github">&nbsp;</i>Get it on GitHub</a></p>
+    <p><a href="https://github.com/wilddeer/Peppermint" class="github"><i class="icon-github">&nbsp;</i>Fork me on GitHub</a></p>
   </figure>
 
   <figure class="red">

@@ -24,7 +24,7 @@ lang: ru
   <figure class="yellow">
     <h1>Peppermint.js</h1>
     <h3>Правильный тач-слайдер</h3>
-    <p><a href="https://github.com/wilddeer/Peppermint" class="github"><i class="icon-github">&nbsp;</i>Забрать с ГитХаба</a></p>
+    <p><a href="https://github.com/wilddeer/Peppermint" class="github"><i class="icon-github">&nbsp;</i>Форкни меня</a></p>
   </figure>
 
   <figure class="red">
