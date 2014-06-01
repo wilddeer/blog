@@ -200,6 +200,10 @@ rightArr.addEventListener('click', slider.next, false);
 leftArr.addEventListener('click', slider.prev, false);
 {% endhighlight %}
 
+##Используете Peppermint?
+
+Киньте ссылочку &rarr; <a href="mailto:wd@dizaina.net" class="iconlink"><i class="icon-envelope">&nbsp;</i>wd@dizaina.net</a>.
+
 ##Лицензия {#license}
 
 [MIT license](http://opensource.org/licenses/MIT).
