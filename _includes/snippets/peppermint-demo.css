@@ -21,14 +21,17 @@
 }
 
 html.blackberry .stage.peppermint .peppermint-slides {
-    min-height: 16em;
+    
+    
 }
 
 html.no-flexbox.no-flexboxlegacy .stage.peppermint .peppermint-slides {
-    height: 20em;
+    display: table;
+    /* ie7 fallback */
+    *height: 20em;
 }
 
-.stage.peppermint figure {
+.stage.peppermint .peppermint-slides > figure {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -44,14 +47,19 @@ html.no-flexbox.no-flexboxlegacy .stage.peppermint .peppermint-slides {
     padding-top: 1.5em;
     padding-bottom: 1.5em;
     margin-bottom: 0;
+    min-height: 16em;
 }
 
-.stage.peppermint-active figure {
+.stage.peppermint-active .peppermint-slides > figure {
     padding-bottom: 3em;
 }
 
-html.no-flexbox.no-flexboxlegacy .stage.peppermint figure {
-    height: 100%;
+html.no-flexbox.no-flexboxlegacy .stage.peppermint .peppermint-slides > figure {
+    display: table-cell;
+    vertical-align: middle;
+    float: none;
+    /* ie7 fallback */
+    *float: left;
 }
 
 .stage.peppermint figure:last-child {
@@ -185,7 +193,7 @@ html.winphone .stage.peppermint .green {
 }
 
 @media all and (min-width: 65em) {
-    .stage.peppermint .peppermint-slides {
+    .stage.peppermint figure {
         height: 25em;
     }
 
