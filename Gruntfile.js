@@ -14,7 +14,6 @@ module.exports = function(grunt) {
 						'_src/css/font-face.css',
 						'_src/css/normalize.css',
 						'_src/css/rem-mobile-fallback.css',
-						'_src/peppermint/dist/peppermint.required.css',
 						'_src/peppermint/dist/peppermint.suggested.css',
 						'_src/css/slime.css',
 						'_src/css/main.css',
@@ -31,7 +30,6 @@ module.exports = function(grunt) {
 						'_src/css/ie-font-face.css',
 						'_src/css/normalize.css',
 						'_src/css/rem-mobile-fallback.css',
-						'_src/peppermint/dist/peppermint.required.css',
 						'_src/peppermint/dist/peppermint.suggested.css',
 						'_src/css/slime.css',
 						'_src/css/main.css',
@@ -48,7 +46,6 @@ module.exports = function(grunt) {
 						'_src/css/ie-font-face.css',
 						'_src/css/normalize.css',
 						'_src/css/rem-mobile-fallback.css',
-						'_src/peppermint/dist/peppermint.required.css',
 						'_src/peppermint/dist/peppermint.suggested.css',
 						'_src/css/slime.css',
 						'_src/css/main.css',
@@ -62,7 +59,6 @@ module.exports = function(grunt) {
 
 					'css/steam_styles.css': [
 						'_src/css/normalize.css',
-						'_src/peppermint/dist/peppermint.required.css',
 						'_src/peppermint/dist/peppermint.suggested.css',
 						'_src/css/slime.css',
 						'_src/steam/css/base.css',
