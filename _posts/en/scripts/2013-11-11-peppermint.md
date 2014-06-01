@@ -68,7 +68,7 @@ lang: en
 HTML markup:
 
 {% highlight html cssclass=codewrap %}
-<div class="peppermint inactive" id="peppermint">
+<div class="peppermint peppermint-inactive" id="peppermint">
   <figure> ... </figure>
 
   <figure> ... </figure>
@@ -89,7 +89,7 @@ Or javascript + jQuery:
 $('.peppermint').Peppermint();
 {% endhighlight %}
 
-`inactive` class is not required. It is replaced with `active` during setup.
+`peppermint-inactive` class is not required. It is replaced with `peppermint-active` during setup.
 
 You are free to use any other tag instead of `figure`. When using `figure`, don't forget to include [html5shiv](https://github.com/aFarkas/html5shiv), otherwise it won't work in old IEs.
 
@@ -188,7 +188,7 @@ Peppermint exposes a set of functions upon installation. These functions can be 
 
 `getSlidesNumber()` -- get total number of slides;
 
-`recalcWidth()` -- recalculate the slider's and slides' widths. Usefull when the container width is changed. Width recalculation runs automatically on window resize and device orientation change.
+`recalcWidth()` -- recalculate slider's and slides' widths. Usefull when the container width is changed. Width recalculation runs automatically on window resize and device orientation change.
 
 Example:
 

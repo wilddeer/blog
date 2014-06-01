@@ -67,7 +67,7 @@ lang: ru
 HTML разметка:
 
 {% highlight html cssclass=codewrap %}
-<div class="peppermint inactive" id="peppermint">
+<div class="peppermint peppermint-inactive" id="peppermint">
   <figure> ... </figure>
 
   <figure> ... </figure>
@@ -88,7 +88,7 @@ var slider = Peppermint(document.getElementById('peppermint'));
 $('.peppermint').Peppermint();
 {% endhighlight %}
 
-Класс `inactive` не обязателен. Он заменяется на `active` во время установки.
+Класс `peppermint-inactive` не обязателен. Он заменяется на `peppermint-active` во время установки.
 
 Вместо `figure` можно использовать любой другой тег. Если используете `figure`, не забудьте подключить [html5shiv](https://github.com/aFarkas/html5shiv), чтобы старые IE не удивлялись HTML5-тегам.
 
