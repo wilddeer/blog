@@ -153,10 +153,27 @@ Peppermint can take settings object as an optional second parameter (first when 
 }
 {% endhighlight %}
 
-Example:
+###Examples
+
+JS:
 
 {% highlight js cssclass=codewrap %}
 var slider = Peppermint(document.getElementById('peppermint'), {
+  dots: true,
+  slideshow: true,
+  speed: 500,
+  slideshowInterval: 5000,
+  stopSlideshowAfterInteraction: true,
+  onSetup: function(n) {
+    console.log('Peppermint setup done. Slides found: ' + n);
+  }
+});
+{% endhighlight %}
+
+JS + jQuery:
+
+{% highlight js cssclass=codewrap %}
+$('.peppermint').Peppermint({
   dots: true,
   slideshow: true,
   speed: 500,
@@ -190,15 +207,49 @@ Peppermint exposes a set of functions upon installation. These functions can be 
 
 `recalcWidth()` -- recalculate slider's and slides' widths. Usefull when the container width is changed. Width recalculation runs automatically on window resize and device orientation change.
 
-Example:
+###Examples
+
+JS:
 
 {% highlight js cssclass=codewrap %}
+//init Peppermint and save the API object
 var slider = Peppermint(document.getElementById('peppermint')),
+    //save links to HTML nodes
     rightArr = document.getElementById('right-arr'),
-    leftArr = document.getElementById('left-arr');
+    leftArr = document.getElementById('left-arr'),
+    getSlidesNumberButton = document.getElementById('getslidesnumber');
 
+//click `#right-arr` to go to the next slide
 rightArr.addEventListener('click', slider.next, false);
+
+//click `#left-arr` to go to the previous slide
 leftArr.addEventListener('click', slider.prev, false);
+
+//click `#getslidesnumber` to alert total number of slides
+getSlidesNumberButton.addEventListener('click', function() {
+  alert('There are ' + slider.getSlidesNumber() + ' slides');
+}, false);
+{% endhighlight %}
+
+JS + jQuery:
+
+{% highlight js cssclass=codewrap %}
+//save jQuery link to slider's block
+var slider = $('#peppermint');
+
+//init Peppermint
+slider.Peppermint();
+
+//click `#right-arr` to go to the next slide
+$('#right-arr').click(slider.data('Peppermint').next);
+
+//click `#left-arr` to go to the previous slide
+$('#left-arr').click(slider.data('Peppermint').prev);
+
+//click `#getslidesnumber` to alert total number of slides
+$('#getslidesnumber').click(function() {
+    alert('There are ' + slider.data('Peppermint').getSlidesNumber() + ' slides');
+});
 {% endhighlight %}
 
 ##Using Peppermint?
