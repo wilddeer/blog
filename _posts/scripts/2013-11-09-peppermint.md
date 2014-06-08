@@ -211,20 +211,20 @@ $('.peppermint').Peppermint({
 JS:
 
 {% highlight js cssclass=codewrap %}
-//init Peppermint and save the API object
+//запустить Peppermint и сохранить API
 var slider = Peppermint(document.getElementById('peppermint')),
-    //save links to HTML nodes
+    //сохранить ссылки на HTML-ноды
     rightArr = document.getElementById('right-arr'),
     leftArr = document.getElementById('left-arr'),
     getSlidesNumberButton = document.getElementById('getslidesnumber');
 
-//click `#right-arr` to go to the next slide
+//клик по `#right-arr` переключит на следующий слайд
 rightArr.addEventListener('click', slider.next, false);
 
-//click `#left-arr` to go to the previous slide
+//клик по `#left-arr` переключит на предыдущий слайд
 leftArr.addEventListener('click', slider.prev, false);
 
-//click `#getslidesnumber` to alert total number of slides
+//клик по `#getslidesnumber` покажет количество слайдов
 getSlidesNumberButton.addEventListener('click', function() {
   alert('There are ' + slider.getSlidesNumber() + ' slides');
 }, false);
@@ -233,19 +233,19 @@ getSlidesNumberButton.addEventListener('click', function() {
 JS + jQuery:
 
 {% highlight js cssclass=codewrap %}
-//save jQuery link to slider's block
+//сохранить jQuery-ссылку на блок слайдера
 var slider = $('#peppermint');
 
-//init Peppermint
+//запустить Peppermint
 slider.Peppermint();
 
-//click `#right-arr` to go to the next slide
+//клик по `#right-arr` переключит на следующий слайд
 $('#right-arr').click(slider.data('Peppermint').next);
 
-//click `#left-arr` to go to the previous slide
+//клик по `#left-arr` переключит на предыдущий слайд
 $('#left-arr').click(slider.data('Peppermint').prev);
 
-//click `#getslidesnumber` to alert total number of slides
+//клик по `#getslidesnumber` покажет количество слайдов
 $('#getslidesnumber').click(function() {
     alert('There are ' + slider.data('Peppermint').getSlidesNumber() + ' slides');
 });
