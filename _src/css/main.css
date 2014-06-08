@@ -23,6 +23,10 @@
 	text-shadow: none;
 }
 
+.is-mouse-clicked:focus {
+    outline: none;
+}
+
 html {
 	min-height: 100%;
 	font-size: 80%;
@@ -792,7 +796,7 @@ html.bw .peppermint-active > ul.peppermint-dots > li > span {
 	margin: -6px 0 0 -6px;
 }
 
-html.bw .peppermint-active > ul.peppermint-dots > li.peppermint-active > span {
+html.bw .peppermint-active > ul.peppermint-dots > li.peppermint-active-dot > span {
 	border: 1px solid #000;
 	background: transparent;
 	width: 14px;
@@ -814,6 +818,12 @@ html.bw .peppermint-active .peppermint-slides {
 	transition-duration: 0ms !important;
 }
 
+/* stickies */
+.sticky {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+}
 
 /* console */
 #test_console {

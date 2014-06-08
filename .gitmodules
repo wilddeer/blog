@@ -10,3 +10,6 @@
 [submodule "_includes/ios7-switch"]
 	path = _includes/ios7-switch
 	url = https://github.com/wilddeer/ios7-switch.git
+[submodule "_src/stickyfill"]
+	path = _src/stickyfill
+	url = https://github.com/wilddeer/stickyfill.git

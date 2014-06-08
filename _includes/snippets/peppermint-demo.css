@@ -86,7 +86,7 @@ html.no-flexbox.no-flexboxlegacy .stage.peppermint .peppermint-slides > figure {
     background: #fff;
 }
 
-.stage.peppermint ul.peppermint-dots li.peppermint-active span {
+.stage.peppermint ul.peppermint-dots li.peppermint-active-dot span {
     background: transparent;
     border-color: #fff;
 }

@@ -20,14 +20,20 @@ $(function() {
 		});
 	}
 
-	/* prevent focus*/
-	addEvent(document.getElementsByTagName('body')[0], 'click', function(event) {
-		if ((document.activeElement.tagName == 'BUTTON' ||
-			document.activeElement.getAttribute('tabindex'))
-			&& event.clientX !== 0 && event.clientY !== 0 && event.offsetX !== 0 && event.offsetY !== 0) {
-			document.activeElement.blur();
-		}
-	}, true);
+	/* prevent outline after mouse clicks */  
+    $('body').on('mouseup', function(event) {
+        setTimeout(function() {
+            var activeElement = document.activeElement;
+
+            if ((activeElement.tagName == 'BUTTON' ||
+            (activeElement.tagName == 'INPUT' &&  activeElement.getAttribute('type') == 'checkbox') ||
+            activeElement.getAttribute('tabindex'))) {
+                $(activeElement).addClass('is-mouse-clicked').on('blur', function(){
+                    $(activeElement).removeClass('is-mouse-clicked');
+                });
+            }
+        }, 0);
+    });
 
 	/* loading delayed stuff */
 	for (var i = 0; i < dzDelayed.length; i++) {
