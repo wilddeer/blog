@@ -4,6 +4,8 @@ $(function() {
 		dots: true,
 		mouseDrag: true
 	});
+
+    $('.sticky').Stickyfill();
 	
 	$('pre').dzScrollFallback();
 

@@ -120,3 +120,31 @@
 	animation-name: ondrugs;
 	animation-iteration-count: infinite;
 }
+
+@-webkit-keyframes heartbeat {
+	from {
+		opacity: 0;
+	}
+
+	20% {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0;
+	}
+}
+
+@keyframes heartbeat {
+	from {
+		opacity: 0;
+	}
+
+	20% {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0;
+	}
+}

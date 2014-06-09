@@ -825,6 +825,12 @@ html.bw .peppermint-active .peppermint-slides {
 	top: 0;
 }
 
+.sticky:before,
+.sticky:after {
+	content: '';
+	display: table;
+}
+
 /* console */
 #test_console {
 	margin-bottom: 1.5rem;
