@@ -39,8 +39,8 @@ loc:
         ru: "Утром доделаю"
         en: "Will finish in the morning"
     desc:
-        ru: 'Бложек WD про верстку, фронтенд, вот это все'
-        en: 'Oleg Korsunsky’s blog about frontend webdev and stuff'
+        ru: 'Бложек Олега Корсунского про верстку, фронтенд, вот это все'
+        en: 'Oleg Korsunsky’s blog about front-end web technologies and development'
     in_lang:
         ru: "RU"
         en: "EN"
