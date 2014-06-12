@@ -59,7 +59,7 @@ lang: ru
 
   <div class="sticky-6 sticky" style="top: 8em; margin-top: 50em; font-size: 1.2em;">
     <p>
-      Поэтому я написал Stickyfill. Он эмулирует стики там, где они не поддерживаются нативно.
+      Поэтому я написал <a href="https://github.com/wilddeer/stickyfill">Stickyfill</a>. Он эмулирует стики там, где они не поддерживаются нативно.
     </p>
   </div>
 </section>

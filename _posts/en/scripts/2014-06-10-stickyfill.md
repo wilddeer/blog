@@ -59,7 +59,7 @@ lang: en
 
   <div class="sticky-6 sticky" style="top: 8em; margin-top: 50em; font-size: 1.2em;">
     <p>
-      So I made Stickyfill. It emulates stickies where they aren't supported natively.
+      So I made <a href="https://github.com/wilddeer/stickyfill">Stickyfill</a>. It emulates stickies where they aren't supported natively.
     </p>
   </div>
 </section>
