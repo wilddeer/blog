@@ -77,7 +77,7 @@ module.exports = function(grunt) {
 					'js/scripts.js': [
 						'_src/js/jquery-1.10.2.min.js',
 						'_src/peppermint/dist/peppermint.min.js',
-						'_src/stickyfill/src/stickyfill.js',
+						'_src/stickyfill/dist/stickyfill.min.js',
 						'_src/js/slime.js',
 						'_src/js/scroll-fallback.js',
 						'_src/js/collapser.js',
