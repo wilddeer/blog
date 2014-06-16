@@ -94,15 +94,15 @@ lang: ru
         display: none;
     }
 
-    .steam-demo .peppermint.active {
+    .steam-demo .peppermint.peppermint-active {
         margin-bottom: 0;
     }
 
-    .steam-demo .steam-demo-peppermint.active .dots {
+    .steam-demo .steam-demo-peppermint.peppermint-active .peppermint-dots {
         display: block;
     }
 
-    .steam-demo .peppermint.active figure {
+    .steam-demo .peppermint.peppermint-active figure {
         padding: 0;
     }
 
@@ -534,7 +534,7 @@ dzDelayed.push(function() {
 Кладем картинки из галереи в блок с горизонтальным скроллом, который после инициализации превратится в нормальную галерею. Так как элементы управления без яваскрипта бесполезны, их не стоит показывать до инициализации:
 
 <div class="steam-demo fullwidth">
-    <section class="gallery peppermint steam-demo-peppermint inactive">
+    <section class="gallery peppermint steam-demo-peppermint peppermint-inactive">
         <figure>
             <a href="/steam/i/1.jpg" target="_blank"><img src="/steam/i/m1.jpg"></a>
         </figure>

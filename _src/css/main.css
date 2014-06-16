@@ -806,6 +806,7 @@ html.bw .peppermint-active > ul.peppermint-dots > li.peppermint-active-dot > spa
 
 .peppermint-active > ul.peppermint-dots > li {
 	padding: 0.5em;
+	margin-bottom: 0;
 }
 
 .peppermint-active > ul.peppermint-dots > li:before {

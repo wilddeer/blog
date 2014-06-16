@@ -94,15 +94,15 @@ lang: en
         display: none;
     }
 
-    .steam-demo .peppermint.active {
+    .steam-demo .peppermint.peppermint-active {
         margin-bottom: 0;
     }
 
-    .steam-demo .steam-demo-peppermint.active .dots {
+    .steam-demo .steam-demo-peppermint.peppermint-active .peppermint-dots {
         display: block;
     }
 
-    .steam-demo .peppermint.active figure {
+    .steam-demo .peppermint.peppermint-active figure {
         padding: 0;
     }
 
@@ -536,7 +536,7 @@ Put the screenshots into a horizontally scrollable block, which will then become
 To implement this approach it's enough to give the gallary `inactive` class, which will be then changed to `active` upon initialization, and write a bunch of styles for both states:
 
 <div class="steam-demo fullwidth">
-    <section class="gallery peppermint steam-demo-peppermint inactive">
+    <section class="gallery peppermint steam-demo-peppermint peppermint-inactive">
         <figure>
             <a href="/steam/i/1.jpg" target="_blank"><img src="/steam/i/m1.jpg"></a>
         </figure>
