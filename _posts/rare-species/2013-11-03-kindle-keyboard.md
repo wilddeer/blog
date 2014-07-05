@@ -120,6 +120,11 @@ Kindle Keyboard (он же Kindle 3) --- читалка от Амазона с e
 				<td class="false">False</td>
 				<td class="false">False</td>
 			</tr>
+			<tr>
+				<td>video</td>
+				<td class="false">False</td>
+				<td class="false">False</td>
+			</tr>
 		</tbody>
 	</table>
 </div>

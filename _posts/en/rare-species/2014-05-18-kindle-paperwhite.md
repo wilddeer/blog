@@ -119,6 +119,11 @@ Paperwhite's user-agent string is weird. While http header contains quite typica
 				<td class="false">False</td>
 				<td class="false">False</td>
 			</tr>
+			<tr>
+				<td>video</td>
+				<td class="false">False</td>
+				<td class="false">False</td>
+			</tr>
 		</tbody>
 	</table>
 </div>

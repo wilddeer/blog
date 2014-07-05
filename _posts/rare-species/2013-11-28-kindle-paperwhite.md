@@ -119,6 +119,11 @@ Kindle Paperwhite --- новая Амазоновская читалка с e-in
 				<td class="false">False</td>
 				<td class="false">False</td>
 			</tr>
+			<tr>
+				<td>video</td>
+				<td class="false">False</td>
+				<td class="false">False</td>
+			</tr>
 		</tbody>
 	</table>
 </div>
