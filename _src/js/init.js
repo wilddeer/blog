@@ -1,4 +1,5 @@
 $(function() {
+    var bodyElement = $('body');
 
 	$('.js-peppermint').Peppermint({
 		dots: true,
@@ -23,14 +24,12 @@ $(function() {
 	}
 
 	/* prevent outline after mouse clicks */  
-    $('body').on('mouseup', function(event) {
+    bodyElement.on('mousedown', function(event) {
         setTimeout(function() {
             var activeElement = document.activeElement;
 
-            if ((activeElement.tagName == 'BUTTON' ||
-            (activeElement.tagName == 'INPUT' &&  activeElement.getAttribute('type') == 'checkbox') ||
-            activeElement.getAttribute('tabindex'))) {
-                $(activeElement).addClass('is-mouse-clicked').on('blur', function(){
+            if (activeElement && activeElement !== bodyElement[0]) {
+                $(activeElement).addClass('is-mouse-clicked').one('blur', function(){
                     $(activeElement).removeClass('is-mouse-clicked');
                 });
             }
