@@ -441,6 +441,7 @@ input.big {
 	padding: 0;
 	color: #168cd2;
 	border-bottom: 1px dashed;
+	cursor: pointer;
 }
 
 .pseudo-link:hover {
