@@ -10,6 +10,11 @@ lang: ru
         $('.input-demo').find('button, span, a').on('mouseup mousedown', function (e) {
             e.stopPropagation();
         });
+
+        $('.magic-link').click(function(e) {
+            e.preventDefault();
+            alert('YARRR!');
+        });
     });
 </script>
 
@@ -69,3 +74,58 @@ lang: ru
 <figure class="input-demo">
     <a href="#">Привет, я ссылка</a>
 </figure>
+
+<figure class="input-demo">
+    <a href="#" class="magic-link">Привет, я магичная ссылка</a>
+</figure>
+
+<div class="table-holder">
+    <table>
+        <thead>
+            <tr>
+                <th>Браузер</th>
+                <th>Кнопка</th>
+                <th>Кастомная кнопка</th>
+                <th>Спан</th>
+                <th>Ссылка</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Chrome 35</td>
+                <td class="true">Нет</td>
+                <td class="false">Да</td>
+                <td class="false">Да</td>
+                <td class="true">Нет</td>
+            </tr>
+            <tr>
+                <td>Firefox</td>
+                <td class="false">Да</td>
+                <td class="true">Нет</td>
+                <td class="false">Да</td>
+                <td class="false">Да</td>
+            </tr>
+            <tr>
+                <td>Opera 12</td>
+                <td class="false">Да</td>
+                <td class="true">Нет</td>
+                <td class="true">Нет</td>
+                <td class="true">Нет</td>
+            </tr>
+            <tr>
+                <td>IE 10, 11</td>
+                <td class="true">Нет</td>
+                <td class="true">Нет</td>
+                <td class="true">Нет</td>
+                <td class="true">Нет</td>
+            </tr>
+            <tr>
+                <td>IE 9</td>
+                <td class="false">Да</td>
+                <td class="false">Да</td>
+                <td class="false">Да</td>
+                <td class="false">Да</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
