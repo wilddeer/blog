@@ -11,13 +11,13 @@
     \/_/                                 
 */
 
-@media screen and (min-width: 18em) {
+@media all and (min-width: 18em) {
 	html {
 		font-size: 90%;
 	}
 }
 
-@media screen and (min-width: 25em) {
+@media all and (min-width: 25em) {
 	html {
 		font-size: 100%;
 	}
