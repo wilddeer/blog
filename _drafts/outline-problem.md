@@ -84,7 +84,6 @@ lang: ru
         <thead>
             <tr>
                 <th>Браузер</th>
-                <th>Кнопка</th>
                 <th>Кастомная кнопка</th>
                 <th>Спан</th>
                 <th>Ссылка</th>
@@ -93,21 +92,30 @@ lang: ru
         <tbody>
             <tr>
                 <td>Chrome 35</td>
-                <td class="true">Нет</td>
                 <td class="false">Да</td>
                 <td class="false">Да</td>
                 <td class="true">Нет</td>
             </tr>
             <tr>
-                <td>Firefox</td>
-                <td class="false">Да</td>
+                <td>Firefox 30 Win </td>
                 <td class="true">Нет</td>
                 <td class="false">Да</td>
                 <td class="false">Да</td>
+            </tr>
+            <tr>
+                <td>Firefox 30 Mac </td>
+                <td class="true">Нет</td>
+                <td class="true">Нет</td>
+                <td class="false">Да</td>
+            </tr>
+            <tr>
+                <td>Safari 7</td>
+                <td class="true">Нет</td>
+                <td class="false">Да</td>
+                <td class="true">Нет</td>
             </tr>
             <tr>
                 <td>Opera 12</td>
-                <td class="false">Да</td>
                 <td class="true">Нет</td>
                 <td class="true">Нет</td>
                 <td class="true">Нет</td>
@@ -117,14 +125,18 @@ lang: ru
                 <td class="true">Нет</td>
                 <td class="true">Нет</td>
                 <td class="true">Нет</td>
-                <td class="true">Нет</td>
             </tr>
             <tr>
-                <td>IE 9</td>
+                <td>IE 8, 9</td>
                 <td class="false">Да</td>
                 <td class="false">Да</td>
                 <td class="false">Да</td>
+            </tr>
+            <tr>
+                <td>IE 7</td>
                 <td class="false">Да</td>
+                <td class="true">Нет</td>
+                <td class="true">Нет</td>
             </tr>
         </tbody>
     </table>
