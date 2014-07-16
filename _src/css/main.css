@@ -11,6 +11,14 @@
 */
 
 /* base styles */
+@-ms-viewport {
+    width: device-width;
+}
+
+@viewport {
+    width: device-width;
+}
+
 ::-moz-selection {
 	background: #bbd9ff;
 	color: inherit;
