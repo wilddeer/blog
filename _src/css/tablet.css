@@ -9,7 +9,7 @@
     \/__/\/__/\/_/ \/___/  \/____/\/____/ \/__/                                             
 */
 
-@media all and (min-width: 30em) {
+@media screen and (min-width: 30em) {
 	body {
 		padding: 1.5em 0 0;
 	}
@@ -75,7 +75,7 @@
 	}
 }
 
-@media all and (min-width: 40em) {
+@media screen and (min-width: 40em) {
 	/* base */
 	h1 {
 		font-size: 3em;
@@ -145,7 +145,7 @@
 	}
 }
 
-@media all and (min-width: 50em) {
+@media screen and (min-width: 50em) {
 	/* blocks */
 	body > footer ul.footer-links li {
 		display: inline-block;
@@ -169,7 +169,7 @@
 }
 
 /* HEIGHT STUFF */
-@media all and (min-height: 600px) {
+@media screen and (min-height: 600px) {
 	figure img {
 		max-height: 450px;
 	}
@@ -180,7 +180,7 @@
 
 }
 
-@media all and (min-height: 750px) {
+@media screen and (min-height: 750px) {
 	figure img {
 		max-height: none;
 	}
