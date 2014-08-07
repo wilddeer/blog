@@ -43,8 +43,8 @@ This is how it should work:
 The portrait mode also undergoes a change. HTC 8x has higher resolution then iPod and same pixel density, so its viewport should be a little bit wider than 320 pixels:
 
 <div class="gallery">
-{% include pic.htm src='before-portrait.png' p=true c='Было' a='Windows Phone 8.1 portrait screenshot before the change' %}
-{% include pic.htm src='after-portrait.png' p=true c='Стало' a='Windows Phone 8.1 portrait screenshot after the change' %}
+{% include pic.htm src='before-portrait.png' p=true c='Before' a='Windows Phone 8.1 portrait screenshot before the change' %}
+{% include pic.htm src='after-portrait.png' p=true c='After' a='Windows Phone 8.1 portrait screenshot after the change' %}
 </div>
 
 `@-ms-viewport` was buggy on Windows Phone 8 before its third update -- it operated with real pixels and not with logical ones. This caused too large viewport size (and so too small website view) on phones with hight density screens.
