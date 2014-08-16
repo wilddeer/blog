@@ -100,5 +100,4 @@ Despite the fact that nowadays it's nearly impossible to find a device without j
 ##Related links
 
 - <a class="iconlink" href="http://adactio.com/journal/6022/">"<span>When is a link not a link?</span>"</a>, *Jeremy Keith*
-- [The Missing Link](http://shaundunne.com/the-missing-link/), *Shaun Dunne*
 - [Javascript Madness: Mouse Events](http://unixpapa.com/js/mouse.html), *Jan Wolter*

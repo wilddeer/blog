@@ -100,5 +100,4 @@ dzDelayed.push(function() {
 
 - <a class="iconlink" href="http://pepelsbey.net/pres/push-it/">«<span>Жми сюда!</span>»</a>, *Вадим Макеев*
 - <a class="iconlink" href="http://adactio.com/journal/6022/">«<span>When is a link not a link?</span>»</a>, *Jeremy Keith*
-- [The Missing Link](http://shaundunne.com/the-missing-link/), *Shaun Dunne*
 - [Javascript Madness: Mouse Events](http://unixpapa.com/js/mouse.html), *Jan Wolter*
