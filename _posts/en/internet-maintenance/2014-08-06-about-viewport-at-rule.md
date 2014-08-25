@@ -98,6 +98,7 @@ Drawbacks:
 ##Related links
 
 - [CSS Device Adaptation](http://dev.w3.org/csswg/css-device-adapt/), *W3C*
+- [@-ms-viewport rule](http://msdn.microsoft.com/en-us/library/ie/hh869615%28v%3Dvs.85%29.aspx), *MSDN*
 - [The Mobile Viewports](https://vimeo.com/100523275), *Peter Paul Koch*
 - [IE10 Snap Mode and Responsive Design](http://timkadlec.com/2012/10/ie10-snap-mode-and-responsive-design/), *Tim Kadlec*
 - [Windows Phone 8 and Device-Width](http://timkadlec.com/2013/01/windows-phone-8-and-device-width/), *Tim Kadlec*
