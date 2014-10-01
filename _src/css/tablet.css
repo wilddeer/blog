@@ -45,6 +45,10 @@
 		color: #999;
 	}
 
+	figure.info.info--with-header:before {
+		top: 0.63em;
+	}
+
 	.content ul li {
 		padding-left: 2.2em;
 	}
@@ -108,6 +112,10 @@
 		width: 92%;
 		padding-left: 1em;
 		padding-right: 1em;
+	}
+
+	figure.info.info--with-header:before {
+		top: 0.75em;
 	}
 
 	/* tables */
