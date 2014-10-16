@@ -70,7 +70,7 @@ lang: en
 
     <ul>
       <li>Supports top-positioned stickies</li>
-      <li><del>Supports table cell stickies</del> <a href="https://github.com/wilddeer/stickyfill/releases/tag/1.1">Not anymore</a></li>
+      <li><del>Supports table cell stickies</del> Disabled until Firefox <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=975644">makes a native implementation</a></li>
       <li>Works in IE9+</li>
       <li>Disables in older browsers and in browsers with native sticky support</li>
       <li>Mimics original sticky behavior (where it can)</li>
