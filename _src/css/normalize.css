@@ -50,15 +50,6 @@ body {
 	margin: 0;
 }
 
-/*a:focus {
-	outline: thin dotted;
-}*/
-
-:active,
-:hover {
-	outline: none;
-}
-
 abbr[title] {
 	border-bottom: 1px dotted;
 }

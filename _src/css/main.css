@@ -839,6 +839,12 @@ html.bw .peppermint-active .peppermint-slides {
 	display: table;
 }
 
+/* demo frame */
+.demo-frame {
+	width: 100%;
+	border: none;
+}
+
 /* console */
 #test_console {
 	margin-bottom: 1.5rem;

@@ -83,6 +83,7 @@ module.exports = function(grunt) {
 						'_src/stickyfill/dist/stickyfill.min.js',
 						'_src/js/slime.js',
 						'_src/js/scroll-fallback.js',
+						'_src/js/demo-frame.js',
 						'_src/js/collapser.js',
 						'_src/js/tools.js',
 						'_src/js/test-console.js',

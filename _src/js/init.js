@@ -7,8 +7,10 @@ $(function() {
 	});
 
     $('.sticky').Stickyfill();
-	
+
 	$('pre').dzScrollFallback();
+
+    $('.js-demo-frame').demoFrame();
 
 	/* OH MY GLOBE WHAT AM I DOIN */
 	if (Sniffer.os.name == 'kindle' && Sniffer.os.version < 4) {
