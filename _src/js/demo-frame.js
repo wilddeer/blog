@@ -1,16 +1,27 @@
 $.fn.demoFrame = function() {
     var $this = this;
 
-    adjustFrameHeight();
+    adjustAllFramesHeight();
 
     $(window).on('resize orientationchange', function() {
-        adjustFrameHeight();
+        adjustAllFramesHeight();
     });
 
-    function adjustFrameHeight() {
+    $this.on('load', function() {
+        this.contentWindow.document.documentElement.style.overflow = 'hidden';
+        adjustFrameHeight(this);
+    });
+
+    function adjustAllFramesHeight() {
         $this.each(function() {
-            this.style.height = '';
-            this.style.height = this.contentWindow.document.body.scrollHeight + 'px';
+            adjustFrameHeight(this);
         });
+    }
+
+    function adjustFrameHeight(frame) {
+        if (!frame.contentWindow.document.documentElement) return;
+
+        frame.style.height = '';
+        frame.style.height = frame.contentWindow.document.documentElement.scrollHeight + 'px';
     }
 };

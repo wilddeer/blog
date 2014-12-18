@@ -25,18 +25,26 @@ $(function() {
 		});
 	}
 
-	/* prevent outline after mouse clicks */  
-    bodyElement.on('mousedown', function(event) {
-        setTimeout(function() {
-            var activeElement = document.activeElement;
+    /* prevent outline after mouse clicks */
+    (function() {
+        var mouseFocusedClass = 'is-mouse-focused';
 
-            if (activeElement && activeElement !== bodyElement[0]) {
-                $(activeElement).addClass('is-mouse-clicked').one('blur', function(){
-                    $(activeElement).removeClass('is-mouse-clicked');
-                });
-            }
-        }, 0);
-    });
+        $(document.body).on('mousedown', function(event) {
+            setTimeout(function() {
+                //find focused element
+                var activeElement = document.activeElement,
+                    $activeElement = $(activeElement);
+
+                //if found and it's not body...
+                if (activeElement && activeElement !== document.body) {
+                    //add special class, remove it after `blur`
+                    $activeElement.addClass(mouseFocusedClass).one('blur', function() {
+                        $activeElement.removeClass(mouseFocusedClass);
+                    });
+                }
+            }, 0);
+        });
+    })();
 
 	/* loading delayed stuff */
 	for (var i = 0; i < dzDelayed.length; i++) {

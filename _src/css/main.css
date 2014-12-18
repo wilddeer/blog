@@ -23,7 +23,8 @@
 	text-shadow: none;
 }
 
-.is-mouse-clicked:focus {
+:active,
+.is-mouse-focused:focus {
     outline: none;
 }
 
@@ -843,6 +844,7 @@ html.bw .peppermint-active .peppermint-slides {
 .demo-frame {
 	width: 100%;
 	border: none;
+	display: block;
 }
 
 /* console */
