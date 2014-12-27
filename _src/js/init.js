@@ -25,11 +25,12 @@ $(function() {
 		});
 	}
 
-    /* prevent outline after mouse clicks */
+    /* focus-fix | https://github.com/wilddeer/focus-fix/ | CC0 */
     (function() {
         var mouseFocusedClass = 'is-mouse-focused';
 
-        $(document.body).on('mousedown', function(event) {
+        $(document.body).on('mousedown', function() {
+            //wait for `document.activeElement` to change
             setTimeout(function() {
                 //find focused element
                 var activeElement = document.activeElement,
