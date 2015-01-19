@@ -1,8 +1,8 @@
 $.fn.dzScrollFallback = function() {
-	if ((Sniffer.os.name == 'android' && 
-			((Sniffer.os.version < 3 && Sniffer.browser.engine == 'webkit') ||
-			(Sniffer.browser.engine == 'presto' && Sniffer.browser.name == 'opera'))) ||
-		(Sniffer.os.name == 'ios' && Sniffer.os.version <= 5 && Sniffer.browser.engine == 'webkit')) {
+	if ((Sniff.os.name == 'android' &&
+			((Sniff.os.majorVersion && Sniff.os.majorVersion < 3 && Sniff.browser.engine == 'webkit') ||
+			(Sniff.browser.engine == 'presto' && Sniff.browser.name == 'opera'))) ||
+		(Sniff.os.name == 'ios' && Sniff.os.majorVersion && Sniff.os.majorVersion <= 5 && Sniff.browser.engine == 'webkit')) {
 		this.each(function() {
 			var _this = this,
 				last = {},

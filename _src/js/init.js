@@ -13,7 +13,7 @@ $(function() {
     $('.js-demo-frame').demoFrame();
 
 	/* OH MY GLOBE WHAT AM I DOIN */
-	if (Sniffer.os.name == 'kindle' && Sniffer.os.version < 4) {
+	if (Sniff.os.name == 'kindle' && Sniff.os.majorVersion < 4) {
 		$('.title a').each(function() {
 			$(this).html('<span>'+$(this).html()+'</span>');
 		});

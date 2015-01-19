@@ -94,7 +94,7 @@ module.exports = function(grunt) {
 					'js/header_scripts.js': [
 						'_src/js/modernizr.js',
 						'_src/js/modernizr.bonus.js',
-						'_src/sniffer/sniffer.min.js',
+						'_src/sniffer/dist/min/sniffer.min.js',
 						'_src/js/sniffer.bonus.js',
 						'_src/js/head.js',
 					],
