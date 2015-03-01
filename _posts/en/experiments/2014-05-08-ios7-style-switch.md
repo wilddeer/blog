@@ -74,7 +74,7 @@ lang: en
     </label>
 </figure>
 
-iOS7 switch imitation. Made it initially for new [Pepyaka](http://pepyaka.su), didn't use it eventually. Features:
+iOS7 switch imitation. Made it initially for new [Pepyaka](http://pepyaka.su/en/), didn't use it eventually. Features:
 
 - no shitty scripts, pure CSS,
 - the most accurate copy of iOS7 switch behavior, includes `:active` state styles (haven't seen those in any other implementation),
