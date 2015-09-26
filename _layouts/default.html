@@ -1,39 +1,26 @@
 {% include init.html %}<!DOCTYPE html>
-<!--[if lte IE 9]> <html class="no-js ie9" lang="{{ lang }}"> <![endif]-->
-<!--[if gt IE 9]><!--> <html class="no-js" lang="{{ lang }}"> <!--<![endif]-->
+<html class="no-js" lang="{{ lang }}">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="msapplication-tap-highlight" content="no">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="msapplication-tap-highlight" content="no">
 
-	<link rel="shortcut icon" href="/favicon.ico">
-	<link rel="alternate" type="application/rss+xml" title="{{ site.loc.name[page.lang] }}" href="{{ site.path[page.lang] }}rss.xml">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.loc.name[page.lang] }}" href="{{ site.path[page.lang] }}rss.xml">
 
-	{% if page.title %}
-	<title>{{ page.title }}</title>
-	{% else %}
-		{% if site.cats[page.cat][page.lang] %}
-	<title>{{ site.cats[page.cat][page.lang] }}</title>
-		{% else %}
-	<title>{{ site.loc.name[lang] }}</title>
-		{% endif %}
-	{% endif %}
+    {% if page.title %}
+    <title>{{ page.title }}</title>
+    {% else %}
+        {% if site.cats[page.cat][page.lang] %}
+    <title>{{ site.cats[page.cat][page.lang] }}</title>
+        {% else %}
+    <title>{{ site.loc.name[lang] }}</title>
+        {% endif %}
+    {% endif %}
 
-	<!-- styles -->
-	<!--[if lt IE 8]>
-		<link rel="stylesheet" href="/css/ie7.css?{{ site['ie7.css'] }}">
-	<![endif]-->
-	
-	<!--[if IE 8]>
-		<link rel="stylesheet" href="/css/ie8.css?{{ site['ie8.css'] }}">
-	<![endif]-->
+    <link rel="stylesheet" href="/css/style.css">
 
-	<!--[if gt IE 8]><!-->
-		<link rel="stylesheet" href="/css/style.css?{{ site['style.css'] }}">
-	<!--<![endif]-->
-
-	<!-- header scripts -->
-	<script src="/js/header_scripts.js?{{ site['header_scripts.js'] }}"></script>
+    <script src="/js/header_scripts.js"></script>
 </head>
 
 {% if page.post %}
@@ -41,50 +28,46 @@
 {% else %}
 <body>
 {% endif %}
-	{% if site.console %}
-		<div id="console"></div>
-	{% endif %}
-	<header>
-		<ul class="lang-switcher">
-			{% if lang == "en" %}
-			<li><a href="/">{{ site.loc.in_lang.ru }}</a></li>
-			<li><span>{{ site.loc.in_lang.en }}</span></li>
-			{% else %}
-			<li><span>{{ site.loc.in_lang.ru }}</span></li>
-			<li><a href="/en/">{{ site.loc.in_lang.en }}</a></li>
-			{% endif %}
-		</ul>
+    {% if site.console %}
+        <div id="console"></div>
+    {% endif %}
+    <header>
+        <ul class="lang-switcher">
+            {% if lang == "en" %}
+            <li><a href="/">{{ site.loc.in_lang.ru }}</a></li>
+            <li><span>{{ site.loc.in_lang.en }}</span></li>
+            {% else %}
+            <li><span>{{ site.loc.in_lang.ru }}</span></li>
+            <li><a href="/en/">{{ site.loc.in_lang.en }}</a></li>
+            {% endif %}
+        </ul>
 
-		{% if page.url == root %}
-		<h1 class="title">{{ site.loc.name[lang] }}</h1>
-		{% else %}
-		<h1 class="title"><a href="{{ root }}">{{ site.loc.name[lang] }}</a></h1>
-		{% endif %}
-	</header>
+        {% if page.url == root %}
+        <h1 class="title">{{ site.loc.name[lang] }}</h1>
+        {% else %}
+        <h1 class="title"><a href="{{ root }}">{{ site.loc.name[lang] }}</a></h1>
+        {% endif %}
+    </header>
 
-	{% if page.post %}
-	<article class="content">
-		{{ content_parsed }}
-	</article>
-	{% else %}
-	<div class="content">
-		{{ content_parsed }}
-	</div>
-	{% endif %}
+    {% if page.post %}
+    <article class="content">
+        {{ content_parsed }}
+    </article>
+    {% else %}
+    <div class="content">
+        {{ content_parsed }}
+    </div>
+    {% endif %}
 
-	<footer>
-		<ul class="footer-links">
-			<li>{{ site.loc.footer[lang][0] }}</li>
-			<li>{{ site.loc.footer[lang][1] }}</li>
-			<li>{{ site.loc.footer[lang][2] }}</li>
-			<li>{{ site.loc.footer[lang][3] }}</li>
-		</ul>
-		<p><a href="//dizaina.net" class="logo"><span>&empty; </span>dizaina.net</a></p>
-	</footer>
+    <footer>
+        <ul class="footer-links">
+            {% for item in site.loc.footer[lang] %}
+            <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+        <p><a class="logo" href="http://dizaina.net"><span>&empty; </span>dizaina.net</a></p>
+    </footer>
 
-	<script src="/js/scripts.js?{{ site['scripts.js'] }}"></script>
-	<!--[if lte IE 8]>
-		<script src="/js/selectivizr.min.js"></script>
-	<![endif]-->
+    <script src="/js/scripts.js"></script>
 </body>
 </html>
