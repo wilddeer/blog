@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: layouts/post.html
 title: "Peppermint touch slider"
 categories: en scripts
 lang: en
@@ -40,7 +40,7 @@ lang: en
 
   <figure class="blue">
     <h1><a href="/en/internet-maintenance/js-sliders-and-the-tab-key/">On good terms</a> with the <kbd>Tab</kbd> key</h1>
-    
+
   </figure>
 </div>
 
@@ -67,7 +67,7 @@ lang: en
 
 HTML markup:
 
-{% highlight html cssclass=codewrap %}
+```html
 <div class="peppermint peppermint-inactive" id="peppermint">
   <figure> ... </figure>
 
@@ -75,19 +75,19 @@ HTML markup:
 
   <figure> ... </figure>
 </div>
-{% endhighlight %}
+```
 
 Javascript:
 
-{% highlight js cssclass=codewrap %}
+```js
 var slider = Peppermint(document.getElementById('peppermint'));
-{% endhighlight %}
+```
 
 Or javascript + jQuery:
 
-{% highlight js cssclass=codewrap %}
+```js
 $('.peppermint').Peppermint();
-{% endhighlight %}
+```
 
 `peppermint-inactive` class is not required. It is replaced with `peppermint-active` during setup.
 
@@ -99,7 +99,7 @@ Place anything you want within the slides.
 
 Peppermint can take settings object as an optional second parameter (first when using jQuery). Default settings:
 
-{% highlight js cssclass=codewrap %}
+```js
 {
   //transition time when changing slides, ms
   speed: 300,
@@ -151,13 +151,13 @@ Peppermint can take settings object as an optional second parameter (first when 
   //Receives total number of slides as a parameter.
   onSetup: undefined
 }
-{% endhighlight %}
+```
 
 ###Examples
 
 JS:
 
-{% highlight js cssclass=codewrap %}
+```js
 var slider = Peppermint(document.getElementById('peppermint'), {
   dots: true,
   slideshow: true,
@@ -168,11 +168,11 @@ var slider = Peppermint(document.getElementById('peppermint'), {
     console.log('Peppermint setup done. Slides found: ' + n);
   }
 });
-{% endhighlight %}
+```
 
 JS + jQuery:
 
-{% highlight js cssclass=codewrap %}
+```js
 $('.peppermint').Peppermint({
   dots: true,
   slideshow: true,
@@ -183,7 +183,7 @@ $('.peppermint').Peppermint({
     console.log('Peppermint setup done. Slides found: ' + n);
   }
 });
-{% endhighlight %}
+```
 
 ##API
 
@@ -211,7 +211,7 @@ Peppermint exposes a set of functions upon installation. These functions can be 
 
 JS:
 
-{% highlight js cssclass=codewrap %}
+```js
 //init Peppermint and save the API object
 var slider = Peppermint(document.getElementById('peppermint')),
     //save links to HTML nodes
@@ -229,11 +229,11 @@ leftArr.addEventListener('click', slider.prev, false);
 getSlidesNumberButton.addEventListener('click', function() {
   alert('There are ' + slider.getSlidesNumber() + ' slides');
 }, false);
-{% endhighlight %}
+```
 
 JS + jQuery:
 
-{% highlight js cssclass=codewrap %}
+```js
 //save jQuery link to slider's block
 var slider = $('#peppermint');
 
@@ -250,7 +250,7 @@ $('#left-arr').click(slider.data('Peppermint').prev);
 $('#getslidesnumber').click(function() {
     alert('There are ' + slider.data('Peppermint').getSlidesNumber() + ' slides');
 });
-{% endhighlight %}
+```
 
 ##Using Peppermint?
 

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: layouts/default.html
 lang: ru
 permalink: /
 ---

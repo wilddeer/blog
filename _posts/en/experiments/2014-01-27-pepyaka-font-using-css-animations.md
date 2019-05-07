@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: layouts/post.html
 title: "Pepyaka font using CSS animations"
 categories: en experiments
 lang: en
@@ -92,7 +92,7 @@ dzDelayed.push(function() {
     pepInput.on('change input keyup blur', function() {
         if (canExecEvent && val != pepInput[0].value) redraw();
     })
-    
+
     asyncInput.on('change', function() {
         pepBox.toggleClass('async');
         redraw();
@@ -132,10 +132,10 @@ To make characters wobble asynchronously I give &rsquo;em random classes. A tota
 
 Animation smoothness is tweaked by the number of steps between animation keyframes. The more steps there are, the smoother the animation:
 
-{% highlight css cssclass=codewrap %}
+```css
 -webkit-animation-timing-function: steps(1);
 animation-timing-function: steps(1);
-{% endhighlight %}
+```
 
 For continuous animation replace `steps()` with `linear` (or just remove `animation-timing-function` completely, as `linear` is used by default).
 
@@ -145,17 +145,17 @@ IE10 on winphone wins the "Tough guy" nomination among the mobile devices. Anima
 
 HTML:
 
-{% highlight html cssclass=codewrap %}
+```html
 <div class="pepyaka async">
     <span class="pep1">Y</span><span class="pep6">a</span><span class="pep2">r</span><span class="pep0">r</span><span class="pep4">r</span><span class="pep7">!</span>
 </div>
-{% endhighlight %}
+```
 
 CSS:
 
-{% highlight css cssclass=codewrap %}
+```css
 {% include snippets/pepyaka-font.css %}
-{% endhighlight %}
+```
 
 <style>
 {% include snippets/pepyaka-font.css %}

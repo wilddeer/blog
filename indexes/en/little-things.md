@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: layouts/default.html
 lang: en
 cat: little-things
 permalink: /en/little-things/

@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "@11ty/eleventy": "^0.8.3",
     "autoprefixer": "^6.0.3",
     "grunt": "~0.4.1",
     "grunt-contrib-concat": "^0.3.0",

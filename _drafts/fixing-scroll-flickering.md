@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: layouts/post.html
 title: "Чиним дерганый скролл"
 categories: internet-maintenance
 lang: ru

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: layouts/post.html
 title: "Kindle Keyboard browser"
 categories: en rare-species
 lang: en

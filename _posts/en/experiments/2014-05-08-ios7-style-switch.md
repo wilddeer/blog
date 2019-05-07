@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: layouts/post.html
 title: "iOS 7 style switch"
 categories: en experiments
 lang: en
@@ -85,38 +85,38 @@ iOS7 switch imitation. Made it initially for new [Pepyaka](http://pepyaka.su/en/
 
 ###Markup
 
-{% highlight html cssclass=codewrap %}
+```html
 <label class="ios7-switch">
     <input type="checkbox" checked>
     <span></span>
 </label>
-{% endhighlight %}
+```
 
 or
 
-{% highlight html cssclass=codewrap %}
+```html
 <label class="ios7-switch">
     <input type="checkbox" checked>
     <span></span>
     Mah shitty option!
 </label>
-{% endhighlight %}
+```
 
 or something similar, you get the idea.
 
 ###CSS
 
-{% highlight css cssclass=codewrap %}
+```css
 {% include ios7-switch/ios7-switch.css %}
-{% endhighlight %}
+```
 
 ###Caveats
 
 Doesn't work in older browsers with no `box-shadow` support (IE8 and lower, Android 3.x and lower). It's easy enough to make a fallback to regular checkboxes. For instance, using [Modernizr](http://modernizr.com) test
 
-{% highlight js cssclass=codewrap %}
+```js
 Modernizr.addTest('unprefixed-boxshadow', Modernizr.testProp('boxShadow', '1px 1px', true));
-{% endhighlight %}
+```
 
 and modified stylesheet -- <a href="https://raw.githubusercontent.com/wilddeer/ios7-switch/master/ios7-switch.modernizr.css" class="iconlink"><i class="icon-cloud-download"> </i><span>ios7-switch.modernizr.css</span></a>.
 

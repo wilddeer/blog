@@ -1,7 +1,6 @@
 <ul class="post-list">
 	{% capture whitespaces %}
 	{% for post in site.posts %}
-		{% include cats.htm c=post.categories %}
 		{% if site.cats[cats] and site.cats[cats].link != page.cat %}
 			{% capture cat %}<span class="post-item__category-link">(<a href="{{site.path[page.lang]}}{{ site.cats[cats].link }}/">{{site.cats[cats][page.lang]}}</a>)</span>{% endcapture %}
 		{% else %}

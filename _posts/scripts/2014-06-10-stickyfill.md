@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: layouts/post.html
 title: "Stickyfill — полифилл для «position: sticky»"
 categories: scripts
 lang: ru

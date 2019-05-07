@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: layouts/post.html
 title: "Panasonic Viera Smart TV browser"
 categories: en rare-species
 lang: en

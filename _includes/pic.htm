@@ -1,5 +1,4 @@
 {% capture whitespaces %}
-{% include slug.htm c=page.categories id=page.id %}
 {% assign alt = include.a %}
 
 {% if include.a %}
@@ -18,9 +17,9 @@
 <figure{% if include.float %} class="float-{{ include.float }}"{% endif %}>
 	{% if include.t %}{{ caption }}{% endif %}
 	{% if include.p %}
-	<a href="/pics/{{slug}}/{{ include.src }}" target="_blank" title="{{ site.loc.original_image[page.lang] }}"><img src="/pics/{{slug}}/p_{{ include.src }}" alt="{{ alt | strip_html }}"></a>
+	<a href="{{ include.src }}" target="_blank" title="{{ site.loc.original_image[page.lang] }}"><img src="p_{{ include.src }}" alt="{{ alt | strip_html }}"></a>
 	{% else %}
-	<a href="/pics/{{slug}}/{{ include.src }}" target="_blank" title="{{ site.loc.original_image[page.lang] }}"><img src="/pics/{{slug}}/{{ include.src }}" alt="{{ alt | strip_html }}"></a>
+	<a href="{{ include.src }}" target="_blank" title="{{ site.loc.original_image[page.lang] }}"><img src="{{ include.src }}" alt="{{ alt | strip_html }}"></a>
 	{% endif %}
 	{% unless include.t %}{{ caption }}{% endunless %}
 </figure>

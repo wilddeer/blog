@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: layouts/post.html
 title: "Переключатель в стиле iOS 7"
 categories: experiments
 lang: ru
@@ -86,38 +86,38 @@ lang: ru
 
 ###Разметка
 
-{% highlight html cssclass=codewrap %}
+```html
 <label class="ios7-switch">
     <input type="checkbox" checked>
     <span></span>
 </label>
-{% endhighlight %}
+```
 
 или
 
-{% highlight html cssclass=codewrap %}
+```html
 <label class="ios7-switch">
     <input type="checkbox" checked>
     <span></span>
     Mah shitty option!
 </label>
-{% endhighlight %}
+```
 
 или что-то другое в этом роде, идея понятна.
 
 ###CSS
 
-{% highlight css cssclass=codewrap %}
+```css
 {% include ios7-switch/ios7-switch.css %}
-{% endhighlight %}
+```
 
 ###Проблемы
 
 Не работает в браузерах, не поддерживающих `box-shadow` (ИЕ8 и ниже, Андроид 3.x и ниже). Можно сделать фоллбек на обычный чекбокс, например, с помощью [Модернайзера](http://modernizr.com). Пишем тест:
 
-{% highlight js cssclass=codewrap %}
+```js
 Modernizr.addTest('unprefixed-boxshadow', Modernizr.testProp('boxShadow', '1px 1px', true));
-{% endhighlight %}
+```
 
 и используем модифицированный CSS --- <a href="https://raw.githubusercontent.com/wilddeer/ios7-switch/master/ios7-switch.modernizr.css" class="iconlink"><i class="icon-cloud-download"> </i><span>ios7-switch.modernizr.css</span></a>.
 

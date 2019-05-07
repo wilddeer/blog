@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: layouts/post.html
 title: "Testing responsive websites"
 categories: en
 lang: en
@@ -142,7 +142,7 @@ If using *jsconsole* is inconvenient for some reason, you can always write your 
 
 Here's a simple example:
 
-{% highlight js cssclass=codewrap %}
+```js
 var customConsole = {
     log: function(message) {
         this.add(message, 'info');
@@ -165,7 +165,7 @@ if (dev_console) {
         console.error(message, source, file);
     };
 }
-{% endhighlight %}
+```
 
 Modify it to your own taste and needs.
 
@@ -173,7 +173,7 @@ Modify it to your own taste and needs.
 
 The easiest way is to connect everithing to the same WiFi router. You should also set fixed IP adress for your computer, since it have a tendency to change unexpectadly and make all of your mobile bookmarks useless. Then use this very IP in your webserver's config, e.&nbsp;g. enginx:
 
-{% highlight text cssclass=codewrap %}
+```
 server {
     ...
 
@@ -182,7 +182,7 @@ server {
 
     ...
 }
-{% endhighlight %}
+```
 
 That's it, check out the site from your mobile devices.
 
@@ -196,7 +196,7 @@ The problem with proxy browser is that you can't test your site on a local serve
 
 My approach here is to create a test subdomain with http authentication on the hosting server and pull current version of the site using git once in a while. The site will be accessible by proxy browsers and remain password protected at the same time. An example config for http authentication (for Apache this time):
 
-{% highlight text cssclass=codewrap %}
+```
 <VirtualHost *:80>
     ...
 
@@ -212,7 +212,7 @@ My approach here is to create a test subdomain with http authentication on the h
 
     ...
 </VirtualHost>
-{% endhighlight %}
+```
 
 You can put your IP after `Allow from` to simplify the access to the domain from regular browsers.
 

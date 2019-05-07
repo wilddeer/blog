@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: layouts/post.html
 title: "Браузер Sailfish"
 categories: rare-species
 lang: ru

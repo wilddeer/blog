@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: layouts/post.html
 title: "Браузер Panasonic Viera Smart TV"
 categories: rare-species
 lang: ru

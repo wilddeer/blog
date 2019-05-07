@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: layouts/post.html
 title: "Kindle Paperwhite browser"
 categories: en rare-species
 lang: en
@@ -130,7 +130,7 @@ Paperwhite's user-agent string is weird. While http header contains quite typica
 
 ###Animations {#animations}
 
-Just like the [predecessor](/en/rare-species/kindle-keyboard/), Kindle Paperwhite supports animation and transitions, which is a painful sight considering e-paper’s response time. 
+Just like the [predecessor](/en/rare-species/kindle-keyboard/), Kindle Paperwhite supports animation and transitions, which is a painful sight considering e-paper’s response time.
 
 ###Touch {#touch}
 
@@ -140,11 +140,11 @@ New Kindle doesn't have any hardware keys and is fully controlled from the touch
 
 All the links are forced with `text-decoration: underline`. But, unlike on [Kindle Keyboard](/en/rare-species/kindle-keyboard/), on Paperwhite you can redefine this using `!important`:
 
-{% highlight css cssclass=codewrap %}
+```css
 h1.title a {
 	text-decoration: none !important; /* no underline for Kindle! */
 }
-{% endhighlight %}
+```
 
 ###Fonts {#fonts}
 
@@ -174,6 +174,6 @@ There's no validation, and, therefore, no support for `required` and `pattern` a
 
 ##Conclusion {#conclusion}
 
-Evolutionary descendant of [the previous generation](/en/rare-species/kindle-keyboard/). There's a big chance your mobile-optimized site will work just fine on new Kindle without any additional tweaks. 
+Evolutionary descendant of [the previous generation](/en/rare-species/kindle-keyboard/). There's a big chance your mobile-optimized site will work just fine on new Kindle without any additional tweaks.
 
 Non-mobile sites also work quite adequately.

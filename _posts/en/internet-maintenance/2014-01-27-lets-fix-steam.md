@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: layouts/post.html
 title: "Let’s fix Steam"
 categories: en internet-maintenance
 lang: en
@@ -176,9 +176,9 @@ Thumbnails are replaced with dots on smaller screens (you can see the dots by sh
 
 Everything combined and wrapped in a jQuery extension:
 
-{% highlight js cssclass=codewrap_maxheight %}
+```js
 {% include snippets/steam-gallery.js %}
-{% endhighlight %}
+```
 
 ###Responsive background
 
@@ -186,7 +186,7 @@ I made a full-page background. To make mobile devices happier i give ’em small
 
 Since every store page has its own background, I put the style directly into the `head` of the page. I also took into account old IEs that don't understant media queries:
 
-{% highlight html cssclass=codewrap %}
+```html
 <!--[if lt IE 9]>
 <style>
     body {
@@ -208,7 +208,7 @@ Since every store page has its own background, I put the style directly into the
     }
 </style>
 <!--<![endif]-->
-{% endhighlight %}
+```
 
 To make mobile devices love the site even more I limited the amount of performance heavy CSS features (like shadows, gradients and opacity) on smaller screens.
 
@@ -258,13 +258,13 @@ dzDelayed.push(function() {
 
 All we need is one block and a bunch of styles:
 
-{% highlight html cssclass=codewrap %}
+```html
 {% include snippets/steam-dlc.htm %}
-{% endhighlight %}
+```
 
-{% highlight css cssclass=codewrap %}
+```css
 {% include snippets/steam-dlc.css %}
-{% endhighlight %}
+```
 
 Old browsers won't render the gradient and the rounded corners, not big deal.
 
@@ -306,7 +306,7 @@ Let's make a universal price block:
       <del class="original-price">
         <span>£3.00</span>
       </del>
-      
+
       <span class="final-price">
         <span>£2.97</span>
       </span>
@@ -322,7 +322,7 @@ Let's make a universal price block:
       <del class="original-price">
         <span>$49.99</span>
       </del>
-      
+
       <span class="final-price">
         <span>$32.99</span>
       </span>
@@ -338,7 +338,7 @@ Let's make a universal price block:
       <del class="original-price">
         <span>100 000 рублей</span>
       </del>
-      
+
       <span class="final-price">
         <span>-500 000 рублей</span>
       </span>
@@ -354,7 +354,7 @@ Let's make a universal price block:
       <del class="original-price">
         <span>¥ 999</span>
       </del>
-      
+
       <span class="final-price">
         <span>¥ 333</span>
       </span>
@@ -364,23 +364,23 @@ Let's make a universal price block:
 
 Now it's enough to vary the font size to make a block of an appropriate size. All the properties are set in relative `em` units. Price values are wrapped in additional `span`’s, so you can set a specific font size for them without affecting the properties of the parental element:
 
-{% highlight html cssclass=codewrap %}
+```html
 {% include snippets/price-area.htm %}
-{% endhighlight %}
+```
 
-{% highlight css cssclass=codewrap %}
+```css
 {% include snippets/price-area.css %}
-{% endhighlight %}
+```
 
-Sale is over? Set the regular price and get rid of unnecessary stuff in the markup: 
+Sale is over? Set the regular price and get rid of unnecessary stuff in the markup:
 
-{% highlight html cssclass=codewrap %}
+```html
 <div class="price-area">
     <span class="price">
         $5.99
     </span>
 </div>
-{% endhighlight %}
+```
 
 And everything just works.
 
@@ -478,15 +478,15 @@ Substitution of basic element behaviour with scripts and lack of proper fallback
 
 For instance, Steam website contains all the classic mistakes collected in my [post about proper link usage](/en/links-please/). Here's, for example, "View all screenshots" link, which isn't actually a link, since it doesn't lead anywhere:
 
-{% highlight html cssclass=codewrap %}
+```html
 <a class="linkbar" href="javascript:screenshot_popup('http://store.steampowered.com/screenshot/view/205100/0?snr=1_5_9__400', 800, 635, 0, 0);">...</a>
-{% endhighlight %}
+```
 
 And here's a "previous spotlight" button made with an `a` element:
 
-{% highlight html cssclass=codewrap %}
+```html
 <a href="javascript:PrevSpotlight( 2 );"><img src="http://cdn4.store.steampowered.com/public/images/v5/ico_navArrow_left.gif"> Prev</a>
-{% endhighlight %}
+```
 
 Another example -- community hub posts:
 
@@ -494,13 +494,13 @@ Another example -- community hub posts:
 
 Their code looks like this:
 
-{% highlight html cssclass=codewrap %}
+```html
 <div class="apphub_Card interactable" style="float: left; width: 468px; height: 345px;" onclick="ShowModalContent( 'http://steamcommunity.com/app/205100/discussions/0/648813728349716360/?insideModal=1', 'Read at http://steamcommunity.com/app/205100/discussions/0/648813728349716360/', 'http://steamcommunity.com/app/205100/discussions/0/648813728349716360/' );">
 
     ...
 
 </div>
-{% endhighlight %}
+```
 
 Not only these posts are opened in horrible modal popups (which are invented by the people who hate tabs), they also can't be opened in a regular way, since they are not links. Not to mention the usage of inline styles and huge inline function calls, which are an example of poor code style.
 
@@ -606,7 +606,7 @@ Warm-up is officially finished.
 
 Code of one of the items in Steam's main menu:
 
-{% highlight html cssclass=codewrap %}
+```html
 <a class="menuitem supernav" href="http://store.steampowered.com/" data-tooltip-content="
     &lt;a class=&quot;submenuitem&quot; href=&quot;http://store.steampowered.com/&quot;&gt;Featured&lt;/a&gt;
     &lt;a class=&quot;submenuitem&quot; href=&quot;http://store.steampowered.com/news/&quot;&gt;News&lt;/a&gt;
@@ -615,6 +615,6 @@ Code of one of the items in Steam's main menu:
     &lt;a class=&quot;submenuitem&quot; href=&quot;http://store.steampowered.com/stats/&quot;&gt;STATS&lt;/a&gt;
   ">
     STORE </a>
-{% endhighlight %}
+```
 
 {% include pic.htm src='wat.jpg' a='WAT'%}

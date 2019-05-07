@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: layouts/post.html
 title: "Слайдеры и кнопка Tab"
 categories: internet-maintenance
 lang: ru
@@ -21,7 +21,7 @@ lang: ru
 
 Выполняем для каждого слайда:
 
-{% highlight js cssclass=codewrap %}
+```js
 //Сначала фоллбек для старых IE
 slide.onfocusin = function() {
   //Сбрасываем скролл
@@ -38,7 +38,7 @@ slide.onfocusin = function() {
 
 //Используем привязанную к `onfocusin` функцию уже в нормальном `addEventListener`
 if (slide.addEventListener) slide.addEventListener('focus', slide.onfocusin, true); //`true` включает капчуринг
-{% endhighlight %}
+```
 
 Можно было бы обойтись событием `focusin`, но Firefox до сих пор [не поддерживает его](https://bugzilla.mozilla.org/show_bug.cgi?id=687787) >:(
 
@@ -46,34 +46,34 @@ if (slide.addEventListener) slide.addEventListener('focus', slide.onfocusin, tru
 
 Естественно, при этом нельзя отключать `outline` вокруг выделенной точки. Чтобы обводка вокруг точки работала при навигации с клавиатуры, но не мешалась при использовании мыши, существует два приема. Первый --- убрать `outline` для псевдокласса `:active`, чтобы обводки не было во время нажатой кнопки мыши:
 
-{% highlight css cssclass=codewrap %}
+```css
 .peppermint.active > ul.dots > li:active {
   outline: none;
 }
-{% endhighlight %}
+```
 
 Второй --- снимать фокус после клика мышью:
 
-{% highlight js cssclass=codewrap %}
+```js
 addEvent(dot, 'click', (function(x, d) {
   return function() {
     d.blur(); //снимаем фокус с точки
     changeActiveSlide(x); //переключаем слайд
-    
+
     ...
 
   };
 })(i, dot), false);
-{% endhighlight %}
+```
 
 <figure class="info icon-code" markdown="1">
 Выше используется простая универсальная функция `addEvent`:
 
-{% highlight js cssclass=codewrap %}
+```js
 function addEvent(el, event, func, bool) {
   el.addEventListener? el.addEventListener(event, func, !!bool): el.attachEvent('on'+event, func);
 }
-{% endhighlight %}
+```
 </figure>
 
 Теперь слайдер адекватно работает с клавиатурой и исполняет (вроде бы) необходимый минимум <a href="http://www.w3.org/Translations/WCAG20-ru/" class="iconlink">"<span>Руководства по обеспечению доступности веб-контента</span>"</a>. Такие дела.

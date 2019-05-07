@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: layouts/post.html
 title: "On outlines"
 categories: en internet-maintenance
 lang: en
@@ -122,7 +122,7 @@ Modern browsers get better in holding this problem, some of them introduce speci
 
 JS + jQuery:
 
-{% highlight js cssclass=codewrap %}
+```js
 (function() {
     var mouseFocusedClass = 'is-mouse-focused';
 
@@ -143,11 +143,11 @@ JS + jQuery:
         }, 0);
     });
 })();
-{% endhighlight %}
+```
 
 Vanilla JS (не будет работать в IE8, потому что `addEventListener`):
 
-{% highlight js cssclass=codewrap %}
+```js
 (function() {
     var mouseFocusedClass = 'is-mouse-focused';
 
@@ -170,11 +170,11 @@ Vanilla JS (не будет работать в IE8, потому что `addEve
         }, 0);
     });
 })();
-{% endhighlight %}
+```
 
 Легким движением руки отключаем ненавистные аутлайны, не попортив доступности:
 
-{% highlight css cssclass=codewrap %}
+```css
 /* keyboard custom focus style */
 :focus {
     outline: 1px solid blue;
@@ -185,7 +185,7 @@ Vanilla JS (не будет работать в IE8, потому что `addEve
 .is-mouse-focused:focus {
     outline: none;
 }
-{% endhighlight %}
+```
 
 Костыль ставит класс через `setTimeout()` (иначе `document.activeElement` не успевает переключиться), поэтому в селектор добавлен `:active` (который срабатывает только с мышкой, кстати), чтобы элемент не мигал в момент переключения класса. Если у вас есть более элегантное решение, поправьте код [на гитхабе](https://github.com/wilddeer/focus-fix) или киньте ссылочку в [твиттер](https://twitter.com/sweatyhooker).
 

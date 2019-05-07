@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: layouts/post.html
 title: "Про @viewport"
 categories: internet-maintenance
 lang: ru
@@ -63,17 +63,17 @@ lang: ru
 
 Все правильные чуваки теперь делают так:
 
-{% highlight html cssclass=codewrap %}
+```html
 <head>
     ...
     <meta name="viewport" content="width=device-width, initial-scale=1">
     ...
 </head>
-{% endhighlight %}
+```
 
 и добавляют цсс:
 
-{% highlight css cssclass=codewrap %}
+```css
 @-ms-viewport {
     width: device-width;
 }
@@ -81,7 +81,7 @@ lang: ru
 @viewport {
     width: device-width;
 }
-{% endhighlight %}
+```
 
 Плюсы:
 

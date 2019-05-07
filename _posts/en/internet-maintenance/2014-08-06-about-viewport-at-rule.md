@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: layouts/post.html
 title: "About the @viewport"
 categories: en internet-maintenance
 lang: en
@@ -65,17 +65,17 @@ In the first case we get a non-adaptive web site. Bad. The second approach gives
 
 All the real guys are now combining the meta tag:
 
-{% highlight html cssclass=codewrap %}
+```html
 <head>
     ...
     <meta name="viewport" content="width=device-width, initial-scale=1">
     ...
 </head>
-{% endhighlight %}
+```
 
 with CSS `@viewport` declaration:
 
-{% highlight css cssclass=codewrap %}
+```css
 @-ms-viewport {
     width: device-width;
 }
@@ -83,7 +83,7 @@ with CSS `@viewport` declaration:
 @viewport {
     width: device-width;
 }
-{% endhighlight %}
+```
 
 Advantages:
 

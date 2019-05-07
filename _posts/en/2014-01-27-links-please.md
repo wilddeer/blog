@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: layouts/post.html
 title: "Links, please"
 categories: en
 lang: en
@@ -35,15 +35,15 @@ Classic example: photo thumbnails. When you click on a thumbnail -- large photo 
 
 HTML:
 
-{% highlight html cssclass=codewrap %}
+```html
 {% include snippets/proper-link.htm %}
-{% endhighlight %}
+```
 
 JS + jQuery:
 
-{% highlight js cssclass=codewrap %}
+```js
 {% include snippets/proper-link.js %}
-{% endhighlight %}
+```
 
 Result:
 

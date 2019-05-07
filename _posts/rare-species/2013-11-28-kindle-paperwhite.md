@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: layouts/post.html
 title: "Браузер Kindle Paperwhite"
 categories: rare-species
 lang: ru
@@ -140,11 +140,11 @@ Kindle Paperwhite --- новая Амазоновская читалка с e-in
 
 Для всех ссылок насильно выставляется `text-decoration: underline`. Но, в отличии от [Kindle Keyboard](/rare-species/kindle-keyboard/), на Paperwhite свойство можно заредефайнить с помощью `!important`:
 
-{% highlight css cssclass=codewrap %}
+```css
 h1.title a {
 	text-decoration: none !important; /* no underline for Kindle! */
 }
-{% endhighlight %}
+```
 
 ###Шрифты {#fonts}
 

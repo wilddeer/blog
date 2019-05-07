@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: layouts/post.html
 title: "Nintendo DSi browser"
 categories: en rare-species
 lang: en

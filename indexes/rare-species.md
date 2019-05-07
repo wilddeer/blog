@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: layouts/default.html
 lang: ru
 cat: rare-species
 permalink: /rare-species/

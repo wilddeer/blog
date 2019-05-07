@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: layouts/post.html
 title: "Браузер Kindle Keyboard"
 categories: rare-species
 lang: ru

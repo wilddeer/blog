@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: layouts/post.html
 title: "Пепякошрифт средствами css-анимаций"
 categories: experiments
 lang: ru
@@ -92,7 +92,7 @@ dzDelayed.push(function() {
     pepInput.on('change input keyup blur', function() {
         if (canExecEvent && val != pepInput[0].value) redraw();
     })
-    
+
     asyncInput.on('change', function() {
         pepBox.toggleClass('async');
         redraw();
@@ -134,10 +134,10 @@ dzDelayed.push(function() {
 
 Плавность анимации можно настроить количеством шагов анимации между ключевыми кадрами. Чем больше шагов, тем плавнее анимация:
 
-{% highlight css cssclass=codewrap %}
+```css
 -webkit-animation-timing-function: steps(1);
 animation-timing-function: steps(1);
-{% endhighlight %}
+```
 
 Для непрерывной анимации `steps()` заменяем на `linear` (или просто стираем `animation-timing-function`, так как `linear` используется по умолчанию).
 
@@ -147,17 +147,17 @@ animation-timing-function: steps(1);
 
 HTML:
 
-{% highlight html cssclass=codewrap %}
+```html
 <div class="pepyaka async">
     <span class="pep5">Я</span><span class="pep2">р</span><span class="pep7">р</span><span class="pep3">р</span><span class="pep0">!</span>
 </div>
-{% endhighlight %}
+```
 
 CSS:
 
-{% highlight css cssclass=codewrap %}
+```css
 {% include snippets/pepyaka-font.css %}
-{% endhighlight %}
+```
 
 <style>
 {% include snippets/pepyaka-font.css %}

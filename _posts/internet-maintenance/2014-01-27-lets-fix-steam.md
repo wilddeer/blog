@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: layouts/post.html
 title: "Чиним Steam"
 categories: internet-maintenance
 lang: ru
@@ -176,9 +176,9 @@ dzDelayed.push(function() {
 
 Оформляем все в виде jQuery-плагина:
 
-{% highlight js cssclass=codewrap_maxheight %}
+```js
 {% include snippets/steam-gallery.js %}
-{% endhighlight %}
+```
 
 ###Фон
 
@@ -186,7 +186,7 @@ dzDelayed.push(function() {
 
 Так как у каждой страницы в магазине фон разный, кладем стиль прямо в шапку страницы, не забыв учесть старые ИЕ, не понимающие media queries:
 
-{% highlight html cssclass=codewrap %}
+```html
 <!--[if lt IE 9]>
 <style>
     body {
@@ -208,7 +208,7 @@ dzDelayed.push(function() {
     }
 </style>
 <!--<![endif]-->
-{% endhighlight %}
+```
 
 Чтобы мобильники еще больше нас любили, убираем для них почти все тени, полупрозрачные фоны заменяем на непрозрачные.
 
@@ -258,13 +258,13 @@ dzDelayed.push(function() {
 
 Все удовольствие одним блоком. Заголовок, параграф и пачка стилей:
 
-{% highlight html cssclass=codewrap %}
+```html
 {% include snippets/steam-dlc.htm %}
-{% endhighlight %}
+```
 
-{% highlight css cssclass=codewrap %}
+```css
 {% include snippets/steam-dlc.css %}
-{% endhighlight %}
+```
 
 Старые браузеры получат блок без градиента и круглых уголков, не велика беда.
 
@@ -306,7 +306,7 @@ dzDelayed.push(function() {
       <del class="original-price">
         <span>£3.00</span>
       </del>
-      
+
       <span class="final-price">
         <span>£2.97</span>
       </span>
@@ -322,7 +322,7 @@ dzDelayed.push(function() {
       <del class="original-price">
         <span>$49.99</span>
       </del>
-      
+
       <span class="final-price">
         <span>$32.99</span>
       </span>
@@ -338,7 +338,7 @@ dzDelayed.push(function() {
       <del class="original-price">
         <span>100 000 рублей</span>
       </del>
-      
+
       <span class="final-price">
         <span>-500 000 рублей</span>
       </span>
@@ -354,7 +354,7 @@ dzDelayed.push(function() {
       <del class="original-price">
         <span>¥ 999</span>
       </del>
-      
+
       <span class="final-price">
         <span>¥ 333</span>
       </span>
@@ -364,23 +364,23 @@ dzDelayed.push(function() {
 
 Для изменения размера блока достаточно изменить размер шрифта. Все метрики выставлены в `em`’ах и изменяются пропорционально шрифту. Значения завернуты в дополнительные спаны, чтобы можно было выставить для них размер шрифта не побив метрики родительского блока:
 
-{% highlight html cssclass=codewrap %}
+```html
 {% include snippets/price-area.htm %}
-{% endhighlight %}
+```
 
-{% highlight css cssclass=codewrap %}
+```css
 {% include snippets/price-area.css %}
-{% endhighlight %}
+```
 
 Кончились скидки? Выставляем цену без скидок. Убираем все лишнее из верстки:
 
-{% highlight html cssclass=codewrap %}
+```html
 <div class="price-area">
     <span class="price">
         $5.99
     </span>
 </div>
-{% endhighlight %}
+```
 
 И все работает.
 
@@ -478,15 +478,15 @@ dzDelayed.push(function() {
 
 На сайте Стима присутствуют все классический ошибки, собранные мной в [посте про ссылки](/links-please/). Вот, например, ссылка "View all screenshots", которая и не ссылка вовсе, так как никуда не ведет:
 
-{% highlight html cssclass=codewrap %}
+```html
 <a class="linkbar" href="javascript:screenshot_popup('http://store.steampowered.com/screenshot/view/205100/0?snr=1_5_9__400', 800, 635, 0, 0);">...</a>
-{% endhighlight %}
+```
 
 А вот кнопка предыдущего спотлайта на главной, сделанная из элемента `a`:
 
-{% highlight html cssclass=codewrap %}
+```html
 <a href="javascript:PrevSpotlight( 2 );"><img src="http://cdn4.store.steampowered.com/public/images/v5/ico_navArrow_left.gif"> Prev</a>
-{% endhighlight %}
+```
 
 А еще есть вот такие посты в центре сообщества:
 
@@ -494,13 +494,13 @@ dzDelayed.push(function() {
 
 Их код выглядит так:
 
-{% highlight html cssclass=codewrap %}
+```html
 <div class="apphub_Card interactable" style="float: left; width: 468px; height: 345px;" onclick="ShowModalContent( 'http://steamcommunity.com/app/205100/discussions/0/648813728349716360/?insideModal=1', 'Read at http://steamcommunity.com/app/205100/discussions/0/648813728349716360/', 'http://steamcommunity.com/app/205100/discussions/0/648813728349716360/' );">
 
     ...
 
 </div>
-{% endhighlight %}
+```
 
 Мало того, что эти посты открываются в ужасных модальных окнах (их, кстати, придумали люди, которые ненавидят вкладки), так еще их совсем никак нельзя открыть по-нормальному, ведь это не ссылка. Не говоря уже об инлайновых стилях и жирном инлайновом вызове функции.
 
@@ -608,7 +608,7 @@ dzDelayed.push(function() {
 
 Код одного из пунктов главного меню Стима:
 
-{% highlight html cssclass=codewrap %}
+```html
 <a class="menuitem supernav" href="http://store.steampowered.com/" data-tooltip-content="
     &lt;a class=&quot;submenuitem&quot; href=&quot;http://store.steampowered.com/&quot;&gt;Featured&lt;/a&gt;
     &lt;a class=&quot;submenuitem&quot; href=&quot;http://store.steampowered.com/news/&quot;&gt;News&lt;/a&gt;
@@ -617,6 +617,6 @@ dzDelayed.push(function() {
     &lt;a class=&quot;submenuitem&quot; href=&quot;http://store.steampowered.com/stats/&quot;&gt;STATS&lt;/a&gt;
   ">
     STORE </a>
-{% endhighlight %}
+```
 
 {% include pic.htm src='wat.jpg' a='WAT'%}

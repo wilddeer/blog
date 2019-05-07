@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: layouts/post.html
 title: "Тач-слайдер Peppermint.js"
 categories: scripts
 lang: ru
@@ -39,7 +39,7 @@ lang: ru
 
   <figure class="blue">
     <h1><a href="/internet-maintenance/js-sliders-and-the-tab-key/">Дружит</a> с кнопкой <kbd>Tab</kbd></h1>
-    
+
   </figure>
 </div>
 
@@ -66,7 +66,7 @@ lang: ru
 
 HTML разметка:
 
-{% highlight html cssclass=codewrap %}
+```html
 <div class="peppermint peppermint-inactive" id="peppermint">
   <figure> ... </figure>
 
@@ -74,19 +74,19 @@ HTML разметка:
 
   <figure> ... </figure>
 </div>
-{% endhighlight %}
+```
 
 Javascript:
 
-{% highlight js cssclass=codewrap %}
+```
 var slider = Peppermint(document.getElementById('peppermint'));
-{% endhighlight %}
+```
 
 Или javascript + jQuery:
 
-{% highlight js cssclass=codewrap %}
+```js
 $('.peppermint').Peppermint();
-{% endhighlight %}
+```
 
 Класс `peppermint-inactive` не обязателен. Он заменяется на `peppermint-active` во время установки.
 
@@ -98,7 +98,7 @@ $('.peppermint').Peppermint();
 
 В качестве второго параметра (первого в случае использования jQuery) в Peppermint можно передать объект с настройками. Настройки по умолчанию:
 
-{% highlight js cssclass=codewrap %}
+```js
 {
   //скорость перехода между слайдами, мс
   speed: 300,
@@ -137,7 +137,7 @@ $('.peppermint').Peppermint();
 
   //Элемент, в который положить точки. По умолчанию корневой элемент слайдера.
   //Может быть где угодно на странице.
-  dotsContainer: undefined,  
+  dotsContainer: undefined,
 
   //Элемент, содержащий слайды. По умолчанию корневой элемент слайдера.
   slidesContainer: undefined,
@@ -150,13 +150,13 @@ $('.peppermint').Peppermint();
   //В качестве параметра получает количество слайдов.
   onSetup: undefined
 }
-{% endhighlight %}
+```
 
 ###Примеры использования
 
 JS:
 
-{% highlight js cssclass=codewrap %}
+```js
 var slider = Peppermint(document.getElementById('peppermint'), {
   dots: true,
   slideshow: true,
@@ -167,11 +167,11 @@ var slider = Peppermint(document.getElementById('peppermint'), {
     console.log('Peppermint setup done. Slides found: ' + n);
   }
 });
-{% endhighlight %}
+```
 
 JS + jQuery:
 
-{% highlight js cssclass=codewrap %}
+```js
 $('.peppermint').Peppermint({
   dots: true,
   slideshow: true,
@@ -182,7 +182,7 @@ $('.peppermint').Peppermint({
     console.log('Peppermint setup done. Slides found: ' + n);
   }
 });
-{% endhighlight %}
+```
 
 ##API {#api}
 
@@ -210,7 +210,7 @@ $('.peppermint').Peppermint({
 
 JS:
 
-{% highlight js cssclass=codewrap %}
+```js
 //запустить Peppermint и сохранить API
 var slider = Peppermint(document.getElementById('peppermint')),
     //сохранить ссылки на HTML-ноды
@@ -228,11 +228,11 @@ leftArr.addEventListener('click', slider.prev, false);
 getSlidesNumberButton.addEventListener('click', function() {
   alert('There are ' + slider.getSlidesNumber() + ' slides');
 }, false);
-{% endhighlight %}
+```
 
 JS + jQuery:
 
-{% highlight js cssclass=codewrap %}
+```js
 //сохранить jQuery-ссылку на блок слайдера
 var slider = $('#peppermint');
 
@@ -249,7 +249,7 @@ $('#left-arr').click(slider.data('Peppermint').prev);
 $('#getslidesnumber').click(function() {
     alert('There are ' + slider.data('Peppermint').getSlidesNumber() + ' slides');
 });
-{% endhighlight %}
+```
 
 ##Используете Peppermint?
 

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: layouts/post.html
 title: "JS sliders and the Tab key"
 categories: en internet-maintenance
 lang: en
@@ -23,7 +23,7 @@ Since `focus` events don't bubble, event capturing is used to register them ([re
 
 Run for each slide:
 
-{% highlight js cssclass=codewrap %}
+```js
 //IE fallback first
 slide.onfocusin = function() {
   //Reset the scroll
@@ -40,7 +40,7 @@ slide.onfocusin = function() {
 
 //Now use the function bound to `onfocusin` in a regular `addEventListener`
 if (slide.addEventListener) slide.addEventListener('focus', slide.onfocusin, true); //`true` turns on the capturing
-{% endhighlight %}
+```
 
 We could do fine with just a `focusin` event, but Firefox [still doesn't support it](https://bugzilla.mozilla.org/show_bug.cgi?id=687787) >:(
 
@@ -48,34 +48,34 @@ We could do fine with just a `focusin` event, but Firefox [still doesn't support
 
 Also worth mentioning that it's, of course, unacceptable to turn off the `outline` for focused dots. But we still want to get rid of it when using a mouse. I use two methods to deal with it: first, get rid of the `outline` for `:active` items. No more outline when a mouse button is pressed:
 
-{% highlight css cssclass=codewrap %}
+```css
 .peppermint.active > ul.dots > li:active {
   outline: none;
 }
-{% endhighlight %}
+```
 
 Second, defocus the item after mouse click:
 
-{% highlight js cssclass=codewrap %}
+```js
 addEvent(dot, 'click', (function(x, d) {
   return function() {
     d.blur(); //defocus the dot
     changeActiveSlide(x); //change the slide
-    
+
     ...
 
   };
 })(i, dot), false);
-{% endhighlight %}
+```
 
 <figure class="info icon-code" markdown="1">
 Simple and universal `addEvent` function is used above:
 
-{% highlight js cssclass=codewrap %}
+```js
 function addEvent(el, event, func, bool) {
   el.addEventListener? el.addEventListener(event, func, !!bool): el.attachEvent('on'+event, func);
 }
-{% endhighlight %}
+```
 </figure>
 
 Now our slider properly works with the keyboard and seems to meet the requirements of <a href="http://www.w3.org/TR/WCAG20/" class="iconlink">"<span>Web Content Accessibility Guidelines</span>"</a>. So it goes.
