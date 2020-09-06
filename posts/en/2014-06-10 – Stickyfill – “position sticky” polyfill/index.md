@@ -1,10 +1,3 @@
----
-layout: layouts/post.html
-title: "Stickyfill – “position: sticky” polyfill"
-categories: en scripts
-lang: en
----
-
 <style>
 {% include snippets/stickyfill-demo.css %}
 </style>

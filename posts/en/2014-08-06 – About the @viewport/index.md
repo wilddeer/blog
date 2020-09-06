@@ -1,17 +1,10 @@
----
-layout: layouts/post.html
-title: "About the @viewport"
-categories: en internet-maintenance
-lang: en
----
-
 <small>Originally translated by [Varya Stepanova](http://varya.me/) and posted on [Frontend Babel](http://frontendbabel.info/articles/about-viewport/).</small>
 
-#About the `@viewport`
+# About the `@viewport`
 
 Once Opera's guys proposed to use `@viewport { ... }` in CSS instead of `<meta name="viewport" ...>` tag. Regarding the reasons [you'd better watch and listen to @ppk](http://vimeo.com/100523275) and I will explain why you should use this right now.
 
-##1. Proper viewport for Windows Phones
+## 1. Proper viewport for Windows Phones
 
 I've noticed long ago that websites on Windows Phone look bulky in landscape mode but never deeply thought about the fact.
 
@@ -51,7 +44,7 @@ The portrait mode also undergoes a change. HTC 8x has higher resolution then iPo
 
 Third update came out a while ago, older phones running WP7 are not affected by the bug, so now this bug can be safely ignored.
 
-##2. Responsiveness on Windows 8 devices
+## 2. Responsiveness on Windows 8 devices
 
 Furthermore, [it turns out](http://timkadlec.com/2013/01/windows-phone-8-and-device-width/) that IE in Windows 8 ignores the meta tag in metro mode but correctly interprets `@-ms-viewport`. Here's a couple of explanatory GIFs:
 
@@ -61,7 +54,7 @@ Furthermore, [it turns out](http://timkadlec.com/2013/01/windows-phone-8-and-dev
 
 In the first case we get a non-adaptive web site. Bad. The second approach gives a mobile version snapped to the edge of the screen. Splendid!
 
-##What do we do?
+## What do we do?
 
 All the real guys are now combining the meta tag:
 
@@ -95,7 +88,7 @@ Drawbacks:
 
 - Viewport is broken on Windows Phone without third update
 
-##Related links
+## Related links
 
 - [CSS Device Adaptation](http://dev.w3.org/csswg/css-device-adapt/), *W3C*
 - [@-ms-viewport rule](http://msdn.microsoft.com/en-us/library/ie/hh869615%28v%3Dvs.85%29.aspx), *MSDN*

@@ -1,11 +1,4 @@
----
-layout: layouts/post.html
-title: "Kindle Paperwhite browser"
-categories: en rare-species
-lang: en
----
-
-#Kindle Paperwhite browser {#header}
+# Kindle Paperwhite browser {#header}
 
 {% include pic.htm src='device.jpg' a='Kindle Paperwhite' %}
 
@@ -25,7 +18,7 @@ Peperwhite's Browser is an improved version of [Kindle Keyboard](/en/rare-specie
 
 Paperwhite's user-agent string is weird. While http header contains quite typical user-agent string, `navigator.userAgent` contains another, which can be hardly identified among the dozens of other WebKits. Yet another reason to use feature detection.
 
-###Feature tests {#feature-tests}
+### Feature tests {#feature-tests}
 
 <small>Feature tests are done using [Modernizr](//modernizr.com). [Full table of my tests](https://docs.google.com/spreadsheet/ccc?key=0AjA1cIs8C8MGdFdyQ0lMQnhMbHJEeVZpMW9XejhzU2c&usp=sharing#gid=0) on google docs.</small>
 
@@ -128,15 +121,15 @@ Paperwhite's user-agent string is weird. While http header contains quite typica
 	</table>
 </div>
 
-###Animations {#animations}
+### Animations {#animations}
 
 Just like the [predecessor](/en/rare-species/kindle-keyboard/), Kindle Paperwhite supports animation and transitions, which is a painful sight considering e-paper’s response time.
 
-###Touch {#touch}
+### Touch {#touch}
 
 New Kindle doesn't have any hardware keys and is fully controlled from the touch screen. The browser is controlled with habitual swipe and pinch gestures. Touch events, however, are not supported.
 
-###Links {#links}
+### Links {#links}
 
 All the links are forced with `text-decoration: underline`. But, unlike on [Kindle Keyboard](/en/rare-species/kindle-keyboard/), on Paperwhite you can redefine this using `!important`:
 
@@ -146,7 +139,7 @@ h1.title a {
 }
 ```
 
-###Fonts {#fonts}
+### Fonts {#fonts}
 
 All the major font formats are supported (*woff*, *ttf* and *svg*). The browser has weird intolerance for Scada font:
 
@@ -154,17 +147,17 @@ All the major font formats are supported (*woff*, *ttf* and *svg*). The browser 
 
 Other fonts seem to work just fine.
 
-###Scrolling {#scrolling}
+### Scrolling {#scrolling}
 
 Scrolling isn't that slick when it come to internal scrollable blocks. If, for instance, there's an internal block with horizontal scroll occupying entire viewport, it's very problematic to scroll the page as all your attemps lead to that block being scrolled horizontally instead:
 
 {% include pic.htm src='scroll.png' p=true a='screenshot showing an example state when it’s problematic to scroll the page' c='Can’t scroll this!' %}
 
-###`box-shadow` bug {#boxshadow-bug}
+### `box-shadow` bug {#boxshadow-bug}
 
 If there is a shadow going outside of the viewport, or there is a block with `box-shadow` sitting somewhere outside of the viewport (even if it's in the *overflow* of the other block), viewport expands to fit the shadow. Rather weird and annoying bug.
 
-###Forms {#forms}
+### Forms {#forms}
 
 The browser has rudimentary support for new input types. `range` slider barely works:
 
@@ -172,7 +165,7 @@ The browser has rudimentary support for new input types. `range` slider barely w
 
 There's no validation, and, therefore, no support for `required` and `pattern` attributes.
 
-##Conclusion {#conclusion}
+## Conclusion {#conclusion}
 
 Evolutionary descendant of [the previous generation](/en/rare-species/kindle-keyboard/). There's a big chance your mobile-optimized site will work just fine on new Kindle without any additional tweaks.
 

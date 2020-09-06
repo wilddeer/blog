@@ -1,8 +1,4 @@
----
-title: JS sliders and the Tab key
----
-
-#JS sliders and the <kbd>Tab</kbd> key {#header}
+# JS sliders and the <kbd>Tab</kbd> key {#header}
 
 Almost every JS slider has one particularly funny bug: the <kbd>Tab</kbd> key breaks them. The slider will inevitably break if a link, placed in one of the slides, cathes focus. Some examples on a [slider that doesn't break](/en/scripts/peppermint/) (oh, the irony):
 

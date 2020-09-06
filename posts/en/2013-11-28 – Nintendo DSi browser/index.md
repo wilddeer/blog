@@ -1,11 +1,4 @@
----
-layout: layouts/post.html
-title: "Nintendo DSi browser"
-categories: en rare-species
-lang: en
----
-
-#Nintendo DSi browser {#header}
+# Nintendo DSi browser {#header}
 
 {% include pic.htm src='dsi.jpg' a='Nintendo DSi' %}
 
@@ -36,9 +29,9 @@ The second mode is for mobile-optimized websites. It uses the top screen as an e
 
 Mobile-optimized mode is activated with an appropriate viewport meta-tag, e.&nbsp;g. `<meta name="viewport" content="width=device-width">`.
 
-##Features
+## Features
 
-###Feature tests
+### Feature tests
 
 <small>Feature tests are done using [Modernizr](//modernizr.com). [Full table of my tests](https://docs.google.com/spreadsheet/ccc?key=0AjA1cIs8C8MGdFdyQ0lMQnhMbHJEeVZpMW9XejhzU2c&usp=sharing#gid=0) on google docs.</small>
 
@@ -143,7 +136,7 @@ Mobile-optimized mode is activated with an appropriate viewport meta-tag, e.&nbs
 
 As expected, the browser's support for fancy new features isn't huge: it supports `Media queries`, `opacity`, `box-sizing` and `text-shadow` without blur. [Modernizr](//modernizr.com)'s `box-sizing` test returns a false negative result. Turns out, the browser understands the CSS-property, but doesn't react in any way to the `style.boxSizing` javascript property (including the Opera-prefixed variant).
 
-###Fonts
+### Fonts
 
 The browser uses a single font for everything. It's a sans-serif font, it has a couple of icons in its private use unicode area, which seem to be used somewhere in the console's UI.
 
@@ -155,11 +148,11 @@ The font's most annoying bug, though, is its weird letter-spacing for cyrillic c
 
 {% include pic.htm src='browser4.jpg' c='Compare the letter-spacing of latin and cyrillic characters' a='An example of a letter-spacing bug' %}
 
-###Scrolling
+### Scrolling
 
 Pages can be scrolled with the D-pad, using dragscroll or with a constantly visible scrollbar. Overflowed blocks also have a constantly visible scrollbar. Dragscroll doesn't work for them.
 
-###Forms
+### Forms
 
 Surprisingly enough, the browser's support for new input types is reasonable. It supports `url`, `email`, `datetime`, `date`, `month`, `week`, `time`, `datetime-local`, `number` and `range`:
 
@@ -169,15 +162,15 @@ All the fields are validated according to their types when the form is submitted
 
 {% include pic.htm src='datepicker.jpg' c='In an attempt to fit into available space, the datepicker becomes a mess' %}
 
-###jQuery
+### jQuery
 
 jQuery doesn't work starting from version 1.9.1 and above. No idea why.
 
-##Conclusion
+## Conclusion
 
 It's totally possible to adapt a simple mobile website for this thingy pretty effortlessly. You just have to use proper fallbacks and consider the font problems. Twitter's mobile site, for instance, is looking pretty good.
 
-##Related links {#related_links}
+## Related links {#related_links}
 
 - [Using the Nintendo DSi browser](http://maban.co.uk/73), *Anna Debenham*
 - [Nintendo DS & DSi Browser](http://en.wikipedia.org/wiki/Nintendo_DS_%26_DSi_Browser), *Wikipedia*

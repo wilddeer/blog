@@ -1,10 +1,3 @@
----
-layout: layouts/post.html
-title: "Пепякошрифт средствами css-анимаций"
-categories: experiments
-lang: ru
----
-
 <style>
     .pep-holder {
         text-align: center;

@@ -1,13 +1,6 @@
----
-layout: layouts/post.html
-title: "Sniffer.js"
-categories: en scripts
-lang: en
----
+# Sniffer.js {#header}
 
-#Sniffer.js {#header}
-
-##&rsquo;cause if you can&rsquo;t detect it, you should sniff it! {#subheader}
+## &rsquo;cause if you can&rsquo;t detect it, you should sniff it! {#subheader}
 
 [Sniffer](https://github.com/wilddeer/Sniffer) is a clientside browser/engine/os/device detection tool.
 
@@ -21,7 +14,7 @@ I feature-detect like a boss. But when I can't, I use dirty hacks to help me out
 
 [Checkout docs and usage examples on GitHub](https://github.com/wilddeer/Sniffer)
 
-##Live example
+## Live example
 
 <div id="test_console"></div>
 

@@ -1,10 +1,3 @@
----
-layout: layouts/post.html
-title: "Pepyaka font using CSS animations"
-categories: en experiments
-lang: en
----
-
 <style>
     .pep-holder {
         text-align: center;

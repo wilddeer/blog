@@ -1,13 +1,6 @@
----
-layout: layouts/post.html
-title: "Sniffer.js"
-categories: scripts
-lang: ru
----
+# Sniffer.js {#header}
 
-#Sniffer.js {#header}
-
-##&rsquo;cause if you can&rsquo;t detect it, you should sniff it! {#subheader}
+## &rsquo;cause if you can&rsquo;t detect it, you should sniff it! {#subheader}
 
 [Сниффер](https://github.com/wilddeer/Sniffer) определяет браузер, движок и операционку/девайс по юзер-агенту.
 
@@ -21,7 +14,7 @@ lang: ru
 
 [Документация и примеры на ГитХабе](https://github.com/wilddeer/Sniffer)
 
-##Живой пример {#test}
+## Живой пример {#test}
 
 <div id="test_console"></div>
 

@@ -1,13 +1,6 @@
----
-layout: layouts/post.html
-title: "Браузер Panasonic Viera Smart TV"
-categories: rare-species
-lang: ru
----
+# Браузер Panasonic Viera Smart TV {#header}
 
-#Браузер Panasonic Viera Smart TV {#header}
-
-##(TX-LR32E6)
+## (TX-LR32E6)
 
 {% include pic.htm src='tv.jpg' a='Panasonic Viera Smart TV (TX-LR32E6' %}
 
@@ -22,7 +15,7 @@ lang: ru
 
 Браузер одновкладочный, на движке WebKit (похоже на модифицированный Chrome). Довольно медленный, особенно неохотно работает с анимациями.
 
-###Взаимодействие {#interaction}
+### Взаимодействие {#interaction}
 
 {% include pic.htm src='remote.jpg' p=true float='right' a='Пульт' c='Пульт' %}
 
@@ -32,13 +25,13 @@ lang: ru
 
 Сайт скроллится подведением курсора к краю экрана. Блоки со скроллом можно поскроллить только нажатием на стрелочки скроллбара, что не очень удобно. Скроллбар виден постоянно.
 
-###Тесты {#tests}
+### Тесты {#tests}
 
 [Acid3](http://acid3.acidtests.org/) проходится полностью, но с багами:
 
 {% include pic.htm src='acid.jpg' a='Acid3 test result' %}
 
-###Поддержка фич {#feature-tests}
+### Поддержка фич {#feature-tests}
 
 <small>Фичи тестировались [Модернайзером](//modernizr.com). [Полная таблица моих тестов](https://docs.google.com/spreadsheet/ccc?key=0AjA1cIs8C8MGdFdyQ0lMQnhMbHJEeVZpMW9XejhzU2c&usp=sharing#gid=0) на гугл доксах.</small>
 
@@ -136,11 +129,11 @@ lang: ru
 	</table>
 </div>
 
-###Шрифты {#fonts}
+### Шрифты {#fonts}
 
 Из дефолтных шрифтов есть только monospace и sans-serif. Fantasy, cursive и serif отображаются sans-serif'ом. Подключаемые шрифты поддерживаются без проблем.
 
-###Формы {#forms}
+### Формы {#forms}
 
 Браузер в зачаточной форме поддерживает некоторые типы полей ввода:
 
@@ -148,7 +141,7 @@ lang: ru
 
 Датапикера нет. Экранная клавиатура никак не адаптируется под тип поля. Валидация работает для полей `email` и `url`, дружит с аттрибутами `required` и `pattern`.
 
-###Итого {#conclusion}
+### Итого {#conclusion}
 
 Практически полноценный Хром в плане рендеринга, но медленный и с плохим интерфейсом.
 

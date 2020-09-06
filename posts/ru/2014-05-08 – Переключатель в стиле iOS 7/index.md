@@ -1,10 +1,3 @@
----
-layout: layouts/post.html
-title: "Переключатель в стиле iOS 7"
-categories: experiments
-lang: ru
----
-
 <style>
     /* demo styles */
     .button-demo .button-smaple {
@@ -84,7 +77,7 @@ lang: ru
 
 <a href="https://github.com/wilddeer/ios7-switch" class="iconlink"><i class="icon-github"> </i><span>Форк ми, бейби</span></a>
 
-###Разметка
+### Разметка
 
 ```html
 <label class="ios7-switch">
@@ -105,13 +98,13 @@ lang: ru
 
 или что-то другое в этом роде, идея понятна.
 
-###CSS
+### CSS
 
 ```css
 {% include ios7-switch/ios7-switch.css %}
 ```
 
-###Проблемы
+### Проблемы
 
 Не работает в браузерах, не поддерживающих `box-shadow` (ИЕ8 и ниже, Андроид 3.x и ниже). Можно сделать фоллбек на обычный чекбокс, например, с помощью [Модернайзера](http://modernizr.com). Пишем тест:
 
@@ -123,7 +116,7 @@ Modernizr.addTest('unprefixed-boxshadow', Modernizr.testProp('boxShadow', '1px 1
 
 Есть проблемы с ошибками округления в некоторых браузерах при определенных размерах шрифта. Обходятся небольшими твиками размера шрифта.
 
-###По теме
+### По теме
 
 - [Модный переключатель](http://pepelsbey.net/2012/08/stylish-switch/), *Вадим Макеев*
 - [iOS 6 switch style checkboxes with pure CSS](http://lea.verou.me/2013/03/ios-6-switch-style-checkboxes-with-pure-css/), *Lea Verou*

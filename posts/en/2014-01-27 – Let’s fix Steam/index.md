@@ -1,10 +1,3 @@
----
-layout: layouts/post.html
-title: "Let’s fix Steam"
-categories: en internet-maintenance
-lang: en
----
-
 <style>
     .steam-demo {
         width: 100%;
@@ -123,7 +116,7 @@ lang: en
     }
 </style>
 
-#Let's fix Steam {#header}
+# Let's fix Steam {#header}
 
 Everything is good about [Steam](http://store.steampowered.com/), except for its website. All the great ideas Valve guys come up with recieve a pretty poor frontend implementation.
 
@@ -153,7 +146,7 @@ Responsive design increases the time and complexity of the development, but, on 
 
 My demo uses mobile first approach, i.&nbsp;e. base styles for small screens, media queries for larger ones.
 
-###Making the gallery responsive
+### Making the gallery responsive
 
 Responsive screenshot gallery should work on any device, with any type of touch events. I used my [Peppermint touch slider](/en/scripts/peppermint/) for this purpose. I also made a scroller for the thumbnails based on the event unifying code from Peppermint (which I detached into a [separate script](https://github.com/wilddeer/Event-Burrito), by the way). Now you can drag both the screenshots and the thumbs using mouse or touch:
 
@@ -180,7 +173,7 @@ Everything combined and wrapped in a jQuery extension:
 {% include snippets/steam-gallery.js %}
 ```
 
-###Responsive background
+### Responsive background
 
 I made a full-page background. To make mobile devices happier i give ’em smaller background pic. Compare the [full](/steam/i/page.bg.jpg) and [mobile](/steam/i/page.bg.mob.jpg) variants.
 
@@ -572,15 +565,15 @@ Same approach is applicable to "add to favourites" button, vote buttons, etc. --
 
 Same with the blocks opening different popups -- make ’em links, and they will thrive without javascript.
 
-##A few more things
+## A few more things
 
-###Accessibility
+### Accessibility
 
 Lots of the UI elements aren't focusable, which means they can't be <kbd>Tab</kbd>’bed on, and screenreaders, voice control thingies and other accessibility tools won't know about them.
 
 This is easily fixed by adding `tabindex="0"` to the UI elements and binding a common handler to clicks and <kbd>Enter</kbd> press.
 
-###Performance optimization
+### Performance optimization
 
 Currently, one page load on Steam website generates about 120 requests to the server (cache disabled), including 92 pics, 18 js and 8 css files. All the scripts are located in the `head` element, which significantly delays page rendering.
 
@@ -590,11 +583,11 @@ This significantly reduced the amount of requests to the server and the delay be
 
 My design only uses two png sprites -- one for standard screens and one for hign density (plus three fallback images to emulate gradients and translucency in older browsers). At first I used a single svg sprite, but, unfortunately, it significantly dropped the performance in some mobile browsers and also looked blurry in IE mobile. So, for now, it's safer to use png sprites. Icon fonts are also acceptable, but they have a bunch of flaws, too.
 
-###UI and navigation
+### UI and navigation
 
 There are a lot of unclear and inconsistent moments in Steam's navigation and the UI overall. A good UI designer could fix the situation. Unfortunately, I'm not one of them.
 
-##Conclusion
+## Conclusion
 
 **What has been done:** responsive demo meeting the principles of [progressive enhancement](https://en.wikipedia.org/wiki/Progressive_enhancement) and [unobtrusive javascript](https://en.wikipedia.org/wiki/Unobtrusive_JavaScript), with improved fault tolerance. Works in IE8+ and in almost every mobile browser.
 
@@ -602,7 +595,7 @@ There are a lot of unclear and inconsistent moments in Steam's navigation and th
 
 Warm-up is officially finished.
 
-##Bonus pack
+## Bonus pack
 
 Code of one of the items in Steam's main menu:
 

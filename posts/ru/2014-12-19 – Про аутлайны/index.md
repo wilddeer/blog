@@ -1,8 +1,3 @@
----
-date: 2014-12-19
-title: Про аутлайны
----
-
 <script>
     document.addEventListener('ready', () => {
         const focusedElement = document.querySelector(':focus');

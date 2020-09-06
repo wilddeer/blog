@@ -1,10 +1,3 @@
----
-layout: layouts/post.html
-title: "iOS 7 style switch"
-categories: en experiments
-lang: en
----
-
 <style>
     /* demo styles */
     .button-demo .button-smaple {
@@ -83,7 +76,7 @@ iOS7 switch imitation. Made it initially for new [Pepyaka](http://pepyaka.su/en/
 
 <a href="https://github.com/wilddeer/ios7-switch" class="iconlink"><i class="icon-github"> </i><span>Fork me, baby</span></a>
 
-###Markup
+### Markup
 
 ```html
 <label class="ios7-switch">
@@ -104,13 +97,13 @@ or
 
 or something similar, you get the idea.
 
-###CSS
+### CSS
 
 ```css
 {% include ios7-switch/ios7-switch.css %}
 ```
 
-###Caveats
+### Caveats
 
 Doesn't work in older browsers with no `box-shadow` support (IE8 and lower, Android 3.x and lower). It's easy enough to make a fallback to regular checkboxes. For instance, using [Modernizr](http://modernizr.com) test
 
@@ -122,6 +115,6 @@ and modified stylesheet -- <a href="https://raw.githubusercontent.com/wilddeer/i
 
 Has some rounding error problems in some browsers at some font sizes. Tweak the font size a bit to get rid of those.
 
-###Related links
+### Related links
 
 - [iOS 6 switch style checkboxes with pure CSS](http://lea.verou.me/2013/03/ios-6-switch-style-checkboxes-with-pure-css/), *Lea Verou*

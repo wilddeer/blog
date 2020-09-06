@@ -1,13 +1,6 @@
----
-layout: layouts/post.html
-title: "Panasonic Viera Smart TV browser"
-categories: en rare-species
-lang: en
----
+# Panasonic Viera Smart TV browser {#header}
 
-#Panasonic Viera Smart TV browser {#header}
-
-##(TX-LR32E6)
+## (TX-LR32E6)
 
 {% include pic.htm src='tv.jpg' a='Panasonic Viera Smart TV (TX-LR32E6' %}
 
@@ -22,7 +15,7 @@ lang: en
 
 Browser runs on WebKit (looks like a modified version of Chrome). It's pretty slow, especially when dealing with animations.
 
-###Interaction {#interaction}
+### Interaction {#interaction}
 
 {% include pic.htm src='remote.jpg' p=true float='right' a='Remote control' c='Remote control' %}
 
@@ -32,13 +25,13 @@ Both `:hover` and `:active` states work fine, but `:active` state is triggered a
 
 Scrolling is done by moving the cursor to the edge of the screen. Internal overflowed blocks can be scrolled by pressing arrow buttons on the scrollbar, which can be tricky. Scrollbars are constantly visible.
 
-###Tests {#tests}
+### Tests {#tests}
 
 [Acid3](http://acid3.acidtests.org/) test is passed with bugs:
 
 {% include pic.htm src='acid.jpg' a='screenshot showing Acid3 test result' %}
 
-###Feature tests {#feature-tests}
+### Feature tests {#feature-tests}
 
 <small>Feature tests are done using [Modernizr](//modernizr.com). [Full table of my tests](https://docs.google.com/spreadsheet/ccc?key=0AjA1cIs8C8MGdFdyQ0lMQnhMbHJEeVZpMW9XejhzU2c&usp=sharing#gid=0) on google docs.</small>
 
@@ -136,11 +129,11 @@ Scrolling is done by moving the cursor to the edge of the screen. Internal overf
 	</table>
 </div>
 
-###Fonts {#fonts}
+### Fonts {#fonts}
 
 The only default fonts available are sans-serif and monospace. Fantasy, cursive and serif fall back to sans-serif. External fonts are supported without noticible problems.
 
-###Forms {#forms}
+### Forms {#forms}
 
 Browser's support for new input types is pretty weak:
 
@@ -148,6 +141,6 @@ Browser's support for new input types is pretty weak:
 
 There's no datepicker. Onscreen keyboard doesn't apadt to input types. Validation works for `email` and `url` input types, `required` and `pattern` attributes also work fine.
 
-###Conclusion {#conclusion}
+### Conclusion {#conclusion}
 
 Almost fully-featured Chrome in terms of rendering, although pretty slow and with fiddly UI.

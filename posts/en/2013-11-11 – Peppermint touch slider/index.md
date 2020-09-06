@@ -1,10 +1,3 @@
----
-layout: layouts/post.html
-title: "Peppermint touch slider"
-categories: en scripts
-lang: en
----
-
 <style>
 {% include snippets/peppermint-demo.css %}
 </style>
@@ -56,14 +49,14 @@ lang: en
 - API and callback functions for extensibility
 - Keyboard accessible, [doesn't break](/en/internet-maintenance/js-sliders-and-the-tab-key/) when <kbd>tab</kbd>&rsquo;bing
 
-##Kit
+## Kit
 
 {:.nopadding}
 - <a href="https://raw.github.com/wilddeer/Peppermint/master/dist/peppermint.min.js" class="iconlink"><i class="icon-cloud-download"> </i><span>peppermint.min.js</span></a> -- minified production script
 - <a href="https://raw.github.com/wilddeer/Peppermint/master/dist/peppermint.required.css" class="iconlink"><i class="icon-cloud-download"> </i><span>peppermint.required.css</span></a> -- styles required for proper functioning
 - <a href="https://raw.github.com/wilddeer/Peppermint/master/dist/peppermint.suggested.css" class="iconlink"><i class="icon-cloud-download"> </i><span>peppermint.suggested.css</span></a> -- default styles to start with (required styles included)
 
-##Usage
+## Usage
 
 HTML markup:
 
@@ -95,7 +88,7 @@ You are free to use any other tag instead of `figure`. When using `figure`, don'
 
 Place anything you want within the slides.
 
-##Settings
+## Settings
 
 Peppermint can take settings object as an optional second parameter (first when using jQuery). Default settings:
 
@@ -153,7 +146,7 @@ Peppermint can take settings object as an optional second parameter (first when 
 }
 ```
 
-###Examples
+### Examples
 
 JS:
 
@@ -185,7 +178,7 @@ $('.peppermint').Peppermint({
 });
 ```
 
-##API
+## API
 
 Peppermint exposes a set of functions upon installation. These functions can be used to controll the slider externally:
 
@@ -207,7 +200,7 @@ Peppermint exposes a set of functions upon installation. These functions can be 
 
 `recalcWidth()` -- recalculate slider's and slides' widths. Usefull when the container width is changed. Width recalculation runs automatically on window resize and device orientation change.
 
-###Examples
+### Examples
 
 JS:
 
@@ -252,10 +245,10 @@ $('#getslidesnumber').click(function() {
 });
 ```
 
-##Using Peppermint?
+## Using Peppermint?
 
 Drop me a link &rarr; <a href="mailto:wd@dizaina.net" class="iconlink"><i class="icon-envelope">&nbsp;</i>wd@dizaina.net</a>.
 
-##License
+## License
 
 [MIT license](http://opensource.org/licenses/MIT).

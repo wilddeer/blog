@@ -1,10 +1,3 @@
----
-layout: layouts/post.html
-title: "Тач-слайдер Peppermint.js"
-categories: scripts
-lang: ru
----
-
 <style>
 {% include snippets/peppermint-demo.css %}
 </style>
@@ -55,14 +48,14 @@ lang: ru
 - [API](#api) и callback-функции для расширений
 - Работает с клавиатурой, [не ломается](/internet-maintenance/js-sliders-and-the-tab-key/) от кнопки <kbd>Tab</kbd>
 
-##Комплект {#kit}
+## Комплект {#kit}
 
 {:.nopadding}
 - <a href="https://raw.github.com/wilddeer/Peppermint/master/dist/peppermint.min.js" class="iconlink"><i class="icon-cloud-download"> </i><span>peppermint.min.js</span></a> --- минифицированный скрипт для продакшена
 - <a href="https://raw.github.com/wilddeer/Peppermint/master/dist/peppermint.required.css" class="iconlink"><i class="icon-cloud-download"> </i><span>peppermint.required.css</span></a> --- обязательный набор стилей для корректной работы слайдера
 - <a href="https://raw.github.com/wilddeer/Peppermint/master/dist/peppermint.suggested.css" class="iconlink"><i class="icon-cloud-download"> </i><span>peppermint.suggested.css</span></a> --- дефолтный набор стилей, чтобы было с чего начать (включает обязательные стили)
 
-##Запуск {#usage}
+## Запуск {#usage}
 
 HTML разметка:
 
@@ -94,7 +87,7 @@ $('.peppermint').Peppermint();
 
 Внутрь каждого слайда можно положить все что захочется.
 
-##Настройки {#settings}
+## Настройки {#settings}
 
 В качестве второго параметра (первого в случае использования jQuery) в Peppermint можно передать объект с настройками. Настройки по умолчанию:
 
@@ -152,7 +145,7 @@ $('.peppermint').Peppermint();
 }
 ```
 
-###Примеры использования
+### Примеры использования
 
 JS:
 
@@ -184,7 +177,7 @@ $('.peppermint').Peppermint({
 });
 ```
 
-##API {#api}
+## API {#api}
 
 При инициализации Peppermint возвращает объект с функциями, которые можно использовать для управления слайдером и расширения функционала:
 
@@ -206,7 +199,7 @@ $('.peppermint').Peppermint({
 
 `recalcWidth()` --- пересчитать ширину слайдера и слайдов. Полезно при изменении ширины контейнера. При ресайзе окна и смене ориентации девайса пересчет ширины запустится сам.
 
-###Примеры использования
+### Примеры использования
 
 JS:
 
@@ -251,10 +244,10 @@ $('#getslidesnumber').click(function() {
 });
 ```
 
-##Используете Peppermint?
+## Используете Peppermint?
 
 Киньте ссылочку &rarr; <a href="mailto:wd@dizaina.net" class="iconlink"><i class="icon-envelope">&nbsp;</i>wd@dizaina.net</a>.
 
-##Лицензия {#license}
+## Лицензия {#license}
 
 [MIT license](http://opensource.org/licenses/MIT).

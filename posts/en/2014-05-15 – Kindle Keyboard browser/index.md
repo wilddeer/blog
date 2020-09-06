@@ -1,11 +1,4 @@
----
-layout: layouts/post.html
-title: "Kindle Keyboard browser"
-categories: en rare-species
-lang: en
----
-
-#Kindle Keyboard browser {#header}
+# Kindle Keyboard browser {#header}
 
 {% include pic.htm src='kindle-keyboard.jpg' a='Kindle Keyboard' %}
 
@@ -26,7 +19,7 @@ The browser doesn't have multiple windows or tabs. D-pad is used to move the cur
 
 The browser works fine with javascript, copes well with medium complexity pages, but slowes significantly when dealing with big amounts of high-res pics (supposedly due to the lack of RAM).
 
-###Feature tests {#feature-tests}
+### Feature tests {#feature-tests}
 
 <small>Feature tests are done using [Modernizr](//modernizr.com). [Full table of my tests](https://docs.google.com/spreadsheet/ccc?key=0AjA1cIs8C8MGdFdyQ0lMQnhMbHJEeVZpMW9XejhzU2c&usp=sharing#gid=0) on google docs.</small>
 
@@ -133,7 +126,7 @@ Amusingly enough, it supports animations and transitions. [Animation](/en/experi
 
 {% include pic.htm src='screen-animations.gif' a='screenshot with animations quality demonstration' %}
 
-###Zoom {#zoom}
+### Zoom {#zoom}
 
 Websites not optimized for mobile devices are shown "zoomed-out", while the cursor is replaced with a zooming frame:
 
@@ -141,7 +134,7 @@ Websites not optimized for mobile devices are shown "zoomed-out", while the curs
 
 <kbd>Back</kbd> button brings you back from zoomed-in to zoomed-out view.
 
-###Links {#links}
+### Links {#links}
 
 All the links forcibly receive `text-decoration: underline`. It cannot be overridden neither by `!important`, nor through javascript.
 
@@ -149,21 +142,21 @@ Links with `target="_blank"` don't work, instead a warning is shown:
 
 {% include pic.htm src='screen-warning.gif' a='screenshot showing a warning message: Web Browser could not open this link because opening multiple windows is not supported.' %}
 
-###Fonts {#fonts}
+### Fonts {#fonts}
 
 The only supported format for external fotns is SVG. Original [Font Awesome](http://fortawesome.github.io/Font-Awesome/) doesn't works for some reason, although it works just fine when generated with [Icomoon app](http://icomoon.io/app/).
 
-###Scroll {#scroll}
+### Scroll {#scroll}
 
 Internal blocks are scrollable with the cursor: it sticks to the edge of the block until the block is scrolled to the end in a particular direction:
 
 {% include pic.htm src='screen-scroll.gif' a='screenshot showing internal block with scroll' %}
 
-###Forms {#forms}
+### Forms {#forms}
 
 New input types are not supported, no validation is implemented.
 
-##Conclusion {#conclusion}
+## Conclusion {#conclusion}
 
 Not too shabby for an e-book reader. Virtually no problems showing mobile and adaptive websites.
 
