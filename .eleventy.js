@@ -1,12 +1,18 @@
-module.exports = function(eleventyConfig) {
-  eleventyConfig.addPassthroughCopy('css');
-  eleventyConfig.addPassthroughCopy('js');
-  eleventyConfig.addPassthroughCopy('i');
-  eleventyConfig.addPassthroughCopy('font');
-  eleventyConfig.addPassthroughCopy('steam');
-  eleventyConfig.addPassthroughCopy('demos');
+const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
+const yaml = require('js-yaml');
 
-  return {
-    passthroughFileCopy: true
-  };
+module.exports = config => {
+    config.addPlugin(syntaxHighlight);
+
+    config.setDataDeepMerge(true);
+
+    config.addDataExtension('yaml', contents => yaml.safeLoad(contents));
+
+    config.addPassthroughCopy('posts/**/*.jpg');
+    config.addPassthroughCopy('posts/**/*.png');
+    config.addPassthroughCopy('posts/**/*.webp');
+
+    return {
+        markdownTemplateEngine: 'ejs'
+    };
 };

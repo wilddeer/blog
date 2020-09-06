@@ -1,0 +1,41 @@
+.game-dlc-notice {
+    position: relative;
+    padding: 16px; /* fallback */
+    padding: 1rem;
+    border: 1px solid;
+    border-color: #6b2269 #6b2269 #6b2250 #6b2269;
+    border-radius: 0.3em;
+    background: #411541; /* fallback */
+    background-image: -webkit-linear-gradient(#411541, #290e23);
+    background-image: -moz-linear-gradient(#411541, #290e23);
+    background-image: linear-gradient(#411541, #290e23);
+}
+
+.game-dlc-notice:before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: -14px;
+    left: 10%;
+    width: 0;
+    border: 14px solid;
+    border-color: transparent transparent #6b2269 transparent;
+    border-top-width: 0;
+}
+
+.game-dlc-notice:after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: -12px;
+    left: 10%;
+    width: 0;
+    border: 14px solid;
+    border-color: transparent transparent #411541 transparent;
+    border-top-width: 0;
+}
+
+.game-dlc-notice > h3,
+.game-dlc-notice > *:last-child {
+    margin-bottom: 0;
+}
