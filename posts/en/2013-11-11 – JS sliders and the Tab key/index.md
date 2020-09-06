@@ -1,8 +1,5 @@
 ---
-layout: layouts/post.html
-title: "JS sliders and the Tab key"
-categories: en internet-maintenance
-lang: en
+title: JS sliders and the Tab key
 ---
 
 #JS sliders and the <kbd>Tab</kbd> key {#header}

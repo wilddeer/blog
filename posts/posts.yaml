@@ -1,4 +1,3 @@
-permalink: "<%- title.replace(/\\s/g, '-') %>/"
 tags:
     - post
 layout: layouts/post
