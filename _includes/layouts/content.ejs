@@ -1,10 +1,27 @@
 ---
 layout: layouts/base
 ---
+
 <header>
     <h1>
-        <a href="/">Утром доделаю</a>
+        <a href="/<%= lang !== 'ru' ? `${lang}/` : ''%>">
+            <%=
+                lang !== 'ru' ?
+                    'Will finish in the morning' :
+                    'Утром доделаю'
+            %>
+        </a>
     </h1>
+
+    <aside>
+        <% ['ru', 'en'].forEach(el => { %>
+            <% if (lang === el) { %>
+                <span><%= el %></span>
+            <% } else { %>
+                <a href="<%= el !== 'ru' ? `${el}/` : '/' %>"><%= el %></a>
+            <% } %>
+        <% }); %>
+    </aside>
 </header>
 
 <main>

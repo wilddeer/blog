@@ -1,3 +1,1 @@
-permalink: "<%- title.replace(/\\s/g, '-') %>/"
-tags:
-    - ru
+lang: ru
