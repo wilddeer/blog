@@ -11,6 +11,7 @@ module.exports = config => {
     config.addPassthroughCopy('posts/**/*.jpg');
     config.addPassthroughCopy('posts/**/*.png');
     config.addPassthroughCopy('posts/**/*.webp');
+    config.addPassthroughCopy('fonts/*.woff2');
 
     return {
         markdownTemplateEngine: 'ejs'

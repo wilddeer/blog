@@ -2,8 +2,21 @@
 layout: layouts/base
 ---
 
-<header>
-    <h1>
+<header class="site-header">
+    <aside class="site-header__lang-switcher lang-switcher">
+        <% ['ru', 'en'].forEach(el => { %>
+            <% if (lang === el) { %>
+                <span class="lang-switcher__lang"><%= el %></span>
+            <% } else { %>
+                <a
+                    class="lang-switcher__lang is-link"
+                    href="<%= el !== 'ru' ? `${el}/` : '/' %>"
+                ><%= el %></a>
+            <% } %>
+        <% }); %>
+    </aside>
+
+    <h1 class="site-header__title">
         <a href="/<%= lang !== 'ru' ? `${lang}/` : ''%>">
             <%=
                 lang !== 'ru' ?
@@ -12,24 +25,21 @@ layout: layouts/base
             %>
         </a>
     </h1>
-
-    <aside>
-        <% ['ru', 'en'].forEach(el => { %>
-            <% if (lang === el) { %>
-                <span><%= el %></span>
-            <% } else { %>
-                <a href="<%= el !== 'ru' ? `${el}/` : '/' %>"><%= el %></a>
-            <% } %>
-        <% }); %>
-    </aside>
 </header>
 
 <main>
-    <%- content %>
+    <div class="content-box">
+        <%- content %>
+    </div>
 </main>
 
-<footer>
-    <a href=""https://github.com/wilddeer>ГитХаб</a> &middot;
-    <a href="https://twitter.com/wildir">Твиттер</a> &middot;
-    Комментарии, баги, замечания → <a href="mailto:me@grumpy.site">me@grumpy.site</a>
+<footer class="content-box">
+    <% if (lang === 'en') { %>
+        <a href=""https://github.com/wilddeer>GitHub</a> &middot;
+        <a href="mailto:me@grumpy.site">me@grumpy.site</a> &larr; Comments, bugs, suggestions
+    <% } else { %>
+        <a href=""https://github.com/wilddeer>ГитХаб</a> &middot;
+        <a href="https://twitter.com/wildir">Твиттер</a> &middot;
+        <a href="mailto:me@grumpy.site">me@grumpy.site</a> &larr; Комментарии, баги, замечания
+    <% } %>
 </footer>
