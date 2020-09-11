@@ -25,15 +25,14 @@ permalink: /
                 post.data.title
             %></a>
 
-            <span class="post-list__item-date">
-                —
+            <time class="post-list__item-date">
                 <%-
                     include('/modules/parsedDate', {
                         dateString: post.data.date,
                         lang: 'ru'
                     })
                 %>
-            </span>
+            </time>
         </li>
     <% }); %>
 </ul>

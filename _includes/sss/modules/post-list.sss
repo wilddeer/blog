@@ -1,6 +1,10 @@
 .post-list
     &__item
         margin-bottom: 1em
+        padding-left: 1em
+
+        @media (min-width: $smallScreenSize)
+            padding-left: 0
 
     &__item:before
         content: '—'
@@ -23,5 +27,14 @@
         overflow: hidden
 
     &__item-date
-        font-size: $smallFontSize
+        display: block
+        font-size: $tinyFontSize
         font-style: italic
+
+        @media (min-width: $tinyScreenSize)
+            display: inline
+            font-size: $smallFontSize
+
+    &__item-date:before
+        @media (min-width: $tinyScreenSize)
+            content: '—'
