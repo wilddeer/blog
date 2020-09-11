@@ -17,29 +17,40 @@ layout: layouts/base
     </aside>
 
     <h1 class="site-header__title">
-        <a href="/<%= lang !== 'ru' ? `${lang}/` : ''%>">
+        <a class="site-header__title-link <%= tags.includes('root') ? 'is-root' : '' %>" href="/<%= lang !== 'ru' ? `${lang}/` : ''%>">
             <%=
                 lang !== 'ru' ?
-                    'Will finish in the morning' :
-                    'Утром доделаю'
+                    'Grumpy Dev Blog' :
+                    'Grumpy Dev Blog'
             %>
         </a>
     </h1>
 </header>
 
-<main>
-    <div class="content-box">
-        <%- content %>
-    </div>
+<main class="content-box">
+    <%- content %>
 </main>
 
-<footer class="content-box">
+<footer class="footer">
     <% if (lang === 'en') { %>
-        <a href=""https://github.com/wilddeer>GitHub</a> &middot;
-        <a href="mailto:me@grumpy.site">me@grumpy.site</a> &larr; Comments, bugs, suggestions
+        <span class="footer__el">
+            <a class="link" href="https://github.com/wilddeer">GitHub</a>
+        </span>
+
+        <span class="footer__el">
+            <a class="link" href="mailto:me@grumpy.site">me@grumpy.site</a> &larr; Comments, bugs, suggestions
+        </span>
     <% } else { %>
-        <a href=""https://github.com/wilddeer>ГитХаб</a> &middot;
-        <a href="https://twitter.com/wildir">Твиттер</a> &middot;
-        <a href="mailto:me@grumpy.site">me@grumpy.site</a> &larr; Комментарии, баги, замечания
+        <span class="footer__el">
+            <a class="link" href="https://github.com/wilddeer">ГитХаб</a>
+        </span>
+
+        <span class="footer__el">
+            <a class="link" href="https://twitter.com/wildir">Твиттер</a>
+        </span>
+
+        <span class="footer__el">
+            <a class="link" href="mailto:me@grumpy.site">me@grumpy.site</a> &larr; Комментарии, баги, замечания
+        </span>
     <% } %>
 </footer>

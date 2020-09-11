@@ -1,0 +1,64 @@
+<%
+    // Args: dateString, lang
+
+    const date = new Date(dateString);
+    const dayOfMonth = date.getDate();
+    const month = [
+        {
+            en: 'January',
+            ru: 'января'
+        },
+        {
+            en: 'February',
+            ru: 'февраля'
+        },
+        {
+            en: 'March',
+            ru: 'марта'
+        },
+        {
+            en: 'April',
+            ru: 'апреля'
+        },
+        {
+            en: 'May',
+            ru: 'мая'
+        },
+        {
+            en: 'June',
+            ru: 'июня'
+        },
+        {
+            en: 'July',
+            ru: 'июля'
+        },
+        {
+            en: 'August',
+            ru: 'августа'
+        },
+        {
+            en: 'September',
+            ru: 'сентября'
+        },
+        {
+            en: 'October',
+            ru: 'октября'
+        },
+        {
+            en: 'November',
+            ru: 'ноября'
+        },
+        {
+            en: 'December',
+            ru: 'декабря'
+        }
+    ][date.getMonth()][lang];
+    const year = date.getFullYear();
+
+    if (lang === 'ru') {
+        return `${dayOfMonth} ${month} ${year}`;
+    }
+    else {
+        return `${month} ${dayOfMonth}, ${year}`;
+    }
+%>

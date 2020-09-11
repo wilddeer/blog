@@ -1,0 +1,10 @@
+.footer
+    @mixin contentBox
+    margin-top: 2em
+    margin-bottom: 2em
+    color: $inactiveColor
+    font-size: $smallFontSize
+
+    &__el:not(:last-of-type):after
+        content: ' • '
+

@@ -1,0 +1,39 @@
+---
+layout: layouts/page
+title: Утром доделаю
+lang: ru
+tags:
+    - root
+permalink: /
+---
+
+<div class="text">
+    <p>
+        Тут всякое нытье и че-то про разработку.
+    </p>
+</div>
+
+<ul class="post-list">
+    <%
+        collections.post
+            .filter(post => post.data.lang === 'ru')
+            .reverse()
+            .forEach(post => {
+    %>
+        <li class="post-list__item">
+            <a class="link" href="<%= post.url %>"><%=
+                post.data.title
+            %></a>
+
+            <span class="post-list__item-date">
+                —
+                <%-
+                    include('/modules/parsedDate', {
+                        dateString: post.data.date,
+                        lang: 'ru'
+                    })
+                %>
+            </span>
+        </li>
+    <% }); %>
+</ul>
