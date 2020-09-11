@@ -1,4 +1,9 @@
 .post-list
+    margin-bottom: 1.5em
+
+    &.is-archive
+        color: $inactiveColor
+
     &__item
         margin-bottom: 1em
         padding-left: 1em
@@ -38,3 +43,9 @@
     &__item-date:before
         @media (min-width: $tinyScreenSize)
             content: '—'
+
+    &:not(.is-archive) &__item-link
+        @mixin link
+
+    &.is-archive &__item-link
+        text-decoration: underline

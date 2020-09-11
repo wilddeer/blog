@@ -13,26 +13,28 @@ permalink: /
     </p>
 </div>
 
-<ul class="post-list">
-    <%
-        collections.post
-            .filter(post => post.data.lang === 'ru')
-            .reverse()
-            .forEach(post => {
-    %>
-        <li class="post-list__item">
-            <a class="link" href="<%= post.url %>"><%=
-                post.data.title
-            %></a>
+<%-
+    include('/modules/postsList', {
+        posts: collections.post.filter(
+            post => !post.data.tags.includes('archive')
+        ),
+        lang
+    })
+%>
 
-            <time class="post-list__item-date">
-                <%-
-                    include('/modules/parsedDate', {
-                        dateString: post.data.date,
-                        lang: 'ru'
-                    })
-                %>
-            </time>
-        </li>
-    <% }); %>
-</ul>
+<div class="text-tinted">
+    <h2 class="post-list-title">Архив устаревшей фигни</h2>
+
+    <p class="post-list-description">
+        Старые посты, которые не несути никакой практической пользы и оставлены для истории.
+    </p>
+</div>
+<%-
+    include('/modules/postsList', {
+        posts: collections.post.filter(
+            post => post.data.tags.includes('archive')
+        ),
+        isArchive: true,
+        lang
+    })
+%>
