@@ -2,17 +2,13 @@ const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const yaml = require('js-yaml');
 
 module.exports = config => {
-    // Plugins
-    config.addPlugin(syntaxHighlight);
-
     config.setDataDeepMerge(true);
 
+    // Support YAML data files
     config.addDataExtension('yaml', contents => yaml.safeLoad(contents));
 
-    config.addFilter('formatDate', (dateString, lang) => {
-        const date = new Date(dateString);
-        return +date;
-    });
+    // Plugins
+    config.addPlugin(syntaxHighlight);
 
     // Passthrough
     config.addPassthroughCopy('posts/**/*.jpg');
