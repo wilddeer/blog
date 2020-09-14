@@ -10,7 +10,7 @@ layout: layouts/base
             <% } else { %>
                 <a
                     class="lang-switcher__lang is-link"
-                    href="<%= el !== 'ru' ? `${el}/` : '/' %>"
+                    href="/<%= el !== 'ru' ? `${el}/` : '' %>"
                 ><%= el %></a>
             <% } %>
         <% }); %>

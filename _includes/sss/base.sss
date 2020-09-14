@@ -10,24 +10,24 @@ html
 body
     font-size: 1.15em
     width: 100%
-    background: #fcfcfa
+    background: #fffff9
 
 body,
 input,
 select,
 textarea,
 button
-    color: #403333
+    color: $textColor
     font-family: 'Scada', sans-serif
 
 body
-    line-height: 1.6
+    line-height: $baseLineHeight
     -webkit-font-smoothing: antialiased
     overflow-y: scroll
 
 input,
 textarea
-    line-height: 1.6
+    line-height: $baseLineHeight
 
 // placeholders
 *::-webkit-input-placeholder,
@@ -37,13 +37,13 @@ textarea
     opacity: 1
 
 &::-webkit-input-placeholder
-    color: #403333
+    color: $textColor
 
 &::-moz-placeholder
-    color: #403333
+    color: $textColor
 
 &:-ms-input-placeholder
-    color: #403333
+    color: $textColor
 
 .is-mouse-focused:focus,
 *:hover,

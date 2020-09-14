@@ -8,11 +8,16 @@ module.exports = {
     },
 
     async render () {
-        const rawDirPath = path.join(__dirname, '../_includes/sss');
-        const rawFilepath = `${rawDirPath}/styles.sss`;
-        const rawCss = await fs.readFileSync(rawFilepath);
+        const includesPath = path.join(__dirname, '../_includes');
 
-        return await postcss([
+
+        /*
+         * Project css
+         */
+        const projectStylesFilepath = `${includesPath}/sss/styles.sss`;
+        const projectRawCss = await fs.readFileSync(projectStylesFilepath);
+
+        const projectCss = await postcss([
             require('postcss-easy-import')({
                 extensions: '.sss'
             }),
@@ -20,12 +25,33 @@ module.exports = {
             require('postcss-simple-vars'),
             require('postcss-hexrgba'),
             require('postcss-nested'),
-            // require('cssnano')
+            require('cssnano')
         ])
-        .process(rawCss, {
-            from: rawFilepath,
+        .process(projectRawCss, {
+            from: projectStylesFilepath,
             parser: require('sugarss')
         })
         .then(result => result.css);
+
+
+        /*
+         * Plugins css
+         */
+        const pluginsStylesFilepath = `${includesPath}/css/styles.css`;
+        const pluginsRawCss = await fs.readFileSync(pluginsStylesFilepath);
+
+        const pluginsCss = await postcss([
+            require('postcss-easy-import')({
+                extensions: '.css'
+            }),
+            require('cssnano')
+        ])
+        .process(pluginsRawCss, {
+            from: pluginsStylesFilepath
+        })
+        .then(result => result.css);
+
+
+        return `${pluginsCss}\n\n${projectCss}`;
     }
 };

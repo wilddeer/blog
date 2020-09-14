@@ -10,5 +10,57 @@
     p
         margin-bottom: 1.5em
 
+    figure
+        text-align: center
+        margin-bottom: 1.5em
+
+    figcaption
+        padding-bottom: 0.8em
+        font-style: italic
+        color: $inactiveTextColor
+        font-size: 0.8em
+
+    figure * + figcaption
+        padding-top: 0.8em
+        padding-bottom: 0
+
     a
         @mixin link
+
+    :not(pre) code
+        background-color: #fff4f0
+        color: #ff0000
+        border-radius: 0.25em
+        padding: 0 0.25em
+        font-size: $smallFontSize
+        font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace
+
+    pre
+        margin-bottom: 1em
+
+    table
+        width: 100%
+        border-collapse: collapse
+        border-spacing: 0
+
+    tr
+        border-top: 1px solid $borderColor
+
+    tbody tr:nth-child(odd)
+        background: #f8f8f8
+
+    th
+        font-weight: bold
+
+    td,
+    th
+        padding: 0.3em 0.5em
+        text-align: left
+
+    td.is-true
+        color: $successColor
+        background-color: $successBgColor
+
+    td.is-false
+        color: $dangerColor
+        background-color: $dangerBgColor
