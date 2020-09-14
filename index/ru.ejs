@@ -15,26 +15,7 @@ permalink: /
 
 <%-
     include('/modules/postsList', {
-        posts: collections.post.filter(
-            post => !post.data.tags.includes('archive')
-        ),
-        lang
-    })
-%>
-
-<div class="text-tinted">
-    <h2 class="post-list-title">Архив устаревшей фигни</h2>
-
-    <p class="post-list-description">
-        Старые посты, которые не несути никакой практической пользы и оставлены для истории.
-    </p>
-</div>
-<%-
-    include('/modules/postsList', {
-        posts: collections.post.filter(
-            post => post.data.tags.includes('archive')
-        ),
-        isArchive: true,
+        posts: collections.post,
         lang
     })
 %>

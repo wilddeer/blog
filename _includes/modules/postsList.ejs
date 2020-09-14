@@ -1,30 +1,55 @@
-<% // Args: posts, lang, isArchive %>
-<ul class="
-    post-list
-    <%= typeof isArchive !== 'undefined' && isArchive ?
-        'is-archive' :
-        ''
-    %>
-">
+<% // Args: posts, lang %>
+<%
+    posts
+        .filter(post => post.data.lang === lang)
+        .reverse()
+        .forEach((post, index, filteredPosts) => {
+%>
     <%
-        posts
-            .filter(post => post.data.lang === lang)
-            .reverse()
-            .forEach(post => {
-    %>
-        <li class="post-list__item">
-            <a class="post-list__item-link" href="<%= post.url %>"><%=
-                post.data.title
-            %></a>
+        let yearHeading;
+        const prevPost = filteredPosts[index - 1];
+        const postDate = new Date(post.data.date);
+        const postYear = postDate.getFullYear();
 
-            <time class="post-list__item-date">
-                <%-
-                    include('/modules/parsedDate', {
-                        dateString: post.data.date,
-                        lang: lang
-                    })
-                %>
-            </time>
-        </li>
-    <% }); %>
-</ul>
+        if (prevPost) {
+            const prevPostDate = new Date(prevPost.data.date);
+            const prevPostYear = prevPostDate.getFullYear();
+
+            if (postYear !== prevPostYear) {
+                yearHeading = postYear;
+            }
+        }
+        else {
+            yearHeading = postYear;
+        }
+    %>
+    <% if (prevPost && yearHeading) { %>
+        </ul>
+    <% } %>
+    <% if (yearHeading) { %>
+        <h2 class="post-list-title"><%= yearHeading %></h2>
+
+        <ul class="post-list">
+    <% } %>
+
+    <li class="post-list__item <%= post.data.tags.includes('archive') ? 'is-archive' : '' %>">
+        <a class="post-list__item-link" href="<%= post.url %>"><%=
+            post.data.title
+        %></a>
+
+        <% if (post.data.tags.includes('archive')) { %>
+            <span class="post-list__item-badge">
+                <span class="badge">устаревшая фигня</span>
+            </span>
+        <% } %>
+
+        <time class="post-list__item-date">
+            <%-
+                include('/modules/parsedDate', {
+                    dateString: post.data.date,
+                    lang: lang
+                })
+            %>
+        </time>
+    </li>
+<% }); %>

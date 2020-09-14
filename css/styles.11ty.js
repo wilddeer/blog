@@ -16,9 +16,9 @@ module.exports = {
             require('postcss-easy-import')({
                 extensions: '.sss'
             }),
-            require('postcss-simple-vars'),
             require('postcss-mixins'),
-            require('postcss-color-mix'),
+            require('postcss-simple-vars'),
+            require('postcss-hexrgba'),
             require('postcss-nested'),
             // require('cssnano')
         ])

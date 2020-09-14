@@ -1,11 +1,13 @@
-@define-mixin link
-    color: $linkColor
+@define-mixin link $color: $linkColor, $visitedColor: $linkVisitedColor, $hoverColor: $linkHoverBg
+    color: $color
     text-decoration: underline
+    text-decoration-color: rgba($color, 0.5)
 
     &:visited
-        color: $linkVisitedColor
+        color: $visitedColor
+        text-decoration-color: rgba($visitedColor, 0.5)
 
     &:hover
         color: #fff
-        background: $linkHoverBg
+        background: $hoverColor
         text-decoration: none

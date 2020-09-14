@@ -15,26 +15,7 @@ permalink: en/
 
 <%-
     include('/modules/postsList', {
-        posts: collections.post.filter(
-            post => !post.data.tags.includes('archive')
-        ),
-        lang
-    })
-%>
-
-<div class="text-tinted">
-    <h2 class="post-list-title">Archive of outdated crap</h2>
-
-    <p class="post-list-description">
-        Old posts that have no practical use and are left for history.
-    </p>
-</div>
-<%-
-    include('/modules/postsList', {
-        posts: collections.post.filter(
-            post => post.data.tags.includes('archive')
-        ),
-        isArchive: true,
+        posts: collections.post,
         lang
     })
 %>

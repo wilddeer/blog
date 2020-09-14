@@ -1,9 +1,6 @@
 .post-list
     margin-bottom: 1.5em
 
-    &.is-archive
-        color: $inactiveColor
-
     &__item
         margin-bottom: 1em
         padding-left: 1em
@@ -31,6 +28,9 @@
         width: 0.75em
         overflow: hidden
 
+    &__item.is-archive
+        color: $inactiveColor
+
     &__item-date
         display: block
         font-size: $tinyFontSize
@@ -44,8 +44,11 @@
         @media (min-width: $tinyScreenSize)
             content: '—'
 
-    &:not(.is-archive) &__item-link
+    &__item:not(.is-archive) &__item-link
         @mixin link
 
-    &.is-archive &__item-link
-        text-decoration: underline
+    &__item.is-archive &__item-link
+        @mixin link $inactiveColor, $inactiveColor, $inactiveColor
+
+    &__item-badge
+        margin-left: 0.1em
