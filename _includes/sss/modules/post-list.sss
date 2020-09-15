@@ -3,30 +3,27 @@
 
     &__item
         margin-bottom: 1em
-        padding-left: 1em
-
-        @media (min-width: $smallScreenSize)
-            padding-left: 0
 
     &__item:before
-        content: '—'
-        margin-left: -1em
+        @media (min-width: $smallScreenSize)
+            content: '—'
+            margin-left: -1em
 
-        /*
-         * The real width of the m-dash is unknown.
-         *
-         * The dash is absolutely positioned to keep the
-         * position of the text unaffected.
-         */
-        position: absolute
+            /*
+             * The real width of the m-dash is unknown.
+             *
+             * The dash is absolutely positioned to keep the
+             * position of the text unaffected.
+             */
+            position: absolute
 
-        /*
-         * If the dash is too long, we cut it with max-width
-         * and overflow: hidden
-         */
-        display: inline-block
-        width: 0.75em
-        overflow: hidden
+            /*
+             * If the dash is too long, we cut it with max-width
+             * and overflow: hidden
+             */
+            display: inline-block
+            width: 0.75em
+            overflow: hidden
 
     &__item.is-archive
         color: $inactiveTextColor
