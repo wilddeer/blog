@@ -1,0 +1,20 @@
+@define-mixin dashedListItem
+    &:before
+        content: '—'
+        margin-left: -1em
+
+        /*
+         * The real width of the m-dash is unknown.
+         *
+         * The dash is absolutely positioned to keep the
+         * position of the text unaffected.
+         */
+        position: absolute
+
+        /*
+         * If the dash is too long, we cut it with max-width
+         * and overflow: hidden
+         */
+        display: inline-block
+        width: 0.75em
+        overflow: hidden

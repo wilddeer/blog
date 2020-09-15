@@ -2,10 +2,24 @@
     @mixin contentBox
     padding-top: 1.5em
 
+    &.is-root
+        @media (min-width: $tinyScreenSize)
+            margin-top: 3em
+
+        @media (min-width: $smallScreenSize)
+            margin-top: 20vh
+
     &__title
         font-size: 3em
         margin-bottom: 0.7em
         line-height: 1.2
+
+    &.is-root &__title
+        @media (min-width: $tinyScreenSize)
+            font-size: 4em
+
+        @media (min-width: $smallScreenSize)
+            font-size: 5em
 
     &__title-link:not(.is-root)
         @mixin link $linkColor, $linkColor

@@ -5,6 +5,13 @@
     color: $inactiveTextColor
     font-size: $smallerFontSize
 
+    &.is-root
+        @media (min-width: $tinyScreenSize)
+            margin-bottom: 6em
+
+        @media (min-width: $smallScreenSize)
+            margin-bottom: 20vh
+
     &__el:not(:last-of-type):after
         content: ' • '
 

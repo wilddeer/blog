@@ -1,3 +1,14 @@
+---
+tags:
+    - archive
+---
+
+<%-
+    include('/modules/depricationWarning', {
+        lang
+    })
+%>
+
 <small>Originally translated by [Varya Stepanova](http://varya.me/) and posted on [Frontend Babel](http://frontendbabel.info/articles/about-viewport/).</small>
 
 # About the `@viewport`

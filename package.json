@@ -6,7 +6,9 @@
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
+    "@infinity-interactive/eleventy-plugin-injector": "0.0.9",
     "cssnano": "^4.1.10",
+    "fast-glob": "^3.2.4",
     "js-yaml": "^3.14.0",
     "postcss": "^7.0.32",
     "postcss-easy-import": "^3.0.0",

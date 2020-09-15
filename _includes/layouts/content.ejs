@@ -2,7 +2,7 @@
 layout: layouts/base
 ---
 
-<header class="site-header">
+<header class="site-header <%= tags.includes('root') ? 'is-root' : '' %>">
     <aside class="site-header__lang-switcher lang-switcher">
         <% ['ru', 'en'].forEach(el => { %>
             <% if (lang === el) { %>
@@ -31,7 +31,7 @@ layout: layouts/base
     <%- content %>
 </main>
 
-<footer class="footer">
+<footer class="footer <%= tags.includes('root') ? 'is-root' : '' %>">
     <% if (lang === 'en') { %>
         <span class="footer__el">
             <a class="link" href="https://github.com/wilddeer">GitHub</a>
