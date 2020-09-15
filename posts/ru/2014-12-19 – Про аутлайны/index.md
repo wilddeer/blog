@@ -20,12 +20,13 @@
     });
     document.body.appendChild(testElement);
     testElement.focus();
-    const outlineStyle = testElement.style.outline;
+    const computedStyle = getComputedStyle(testElement);
+    const outlineStyle = computedStyle.outline;
     const demoElement = document.querySelector('.js-outline-demo');
 
     if (
         outlineStyle &&
-        testElement.css('outline-style') !== 'none'
+        computedStyle.outlineStyle !== 'none'
     ) {
         demoElement.style.outline = outlineStyle;
     }
