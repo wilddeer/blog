@@ -4,26 +4,8 @@
     &__item
         margin-bottom: 1em
 
-    &__item:before
         @media (min-width: $smallScreenSize)
-            content: '—'
-            margin-left: -1em
-
-            /*
-             * The real width of the m-dash is unknown.
-             *
-             * The dash is absolutely positioned to keep the
-             * position of the text unaffected.
-             */
-            position: absolute
-
-            /*
-             * If the dash is too long, we cut it with max-width
-             * and overflow: hidden
-             */
-            display: inline-block
-            width: 0.75em
-            overflow: hidden
+            @mixin dashedListItem
 
     &__item.is-archive
         color: $inactiveTextColor

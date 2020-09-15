@@ -1,14 +1,23 @@
-.text
+.text >,
+.text > :not(.text-escape)
     h1
         font-size: 3em
         margin: 0 0 0.2em
 
     h2
         margin-bottom: 0.8em
-        font-size: 1.5em
+        font-size: $heading2FontSize
 
     p
         margin-bottom: 1.5em
+
+    ul
+        margin-bottom: 1.5em
+
+    ul > li
+        padding-left: 2.2em
+        margin-bottom: 1em
+        @mixin dashedListItem
 
     figure
         text-align: center
