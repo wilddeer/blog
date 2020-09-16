@@ -48,12 +48,13 @@ module.exports = config => {
 
     // Passthrough
     config.addPassthroughCopy('fonts/*.woff2');
+    config.addPassthroughCopy('svg/*.svg');
 
     // Copy the assets to the corresponding post folders
     config.addPlugin(pluginInjector, {
         inject: async (instance, options, file) => {
             const base = 'posts';
-            const paths = await fastglob(['**/*.{jpg,png,gif,webp,webm}'], {cwd: base});
+            const paths = await fastglob(['**/*.{jpg,png,gif,webp,webm,css}'], {cwd: base});
 
             paths.forEach(async entry => {
                 console.log('[asets copy] Processing', entry);

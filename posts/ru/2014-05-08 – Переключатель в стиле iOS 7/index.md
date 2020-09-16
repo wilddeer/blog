@@ -1,3 +1,5 @@
+# Переключатель в стиле iOS 7 {.sr-only}
+
 <style>
     /* demo styles */
     .button-demo .button-smaple {
@@ -32,7 +34,7 @@
         font-size: 1.5em;
     }
 
-{% include ios7-switch/ios7-switch.modernizr.css %}
+    <%- include('ios7-switch.css') %>
 </style>
 
 <figure class="button-demo">
@@ -42,31 +44,26 @@
             <span></span>
         </label>
     </div>
-
     <div class="button-smaple">
         <label class="ios7-switch" style="font-size: 32px;">
             <input type="checkbox">
             <span></span>
         </label>
-
         <label class="ios7-switch" style="font-size: 48px;">
             <input type="checkbox">
             <span></span>
         </label>
-
         <label class="ios7-switch" style="font-size: 64px;">
             <input type="checkbox">
             <span></span>
         </label>
     </div>
-
     <label class="ios7-switch line-sample">
         Покормить кота
         <input type="checkbox" checked>
         <span></span>
     </label>
 </figure>
-
 
 Имитация переключателя из iOS 7. Переключатель планировалось использовать на новой [Пепяке](http://pepyaka.su), но в результате я забил на него. Пусть тут полежит. Фичи:
 
@@ -75,9 +72,9 @@
 - все размеры в `em`-ах, размер переключателя зависит от размера текста,
 - доступен с клавиатуры.
 
-<a href="https://github.com/wilddeer/ios7-switch" class="iconlink"><i class="icon-github"> </i><span>Форк ми, бейби</span></a>
+[<%- include('/svg/code-branch.svg') %>Форк ми, бейби](https://github.com/wilddeer/ios7-switch)
 
-### Разметка
+## Разметка
 
 ```html
 <label class="ios7-switch">
@@ -98,13 +95,15 @@
 
 или что-то другое в этом роде, идея понятна.
 
-### CSS
+## CSS
 
 ```css
-{% include ios7-switch/ios7-switch.css %}
+<%- include('ios7-switch.css') %>
 ```
 
-### Проблемы
+## Проблемы
+
+<del class="deleted-block">
 
 Не работает в браузерах, не поддерживающих `box-shadow` (ИЕ8 и ниже, Андроид 3.x и ниже). Можно сделать фоллбек на обычный чекбокс, например, с помощью [Модернайзера](http://modernizr.com). Пишем тест:
 
@@ -114,9 +113,14 @@ Modernizr.addTest('unprefixed-boxshadow', Modernizr.testProp('boxShadow', '1px 1
 
 и используем модифицированный CSS — <a href="https://raw.githubusercontent.com/wilddeer/ios7-switch/master/ios7-switch.modernizr.css" class="iconlink"><i class="icon-cloud-download"> </i><span>ios7-switch.modernizr.css</span></a>.
 
+</del>
+
+**Подсказка из будущего:** в 2020 это не проблемы :—)
+{.notice .is-success}
+
 Есть проблемы с ошибками округления в некоторых браузерах при определенных размерах шрифта. Обходятся небольшими твиками размера шрифта.
 
-### По теме
+## По теме
 
 - [Модный переключатель](http://pepelsbey.net/2012/08/stylish-switch/), *Вадим Макеев*
 - [iOS 6 switch style checkboxes with pure CSS](http://lea.verou.me/2013/03/ios-6-switch-style-checkboxes-with-pure-css/), *Lea Verou*
