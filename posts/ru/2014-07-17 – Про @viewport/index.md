@@ -5,7 +5,7 @@ tags:
 
 <%-
     include('/modules/depricationWarning', {
-        lang
+        lang: _.lang
     })
 %>
 
@@ -116,7 +116,6 @@ tags:
 <%-
     include('/modules/pic', {
         src: 'win8-before.gif',
-        hasPreview: false,
         alt: 'Демонстрация того, как винда не воспринимает мета-тег',
         caption: 'С мета-тегом сайт зумится'
     })
@@ -125,7 +124,6 @@ tags:
 <%-
     include('/modules/pic', {
         src: 'win8-after.gif',
-        hasPreview: false,
         alt: 'Демонстрация того, как винда радуется наличию @viewport',
         caption: 'С <code>@-ms-viwport</code> сайт адаптируется'
     })

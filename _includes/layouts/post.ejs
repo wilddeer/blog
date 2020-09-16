@@ -4,16 +4,17 @@ layout: layouts/content
 <div class="post">
     <div class="content-box">
         <div class="text">
-            <%- content %>
+            <%- _.content %>
         </div>
 
         <p class="publish-date">
-            <%= lang === 'ru' ? 'Опубликовано' : 'Published on' %>
+            <%= _.lang === 'ru' ? 'Опубликовано' : 'Published on' %>
             <time>
                 <%-
                     include('/modules/parsedDate', {
-                        dateString: date,
-                        lang
+                        dateString: _.date,
+                        lang: _.lang,
+                        showYear: true
                     })
                 %>
             </time>

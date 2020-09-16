@@ -1,7 +1,7 @@
 <% // Args: pics %>
 <div class="pics">
     <%-
-        pics.map(pic => (
+        _.pics.map(pic => (
             include('/modules/pic', {
                 ...pic
             })

@@ -1,7 +1,9 @@
 <% // Args: src, caption, alt, hasPreview %>
 <figure>
-    <a href="<%= src %>" target="_blank">
-        <img src="<%= hasPreview ? `p_${src}` : src %>" alt="<%= alt %>">
+    <a href="<%= _.src %>" target="_blank">
+        <img src="<%= _.hasPreview ? `p_${_.src}` : _.src %>" alt="<%= _.alt %>">
     </a>
-    <figcaption><%- caption %></figcaption>
+    <%_ if (_.caption) { _%>
+        <figcaption><%- _.caption %></figcaption>
+    <%_ } _%>
 </figure>

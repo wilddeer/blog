@@ -2,11 +2,11 @@
 layout: layouts/base
 ---
 
-<header class="site-header <%= tags.includes('root') ? 'is-root' : '' %>">
+<header class="site-header <%= _.tags.includes('root') ? 'is-root' : '' %>">
     <nav>
         <aside class="site-header__lang-switcher lang-switcher">
             <% ['ru', 'en'].forEach(el => { %>
-                <% if (lang === el) { %>
+                <% if (_.lang === el) { %>
                     <span class="lang-switcher__lang"><%= el %></span>
                 <% } else { %>
                     <a
@@ -17,24 +17,24 @@ layout: layouts/base
             <% }); %>
         </aside>
 
-        <<%= tags.includes('root') ? 'h1' : 'div' %> class="site-header__title">
-            <a class="site-header__title-link <%= tags.includes('root') ? 'is-root' : '' %>" href="/<%= lang !== 'ru' ? `${lang}/` : ''%>">
+        <<%= _.tags.includes('root') ? 'h1' : 'div' %> class="site-header__title">
+            <a class="site-header__title-link <%= _.tags.includes('root') ? 'is-root' : '' %>" href="/<%= _.lang !== 'ru' ? `${_.lang}/` : ''%>">
                 <%=
-                    lang !== 'ru' ?
+                    _.lang !== 'ru' ?
                         'Grumpy Dev Blog' :
                         'Grumpy Dev Blog'
                 %>
             </a>
-        </<%= tags.includes('root') ? 'h1' : 'div' %>>
+        </<%= _.tags.includes('root') ? 'h1' : 'div' %>>
     </nav>
 </header>
 
 <main>
-    <%- content %>
+    <%- _.content %>
 </main>
 
-<footer class="footer <%= tags.includes('root') ? 'is-root' : '' %>">
-    <% if (lang === 'en') { %>
+<footer class="footer <%= _.tags.includes('root') ? 'is-root' : '' %>">
+    <% if (_.lang === 'en') { %>
         <span class="footer__el">
             <a class="link" href="https://github.com/wilddeer">GitHub</a>
         </span>

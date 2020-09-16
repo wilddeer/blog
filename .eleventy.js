@@ -8,6 +8,12 @@ const fastglob = require('fast-glob');
 module.exports = config => {
     config.setDataDeepMerge(true);
 
+    // EJS config
+    config.setEjsOptions({
+        _with: false,
+        localsName: '_'
+    });
+
     // Support YAML data files
     config.addDataExtension('yaml', contents => yaml.safeLoad(contents));
 
