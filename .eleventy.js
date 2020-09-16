@@ -7,6 +7,8 @@ const fastglob = require('fast-glob');
 const markdownIt = require('markdown-it');
 const markdownItAttrs = require('markdown-it-attrs');
 const markdownItKdb = require('markdown-it-kbd');
+const markdownItDiv = require('markdown-it-div');
+const markdownItImplicitFigures = require('markdown-it-implicit-figures');
 
 module.exports = config => {
     config.setDataDeepMerge(true);
@@ -21,6 +23,10 @@ module.exports = config => {
     const markdownLib = markdownIt({
         html: true
     })
+        .use(markdownItImplicitFigures, {
+            figcaption: true
+        })
+        .use(markdownItDiv)
         .use(markdownItAttrs)
         .use(markdownItKdb);
 

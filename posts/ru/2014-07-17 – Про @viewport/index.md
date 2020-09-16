@@ -19,45 +19,19 @@ tags:
 
 В портретном режиме разницы между айосью и винфоном не видно:
 
-<%-
-    include('/modules/pics', {
-        pics: [
-            {
-                src: 'before-portrait.png',
-                hasPreview: true,
-                alt: 'Скриншот с винфона в портретном режиме до исправдения',
-                caption: 'Windows Phone 8.1'
-            },
-            {
-                src: 'ipod-portrait.png',
-                hasPreview: true,
-                alt: 'Скриншот с айпода в портретном режиме для сравнения',
-                caption: 'iOS 7'
-            }
-        ]
-    })
-%>
+::: .pics
+![Windows Phone 8.1](before-portrait.png)
+
+![iOS 7](ipod-portrait.png)
+:::
 
 В ландшафтном очевидна конскость на винфоне:
 
-<%-
-    include('/modules/pics', {
-        pics: [
-            {
-                src: 'before-landscape.png',
-                hasPreview: true,
-                alt: 'Скриншот с винфона в ландшафтном режиме до исправдения',
-                caption: 'Windows Phone 8.1'
-            },
-            {
-                src: 'ipod-landscape.png',
-                hasPreview: true,
-                alt: 'Скриншот с айпода в ландшафтном режиме для сравнения',
-                caption: 'iOS 7'
-            }
-        ]
-    })
-%>
+::: .pics
+![Windows Phone 8.1](before-landscape.png)
+
+![iOS 7](ipod-landscape.png)
+:::
 
 Оказалось, традиционный мета-тег `<meta name="viewport" content="width=device-width, initial-scale=1">` воспринимается винфоном как указание сделать вьюпорт шириной 320 (логических) пикселей не зависимо от разрешения девайса (потому что айфон).
 
@@ -65,45 +39,19 @@ tags:
 
 Теперь все как и должно быть:
 
-<%-
-    include('/modules/pics', {
-        pics: [
-            {
-                src: 'before-landscape.png',
-                hasPreview: true,
-                alt: 'Скриншот с винфона в ландшафтном режиме до исправдения',
-                caption: 'Было'
-            },
-            {
-                src: 'after-landscape.png',
-                hasPreview: true,
-                alt: 'Скриншот с винфона в ландшафтном режиме после исправдения',
-                caption: 'Стало'
-            }
-        ]
-    })
-%>
+::: .pics
+![Было](before-landscape.png)
+
+![Стало](after-landscape.png)
+:::
 
 В портретном режиме тоже видны небольшие изменения (у HTC 8x больше разрешение, чем у айпода, ретинистость у обоих одинаковая, значит, вьюпорт на HTC должен быть немного шире 320 пикселей):
 
-<%-
-    include('/modules/pics', {
-        pics: [
-            {
-                src: 'before-portrait.png',
-                hasPreview: true,
-                alt: 'Скриншот с винфона в портретном режиме до исправдения',
-                caption: 'Было'
-            },
-            {
-                src: 'after-portrait.png',
-                hasPreview: true,
-                alt: 'Скриншот с винфона в портретном режиме после исправдения',
-                caption: 'Стало'
-            }
-        ]
-    })
-%>
+::: .pics
+![Было](before-portrait.png)
+
+![Стало](after-portrait.png)
+:::
 
 На WP 8 до третьего обновления `@-ms-viewport` был забагованный, потому как смотрел не на логические пиксели, а на реальные, что приводило к слишком большому размеру вьюпорта (и слишком мелкому сайту) на ретинистых винфонах.
 
@@ -113,21 +61,9 @@ tags:
 
 Еще, [как выяснилось](http://timkadlec.com/2013/01/windows-phone-8-and-device-width/), ИЕ в 8 винде в метро-режиме совсем не смотрит на мета-тег, зато прекрасно понимают `@-ms-viewport`. Вот пара поясняющих гифок:
 
-<%-
-    include('/modules/pic', {
-        src: 'win8-before.gif',
-        alt: 'Демонстрация того, как винда не воспринимает мета-тег',
-        caption: 'С мета-тегом сайт зумится'
-    })
-%>
+![С мета-тегом сайт зумится](win8-before.gif)
 
-<%-
-    include('/modules/pic', {
-        src: 'win8-after.gif',
-        alt: 'Демонстрация того, как винда радуется наличию @viewport',
-        caption: 'С <code>@-ms-viwport</code> сайт адаптируется'
-    })
-%>
+![С <code>@-ms-viwport</code> сайт адаптируется](win8-after.gif)
 
 В первом случае получаем поведение неоптимизированного сайта --- не кайф. Во втором получается мобильная версия, закрепленная у края экрана. Кайф.
 
