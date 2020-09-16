@@ -1,0 +1,10 @@
+<% // Args: pics %>
+<div class="pics">
+    <%-
+        pics.map(pic => (
+            include('/modules/pic', {
+                ...pic
+            })
+        )).join('')
+    %>
+</div>

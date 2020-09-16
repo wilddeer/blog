@@ -20,18 +20,23 @@ tags:
 В портретном режиме разницы между айосью и винфоном не видно:
 
 <%-
-    include('/modules/pic', {
-        src: 'before-portrait.png',
-        hasPreview: true,
-        alt: 'Скриншот с винфона в портретном режиме до исправдения',
-        caption: 'Windows Phone 8.1'
+    include('/modules/pics', {
+        pics: [
+            {
+                src: 'before-portrait.png',
+                hasPreview: true,
+                alt: 'Скриншот с винфона в портретном режиме до исправдения',
+                caption: 'Windows Phone 8.1'
+            },
+            {
+                src: 'ipod-portrait.png',
+                hasPreview: true,
+                alt: 'Скриншот с айпода в портретном режиме для сравнения',
+                caption: 'iOS 7'
+            }
+        ]
     })
 %>
-
-<div class="gallery">
-{% include pic.htm src='before-portrait.png' p=true c='Windows Phone 8.1' a='Скриншот с винфона в портретном режиме до исправдения' %}
-{% include pic.htm src='ipod-portrait.png' p=true c='iOS 7' a='Скриншот с айпода в портретном режиме для сравнения' %}
-</div>
 
 В ландшафтном очевидна конскость на винфоне:
 

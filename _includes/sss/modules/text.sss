@@ -23,6 +23,16 @@
         text-align: center
         margin-bottom: 1.5em
 
+    .pics
+        text-align: center
+        margin-left: -0.5em
+        margin-right: -0.5em
+
+    .pics figure
+        display: inline-block
+        padding-left: 0.5em
+        padding-right: 0.5em
+
     figcaption
         padding-bottom: 0.8em
         font-style: italic
@@ -32,6 +42,14 @@
     figure * + figcaption
         padding-top: 0.8em
         padding-bottom: 0
+
+    figure img
+        box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1)
+        border-radius: 3px
+
+    img
+        vertical-align: middle
+        max-width: 100%
 
     a
         @mixin link
