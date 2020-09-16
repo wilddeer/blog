@@ -6,10 +6,6 @@ const path = require('path');
 const fastglob = require('fast-glob');
 
 module.exports = config => {
-    config.setEjsOptions({
-        rmWhitespace: true
-    });
-
     config.setDataDeepMerge(true);
 
     // Support YAML data files

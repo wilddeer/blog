@@ -2,7 +2,21 @@
 layout: layouts/content
 ---
 <div class="post">
-    <div class="content-box text">
-        <%- content %>
+    <div class="content-box">
+        <div class="text">
+            <%- content %>
+        </div>
+
+        <p class="publish-date">
+            <%= lang === 'ru' ? 'Опубликовано' : 'Published on' %>
+            <time>
+                <%-
+                    include('/modules/parsedDate', {
+                        dateString: date,
+                        lang
+                    })
+                %>
+            </time>
+        </p>
     </div>
 </div>
