@@ -40,10 +40,24 @@ tags:
 
 В ландшафтном очевидна конскость на винфоне:
 
-<div class="gallery">
-{% include pic.htm src='before-landscape.png' p=true c='Windows Phone 8.1' a='Скриншот с винфона в ландшафтном режиме до исправдения' %}
-{% include pic.htm src='ipod-landscape.png' p=true c='iOS 7' a='Скриншот с айпода в ландшафтном режиме для сравнения' %}
-</div>
+<%-
+    include('/modules/pics', {
+        pics: [
+            {
+                src: 'before-landscape.png',
+                hasPreview: true,
+                alt: 'Скриншот с винфона в ландшафтном режиме до исправдения',
+                caption: 'Windows Phone 8.1'
+            },
+            {
+                src: 'ipod-landscape.png',
+                hasPreview: true,
+                alt: 'Скриншот с айпода в ландшафтном режиме для сравнения',
+                caption: 'iOS 7'
+            }
+        ]
+    })
+%>
 
 Оказалось, традиционный мета-тег `<meta name="viewport" content="width=device-width, initial-scale=1">` воспринимается винфоном как указание сделать вьюпорт шириной 320 (логических) пикселей не зависимо от разрешения девайса (потому что айфон).
 
@@ -51,17 +65,45 @@ tags:
 
 Теперь все как и должно быть:
 
-<div class="gallery">
-{% include pic.htm src='before-landscape.png' p=true c='Было' a='Скриншот с винфона в ландшафтном режиме до исправдения' %}
-{% include pic.htm src='after-landscape.png' p=true c='Стало' a='Скриншот с винфона в ландшафтном режиме после исправдения' %}
-</div>
+<%-
+    include('/modules/pics', {
+        pics: [
+            {
+                src: 'before-landscape.png',
+                hasPreview: true,
+                alt: 'Скриншот с винфона в ландшафтном режиме до исправдения',
+                caption: 'Было'
+            },
+            {
+                src: 'after-landscape.png',
+                hasPreview: true,
+                alt: 'Скриншот с винфона в ландшафтном режиме после исправдения',
+                caption: 'Стало'
+            }
+        ]
+    })
+%>
 
 В портретном режиме тоже видны небольшие изменения (у HTC 8x больше разрешение, чем у айпода, ретинистость у обоих одинаковая, значит, вьюпорт на HTC должен быть немного шире 320 пикселей):
 
-<div class="gallery">
-{% include pic.htm src='before-portrait.png' p=true c='Было' a='Скриншот с винфона в портретном режиме до исправдения' %}
-{% include pic.htm src='after-portrait.png' p=true c='Стало' a='Скриншот с винфона в портретном режиме после исправдения' %}
-</div>
+<%-
+    include('/modules/pics', {
+        pics: [
+            {
+                src: 'before-portrait.png',
+                hasPreview: true,
+                alt: 'Скриншот с винфона в портретном режиме до исправдения',
+                caption: 'Было'
+            },
+            {
+                src: 'after-portrait.png',
+                hasPreview: true,
+                alt: 'Скриншот с винфона в портретном режиме после исправдения',
+                caption: 'Стало'
+            }
+        ]
+    })
+%>
 
 На WP 8 до третьего обновления `@-ms-viewport` был забагованный, потому как смотрел не на логические пиксели, а на реальные, что приводило к слишком большому размеру вьюпорта (и слишком мелкому сайту) на ретинистых винфонах.
 
@@ -71,9 +113,23 @@ tags:
 
 Еще, [как выяснилось](http://timkadlec.com/2013/01/windows-phone-8-and-device-width/), ИЕ в 8 винде в метро-режиме совсем не смотрит на мета-тег, зато прекрасно понимают `@-ms-viewport`. Вот пара поясняющих гифок:
 
-{% include pic.htm src='win8-before.gif' c='С мета-тегом сайт зумится' a='Демонстрация того, как винда не воспринимает мета-тег' %}
+<%-
+    include('/modules/pic', {
+        src: 'win8-before.gif',
+        hasPreview: false,
+        alt: 'Демонстрация того, как винда не воспринимает мета-тег',
+        caption: 'С мета-тегом сайт зумится'
+    })
+%>
 
-{% include pic.htm src='win8-after.gif' c='С <code>@-ms-viwport</code> сайт адаптируется' a='Демонстрация того, как винда радуется наличию @viewport' %}
+<%-
+    include('/modules/pic', {
+        src: 'win8-after.gif',
+        hasPreview: false,
+        alt: 'Демонстрация того, как винда радуется наличию @viewport',
+        caption: 'С <code>@-ms-viwport</code> сайт адаптируется'
+    })
+%>
 
 В первом случае получаем поведение неоптимизированного сайта --- не кайф. Во втором получается мобильная версия, закрепленная у края экрана. Кайф.
 
