@@ -1,0 +1,17 @@
+table.key-value-table
+    @media (max-width: calc($phoneBreakpoint - 1px))
+        display: block
+
+        td,
+        tr,
+        thead,
+        tbody
+            display: block
+
+        td
+            padding-right: 4vw
+            padding-left: 4vw
+
+    @media (min-width: $phoneBreakpoint)
+        td:first-child
+            width: 25%

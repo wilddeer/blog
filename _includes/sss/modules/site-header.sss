@@ -3,10 +3,10 @@
     padding-top: 1.5em
 
     &.is-root
-        @media (min-width: $tinyScreenSize)
+        @media (min-width: $phoneBreakpoint)
             margin-top: 3em
 
-        @media (min-width: $smallScreenSize)
+        @media (min-width: $pcBreakpoint)
             margin-top: 20vh
 
     &__title
@@ -15,10 +15,10 @@
         line-height: 1.2
 
     &.is-root &__title
-        @media (min-width: $tinyScreenSize)
+        @media (min-width: $phoneBreakpoint)
             font-size: 4em
 
-        @media (min-width: $smallScreenSize)
+        @media (min-width: $pcBreakpoint)
             font-size: 4.8em
 
     &__title-link:not(.is-root)
@@ -28,6 +28,6 @@
     &__lang-switcher
         margin-bottom: 1em
 
-        @media (min-width: $tinyScreenSize)
+        @media (min-width: $phoneBreakpoint)
             float: right
             padding: 0.5em 0 0 2em

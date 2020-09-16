@@ -11,7 +11,7 @@
 | *[HTML5 Test](http://html5test.com/)* | [59/555](http://html5test.com/s/af89ab2018cb33eb.html) |
 | *[CSS3 Test](http://css3test.com/)* | 35% |
 
-Kindle Keyboard (он же Kindle 3) --- читалка от Амазона с e-ink экраном (без тача) и qwerty-клавиатурой. В читалку встроен экспериментальный браузер.
+Kindle Keyboard (он же Kindle 3) — читалка от Амазона с e-ink экраном (без тача) и qwerty-клавиатурой. В читалку встроен экспериментальный браузер.
 
 В читалке есть вайфай и, опционально, 3G. Во время выхода читалки Амазон расщедрился и сделал бесплатный 3G для читалки по всему миру, но затем ограничил доступ, оставив сайт Амазона и Википедию. По вайфаю браузер по-прежнему работает без ограничений.
 
@@ -35,94 +35,94 @@ Kindle Keyboard (он же Kindle 3) --- читалка от Амазона с e
 		<tbody>
 			<tr>
 				<td>backgroundsize</td>
-				<td class="true">True</td>
-				<td class="true">True</td>
+				<td class="is-true">True</td>
+				<td class="is-true">True</td>
 			</tr>
 			<tr>
 				<td>bgsizecover</td>
-				<td class="false">False</td>
-				<td class="false">False</td>
+				<td class="is-false">False</td>
+				<td class="is-false">False</td>
 			</tr>
 			<tr>
 				<td>borderradius</td>
-				<td class="true">True</td>
-				<td class="true">True <small>(-webkit-)</small></td>
+				<td class="is-true">True</td>
+				<td class="is-true">True <small>(-webkit-)</small></td>
 			</tr>
 			<tr>
 				<td>boxshadow</td>
-				<td class="true">True</td>
-				<td class="false">False</td>
+				<td class="is-true">True</td>
+				<td class="is-false">False</td>
 			</tr>
 			<tr>
 				<td>boxsizing </td>
-				<td class="true">True</td>
-				<td class="true">True <small>(-webkit-)</small></td>
+				<td class="is-true">True</td>
+				<td class="is-true">True <small>(-webkit-)</small></td>
 			</tr>
 			<tr>
 				<td>cssanimations</td>
-				<td class="true">True</td>
-				<td class="true">True <small>(-webkit-)</small></td>
+				<td class="is-true">True</td>
+				<td class="is-true">True <small>(-webkit-)</small></td>
 			</tr>
 			<tr>
 				<td>cssgradients</td>
-				<td class="true">True</td>
-				<td class="false">False</td>
+				<td class="is-true">True</td>
+				<td class="is-false">False</td>
 			</tr>
 			<tr>
 				<td>csstransforms</td>
-				<td class="true">True</td>
-				<td class="true">True <small>(-webkit-)</small></td>
+				<td class="is-true">True</td>
+				<td class="is-true">True <small>(-webkit-)</small></td>
 			</tr>
 			<tr>
 				<td>csstransforms3d</td>
-				<td class="false">False</td>
-				<td class="true">True <small>(-webkit-)</small></td>
+				<td class="is-false">False</td>
+				<td class="is-true">True <small>(-webkit-)</small></td>
 			</tr>
 			<tr>
 				<td>csstransitions</td>
-				<td class="true">True</td>
-				<td class="true">True <small>(-webkit-)</small></td>
+				<td class="is-true">True</td>
+				<td class="is-true">True <small>(-webkit-)</small></td>
 			</tr>
 			<tr>
 				<td>fontface</td>
-				<td class="true">True</td>
-				<td class="true">True <small>(только .svg)</small></td>
+				<td class="is-true">True</td>
+				<td class="is-true">True <small>(только .svg)</small></td>
 			</tr>
 			<tr>
 				<td>mediaqueries</td>
-				<td class="true">True</td>
-				<td class="true">True</td>
+				<td class="is-true">True</td>
+				<td class="is-true">True</td>
 			</tr>
 			<tr>
 				<td>opacity</td>
-				<td class="true">True</td>
-				<td class="true">True</td>
+				<td class="is-true">True</td>
+				<td class="is-true">True</td>
 			</tr>
 			<tr>
 				<td>rgba</td>
-				<td class="true">True</td>
-				<td class="true">True</td>
+				<td class="is-true">True</td>
+				<td class="is-true">True</td>
 			</tr>
 			<tr>
 				<td>textshadow</td>
-				<td class="true">True</td>
+				<td class="is-true">True</td>
 				<td class="bug">True <small>(без блюра)</small></td>
 			</tr>
 			<tr>
 				<td>touch</td>
-				<td class="false">False</td>
-				<td class="false">False</td>
+				<td class="is-false">False</td>
+				<td class="is-false">False</td>
 			</tr>
 			<tr>
 				<td>video</td>
-				<td class="false">False</td>
-				<td class="false">False</td>
+				<td class="is-false">False</td>
+				<td class="is-false">False</td>
 			</tr>
 		</tbody>
 	</table>
 </div>
 
-Забавно, что девайс поддерживает анимации и транзишены. Качество [анимации](/experiments/pepyaka-font-using-css-animations/) на e-ink дисплее полностью передается скриншотом (хотя природа плохой отрисовки анимации на скриншоте --- построчное считывание, а на экране --- время отклика электронной бумаги):
+Забавно, что девайс поддерживает анимации и транзишены. Качество [анимации](/experiments/pepyaka-font-using-css-animations/) на e-ink дисплее полностью передается скриншотом (хотя природа плохой отрисовки анимации на скриншоте — построчное считывание, а на экране — время отклика электронной бумаги):
 
 {% include pic.htm src='screen-animations.gif' a='Скриншот, демонстрирующий работу css-анимации' %}
 

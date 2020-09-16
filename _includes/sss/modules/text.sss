@@ -1,12 +1,14 @@
 .text
     h1
         font-size: 3em
-        margin-bottom: 0.2em
+        line-height: 1.2
+        margin-bottom: 0.7em
 
     h2
         font-size: $heading2FontSize
+        line-height: 1.2
         margin-top: 2em
-        margin-bottom: 0.3em
+        margin-bottom: 0.6em
 
     p
         margin-bottom: 1.5em
@@ -22,6 +24,12 @@
     figure
         text-align: center
         margin-bottom: 2.5em
+
+    figure.is-float-right
+        @media (min-width: $tabletBreakpoint)
+            float: right
+            margin-left: 1em
+            margin-bottom: 1em
 
     .pics
         text-align: center
@@ -51,7 +59,7 @@
         @mixin link
 
     small
-        font-size: $smallFontSize
+        font-size: $tinyFontSize
 
     :not(pre) code
         background-color: #fff4f0
@@ -63,15 +71,24 @@
         font-style: normal
 
     pre
-        margin-bottom: 1em
+        margin-bottom: 2em
 
     table
-        width: 100%
+        width: calc(100% + 8vw)
         border-collapse: collapse
         border-spacing: 0
+        margin-bottom: 2.5em
+        margin-left: -4vw
+
+        @media (min-width: $tabletBreakpoint)
+            margin-left: 0
+            width: 100%
 
     tr
         border-top: 1px solid $borderColor
+
+    tbody tr:last-child
+        border-bottom: 1px solid $borderColor
 
     tbody tr:nth-child(odd)
         background: #f8f8f8
@@ -83,6 +100,16 @@
     th
         padding: 0.3em 0.5em
         text-align: left
+
+    td:first-child,
+    th:first-child
+        @media (max-width: calc($tabletBreakpoint - 1px))
+            padding-left: 4vw
+
+    td:last-child,
+    th:last-child
+        @media (max-width: calc($tabletBreakpoint - 1px))
+            padding-right: 4vw
 
     td.is-true
         color: $successColor

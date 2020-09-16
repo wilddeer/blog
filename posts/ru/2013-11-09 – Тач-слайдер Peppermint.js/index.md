@@ -36,7 +36,7 @@
   </figure>
 </div>
 
-[Peppermint.js](https://github.com/wilddeer/Peppermint) --- еще один тач-слайдер. Только круче.
+[Peppermint.js](https://github.com/wilddeer/Peppermint) — еще один тач-слайдер. Только круче.
 
 - Работает с мышью, [тачэвентами](http://www.w3.org/TR/touch-events/), [поинтерэвентами](http://www.w3.org/TR/pointerevents/), старыми [поинтерэвентами из IE10](http://msdn.microsoft.com/en-us/library/ie/hh673557(v=vs.85).aspx)
 - Работает на андроидах, айфонах, винфонах, блекберри и на девайсах с 8 виндой
@@ -51,9 +51,9 @@
 ## Комплект {#kit}
 
 {:.nopadding}
-- <a href="https://raw.github.com/wilddeer/Peppermint/master/dist/peppermint.min.js" class="iconlink"><i class="icon-cloud-download"> </i><span>peppermint.min.js</span></a> --- минифицированный скрипт для продакшена
-- <a href="https://raw.github.com/wilddeer/Peppermint/master/dist/peppermint.required.css" class="iconlink"><i class="icon-cloud-download"> </i><span>peppermint.required.css</span></a> --- обязательный набор стилей для корректной работы слайдера
-- <a href="https://raw.github.com/wilddeer/Peppermint/master/dist/peppermint.suggested.css" class="iconlink"><i class="icon-cloud-download"> </i><span>peppermint.suggested.css</span></a> --- дефолтный набор стилей, чтобы было с чего начать (включает обязательные стили)
+- <a href="https://raw.github.com/wilddeer/Peppermint/master/dist/peppermint.min.js" class="iconlink"><i class="icon-cloud-download"> </i><span>peppermint.min.js</span></a> — минифицированный скрипт для продакшена
+- <a href="https://raw.github.com/wilddeer/Peppermint/master/dist/peppermint.required.css" class="iconlink"><i class="icon-cloud-download"> </i><span>peppermint.required.css</span></a> — обязательный набор стилей для корректной работы слайдера
+- <a href="https://raw.github.com/wilddeer/Peppermint/master/dist/peppermint.suggested.css" class="iconlink"><i class="icon-cloud-download"> </i><span>peppermint.suggested.css</span></a> — дефолтный набор стилей, чтобы было с чего начать (включает обязательные стили)
 
 ## Запуск {#usage}
 
@@ -181,23 +181,23 @@ $('.peppermint').Peppermint({
 
 При инициализации Peppermint возвращает объект с функциями, которые можно использовать для управления слайдером и расширения функционала:
 
-`slideTo(n)` --- перейти к слайду `n`;
+`slideTo(n)` — перейти к слайду `n`;
 
-`next()` --- следующий слайд;
+`next()` — следующий слайд;
 
-`prev()` --- предыдущий слайд;
+`prev()` — предыдущий слайд;
 
-`start()` --- запустить слайдшоу;
+`start()` — запустить слайдшоу;
 
-`stop()` --- остановить слайдшоу;
+`stop()` — остановить слайдшоу;
 
-`pause()` --- приостановить слайдшоу до следующей смены слайда;
+`pause()` — приостановить слайдшоу до следующей смены слайда;
 
-`getCurrentPos()` --- получить номер текущего слайда;
+`getCurrentPos()` — получить номер текущего слайда;
 
-`getSlidesNumber()` --- получить общее количество слайдов;
+`getSlidesNumber()` — получить общее количество слайдов;
 
-`recalcWidth()` --- пересчитать ширину слайдера и слайдов. Полезно при изменении ширины контейнера. При ресайзе окна и смене ориентации девайса пересчет ширины запустится сам.
+`recalcWidth()` — пересчитать ширину слайдера и слайдов. Полезно при изменении ширины контейнера. При ресайзе окна и смене ориентации девайса пересчет ширины запустится сам.
 
 ### Примеры использования
 

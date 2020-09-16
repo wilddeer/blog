@@ -53,62 +53,60 @@
 
 А теперь по браузерам — есть ли аутлайн после клика:
 
-<div class="table-holder">
-    <table>
-        <thead>
-            <tr>
-                <th>Браузер</th>
-                <th>Кнопка</th>
-                <th>Ссылка</th>
-                <th>Спан</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Chrome 39</td>
-                <td class="is-false">Да</td>
-                <td class="is-true">Нет</td>
-                <td class="is-false">Да</td>
-            </tr>
-            <tr>
-                <td>Firefox 34 Win </td>
-                <td class="is-true">Нет</td>
-                <td class="is-true">Нет</td>
-                <td class="is-true">Нет</td>
-            </tr>
-            <tr>
-                <td>Firefox 34 Mac </td>
-                <td class="is-true">Нет</td>
-                <td class="is-true">Нет</td>
-                <td class="is-false">Да</td>
-            </tr>
-            <tr>
-                <td>Safari 8</td>
-                <td class="is-true">Нет</td>
-                <td class="is-true">Нет</td>
-                <td class="is-false">Да</td>
-            </tr>
-            <tr>
-                <td>Opera 12</td>
-                <td class="is-true">Нет</td>
-                <td class="is-true">Нет</td>
-                <td class="is-true">Нет</td>
-            </tr>
-            <tr>
-                <td>IE 10, 11</td>
-                <td class="is-true">Нет</td>
-                <td class="is-true">Нет</td>
-                <td class="is-true">Нет</td>
-            </tr>
-            <tr>
-                <td>IE 7—9</td>
-                <td class="is-false">Да</td>
-                <td class="is-false">Да</td>
-                <td class="is-false">Да</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+<table>
+    <thead>
+        <tr>
+            <th>Браузер</th>
+            <th>Кнопка</th>
+            <th>Ссылка</th>
+            <th>Спан</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Chrome 39</td>
+            <td class="is-false">Да</td>
+            <td class="is-true">Нет</td>
+            <td class="is-false">Да</td>
+        </tr>
+        <tr>
+            <td>Firefox 34 Win </td>
+            <td class="is-true">Нет</td>
+            <td class="is-true">Нет</td>
+            <td class="is-true">Нет</td>
+        </tr>
+        <tr>
+            <td>Firefox 34 Mac </td>
+            <td class="is-true">Нет</td>
+            <td class="is-true">Нет</td>
+            <td class="is-false">Да</td>
+        </tr>
+        <tr>
+            <td>Safari 8</td>
+            <td class="is-true">Нет</td>
+            <td class="is-true">Нет</td>
+            <td class="is-false">Да</td>
+        </tr>
+        <tr>
+            <td>Opera 12</td>
+            <td class="is-true">Нет</td>
+            <td class="is-true">Нет</td>
+            <td class="is-true">Нет</td>
+        </tr>
+        <tr>
+            <td>IE 10, 11</td>
+            <td class="is-true">Нет</td>
+            <td class="is-true">Нет</td>
+            <td class="is-true">Нет</td>
+        </tr>
+        <tr>
+            <td>IE 7—9</td>
+            <td class="is-false">Да</td>
+            <td class="is-false">Да</td>
+            <td class="is-false">Да</td>
+        </tr>
+    </tbody>
+</table>
 
 Старая Опера избавилась от всех «мышиных» аутлайнов раньше всех, но умерла, ИЕ подтянулся в 10 версии, Фаерфокс тоже почти молодец.
 

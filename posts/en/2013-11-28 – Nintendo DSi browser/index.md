@@ -47,88 +47,88 @@ Mobile-optimized mode is activated with an appropriate viewport meta-tag, e.&nbs
 		<tbody>
 			<tr>
 				<td>backgroundsize</td>
-				<td class="false">False</td>
-				<td class="false">False</td>
+				<td class="is-false">False</td>
+				<td class="is-false">False</td>
 			</tr>
 			<tr>
 				<td>bgsizecover</td>
-				<td class="false">False</td>
-				<td class="false">False</td>
+				<td class="is-false">False</td>
+				<td class="is-false">False</td>
 			</tr>
 			<tr>
 				<td>borderradius</td>
-				<td class="false">False</td>
-				<td class="false">False</td>
+				<td class="is-false">False</td>
+				<td class="is-false">False</td>
 			</tr>
 			<tr>
 				<td>boxshadow</td>
-				<td class="false">False</td>
-				<td class="false">False</td>
+				<td class="is-false">False</td>
+				<td class="is-false">False</td>
 			</tr>
 			<tr>
 				<td>boxsizing </td>
-				<td class="false">False</td>
-				<td class="true">True</td>
+				<td class="is-false">False</td>
+				<td class="is-true">True</td>
 			</tr>
 			<tr>
 				<td>cssanimations</td>
-				<td class="false">False</td>
-				<td class="false">False</td>
+				<td class="is-false">False</td>
+				<td class="is-false">False</td>
 			</tr>
 			<tr>
 				<td>cssgradients</td>
-				<td class="false">False</td>
-				<td class="false">False</td>
+				<td class="is-false">False</td>
+				<td class="is-false">False</td>
 			</tr>
 			<tr>
 				<td>csstransforms</td>
-				<td class="false">False</td>
-				<td class="false">False</td>
+				<td class="is-false">False</td>
+				<td class="is-false">False</td>
 			</tr>
 			<tr>
 				<td>csstransforms3d</td>
-				<td class="false">False</td>
-				<td class="false">False</td>
+				<td class="is-false">False</td>
+				<td class="is-false">False</td>
 			</tr>
 			<tr>
 				<td>csstransitions</td>
-				<td class="false">False</td>
-				<td class="false">False</td>
+				<td class="is-false">False</td>
+				<td class="is-false">False</td>
 			</tr>
 			<tr>
 				<td>fontface</td>
-				<td class="false">False</td>
-				<td class="false">False</td>
+				<td class="is-false">False</td>
+				<td class="is-false">False</td>
 			</tr>
 			<tr>
 				<td>mediaqueries</td>
-				<td class="true">True</td>
-				<td class="true">True</td>
+				<td class="is-true">True</td>
+				<td class="is-true">True</td>
 			</tr>
 			<tr>
 				<td>opacity</td>
-				<td class="true">True</td>
-				<td class="true">True</td>
+				<td class="is-true">True</td>
+				<td class="is-true">True</td>
 			</tr>
 			<tr>
 				<td>rgba</td>
-				<td class="false">False</td>
-				<td class="false">False</td>
+				<td class="is-false">False</td>
+				<td class="is-false">False</td>
 			</tr>
 			<tr>
 				<td>textshadow</td>
-				<td class="true">True</td>
+				<td class="is-true">True</td>
 				<td class="bug">True <small>(no blur)</small></td>
 			</tr>
 			<tr>
 				<td>touch</td>
-				<td class="false">False</td>
-				<td class="false">False</td>
+				<td class="is-false">False</td>
+				<td class="is-false">False</td>
 			</tr>
 			<tr>
 				<td>video</td>
-				<td class="false">False</td>
-				<td class="false">False</td>
+				<td class="is-false">False</td>
+				<td class="is-false">False</td>
 			</tr>
 		</tbody>
 	</table>

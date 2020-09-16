@@ -4,7 +4,7 @@
     &__item
         margin-bottom: 1em
 
-        @media (min-width: $smallScreenSize)
+        @media (min-width: $pcBreakpoint)
             @mixin dashedListItem
 
     &__item.is-archive
@@ -15,12 +15,12 @@
         font-size: $tinyFontSize
         font-style: italic
 
-        @media (min-width: $tinyScreenSize)
+        @media (min-width: $phoneBreakpoint)
             display: inline
             font-size: $smallerFontSize
 
     &__item-date:before
-        @media (min-width: $tinyScreenSize)
+        @media (min-width: $phoneBreakpoint)
             content: '—'
 
     &__item:not(.is-archive) &__item-link

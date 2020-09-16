@@ -12,9 +12,9 @@
 | *[HTML5 Test](http://html5test.com/)* | [212/555](http://html5test.com/s/9957252018bec558.html) |
 | *[CSS3 Test](http://css3test.com/)* | 45% |
 
-Kindle Paperwhite --- новая Амазоновская читалка с e-ink тачскрином. Девайс оборудован вайфаем, есть модели с 3G.
+Kindle Paperwhite — новая Амазоновская читалка с e-ink тачскрином. Девайс оборудован вайфаем, есть модели с 3G.
 
-Браузер в читалке --- усовершенствованная версия браузера из [Kindle Keyboard](/rare-species/kindle-keyboard/). Производительность браузера довольно сильно возросла по сравнению с предшественником, поддержка HTML5 улучшилась.
+Браузер в читалке — усовершенствованная версия браузера из [Kindle Keyboard](/rare-species/kindle-keyboard/). Производительность браузера довольно сильно возросла по сравнению с предшественником, поддержка HTML5 улучшилась.
 
 С юзер-агентом у нового Киндла беда. На сервер отправляется вполне типичный для Киндлов юзер-агент, а вот из `navigator.userAgent` доступен другой, который сложно как-либо идентифицировать среди десятков других вебкитов. Палка в колеса моему [снифферу](/scripts/sniffer/) и еще один повод юзать фиче-детекты.
 
@@ -34,88 +34,88 @@ Kindle Paperwhite --- новая Амазоновская читалка с e-in
 		<tbody>
 			<tr>
 				<td>backgroundsize</td>
-				<td class="true">True</td>
-				<td class="true">True</td>
+				<td class="is-true">True</td>
+				<td class="is-true">True</td>
 			</tr>
 			<tr>
 				<td>bgsizecover</td>
-				<td class="true">True</td>
-				<td class="true">True</td>
+				<td class="is-true">True</td>
+				<td class="is-true">True</td>
 			</tr>
 			<tr>
 				<td>borderradius</td>
-				<td class="true">True</td>
-				<td class="true">True</td>
+				<td class="is-true">True</td>
+				<td class="is-true">True</td>
 			</tr>
 			<tr>
 				<td>boxshadow</td>
-				<td class="true">True</td>
-				<td class="true">True</td>
+				<td class="is-true">True</td>
+				<td class="is-true">True</td>
 			</tr>
 			<tr>
 				<td>boxsizing </td>
-				<td class="true">True</td>
-				<td class="true">True</td>
+				<td class="is-true">True</td>
+				<td class="is-true">True</td>
 			</tr>
 			<tr>
 				<td>cssanimations</td>
-				<td class="true">True</td>
-				<td class="true">True <small>(-webkit-)</small></td>
+				<td class="is-true">True</td>
+				<td class="is-true">True <small>(-webkit-)</small></td>
 			</tr>
 			<tr>
 				<td>cssgradients</td>
-				<td class="true">True</td>
-				<td class="true">True <small>(-webkit-)</small></td>
+				<td class="is-true">True</td>
+				<td class="is-true">True <small>(-webkit-)</small></td>
 			</tr>
 			<tr>
 				<td>csstransforms</td>
-				<td class="true">True</td>
-				<td class="true">True <small>(-webkit-)</small></td>
+				<td class="is-true">True</td>
+				<td class="is-true">True <small>(-webkit-)</small></td>
 			</tr>
 			<tr>
 				<td>csstransforms3d</td>
-				<td class="false">False</td>
-				<td class="true">True <small>(-webkit-)</small></td>
+				<td class="is-false">False</td>
+				<td class="is-true">True <small>(-webkit-)</small></td>
 			</tr>
 			<tr>
 				<td>csstransitions</td>
-				<td class="true">True</td>
-				<td class="true">True <small>(-webkit-)</small></td>
+				<td class="is-true">True</td>
+				<td class="is-true">True <small>(-webkit-)</small></td>
 			</tr>
 			<tr>
 				<td>fontface</td>
-				<td class="true">True</td>
-				<td class="true">True</td>
+				<td class="is-true">True</td>
+				<td class="is-true">True</td>
 			</tr>
 			<tr>
 				<td>mediaqueries</td>
-				<td class="true">True</td>
-				<td class="true">True</td>
+				<td class="is-true">True</td>
+				<td class="is-true">True</td>
 			</tr>
 			<tr>
 				<td>opacity</td>
-				<td class="true">True</td>
-				<td class="true">True</td>
+				<td class="is-true">True</td>
+				<td class="is-true">True</td>
 			</tr>
 			<tr>
 				<td>rgba</td>
-				<td class="true">True</td>
-				<td class="true">True</td>
+				<td class="is-true">True</td>
+				<td class="is-true">True</td>
 			</tr>
 			<tr>
 				<td>textshadow</td>
-				<td class="true">True</td>
-				<td class="true">True</td>
+				<td class="is-true">True</td>
+				<td class="is-true">True</td>
 			</tr>
 			<tr>
 				<td>touch</td>
-				<td class="false">False</td>
-				<td class="false">False</td>
+				<td class="is-false">False</td>
+				<td class="is-false">False</td>
 			</tr>
 			<tr>
 				<td>video</td>
-				<td class="false">False</td>
-				<td class="false">False</td>
+				<td class="is-false">False</td>
+				<td class="is-false">False</td>
 			</tr>
 		</tbody>
 	</table>

@@ -10,6 +10,7 @@ const markdownItKdb = require('markdown-it-kbd');
 const markdownItDiv = require('markdown-it-div');
 const markdownItImplicitFigures = require('markdown-it-implicit-figures');
 const markdownItImsize = require('markdown-it-imsize');
+const markdownItMultimdTable = require('markdown-it-multimd-table');
 
 module.exports = config => {
     config.setDataDeepMerge(true);
@@ -24,12 +25,17 @@ module.exports = config => {
     const markdownLib = markdownIt({
         html: true
     })
+        .use(markdownItAttrs)
+        .use(markdownItMultimdTable, {
+            multiline:  true,
+            rowspan:    true,
+            headerless: true
+        })
         .use(markdownItImsize)
         .use(markdownItImplicitFigures, {
             figcaption: true
         })
         .use(markdownItDiv)
-        .use(markdownItAttrs)
         .use(markdownItKdb);
 
     config.setLibrary('md', markdownLib);

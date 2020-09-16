@@ -4,7 +4,7 @@
 
 [Sniffer](https://github.com/wilddeer/Sniffer) is a clientside browser/engine/os/device detection tool.
 
-> --- Why u no feature-detect??/?////
+> — Why u no feature-detect??/?////
 
 I feature-detect like a boss. But when I can't, I use dirty hacks to help me out.
 

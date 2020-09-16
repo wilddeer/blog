@@ -47,83 +47,83 @@ Scrolling is done by moving the cursor to the edge of the screen. Internal overf
 		<tbody>
 			<tr>
 				<td>backgroundsize</td>
-				<td class="true">True</td>
-				<td class="true">True</td>
+				<td class="is-true">True</td>
+				<td class="is-true">True</td>
 			</tr>
 			<tr>
 				<td>bgsizecover</td>
-				<td class="true">True</td>
-				<td class="true">True</td>
+				<td class="is-true">True</td>
+				<td class="is-true">True</td>
 			</tr>
 			<tr>
 				<td>borderradius</td>
-				<td class="true">True</td>
-				<td class="true">True</td>
+				<td class="is-true">True</td>
+				<td class="is-true">True</td>
 			</tr>
 			<tr>
 				<td>boxshadow</td>
-				<td class="true">True</td>
-				<td class="true">True</td>
+				<td class="is-true">True</td>
+				<td class="is-true">True</td>
 			</tr>
 			<tr>
 				<td>boxsizing </td>
-				<td class="true">True</td>
-				<td class="true">True</td>
+				<td class="is-true">True</td>
+				<td class="is-true">True</td>
 			</tr>
 			<tr>
 				<td>cssanimations</td>
-				<td class="true">True</td>
-				<td class="true">True <small>(-webkit-)</small></td>
+				<td class="is-true">True</td>
+				<td class="is-true">True <small>(-webkit-)</small></td>
 			</tr>
 			<tr>
 				<td>cssgradients</td>
-				<td class="true">True</td>
-				<td class="true">True <small>(-webkit-)</small></td>
+				<td class="is-true">True</td>
+				<td class="is-true">True <small>(-webkit-)</small></td>
 			</tr>
 			<tr>
 				<td>csstransforms</td>
-				<td class="true">True</td>
-				<td class="true">True <small>(-webkit-)</small></td>
+				<td class="is-true">True</td>
+				<td class="is-true">True <small>(-webkit-)</small></td>
 			</tr>
 			<tr>
 				<td>csstransforms3d</td>
-				<td class="false">False</td>
-				<td class="true">True <small>(-webkit-)</small></td>
+				<td class="is-false">False</td>
+				<td class="is-true">True <small>(-webkit-)</small></td>
 			</tr>
 			<tr>
 				<td>csstransitions</td>
-				<td class="true">True</td>
-				<td class="true">True <small>(-webkit-)</small></td>
+				<td class="is-true">True</td>
+				<td class="is-true">True <small>(-webkit-)</small></td>
 			</tr>
 			<tr>
 				<td>fontface</td>
-				<td class="true">True</td>
-				<td class="true">True</td>
+				<td class="is-true">True</td>
+				<td class="is-true">True</td>
 			</tr>
 			<tr>
 				<td>mediaqueries</td>
-				<td class="true">True</td>
-				<td class="true">True</td>
+				<td class="is-true">True</td>
+				<td class="is-true">True</td>
 			</tr>
 			<tr>
 				<td>opacity</td>
-				<td class="true">True</td>
-				<td class="true">True</td>
+				<td class="is-true">True</td>
+				<td class="is-true">True</td>
 			</tr>
 			<tr>
 				<td>rgba</td>
-				<td class="true">True</td>
-				<td class="true">True</td>
+				<td class="is-true">True</td>
+				<td class="is-true">True</td>
 			</tr>
 			<tr>
 				<td>textshadow</td>
-				<td class="true">True</td>
-				<td class="true">True</td>
+				<td class="is-true">True</td>
+				<td class="is-true">True</td>
 			</tr>
 			<tr>
 				<td>touch</td>
-				<td class="false">False</td>
-				<td class="false">False</td>
+				<td class="is-false">False</td>
+				<td class="is-false">False</td>
 			</tr>
 		</tbody>
 	</table>
