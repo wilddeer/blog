@@ -1,12 +1,11 @@
-.text >,
-.text > :not(.text-escape)
+.text
     h1
         font-size: 3em
         margin-bottom: 0.2em
 
     h2
         font-size: $heading2FontSize
-        margin-top: 2.5em
+        margin-top: 2em
         margin-bottom: 0.3em
 
     p
@@ -50,6 +49,9 @@
 
     a
         @mixin link
+
+    small
+        font-size: $smallFontSize
 
     :not(pre) code
         background-color: #fff4f0

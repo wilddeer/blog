@@ -3,10 +3,12 @@
 
     &__lang
         display: inline-block
-        margin-left: 0.6em
         padding: 0.2em 0.3em 0.1em
         color: $inactiveTextColor
         @mixin smallCaps
+
+    &__lang + &__lang
+        margin-left: 0.6em
 
     &__lang.is-link
         @mixin link $linkColor, $linkColor

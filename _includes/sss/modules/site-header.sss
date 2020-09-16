@@ -19,12 +19,15 @@
             font-size: 4em
 
         @media (min-width: $smallScreenSize)
-            font-size: 5em
+            font-size: 4.8em
 
     &__title-link:not(.is-root)
         @mixin link $linkColor, $linkColor
         text-decoration-thickness: 0.05em
 
     &__lang-switcher
-        float: right
-        padding: 0.5em 0 0 1em
+        margin-bottom: 1em
+
+        @media (min-width: $tinyScreenSize)
+            float: right
+            padding: 0.5em 0 0 2em

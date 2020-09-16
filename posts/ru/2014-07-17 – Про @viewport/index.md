@@ -3,11 +3,8 @@ tags:
     - archive
 ---
 
-<%-
-    include('/modules/depricationWarning', {
-        lang: $.lang
-    })
-%>
+**Устаревшая фигня!** Этот пост содержит неактуальную старую фигню и оставлен для истории и лулзов.
+{.notice .is-warning}
 
 # Про `@viewport`
 

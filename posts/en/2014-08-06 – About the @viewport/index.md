@@ -3,13 +3,11 @@ tags:
     - archive
 ---
 
-<%-
-    include('/modules/depricationWarning', {
-        lang: $.lang
-    })
-%>
+**Depricated!** This post contains irrelevant old horseshit and is left here for history and lulz.
+{.notice .is-warning}
 
-<small>Originally translated by [Varya Stepanova](http://varya.me/) and posted on [Frontend Babel](http://frontendbabel.info/articles/about-viewport/).</small>
+Originally translated by [Varya Stepanova](http://varya.me/) and posted on [Frontend Babel](http://frontendbabel.info/articles/about-viewport/).
+{.notice}
 
 # About the `@viewport`
 
