@@ -4,6 +4,9 @@ const yaml = require('js-yaml');
 const fs = require('fs');
 const path = require('path');
 const fastglob = require('fast-glob');
+const markdownIt = require('markdown-it');
+const markdownItAttrs = require('markdown-it-attrs');
+const markdownItKdb = require('markdown-it-kbd');
 
 module.exports = config => {
     config.setDataDeepMerge(true);
@@ -11,8 +14,17 @@ module.exports = config => {
     // EJS config
     config.setEjsOptions({
         _with: false,
-        localsName: '_'
+        localsName: '$'
     });
+
+    // Markdown-it options
+    const markdownLib = markdownIt({
+        html: true
+    })
+        .use(markdownItAttrs)
+        .use(markdownItKdb);
+
+    config.setLibrary('md', markdownLib);
 
     // Support YAML data files
     config.addDataExtension('yaml', contents => yaml.safeLoad(contents));

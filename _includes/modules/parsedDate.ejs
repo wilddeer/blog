@@ -1,6 +1,6 @@
 <% // Args: dateString, showYear, lang %>
 <%
-    const date = new Date(_.dateString);
+    const date = new Date($.dateString);
     const dayOfMonth = date.getDate();
     const month = [
         {
@@ -51,13 +51,13 @@
             en: 'December',
             ru: 'декабря'
         }
-    ][date.getMonth()][_.lang];
+    ][date.getMonth()][$.lang];
     const year = date.getFullYear();
 
-    if (_.lang === 'ru') {
-        return `${dayOfMonth} ${month}${_.showYear ? ` ${year}` : ''}`;
+    if ($.lang === 'ru') {
+        return `${dayOfMonth} ${month}${$.showYear ? ` ${year}` : ''}`;
     }
     else {
-        return `${month} ${dayOfMonth}${_.showYear ? `, ${year}` : ''}`;
+        return `${month} ${dayOfMonth}${$.showYear ? `, ${year}` : ''}`;
     }
 %>

@@ -1,7 +1,7 @@
 <% // Args: posts, lang %>
 <%
-    _.posts
-        .filter(post => post.data.lang === _.lang)
+    $.posts
+        .filter(post => post.data.lang === $.lang)
         .reverse()
         .forEach((post, index, filteredPosts) => {
 %>
@@ -39,7 +39,7 @@
 
         <% if (post.data.tags.includes('archive')) { %>
             <span class="post-list__item-badge">
-                <span class="badge"><%= _.lang === 'ru' ? 'устаревшая фигня' : 'deprecated crap' %></span>
+                <span class="badge"><%= $.lang === 'ru' ? 'устаревшая фигня' : 'deprecated crap' %></span>
             </span>
         <% } %>
 
@@ -47,7 +47,7 @@
             <%-
                 include('/modules/parsedDate', {
                     dateString: post.data.date,
-                    lang: _.lang
+                    lang: $.lang
                 })
             %>
         </time>

@@ -5,7 +5,7 @@ tags:
 
 <%-
     include('/modules/depricationWarning', {
-        lang: _.lang
+        lang: $.lang
     })
 %>
 
