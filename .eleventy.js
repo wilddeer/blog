@@ -9,6 +9,7 @@ const markdownItAttrs = require('markdown-it-attrs');
 const markdownItKdb = require('markdown-it-kbd');
 const markdownItDiv = require('markdown-it-div');
 const markdownItImplicitFigures = require('markdown-it-implicit-figures');
+const markdownItImsize = require('markdown-it-imsize');
 
 module.exports = config => {
     config.setDataDeepMerge(true);
@@ -23,6 +24,7 @@ module.exports = config => {
     const markdownLib = markdownIt({
         html: true
     })
+        .use(markdownItImsize)
         .use(markdownItImplicitFigures, {
             figcaption: true
         })

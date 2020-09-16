@@ -160,7 +160,9 @@ Vanilla JS (не будет работать в IE8, потому что `addEve
                 activeElement.addEventListener('blur', function(e) {
                     e.target.removeEventListener(e.type, arguments.callee);
 
-                    activeElement.className = activeElement.className.replace(new RegExp('(\\s+|^)'+mouseFocusedClass+'(\\s+|$)', 'g'), ' ').replace(/^\s+|\s+$/g, '');
+                    activeElement.className = activeElement.className
+                        .replace(new RegExp('(\\s+|^)'+mouseFocusedClass+'(\\s+|$)', 'g'), ' ')
+                        .replace(/^\s+|\s+$/g, '');
                 });
             }
         }, 0);

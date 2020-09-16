@@ -14,6 +14,7 @@
     "markdown-it-attrs": "^3.0.3",
     "markdown-it-div": "^1.1.0",
     "markdown-it-implicit-figures": "^0.10.0",
+    "markdown-it-imsize": "^2.0.1",
     "markdown-it-kbd": "^2.2.0",
     "postcss": "^7.0.32",
     "postcss-easy-import": "^3.0.0",
