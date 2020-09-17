@@ -88,7 +88,7 @@ tags:
 
 - Респонсивность в ИЕ на вин8
 - Родной вьюпорт на винфонах
--   <del>Фьючур пруф!</del> <span class="notice is-info is-inline">Ноуп. — Ваш, 2020</span>
+- <del>Фьючур пруф!</del> <span class="notice is-info is-inline">**Коммент из фьючура:** Ноуп.</span>
 
 Минус:
 
