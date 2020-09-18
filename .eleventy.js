@@ -15,6 +15,8 @@ const markdownItMultimdTable = require('markdown-it-multimd-table');
 module.exports = config => {
     config.setDataDeepMerge(true);
 
+    config.setTemplateFormats(['md', 'ejs', '11ty.js']);
+
     // EJS config
     config.setEjsOptions({
         _with: false,
@@ -25,7 +27,6 @@ module.exports = config => {
     const markdownLib = markdownIt({
         html: true
     })
-        .use(markdownItAttrs)
         .use(markdownItMultimdTable, {
             multiline:  true,
             rowspan:    true,
@@ -36,7 +37,8 @@ module.exports = config => {
             figcaption: true
         })
         .use(markdownItDiv)
-        .use(markdownItKdb);
+        .use(markdownItKdb)
+        .use(markdownItAttrs);
 
     config.setLibrary('md', markdownLib);
 
@@ -48,7 +50,10 @@ module.exports = config => {
 
     // Passthrough
     config.addPassthroughCopy('fonts/*.woff2');
+    config.addPassthroughCopy('js/*.js');
+    config.addPassthroughCopy('css/*.css');
     config.addPassthroughCopy('svg/*.svg');
+    config.addPassthroughCopy('demos/**/*.*');
 
     // Copy the assets to the corresponding post folders
     config.addPlugin(pluginInjector, {

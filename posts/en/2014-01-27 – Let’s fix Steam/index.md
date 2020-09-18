@@ -1,10 +1,9 @@
 <style>
     .steam-demo {
-        width: 100%;
         font-size: 16px;
         color: white;
         background: #222;
-        padding: 3em 4%;
+        padding: 3em 1.5em;
         font-family: Arial, Helvetica, sans-serif;
         color: #f5f5f5;
         margin-bottom: 1.5em;
@@ -19,14 +18,6 @@
     .steam-demo.fullwidth {
         padding-left: 0;
         padding-right: 0;
-    }
-
-    @media all and (min-width: 40em) {
-        .steam-demo {
-            width: 92%;
-            padding-left: 1.5em;
-            padding-right: 1.5em;
-        }
     }
 
     .steam-demo a,
@@ -531,15 +522,15 @@ To implement this approach it's enough to give the gallary `inactive` class, whi
 <div class="steam-demo fullwidth">
     <section class="gallery peppermint steam-demo-peppermint peppermint-inactive">
         <figure>
-            <a href="/steam/i/1.jpg" target="_blank"><img src="/steam/i/m1.jpg"></a>
+            <a href="/steam/i/1.jpg" target="_blank"><img src="/steam/i/m1.jpg" width="711" height="400"></a>
         </figure>
 
         <figure>
-            <a href="/steam/i/2.jpg" target="_blank"><img src="/steam/i/m2.jpg"></a>
+            <a href="/steam/i/2.jpg" target="_blank"><img src="/steam/i/m2.jpg" width="711" height="400"></a>
         </figure>
 
         <figure>
-            <a href="/steam/i/3.jpg" target="_blank"><img src="/steam/i/m3.jpg"></a>
+            <a href="/steam/i/3.jpg" target="_blank"><img src="/steam/i/m3.jpg" width="711" height="400"></a>
         </figure>
     </section>
 </div>

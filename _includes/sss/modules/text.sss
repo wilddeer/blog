@@ -4,8 +4,18 @@
         line-height: 1.2
         margin-bottom: 0.7em
 
+    h1.big-header
+        @media (min-width: $pcBreakpoint)
+            font-size: 5em
+
     h2
         font-size: $heading2FontSize
+        line-height: 1.2
+        margin-top: 2em
+        margin-bottom: 0.6em
+
+    h3
+        font-size: $heading3FontSize
         line-height: 1.2
         margin-top: 2em
         margin-bottom: 0.6em
@@ -103,6 +113,9 @@
     pre
         margin-bottom: 2em
 
+    .code-max-height > pre
+        max-height: 80vh
+
     table
         width: calc(100% + 8vw)
         border-collapse: collapse
@@ -115,10 +128,10 @@
             width: 100%
 
     tr
-        border-top: 1px solid $borderColor
+        border-top: 1px solid $lightBorderColor
 
     tbody tr:last-child
-        border-bottom: 1px solid $borderColor
+        border-bottom: 1px solid $lightBorderColor
 
     tbody tr:nth-child(odd)
         background: #f8f8f8
@@ -148,3 +161,26 @@
     td.is-false
         color: $dangerColor
         background-color: $dangerBgColor
+
+    button
+        background: transparent
+        border: 1px solid $regularBorderColor
+        border-radius: 0.2em
+        padding: 0.5em 1em
+        transition: 0.05s linear
+        transition-property: background-color, color
+        cursor: pointer
+
+    button:hover:not([disabled])
+        background: $linkColor
+        border-color: $linkColor
+        color: white
+        box-shadow: 0 0.1em 0 0 rgba(0,0,0,0.1)
+
+    button:active:not([disabled])
+        box-shadow: none
+
+    button[disabled]
+        border-color: $lightBorderColor
+        color: $inactiveTextColor
+        cursor: default

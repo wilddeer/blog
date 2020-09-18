@@ -1,7 +1,7 @@
 /*
-                               _  _             
-                              | |(_)            
- ____   ___   ____ ____  _____| | _ _____ _____ 
+                               _  _
+                              | |(_)
+ ____   ___   ____ ____  _____| | _ _____ _____
 |  _ \ / _ \ / ___)    \(____ | || (___  ) ___ |
 | | | | |_| | |   | | | / ___ | || |/ __/| ____|
 |_| |_|\___/|_|   |_|_|_\_____|\_)_(_____)_____)
@@ -571,7 +571,7 @@ button:active {
 	outline: none;
 }
 
-/* 
+/*
 CLASSES
 */
 /* sizes */
@@ -1149,7 +1149,7 @@ html.js .user-review .review-text.collapsed:after {
 	height: 5em;
 	background-repeat: repeat-x;
 	background-position: 0 100%;
-	background-image: url(/steam/i/reviews-fade.png); /* fallback */
+	background-image: url(../i/reviews-fade.png); /* fallback */
 	background-image: -webkit-linear-gradient(rgba(34,34,34,0), rgba(34,34,34,255));
 	background-image: -moz-linear-gradient(rgba(34,34,34,0), rgba(34,34,34,255));
 	background-image: linear-gradient(rgba(34,34,34,0), rgba(34,34,34,255));
@@ -1401,7 +1401,7 @@ PAGE
 }
 
 .store-game-page .main {
-	background: url(/steam/i/transparent70.png); /* fallback */
+	background: url(../i/transparent70.png); /* fallback */
 	background: rgba(17,17,17,0.7);
 	background: -webkit-linear-gradient(rgba(0,0,0,0.6) 700px, rgba(17,17,17,0.7) 1000px);
 	background: -moz-linear-gradient(rgba(0,0,0,0.6) 700px, rgba(17,17,17,0.7) 1000px);
@@ -1440,7 +1440,7 @@ PAGE
 
 .store-game-page .main > header {
 	text-align: center;
-	padding: 24px 0 8px; /* fallback */ 
+	padding: 24px 0 8px; /* fallback */
 	padding: 1.5rem 0 0.5rem;
 	overflow: hidden; /* clearfix */
 }
@@ -1556,7 +1556,7 @@ html.js .game-description .description-text.collapsed:after {
 	height: 5em;
 	background-repeat: repeat-x;
 	background-position: 0 100%;
-	background-image: url(/steam/i/fade.png); /* fallback */
+	background-image: url(../i/fade.png); /* fallback */
 	background-image: -webkit-linear-gradient(rgba(17,17,17,0), rgba(17,17,17,255));
 	background-image: -moz-linear-gradient(rgba(17,17,17,0), rgba(17,17,17,255));
 	background-image: linear-gradient(rgba(17,17,17,0), rgba(17,17,17,255));
@@ -1816,7 +1816,7 @@ html.js .game-description .description-text.collapsed + .expand {
 	width: 17px;
 	height: 16px;
 	margin: 0 0.15em;
-	background-image: url(/steam/i/sprites.png);
+	background-image: url(../i/sprites.png);
 	background-repeat: no-repeat;
 	vertical-align: text-top;
 }
@@ -1828,7 +1828,7 @@ html.js .game-description .description-text.collapsed + .expand {
 	html.backgroundsize [class*="icon-b-"]:before,
 	html.backgroundsize [class*="icon-a-"]:after {
 		background-size: 504px 240px;
-		background-image: url(/steam/i/sprites@2x.png);
+		background-image: url(../i/sprites@2x.png);
 	}
 }
 

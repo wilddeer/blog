@@ -124,7 +124,7 @@
 		display: none;
 	}
 
-	html.js .gallery .thumbs.active {
+	.gallery .thumbs.active {
 		display: block;
 	}
 }
@@ -206,7 +206,7 @@
 	width: 17px;
 	height: 16px;
 	margin: 0 0.15em;
-	background-image: url(/steam/i/sprites.png);
+	background-image: url(sprites.png);
 	background-repeat: no-repeat;
 	vertical-align: text-top;
 }
@@ -218,7 +218,7 @@
 	html.backgroundsize [class*="icon-b-"]:before,
 	html.backgroundsize [class*="icon-a-"]:after {
 		background-size: 504px 240px;
-		background-image: url(/steam/i/sprites@2x.png);
+		background-image: url(sprites@2x.png);
 	}
 }
 

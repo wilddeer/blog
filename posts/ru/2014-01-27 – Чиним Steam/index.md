@@ -1,10 +1,11 @@
+<link rel="stylesheet" href="/css/peppermint.suggested.css">
+
 <style>
     .steam-demo {
-        width: 100%;
         font-size: 16px;
         color: white;
         background: #222;
-        padding: 3em 4%;
+        padding: 3em 1.5em;
         font-family: Arial, Helvetica, sans-serif;
         color: #f5f5f5;
         margin-bottom: 1.5em;
@@ -19,14 +20,6 @@
     .steam-demo.fullwidth {
         padding-left: 0;
         padding-right: 0;
-    }
-
-    @media all and (min-width: 40em) {
-        .steam-demo {
-            width: 92%;
-            padding-left: 1.5em;
-            padding-right: 1.5em;
-        }
     }
 
     .steam-demo a,
@@ -99,14 +92,6 @@
         padding: 0;
     }
 
-    .no-js .js-controls {
-        display: none;
-    }
-
-    .js-controls {
-        text-align: center;
-    }
-
     .problem {
         color: #ca3f27;
     }
@@ -114,68 +99,117 @@
     .solution {
         color: #8bca27;
     }
+
+    /* Slime */
+    .slime.active {
+        position: relative;
+        overflow: hidden;
+        padding-left: 0;
+        padding-right: 0;
+        -ms-touch-action: pan-y;
+        touch-action: pan-y;
+        -webkit-tap-highlight-color: transparent;
+        tap-highlight-color: transparent;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        cursor: move;
+        cursor: -webkit-grab;
+        cursor: -moz-grab;
+        cursor: grab;
+    }
+
+    .slime.active .scroller {
+        display: inline-block;
+        position: relative;
+    }
+
+    .slime.active a:active,
+    .slime.active a:active img {
+        outline: none;
+    }
+
+    .slime.active,
+    .slime.active .scroller {
+        -webkit-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -ms-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+
+    .slime.active.drag,
+    .slime.active.drag * {
+        cursor: move;
+        cursor: -webkit-grabbing;
+        cursor: -moz-grabbing;
+        cursor: grabbing;
+    }
 </style>
 
-# Чиним Steam {#header}
+# Чиним Steam {.big-header}
 
 [Стим](http://store.steampowered.com/) всем хорош, но сайт у ребят ужасный. Все классные идеи чуваков из Валва, получившие то или иное воплощение на сайте, страдают от плохой реализации фронтэнда.
 
-Пришло время сделать свой стим, с преферансом и блудницами. Я взял для издевательств [страницу игры](http://store.steampowered.com/app/212894/) в магазине и переделал ее. Переделка не полная, не стал переделывать шапку и футер стима (лень), а также отсутствуют некоторые элементы, присутствующие на оригинальной странице. Дизайн какой есть, чукча не дизайнер.
+Пришло время сделать свой стим, с преферансом и блудницами. Я взял для издевательств [страницу игры](https://store.steampowered.com/app/218786/Dishonored_The_Brigmore_Witches/) в магазине и переделал ее. Переделка не полная, не стал переделывать шапку и футер стима (лень), а также отсутствуют некоторые элементы, присутствующие на оригинальной странице. Дизайн какой есть, чукча не дизайнер.
 
 В общем, вот что вышло:
 
-<p class="demo" style="text-align: center;"><a href="/steam/" style="font-size: 2.5em;">Демка</a></p>
+<p style="text-align: center;"><a href="/demos/steam/" style="font-size: 2.5em;">Демка</a></p>
 
 А теперь про проблемы сайта Стима и как я их решал, по полочкам:
 
-<hgroup>
-    <h4 class="problem">Проблема</h4>
-    <h2>Урезанная мобильная версия</h2>
-</hgroup>
+## <small class="state-color state-color--danger">Проблема</small><br>Урезанная мобильная версия
 
 Мобильная версия сайта не распознает многие мобильные девайсы и не обладает и половиной функционала полной версии. Например, недавно добавленные пользовательские обзоры игр полностью отсутствуют в мобильной версии.
 
 Между тем давать мобильным пользователям обрезанный функционал — очень плохая практика. Пользователь, зашедший с мобильника, хочет использовать все возможностями сайта, так же как и пользователь на десктопе. Есть [очень хорошая и короткая книжка](http://www.abookapart.com/products/mobile-first) по этому поводу.
 
-<hgroup>
-    <h4 class="solution">Решение</h4>
-    <h2>Адаптивная верстка</h2>
-</hgroup>
+## <small class="state-color state-color--success">Решение</small><br>Адаптивная верстка
 
 Делаем адаптивную демку. Адаптивная верстка увеличивает время и сложность разработки, зато весь функционал сайта будет доступен сразу на любом устройстве, а поддержка и добавление фич упростится. В особо сложных ситуациях можно использовать комбинированный подход: генерировать на сервере часть страницы по-разному в зависимости от устройства. Например, можно отдавать на разные устройства картинки разных размеров.
 
 Демка сделана по принципу mobile first, то есть базовые стили для маленьких экранов, на которые с ростом размера экрана постепенно наращиваются дополнительные стили.
 
-### "Адаптируем" галерею
+### «Адаптируем» галерею
 
-Галерея со скриншотами должна работать на любых устройствах, с любым типом тач-эвентов. Меняем ее на [Peppermint](/scripts/peppermint/), добавляем превьюшки, дописываем скроллер превьюшек, взяв за основу код работы с событиями из пепперминта (который я, кстати, выделил в [отдельный скрипт](https://github.com/wilddeer/Event-Burrito)). Теперь и скришноты, и превьюшки можно проматывать как мышкой, так и тачем. Связываем слайдер и превьюшки, добавляем стрелочки:
+Галерея со скриншотами должна работать на любых устройствах, с любым типом тач-эвентов. Меняем ее на [Peppermint](/Тач-слайдер_Peppermint.js/), добавляем превьюшки, дописываем скроллер превьюшек, взяв за основу код работы с событиями из пепперминта (который я, кстати, выделил в [отдельный скрипт](https://github.com/wilddeer/Event-Burrito)). Теперь и скришноты, и превьюшки можно проматывать как мышкой, так и тачем. Связываем слайдер и превьюшки, добавляем стрелочки:
 
 <style>
-{% include snippets/steam-gallery.css %}
+<%- include('steam-gallery.css') %>
 </style>
 
-<script>
-dzDelayed.push(function() {
-    {% include snippets/steam-gallery.js %}
-    $('.js-steam-peppermint').steamGallery();
-});
-</script>
+<script src="/js/jquery-3.5.1.slim.min.js"></script>
+<script src="/js/eventburrito.js"></script>
+<script src="/js/peppermint.min.js"></script>
 
 <div class="steam-demo fullwidth">
-{% include snippets/steam-gallery.htm %}
+<%- include('steam-gallery.html') %>
 </div>
+
+<script>
+    <%- include('slime.js') %>
+    <%- include('steam-gallery.js') %>
+    $('.js-steam-peppermint').steamGallery();
+</script>
 
 На маленьких экранах меняем превьюшки на точки (на точки можно посмотреть, если сжать окно браузера).
 
 Оформляем все в виде jQuery-плагина:
 
+::: .code-max-height
 ```js
-{% include snippets/steam-gallery.js %}
+<%- include('steam-gallery.js') %>
 ```
+:::
 
 ### Фон
 
-Делаем фон на всю страницу. Чтобы мобильные устройства не расстраивались от большой картинки, отдаем им картинку поменьше. Сравните [полный](/steam/i/page.bg.jpg) и [мобильный](/steam/i/page.bg.mob.jpg) варианты фона.
+Делаем фон на всю страницу. Чтобы мобильные устройства не расстраивались от большой картинки, отдаем им картинку поменьше. Сравните [полный](/demos/steam/i/page.bg.jpg) и [мобильный](/demos/steam/i/page.bg.mob.jpg) варианты фона.
 
 Так как у каждой страницы в магазине фон разный, кладем стиль прямо в шапку страницы, не забыв учесть старые ИЕ, не понимающие media queries:
 
@@ -205,38 +239,31 @@ dzDelayed.push(function() {
 
 Чтобы мобильники еще больше нас любили, убираем для них почти все тени, полупрозрачные фоны заменяем на непрозрачные.
 
-<hgroup>
-    <h4 class="problem">Проблема</h4>
-    <h2>Контент подчиняется дизайну</h2>
-</hgroup>
+## <small class="state-color state-color--danger">Проблема</small><br>Контент подчиняется дизайну
 
 Вот так, например, сейчас выглядит блок про DLC на сайте Стима:
 
-{% include pic.htm src='dlc-block.png' a='Блок про DLC' %}
+![](dlc-block.png =625x87)
 
 Что будет, если фразу удлинить в 2 раза? Что получится, если потом перевести эту фразу на язык, в котором она станет еще длиннее? Вот что:
 
-{% include pic.htm src='dlc-block-overflowed.png' c='Блок про DLC порвало :-(' %}
+![Блок про DLC порвало :-(](dlc-block-overflowed.png =621x178)
 
 У блока фиксированная высота и ширина (ширина непонятно зачем, ведь у родительского блока точно такая же ширина), а на фоне [картинка](http://cdn4.store.steampowered.com/public/images/v5/game_area_dlc.png). Даже в то время, когда не было классных CSS3-свойств, можно было сделать подобный блок резиновым. С костылями, но без особых проблем.
 
-<hgroup>
-    <h4 class="solution">Решение</h4>
-    <h2>Подчиняем дизайн контенту</h2>
-</hgroup>
+## <small class="state-color state-color--success">Решение</small><br>Подчиняем дизайн контенту
 
 <style>
-{% include snippets/steam-dlc.css %}
+<%- include('steam-dlc.css') %>
 </style>
 
 <div class="steam-demo">
-{% include snippets/steam-dlc.htm %}
+<%- include('steam-dlc.html') %>
 </div>
 
-<p class="js-controls"><button id="fill-it">наполни меня</button></p>
+<button id="fill-it">наполни меня</button> {.align-center}
 
 <script>
-dzDelayed.push(function() {
     var i = 0;
 
     $('#fill-it').click(function() {
@@ -246,47 +273,40 @@ dzDelayed.push(function() {
             $(this).text('ну прекрати!').attr('disabled','disabled');
         }
     });
-});
 </script>
 
 Все удовольствие одним блоком. Заголовок, параграф и пачка стилей:
 
 ```html
-{% include snippets/steam-dlc.htm %}
+<%- include('steam-dlc.html') %>
 ```
 
 ```css
-{% include snippets/steam-dlc.css %}
+<%- include('steam-dlc.css') %>
 ```
 
 Старые браузеры получат блок без градиента и круглых уголков, не велика беда.
 
 Проблема с недостаточно гибким дизайном не заканчивается одним блоком. Долгое время блоки с ценами, рассчитанные на доллары, разваливались в русском магазине. Сейчас проблема по большей части решена, но блоки с фиксированной шириной все еще попадаются:
 
-{% include pic.htm src='price-overflowed.png' a='Переполненный блок с ценой' c="Стим не выдержит еще одного обвала рубля :-)" %}
+![Стим не выдержит еще одного обвала рубля :-)](price-overflowed.png =197x76)
 
 По соседству живет другой такой же по виду блок, который, однако, прекрасно чувствует себя в нестандартных условиях:
 
-{% include pic.htm src='proper-price-block.png' a='Правильный блок с ценой'%}
+![](proper-price-block.png =296x129)
 
 Это наталкивает нас на еще одну проблему:
 
-<hgroup>
-    <h4 class="problem">Проблема</h4>
-    <h2>Неуниверсальный код</h2>
-</hgroup>
+## <small class="state-color state-color--danger">Проблема</small><br>Неуниверсальный код
 
 Два одинаковых по виду блока используют совершенно разную верстку, хотя, по сути, должны быть идентичны.
 
-<hgroup>
-    <h4 class="solution">Решение</h4>
-    <h2>Делаем код универсальным</h2>
-</hgroup>
+## <small class="state-color state-color--success">Решение</small><br>Делаем код универсальным
 
 Делаем универсальный блок с ценой:
 
 <style>
-{% include snippets/price-area.css %}
+<%- include('price-area.css') %>
 </style>
 
 <div class="steam-demo white">
@@ -294,60 +314,49 @@ dzDelayed.push(function() {
     <span class="discount">
       <span>-1%</span>
     </span>
-
     <span class="price">
       <del class="original-price">
         <span>£3.00</span>
       </del>
-
       <span class="final-price">
         <span>£2.97</span>
       </span>
     </span>
   </div>
-
   <div class="price-area">
     <span class="discount">
       <span>-33%</span>
     </span>
-
     <span class="price">
       <del class="original-price">
         <span>$49.99</span>
       </del>
-
       <span class="final-price">
         <span>$32.99</span>
       </span>
     </span>
   </div>
-
   <div class="price-area" style="font-size: 1.2em;">
     <span class="discount">
       <span>-600%</span>
     </span>
-
     <span class="price">
       <del class="original-price">
         <span>100 000 рублей</span>
       </del>
-
       <span class="final-price">
         <span>-500 000 рублей</span>
       </span>
     </span>
   </div>
-
   <div class="price-area" style="font-size: 1.5em;">
     <span class="discount">
       <span>-66%</span>
     </span>
-
     <span class="price">
       <del class="original-price">
         <span>¥ 999</span>
       </del>
-
       <span class="final-price">
         <span>¥ 333</span>
       </span>
@@ -358,11 +367,11 @@ dzDelayed.push(function() {
 Для изменения размера блока достаточно изменить размер шрифта. Все метрики выставлены в `em`’ах и изменяются пропорционально шрифту. Значения завернуты в дополнительные спаны, чтобы можно было выставить для них размер шрифта не побив метрики родительского блока:
 
 ```html
-{% include snippets/price-area.htm %}
+<%- include('price-area.html') %>
 ```
 
 ```css
-{% include snippets/price-area.css %}
+<%- include('price-area.css') %>
 ```
 
 Кончились скидки? Выставляем цену без скидок. Убираем все лишнее из верстки:
@@ -383,13 +392,11 @@ dzDelayed.push(function() {
             ¥ 999
         </span>
     </div>
-
     <div class="price-area" style="font-size: 1.2em;">
         <span class="price">
             599 руб.
         </span>
     </div>
-
     <div class="price-area">
         <span class="price">
             $5.99
@@ -400,57 +407,50 @@ dzDelayed.push(function() {
 Та же история с любыми повторяющимися блоками. Например, блок с юзерпиком и именем пользователя:
 
 <style>
-{% include snippets/steam-user.css %}
+<%- include('steam-user.css') %>
 </style>
 
 <div class="steam-demo" style="text-align: center;">
-  <p>
-    <a href="#" class="user" style="font-size: 0.66em;">
-      <span class="userpic"><img src="/steam/i/userpic1.jpg"></span><span class="username">Username</span>
-    </a>
-  </p>
-
-  <p>
-    <a href="#" class="user user-online">
-      <span class="userpic"><img src="/steam/i/userpic4.jpg"></span><span class="username">Username</span>
-    </a>
-  </p>
-
-  <p>
-    <a href="#" class="user user-ingame" style="font-size: 1.5em;">
-      <span class="userpic"><img src="/steam/i/userpic-med.jpg"></span><span class="username">Username</span>
-    </a>
-  </p>
-
-  <p>
-    <a href="#" class="user user-online" style="font-size: 2.25em;">
-      <span class="userpic"><img src="/steam/i/userpic-big.jpg"></span><span class="username">Username</span>
-    </a>
-  </p>
-
-  <p>
-    <a href="#" class="user user-ingame user-square" style="font-size: 2.25em;">
-      <span class="userpic"><img src="/steam/i/userpic-big2.jpg"></span><span class="username">Username</span>
-    </a>
-  </p>
-
-  <p>
-    <a href="#" class="user user-online user-square" style="font-size: 1.5em;">
-      <span class="userpic"><img src="/steam/i/userpic-med2.jpg"></span><span class="username">Username</span>
-    </a>
-  </p>
-
-  <p>
-    <a href="#" class="user user-square">
-      <span class="userpic"><img src="/steam/i/userpic3.jpg"></span><span class="username">Username</span>
-    </a>
-  </p>
-
-  <p>
-    <a href="#" class="user user-ingame user-square" style="font-size: 0.66em;">
-      <span class="userpic"><img src="/steam/i/userpic6.jpg"></span><span class="username">Username</span>
-    </a>
-  </p>
+    <p>
+        <a href="#" class="user" style="font-size: 0.66em;">
+            <span class="userpic"><img src="/demos/steam/i/userpic1.jpg"></span><span class="username">Username</span>
+        </a>
+    </p>
+    <p>
+        <a href="#" class="user user-online">
+            <span class="userpic"><img src="/demos/steam/i/userpic4.jpg"></span><span class="username">Username</span>
+        </a>
+    </p>
+    <p>
+        <a href="#" class="user user-ingame" style="font-size: 1.5em;">
+            <span class="userpic"><img src="/demos/steam/i/userpic-med.jpg"></span><span class="username">Username</span>
+        </a>
+     </p>
+    <p>
+        <a href="#" class="user user-online" style="font-size: 2.25em;">
+            <span class="userpic"><img src="/demos/steam/i/userpic-big.jpg"></span><span class="username">Username</span>
+        </a>
+    </p>
+    <p>
+        <a href="#" class="user user-ingame user-square" style="font-size: 2.25em;">
+            <span class="userpic"><img src="/demos/steam/i/userpic-big2.jpg"></span><span class="username">Username</span>
+        </a>
+    </p>
+    <p>
+        <a href="#" class="user user-online user-square" style="font-size: 1.5em;">
+            <span class="userpic"><img src="/demos/steam/i/userpic-med2.jpg"></span><span class="username">Username</span>
+        </a>
+    </p>
+    <p>
+        <a href="#" class="user user-square">
+            <span class="userpic"><img src="/demos/steam/i/userpic3.jpg"></span><span class="username">Username</span>
+        </a>
+    </p>
+    <p>
+        <a href="#" class="user user-ingame user-square" style="font-size: 0.66em;">
+            <span class="userpic"><img src="/demos/steam/i/userpic6.jpg"></span><span class="username">Username</span>
+        </a>
+    </p>
 </div>
 
 Чтобы придерживаться принципа универсального кода, важно грамотно структурировать стили и понять, какая часть стилей за что отвечает. Я для себя вывел такую систему:
@@ -462,14 +462,11 @@ dzDelayed.push(function() {
 - **Модули** — это как раз отдельные повторяющиеся блоки, базовые стили которых не должны зависеть от контекста (но могут быть изменены стилями контекста, см. далее). Модули могут вкладываться друг в друга.
 - **Стили страницы** — стили специфичных для страницы блоков. Это как раз то место, где можно модифицировать стили модулей, расположенных в конкретных блоках страницы.
 
-<hgroup>
-  <h4 class="problem">Проблема</h4>
-  <h2>«Навязчивый» яваскрипт</h2>
-</hgroup>
+## <small class="state-color state-color--danger">Проблема</small><br>«Навязчивый» яваскрипт
 
 Подмена базовых функций HTML скриптами и отсутствие фоллбеков приводит к тому, что стандартный функционал элементов полностью теряется.
 
-На сайте Стима присутствуют все классический ошибки, собранные мной в [посте про ссылки](/links-please/). Вот, например, ссылка "View all screenshots", которая и не ссылка вовсе, так как никуда не ведет:
+На сайте Стима присутствуют все классический ошибки, собранные мной в [посте про ссылки](/Links,_please/). Вот, например, ссылка «View all screenshots», которая и не ссылка вовсе, так как никуда не ведет:
 
 ```html
 <a class="linkbar" href="javascript:screenshot_popup('http://store.steampowered.com/screenshot/view/205100/0?snr=1_5_9__400', 800, 635, 0, 0);">...</a>
@@ -483,7 +480,7 @@ dzDelayed.push(function() {
 
 А еще есть вот такие посты в центре сообщества:
 
-{% include pic.htm src='hub-post.png' a='Пост в центре сообщества игры' %}
+![](hub-post.png =481x362)
 
 Их код выглядит так:
 
@@ -497,55 +494,43 @@ dzDelayed.push(function() {
 
 Мало того, что эти посты открываются в ужасных модальных окнах (их, кстати, придумали люди, которые ненавидят вкладки), так еще их совсем никак нельзя открыть по-нормальному, ведь это не ссылка. Не говоря уже об инлайновых стилях и жирном инлайновом вызове функции.
 
-<hgroup>
-    <h4 class="solution">Решение</h4>
-    <h2 markdown="1">Делаем яваскрипт [ненавязчивым](https://en.wikipedia.org/wiki/Unobtrusive_JavaScript)</h2>
-</hgroup>
+## <small class="state-color state-color--success">Решение</small><br>Делаем яваскрипт [ненавязчивым](https://en.wikipedia.org/wiki/Unobtrusive_JavaScript)
 
 Весь блок можно сделать ссылкой и открывать попап (если ну прям очень хочется попап) только по нажатию левой кнопки.
 
-То же самое с другими элементами интерфейса: если элемент куда-то ведет, делаем ссылку. Потом на ссылку можно повесить любой обработчик, главное не запрещать открывать ее в новой вкладке. Если элемент просто совершает действие на старнице, делаем кнопку. Подробнее и с примерами в [посте про правильные ссылки](/links-please/).
+То же самое с другими элементами интерфейса: если элемент куда-то ведет, делаем ссылку. Потом на ссылку можно повесить любой обработчик, главное не запрещать открывать ее в новой вкладке. Если элемент просто совершает действие на старнице, делаем кнопку. Подробнее и с примерами в [посте про правильные ссылки](/Links,_please/).
 
-Кроме всего перечисленного, "навязчивый" яваскрипт напрямую ведет к еще одной проблеме:
+Кроме всего перечисленного, «навязчивый» яваскрипт напрямую ведет к еще одной проблеме:
 
-<hgroup>
-    <h4 class="problem">Проблема</h4>
-    <h2>Низкая отказоустойчивость</h2>
-</hgroup>
+## <small class="state-color state-color--danger">Проблема</small><br>Низкая отказоустойчивость
 
 Что произойдет, если упадет CDN-сервер со скриптами? Если один из скриптов выполнится с ошибкой? Правильно, половина функционала сайта просто перестанет работать. А могла бы работать, хоть и не так хорошо, как со скриптами.
 
 Галерея без яваскрипта превратилась в черный прямоугольник, превьюшки и скролл, естественно, ничего не делают:
 
-{% include pic.htm src='gallery-nojs.jpg' a='Галерея при выключенном яваскрипте' %}
+![](gallery-nojs.jpg =621x443)
 
-<hgroup>
-    <h4 class="solution">Решение</h4>
-    <h2>Используем грамотные фоллбеки</h2>
-</hgroup>
+## <small class="state-color state-color--success">Решение</small><br>Используем грамотные фоллбеки
 
 Кладем картинки из галереи в блок с горизонтальным скроллом, который после инициализации превратится в нормальную галерею. Так как элементы управления без яваскрипта бесполезны, их не стоит показывать до инициализации:
 
 <div class="steam-demo fullwidth">
     <section class="gallery peppermint steam-demo-peppermint peppermint-inactive">
         <figure>
-            <a href="/steam/i/1.jpg" target="_blank"><img src="/steam/i/m1.jpg"></a>
+            <a href="/demos/steam/i/1.jpg" target="_blank"><img src="/demos/steam/i/m1.jpg" width="711" height="400"></a>
         </figure>
-
         <figure>
-            <a href="/steam/i/2.jpg" target="_blank"><img src="/steam/i/m2.jpg"></a>
+            <a href="/demos/steam/i/2.jpg" target="_blank"><img src="/demos/steam/i/m2.jpg" width="711" height="400"></a>
         </figure>
-
         <figure>
-            <a href="/steam/i/3.jpg" target="_blank"><img src="/steam/i/m3.jpg"></a>
+            <a href="/demos/steam/i/3.jpg" target="_blank"><img src="/demos/steam/i/m3.jpg" width="711" height="400"></a>
         </figure>
     </section>
 </div>
 
-<p class="js-controls"><button id="launch-it">Запусти меня</button></p>
+<button id="launch-it">Запусти меня</button> {.align-center}
 
 <script>
-dzDelayed.push(function() {
     $('#launch-it').click(function() {
         $('.steam-demo-peppermint').Peppermint({
             dots: true,
@@ -554,7 +539,6 @@ dzDelayed.push(function() {
 
         $(this).attr('disabled','disabled');
     });
-});
 </script>
 
 Теперь скриншоты можно посмотреть, даже если скрипты по какой-то причине не загрузились.
@@ -579,7 +563,7 @@ dzDelayed.push(function() {
 
 Объединяем стили и скрипты в один файл, загружаем стили в шапке, а скрипты перед закрывающим тегом `</html>` (кроме Модернайзера, его кладем в шапку, так как он влияет на стили страницы). Объединяем картинки в спрайт. Там, где можно, используем CSS3-фичи вместо картинок.
 
-Все это резко снижает количество обращений к серверу и время начала отрисовки страницы. В моей демке 25 обращений к серверу, из которых 21 картинка, 2 скрипта и 1 стиль. В оформлении используется два png-спрайта — один для обычный дисплеев и один для high density (в старых браузерах загрузится три фоллбек-картинки для полупрозрачного фона и градиентов). Сначала я вообще использовал один svg-спрайт, но, к сожалению, он очень сильно затормаживает некоторые мобильные браузеры, а в мобильном IE сильно "блюрит", поэтому пока приходится использовать png или иконочные шрифты (у которых есть свои проблемы).
+Все это резко снижает количество обращений к серверу и время начала отрисовки страницы. В моей демке 25 обращений к серверу, из которых 21 картинка, 2 скрипта и 1 стиль. В оформлении используется два png-спрайта — один для обычный дисплеев и один для high density (в старых браузерах загрузится три фоллбек-картинки для полупрозрачного фона и градиентов). Сначала я вообще использовал один svg-спрайт, но, к сожалению, он очень сильно затормаживает некоторые мобильные браузеры, а в мобильном IE сильно «блюрит», поэтому пока приходится использовать png или иконочные шрифты (у которых есть свои проблемы).
 
 Естественно, на боевом сервере количество загружаемых ресурсов может возрасти, однако разница в количестве запросов очевидна.
 
@@ -612,4 +596,4 @@ dzDelayed.push(function() {
     STORE </a>
 ```
 
-{% include pic.htm src='wat.jpg' a='WAT'%}
+![](wat.jpg =400x266)

@@ -3,11 +3,13 @@
     padding-top: 1.5em
 
     &.is-root
+        padding-top: 0
+
         @media (min-width: $phoneBreakpoint)
-            margin-top: 3em
+            margin-top: 4.5em
 
         @media (min-width: $pcBreakpoint)
-            margin-top: 20vh
+            margin-top: calc(132px + 11vh)
 
     &__title
         font-size: 3em
@@ -19,7 +21,7 @@
             font-size: 4em
 
         @media (min-width: $pcBreakpoint)
-            font-size: 4.8em
+            font-size: 5em
 
     &__title-link:not(.is-root)
         @mixin link $linkColor, $linkColor

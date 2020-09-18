@@ -52,7 +52,13 @@ $.fn.steamGallery = function() {
         for (var i = thumbs.length - 1; i >= 0; i--) {
             $(thumbs[i]).on('click keyup', function(n) {
                 return function(event) {
-                    if (scroller.getClicksAllowed() && (event.type == 'click' || event.keyCode == 13)) {
+                    if (
+                        scroller.getClicksAllowed() &&
+                        (
+                            event.type == 'click' ||
+                            event.keyCode == 13
+                        )
+                    ) {
                         gallery.slideTo(n);
                         gallery.stop();
                     }
@@ -90,7 +96,7 @@ $.fn.steamGallery = function() {
 
         function next() {
             if (currentSlide == slidesNumber - 1) return;
-            
+
             gallery.next();
             gallery.stop();
         }
