@@ -1,3 +1,11 @@
+---
+tags:
+    - archive
+---
+
+**Устаревшая фигня!** Этот пост содержит неактуальное старье и оставлен для истории и лулзов.
+{.notice .is-warning}
+
 <link rel="stylesheet" href="/css/peppermint.suggested.css">
 
 <style>
