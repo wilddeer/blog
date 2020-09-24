@@ -155,7 +155,7 @@
 	white-space: nowrap;
 	word-wrap: normal;
 	list-style-type: none;
-	padding: 0.5em 0;
+	padding-top: 0.5em;
 	margin-bottom: 0;
 }
 
@@ -194,6 +194,10 @@
 	border: 0.5em solid;
 	border-color: transparent transparent #7CB8E4 transparent;
 	border-top-width: 0;
+}
+
+.gallery .thumbs img {
+	vertical-align: middle;
 }
 
 

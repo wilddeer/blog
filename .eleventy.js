@@ -27,6 +27,7 @@ module.exports = config => {
     const markdownLib = markdownIt({
         html: true
     })
+        .use(markdownItAttrs)
         .use(markdownItMultimdTable, {
             multiline:  true,
             rowspan:    true,
@@ -37,8 +38,7 @@ module.exports = config => {
             figcaption: true
         })
         .use(markdownItDiv)
-        .use(markdownItKdb)
-        .use(markdownItAttrs);
+        .use(markdownItKdb);
 
     config.setLibrary('md', markdownLib);
 

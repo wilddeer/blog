@@ -1,7 +1,9 @@
 ---
+layout: layouts/postWrap
 tags:
     - archive
 ---
+<div class="postText">
 
 **Устаревшая фигня!** Этот пост содержит неактуальное старье и оставлен для истории и лулзов.
 {.notice .is-warning}
@@ -9,27 +11,6 @@ tags:
 <link rel="stylesheet" href="/css/peppermint.suggested.css">
 
 <style>
-    .steam-demo {
-        font-size: 16px;
-        color: white;
-        background: #222;
-        padding: 3em 1.5em;
-        font-family: Arial, Helvetica, sans-serif;
-        color: #f5f5f5;
-        margin-bottom: 1.5em;
-    }
-
-    .steam-demo.white {
-        padding-top: 1.5em;
-        padding-bottom: 1.5em;
-        background: transparent;
-    }
-
-    .steam-demo.fullwidth {
-        padding-left: 0;
-        padding-right: 0;
-    }
-
     .steam-demo a,
     .steam-demo a:visited {
         color: #1f98df;
@@ -187,6 +168,10 @@ tags:
 
 Галерея со скриншотами должна работать на любых устройствах, с любым типом тач-эвентов. Меняем ее на [Peppermint](/Тач-слайдер_Peppermint.js/), добавляем превьюшки, дописываем скроллер превьюшек, взяв за основу код работы с событиями из пепперминта (который я, кстати, выделил в [отдельный скрипт](https://github.com/wilddeer/Event-Burrito)). Теперь и скришноты, и превьюшки можно проматывать как мышкой, так и тачем. Связываем слайдер и превьюшки, добавляем стрелочки:
 
+</div>
+
+::: .demo .is-fullwidth
+
 <style>
 <%- include('steam-gallery.css') %>
 </style>
@@ -195,15 +180,17 @@ tags:
 <script src="/js/eventburrito.js"></script>
 <script src="/js/peppermint.min.js"></script>
 
-<div class="steam-demo fullwidth">
 <%- include('steam-gallery.html') %>
-</div>
 
 <script>
     <%- include('slime.js') %>
     <%- include('steam-gallery.js') %>
     $('.js-steam-peppermint').steamGallery();
 </script>
+
+:::
+
+<div class="postText">
 
 На маленьких экранах меняем превьюшки на точки (на точки можно посмотреть, если сжать окно браузера).
 
@@ -261,15 +248,24 @@ tags:
 
 ## <small class="state-color state-color--success">Решение</small><br>Подчиняем дизайн контенту
 
+</div>
+
 <style>
 <%- include('steam-dlc.css') %>
 </style>
 
-<div class="steam-demo">
+::: .demo .is-fullwidth
+::: .content-box
 <%- include('steam-dlc.html') %>
+
+<div class="align-center block is-mt-big">
+    <button class="button is-white" id="fill-it">наполни меня</button>
 </div>
 
-<button id="fill-it">наполни меня</button> {.align-center}
+:::
+:::
+
+<div class="postText">
 
 <script>
     var i = 0;
@@ -313,11 +309,14 @@ tags:
 
 Делаем универсальный блок с ценой:
 
+</div>
+
+::: .demo .is-fullwidth .is-light
 <style>
 <%- include('price-area.css') %>
 </style>
 
-<div class="steam-demo white">
+<div class="steam-demo white align-center">
   <div class="price-area" style="font-size: 0.7em;">
     <span class="discount">
       <span>-1%</span>
@@ -371,6 +370,10 @@ tags:
     </span>
   </div>
 </div>
+:::
+:::
+
+<div class="postText">
 
 Для изменения размера блока достаточно изменить размер шрифта. Все метрики выставлены в `em`’ах и изменяются пропорционально шрифту. Значения завернуты в дополнительные спаны, чтобы можно было выставить для них размер шрифта не побив метрики родительского блока:
 
@@ -394,7 +397,10 @@ tags:
 
 И все работает.
 
-<div class="steam-demo white">
+</div>
+
+::: .demo .is-fullwidth .is-light
+<div class="steam-demo white align-center">
     <div class="price-area" style="font-size: 1.5em;">
         <span class="price">
             ¥ 999
@@ -411,9 +417,16 @@ tags:
         </span>
     </div>
 </div>
+:::
+
+<div class="postText">
 
 Та же история с любыми повторяющимися блоками. Например, блок с юзерпиком и именем пользователя:
 
+</div>
+
+
+::: .demo .is-fullwidth
 <style>
 <%- include('steam-user.css') %>
 </style>
@@ -460,6 +473,9 @@ tags:
         </a>
     </p>
 </div>
+:::
+
+<div class="postText">
 
 Чтобы придерживаться принципа универсального кода, важно грамотно структурировать стили и понять, какая часть стилей за что отвечает. Я для себя вывел такую систему:
 
@@ -522,7 +538,10 @@ tags:
 
 Кладем картинки из галереи в блок с горизонтальным скроллом, который после инициализации превратится в нормальную галерею. Так как элементы управления без яваскрипта бесполезны, их не стоит показывать до инициализации:
 
-<div class="steam-demo fullwidth">
+</div>
+
+::: .demo .is-fullwidth
+<div class="steam-demo">
     <section class="gallery peppermint steam-demo-peppermint peppermint-inactive">
         <figure>
             <a href="/demos/steam/i/1.jpg" target="_blank"><img src="/demos/steam/i/m1.jpg" width="711" height="400"></a>
@@ -536,7 +555,15 @@ tags:
     </section>
 </div>
 
-<button id="launch-it">Запусти меня</button> {.align-center}
+<div class="align-center block is-mt-big">
+    <button class="button is-white" id="launch-it">Запусти меня</button>
+</div>
+
+:::
+
+<div class="postText">
+
+
 
 <script>
     $('#launch-it').click(function() {
@@ -605,3 +632,5 @@ tags:
 ```
 
 ![](wat.jpg =400x266)
+
+</div>

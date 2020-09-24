@@ -1,23 +1,6 @@
 ---
-layout: layouts/content
+layout: layouts/postWrap
 ---
-<div class="post">
-    <div class="content-box">
-        <div class="text">
-            <%- $.content %>
-        </div>
-
-        <p class="publish-date">
-            <%= $.lang === 'ru' ? 'Опубликовано' : 'Published on' %>
-            <time>
-                <%-
-                    include('/modules/parsedDate', {
-                        dateString: $.date,
-                        lang: $.lang,
-                        showYear: true
-                    })
-                %>
-            </time>
-        </p>
-    </div>
+<div class="postText">
+    <%- $.content %>
 </div>

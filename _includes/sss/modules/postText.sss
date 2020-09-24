@@ -1,4 +1,6 @@
-.text
+.postText
+    @mixin contentBox
+
     h1
         font-size: 3em
         line-height: 1.2
@@ -163,24 +165,4 @@
         background-color: $dangerBgColor
 
     button
-        background: transparent
-        border: 1px solid $regularBorderColor
-        border-radius: 0.2em
-        padding: 0.5em 1em
-        transition: 0.05s linear
-        transition-property: background-color, color
-        cursor: pointer
-
-    button:hover:not([disabled])
-        background: $linkColor
-        border-color: $linkColor
-        color: white
-        box-shadow: 0 0.1em 0 0 rgba(0,0,0,0.1)
-
-    button:active:not([disabled])
-        box-shadow: none
-
-    button[disabled]
-        border-color: $lightBorderColor
-        color: $inactiveTextColor
-        cursor: default
+        @mixin button
