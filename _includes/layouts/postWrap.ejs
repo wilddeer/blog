@@ -4,18 +4,16 @@ layout: layouts/content
 <div class="post">
     <%- $.content %>
 
-    <div class="content-box">
-        <p class="publish-date">
-            <%= $.lang === 'ru' ? 'Опубликовано' : 'Published on' %>
-            <time>
-                <%-
-                    include('/modules/parsedDate', {
-                        dateString: $.date,
-                        lang: $.lang,
-                        showYear: true
-                    })
-                %>
-            </time>
-        </p>
+    <div class="post__meta">
+        <%= $.lang === 'ru' ? 'Опубликовано' : 'Published on' %>
+        <time>
+            <%-
+                include('/modules/parsedDate', {
+                    dateString: $.date,
+                    lang: $.lang,
+                    showYear: true
+                })
+            %>
+        </time>
     </div>
 </div>

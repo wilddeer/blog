@@ -3,8 +3,8 @@ layout: layouts/postWrap
 tags:
     - archive
 ---
-<div class="stickyfill-post">
-  <div class="content-box">
+<div class="content-box">
+  <div class="stickyfill-post-content">
     <style>
     <%- include('stickyfill-demo.css') %>
     </style>
@@ -13,12 +13,14 @@ tags:
       <div class="sticky-1 sticky">
         <h1 class="article-title">
           <a href="https://github.com/wilddeer/stickyfill">Stickyfill</a><br>
-          <small class="tagline">Полифилл для <code class="code">position:&nbsp;sticky</code></small>
+          <small class="tagline">Полифилл для <code class="code is-inverse">position:&nbsp;sticky</code></small>
         </h1>
       </div>
 
       <p class="sticky sticky-1-2" style="text-align: center; opacity: 0.3; margin-bottom: 60em; top: 8em; ">
-        <i class="icon-chevron-down scroll-me"></i>
+        <span class="scroll-me">
+          <%- include('/svg/chevron-down-solid.svg') %>
+        </span>
       </p>
     </section>
 
@@ -43,7 +45,7 @@ tags:
       </div>
 
       <p class="sticky-4 sticky" style="top: 16em; margin-top: 40em; margin-bottom: 0;">
-        <small class="small"><code>top</code> меняет отступ стики от края окна. Еще можно указать <code>margin-bottom</code>, чтобы стика останавливалась чуть раньше, чем обычно.</small>
+        <small class="small"><code class="code is-inverse">top</code> меняет отступ стики от края окна. Еще можно указать <code class="code is-inverse">margin-bottom</code>, чтобы стика останавливалась чуть раньше, чем обычно.</small>
       </p>
     </section>
 
@@ -63,42 +65,53 @@ tags:
 
     <section style="min-height: 90em;">
       <div class="sticky-7 sticky" style="top: 5em; margin-top: 10em;">
-        <h2>Что умеет:</h2>
+        <h2 class="font-size is-heading-3">Что умеет:</h2>
 
-        <ul>
-          <li>Работает со стиками, прилипающими к верхнему краю</li>
-          <li><del>Работает c ячейками таблицы</del> Отключил, пока Фаерфокс <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=975644">не реализует это нативно</a></li>
-          <li>Работает в IE9+</li>
-          <li>Отключается в старых браузерах и в браузерах с нативной поддержкой стик</li>
-          <li>Эмулирует нативное поведение стик (там, где умеет)</li>
-          <li>Учитывает <a href="http://wilddeer.github.io/stickyfill/test/">кучу разных кейсов</a></li>
+        <ul class="list">
+          <li class="list__item">Работает со стиками, прилипающими к верхнему краю</li>
+          <li class="list__item"><del class="del">Работает c ячейками таблицы</del> Отключил, пока Фаерфокс <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=975644">не реализует это нативно</a></li>
+          <li class="list__item">Работает в IE9+</li>
+          <li class="list__item">Отключается в старых браузерах и в браузерах с нативной поддержкой стик</li>
+          <li class="list__item">Эмулирует нативное поведение стик (там, где умеет)</li>
+          <li class="list__item">Учитывает <a href="http://wilddeer.github.io/stickyfill/test/">кучу разных кейсов</a></li>
         </ul>
       </div>
     </section>
 
     <section style="min-height: 80em;">
       <div class="sticky-8 sticky" style="top: 5em; margin-top: 5em;">
-        <h2>Что не умеет:</h2>
+        <h2 class="font-size is-heading-3">Что не умеет:</h2>
 
-        <ul>
-          <li>Не умеет левые, правые, нижние и комбинированные стики</li>
-          <li>Не «стыкует» табличные стики</li>
-          <li>Не работает во внутренних блоках со скроллом</li>
-          <li>Не парсит CSS (включается ручками)</li>
+        <ul class="list">
+          <li class="list__item">Не умеет левые, правые, нижние и комбинированные стики</li>
+          <li class="list__item">Не «стыкует» табличные стики</li>
+          <li class="list__item">Не работает во внутренних блоках со скроллом</li>
+          <li class="list__item">Не парсит CSS (включается ручками)</li>
         </ul>
       </div>
     </section>
 
     <section style="min-height: 160em;">
       <p class="sticky-9 sticky" style="top: 5em; margin-top: 50em; font-size: 1.2em; text-align: center;">
-        <a href="https://github.com/wilddeer/stickyfill" class="big-fucking-button"><i class="icon-github">&nbsp;</i>Забрать с ГитХаба</a>
+        <a href="https://github.com/wilddeer/stickyfill" class="big-fucking-button">
+          <%- include('/svg/github-alt-brands.svg') %>
+          Забрать с ГитХаба
+        </a>
       </p>
     </section>
 
 
-    <figure class="info icon-heart-empty" style="margin-top: 30em;">
-    За четыре дня погружения в ад блоковых моделей браузеров я узнал, чем отличаются `window.pageYOffset`, `document.documentElement.scrollTop`, `window.scrollY` и `document.body.scrollTop`, в чем расхождения `offsetWidth` у блока с `box-sizing: border-box` в разных браузерах, какая разница между `element.offsetWidth` и `node.getBoundingClientRect().width`, в чем разница между `getComputedStyle(element)` и реальными значениями, как посчитать ширину вьюпорта без ширины скролла и как ошибки округления любят накопиться в самый неподходящий момент.
-    </figure>
+    <div class="notice is-inverse font-size is-smaller" style="margin-top: 30em;">
+      <div class="text-with-icon">
+        <div class="text-with-icon__icon">
+          <%- include('/svg/heart-regular.svg') %>
+        </div>
+
+        <div class="text-with-icon__text">
+          За четыре дня погружения в ад блоковых моделей браузеров я узнал, чем отличаются <code class="code is-inverse">window.pageYOffset</code>, <code class="code is-inverse">document.documentElement.scrollTop</code>, <code class="code is-inverse">window.scrollY</code> и <code class="code is-inverse">document.body.scrollTop</code>, в чем расхождения <code class="code is-inverse">offsetWidth</code> у блока с <code class="code is-inverse">box-sizing: border-box</code> в разных браузерах, какая разница между <code class="code is-inverse">element.offsetWidth</code> и <code class="code is-inverse">node.getBoundingClientRect().width</code>, в чем разница между <code class="code is-inverse">getComputedStyle(element)</code> и реальными значениями, как посчитать ширину вьюпорта без ширины скролла и как ошибки округления любят накопиться в самый неподходящий момент.
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -107,4 +120,3 @@ tags:
 <script>
 <%- include('stickyfill-demo.js') %>
 </script>
-

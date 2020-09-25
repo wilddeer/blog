@@ -9,12 +9,12 @@
     Stickyfill.removeAll();
 
     $('.sticky-1').css({
-      'margin-top': (window.innerHeight - $('.sticky-1').height() - $('.sticky-1-2').height())/2,
+      'margin-top': (window.innerHeight - $('.sticky-1').height() - $('.sticky-1-2').height())/3,
       'top': (window.innerHeight - $('.sticky-1').height() - $('.sticky-1-2').height())/2
     });
 
     $('.sticky-1-2').css({
-      'top': parseFloat($('.sticky-1').css('margin-bottom')) + ($('.sticky-1').height() - $('.sticky-1-2').height())/2 + window.innerHeight/2
+      'top': parseFloat($('.sticky-1').css('margin-bottom')) + $('.sticky-1').height() + parseFloat($('.sticky-1').css('top'))
     });
 
     $('.sticky-3').css({
