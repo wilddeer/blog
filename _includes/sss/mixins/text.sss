@@ -1,0 +1,160 @@
+@define-mixin text
+    h1
+        font-size: 3em
+        line-height: 1.2
+        margin-bottom: 0.7em
+
+    h1.big-header
+        @media (min-width: $pcBreakpoint)
+            font-size: 5em
+
+    h2
+        font-size: $heading2FontSize
+        line-height: 1.2
+        margin-top: 2em
+        margin-bottom: 0.6em
+
+    h3
+        font-size: $heading3FontSize
+        line-height: 1.2
+        margin-top: 2em
+        margin-bottom: 0.6em
+
+    p
+        margin-bottom: 1.5em
+
+    ul
+        margin-bottom: 1.5em
+
+    ul > li
+        padding-left: 2.2em
+        margin-bottom: 1em
+        @mixin dashedListItem
+
+    figure
+        text-align: center
+        margin-bottom: 2.5em
+
+    figure.is-float-right
+        @media (min-width: $tabletBreakpoint)
+            float: right
+            margin-left: 1em
+            margin-bottom: 1em
+
+    .pics
+        text-align: center
+        margin-left: -0.5em
+        margin-right: -0.5em
+
+    .pics figure
+        display: inline-block
+        padding-left: 0.5em
+        padding-right: 0.5em
+
+    figcaption
+        padding-top: 0.8em
+        font-style: italic
+        color: $inactiveTextColor
+        font-size: 0.8em
+
+    figure img
+        border-radius: 0.2em
+
+    img
+        vertical-align: middle
+        max-width: 100%
+        height: auto
+
+    a
+        @mixin link
+
+    a svg
+        margin-right: 0.2em
+
+    small
+        @mixin small
+
+    del
+        position: relative
+
+    del:after
+        content: ''
+        display: block
+        position: absolute
+        top: -0.15em
+        left: -0.15em
+        right: -0.15em
+        bottom: -0.15em
+        border-radius: 0.2em
+        z-index: 100
+        pointer-events: none
+        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 300 300"><path d="M300 0 L0 300" stroke="red" stroke-width="5" stroke-linecap="round"/><path d="M0 0 L300 300" stroke="red" stroke-width="5" stroke-linecap="round"/></svg>')
+
+    del.deleted-block
+        display: block
+
+    del.deleted-block:after
+        top: -1em
+        left: -1em
+        right: -1em
+        bottom: -1em
+        border-radius: 1em
+        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 1000 1000"><path d="M1000 0 L0 1000" stroke="red" stroke-width="5" stroke-linecap="round"/><path d="M0 0 L1000 1000" stroke="red" stroke-width="5" stroke-linecap="round"/></svg>')
+
+    :not(pre) > code
+        @mixin code
+
+    pre
+        margin-bottom: 2em
+
+    .code-max-height > pre
+        max-height: 80vh
+
+    table
+        width: calc(100% + 8vw)
+        border-collapse: collapse
+        border-spacing: 0
+        margin-bottom: 2.5em
+        margin-left: -4vw
+
+        @media (min-width: $tabletBreakpoint)
+            margin-left: 0
+            width: 100%
+
+    tr
+        border-top: 1px solid $lightBorderColor
+
+    tbody tr:last-child
+        border-bottom: 1px solid $lightBorderColor
+
+    tbody tr:nth-child(odd)
+        background: #f8f8f8
+
+    th
+        font-weight: bold
+
+    td,
+    th
+        padding: 0.3em 0.5em
+        text-align: left
+
+    td:first-child,
+    th:first-child
+        @media (max-width: calc($tabletBreakpoint - 1px))
+            padding-left: 4vw
+
+    td:last-child,
+    th:last-child
+        @media (max-width: calc($tabletBreakpoint - 1px))
+            padding-right: 4vw
+
+    td.is-true
+        color: $successColor
+        background-color: $successBgColor
+
+    td.is-false
+        color: $dangerColor
+        background-color: $dangerBgColor
+
+    button
+        @mixin button

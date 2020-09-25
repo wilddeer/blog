@@ -1,4 +1,4 @@
-dzDelayed.push(function() {
+(function() {
   if (!window.getComputedStyle) return;
 
   $(window).on('resize orientationchange', function() {
@@ -6,8 +6,8 @@ dzDelayed.push(function() {
   }).resize();
 
   function recalc() {
-    Stickyfill.kill();
-    
+    Stickyfill.removeAll();
+
     $('.sticky-1').css({
       'margin-top': (window.innerHeight - $('.sticky-1').height() - $('.sticky-1-2').height())/2,
       'top': (window.innerHeight - $('.sticky-1').height() - $('.sticky-1-2').height())/2
@@ -44,6 +44,6 @@ dzDelayed.push(function() {
       'margin-bottom': window.innerHeight/2 - $('.sticky-9').height()/2
     });
 
-    $('.sticky').Stickyfill();
+    Stickyfill.add($('.sticky'));
   }
-});
+}());

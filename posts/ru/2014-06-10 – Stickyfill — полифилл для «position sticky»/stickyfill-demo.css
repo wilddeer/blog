@@ -1,12 +1,12 @@
-body.post .content,
-body.post .content *,
-body.post .content *:before {
+.stickyfill-post,
+.stickyfill-post *,
+.stickyfill-post *:before {
   color: white;
   background: transparent;
   border-color: white;
 }
 
-body.post .content {
+.stickyfill-post {
   background: crimson;
   background: -webkit-linear-gradient(crimson, darkslategray 87%, #26403A);
   background: -moz-linear-gradient(crimson, darkslategray 87%, #26403A);
@@ -15,57 +15,64 @@ body.post .content {
 }
 
 @media all and (min-width: 60em) {
-  body.post .content {
+  .stickyfill-post {
     font-size: 1.2em;
   }
 }
 
-body.post .content figure.info {
+.stickyfill-post p,
+.stickyfill-post ul,
+.stickyfill-post pre,
+.stickyfill-post h2 {
+  margin-bottom: 1.5em;
+}
+
+.stickyfill-post figure.info {
   border: 1px solid white;
   border: 1px solid rgba(255,255,255,0.5);
 }
 
-body.post .content a,
-body.post .content a:hover,
-body.post .content a *,
-body.post .content a:hover * {
+.stickyfill-post a,
+.stickyfill-post a:hover,
+.stickyfill-post a *,
+.stickyfill-post a:hover * {
   text-decoration: none;
 }
 
-body.post .content a {
+.stickyfill-post a {
   border-bottom: 1px solid white;
   border-bottom: 1px solid rgba(255,255,255,0.3);
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
-body.post .content a:hover {
+.stickyfill-post a:hover {
   border-bottom: 1px solid rgba(255,255,255,1);
   -webkit-transition: all 0.1s ease;
   transition: all 0.1s ease;
 }
 
-body.post .content h1,
-body.post .content h2,
-body.post .content h3,
-body.post .content h4 {
+.stickyfill-post h1,
+.stickyfill-post h2,
+.stickyfill-post h3,
+.stickyfill-post h4 {
   text-align: center;
 }
 
-body.post .content .article-title {
+.stickyfill-post .article-title {
   font-size: 4em;
   margin-bottom: 0.2em;
 }
 
-body.post .content .article-title a {
+.stickyfill-post .article-title a {
   border-bottom-width: 2px;
 }
 
-body.post .content .tagline {
-  font-size: 1.5em;
+.stickyfill-post .tagline {
+  font-size: 0.375em;
 }
 
-body.post .content .scroll-me {
+.stickyfill-post .scroll-me {
   font-size: 4em;
   opacity: 0.4;
   -webkit-animation-duration: 1.5s;
@@ -78,7 +85,7 @@ body.post .content .scroll-me {
   animation-timing-function: ease-in;
 }
 
-body.post .content a.big-fucking-button {
+.stickyfill-post a.big-fucking-button {
   display: inline-block;
   font-size: 1.2em;
   text-decoration: none;
@@ -90,7 +97,7 @@ body.post .content a.big-fucking-button {
   transition: all 0.5s ease;
 }
 
-body.post .content a.big-fucking-button:hover {
+.stickyfill-post a.big-fucking-button:hover {
   text-decoration: none;
   border-color: deepskyblue;
   background: deepskyblue;
@@ -99,13 +106,13 @@ body.post .content a.big-fucking-button:hover {
 }
 
  @media all and (min-width: 60em) {
-  body.post .content a.big-fucking-button {
+  .stickyfill-post a.big-fucking-button {
     font-size: 1.5em;
   }
 }
 
-body.post .content section:before,
-body.post .content section:after {
+.stickyfill-post section:before,
+.stickyfill-post section:after {
   content: '';
   display: table;
 }
