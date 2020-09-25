@@ -311,7 +311,7 @@ tags:
 
 </div>
 
-::: .demo .is-fullwidth .is-light
+::: .demo .is-light
 <style>
 <%- include('price-area.css') %>
 </style>
