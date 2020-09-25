@@ -3,7 +3,7 @@ layout: layouts/base
 ---
 
 <header class="site-header <%= $.tags.includes('root') ? 'is-root' : '' %>">
-    <nav>
+    <nav class="site-header__inner">
         <aside class="site-header__lang-switcher lang-switcher">
             <% ['ru', 'en'].forEach(el => { %>
                 <% if ($.lang === el) { %>

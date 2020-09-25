@@ -1,12 +1,17 @@
 @define-mixin text
     h1
         font-size: 3em
-        line-height: 1.2
+        line-height: 1.1
         margin-bottom: 0.7em
 
-    h1.big-header
+        @media (min-width: $tabletOverlapBreakpoint)
+            @mixin outOfTheBox
+
         @media (min-width: $pcBreakpoint)
-            font-size: 5em
+            font-size: $siteHeadingFontSize
+
+    h1.is-small-mb
+        margin-bottom: 0.2em
 
     h2
         font-size: $heading2FontSize
@@ -35,6 +40,16 @@
         text-align: center
         margin-bottom: 2.5em
 
+    figure.is-demo img
+        box-shadow: 0 1px 6px rgba(#000, 0.4)
+
+    figure.is-ootb
+        @media (max-width: calc($tabletOverlapBreakpoint - 1px))
+            @mixin contentFullwidth
+
+        @media (min-width: $tabletOverlapBreakpoint)
+            @mixin outOfTheBox
+
     figure.is-float-right
         @media (min-width: $tabletBreakpoint)
             float: right
@@ -60,6 +75,10 @@
     figure img
         border-radius: 0.2em
 
+    figure.is-ootb img
+        @media (max-width: calc($tabletOverlapBreakpoint - 1px))
+            border-radius: 0
+
     img
         vertical-align: middle
         max-width: 100%
@@ -73,6 +92,22 @@
 
     small
         @mixin small
+
+    kbd
+        display: inline-block
+        vertical-align: 0.1em
+        margin: 0 0.2em
+        line-height: 1.25
+        background: #f9f9f9
+        border: 0.09em solid $lightBorderColor
+        border-radius: 0.25em
+        padding: 0 0.25em 0.1em
+        font-size: 0.75em
+        font-family: inherit
+        box-shadow:
+            0 0.15em 0 0.1em $lightBorderColor,
+            inset 0 0 0 0.1em #fff
+        white-space: nowrap
 
     del
         position: relative
@@ -111,15 +146,16 @@
         max-height: 80vh
 
     table
-        width: calc(100% + 8vw)
+        width: 100%
         border-collapse: collapse
         border-spacing: 0
         margin-bottom: 2.5em
-        margin-left: -4vw
 
-        @media (min-width: $tabletBreakpoint)
-            margin-left: 0
-            width: 100%
+        @media (max-width: calc($tabletBreakpoint - 1px))
+            @mixin contentFullwidth
+
+        @media (min-width: $tabletOverlapBreakpoint)
+            @mixin outOfTheBox
 
     tr
         border-top: 1px solid $lightBorderColor
@@ -140,13 +176,15 @@
 
     td:first-child,
     th:first-child
-        @media (max-width: calc($tabletBreakpoint - 1px))
-            padding-left: 4vw
+        @media  (max-width: calc($tabletBreakpoint - 1px)),
+                (min-width: $tabletOverlapBreakpoint)
+            padding-left: $contentPadding
 
     td:last-child,
     th:last-child
-        @media (max-width: calc($tabletBreakpoint - 1px))
-            padding-right: 4vw
+        @media  (max-width: calc($tabletBreakpoint - 1px)),
+                (min-width: $tabletOverlapBreakpoint)
+            padding-right: $contentPadding
 
     td.is-true
         color: $successColor

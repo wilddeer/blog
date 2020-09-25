@@ -9,26 +9,32 @@
             margin-top: 4.5em
 
         @media (min-width: $pcBreakpoint)
-            margin-top: calc(132px + 11vh)
+            margin-top: calc(126px + 11vh)
+
+    &__inner
+        @media (min-width: $tabletOverlapBreakpoint)
+            @mixin outOfTheBox
 
     &__title
         font-size: 3em
         margin-bottom: 0.7em
-        line-height: 1.2
+        line-height: 1.1
 
     &.is-root &__title
         @media (min-width: $phoneBreakpoint)
             font-size: 4em
 
         @media (min-width: $pcBreakpoint)
-            font-size: 5em
+            font-size: $siteHeadingFontSize
 
     &__title-link:not(.is-root)
         @mixin link $linkColor, $linkColor
 
     &__lang-switcher
+        margin-top: 2em
         margin-bottom: 1em
 
         @media (min-width: $phoneBreakpoint)
+            margin-top: 0
             float: right
             padding: 0.5em 0 0 2em
