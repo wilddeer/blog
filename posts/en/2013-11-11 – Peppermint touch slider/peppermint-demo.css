@@ -20,17 +20,6 @@
     align-items: stretch;
 }
 
-html.blackberry .stage.peppermint .peppermint-slides {
-    
-    
-}
-
-html.no-flexbox.no-flexboxlegacy .stage.peppermint .peppermint-slides {
-    display: table;
-    /* ie7 fallback */
-    *height: 20em;
-}
-
 .stage.peppermint .peppermint-slides > figure {
     display: -webkit-box;
     display: -webkit-flex;
@@ -46,20 +35,14 @@ html.no-flexbox.no-flexboxlegacy .stage.peppermint .peppermint-slides {
     justify-content: center;
     padding-top: 1.5em;
     padding-bottom: 1.5em;
+    padding-left: 1rem;
+    padding-right: 1rem;
     margin-bottom: 0;
     min-height: 16em;
 }
 
 .stage.peppermint-active .peppermint-slides > figure {
     padding-bottom: 3em;
-}
-
-html.no-flexbox.no-flexboxlegacy .stage.peppermint .peppermint-slides > figure {
-    display: table-cell;
-    vertical-align: middle;
-    float: none;
-    /* ie7 fallback */
-    *float: left;
 }
 
 .stage.peppermint figure:last-child {
@@ -73,6 +56,10 @@ html.no-flexbox.no-flexboxlegacy .stage.peppermint .peppermint-slides > figure {
 .stage.peppermint figure figcaption {
     font-size: 0.7em;
     color: #fff;
+}
+
+.stage.peppermint p {
+    margin-bottom: 1.5rem;
 }
 
 .stage.peppermint ul.peppermint-dots {
@@ -100,6 +87,7 @@ html.no-flexbox.no-flexboxlegacy .stage.peppermint .peppermint-slides > figure {
 .stage.peppermint a:active {
     background: transparent;
     color: #fff;
+    border-bottom: 2px solid;
 }
 
 .stage.peppermint .yellow {
@@ -107,11 +95,11 @@ html.no-flexbox.no-flexboxlegacy .stage.peppermint .peppermint-slides > figure {
     color: #333;
 }
 
-.stage.peppermint .yellow h1 {
-    margin-bottom: 0;
+.stage.peppermint .yellow .h2 {
+    margin-bottom: 0.1em;
 }
 
-.stage.peppermint .yellow h3 {
+.stage.peppermint .yellow .h3 {
     margin-bottom: 2em;
 }
 
@@ -134,7 +122,7 @@ html.no-flexbox.no-flexboxlegacy .stage.peppermint .peppermint-slides > figure {
 
 .stage.peppermint .red {
     color: #fff;
-    background: #ca5d40 url("/pics/peppermint/red.jpg") 50% 50% no-repeat;
+    background: #ca5d40 url('red.jpg') 50% 50% no-repeat;
     background-size: auto 100%;
     -moz-background-size: cover;
     background-size: cover;
@@ -154,27 +142,14 @@ html.no-flexbox.no-flexboxlegacy .stage.peppermint .peppermint-slides > figure {
 .stage.peppermint .blue {
     color: #fff;
     text-shadow: 1px 1px 2px rgba(89,135,198,0.6);
-    background: #5988c6 url("/pics/peppermint/blue.jpg") 50% 50% no-repeat;
+    background: #5988c6 url('blue.jpg') 50% 50% no-repeat;
     background-size: auto 100%;
     -moz-background-size: cover;
     background-size: cover;
 }
 
-.stage.peppermint .blue h1 {
+.stage.peppermint .blue .h2 {
     line-height: 1.6;
-}
-
-.stage.peppermint .blue p a,
-.stage.peppermint .blue p a:hover,
-.stage.peppermint .red p a,
-.stage.peppermint .red p a:hover {
-    color: #fff;
-    text-decoration: underline;
-}
-
-html.winphone .stage.peppermint .blue,
-html.winphone .stage.peppermint .green {
-    text-shadow: none;
 }
 
 .stage.peppermint kbd {
@@ -182,9 +157,24 @@ html.winphone .stage.peppermint .green {
     text-shadow: none;
 }
 
+.stage.peppermint .h2 {
+    font-size: 2.2em;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+.stage.peppermint .h3 {
+    font-size: 1.3em;
+    line-height: 1.1;
+}
+
 @media all and (min-width: 40em) {
-    .stage.peppermint h1 {
+    .stage.peppermint .h2 {
         font-size: 4em;
+    }
+
+    .stage.peppermint .h3 {
+        font-size: 1.5em;
     }
 
     .stage.peppermint a.github {
@@ -197,7 +187,7 @@ html.winphone .stage.peppermint .green {
         height: 25em;
     }
 
-    .stage.peppermint h1 {
+    .stage.peppermint .h2 {
         font-size: 5em;
     }
 }

@@ -62,7 +62,6 @@ postMod: is-no-padding-top
 
 ## Комплект {#kit}
 
-{:.nopadding}
 - <a href="https://raw.github.com/wilddeer/Peppermint/master/dist/peppermint.min.js" class="iconlink"><i class="icon-cloud-download"> </i><span>peppermint.min.js</span></a> — минифицированный скрипт для продакшена
 - <a href="https://raw.github.com/wilddeer/Peppermint/master/dist/peppermint.required.css" class="iconlink"><i class="icon-cloud-download"> </i><span>peppermint.required.css</span></a> — обязательный набор стилей для корректной работы слайдера
 - <a href="https://raw.github.com/wilddeer/Peppermint/master/dist/peppermint.suggested.css" class="iconlink"><i class="icon-cloud-download"> </i><span>peppermint.suggested.css</span></a> — дефолтный набор стилей, чтобы было с чего начать (включает обязательные стили)
