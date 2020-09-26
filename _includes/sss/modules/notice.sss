@@ -8,6 +8,8 @@
     &.is-inline
         display: inline
         padding: 0.1em 0.3em
+        -webkit-box-decoration-break: clone
+        box-decoration-break: clone
 
     &.is-info
         color: $infoColor
@@ -29,3 +31,22 @@
         color: $inverseTextColor
         border: 1px solid $inverseRegularBorderColor
         background: transparent
+
+    &.is-with-icon
+        padding-left: 2.3em
+
+    &.is-with-icon svg
+        margin-left: -1.3em
+        margin-right: 0.3em
+
+    &.is-with-big-icon
+        display: block
+        padding-top: 0.7em
+        padding-bottom: 0.7em
+        padding-left: calc(1.5em * 1.5 + 1em)
+
+    &.is-with-big-icon svg
+        font-size: 1.5em
+        vertical-align: -0.3em
+        margin-left: -1.5em
+        margin-right: 0.5em
