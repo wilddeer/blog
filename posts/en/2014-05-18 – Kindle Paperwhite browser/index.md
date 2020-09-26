@@ -14,7 +14,7 @@
 
 Kindle Paperwhite is a new e-book reader by Amazon, equipped with e-ink touch-screen, Wi-Fi and, optionally, 3G.
 
-Peperwhite's Browser is an improved version of [Kindle Keyboard](/en/rare-species/kindle-keyboard/)'s browser. Browser's performance increased significantly compared to the predecessor, its support for HTML5 features improved.
+Peperwhite's Browser is an improved version of [Kindle Keyboard](/en/Kindle_Keyboard_browser/)'s browser. Browser's performance increased significantly compared to the predecessor, its support for HTML5 features improved.
 
 Paperwhite's user-agent string is weird. While http header contains quite typical user-agent string, `navigator.userAgent` contains another, which can be hardly identified among the dozens of other WebKits. Yet another reason to use feature detection.
 
@@ -121,7 +121,7 @@ Paperwhite's user-agent string is weird. While http header contains quite typica
 
 ### Animations {#animations}
 
-Just like the [predecessor](/en/rare-species/kindle-keyboard/), Kindle Paperwhite supports animation and transitions, which is a painful sight considering e-paper’s response time.
+Just like the [predecessor](/en/Kindle_Keyboard_browser/), Kindle Paperwhite supports animation and transitions, which is a painful sight considering e-paper’s response time.
 
 ### Touch {#touch}
 
@@ -129,7 +129,7 @@ New Kindle doesn't have any hardware keys and is fully controlled from the touch
 
 ### Links {#links}
 
-All the links are forced with `text-decoration: underline`. But, unlike on [Kindle Keyboard](/en/rare-species/kindle-keyboard/), on Paperwhite you can redefine this using `!important`:
+All the links are forced with `text-decoration: underline`. But, unlike on [Kindle Keyboard](/en/Kindle_Keyboard_browser/), on Paperwhite you can redefine this using `!important`:
 
 ```css
 h1.title a {
@@ -165,6 +165,6 @@ There's no validation, and, therefore, no support for `required` and `pattern` a
 
 ## Conclusion {#conclusion}
 
-Evolutionary descendant of [the previous generation](/en/rare-species/kindle-keyboard/). There's a big chance your mobile-optimized site will work just fine on new Kindle without any additional tweaks.
+Evolutionary descendant of [the previous generation](/en/Kindle_Keyboard_browser/). There's a big chance your mobile-optimized site will work just fine on new Kindle without any additional tweaks.
 
 Non-mobile sites also work quite adequately.

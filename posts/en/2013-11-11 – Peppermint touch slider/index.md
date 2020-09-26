@@ -47,7 +47,7 @@
 - Only 7.7 Kb minified
 - Perfomance-optimized `touch` functions
 - API and callback functions for extensibility
-- Keyboard accessible, [doesn't break](/en/internet-maintenance/js-sliders-and-the-tab-key/) when <kbd>tab</kbd>&rsquo;bing
+- Keyboard accessible, [doesn't break](/en/JS_sliders_and_the_Tab_key/) when <kbd>tab</kbd>&rsquo;bing
 
 ## Kit
 

@@ -120,7 +120,7 @@ The browser works fine with javascript, copes well with medium complexity pages,
 	</tbody>
 </table>
 
-Amusingly enough, it supports animations and transitions. [Animation](/en/experiments/pepyaka-font-using-css-animations/) quality is accurately captured on the screenshot (although the nature of badly rendered animation on the screenshot is progressive reading, whereas on the screen it's e-paper's response time):
+Amusingly enough, it supports animations and transitions. [Animation](/en/Pepyaka_font_using_CSS_animations/) quality is accurately captured on the screenshot (although the nature of badly rendered animation on the screenshot is progressive reading, whereas on the screen it's e-paper's response time):
 
 {% include pic.htm src='screen-animations.gif' a='screenshot with animations quality demonstration' %}
 
@@ -158,4 +158,4 @@ New input types are not supported, no validation is implemented.
 
 Not too shabby for an e-book reader. Virtually no problems showing mobile and adaptive websites.
 
-You may use `html.bw` selector in conjunction with [sniffer.js](/en/scripts/sniffer/) to play around with the colors and disable animations for Kindle users (if you are desperate about such things).
+You may use `html.bw` selector in conjunction with [sniffer.js](/en/Sniffer.js/) to play around with the colors and disable animations for Kindle users (if you are desperate about such things).

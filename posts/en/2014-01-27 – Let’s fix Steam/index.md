@@ -139,7 +139,7 @@ My demo uses mobile first approach, i.&nbsp;e. base styles for small screens, me
 
 ### Making the gallery responsive
 
-Responsive screenshot gallery should work on any device, with any type of touch events. I used my [Peppermint touch slider](/en/scripts/peppermint/) for this purpose. I also made a scroller for the thumbnails based on the event unifying code from Peppermint (which I detached into a [separate script](https://github.com/wilddeer/Event-Burrito), by the way). Now you can drag both the screenshots and the thumbs using mouse or touch:
+Responsive screenshot gallery should work on any device, with any type of touch events. I used my [Peppermint touch slider](/en/Peppermint_touch_slider/) for this purpose. I also made a scroller for the thumbnails based on the event unifying code from Peppermint (which I detached into a [separate script](https://github.com/wilddeer/Event-Burrito), by the way). Now you can drag both the screenshots and the thumbs using mouse or touch:
 
 <style>
 {% include snippets/steam-gallery.css %}
@@ -460,7 +460,7 @@ To adhere to the principle of the universal code, it is important to properly st
 
 Substitution of basic element behaviour with scripts and lack of proper fallbacks leads to a situation where tipical and habitual functions of HTML elements are completely lost.
 
-For instance, Steam website contains all the classic mistakes collected in my [post about proper link usage](/en/links-please/). Here's, for example, "View all screenshots" link, which isn't actually a link, since it doesn't lead anywhere:
+For instance, Steam website contains all the classic mistakes collected in my [post about proper link usage](/en/Links,_please/). Here's, for example, "View all screenshots" link, which isn't actually a link, since it doesn't lead anywhere:
 
 ```html
 <a class="linkbar" href="javascript:screenshot_popup('http://store.steampowered.com/screenshot/view/205100/0?snr=1_5_9__400', 800, 635, 0, 0);">...</a>
@@ -495,7 +495,7 @@ Not only these posts are opened in horrible modal popups (which are invented by 
 
 Whole block containing community hub post can be made of an `a` element, popup (if you desperately want a popup) should only be opened if the block is clicked with left mouse button without any modifier keys.
 
-Same is applicable to other UI elements: if the element leads somewhere, make a link. You can then apply any handler to it, just don't prevent opening it in a new tab. If an element does some action within the page, use a `button`. More details and examples can be found in my [post about proper links](/en/links-please/).
+Same is applicable to other UI elements: if the element leads somewhere, make a link. You can then apply any handler to it, just don't prevent opening it in a new tab. If an element does some action within the page, use a `button`. More details and examples can be found in my [post about proper links](/en/Links,_please/).
 
 Besides all the above, "obtrusive" javascript directly leads to another problem:
 
