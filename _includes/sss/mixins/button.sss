@@ -7,14 +7,6 @@
     transition-property: background-color, color
     cursor: pointer
 
-    &.is-white
-        border-color: $inverseRegularBorderColor
-        color: $inverseTextColor
-
-    &.is-white[disabled]
-        border-color: $inverseLightBorderColor
-        color: $inverseInactiveTextColor
-
     &:hover:not([disabled])
         background: $linkColor
         border-color: $linkColor
@@ -28,3 +20,12 @@
         border-color: $lightBorderColor
         color: $inactiveTextColor
         cursor: default
+
+    // White
+    &.is-white
+        border-color: $inverseRegularBorderColor
+        color: $inverseTextColor
+
+    &.is-white[disabled]
+        border-color: $inverseLightBorderColor
+        color: $inverseInactiveTextColor
