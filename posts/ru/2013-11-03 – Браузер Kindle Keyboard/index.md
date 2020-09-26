@@ -1,10 +1,10 @@
 # <div class="small">Браузер</div>Kindle Keyboard {.is-small-mb}
 
-**Редкие звери:** когда-то давно я развлекался исследованием экзотических браузеров на всяких не сильно распространенных устройствах. Это — одно из таких исследований.
-{.notice .is-info .out-of-the-box .block .is-mb-big}
+<%- include('/svg/history-solid.svg') %>**Редкие звери:** когда-то давно я развлекался исследованием экзотических браузеров на всяких не сильно распространенных устройствах. Это — одно из таких исследований.
+{.notice .is-with-icon .is-info .out-of-the-box .block .is-mb}
 
 ![](kindle-keyboard.jpg =960x510)
-{.is-demo .demo .is-small-padding}
+{.is-ootb}
 
 | ---                                    | --- |
 | *Экран*                                | 600 &times; 800, 16 оттенков серого |

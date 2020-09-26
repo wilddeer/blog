@@ -1,10 +1,10 @@
-# <div class="small">Браузер</div>Panasonic Viera Smart&nbsp;TV (TX-LR32E6) {.is-small-mb}
+# <div class="small">Браузер</div>Panasonic Viera Smart&nbsp;TV<div class="small">(TX-LR32E6)</div> {.is-small-mb}
 
-**Редкие звери:** когда-то давно я развлекался исследованием экзотических браузеров на всяких не сильно распространенных устройствах. Это — одно из таких исследований.
-{.notice .is-info .out-of-the-box .block .is-mb-big}
+<%- include('/svg/history-solid.svg') %>**Редкие звери:** когда-то давно я развлекался исследованием экзотических браузеров на всяких не сильно распространенных устройствах. Это — одно из таких исследований.
+{.notice .is-with-icon .is-info .out-of-the-box .block .is-mb}
 
 ![](tv.jpg =960x450)
-{.is-demo .demo .is-small-padding}
+{.is-ootb}
 
 | ---                                    | --- |
 | *Разрешение экрана*                    | 1920 &times; 1080 |
