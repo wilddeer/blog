@@ -110,7 +110,7 @@ Kindle Keyboard (он же Kindle 3) — читалка от Амазона с e
 		<tr>
 			<td>textshadow</td>
 			<td class="is-true">True</td>
-			<td class="bug">True <small>(без блюра)</small></td>
+			<td class="is-bug">True <small>(без блюра)</small></td>
 		</tr>
 		<tr>
 			<td>touch</td>

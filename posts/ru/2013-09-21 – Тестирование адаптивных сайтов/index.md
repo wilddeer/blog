@@ -2,9 +2,14 @@
 tags:
     - archive
 ---
-# Тестирование адаптивных сайтов
 
-{% include pic.htm src='whiteboard.jpg' a='Доска с результатами теста сайта в различных браузерах' %}
+# Тестирование адаптивных сайтов {.is-small-mb}
+
+<%- include('/svg/history-solid.svg') %>**Устаревшая фигня!** Этот пост содержит неактуальное старье и оставлен для истории и лулзов.
+{.notice .is-with-icon .is-warning .out-of-the-box .block .is-mb}
+
+![](whiteboard.jpg =900x506)
+{.is-ootb}
 
 Как правильно замечают [многие](http://www.quirksmode.org/blog/archives/2010/02/the_iphone_obse.html) [хорошие ребята](http://bradfrostweb.com/blog/mobile/support-vs-optimization/), проверить работоспособность вашего адаптивного творения на айфончике недостаточно. Как минимум, стоит озаботиться несколькими основными платформами: iOS, Android (а там свой зоопарк браузеров), Windows Phone,
 Blackberry.
@@ -12,9 +17,8 @@ Blackberry.
 Если вы Лев Толстой не только на словах, то все перечисленное — ваш обязательный
 минимум, который вы радостно расширяете любыми попадающимися под руку железками и эмуляторами.
 
-<figure class="info icon-comment-alt" markdown="1">
-Чем больше вы используете [принцип прогрессивного улучшения](https://en.wikipedia.org/wiki/Progressive_enhancement), [грамотные фоллбеки](https://en.wikipedia.org/wiki/Fault_tolerance) и [ненавязчивый javascript](https://en.wikipedia.org/wiki/Unobtrusive_JavaScript), тем проще тестировать и исправлять сайт на всем зоопарке железок, и тем лучше сайт будет выглядеть там, где вы его даже не задумывались протестировать.
-</figure>
+<%- include('/svg/comment-regular.svg') %>Чем больше вы используете [принцип прогрессивного улучшения](https://en.wikipedia.org/wiki/Progressive_enhancement), [грамотные фоллбеки](https://en.wikipedia.org/wiki/Fault_tolerance) и [ненавязчивый javascript](https://en.wikipedia.org/wiki/Unobtrusive_JavaScript), тем проще тестировать и исправлять сайт на всем зоопарке железок, и тем лучше сайт будет выглядеть там, где вы его даже не задумывались протестировать.
+{.notice .is-with-big-icon .font-size .is-smaller}
 
 ## Коротко про десктопные браузеры
 
@@ -33,7 +37,8 @@ IE7 тоже пора отправлять на свалку, но обычно 
 Делаем еще одну виртуалку на Win 7 (512 Mb оперативки) и ставим туда IE9. Все это хозяйство замечательно летает
 параллельно:
 
-{% include pic.htm src='virtual_machines.jpg' c='Уи-и-и-и' %}
+![Уи-и-и-и](virtual_machines.jpg =900x607)
+{.is-ootb}
 
 <del>Надеюсь, автообновление IE10 избавит меня от еще одной виртуалки, когда выйдет IE11.</del> Пока что не избавило.
 
@@ -56,7 +61,8 @@ IE7 тоже пора отправлять на свалку, но обычно 
 
 Так в коллекции появились Kindle Keyboard и Kindle Paperwhite со своими черно-белыми вебкитами, Nokia Asha 501 (мобилка на модифицированной S40 с ужасным Ovi браузером и не такой ужасной Оперой мини на JAVA), Nintendo DSi, купленная после прочтения [вот этой статьи](http://maban.co.uk/73), и много других железок.
 
-{% include pic.htm src='zoo.jpg' c='Зоопарк' %}
+![Зоопарк](zoo.jpg =960x351)
+{.is-ootb}
 
 Тут важно отметить, что любой крупный проект будет практически нереально протестировать на всем этом зверинце. Основная цель — не поддержка каждого устройства с его набором багов в отдельности, а грамотная оптимизация сайта. При этом сайт вовсе не обязательно должен работать на всех устройствах одинаково. Достаточно обеспечить доступность контента и избавиться от самых противных багов, по возможности избегая сниффинга (хотя это и не всегда возможно).
 
@@ -108,12 +114,13 @@ For fun:
 
 ### Android
 
-В **стоковом браузере** набираем в адресную строку `about:debug`. После этого в настройках браузера появляется пункт "Отладка" с разными опциями, в том числе возможностью включить консоль.
+В **стоковом браузере** набираем в адресную строку `about:debug`. После этого в настройках браузера появляется пункт «Отладка» с разными опциями, в том числе возможностью включить консоль.
 
-<div class="gallery">
-{% include pic.htm src='android_browser_dev_options.png' c='Опции отладки' p=true %}
-{% include pic.htm src='android_browser_console.png' c='Консоль' p=true %}
-</div>
+::: .pics
+![Опции отладки](android_browser_dev_options.png =352x600)
+
+![Консоль](android_browser_console.png =352x600)
+:::
 
 В **Хроме под Андроидом** можно воспользоваться [отладкой через десктопный хром](https://developers.google.com/chrome-developer-tools/docs/remote-debugging):
 
@@ -124,7 +131,7 @@ For fun:
 
 Получаем полный набор вебкитовских инструментов. Все изменения в реалтайме отображаются на девайсе:
 
-{% include pic.htm src='chrome-debug.png' a='Результат применения девтулзов в Андроид Хроме' p=true %}
+![](p_chrome-debug.png =496x496)
 
 ### iOS
 
@@ -146,7 +153,8 @@ For fun:
 
 Как это не смешно, но панель у меня согласилась нормально работать только в Опере 15:
 
-{% include pic.htm src='blackberry-debugging.png' c='Удаленный дебаггинг браузера на эмуляторе Blackberry' %}
+![Удаленный дебаггинг браузера на эмуляторе Blackberry](blackberry-debugging.png =954x571)
+{.is-ootb}
 
 ### [Jsconsole.com](http://jsconsole.com/)
 
@@ -173,7 +181,9 @@ var customConsole = {
     },
     add: function(message, type) {
         if (typeof message !== 'string') message = '<i>' + message + '</i>';
-        document.getElementById('console').innerHTML += '<p class=' + type + '>' + message + '</p>';
+        document.getElementById('console').innerHTML += (
+            '<p class=' + type + '>' + message + '</p>'
+        );
     }
 }
 

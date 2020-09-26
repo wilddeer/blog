@@ -96,6 +96,6 @@ JS + jQuery:
 
 ## Ссылки по теме
 
-- <a class="iconlink" href="http://pepelsbey.net/pres/push-it/">«<span>Жми сюда!</span>»</a>, *Вадим Макеев*
-- <a class="iconlink" href="http://adactio.com/journal/6022/">«<span>When is a link not a link?</span>»</a>, *Jeremy Keith*
+- [«Жми сюда!»](http://pepelsbey.net/pres/push-it/), *Вадим Макеев*
+- [«When is a link not a link?»](http://adactio.com/journal/6022/), *Jeremy Keith*
 - [Javascript Madness: Mouse Events](http://unixpapa.com/js/mouse.html), *Jan Wolter*

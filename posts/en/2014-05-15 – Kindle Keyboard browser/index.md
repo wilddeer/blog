@@ -106,7 +106,7 @@ The browser works fine with javascript, copes well with medium complexity pages,
 			<tr>
 				<td>textshadow</td>
 				<td class="is-true">True</td>
-				<td class="bug">True <small>(no blur)</small></td>
+				<td class="is-bug">True <small>(no blur)</small></td>
 			</tr>
 			<tr>
 				<td>touch</td>

@@ -118,7 +118,7 @@ Mobile-optimized mode is activated with an appropriate viewport meta-tag, e.&nbs
 			<tr>
 				<td>textshadow</td>
 				<td class="is-true">True</td>
-				<td class="bug">True <small>(no blur)</small></td>
+				<td class="is-bug">True <small>(no blur)</small></td>
 			</tr>
 			<tr>
 				<td>touch</td>
