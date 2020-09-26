@@ -8,10 +8,12 @@ $baseLineHeight: 1.65
 $textColor: #000
 $inactiveTextColor: #6d6d6d
 $inverseTextColor: #fff
+$inverseTextTintedColor: rgba(#fff, 0.7)
 $inverseInactiveTextColor: rgba(#fff, 0.15)
 
 // Background colors
 $demoBgColor: #242222
+$demoLightBgColor: rgba(#766, 0.1)
 
 // Link colors
 $linkColor: #0014ff
@@ -45,8 +47,10 @@ $smallerFontSize: 0.8em
 $tinyFontSize: 0.7em
 
 // Content
-$contentPadding: calc(4 * $vw)
-$contentWidth: calc(100% - $contentPadding * 2)
+$contentPadding: calc(4 * min($vw, 10px))
+$contentWidth: calc(100 * $vw - $contentPadding * 2)
+$contentMaxWith: 50rem
+$contentOOTBMaxWith: calc($contentMaxWith + $contentPadding * 2)
 
 // Breakpoins
 $tabletBreakpoint: 880px
