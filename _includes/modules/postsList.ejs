@@ -26,6 +26,16 @@
     <% if (prevPost && yearHeading) { %>
         </ul>
     <% } %>
+
+    <% if (yearHeading === 2014) { %>
+        <h2 class="post-list-title tinted">
+            2015...2019
+            <span class="post-list-title__tumble">
+                <%- include('/svg/tumbleweed.svg') %>
+            </span>
+        </h2>
+    <% } %>
+
     <% if (yearHeading) { %>
         <h2 class="post-list-title"><%= yearHeading %></h2>
 

@@ -35,24 +35,60 @@ layout: layouts/base
 
 <footer class="footer <%= $.tags.includes('root') ? 'is-root' : '' %>">
     <% if ($.lang === 'en') { %>
-        <span class="footer__el">
-            <a class="link" href="https://github.com/wilddeer">GitHub</a>
-        </span>
+        <p class="footer__section">
+            <span class="footer__el">
+                Blog by Oleg Korsunskiy
+            </span>
 
-        <span class="footer__el">
-            <a class="link" href="mailto:me@grumpy.site">me@grumpy.site</a> &larr; Comments, bugs, suggestions
-        </span>
+            <span class="footer__el">
+                <a class="link" href="https://github.com/wilddeer">GitHub</a>
+            </span>
+
+            <span class="footer__el">
+                Comments, bugs, suggestions &rarr; <a class="link" href="mailto:me@grumpy.site">me@grumpy.site</a>
+            </span>
+        </p>
+
+        <p class="footer__section">
+            <% if ($.tags.includes('root')) { %>
+                <span class="footer__el">
+                    Thumbleweed icon by <a class="link" href="https://www.flaticon.com/authors/freepik">Freepik</a> from <a class="link" href="https://www.flaticon.com/">Flaticon</a>
+                </span>
+            <% } else { %>
+                <span class="footer__el">
+                    Icons by <a class="link" href="https://fontawesome.com/">Font Awesome</a>
+                </span>
+            <% } %>
+        </p>
     <% } else { %>
-        <span class="footer__el">
-            <a class="link" href="https://github.com/wilddeer">ГитХаб</a>
-        </span>
+        <p class="footer__section">
+            <span class="footer__el">
+                Бложек Олега Корсунского
+            </span>
 
-        <span class="footer__el">
-            <a class="link" href="https://twitter.com/wildir">Твиттер</a>
-        </span>
+            <span class="footer__el">
+                <a class="link" href="https://github.com/wilddeer">ГитХаб</a>
+            </span>
 
-        <span class="footer__el">
-            <a class="link" href="mailto:me@grumpy.site">me@grumpy.site</a> &larr; Комментарии, баги, замечания
-        </span>
+            <span class="footer__el">
+                <a class="link" href="https://twitter.com/wildir">Твиттер</a>
+            </span>
+
+            <span class="footer__el">
+                Комментарии, баги, замечания &rarr; <a class="link" href="mailto:me@grumpy.site">me@grumpy.site</a>
+            </span>
+        </p>
+
+        <p class="footer__section">
+            <% if ($.tags.includes('root')) { %>
+                <span class="footer__el">
+                    Иконка перекати-поле — <a class="link" href="https://www.flaticon.com/authors/freepik">Freepik</a> из <a class="link" href="https://www.flaticon.com/">Flaticon</a>
+                </span>
+            <% } else { %>
+                <span class="footer__el">
+                    Иконки — <a class="link" href="https://fontawesome.com/">Font Awesome</a>
+                </span>
+            <% } %>
+        </p>
     <% } %>
 </footer>

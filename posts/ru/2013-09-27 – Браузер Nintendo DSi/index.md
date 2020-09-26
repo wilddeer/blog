@@ -43,104 +43,102 @@ Nintendo DSi — портативная игровая приставка с д�
 
 <small>Фичи тестировались [Модернайзером](//modernizr.com). [Полная таблица моих тестов](https://docs.google.com/spreadsheet/ccc?key=0AjA1cIs8C8MGdFdyQ0lMQnhMbHJEeVZpMW9XejhzU2c&usp=sharing#gid=0) на гугл доксах.</small>
 
-<div class="table-holder">
-	<table>
-		<thead>
-			<tr>
-				<th>Фича</th>
-				<th markdown="1">Тест</th>
-				<th>Реальный результат</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>backgroundsize</td>
-				<td class="is-false">False</td>
-				<td class="is-false">False</td>
-			</tr>
-			<tr>
-				<td>bgsizecover</td>
-				<td class="is-false">False</td>
-				<td class="is-false">False</td>
-			</tr>
-			<tr>
-				<td>borderradius</td>
-				<td class="is-false">False</td>
-				<td class="is-false">False</td>
-			</tr>
-			<tr>
-				<td>boxshadow</td>
-				<td class="is-false">False</td>
-				<td class="is-false">False</td>
-			</tr>
-			<tr>
-				<td>boxsizing </td>
-				<td class="is-false">False</td>
-				<td class="is-true">True</td>
-			</tr>
-			<tr>
-				<td>cssanimations</td>
-				<td class="is-false">False</td>
-				<td class="is-false">False</td>
-			</tr>
-			<tr>
-				<td>cssgradients</td>
-				<td class="is-false">False</td>
-				<td class="is-false">False</td>
-			</tr>
-			<tr>
-				<td>csstransforms</td>
-				<td class="is-false">False</td>
-				<td class="is-false">False</td>
-			</tr>
-			<tr>
-				<td>csstransforms3d</td>
-				<td class="is-false">False</td>
-				<td class="is-false">False</td>
-			</tr>
-			<tr>
-				<td>csstransitions</td>
-				<td class="is-false">False</td>
-				<td class="is-false">False</td>
-			</tr>
-			<tr>
-				<td>fontface</td>
-				<td class="is-false">False</td>
-				<td class="is-false">False</td>
-			</tr>
-			<tr>
-				<td>mediaqueries</td>
-				<td class="is-true">True</td>
-				<td class="is-true">True</td>
-			</tr>
-			<tr>
-				<td>opacity</td>
-				<td class="is-true">True</td>
-				<td class="is-true">True</td>
-			</tr>
-			<tr>
-				<td>rgba</td>
-				<td class="is-false">False</td>
-				<td class="is-false">False</td>
-			</tr>
-			<tr>
-				<td>textshadow</td>
-				<td class="is-true">True</td>
-				<td class="is-bug">True <small>(без блюра)</small></td>
-			</tr>
-			<tr>
-				<td>touch</td>
-				<td class="is-false">False</td>
-				<td class="is-false">False</td>
-			</tr>
-			<tr>
-				<td>video</td>
-				<td class="is-false">False</td>
-				<td class="is-false">False</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
+<table>
+	<thead>
+		<tr>
+			<th>Фича</th>
+			<th markdown="1">Тест</th>
+			<th>Реальный результат</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>backgroundsize</td>
+			<td class="is-false">False</td>
+			<td class="is-false">False</td>
+		</tr>
+		<tr>
+			<td>bgsizecover</td>
+			<td class="is-false">False</td>
+			<td class="is-false">False</td>
+		</tr>
+		<tr>
+			<td>borderradius</td>
+			<td class="is-false">False</td>
+			<td class="is-false">False</td>
+		</tr>
+		<tr>
+			<td>boxshadow</td>
+			<td class="is-false">False</td>
+			<td class="is-false">False</td>
+		</tr>
+		<tr>
+			<td>boxsizing </td>
+			<td class="is-false">False</td>
+			<td class="is-true">True</td>
+		</tr>
+		<tr>
+			<td>cssanimations</td>
+			<td class="is-false">False</td>
+			<td class="is-false">False</td>
+		</tr>
+		<tr>
+			<td>cssgradients</td>
+			<td class="is-false">False</td>
+			<td class="is-false">False</td>
+		</tr>
+		<tr>
+			<td>csstransforms</td>
+			<td class="is-false">False</td>
+			<td class="is-false">False</td>
+		</tr>
+		<tr>
+			<td>csstransforms3d</td>
+			<td class="is-false">False</td>
+			<td class="is-false">False</td>
+		</tr>
+		<tr>
+			<td>csstransitions</td>
+			<td class="is-false">False</td>
+			<td class="is-false">False</td>
+		</tr>
+		<tr>
+			<td>fontface</td>
+			<td class="is-false">False</td>
+			<td class="is-false">False</td>
+		</tr>
+		<tr>
+			<td>mediaqueries</td>
+			<td class="is-true">True</td>
+			<td class="is-true">True</td>
+		</tr>
+		<tr>
+			<td>opacity</td>
+			<td class="is-true">True</td>
+			<td class="is-true">True</td>
+		</tr>
+		<tr>
+			<td>rgba</td>
+			<td class="is-false">False</td>
+			<td class="is-false">False</td>
+		</tr>
+		<tr>
+			<td>textshadow</td>
+			<td class="is-true">True</td>
+			<td class="is-bug">True <small>(без блюра)</small></td>
+		</tr>
+		<tr>
+			<td>touch</td>
+			<td class="is-false">False</td>
+			<td class="is-false">False</td>
+		</tr>
+		<tr>
+			<td>video</td>
+			<td class="is-false">False</td>
+			<td class="is-false">False</td>
+		</tr>
+	</tbody>
+</table>
 
 Из моего набора тестов браузер поддерживает только `Media queries`, `opacity`, `box-sizing` и `text-shadow` без размывки. Причем тест [Модернайзера](//modernizr.com) на поддержку `box-sizing` дает ложноотрицательный результат. Браузер понимает и корректно обрабатывает CSS-свойство, но никак не реагирует на обращение к `style.boxSizing` через яваскрипт (в том числе с префиксом Оперы).
 

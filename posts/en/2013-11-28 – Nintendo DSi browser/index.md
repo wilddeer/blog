@@ -35,104 +35,102 @@ Mobile-optimized mode is activated with an appropriate viewport meta-tag, e.&nbs
 
 <small>Feature tests are done using [Modernizr](//modernizr.com). [Full table of my tests](https://docs.google.com/spreadsheet/ccc?key=0AjA1cIs8C8MGdFdyQ0lMQnhMbHJEeVZpMW9XejhzU2c&usp=sharing#gid=0) on google docs.</small>
 
-<div class="table-holder">
-	<table>
-		<thead>
-			<tr>
-				<th>Feature</th>
-				<th>Test</th>
-				<th>Actual result</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>backgroundsize</td>
-				<td class="is-false">False</td>
-				<td class="is-false">False</td>
-			</tr>
-			<tr>
-				<td>bgsizecover</td>
-				<td class="is-false">False</td>
-				<td class="is-false">False</td>
-			</tr>
-			<tr>
-				<td>borderradius</td>
-				<td class="is-false">False</td>
-				<td class="is-false">False</td>
-			</tr>
-			<tr>
-				<td>boxshadow</td>
-				<td class="is-false">False</td>
-				<td class="is-false">False</td>
-			</tr>
-			<tr>
-				<td>boxsizing </td>
-				<td class="is-false">False</td>
-				<td class="is-true">True</td>
-			</tr>
-			<tr>
-				<td>cssanimations</td>
-				<td class="is-false">False</td>
-				<td class="is-false">False</td>
-			</tr>
-			<tr>
-				<td>cssgradients</td>
-				<td class="is-false">False</td>
-				<td class="is-false">False</td>
-			</tr>
-			<tr>
-				<td>csstransforms</td>
-				<td class="is-false">False</td>
-				<td class="is-false">False</td>
-			</tr>
-			<tr>
-				<td>csstransforms3d</td>
-				<td class="is-false">False</td>
-				<td class="is-false">False</td>
-			</tr>
-			<tr>
-				<td>csstransitions</td>
-				<td class="is-false">False</td>
-				<td class="is-false">False</td>
-			</tr>
-			<tr>
-				<td>fontface</td>
-				<td class="is-false">False</td>
-				<td class="is-false">False</td>
-			</tr>
-			<tr>
-				<td>mediaqueries</td>
-				<td class="is-true">True</td>
-				<td class="is-true">True</td>
-			</tr>
-			<tr>
-				<td>opacity</td>
-				<td class="is-true">True</td>
-				<td class="is-true">True</td>
-			</tr>
-			<tr>
-				<td>rgba</td>
-				<td class="is-false">False</td>
-				<td class="is-false">False</td>
-			</tr>
-			<tr>
-				<td>textshadow</td>
-				<td class="is-true">True</td>
-				<td class="is-bug">True <small>(no blur)</small></td>
-			</tr>
-			<tr>
-				<td>touch</td>
-				<td class="is-false">False</td>
-				<td class="is-false">False</td>
-			</tr>
-			<tr>
-				<td>video</td>
-				<td class="is-false">False</td>
-				<td class="is-false">False</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
+<table>
+	<thead>
+		<tr>
+			<th>Feature</th>
+			<th>Test</th>
+			<th>Actual result</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>backgroundsize</td>
+			<td class="is-false">False</td>
+			<td class="is-false">False</td>
+		</tr>
+		<tr>
+			<td>bgsizecover</td>
+			<td class="is-false">False</td>
+			<td class="is-false">False</td>
+		</tr>
+		<tr>
+			<td>borderradius</td>
+			<td class="is-false">False</td>
+			<td class="is-false">False</td>
+		</tr>
+		<tr>
+			<td>boxshadow</td>
+			<td class="is-false">False</td>
+			<td class="is-false">False</td>
+		</tr>
+		<tr>
+			<td>boxsizing </td>
+			<td class="is-false">False</td>
+			<td class="is-true">True</td>
+		</tr>
+		<tr>
+			<td>cssanimations</td>
+			<td class="is-false">False</td>
+			<td class="is-false">False</td>
+		</tr>
+		<tr>
+			<td>cssgradients</td>
+			<td class="is-false">False</td>
+			<td class="is-false">False</td>
+		</tr>
+		<tr>
+			<td>csstransforms</td>
+			<td class="is-false">False</td>
+			<td class="is-false">False</td>
+		</tr>
+		<tr>
+			<td>csstransforms3d</td>
+			<td class="is-false">False</td>
+			<td class="is-false">False</td>
+		</tr>
+		<tr>
+			<td>csstransitions</td>
+			<td class="is-false">False</td>
+			<td class="is-false">False</td>
+		</tr>
+		<tr>
+			<td>fontface</td>
+			<td class="is-false">False</td>
+			<td class="is-false">False</td>
+		</tr>
+		<tr>
+			<td>mediaqueries</td>
+			<td class="is-true">True</td>
+			<td class="is-true">True</td>
+		</tr>
+		<tr>
+			<td>opacity</td>
+			<td class="is-true">True</td>
+			<td class="is-true">True</td>
+		</tr>
+		<tr>
+			<td>rgba</td>
+			<td class="is-false">False</td>
+			<td class="is-false">False</td>
+		</tr>
+		<tr>
+			<td>textshadow</td>
+			<td class="is-true">True</td>
+			<td class="is-bug">True <small>(no blur)</small></td>
+		</tr>
+		<tr>
+			<td>touch</td>
+			<td class="is-false">False</td>
+			<td class="is-false">False</td>
+		</tr>
+		<tr>
+			<td>video</td>
+			<td class="is-false">False</td>
+			<td class="is-false">False</td>
+		</tr>
+	</tbody>
+</table>
 
 As expected, the browser's support for fancy new features isn't huge: it supports `Media queries`, `opacity`, `box-sizing` and `text-shadow` without blur. [Modernizr](//modernizr.com)'s `box-sizing` test returns a false negative result. Turns out, the browser understands the CSS-property, but doesn't react in any way to the `style.boxSizing` javascript property (including the Opera-prefixed variant).
 
