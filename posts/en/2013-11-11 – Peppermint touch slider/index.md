@@ -247,7 +247,7 @@ $('#getslidesnumber').click(function() {
 
 ## Using Peppermint?
 
-Drop me a link &rarr; <a href="mailto:wd@dizaina.net" class="iconlink"><i class="icon-envelope">&nbsp;</i>wd@dizaina.net</a>.
+Drop me a link &rarr; [me@grumpy.blog](mailto:me@grumpy.blog).
 
 ## License
 

@@ -3,8 +3,6 @@ layout: layouts/postWrap
 tags:
     - archive
 ---
-<div class="text">
-
 <link rel="stylesheet" href="/css/peppermint.suggested.css">
 
 <style>
@@ -136,6 +134,8 @@ tags:
         cursor: grabbing;
     }
 </style>
+
+<div class="text">
 
 # Чиним Steam
 

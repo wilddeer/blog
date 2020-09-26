@@ -1,40 +1,52 @@
+---
+layout: layouts/postWrap
+postMod: is-no-padding-top
+---
+
+# Тач-слайдер Peppermint {.sr-only}
+
+<link rel="stylesheet" href="/css/peppermint.suggested.css">
+
 <style>
-{% include snippets/peppermint-demo.css %}
+<%- include('peppermint-demo.css') %>
 </style>
 
+<div class="content-fullwidth stage peppermint" id="peppermint">
+  <figure class="yellow">
+    <h2 class="h2">Peppermint.js</h2>
+    <p class="h3">Правильный тач-слайдер</p>
+    <p>
+      <a href="https://github.com/wilddeer/Peppermint" class="github">
+        <%- include('/svg/github-alt-brands.svg') %>
+        Форкни меня
+      </a>
+    </p>
+  </figure>
+  <figure class="red">
+      <h2 class="h2">Быстрый, легкий, расширяемый</h2>
+      <p>7,7 Кб, быстрый и плавный тач, <a href="#api">API</a> для расширений</p>
+  </figure>
+  <figure class="green">
+      <h2 class="h2">Работает везде</h2>
+      <p>Работает на <%- include('/svg/apple-brands.svg') %>&nbsp;айфонах, <%- include('/svg/android-brands.svg') %>&nbsp;андроидах, <%- include('/svg/windows-brands.svg') %>&nbsp;винфонах. Не зависит от сторонних библиотек. Работает в <%- include('/svg/internet-explorer-brands.svg') %>&nbsp;IE7+.</p>
+  </figure>
+  <figure class="blue">
+    <p class="h2"><a href="/Слайдеры_и_кнопка_Tab/">Дружит</a> с кнопкой <kbd class="kbd">Tab</kbd></p>
+  </figure>
+</div>
+
+<script src="/js/peppermint.min.js"></script>
+
 <script>
-  dzDelayed.push(function() {
-    $('#peppermint').Peppermint({
-      dots: true,
-      slideshow: true,
-      slideshowInterval: 7000,
-      stopSlideshowAfterInteraction: true
-    });
+  Peppermint(document.getElementById('peppermint'), {
+    dots: true,
+    slideshow: true,
+    slideshowInterval: 7000,
+    stopSlideshowAfterInteraction: true
   });
 </script>
 
-<div class="stage peppermint" id="peppermint">
-  <figure class="yellow">
-    <h1>Peppermint.js</h1>
-    <h3>Правильный тач-слайдер</h3>
-    <p><a href="https://github.com/wilddeer/Peppermint" class="github"><i class="icon-github">&nbsp;</i>Форкни меня</a></p>
-  </figure>
-
-  <figure class="red">
-      <h1>Быстрый, легкий, расширяемый</h1>
-      <p>7,7 Кб, быстрый и плавный тач, <a href="#api">API</a> для расширений</p>
-  </figure>
-
-  <figure class="green">
-      <h1>Работает везде</h1>
-      <p>Работает на <i class="icon-apple">&nbsp;</i>айфонах, <i class="icon-android">&nbsp;</i>андроидах, <i class="icon-windows">&nbsp;</i>винфонах. Не зависит от сторонних библиотек. Работает в <i class="icon-IE">&nbsp;</i>IE7+.</p>
-  </figure>
-
-  <figure class="blue">
-    <h1><a href="/internet-maintenance/js-sliders-and-the-tab-key/">Дружит</a> с кнопкой <kbd>Tab</kbd></h1>
-
-  </figure>
-</div>
+<div class="text">
 
 [Peppermint.js](https://github.com/wilddeer/Peppermint) — еще один тач-слайдер. Только круче.
 
@@ -46,7 +58,7 @@
 - 7,7 Кб кода
 - Оптимизированные на скорость выполнения `touch`-функции
 - [API](#api) и callback-функции для расширений
-- Работает с клавиатурой, [не ломается](/internet-maintenance/js-sliders-and-the-tab-key/) от кнопки <kbd>Tab</kbd>
+- Работает с клавиатурой, [не ломается](/Слайдеры_и_кнопка_Tab/) от кнопки <kbd>Tab</kbd>
 
 ## Комплект {#kit}
 
@@ -71,7 +83,7 @@ HTML разметка:
 
 Javascript:
 
-```
+```js
 var slider = Peppermint(document.getElementById('peppermint'));
 ```
 
@@ -93,54 +105,54 @@ $('.peppermint').Peppermint();
 
 ```js
 {
-  //скорость перехода между слайдами, мс
+  // скорость перехода между слайдами, мс
   speed: 300,
 
-  //скорость перехода между слайдами после тача, мс
+  // скорость перехода между слайдами после тача, мс
   touchSpeed: 300,
 
-  //включить слайдшоу
+  // включить слайдшоу
   slideshow: false,
 
-  //интервал переключения слайдов, мс
+  // интервал переключения слайдов, мс
   slideshowInterval: 4000,
 
-  //останавливать слайдшоу после переключения слайда пользователем
+  // останавливать слайдшоу после переключения слайда пользователем
   stopSlideshowAfterInteraction: false,
 
-  //начальный слайд
+  // начальный слайд
   startSlide: 0,
 
-  //разрешить управление мышкой
+  // разрешить управление мышкой
   mouseDrag: true,
 
-  //не включать Peppermint, если слайд один
+  // не включать Peppermint, если слайд один
   disableIfOneSlide: true,
 
-  //Префикс для служебных классов слайдера,
-  //таких как `inactive`, `active`, `mouse`, `drag` и т. д.
-  //Не забудьте поменять стили соответствующим образом!
+  // Префикс для служебных классов слайдера,
+  // таких как `inactive`, `active`, `mouse`, `drag` и т. д.
+  // Не забудьте поменять стили соответствующим образом!
   cssPrefix: 'peppermint-',
 
-  //показывать точки
+  // показывать точки
   dots: false,
 
-  //положить точки в начало блока `dotsContainer` (по умолчанию кладутся в конец)
+  // положить точки в начало блока `dotsContainer` (по умолчанию кладутся в конец)
   dotsPrepend: false,
 
-  //Элемент, в который положить точки. По умолчанию корневой элемент слайдера.
-  //Может быть где угодно на странице.
+  // Элемент, в который положить точки. По умолчанию корневой элемент слайдера.
+  // Может быть где угодно на странице.
   dotsContainer: undefined,
 
-  //Элемент, содержащий слайды. По умолчанию корневой элемент слайдера.
+  // Элемент, содержащий слайды. По умолчанию корневой элемент слайдера.
   slidesContainer: undefined,
 
-  //Callback-функция, вызывается при смене слайда.
-  //В качестве параметра получает номер слайда.
+  // Callback-функция, вызывается при смене слайда.
+  // В качестве параметра получает номер слайда.
   onSlideChange: undefined,
 
-  //Callback-функция, вызывается пойсле завершения установки.
-  //В качестве параметра получает количество слайдов.
+  // Callback-функция, вызывается пойсле завершения установки.
+  // В качестве параметра получает количество слайдов.
   onSetup: undefined
 }
 ```
@@ -204,20 +216,20 @@ $('.peppermint').Peppermint({
 JS:
 
 ```js
-//запустить Peppermint и сохранить API
+// запустить Peppermint и сохранить API
 var slider = Peppermint(document.getElementById('peppermint')),
-    //сохранить ссылки на HTML-ноды
+    // сохранить ссылки на HTML-ноды
     rightArr = document.getElementById('right-arr'),
     leftArr = document.getElementById('left-arr'),
     getSlidesNumberButton = document.getElementById('getslidesnumber');
 
-//клик по `#right-arr` переключит на следующий слайд
+// клик по `#right-arr` переключит на следующий слайд
 rightArr.addEventListener('click', slider.next, false);
 
-//клик по `#left-arr` переключит на предыдущий слайд
+// клик по `#left-arr` переключит на предыдущий слайд
 leftArr.addEventListener('click', slider.prev, false);
 
-//клик по `#getslidesnumber` покажет количество слайдов
+// клик по `#getslidesnumber` покажет количество слайдов
 getSlidesNumberButton.addEventListener('click', function() {
   alert('There are ' + slider.getSlidesNumber() + ' slides');
 }, false);
@@ -226,19 +238,19 @@ getSlidesNumberButton.addEventListener('click', function() {
 JS + jQuery:
 
 ```js
-//сохранить jQuery-ссылку на блок слайдера
+// сохранить jQuery-ссылку на блок слайдера
 var slider = $('#peppermint');
 
-//запустить Peppermint
+// запустить Peppermint
 slider.Peppermint();
 
-//клик по `#right-arr` переключит на следующий слайд
+// клик по `#right-arr` переключит на следующий слайд
 $('#right-arr').click(slider.data('Peppermint').next);
 
-//клик по `#left-arr` переключит на предыдущий слайд
+// клик по `#left-arr` переключит на предыдущий слайд
 $('#left-arr').click(slider.data('Peppermint').prev);
 
-//клик по `#getslidesnumber` покажет количество слайдов
+// клик по `#getslidesnumber` покажет количество слайдов
 $('#getslidesnumber').click(function() {
     alert('There are ' + slider.data('Peppermint').getSlidesNumber() + ' slides');
 });
@@ -246,8 +258,10 @@ $('#getslidesnumber').click(function() {
 
 ## Используете Peppermint?
 
-Киньте ссылочку &rarr; <a href="mailto:wd@dizaina.net" class="iconlink"><i class="icon-envelope">&nbsp;</i>wd@dizaina.net</a>.
+Киньте ссылочку &rarr; [me@grumpy.blog](mailto:me@grumpy.blog).
 
 ## Лицензия {#license}
 
 [MIT license](http://opensource.org/licenses/MIT).
+
+</div>
