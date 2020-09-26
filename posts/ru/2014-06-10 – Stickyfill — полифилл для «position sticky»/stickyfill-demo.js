@@ -9,7 +9,7 @@
     Stickyfill.removeAll();
 
     $('.sticky-1').css({
-      'margin-top': (window.innerHeight - $('.sticky-1').height() - $('.sticky-1-2').height())/3,
+      'margin-top': (window.innerHeight - $('.sticky-1').height() - $('.sticky-1-2').height())/3.5,
       'top': (window.innerHeight - $('.sticky-1').height() - $('.sticky-1-2').height())/2
     });
 

@@ -115,7 +115,7 @@ Modernizr.addTest('unprefixed-boxshadow', Modernizr.testProp('boxShadow', '1px 1
 
 </del>
 
-**Коммент из будущего:** в 2020 это не проблемы :—)
+<%- include('/svg/history-solid.svg') %> В 2020 это не проблемы :—)
 {.notice .is-success}
 
 Есть проблемы с ошибками округления в некоторых браузерах при определенных размерах шрифта. Обходятся небольшими твиками размера шрифта.

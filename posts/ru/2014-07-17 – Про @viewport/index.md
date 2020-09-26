@@ -3,10 +3,10 @@ tags:
     - archive
 ---
 
-# Про `@viewport` {.is-small-mb}
+# Про `@viewport`
 
-**Устаревшая фигня!** За прошедшие годы винфон и ИЕ умерли, а остальные браузеры не стали поддерживать `@viewport`{.is-colored-bg}.
-{.notice .is-warning .out-of-the-box .block .is-mb-big}
+<%- include('/svg/history-solid.svg') %>**Устаревшая фигня!** За прошедшие годы винфон и ИЕ умерли, а остальные браузеры не стали поддерживать `@viewport`{.is-colored-bg}.
+{.notice .is-with-icon .is-warning .block .is-mb-big}
 
 Однажды чуваки из Оперы предложили вместо мета-тега `<meta name="viewport" ...>` использовать цсс-ный `@viewport { ... }`. Как, зачем и почему, [послушайте у ппк](https://vimeo.com/100523275), а я расскажу, зачем его стоит начать использовать прямо сейчас.
 
@@ -88,7 +88,7 @@ tags:
 
 - Респонсивность в ИЕ на вин8
 - Родной вьюпорт на винфонах
-- <del>Фьючур пруф!</del> <span class="notice is-info is-inline">Коммент из фьючура: ноуп.</span>
+- <del>Фьючур пруф!</del> <span class="notice is-info is-inline"><%- include('/svg/history-solid.svg') %> Ноуп.</span>
 
 Минус:
 
