@@ -1,11 +1,12 @@
 .site-header
     @mixin contentBox
-    padding-top: 1.5em
+
+    @media (min-width: $phoneBreakpoint)
+        padding-top: 1.5em
 
     &.is-root
-        padding-top: 0
-
         @media (min-width: $phoneBreakpoint)
+            padding-top: 0
             margin-top: 4.5em
 
         @media (min-width: $pcBreakpoint)
@@ -16,16 +17,16 @@
             @mixin outOfTheBox
 
     &__title
-        font-size: 3em
+        font-size: $siteHeadingMinFontSize
         margin-bottom: 0.7em
         line-height: 1.1
 
     &.is-root &__title
-        @media (min-width: $phoneBreakpoint)
-            font-size: 4em
+        @media (min-width: $tabletOverlapBreakpoint)
+            font-size: $siteHeadingMedFontSize
 
         @media (min-width: $pcBreakpoint)
-            font-size: $siteHeadingFontSize
+            font-size: $siteHeadingFullFontSize
 
     &__title-link:not(.is-root)
         @mixin link $linkColor, $linkColor
@@ -38,3 +39,6 @@
             margin-top: 0
             float: right
             padding: 0.5em 0 0 2em
+
+    &__title-text
+        margin-right: 0.2em

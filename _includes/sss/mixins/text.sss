@@ -1,14 +1,15 @@
 @define-mixin text
     h1
-        font-size: 3em
+        font-size: $siteHeadingMinFontSize
         line-height: 1.1
         margin-bottom: 0.7em
 
         @media (min-width: $tabletOverlapBreakpoint)
+            font-size: $siteHeadingMedFontSize
             @mixin outOfTheBox
 
         @media (min-width: $pcBreakpoint)
-            font-size: $siteHeadingFontSize
+            font-size: $siteHeadingFullFontSize
 
     h1.is-small-mb
         margin-bottom: 0.2em

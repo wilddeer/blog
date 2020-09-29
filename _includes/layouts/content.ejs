@@ -19,11 +19,8 @@ layout: layouts/base
 
         <<%= $.tags.includes('root') ? 'h1' : 'div' %> class="site-header__title">
             <a class="site-header__title-link <%= $.tags.includes('root') ? 'is-root' : '' %>" href="/<%= $.lang !== 'ru' ? `${$.lang}/` : ''%>">
-                <%=
-                    $.lang !== 'ru' ?
-                        'Grumpy Blog' :
-                        'Grumpy Blog'
-                %>
+                    <span class="site-header__title-text">Grumpy Blog</span><!--
+             --><span class="site-header__title-icon"><%- include('/svg/happy-sun.svg') %></span>
             </a>
         </<%= $.tags.includes('root') ? 'h1' : 'div' %>>
     </nav>
@@ -42,6 +39,10 @@ layout: layouts/base
 
             <span class="footer__el">
                 <a class="link" href="https://github.com/wilddeer">GitHub</a>
+            </span>
+
+            <span class="footer__el">
+                I work at <a class="link" href="https://chatra.com">Chatra</a>
             </span>
 
             <span class="footer__el">
@@ -79,6 +80,10 @@ layout: layouts/base
             </span>
 
             <span class="footer__el">
+                Работаю в <a class="link" href="https://chatra.com">Чатре</a>
+            </span>
+
+            <span class="footer__el">
                 Комментарии, баги, замечания &rarr; <a class="link" href="mailto:me@grumpy.blog">me@grumpy.blog</a>
             </span>
         </p>
@@ -86,11 +91,11 @@ layout: layouts/base
         <p class="footer__section">
             <% if ($.tags.includes('root')) { %>
                 <span class="footer__el">
-                    Иконка перекати-поле и фавикон — <a class="link" href="https://www.flaticon.com/authors/freepik">Freepik</a> из <a class="link" href="https://www.flaticon.com/">Flaticon</a>
+                    Иконка перекати-поле и упоротого солнца — <a class="link" href="https://www.flaticon.com/authors/freepik">Freepik</a> из <a class="link" href="https://www.flaticon.com/">Flaticon</a>
                 </span>
             <% } else { %>
                 <span class="footer__el">
-                    Фавикон — <a class="link" href="https://www.flaticon.com/authors/freepik">Freepik</a> из <a class="link" href="https://www.flaticon.com/">Flaticon</a>
+                    Иконка упоротого солнца — <a class="link" href="https://www.flaticon.com/authors/freepik">Freepik</a> из <a class="link" href="https://www.flaticon.com/">Flaticon</a>
                 </span>
 
                 <span class="footer__el">
