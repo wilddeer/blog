@@ -1,23 +1,27 @@
-# Panasonic Viera Smart TV browser {#header}
+# Panasonic Viera Smart TV<div class="small">browser (TX-LR32E6)</div> {.is-small-mb}
 
-## (TX-LR32E6)
+<%- include('/svg/history-solid.svg') %>**Rare species:** some time ago I had fun exploring exotic browsers on some not so common devices. This is one of such studies.
+{.notice .is-with-icon .is-info .out-of-the-box .block .is-mb}
 
-{% include pic.htm src='tv.jpg' a='Panasonic Viera Smart TV (TX-LR32E6' %}
+![](tv.jpg =960x450)
+{.is-ootb}
 
-{:.specification}
-| *Screen resolution* | 1920 &times; 1080 |
-| *Viewport size* | 1256 &times; 630 |
-| *Browser* | WebKit-powered |
-| *User Agent* | `Mozilla/5.0 (X11; FreeBSD; U; Viera; ru-RU) AppleWebKit/537.11 (KHTML, like Gecko) Viera/3.3.2 Chrome/23.0.1271.97 Safari/537.11` |
+| ---                                    | --- |
+| *Screen resolution*                    | 1920 &times; 1080 |
+| *Viewport size*                        | 1256 &times; 630 |
+| *Browser*                              | WebKit-powered |
+| *User Agent*                           | `Mozilla/5.0 (X11; FreeBSD; U; Viera; ru-RU) AppleWebKit/537.11 (KHTML, like Gecko) Viera/3.3.2 Chrome/23.0.1271.97 Safari/537.11` |
 | *[Acid3](http://acid3.acidtests.org/)* | 100/100, with bugs |
-| *[HTML5 Test](http://html5test.com/)* | [333/555](http://html5test.com/s/cdd96d20133ac84a.html) |
-| *[CSS3 Test](http://css3test.com/)* | 54% |
+| *[HTML5 Test](http://html5test.com/)*  | [333/555](http://html5test.com/s/cdd96d20133ac84a.html) |
+| *[CSS3 Test](http://css3test.com/)*    | 54% |
+{.key-value-table}
 
 Browser runs on WebKit (looks like a modified version of Chrome). It’s pretty slow, especially when dealing with animations.
 
-### Interaction {#interaction}
+## Interaction {#interaction}
 
-{% include pic.htm src='remote.jpg' p=true float='right' a='Remote control' c='Remote control' %}
+![Remote control](remote.jpg =184x400)
+{.is-float-right}
 
 The browser is controlled with a remote control (you can optionally plug in keyboard and mouse). The cursor is controlled with directional keys on the remote. Colored keys are contextual. When viewing sites, they control zooming and switching between "moving" and "dragging" cursor modes. Zooming doesn’t affect the viewport size.
 
@@ -25,13 +29,13 @@ Both `:hover` and `:active` states work fine, but `:active` state is triggered a
 
 Scrolling is done by moving the cursor to the edge of the screen. Internal overflowed blocks can be scrolled by pressing arrow buttons on the scrollbar, which can be tricky. Scrollbars are constantly visible.
 
-### Tests {#tests}
+## Tests {#tests}
 
 [Acid3](http://acid3.acidtests.org/) test is passed with bugs:
 
-{% include pic.htm src='acid.jpg' a='screenshot showing Acid3 test result' %}
+![](acid.jpg =590x403)
 
-### Feature tests {#feature-tests}
+## Feature tests {#feature-tests}
 
 <small>Feature tests are done using [Modernizr](//modernizr.com). [Full table of my tests](https://docs.google.com/spreadsheet/ccc?key=0AjA1cIs8C8MGdFdyQ0lMQnhMbHJEeVZpMW9XejhzU2c&usp=sharing#gid=0) on google docs.</small>
 
@@ -127,18 +131,18 @@ Scrolling is done by moving the cursor to the edge of the screen. Internal overf
 	</tbody>
 </table>
 
-### Fonts {#fonts}
+## Fonts {#fonts}
 
 The only default fonts available are sans-serif and monospace. Fantasy, cursive and serif fall back to sans-serif. External fonts are supported without noticible problems.
 
-### Forms {#forms}
+## Forms {#forms}
 
 Browser’s support for new input types is pretty weak:
 
-{% include pic.htm src='form.jpg' a='screenshot showing input type test results' %}
+![](form.jpg =600x584)
 
 There’s no datepicker. Onscreen keyboard doesn’t apadt to input types. Validation works for `email` and `url` input types, `required` and `pattern` attributes also work fine.
 
-### Conclusion {#conclusion}
+## Conclusion {#conclusion}
 
 Almost fully-featured Chrome in terms of rendering, although pretty slow and with fiddly UI.

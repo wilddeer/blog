@@ -3,13 +3,13 @@ tags:
     - archive
 ---
 
-**Depricated!** This post contains irrelevant old horseshit and is left here for history and lulz.
-{.notice .is-warning}
+# About the `@viewport`
+
+<%- include('/svg/history-solid.svg') %>**Depricated!** Over the past years, windows phones and IE have died, and other browsers decided not to support `@viewport`{.is-colored-bg}.
+{.notice .is-with-icon .is-warning}
 
 Originally translated by [Varya Stepanova](http://varya.me/) and posted on [Frontend Babel](http://frontendbabel.info/articles/about-viewport/).
-{.notice}
-
-# About the `@viewport`
+{.notice .block .is-mb-big}
 
 Once Opera’s guys proposed to use `@viewport { ... }` in CSS instead of `<meta name="viewport" ...>` tag. Regarding the reasons [you’d better watch and listen to @ppk](http://vimeo.com/100523275) and I will explain why you should use this right now.
 
@@ -19,17 +19,17 @@ I’ve noticed long ago that websites on Windows Phone look bulky in landscape m
 
 You might overlook the difference between iOS and Windows Phone views in portrait mode:
 
-<div class="gallery">
-{% include pic.htm src='before-portrait.png' p=true c='Windows Phone 8.1' a='Windows Phone 8.1 screenshot in portrait mode' %}
-{% include pic.htm src='ipod-portrait.png' p=true c='iOS 7' a='iOS 7 screenshot in portrait mode' %}
-</div>
+::: .pics
+![Windows Phone 8.1](before-portrait.png =360x640)
+
+![iOS 7](ipod-portrait.png =360x640)
+:::
 
 However in the landscape mode the enourmousness of Windows Phone view becomes clear:
 
-<div class="gallery">
-{% include pic.htm src='before-landscape.png' p=true c='Windows Phone 8.1' a='Windows Phone 8.1 screenshot in landscape mode' %}
-{% include pic.htm src='ipod-landscape.png' p=true c='iOS 7' a='iOS 7 screenshot in landscape mode' %}
-</div>
+![Windows Phone 8.1](before-landscape.png =640x360)
+
+![iOS 7](ipod-landscape.png =640x360)
 
 It turned out that Windows Phone considers usual `<meta name="viewport" content="width=device-width, initial-scale=1">` as a designation to make the viewport 320 logical pixels wide, no matter what real device resolution is (because iPhone).
 
@@ -37,17 +37,17 @@ Instead, fresh and lush `@viewport {width: device-width;}`, which is currently s
 
 This is how it should work:
 
-<div class="gallery">
-{% include pic.htm src='before-landscape.png' p=true c='Before' a='Windows Phone 8.1 landscape screenshot before the change' %}
-{% include pic.htm src='after-landscape.png' p=true c='After' a='Windows Phone 8.1 landscape screenshot after the change' %}
-</div>
+![Before](before-landscape.png =640x360)
+
+![After](after-landscape.png =640x360)
 
 The portrait mode also undergoes a change. HTC 8x has higher resolution then iPod and same pixel density, so its viewport should be a little bit wider than 320 pixels:
 
-<div class="gallery">
-{% include pic.htm src='before-portrait.png' p=true c='Before' a='Windows Phone 8.1 portrait screenshot before the change' %}
-{% include pic.htm src='after-portrait.png' p=true c='After' a='Windows Phone 8.1 portrait screenshot after the change' %}
-</div>
+::: .pics
+![Before](before-portrait.png =360x640)
+
+![After](after-portrait.png =360x640)
+:::
 
 `@-ms-viewport` was buggy on Windows Phone 8 before its third update – it operated with real pixels and not with logical ones. This caused too large viewport size (and so too small website view) on phones with hight density screens.
 
@@ -57,9 +57,9 @@ Third update came out a while ago, older phones running WP7 are not affected by 
 
 Furthermore, [it turns out](http://timkadlec.com/2013/01/windows-phone-8-and-device-width/) that IE in Windows 8 ignores the meta tag in metro mode but correctly interprets `@-ms-viewport`. Here’s a couple of explanatory GIFs:
 
-{% include pic.htm src='win8-before.gif' c='The web site is zoomed when using meta tag' a='Windows ain’t happy about meta tag' %}
+![The web site is zoomed when using meta tag](win8-before.gif =640x427)
 
-{% include pic.htm src='win8-after.gif' c='The website adapts when using <code>@-ms-viwport</code>' a='Windows is happy about @viewport' %}
+![The website adapts when using <code>@-ms-viwport</code>](win8-after.gif =640x427)
 
 In the first case we get a non-adaptive web site. Bad. The second approach gives a mobile version snapped to the edge of the screen. Splendid!
 
@@ -91,7 +91,7 @@ Advantages:
 
 - Responsiveness in IE on Windows 8
 - Native viewport in IE on Windows Phones
-- Future-proof!
+- <del>Future-proof!</del> <span class="notice is-info is-inline"><%- include('/svg/history-solid.svg') %> Nope.</span>
 
 Drawbacks:
 

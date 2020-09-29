@@ -1,15 +1,20 @@
-# Kindle Keyboard browser {#header}
+# Kindle Keyboard<div class="small">browser</div> {.is-small-mb}
 
-{% include pic.htm src='kindle-keyboard.jpg' a='Kindle Keyboard' %}
+<%- include('/svg/history-solid.svg') %>**Rare species:** some time ago I had fun exploring exotic browsers on some not so common devices. This is one of such studies.
+{.notice .is-with-icon .is-info .out-of-the-box .block .is-mb}
 
-{:.specification}
-| *Screen resolution* | 600 &times; 800, 16 shades of gray |
-| *Viewport size* | 582 &times; 706 |
-| *Browser* | WebKit-powered |
-| *User Agent* | `Mozilla/5.0 (Linux; U; en-US) AppleWebKit/528.5+ (KHTML, like Gecko, Safari/528.5+) Version/4.0 Kindle/3.0 (screen 600x800; rotate)` |
+![](kindle-keyboard.jpg =960x510)
+{.is-ootb}
+
+| ---                                    | --- |
+| *Screen resolution*                    | 600 &times; 800, 16 shades of gray |
+| *Viewport size*                        | 582 &times; 706 |
+| *Browser*                              | WebKit-powered |
+| *User Agent*                           | `Mozilla/5.0 (Linux; U; en-US) AppleWebKit/528.5+ (KHTML, like Gecko, Safari/528.5+) Version/4.0 Kindle/3.0 (screen 600x800; rotate)` |
 | *[Acid3](http://acid3.acidtests.org/)* | 99/100 |
-| *[HTML5 Test](http://html5test.com/)* | [59/555](http://html5test.com/s/af89ab2018cb33eb.html) |
-| *[CSS3 Test](http://css3test.com/)* | 35% |
+| *[HTML5 Test](http://html5test.com/)*  | [59/555](http://html5test.com/s/af89ab2018cb33eb.html) |
+| *[CSS3 Test](http://css3test.com/)*    | 35% |
+{.key-value-table}
 
 Kindle Keyboard (aka Kindle 3) is an e-book reader by Amazon with e-ink (not touch) screen and an experimental browser on board.
 
@@ -19,7 +24,7 @@ The browser doesn’t have multiple windows or tabs. D-pad is used to move the c
 
 The browser works fine with javascript, copes well with medium complexity pages, but slowes significantly when dealing with big amounts of high-res pics (supposedly due to the lack of RAM).
 
-### Feature tests {#feature-tests}
+## Feature tests {#feature-tests}
 
 <small>Feature tests are done using [Modernizr](//modernizr.com). [Full table of my tests](https://docs.google.com/spreadsheet/ccc?key=0AjA1cIs8C8MGdFdyQ0lMQnhMbHJEeVZpMW9XejhzU2c&usp=sharing#gid=0) on google docs.</small>
 
@@ -122,35 +127,35 @@ The browser works fine with javascript, copes well with medium complexity pages,
 
 Amusingly enough, it supports animations and transitions. [Animation](/en/Pepyaka_font_using_CSS_animations/) quality is accurately captured on the screenshot (although the nature of badly rendered animation on the screenshot is progressive reading, whereas on the screen it’s e-paper’s response time):
 
-{% include pic.htm src='screen-animations.gif' a='screenshot with animations quality demonstration' %}
+![](screen-animations.gif =600x800)
 
-### Zoom {#zoom}
+## Zoom {#zoom}
 
 Websites not optimized for mobile devices are shown "zoomed-out", while the cursor is replaced with a zooming frame:
 
-{% include pic.htm src='screen-zoom.gif' a='screenshot showing a website, not optimized for mobile devices' %}
+![](screen-zoom.gif =600x800)
 
 <kbd>Back</kbd> button brings you back from zoomed-in to zoomed-out view.
 
-### Links {#links}
+## Links {#links}
 
 All the links forcibly receive `text-decoration: underline`. It cannot be overridden neither by `!important`, nor through javascript.
 
 Links with `target="_blank"` don’t work, instead a warning is shown:
 
-{% include pic.htm src='screen-warning.gif' a='screenshot showing a warning message: Web Browser could not open this link because opening multiple windows is not supported.' %}
+![](screen-warning.gif =480x256)
 
-### Fonts {#fonts}
+## Fonts {#fonts}
 
 The only supported format for external fotns is SVG. Original [Font Awesome](http://fortawesome.github.io/Font-Awesome/) doesn’t works for some reason, although it works just fine when generated with [Icomoon app](http://icomoon.io/app/).
 
-### Scroll {#scroll}
+## Scroll {#scroll}
 
 Internal blocks are scrollable with the cursor: it sticks to the edge of the block until the block is scrolled to the end in a particular direction:
 
-{% include pic.htm src='screen-scroll.gif' a='screenshot showing internal block with scroll' %}
+![](screen-scroll.gif =498x298)
 
-### Forms {#forms}
+## Forms {#forms}
 
 New input types are not supported, no validation is implemented.
 
