@@ -110,7 +110,7 @@ function addEvent(el, event, func, bool) {
 </div>
 </del>
 
-<%- include('/svg/history-solid.svg') %>This is a shitty way to get rid of the outlines: you shouldn’t reset the focus position. Use [this method](https://github.com/wilddeer/focus-fix){.is-colored-bg} instead.
+<%- include('/svg/history-solid.svg') %>This is a shitty way to get rid of the outlines – you shouldn’t reset the focus position. Use [this method](https://github.com/wilddeer/focus-fix){.is-colored-bg} instead.
 {.notice .is-warning .is-with-icon}
 
 Now our slider properly works with the keyboard and seems to meet the requirements of the [Web Content Accessibility Guidelines](http://www.w3.org/TR/WCAG20/).

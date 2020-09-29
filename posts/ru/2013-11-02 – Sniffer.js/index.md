@@ -12,7 +12,7 @@
 - Сниффаем [ложные результаты фичетестов](https://docs.google.com/spreadsheet/ccc?key=0AjA1cIs8C8MGdFdyQ0lMQnhMbHJEeVZpMW9XejhzU2c&usp=sharing#gid=0) (там моя табличка тестов мобильных браузеров).
 - Хотите порадовать тех двух идиотов, что зашли на сайт с Киндла? Я хочу! Подарите им контрастные цвета и отключенные анимации.
 
-## Живой пример {#test}
+## Живой пример
 
 <pre><code id="test_console"></code></pre>
 

@@ -52,7 +52,7 @@ module.exports = config => {
     config.addPassthroughCopy('fonts/*.woff2');
     config.addPassthroughCopy('js/*.js');
     config.addPassthroughCopy('css/*.css');
-    config.addPassthroughCopy('svg/*.svg');
+    config.addPassthroughCopy('pics/**/*.*');
     config.addPassthroughCopy('demos/**/*.*');
 
     // Copy the assets to the corresponding post folders

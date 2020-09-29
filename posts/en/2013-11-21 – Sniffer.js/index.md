@@ -1,36 +1,87 @@
-# Sniffer.js {#header}
+# [Sniffer.js](https://github.com/wilddeer/Sniffer)
 
-## &rsquo;cause if you can&rsquo;t detect it, you should sniff it! {#subheader}
+## If you can’t detect it, you should sniff it!
 
-[Sniffer](https://github.com/wilddeer/Sniffer) is a clientside browser/engine/os/device detection tool.
+[Sniffer](https://github.com/wilddeer/Sniffer) is a browser/engine/os/device detection tool.
 
 > — Why u no feature-detect??/?////
 
-I feature-detect like a boss. But when I can't, I use dirty hacks to help me out.
+I feature-detect like a boss. But when I can’t, I use dirty hacks to help me out:
 
 - Some features are just undetectable. For instance, `overflow: scroll` behavior on mobile devices is one of them. Use da Sniffer!
-- You have to sniff [false-positives & false-negatives](https://docs.google.com/spreadsheet/ccc?key=0AjA1cIs8C8MGdFdyQ0lMQnhMbHJEeVZpMW9XejhzU2c&usp=sharing) (some of my mobile browsers tests there).
-- You want to support those two idiots coming to your site from Kindle? I do! Make 'em happy with contrast colors and disabled animations.
-
-[Checkout docs and usage examples on GitHub](https://github.com/wilddeer/Sniffer)
+- You have to sniff [false-positives & false-negatives](https://docs.google.com/spreadsheet/ccc?key=0AjA1cIs8C8MGdFdyQ0lMQnhMbHJEeVZpMW9XejhzU2c&usp=sharing) (some of my mobile browser tests there).
+- Do you want to support those two idiots opening your site on Kindle? I do! Make ’em happy with contrast colors and disabled animations.
 
 ## Live example
 
-<div id="test_console"></div>
+<pre><code id="test_console"></code></pre>
 
+<script src="/js/sniffer.min.js"></script>
 <script>
-	dzDelayed.push(function() {
-		testConsole.log('<b>Sniff.os.name</b><br>'+Sniff.os.name);
-		testConsole.log('<b>Sniff.os.fullName</b><br>'+Sniff.os.fullName);
-		testConsole.log('<b>Sniff.os.version</b><br>'+Sniff.os.version);
-		Sniff.os.versionName && testConsole.log('<b>Sniff.os.versionName</b><br>'+Sniff.os.versionName);
-		testConsole.log('<b>Sniff.browser.name</b><br>'+Sniff.browser.name);
-		testConsole.log('<b>Sniff.browser.fullName</b><br>'+Sniff.browser.fullName);
-		testConsole.log('<b>Sniff.browser.engine</b><br>'+Sniff.browser.engine);
-		testConsole.log('<b>Sniff.browser.version</b><br>'+Sniff.browser.version);
+(function () {
+	const consoleBlock = document.getElementById('test_console');
 
-		for (var prop in Sniff.features) {
-			testConsole.log('<b>Sniff.features.'+prop+':</b><br>'+Sniff.features[prop]);
-		}
-	});
+	function sanitize (text) {
+		text = text.toString();
+        text = text.replace(/&/g, '&amp;'); //before other sanitize replaces!
+        text = text.replace(/</g, '&lt;');
+        text = text.replace(/>/g, '&gt;');
+        text = text.replace(/"/g, '&quot;');
+        text = text.replace(/'/g, '&#39;');
+
+        return text;
+    }
+
+    const elements = [];
+
+    elements.push([
+    	'navigator.userAgent',
+    	navigator.userAgent
+    ]);
+	elements.push([
+		'Sniff.os.name',
+		Sniff.os.name
+	]);
+	elements.push([
+		'Sniff.os.fullName',
+		Sniff.os.fullName
+	]);
+	elements.push([
+		'Sniff.os.version',
+		Sniff.os.version
+	]);
+	if (Sniff.os.versionName) {
+		elements.push([
+			'Sniff.os.versionName',
+			Sniff.os.versionName
+		]);
+	}
+	elements.push([
+		'Sniff.browser.name',
+		Sniff.browser.name
+	]);
+	elements.push([
+		'Sniff.browser.fullName',
+		Sniff.browser.fullName
+	]);
+	elements.push([
+		'Sniff.browser.engine',
+		Sniff.browser.engine
+	]);
+	elements.push([
+		'Sniff.browser.version',
+		Sniff.browser.version
+	]);
+
+	for (let prop in Sniff.features) {
+		elements.push([
+			`Sniff.features.${prop}`,
+			Sniff.features[prop]
+		]);
+	}
+
+	consoleBlock.innerHTML = elements
+		.map(([key, value]) => `<b>${sanitize(key)}</b>\n${sanitize(value)}`)
+		.join('\n\n');
+}());
 </script>
