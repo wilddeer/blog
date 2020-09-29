@@ -1,0 +1,117 @@
+---
+layout: layouts/postWrap
+tags:
+    - archive
+---
+
+<div class="stickyfill-post-content">
+  <style>
+  <%- include('stickyfill-demo.css') %>
+  </style>
+
+  <section style="height: 120em;">
+    <div class="sticky-1 sticky align-center">
+      <h1 class="article-title">
+        <a href="https://github.com/wilddeer/stickyfill">Stickyfill</a><br>
+        <small class="tagline"><code class="code is-inverse">position:&nbsp;sticky</code> polyfill</small>
+      </h1>
+
+      <div class="notice is-inverse block is-mt is-mb font-size is-smaller">
+        <%- include('/svg/history-solid.svg') %> <strong>Устаревшая фигня!</strong><br>Полифилл хорошо поработал, пока браузеры внедряли поддержку <code class="code is-inverse">position:&nbsp;sticky</code>. Сейчас стики можно смело использовать без полифилла, все современные браузеры <a href="https://caniuse.com/?search=position%3Asticky">поддерживают&nbsp;их</a>.
+      </div>
+    </div>
+
+    <p class="sticky sticky-1-2" style="text-align: center; opacity: 0.3; margin-bottom: 60em; top: 8em; ">
+      <span class="scroll-me">
+        <%- include('/svg/chevron-down-solid.svg') %>
+      </span>
+    </p>
+  </section>
+
+  <section style="height: 60em;">
+    <p class="sticky-2 sticky" style="top: 3em; font-size: 1.2em; margin-top: 2em;">
+      Sticky is a block that sticks to the edge of the screen when you scroll past its top border. And when it reaches the bottom of the parent element – goes along with it. Just like this paragraph.
+    </p>
+  </section>
+
+  <section style="height: 100em;">
+    <div class="sticky-3 sticky" style="top: 3em; margin-bottom: 2.7em;">
+      <p>
+        The code is pretty simple:
+      </p>
+
+      <pre><code>.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}</code></pre>
+
+    </div>
+
+    <p class="sticky-4 sticky" style="top: 16em; margin-top: 40em; margin-bottom: 0;">
+      <small class="small"><code class="code is-inverse">top</code> changes sticky’s position relatively to the edge of the viewport. You may also specify <code class="code is-inverse">margin-bottom</code> to alter sticky’s bottom limit a bit.</small>
+    </p>
+  </section>
+
+  <section style="min-height: 160em;">
+    <div class="sticky-5 sticky" style="top: 3em; margin-top: 30em; font-size: 1.2em; margin-bottom: 5em;">
+      <p>
+        The problem is, stickies are currently <a href="http://caniuse.com/#feat=css-sticky">supported</a> only in Safari on OS X and iOS.
+      </p>
+    </div>
+
+    <div class="sticky-6 sticky" style="top: 8em; margin-top: 50em; font-size: 1.2em;">
+      <p>
+        So I made <a href="https://github.com/wilddeer/stickyfill">Stickyfill</a>. It emulates stickies where they aren’t supported natively.
+      </p>
+    </div>
+  </section>
+
+  <section style="min-height: 90em;">
+    <div class="sticky-7 sticky" style="top: 5em; margin-top: 10em;">
+      <h2 class="font-size is-heading-3">What it does:</h2>
+
+      <ul class="list">
+        <li class="list__item">Supports top-positioned stickies</li>
+        <li class="list__item"><del class="del">Supports table cell stickies</del> Disabled until Firefox <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=975644">makes a native implementation</a></li>
+        <li class="list__item">Works in IE9+</li>
+        <li class="list__item">Disables in older browsers and in browsers with native sticky support</li>
+        <li class="list__item">Mimics the original sticky behavior (where it can)</li>
+        <li class="list__item">Considers <a href="http://wilddeer.github.io/stickyfill/test/">a whole lot of different use cases</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section style="min-height: 80em;">
+    <div class="sticky-8 sticky" style="top: 5em; margin-top: 5em;">
+      <h2 class="font-size is-heading-3">What it doesn’t do:</h2>
+
+      <ul class="list">
+        <li class="list__item">Doesn’t support left, right, bottom or combined stickies</li>
+        <li class="list__item">Doesn’t support stacking of table cell stickies</li>
+        <li class="list__item">Doesn’t work in overflowed blocks</li>
+        <li class="list__item">Doesn’t parse your CSS (launch it manually)</li>
+      </ul>
+    </div>
+  </section>
+
+  <section style="min-height: 160em;">
+    <p class="sticky-9 sticky" style="top: 5em; margin-top: 50em; font-size: 1.2em; text-align: center;">
+      <a href="https://github.com/wilddeer/stickyfill" class="big-fucking-button">
+        <%- include('/svg/github-alt-brands.svg') %>
+        Get it on GitHub
+      </a>
+    </p>
+  </section>
+
+
+  <div class="notice is-with-big-icon is-inverse font-size is-smaller" style="margin-top: 30em;">
+    <%- include('/svg/heart-regular.svg') %>In four days of diving into browser box models’ hell I discovered the difference between <code class="code is-inverse">window.pageYOffset</code>, <code class="code is-inverse">document.documentElement.scrollTop</code>, <code class="code is-inverse">window.scrollY</code> and <code class="code is-inverse">document.body.scrollTop</code>, discrepancies in <code class="code is-inverse">offsetWidth</code> of a block with  <code class="code is-inverse">box-sizing: border-box</code> in different browsers, how <code class="code is-inverse">element.offsetWidth</code> and <code class="code is-inverse">node.getBoundingClientRect().width</code> differ and why, what’s the difference between <code class="code is-inverse">getComputedStyle(element)</code> and real values, how to get viewport’s width without scroll width and how rounding errors tend to accumulate in the most inopportune moment.
+  </div>
+</div>
+
+<script src="/js/jquery-3.5.1.slim.min.js"></script>
+<script src="/js/stickyfill.min.js"></script>
+<script>
+<%- include('stickyfill-demo.js') %>
+</script>
