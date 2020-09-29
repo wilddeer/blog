@@ -148,23 +148,17 @@ It’s time to make our own Steam, with blackjack and hookers. I picked up a [ga
 
 Without further ado, here’s the result:
 
-<p class="demo" style="text-align: center;"><a href="/steam/" style="font-size: 2.5em;">Demo</a></p>
+<p style="text-align: center;"><a href="/demos/steam/" style="font-size: 2.5em;">Demo</a></p>
 
 And now on the problems current Steam website has and how I tried to fix them:
 
-<hgroup>
-    <h4 class="problem">Problem</h4>
-    <h2>Incomplete mobile version</h2>
-</hgroup>
+## <small class="state-color state-color--danger">Problem</small><br>Incomplete mobile version
 
 Steam’s mobile website doesn’t recognize a lot of mobile devices and doesn’t have half the functions desktop version provides. For instance, it doesn’t have recently added user reviews in any shape or form.
 
 Meanwhile, limiting the functionality of your mobile website is a really bad practice. Mobile users should be able to use all the functions available in "full" version. Both versions should be "full" versions, actually. There’s [a pretty good read](http://www.abookapart.com/products/mobile-first) on the theme.
 
-<hgroup>
-    <h4 class="solution">Solution</h4>
-    <h2>Responsive design</h2>
-</hgroup>
+## <small class="state-color state-color--success">Solution</small><br>Responsive design
 
 Responsive design increases the time and complexity of the development, but, on the bright side, it allowes the whole functionality of the site to be available on any device and removes the need to maintain both versions and bother about adding new features to both of them. You still can use a combined approach in particularly difficult situations: generate part of the page on the server differently depending on the device, e. g. serve different picture sizes to different devices, or even substitute some of the templates with more simple or complex ones.
 
@@ -174,32 +168,43 @@ My demo uses mobile first approach, i.&nbsp;e. base styles for small screens, me
 
 Responsive screenshot gallery should work on any device, with any type of touch events. I used my [Peppermint touch slider](/en/Peppermint_touch_slider/) for this purpose. I also made a scroller for the thumbnails based on the event unifying code from Peppermint (which I detached into a [separate script](https://github.com/wilddeer/Event-Burrito), by the way). Now you can drag both the screenshots and the thumbs using mouse or touch:
 
+</div>
+
+::: .demo .is-fullwidth
+
 <style>
-{% include snippets/steam-gallery.css %}
+<%- include('steam-gallery.css') %>
 </style>
 
+<script src="/js/jquery-3.5.1.slim.min.js"></script>
+<script src="/js/eventburrito.js"></script>
+<script src="/js/peppermint.min.js"></script>
+
+<%- include('steam-gallery.html') %>
+
 <script>
-dzDelayed.push(function() {
-    {% include snippets/steam-gallery.js %}
+    <%- include('slime.js') %>
+    <%- include('steam-gallery.js') %>
     $('.js-steam-peppermint').steamGallery();
-});
 </script>
 
-<div class="steam-demo fullwidth">
-{% include snippets/steam-gallery.htm %}
-</div>
+:::
+
+<div class="text">
 
 Thumbnails are replaced with dots on smaller screens (you can see the dots by shrinking the browser window).
 
 Everything combined and wrapped in a jQuery extension:
 
+::: .code-max-height
 ```js
-{% include snippets/steam-gallery.js %}
+<%- include('steam-gallery.js') %>
 ```
+:::
 
 ### Responsive background
 
-I made a full-page background. To make mobile devices happier i give ’em smaller background pic. Compare the [full](/steam/i/page.bg.jpg) and [mobile](/steam/i/page.bg.mob.jpg) variants.
+I made a full-page background. To make mobile devices happier i give ’em smaller background pic. Compare the [full]/demos/steam/i/page.bg.jpg) and [mobile]/demos/steam/i/page.bg.mob.jpg) variants.
 
 Since every store page has its own background, I put the style directly into the `head` of the page. I also took into account old IEs that don’t understant media queries:
 
@@ -229,38 +234,40 @@ Since every store page has its own background, I put the style directly into the
 
 To make mobile devices love the site even more I limited the amount of performance heavy CSS features (like shadows, gradients and opacity) on smaller screens.
 
-<hgroup>
-    <h4 class="problem">Problem</h4>
-    <h2>Content obeys the design</h2>
-</hgroup>
+## <small class="state-color state-color--danger">Problem</small><br>Content obeys the design
 
 Here’s the DLC info block in its current form:
 
-{% include pic.htm src='dlc-block.png' a='Блок про DLC' %}
+![](dlc-block.png =625x87)
 
 What happens if the phrase is twice as big? What if the translated version is even longer? Here’s what:
 
-{% include pic.htm src='dlc-block-overflowed.png' c='DLC block is overflowed :-(' %}
+![DLC block is overflowed :-(](dlc-block-overflowed.png =621x178)
 
 This block has fixed width and height (no idea why the width is even defined, since it’s same as parent’s) and [a picture](http://cdn4.store.steampowered.com/public/images/v5/game_area_dlc.png) on the background. Even back in the days when there were no fancy CSS3 features you could make this block fluid. You would need a sprite and some hacks, but everything worked with hacks back then.
 
-<hgroup>
-    <h4 class="solution">Solution</h4>
-    <h2>Make design obey the content</h2>
-</hgroup>
+## <small class="state-color state-color--success">Solution</small><br>Make design obey the content
 
-<style>
-{% include snippets/steam-dlc.css %}
-</style>
-
-<div class="steam-demo">
-{% include snippets/steam-dlc.htm %}
 </div>
 
-<p class="js-controls"><button id="fill-it">fill me, baby</button></p>
+<style>
+<%- include('steam-dlc.css') %>
+</style>
+
+::: .demo .is-fullwidth
+::: .content-box
+<%- include('steam-dlc.html') %>
+
+<div class="align-center block is-mt-big">
+    <button class="button is-white" id="fill-it">fill me, baby</button>
+</div>
+
+:::
+:::
+
+<div class="text">
 
 <script>
-dzDelayed.push(function() {
     var i = 0;
 
     $('#fill-it').click(function() {
@@ -270,123 +277,112 @@ dzDelayed.push(function() {
             $(this).text('oh stop it, you!').attr('disabled','disabled');
         }
     });
-});
 </script>
 
 All we need is one block and a bunch of styles:
 
 ```html
-{% include snippets/steam-dlc.htm %}
+<%- include('steam-dlc.html') %>
 ```
 
 ```css
-{% include snippets/steam-dlc.css %}
+<%- include('steam-dlc.css') %>
 ```
 
 Old browsers won’t render the gradient and the rounded corners, not big deal.
 
 The problem with unflexible static markup is not limited to one block. Price blocks designed for dollar prices used to break in Russian shop. It’s not the case now, for the most part, but there is still quite a bunch of static unflexible blocks:
 
-{% include pic.htm src='price-overflowed.png' a='Overflowed price block' c="Steam won’t handle yet another ruble collapse :-)" %}
+![Steam won’t handle yet another ruble collapse :-)](price-overflowed.png =197x76)
 
 There is a similar block in the neighborhood, which, surprisingly enough, is feeling great in unusual circumstances:
 
-{% include pic.htm src='proper-price-block.png' a='Proper price block'%}
+![](proper-price-block.png =296x129)
 
 This leads us to another problem:
 
-<hgroup>
-    <h4 class="problem">Problem</h4>
-    <h2>Nonuniversal code</h2>
-</hgroup>
+## <small class="state-color state-color--danger">Problem</small><br>Non-universal code
 
 Two similar looking blocks are using completely different markup, although, in fact, they must be identical.
 
-<hgroup>
-    <h4 class="solution">Solution</h4>
-    <h2>Make the code universal</h2>
-</hgroup>
+## <small class="state-color state-color--success">Solution</small><br>Make the code universal
 
 Let’s make a universal price block:
 
+</div>
+
+::: .demo .is-light
 <style>
-{% include snippets/price-area.css %}
+<%- include('price-area.css') %>
 </style>
 
-<div class="steam-demo white">
+<div class="steam-demo white align-center">
   <div class="price-area" style="font-size: 0.7em;">
     <span class="discount">
       <span>-1%</span>
     </span>
-
     <span class="price">
       <del class="original-price">
         <span>£3.00</span>
       </del>
-
       <span class="final-price">
         <span>£2.97</span>
       </span>
     </span>
   </div>
-
   <div class="price-area">
     <span class="discount">
       <span>-33%</span>
     </span>
-
     <span class="price">
       <del class="original-price">
         <span>$49.99</span>
       </del>
-
       <span class="final-price">
         <span>$32.99</span>
       </span>
     </span>
   </div>
-
   <div class="price-area" style="font-size: 1.2em;">
     <span class="discount">
       <span>-600%</span>
     </span>
-
     <span class="price">
       <del class="original-price">
         <span>100 000 рублей</span>
       </del>
-
       <span class="final-price">
         <span>-500 000 рублей</span>
       </span>
     </span>
   </div>
-
   <div class="price-area" style="font-size: 1.5em;">
     <span class="discount">
       <span>-66%</span>
     </span>
-
     <span class="price">
       <del class="original-price">
         <span>¥ 999</span>
       </del>
-
       <span class="final-price">
         <span>¥ 333</span>
       </span>
     </span>
   </div>
 </div>
+:::
+:::
+
+<div class="text">
 
 Now it’s enough to vary the font size to make a block of an appropriate size. All the properties are set in relative `em` units. Price values are wrapped in additional `span`’s, so you can set a specific font size for them without affecting the properties of the parental element:
 
 ```html
-{% include snippets/price-area.htm %}
+<%- include('price-area.html') %>
 ```
 
 ```css
-{% include snippets/price-area.css %}
+<%- include('price-area.css') %>
 ```
 
 Sale is over? Set the regular price and get rid of unnecessary stuff in the markup:
@@ -401,81 +397,84 @@ Sale is over? Set the regular price and get rid of unnecessary stuff in the mark
 
 And everything just works.
 
-<div class="steam-demo white">
+</div>
+
+::: .demo .is-fullwidth .is-light
+<div class="steam-demo white align-center">
     <div class="price-area" style="font-size: 1.5em;">
         <span class="price">
             ¥ 999
         </span>
     </div>
-
     <div class="price-area" style="font-size: 1.2em;">
         <span class="price">
             599 руб.
         </span>
     </div>
-
     <div class="price-area">
         <span class="price">
             $5.99
         </span>
     </div>
 </div>
+:::
+
+<div class="text">
 
 Same is applicable to any repeating block, e.&nbsp;g. user block:
 
+</div>
+
+::: .demo .is-fullwidth
 <style>
-{% include snippets/steam-user.css %}
+<%- include('steam-user.css') %>
 </style>
 
 <div class="steam-demo" style="text-align: center;">
-  <p>
-    <a href="#" class="user" style="font-size: 0.66em;">
-      <span class="userpic"><img src="/steam/i/userpic1.jpg"></span><span class="username">Username</span>
-    </a>
-  </p>
-
-  <p>
-    <a href="#" class="user user-online">
-      <span class="userpic"><img src="/steam/i/userpic4.jpg"></span><span class="username">Username</span>
-    </a>
-  </p>
-
-  <p>
-    <a href="#" class="user user-ingame" style="font-size: 1.5em;">
-      <span class="userpic"><img src="/steam/i/userpic-med.jpg"></span><span class="username">Username</span>
-    </a>
-  </p>
-
-  <p>
-    <a href="#" class="user user-online" style="font-size: 2.25em;">
-      <span class="userpic"><img src="/steam/i/userpic-big.jpg"></span><span class="username">Username</span>
-    </a>
-  </p>
-
-  <p>
-    <a href="#" class="user user-ingame user-square" style="font-size: 2.25em;">
-      <span class="userpic"><img src="/steam/i/userpic-big2.jpg"></span><span class="username">Username</span>
-    </a>
-  </p>
-
-  <p>
-    <a href="#" class="user user-online user-square" style="font-size: 1.5em;">
-      <span class="userpic"><img src="/steam/i/userpic-med2.jpg"></span><span class="username">Username</span>
-    </a>
-  </p>
-
-  <p>
-    <a href="#" class="user user-square">
-      <span class="userpic"><img src="/steam/i/userpic3.jpg"></span><span class="username">Username</span>
-    </a>
-  </p>
-
-  <p>
-    <a href="#" class="user user-ingame user-square" style="font-size: 0.66em;">
-      <span class="userpic"><img src="/steam/i/userpic6.jpg"></span><span class="username">Username</span>
-    </a>
-  </p>
+    <p>
+        <a href="#" class="user" style="font-size: 0.66em;">
+            <span class="userpic"><img src="/demos/steam/i/userpic1.jpg"></span><span class="username">Username</span>
+        </a>
+    </p>
+    <p>
+        <a href="#" class="user user-online">
+            <span class="userpic"><img src="/demos/steam/i/userpic4.jpg"></span><span class="username">Username</span>
+        </a>
+    </p>
+    <p>
+        <a href="#" class="user user-ingame" style="font-size: 1.5em;">
+            <span class="userpic"><img src="/demos/steam/i/userpic-med.jpg"></span><span class="username">Username</span>
+        </a>
+     </p>
+    <p>
+        <a href="#" class="user user-online" style="font-size: 2.25em;">
+            <span class="userpic"><img src="/demos/steam/i/userpic-big.jpg"></span><span class="username">Username</span>
+        </a>
+    </p>
+    <p>
+        <a href="#" class="user user-ingame user-square" style="font-size: 2.25em;">
+            <span class="userpic"><img src="/demos/steam/i/userpic-big2.jpg"></span><span class="username">Username</span>
+        </a>
+    </p>
+    <p>
+        <a href="#" class="user user-online user-square" style="font-size: 1.5em;">
+            <span class="userpic"><img src="/demos/steam/i/userpic-med2.jpg"></span><span class="username">Username</span>
+        </a>
+    </p>
+    <p>
+        <a href="#" class="user user-square">
+            <span class="userpic"><img src="/demos/steam/i/userpic3.jpg"></span><span class="username">Username</span>
+        </a>
+    </p>
+    <p>
+        <a href="#" class="user user-ingame user-square" style="font-size: 0.66em;">
+            <span class="userpic"><img src="/demos/steam/i/userpic6.jpg"></span><span class="username">Username</span>
+        </a>
+    </p>
 </div>
+:::
+
+<div class="text">
 
 To adhere to the principle of the universal code, it is important to properly structure your styles and to understand what purpose each part of the styles serves. I brought myself to the following system:
 
@@ -486,10 +485,7 @@ To adhere to the principle of the universal code, it is important to properly st
 - **Modules** – this are the guys I was talking about. Modules are repeating blocks, their base styles should not depend on the context (but can be modified by the styles of the context, see below). Modules can be nested.
 - **Page styles** – styles of the blocks specific to the page. This is the place where you can modify the styles of the modules located in a specific block on the page.
 
-<hgroup>
-  <h4 class="problem">Problem</h4>
-  <h2>“Obtrusive” javascript</h2>
-</hgroup>
+## <small class="state-color state-color--danger">Problem</small><br>“Obtrusive” javascript
 
 Substitution of basic element behaviour with scripts and lack of proper fallbacks leads to a situation where tipical and habitual functions of HTML elements are completely lost.
 
@@ -499,7 +495,7 @@ For instance, Steam website contains all the classic mistakes collected in my [p
 <a class="linkbar" href="javascript:screenshot_popup('http://store.steampowered.com/screenshot/view/205100/0?snr=1_5_9__400', 800, 635, 0, 0);">...</a>
 ```
 
-And here’s a "previous spotlight" button made with an `a` element:
+And here’s a “previous spotlight” button made with an `a` element:
 
 ```html
 <a href="javascript:PrevSpotlight( 2 );"><img src="http://cdn4.store.steampowered.com/public/images/v5/ico_navArrow_left.gif"> Prev</a>
@@ -507,7 +503,7 @@ And here’s a "previous spotlight" button made with an `a` element:
 
 Another example – community hub posts:
 
-{% include pic.htm src='hub-post.png' a='Пост в центре сообщества игры' %}
+![](hub-post.png =481x362)
 
 Their code looks like this:
 
@@ -521,57 +517,54 @@ Their code looks like this:
 
 Not only these posts are opened in horrible modal popups (which are invented by the people who hate tabs), they also can’t be opened in a regular way, since they are not links. Not to mention the usage of inline styles and huge inline function calls, which are an example of poor code style.
 
-<hgroup>
-    <h4 class="solution">Solution</h4>
-    <h2 markdown="1">Make the javascript [unobtrusive](https://en.wikipedia.org/wiki/Unobtrusive_JavaScript)</h2>
-</hgroup>
+## <small class="state-color state-color--success">Solution</small><br>Make the javascript [unobtrusive](https://en.wikipedia.org/wiki/Unobtrusive_JavaScript)
 
 Whole block containing community hub post can be made of an `a` element, popup (if you desperately want a popup) should only be opened if the block is clicked with left mouse button without any modifier keys.
 
 Same is applicable to other UI elements: if the element leads somewhere, make a link. You can then apply any handler to it, just don’t prevent opening it in a new tab. If an element does some action within the page, use a `button`. More details and examples can be found in my [post about proper links](/en/Links,_please/).
 
-Besides all the above, "obtrusive" javascript directly leads to another problem:
+Besides all the above, “obtrusive” javascript directly leads to another problem:
 
-<hgroup>
-    <h4 class="problem">Problem</h4>
-    <h2>Low fault tolerance</h2>
-</hgroup>
+## <small class="state-color state-color--danger">Problem</small><br>Low fault tolerance
 
 What would happen if the CDN server serving js files goes down? If one of the scripts fails to execute correctly? That’s right, half of the functionality won’t work. It could’ve been working though, even if not as good as with the scripts.
 
 Screenshot gallery becomes an empty rectangle without js, thumbs and scroll aren’t working either:
 
-{% include pic.htm src='gallery-nojs.jpg' a='Screenshot gallery with javascript turned off' %}
+![](gallery-nojs.jpg =621x443)
 
-<hgroup>
-    <h4 class="solution">Solution</h4>
-    <h2>Use proper fallbacks</h2>
-</hgroup>
+## <small class="state-color state-color--success">Solution</small><br>Use proper fallbacks
 
 Put the screenshots into a horizontally scrollable block, which will then become a normal gallery after the initialization. Since all the UI element are useless without javascript, hide them until the init.
 
 To implement this approach it’s enough to give the gallary `inactive` class, which will be then changed to `active` upon initialization, and write a bunch of styles for both states:
 
-<div class="steam-demo fullwidth">
+</div>
+
+::: .demo .is-fullwidth
+<div class="steam-demo">
     <section class="gallery peppermint steam-demo-peppermint peppermint-inactive">
         <figure>
-            <a href="/steam/i/1.jpg" target="_blank"><img src="/steam/i/m1.jpg" width="711" height="400"></a>
+            <a href="/demos/steam/i/1.jpg" target="_blank"><img src="/demos/steam/i/m1.jpg" width="711" height="400"></a>
         </figure>
-
         <figure>
-            <a href="/steam/i/2.jpg" target="_blank"><img src="/steam/i/m2.jpg" width="711" height="400"></a>
+            <a href="/demos/steam/i/2.jpg" target="_blank"><img src="/demos/steam/i/m2.jpg" width="711" height="400"></a>
         </figure>
-
         <figure>
-            <a href="/steam/i/3.jpg" target="_blank"><img src="/steam/i/m3.jpg" width="711" height="400"></a>
+            <a href="/demos/steam/i/3.jpg" target="_blank"><img src="/demos/steam/i/m3.jpg" width="711" height="400"></a>
         </figure>
     </section>
 </div>
 
-<p class="js-controls"><button id="launch-it">Launch me</button></p>
+<div class="align-center block is-mt-big">
+    <button class="button is-white" id="launch-it">Запусти меня</button>
+</div>
+
+:::
+
+<div class="text">
 
 <script>
-dzDelayed.push(function() {
     $('#launch-it').click(function() {
         $('.steam-demo-peppermint').Peppermint({
             dots: true,
@@ -580,12 +573,11 @@ dzDelayed.push(function() {
 
         $(this).attr('disabled','disabled');
     });
-});
 </script>
 
 Now you can view the screenshots even if the javascript is broken.
 
-Same approach is applicable to "add to favourites" button, vote buttons, etc. – you can wrap them in a `form` and cath `submit` event with javascript handler. In case the javascript is not available or broken, the form will be sent to the server and the server can then redirect the user back to the page he came from.
+Same approach is applicable to “add to favourites” button, vote buttons, etc. – you can wrap them in a `form` and cath `submit` event with javascript handler. In case the javascript is not available or broken, the form will be sent to the server and the server can then redirect the user back to the page he came from.
 
 Same with the blocks opening different popups – make ’em links, and they will thrive without javascript.
 
@@ -617,11 +609,11 @@ There are a lot of unclear and inconsistent moments in Steam’s navigation and 
 
 **What hasn’t been done:** Steam’s header and footer, HTML5-video with a fallback to flash (for the game trailers), skipped a bunch of blocks present on the original page.
 
-Warm-up is officially finished.
+The warm-up is officially finished.
 
 ## Bonus pack
 
-Code of one of the items in Steam’s main menu:
+Code of one of the items in the Steam’s main menu:
 
 ```html
 <a class="menuitem supernav" href="http://store.steampowered.com/" data-tooltip-content="
@@ -634,4 +626,6 @@ Code of one of the items in Steam’s main menu:
     STORE </a>
 ```
 
-{% include pic.htm src='wat.jpg' a='WAT'%}
+![](wat.jpg =400x266)
+
+</div>

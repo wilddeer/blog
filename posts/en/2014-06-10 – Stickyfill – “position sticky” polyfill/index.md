@@ -93,6 +93,6 @@
 
 
 <figure class="info icon-heart-empty" style="margin-top: 30em;" markdown="1">
-In four days of diving into browser box models' hell I discovered the difference between `window.pageYOffset`, `document.documentElement.scrollTop`, `window.scrollY` and `document.body.scrollTop`, discrepancies in `offsetWidth` of a block with  `box-sizing: border-box` in different browsers, how `element.offsetWidth` and `node.getBoundingClientRect().width` differ and why, what’s the difference between `getComputedStyle(element)` and real values, how to get viewport’s width without scroll width and how rounding errors tend to accumulate in the most inopportune moment.
+In four days of diving into browser box models’ hell I discovered the difference between `window.pageYOffset`, `document.documentElement.scrollTop`, `window.scrollY` and `document.body.scrollTop`, discrepancies in `offsetWidth` of a block with  `box-sizing: border-box` in different browsers, how `element.offsetWidth` and `node.getBoundingClientRect().width` differ and why, what’s the difference between `getComputedStyle(element)` and real values, how to get viewport’s width without scroll width and how rounding errors tend to accumulate in the most inopportune moment.
 </figure>
 

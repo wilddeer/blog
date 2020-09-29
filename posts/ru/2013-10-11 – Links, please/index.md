@@ -15,9 +15,9 @@
 
 <div class="text-container notice is-with-big-icon font-size is-smaller block is-mb">
           
-<%- include('/svg/umbrella-solid.svg') %>Можно также использовать любой другой тег, например `span`{.is-colored-bg}, но он не будет ловить фокус, а событие *click* не будет вызываться по нажатию энтера, что убивает все преимущества кнопки в плане доступности использования.
+<%- include('/svg/umbrella-solid.svg') %>Можно также использовать любой другой тег, например `span`, но он не будет ловить фокус, а событие *click* не будет вызываться по нажатию энтера, что убивает все преимущества кнопки в плане доступности использования.
 
-Можно добавить спану аттрибут `tabindex="0"`{.is-colored-bg} и повесить обработчики на нажатие энтера, а можно не париться и сделать `button`{.is-colored-bg}, который еще и семантически более уместен.
+Можно добавить спану аттрибут `tabindex="0"` и повесить обработчики на нажатие энтера, а можно не париться и сделать `button`, который еще и семантически более уместен.
 
 </div>
 
@@ -34,7 +34,7 @@
 HTML:
 
 ```html
-<%- include('proper-link.htm') %>
+<%- include('proper-link.html') %>
 ```
 
 JS + jQuery:
@@ -46,7 +46,7 @@ JS + jQuery:
 Результат:
 
 <figure>
-	<%- include('proper-link.htm') %>
+	<%- include('proper-link.html') %>
 </figure>
 
 <script src="/js/jquery-3.5.1.slim.min.js"></script>
