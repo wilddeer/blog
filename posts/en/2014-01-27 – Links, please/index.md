@@ -11,7 +11,7 @@ If you desperately want to put `javascript: void(0);`, `#` or something similar 
 Buttons work with `click` events, `:hover` and `:active` styles and catch focus when <kbd>tab</kbd>&rsquo;bing just like links do. Unbelievable!
 
 <figure class="info icon-umbrella" markdown="1">
-You can use any other element, e.&nbsp;g. `span`, but it won't be focusable, and <kbd>enter</kbd> won't trigger `click` event handlers, which is far from ideal for accessibility reasons.
+You can use any other element, e.&nbsp;g. `span`, but it won’t be focusable, and <kbd>enter</kbd> won’t trigger `click` event handlers, which is far from ideal for accessibility reasons.
 
 You can set `tabindex="0"` to make it focusable and add a `keypress` event listener, or you can just use a `button`, which is also semantically more appropriate.
 </figure>
@@ -50,7 +50,7 @@ dzDelayed.push(function() {
 });
 </script>
 
-In IE8 and lower, click events have `button` property always set to `0`. As a result, middle mouse button clicks also pass the check, but everything else is working just fine. I wouldn't make a fuss over this, but if you really want to get it working as intended, [you may try](http://unixpapa.com/js/mouse.html).
+In IE8 and lower, click events have `button` property always set to `0`. As a result, middle mouse button clicks also pass the check, but everything else is working just fine. I wouldn’t make a fuss over this, but if you really want to get it working as intended, [you may try](http://unixpapa.com/js/mouse.html).
 
 ## Good guys
 
@@ -58,15 +58,15 @@ There are many more cases where you should keep the functionality of a link. Her
 
 #### Pagination
 
-[VK's paginator](http://vk.com/wall-35502680_11833) switches pages asynchronously, but still allows you to open a specific page in a new tab.
+[VK’s paginator](http://vk.com/wall-35502680_11833) switches pages asynchronously, but still allows you to open a specific page in a new tab.
 
 #### Login / registration forms
 
-[Reddit](//reddit.com)'s login &amp; registration form opens in a popup on top of the current page when clicked with left mosue button, and in a new tab when clicked with the mouse wheel. Unfortunately, they don't check for modifier keys.
+[Reddit](//reddit.com)'s login &amp; registration form opens in a popup on top of the current page when clicked with left mosue button, and in a new tab when clicked with the mouse wheel. Unfortunately, they don’t check for modifier keys.
 
 #### Extended functionality
 
-I accidentally came across this one when [metacritic](http://www.metacritic.com/game/pc/limbo)'s scripts refused to load for me. *Expand* button under user reviews is, in fact, a link with a GET parameter, e.&nbsp;g. `?user_review_id=1713311`. If javascript is disabled or (in my case) broken, the server will serve you the same page with an expanded review. This is a great example of [unobtrusive js](https://en.wikipedia.org/wiki/Unobtrusive_JavaScript) at work, saving website's functionality while CDN server is down.
+I accidentally came across this one when [metacritic](http://www.metacritic.com/game/pc/limbo)'s scripts refused to load for me. *Expand* button under user reviews is, in fact, a link with a GET parameter, e.&nbsp;g. `?user_review_id=1713311`. If javascript is disabled or (in my case) broken, the server will serve you the same page with an expanded review. This is a great example of [unobtrusive js](https://en.wikipedia.org/wiki/Unobtrusive_JavaScript) at work, saving website’s functionality while CDN server is down.
 
 ## Bad guys
 
@@ -74,21 +74,21 @@ I accidentally came across this one when [metacritic](http://www.metacritic.com/
 
 Twitter resolved to follow the straight and narrow and began to gradually correct their rubbish. We can finally open user profiles in a new tab – good. *Refresh* button in the sidebar and *compose new tweet* button are both using `button` element – also good (would be actually better if the last one was a link leading to a separate page with a form to compose a new tweet).
 
-Nonetheless, there are still lots of `<a href="#">` nonsense. *Reply*, *retweet* and *favourite* links aren't pointing anywhere, while [they](https://twitter.com/intent/tweet?in_reply_to=386573856179113985) [definitely](https://twitter.com/intent/retweet?tweet_id=386573856179113985) [could](https://twitter.com/intent/favorite?tweet_id=386573856179113985).
+Nonetheless, there are still lots of `<a href="#">` nonsense. *Reply*, *retweet* and *favourite* links aren’t pointing anywhere, while [they](https://twitter.com/intent/tweet?in_reply_to=386573856179113985) [definitely](https://twitter.com/intent/retweet?tweet_id=386573856179113985) [could](https://twitter.com/intent/favorite?tweet_id=386573856179113985).
 
 #### Google+ {#google-plus}
 
-Same situation here. It's not the same mess it used to be a while ago, but there're still things to fix. Cycles menu on top of the home page still uses `data-dest="stream/circles/p4765f1c30e7d2c98"` nonsense istead of normal links, and the userpic in the upper right corner is a link with my favourite `javascript:void(0)`.
+Same situation here. It’s not the same mess it used to be a while ago, but there’re still things to fix. Cycles menu on top of the home page still uses `data-dest="stream/circles/p4765f1c30e7d2c98"` nonsense istead of normal links, and the userpic in the upper right corner is a link with my favourite `javascript:void(0)`.
 
 #### Instagram
 
-It's dreadful. `javascript:;` in `href`s, none of the links can be opened in a new tab. They made async navigation via history states, but, it seems, they never heard of the tabs. It's fiiiine, one tab is more then enough for an average hipster, right?
+It’s dreadful. `javascript:;` in `href`s, none of the links can be opened in a new tab. They made async navigation via history states, but, it seems, they never heard of the tabs. It’s fiiiine, one tab is more then enough for an average hipster, right?
 
 ## TL;DR
 
 Use `button` for actions within the page, `a` for links and actions that have a fallback URL.
 
-Despite the fact that nowadays it's nearly impossible to find a device without javascript, there still is a good chance that javascript either executes with errors, or just doesn't load. In this case good [unobtrusive js](https://en.wikipedia.org/wiki/Unobtrusive_JavaScript) and proper fallbacks will save the day and the functionality of your site.
+Despite the fact that nowadays it’s nearly impossible to find a device without javascript, there still is a good chance that javascript either executes with errors, or just doesn’t load. In this case good [unobtrusive js](https://en.wikipedia.org/wiki/Unobtrusive_JavaScript) and proper fallbacks will save the day and the functionality of your site.
 
 ## Related links
 

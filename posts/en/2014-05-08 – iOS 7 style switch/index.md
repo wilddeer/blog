@@ -67,10 +67,10 @@
     </label>
 </figure>
 
-iOS7 switch imitation. Made it initially for new [Pepyaka](http://pepyaka.su/en/), didn't use it eventually. Features:
+iOS7 switch imitation. Made it initially for new [Pepyaka](http://pepyaka.su/en/), didn’t use it eventually. Features:
 
 - no shitty scripts, pure CSS,
-- the most accurate copy of iOS7 switch behavior, includes `:active` state styles (haven't seen those in any other implementation),
+- the most accurate copy of iOS7 switch behavior, includes `:active` state styles (haven’t seen those in any other implementation),
 - made with `em`s, sizes approprietaly to the font size,
 - keyboard accessible.
 
@@ -105,7 +105,7 @@ or something similar, you get the idea.
 
 ### Caveats
 
-Doesn't work in older browsers with no `box-shadow` support (IE8 and lower, Android 3.x and lower). It's easy enough to make a fallback to regular checkboxes. For instance, using [Modernizr](http://modernizr.com) test
+Doesn’t work in older browsers with no `box-shadow` support (IE8 and lower, Android 3.x and lower). It’s easy enough to make a fallback to regular checkboxes. For instance, using [Modernizr](http://modernizr.com) test
 
 ```js
 Modernizr.addTest('unprefixed-boxshadow', Modernizr.testProp('boxShadow', '1px 1px', true));

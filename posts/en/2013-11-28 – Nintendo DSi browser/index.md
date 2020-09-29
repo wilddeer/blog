@@ -16,9 +16,9 @@
 | *[CSS3 Test](http://css3test.com/)*    | Failed to run |
 {.key-value-table}
 
-Nintendo DSi is a portable gaming console with two screens. Bottom screen is a resistive touchscreen, the top one isn't. Console's UI and touchscreen qualities assume that you use it with a stylus.
+Nintendo DSi is a portable gaming console with two screens. Bottom screen is a resistive touchscreen, the top one isn’t. Console’s UI and touchscreen qualities assume that you use it with a stylus.
 
-It's pretty underpowered, with a 133 MHz processor and just 16 Mb of RAM. Internet connection is done via WiFi. Console's browser is based on Opera (not Opera Mini, i.&nbsp;e. it doesn't proxy its traffic through Opera's serverside thingy).
+It’s pretty underpowered, with a 133 MHz processor and just 16 Mb of RAM. Internet connection is done via WiFi. Console’s browser is based on Opera (not Opera Mini, i.&nbsp;e. it doesn’t proxy its traffic through Opera’s serverside thingy).
 
 There are two ways the browser can display a page. The first is for regular, not mobile-optimized sites. One of the screens is used to display a whole zoomed-out page, the other shows a zoomed-in highlighted area:
 
@@ -140,28 +140,28 @@ Mobile-optimized mode is activated with an appropriate viewport meta-tag, e.&nbs
 	</tbody>
 </table>
 
-As expected, the browser's support for fancy new features isn't huge: it supports `Media queries`, `opacity`, `box-sizing` and `text-shadow` without blur. [Modernizr](//modernizr.com)'s `box-sizing` test returns a false negative result. Turns out, the browser understands the CSS-property, but doesn't react in any way to the `style.boxSizing` javascript property (including the Opera-prefixed variant).
+As expected, the browser’s support for fancy new features isn’t huge: it supports `Media queries`, `opacity`, `box-sizing` and `text-shadow` without blur. [Modernizr](//modernizr.com)'s `box-sizing` test returns a false negative result. Turns out, the browser understands the CSS-property, but doesn’t react in any way to the `style.boxSizing` javascript property (including the Opera-prefixed variant).
 
 ### Fonts
 
-The browser uses a single font for everything. It's a sans-serif font, it has a couple of icons in its private use unicode area, which seem to be used somewhere in the console's UI.
+The browser uses a single font for everything. It’s a sans-serif font, it has a couple of icons in its private use unicode area, which seem to be used somewhere in the console’s UI.
 
 Moreover, the browser only uses three font sizes and transforms any other font size to one of those: small for `0px` – `11px` `ComputedStyle` size, medium for `12px` – `14px` and big for `15px` and above.
 
 Despite this font-size transformation, other metrics remain the same, e.&nbsp;g. a paragraph with `margin: 0 0 1.5em 0` will have a margin calculated relatively to the specified `font-size` value, not the resulting one.
 
-The font's most annoying bug, though, is its weird letter-spacing for cyrillic characters:
+The font’s most annoying bug, though, is its weird letter-spacing for cyrillic characters:
 
 ![Compare the letter-spacing of latin and cyrillic characters](browser4.jpg =960x510)
 {.is-ootb}
 
 ### Scrolling
 
-Pages can be scrolled with the D-pad, using dragscroll or with a constantly visible scrollbar. Overflowed blocks also have a constantly visible scrollbar. Dragscroll doesn't work for them.
+Pages can be scrolled with the D-pad, using dragscroll or with a constantly visible scrollbar. Overflowed blocks also have a constantly visible scrollbar. Dragscroll doesn’t work for them.
 
 ### Forms
 
-Surprisingly enough, the browser's support for new input types is reasonable. It supports `url`, `email`, `datetime`, `date`, `month`, `week`, `time`, `datetime-local`, `number` and `range`:
+Surprisingly enough, the browser’s support for new input types is reasonable. It supports `url`, `email`, `datetime`, `date`, `month`, `week`, `time`, `datetime-local`, `number` and `range`:
 
 ![](form.jpg =669x500)
 
@@ -172,11 +172,11 @@ All the fields are validated according to their types when the form is submitted
 
 ### jQuery
 
-jQuery doesn't work starting from version 1.9.1 and above. No idea why.
+jQuery doesn’t work starting from version 1.9.1 and above. No idea why.
 
 ## Conclusion
 
-It's totally possible to adapt a simple mobile website for this thingy pretty effortlessly. You just have to use proper fallbacks and consider the font problems. Twitter's mobile site, for instance, is looking pretty good.
+It’s totally possible to adapt a simple mobile website for this thingy pretty effortlessly. You just have to use proper fallbacks and consider the font problems. Twitter’s mobile site, for instance, is looking pretty good.
 
 ## Related links {#related_links}
 

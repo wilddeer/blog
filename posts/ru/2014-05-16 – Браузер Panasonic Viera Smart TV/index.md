@@ -133,7 +133,7 @@
 
 ## Шрифты {#fonts}
 
-Из дефолтных шрифтов есть только monospace и sans-serif. Fantasy, cursive и serif отображаются sans-serif'ом. Подключаемые шрифты поддерживаются без проблем.
+Из дефолтных шрифтов есть только monospace и sans-serif. Fantasy, cursive и serif отображаются sans-serif’ом. Подключаемые шрифты поддерживаются без проблем.
 
 ## Формы {#forms}
 

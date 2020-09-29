@@ -39,7 +39,7 @@
   </div>
 
   <p class="sticky-4 sticky" style="top: 16em; margin-top: 40em; margin-bottom: 0;">
-    <small><code>top</code> changes sticky's position relatively to the edge of the viewport. You may also specify <code>margin-bottom</code> to alter sticky's bottom limit a bit.</small>
+    <small><code>top</code> changes sticky’s position relatively to the edge of the viewport. You may also specify <code>margin-bottom</code> to alter sticky’s bottom limit a bit.</small>
   </p>
 </section>
 
@@ -52,7 +52,7 @@
 
   <div class="sticky-6 sticky" style="top: 8em; margin-top: 50em; font-size: 1.2em;">
     <p>
-      So I made <a href="https://github.com/wilddeer/stickyfill">Stickyfill</a>. It emulates stickies where they aren't supported natively.
+      So I made <a href="https://github.com/wilddeer/stickyfill">Stickyfill</a>. It emulates stickies where they aren’t supported natively.
     </p>
   </div>
 </section>
@@ -74,13 +74,13 @@
 
 <section style="min-height: 80em;" markdown="1">
   <div class="sticky-8 sticky" style="top: 5em; margin-top: 5em;">
-    <h3>What it doesn't do:</h3>
+    <h3>What it doesn’t do:</h3>
 
     <ul>
-      <li>Doesn't support left, right, bottom or combined stickies</li>
-      <li>Doesn't support stacking of table cell stickies</li>
-      <li>Doesn't work in overflowed blocks</li>
-      <li>Doesn't parse your CSS (launch it manually)</li>
+      <li>Doesn’t support left, right, bottom or combined stickies</li>
+      <li>Doesn’t support stacking of table cell stickies</li>
+      <li>Doesn’t work in overflowed blocks</li>
+      <li>Doesn’t parse your CSS (launch it manually)</li>
     </ul>
   </div>
 </section>
@@ -93,6 +93,6 @@
 
 
 <figure class="info icon-heart-empty" style="margin-top: 30em;" markdown="1">
-In four days of diving into browser box models' hell I discovered the difference between `window.pageYOffset`, `document.documentElement.scrollTop`, `window.scrollY` and `document.body.scrollTop`, discrepancies in `offsetWidth` of a block with  `box-sizing: border-box` in different browsers, how `element.offsetWidth` and `node.getBoundingClientRect().width` differ and why, what's the difference between `getComputedStyle(element)` and real values, how to get viewport's width without scroll width and how rounding errors tend to accumulate in the most inopportune moment.
+In four days of diving into browser box models' hell I discovered the difference between `window.pageYOffset`, `document.documentElement.scrollTop`, `window.scrollY` and `document.body.scrollTop`, discrepancies in `offsetWidth` of a block with  `box-sizing: border-box` in different browsers, how `element.offsetWidth` and `node.getBoundingClientRect().width` differ and why, what’s the difference between `getComputedStyle(element)` and real values, how to get viewport’s width without scroll width and how rounding errors tend to accumulate in the most inopportune moment.
 </figure>
 

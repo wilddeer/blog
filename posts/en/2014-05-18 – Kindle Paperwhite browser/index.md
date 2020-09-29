@@ -14,9 +14,9 @@
 
 Kindle Paperwhite is a new e-book reader by Amazon, equipped with e-ink touch-screen, Wi-Fi and, optionally, 3G.
 
-Peperwhite's Browser is an improved version of [Kindle Keyboard](/en/Kindle_Keyboard_browser/)'s browser. Browser's performance increased significantly compared to the predecessor, its support for HTML5 features improved.
+Peperwhite’s Browser is an improved version of [Kindle Keyboard](/en/Kindle_Keyboard_browser/)'s browser. Browser’s performance increased significantly compared to the predecessor, its support for HTML5 features improved.
 
-Paperwhite's user-agent string is weird. While http header contains quite typical user-agent string, `navigator.userAgent` contains another, which can be hardly identified among the dozens of other WebKits. Yet another reason to use feature detection.
+Paperwhite’s user-agent string is weird. While http header contains quite typical user-agent string, `navigator.userAgent` contains another, which can be hardly identified among the dozens of other WebKits. Yet another reason to use feature detection.
 
 ### Feature tests {#feature-tests}
 
@@ -125,7 +125,7 @@ Just like the [predecessor](/en/Kindle_Keyboard_browser/), Kindle Paperwhite sup
 
 ### Touch {#touch}
 
-New Kindle doesn't have any hardware keys and is fully controlled from the touch screen. The browser is controlled with habitual swipe and pinch gestures. Touch events, however, are not supported.
+New Kindle doesn’t have any hardware keys and is fully controlled from the touch screen. The browser is controlled with habitual swipe and pinch gestures. Touch events, however, are not supported.
 
 ### Links {#links}
 
@@ -147,13 +147,13 @@ Other fonts seem to work just fine.
 
 ### Scrolling {#scrolling}
 
-Scrolling isn't that slick when it come to internal scrollable blocks. If, for instance, there's an internal block with horizontal scroll occupying entire viewport, it's very problematic to scroll the page as all your attemps lead to that block being scrolled horizontally instead:
+Scrolling isn’t that slick when it come to internal scrollable blocks. If, for instance, there’s an internal block with horizontal scroll occupying entire viewport, it’s very problematic to scroll the page as all your attemps lead to that block being scrolled horizontally instead:
 
 {% include pic.htm src='scroll.png' p=true a='screenshot showing an example state when it’s problematic to scroll the page' c='Can’t scroll this!' %}
 
 ### `box-shadow` bug {#boxshadow-bug}
 
-If there is a shadow going outside of the viewport, or there is a block with `box-shadow` sitting somewhere outside of the viewport (even if it's in the *overflow* of the other block), viewport expands to fit the shadow. Rather weird and annoying bug.
+If there is a shadow going outside of the viewport, or there is a block with `box-shadow` sitting somewhere outside of the viewport (even if it’s in the *overflow* of the other block), viewport expands to fit the shadow. Rather weird and annoying bug.
 
 ### Forms {#forms}
 
@@ -161,10 +161,10 @@ The browser has rudimentary support for new input types. `range` slider barely w
 
 {% include pic.htm src='form.png' p=true a='screenshot showing input types test result' %}
 
-There's no validation, and, therefore, no support for `required` and `pattern` attributes.
+There’s no validation, and, therefore, no support for `required` and `pattern` attributes.
 
 ## Conclusion {#conclusion}
 
-Evolutionary descendant of [the previous generation](/en/Kindle_Keyboard_browser/). There's a big chance your mobile-optimized site will work just fine on new Kindle without any additional tweaks.
+Evolutionary descendant of [the previous generation](/en/Kindle_Keyboard_browser/). There’s a big chance your mobile-optimized site will work just fine on new Kindle without any additional tweaks.
 
 Non-mobile sites also work quite adequately.

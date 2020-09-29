@@ -127,7 +127,7 @@ JS + jQuery:
             var activeElement = document.activeElement,
                 $activeElement = $(activeElement);
 
-            //if found and it's not body...
+            //if found and it’s not body...
             if (activeElement && activeElement !== document.body) {
                 //add special class, remove it after `blur`
                 $activeElement.addClass(mouseFocusedClass).one('blur', function() {
@@ -151,7 +151,7 @@ Vanilla JS (не будет работать в IE8, потому что `addEve
             //find focused element
             var activeElement = document.activeElement;
 
-            //if found and it's not body...
+            //if found and it’s not body...
             if (activeElement && activeElement !== document.body) {
                 //add special class, remove it after `blur`
                 activeElement.className += ' ' + mouseFocusedClass;

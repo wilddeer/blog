@@ -13,13 +13,13 @@
 | *[HTML5 Test](http://html5test.com/)* | [333/555](http://html5test.com/s/cdd96d20133ac84a.html) |
 | *[CSS3 Test](http://css3test.com/)* | 54% |
 
-Browser runs on WebKit (looks like a modified version of Chrome). It's pretty slow, especially when dealing with animations.
+Browser runs on WebKit (looks like a modified version of Chrome). It’s pretty slow, especially when dealing with animations.
 
 ### Interaction {#interaction}
 
 {% include pic.htm src='remote.jpg' p=true float='right' a='Remote control' c='Remote control' %}
 
-The browser is controlled with a remote control (you can optionally plug in keyboard and mouse). The cursor is controlled with directional keys on the remote. Colored keys are contextual. When viewing sites, they control zooming and switching between "moving" and "dragging" cursor modes. Zooming doesn't affect the viewport size.
+The browser is controlled with a remote control (you can optionally plug in keyboard and mouse). The cursor is controlled with directional keys on the remote. Colored keys are contextual. When viewing sites, they control zooming and switching between "moving" and "dragging" cursor modes. Zooming doesn’t affect the viewport size.
 
 Both `:hover` and `:active` states work fine, but `:active` state is triggered after a short delay.
 
@@ -133,11 +133,11 @@ The only default fonts available are sans-serif and monospace. Fantasy, cursive 
 
 ### Forms {#forms}
 
-Browser's support for new input types is pretty weak:
+Browser’s support for new input types is pretty weak:
 
 {% include pic.htm src='form.jpg' a='screenshot showing input type test results' %}
 
-There's no datepicker. Onscreen keyboard doesn't apadt to input types. Validation works for `email` and `url` input types, `required` and `pattern` attributes also work fine.
+There’s no datepicker. Onscreen keyboard doesn’t apadt to input types. Validation works for `email` and `url` input types, `required` and `pattern` attributes also work fine.
 
 ### Conclusion {#conclusion}
 
