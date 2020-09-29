@@ -15,7 +15,7 @@ Kindle Keyboard (aka Kindle 3) is an e-book reader by Amazon with e-ink (not tou
 
 It has Wi-Fi and optional 3G. When it first came out, Amazon provided free 3G around the globe, but then it was limited to Wikipedia and Amazon's website. Wi-Fi is, needless to say, still unlimited.
 
-The browser doesn't have multiple windows or tabs. D-pad is used to move the cursor, <kbd>back</kbd> button (under the d-pad) -- to go back through the history, buttons on the sides of the device act as <kbd>Page Up</kbd> and <kbd>Page Down</kbd>.
+The browser doesn't have multiple windows or tabs. D-pad is used to move the cursor, <kbd>back</kbd> button (under the d-pad) – to go back through the history, buttons on the sides of the device act as <kbd>Page Up</kbd> and <kbd>Page Down</kbd>.
 
 The browser works fine with javascript, copes well with medium complexity pages, but slowes significantly when dealing with big amounts of high-res pics (supposedly due to the lack of RAM).
 

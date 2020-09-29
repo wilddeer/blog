@@ -154,12 +154,12 @@ function EventBurrito(_this, options) {
     }
 
     function tMove(event) {
-        //if user is trying to scroll vertically -- do nothing
+        //if user is trying to scroll vertically – do nothing
         if ((!o.preventScroll && isScrolling) || checks[eventType](event)) return;
 
         getDiff(event);
 
-        if (Math.abs(diff.x) > o.clickTolerance || Math.abs(diff.y) > o.clickTolerance) clicksAllowed = false; //if there was a move -- deny all the clicks before the next touchstart
+        if (Math.abs(diff.x) > o.clickTolerance || Math.abs(diff.y) > o.clickTolerance) clicksAllowed = false; //if there was a move – deny all the clicks before the next touchstart
 
         //check whether the user is trying to scroll vertically
         if (isScrolling === undefined && eventType !== 3) {

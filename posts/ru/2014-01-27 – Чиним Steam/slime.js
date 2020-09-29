@@ -231,7 +231,7 @@ function Slime(_this, options) {
     }
 
     function setup() {
-        //If the UA doesn't support css transforms or transitions -- use fallback functions.
+        //If the UA doesn't support css transforms or transitions – use fallback functions.
         //Separate functions instead of checks for better performance.
         if (!support.transforms || !!window.opera) setPos = setPosFallback;
         if (!support.transitions || !!window.opera) changePos = changePosFallback;

@@ -111,7 +111,7 @@ Doesn't work in older browsers with no `box-shadow` support (IE8 and lower, Andr
 Modernizr.addTest('unprefixed-boxshadow', Modernizr.testProp('boxShadow', '1px 1px', true));
 ```
 
-and modified stylesheet -- <a href="https://raw.githubusercontent.com/wilddeer/ios7-switch/master/ios7-switch.modernizr.css" class="iconlink"><i class="icon-cloud-download"> </i><span>ios7-switch.modernizr.css</span></a>.
+and modified stylesheet – <a href="https://raw.githubusercontent.com/wilddeer/ios7-switch/master/ios7-switch.modernizr.css" class="iconlink"><i class="icon-cloud-download"> </i><span>ios7-switch.modernizr.css</span></a>.
 
 Has some rounding error problems in some browsers at some font sizes. Tweak the font size a bit to get rid of those.
 

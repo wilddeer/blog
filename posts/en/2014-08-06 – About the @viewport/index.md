@@ -33,7 +33,7 @@ However in the landscape mode the enourmousness of Windows Phone view becomes cl
 
 It turned out that Windows Phone considers usual `<meta name="viewport" content="width=device-width, initial-scale=1">` as a designation to make the viewport 320 logical pixels wide, no matter what real device resolution is (because iPhone).
 
-Instead, fresh and lush `@viewport {width: device-width;}`, which is currently supported only by IE 10 and 11 with prefix, overrides this meta tag's value; and moreover -- instructs a Windows Phone to use its native viewport resolution.
+Instead, fresh and lush `@viewport {width: device-width;}`, which is currently supported only by IE 10 and 11 with prefix, overrides this meta tag's value; and moreover – instructs a Windows Phone to use its native viewport resolution.
 
 This is how it should work:
 
@@ -49,7 +49,7 @@ The portrait mode also undergoes a change. HTC 8x has higher resolution then iPo
 {% include pic.htm src='after-portrait.png' p=true c='After' a='Windows Phone 8.1 portrait screenshot after the change' %}
 </div>
 
-`@-ms-viewport` was buggy on Windows Phone 8 before its third update -- it operated with real pixels and not with logical ones. This caused too large viewport size (and so too small website view) on phones with hight density screens.
+`@-ms-viewport` was buggy on Windows Phone 8 before its third update – it operated with real pixels and not with logical ones. This caused too large viewport size (and so too small website view) on phones with hight density screens.
 
 Third update came out a while ago, older phones running WP7 are not affected by the bug, so now this bug can be safely ignored.
 

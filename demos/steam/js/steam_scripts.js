@@ -99,10 +99,10 @@ function Slime(_this, options) {
 	function changePos(pos, speed) {
 		var time = speed?speed+'ms':'';
 
-		scrollerBlock.style.webkitTransitionDuration = 
-		scrollerBlock.style.MozTransitionDuration = 
-		scrollerBlock.style.msTransitionDuration = 
-		scrollerBlock.style.OTransitionDuration = 
+		scrollerBlock.style.webkitTransitionDuration =
+		scrollerBlock.style.MozTransitionDuration =
+		scrollerBlock.style.msTransitionDuration =
+		scrollerBlock.style.OTransitionDuration =
 		scrollerBlock.style.transitionDuration = time;
 
 		setPos(Math.floor(pos));
@@ -132,13 +132,13 @@ function Slime(_this, options) {
 			function getPoint(p1, p2) {
 				return (p2-p1)*f + p1;
 			}
-			
+
 			if (f >= 1) {
 				setPos(pos);
 				clearInterval(animationTimer);
 				return;
 			}
-		
+
 			diff = pos - startPos;
 
 			y = getPoint(
@@ -153,9 +153,9 @@ function Slime(_this, options) {
 	//sets the position of the slider (in px)
 	function setPos(pos) {
 		scrollerBlock.style.webkitTransform = 'translate('+pos+'px,0) translateZ(0)';
-		scrollerBlock.style.msTransform = 
-		scrollerBlock.style.MozTransform = 
-		scrollerBlock.style.OTransform = 
+		scrollerBlock.style.msTransform =
+		scrollerBlock.style.MozTransform =
+		scrollerBlock.style.OTransform =
 		scrollerBlock.style.transform = 'translateX('+pos+'px)';
 
 		currentPosition = pos;
@@ -188,7 +188,7 @@ function Slime(_this, options) {
 			width = element.offsetWidth + 2*(padding || o.borderPadding);
 
 		if (currentPosition < pos) {
-			scrollTo(pos);	
+			scrollTo(pos);
 		}
 		else if (currentPosition - slimeWidth > pos - width) {
 			scrollTo(pos - width + slimeWidth);
@@ -269,7 +269,7 @@ function Slime(_this, options) {
 	}
 
 	function setup() {
-		//If the UA doesn't support css transforms or transitions -- use fallback functions.
+		//If the UA doesn't support css transforms or transitions – use fallback functions.
 		//Separate functions instead of checks for better performance.
 		if (!support.transforms || !!window.opera) setPos = setPosFallback;
 		if (!support.transitions || !!window.opera) changePos = changePosFallback;
@@ -322,7 +322,7 @@ $.fn.collapser = function(maxHeight) {
 
 		if (this.offsetHeight > maxHeight && expander.length) {
 			_this.addClass('collapsed');
-			
+
 			expander.on('click', function() {
 				_this.removeClass('collapsed');
 			});
@@ -424,7 +424,7 @@ $.fn.steamGallery = function() {
 
 		function next() {
 			if (currentSlide == slidesNumber - 1) return;
-			
+
 			gallery.next();
 			gallery.stop();
 		}
@@ -445,7 +445,7 @@ $.fn.steamAjaxForm = function(callbacks) {
 			foundHelpful: 122,
 			foundHelpfulPercent: 81
 		};
-		
+
 		callbacks.success && callbacks.success(data);
 		return false;
 	});

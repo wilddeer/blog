@@ -32,9 +32,9 @@ It's also worth having a VM with some linux distributive and, if possible, a Mac
 
 ## Mobile devices
 
-The main rule here: if it's possible to test on a real device -- test on a device. Here's a couple of reasons:
+The main rule here: if it's possible to test on a real device – test on a device. Here's a couple of reasons:
 
-- You can't touch the emulator. Text size, size of the UI elements, touch responsiveness, etc. -- all of these things can be adequately tested only on a real device.
+- You can't touch the emulator. Text size, size of the UI elements, touch responsiveness, etc. – all of these things can be adequately tested only on a real device.
 - Emulator's performance often differs from the performance of a real device. You won't see the lags and memory overflows, animation speed and script performance will differ.
 - Lots of buggy and inconvenient emulators.
 - Lack of emulators for rare devices.

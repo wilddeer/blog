@@ -446,12 +446,12 @@ Same is applicable to any repeating block, e.&nbsp;g. user block:
 
 To adhere to the principle of the universal code, it is important to properly structure your styles and to understand what purpose each part of the styles serves. I brought myself to the following system:
 
-- **Base styles** -- base font and colors; paragraph, headings &amp; list styles, etc.
-- **Utility classes** -- font size modifiers (a little bigger, a little smaller); info, warning and error colors; other universal utility stuff.
-- **Layout** -- header, footer, sidebars, content blocks, other non-page-specific base blocks.
+- **Base styles** – base font and colors; paragraph, headings &amp; list styles, etc.
+- **Utility classes** – font size modifiers (a little bigger, a little smaller); info, warning and error colors; other universal utility stuff.
+- **Layout** – header, footer, sidebars, content blocks, other non-page-specific base blocks.
 - **Grid**. I don't like restrictive grids. In this demo, I use a simple grid as a bunch of helper classes to avoid repeating the same bunch of styles over and over. I deviate from the grid all the time to write a bunch of custom classes for a specific block.
-- **Modules** -- this are the guys I was talking about. Modules are repeating blocks, their base styles should not depend on the context (but can be modified by the styles of the context, see below). Modules can be nested.
-- **Page styles** -- styles of the blocks specific to the page. This is the place where you can modify the styles of the modules located in a specific block on the page.
+- **Modules** – this are the guys I was talking about. Modules are repeating blocks, their base styles should not depend on the context (but can be modified by the styles of the context, see below). Modules can be nested.
+- **Page styles** – styles of the blocks specific to the page. This is the place where you can modify the styles of the modules located in a specific block on the page.
 
 <hgroup>
   <h4 class="problem">Problem</h4>
@@ -472,7 +472,7 @@ And here's a "previous spotlight" button made with an `a` element:
 <a href="javascript:PrevSpotlight( 2 );"><img src="http://cdn4.store.steampowered.com/public/images/v5/ico_navArrow_left.gif"> Prev</a>
 ```
 
-Another example -- community hub posts:
+Another example – community hub posts:
 
 {% include pic.htm src='hub-post.png' a='Пост в центре сообщества игры' %}
 
@@ -552,9 +552,9 @@ dzDelayed.push(function() {
 
 Now you can view the screenshots even if the javascript is broken.
 
-Same approach is applicable to "add to favourites" button, vote buttons, etc. -- you can wrap them in a `form` and cath `submit` event with javascript handler. In case the javascript is not available or broken, the form will be sent to the server and the server can then redirect the user back to the page he came from.
+Same approach is applicable to "add to favourites" button, vote buttons, etc. – you can wrap them in a `form` and cath `submit` event with javascript handler. In case the javascript is not available or broken, the form will be sent to the server and the server can then redirect the user back to the page he came from.
 
-Same with the blocks opening different popups -- make ’em links, and they will thrive without javascript.
+Same with the blocks opening different popups – make ’em links, and they will thrive without javascript.
 
 ## A few more things
 
@@ -572,7 +572,7 @@ I concatenated all the scripts and styles, kept the styles in the header and mov
 
 This significantly reduced the amount of requests to the server and the delay before the page starts to render. There are 25 requests in my demo, including 21 pics, 2 scripts and 1 style. The number of the resourses on a real production server may differ, but the difference in the amount of requests is obvious.
 
-My design only uses two png sprites -- one for standard screens and one for hign density (plus three fallback images to emulate gradients and translucency in older browsers). At first I used a single svg sprite, but, unfortunately, it significantly dropped the performance in some mobile browsers and also looked blurry in IE mobile. So, for now, it's safer to use png sprites. Icon fonts are also acceptable, but they have a bunch of flaws, too.
+My design only uses two png sprites – one for standard screens and one for hign density (plus three fallback images to emulate gradients and translucency in older browsers). At first I used a single svg sprite, but, unfortunately, it significantly dropped the performance in some mobile browsers and also looked blurry in IE mobile. So, for now, it's safer to use png sprites. Icon fonts are also acceptable, but they have a bunch of flaws, too.
 
 ### UI and navigation
 

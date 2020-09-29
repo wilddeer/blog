@@ -1,15 +1,20 @@
-# Nintendo DSi browser {#header}
+# Nintendo DSi<div class="small">browser</div> {.is-small-mb}
 
-{% include pic.htm src='dsi.jpg' a='Nintendo DSi' %}
+<%- include('/svg/history-solid.svg') %>**Rare species:** some time ago I had fun exploring exotic browsers on some not so common devices. This is one of such studies.
+{.notice .is-with-icon .is-info .out-of-the-box .block .is-mb}
 
-{:.specification}
-| *Screen resolution* | 256 &times; 192, 2 screens |
-| *Viewport size* | 240 &times; 176 |
-| *Browser* | Opera (Presto) |
-| *User Agent* | `Opera/9.50 (Nintendo DSi; Opera/507; U; en-US)` |
+![](dsi.jpg =960x509)
+{.is-ootb}
+
+| ---                                    | --- |
+| *Screen resolution*                    | 256 &times; 192, 2 screens |
+| *Viewport size*                        | 240 &times; 176 |
+| *Browser*                              | Opera (Presto) |
+| *User Agent*                           | `Opera/9.50 (Nintendo DSi; Opera/507; U; en-US)` |
 | *[Acid3](http://acid3.acidtests.org/)* | 59/100 |
-| *[HTML5 Test](http://html5test.com/)* | [82/555](http://html5test.com/s/0329d12018b68bd6.html) |
-| *[CSS3 Test](http://css3test.com/)* | Failed to run |
+| *[HTML5 Test](http://html5test.com/)*  | [82/555](http://html5test.com/s/0329d12018b68bd6.html) |
+| *[CSS3 Test](http://css3test.com/)*    | Failed to run |
+{.key-value-table}
 
 Nintendo DSi is a portable gaming console with two screens. Bottom screen is a resistive touchscreen, the top one isn't. Console's UI and touchscreen qualities assume that you use it with a stylus.
 
@@ -17,15 +22,18 @@ It's pretty underpowered, with a 133 MHz processor and just 16 Mb of RAM. Intern
 
 There are two ways the browser can display a page. The first is for regular, not mobile-optimized sites. One of the screens is used to display a whole zoomed-out page, the other shows a zoomed-in highlighted area:
 
-{% include pic.htm src='browser1.jpg' a="Regular mode for non-mobile sites" %}
+![](browser1.jpg =960x515)
+{.is-ootb}
 
 You can swap the screen functions and drag the selection rectangle on the bottom screen:
 
-{% include pic.htm src='browser2.jpg' a="Regular mode with swapped screen functions" %}
+![](browser2.jpg =960x525)
+{.is-ootb}
 
 The second mode is for mobile-optimized websites. It uses the top screen as an extension of the bottom one. The page starts on the bottom screen, the top screen starts blank and fills up as you scroll:
 
-{% include pic.htm src='browser3.jpg' a='Mobile-optimized mode' %}
+![](browser3.jpg =960x510)
+{.is-ootb}
 
 Mobile-optimized mode is activated with an appropriate viewport meta-tag, e.&nbsp;g. `<meta name="viewport" content="width=device-width">`.
 
@@ -138,13 +146,14 @@ As expected, the browser's support for fancy new features isn't huge: it support
 
 The browser uses a single font for everything. It's a sans-serif font, it has a couple of icons in its private use unicode area, which seem to be used somewhere in the console's UI.
 
-Moreover, the browser only uses three font sizes and transforms any other font size to one of those: small for `0px` -- `11px` `ComputedStyle` size, medium for `12px` -- `14px` and big for `15px` and above.
+Moreover, the browser only uses three font sizes and transforms any other font size to one of those: small for `0px` – `11px` `ComputedStyle` size, medium for `12px` – `14px` and big for `15px` and above.
 
 Despite this font-size transformation, other metrics remain the same, e.&nbsp;g. a paragraph with `margin: 0 0 1.5em 0` will have a margin calculated relatively to the specified `font-size` value, not the resulting one.
 
 The font's most annoying bug, though, is its weird letter-spacing for cyrillic characters:
 
-{% include pic.htm src='browser4.jpg' c='Compare the letter-spacing of latin and cyrillic characters' a='An example of a letter-spacing bug' %}
+![Compare the letter-spacing of latin and cyrillic characters](browser4.jpg =960x510)
+{.is-ootb}
 
 ### Scrolling
 
@@ -154,11 +163,12 @@ Pages can be scrolled with the D-pad, using dragscroll or with a constantly visi
 
 Surprisingly enough, the browser's support for new input types is reasonable. It supports `url`, `email`, `datetime`, `date`, `month`, `week`, `time`, `datetime-local`, `number` and `range`:
 
-{% include pic.htm src='form.jpg' a='Input fields of different types' %}
+![](form.jpg =669x500)
 
 All the fields are validated according to their types when the form is submitted, `pattern` validation also works. Datepicker is buggy:
 
-{% include pic.htm src='datepicker.jpg' c='In an attempt to fit into available space, the datepicker becomes a mess' %}
+![In an attempt to fit into available space the datepicker becomes a mess](datepicker.jpg =960x480)
+{.is-ootb}
 
 ### jQuery
 

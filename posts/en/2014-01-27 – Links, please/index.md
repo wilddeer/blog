@@ -22,9 +22,9 @@ If you really want to put `onclick="location.href='...'"` in your element, stop,
 
 ### Third
 
-The only case when you can (and should) bind a js handler to a link -- if a link actually leads somewhere. In this case, the handler should only trigger for left mouse button clicks without modifier keys.
+The only case when you can (and should) bind a js handler to a link – if a link actually leads somewhere. In this case, the handler should only trigger for left mouse button clicks without modifier keys.
 
-Classic example: photo thumbnails. When you click on a thumbnail -- large photo is shown on top of the content. If you click it with the mouse wheel or <kbd>ctrl</kbd>-click it -- new tab with large photo is opened. Context menu also works just fine. Users with disabled&nbsp;/ broken js get a working link on a photo. Everybody is happy:
+Classic example: photo thumbnails. When you click on a thumbnail – large photo is shown on top of the content. If you click it with the mouse wheel or <kbd>ctrl</kbd>-click it – new tab with large photo is opened. Context menu also works just fine. Users with disabled&nbsp;/ broken js get a working link on a photo. Everybody is happy:
 
 HTML:
 
@@ -72,7 +72,7 @@ I accidentally came across this one when [metacritic](http://www.metacritic.com/
 
 #### Twitter
 
-Twitter resolved to follow the straight and narrow and began to gradually correct their rubbish. We can finally open user profiles in a new tab -- good. *Refresh* button in the sidebar and *compose new tweet* button are both using `button` element -- also good (would be actually better if the last one was a link leading to a separate page with a form to compose a new tweet).
+Twitter resolved to follow the straight and narrow and began to gradually correct their rubbish. We can finally open user profiles in a new tab – good. *Refresh* button in the sidebar and *compose new tweet* button are both using `button` element – also good (would be actually better if the last one was a link leading to a separate page with a form to compose a new tweet).
 
 Nonetheless, there are still lots of `<a href="#">` nonsense. *Reply*, *retweet* and *favourite* links aren't pointing anywhere, while [they](https://twitter.com/intent/tweet?in_reply_to=386573856179113985) [definitely](https://twitter.com/intent/retweet?tweet_id=386573856179113985) [could](https://twitter.com/intent/favorite?tweet_id=386573856179113985).
 
