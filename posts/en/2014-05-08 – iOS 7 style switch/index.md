@@ -1,3 +1,5 @@
+# iOS 7 style switch {.sr-only}
+
 <style>
     /* demo styles */
     .button-demo .button-smaple {
@@ -32,7 +34,7 @@
         font-size: 1.5em;
     }
 
-{% include ios7-switch/ios7-switch.modernizr.css %}
+    <%- include('ios7-switch.css') %>
 </style>
 
 <figure class="button-demo">
@@ -42,24 +44,20 @@
             <span></span>
         </label>
     </div>
-
     <div class="button-smaple">
         <label class="ios7-switch" style="font-size: 32px;">
             <input type="checkbox">
             <span></span>
         </label>
-
         <label class="ios7-switch" style="font-size: 48px;">
             <input type="checkbox">
             <span></span>
         </label>
-
         <label class="ios7-switch" style="font-size: 64px;">
             <input type="checkbox">
             <span></span>
         </label>
     </div>
-
     <label class="ios7-switch line-sample">
         Feed the cat
         <input type="checkbox" checked>
@@ -67,16 +65,16 @@
     </label>
 </figure>
 
-iOS7 switch imitation. Made it initially for new [Pepyaka](http://pepyaka.su/en/), didn’t use it eventually. Features:
+iOS 7 switch imitation. Made it initially for new [Pepyaka](http://pepyaka.su/en/), didn’t use it eventually. Features:
 
 - no shitty scripts, pure CSS,
 - the most accurate copy of iOS7 switch behavior, includes `:active` state styles (haven’t seen those in any other implementation),
 - made with `em`s, sizes approprietaly to the font size,
 - keyboard accessible.
 
-<a href="https://github.com/wilddeer/ios7-switch" class="iconlink"><i class="icon-github"> </i><span>Fork me, baby</span></a>
+[<%- include('/svg/code-branch.svg') %>Fork me, baby](https://github.com/wilddeer/ios7-switch)
 
-### Markup
+## Markup
 
 ```html
 <label class="ios7-switch">
@@ -97,13 +95,15 @@ or
 
 or something similar, you get the idea.
 
-### CSS
+## CSS
 
 ```css
-{% include ios7-switch/ios7-switch.css %}
+<%- include('ios7-switch.css') %>
 ```
 
-### Caveats
+## Caveats
+
+<del class="deleted-block">
 
 Doesn’t work in older browsers with no `box-shadow` support (IE8 and lower, Android 3.x and lower). It’s easy enough to make a fallback to regular checkboxes. For instance, using [Modernizr](http://modernizr.com) test
 
@@ -112,6 +112,11 @@ Modernizr.addTest('unprefixed-boxshadow', Modernizr.testProp('boxShadow', '1px 1
 ```
 
 and modified stylesheet – <a href="https://raw.githubusercontent.com/wilddeer/ios7-switch/master/ios7-switch.modernizr.css" class="iconlink"><i class="icon-cloud-download"> </i><span>ios7-switch.modernizr.css</span></a>.
+
+</del>
+
+<%- include('/svg/history-solid.svg') %> No longer relevant in 2020 :—)
+{.notice .is-success}
 
 Has some rounding error problems in some browsers at some font sizes. Tweak the font size a bit to get rid of those.
 

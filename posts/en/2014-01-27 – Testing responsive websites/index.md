@@ -1,14 +1,22 @@
-# Testing responsive websites
+---
+tags:
+    - archive
+---
 
-{% include pic.htm src='whiteboard.jpg' a='A whiteboard with test results in different browsers' %}
+# Testing responsive websites {.is-small-mb}
+
+<%- include('/svg/history-solid.svg') %>**Deprecated!** This post contains irrelevant old crap and is left for history and lulz.
+{.notice .is-with-icon .is-warning .out-of-the-box .block .is-mb}
+
+![](whiteboard.jpg =900x506)
+{.is-ootb}
 
 As [many good fellows](http://www.quirksmode.org/blog/archives/2010/02/the_iphone_obse.html) [have already noticed](http://bradfrostweb.com/blog/mobile/support-vs-optimization/), it’s not enought to test your responsive creation on an iPhone. You should at least bother to check it on several major platforms: iOS, Android (which has a swarm of different browsers), Windows Phone, Blackberry.
 
 If you are tough enough, all the above is your absolute minimum, which you happily extend with everything that comes to hand.
 
-<figure class="info icon-comment-alt" markdown="1">
-The more you use the principle of [progressive enhancement](https://en.wikipedia.org/wiki/Progressive_enhancement), [proper fallbacks](https://en.wikipedia.org/wiki/Fault_tolerance) and [unobtrusive javascript](https://en.wikipedia.org/wiki/Unobtrusive_JavaScript), the easier it is to test and fix the site on different devices, and the better the site will look on the devices you didn’t event bother to test on.
-</figure>
+<%- include('/svg/comment-regular.svg') %>The more you use the principle of [progressive enhancement](https://en.wikipedia.org/wiki/Progressive_enhancement), [proper fallbacks](https://en.wikipedia.org/wiki/Fault_tolerance) and [unobtrusive javascript](https://en.wikipedia.org/wiki/Unobtrusive_JavaScript), the easier it is to test and fix the site on different devices, and the better the site will look on the devices you didn’t event bother to test on.
+{.notice .is-with-big-icon .font-size .is-smaller}
 
 ## Briefly about desktop browsers
 
@@ -22,7 +30,8 @@ The solution here is to have a bunch of virtual machines. Grab [VirtualBox](http
 
 Clone another two machines running Win 7 (give ’em 512 Mb of RAM) and install IE9 and IE10. All this stuff works simultaneously pretty effortlessly:
 
-{% include pic.htm src='virtual_machines.jpg' c='Whe-e-e-e!' %}
+![Whe-e-e-e!](virtual_machines.jpg =900x607)
+{.is-ootb}
 
 I still hope IE’s autoupdate (it was introduced in IE10) will make the difference some day and we won’t need to keep all this VMs. It’s not the case as of now.
 
@@ -43,7 +52,8 @@ My initial idea to buy a device working on each of the popular operating systems
 
 My collection now contains Kindle Keyboard and Kindle Paperwhite with their grayscale webkits, Nokia Asha 501 (a phone on modified S40 with horrible Ovi browser and not so horrible Opera Mini working on Java), Nintendo DSi bought after reading [this article](http://maban.co.uk/73), Nintendo 3DS, PS Vita and lots of other rare and not so rare stuff.
 
-{% include pic.htm src='zoo.jpg' c='The swarm' %}
+![The swarm](zoo.jpg =960x351)
+{.is-ootb}
 
 It’s important to note, though, that any large project can’t be properly tested on all of them. The main goal here is not to support each and every device, but to properly optimize the site, make it adaptive in a flexible way. The site shouldn’t necessarily work equally on each device, but it’s important to ensure the availability of content and get rid of the nastiest bugs, possibly avoiding UA sniffing (although it’s hard at times).
 
@@ -95,10 +105,11 @@ For fun:
 
 In the **stock browser**, type `about:debug` in the adress bar. This will lead to a new debug section appearing in the browser’s settings with a bunch of dev options in it, including concole.
 
-<div class="gallery">
-{% include pic.htm src='android_browser_dev_options.png' c='Developer options' p=true %}
-{% include pic.htm src='android_browser_console.png' c='Console' p=true %}
-</div>
+::: .pics
+![Developer options](android_browser_dev_options.png =352x600)
+
+![Console](android_browser_console.png =352x600)
+:::
 
 In **Android Chrome**, you can use [remote debugging](https://developers.google.com/chrome-developer-tools/docs/remote-debugging):
 
@@ -109,7 +120,7 @@ In **Android Chrome**, you can use [remote debugging](https://developers.google.
 
 Now you have full webkit devtools at your disposal. All the interactions are displayed on the device in real-time:
 
-{% include pic.htm src='chrome-debug.png' a='Changes are displayed in real-time' p=true %}
+![](p_chrome-debug.png =496x496)
 
 ### iOS
 
@@ -131,7 +142,8 @@ Blackberry has [remote debugging via web-based webkit devtools](https://develope
 
 Web-based webkit devtools work properly only in webkit-based browsers.
 
-{% include pic.htm src='blackberry-debugging.png' c='Remote debugging in Blackberry browser' %}
+![Remote debugging in the Blackberry browser](blackberry-debugging.png =954x571)
+{.is-ootb}
 
 ### [Jsconsole.com](http://jsconsole.com/)
 
@@ -158,7 +170,9 @@ var customConsole = {
     },
     add: function(message, type) {
         if (typeof message !== 'string') message = '<i>' + message + '</i>';
-        document.getElementById('console').innerHTML += '<p class=' + type + '>' + message + '</p>';
+        document.getElementById('console').innerHTML += (
+            '<p class=' + type + '>' + message + '</p>'
+        );
     }
 }
 
