@@ -108,7 +108,10 @@ or something similar, you get the idea.
 Doesn’t work in older browsers with no `box-shadow` support (IE8 and lower, Android 3.x and lower). It’s easy enough to make a fallback to regular checkboxes. For instance, using [Modernizr](http://modernizr.com) test
 
 ```js
-Modernizr.addTest('unprefixed-boxshadow', Modernizr.testProp('boxShadow', '1px 1px', true));
+Modernizr.addTest(
+    'unprefixed-boxshadow',
+    Modernizr.testProp('boxShadow', '1px 1px', true)
+);
 ```
 
 and modified stylesheet – <a href="https://raw.githubusercontent.com/wilddeer/ios7-switch/master/ios7-switch.modernizr.css" class="iconlink"><i class="icon-cloud-download"> </i><span>ios7-switch.modernizr.css</span></a>.

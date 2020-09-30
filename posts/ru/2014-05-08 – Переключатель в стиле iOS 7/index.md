@@ -108,7 +108,10 @@
 Не работает в браузерах, не поддерживающих `box-shadow` (ИЕ8 и ниже, Андроид 3.x и ниже). Можно сделать фоллбек на обычный чекбокс, например, с помощью [Модернайзера](http://modernizr.com). Пишем тест:
 
 ```js
-Modernizr.addTest('unprefixed-boxshadow', Modernizr.testProp('boxShadow', '1px 1px', true));
+Modernizr.addTest(
+    'unprefixed-boxshadow',
+    Modernizr.testProp('boxShadow', '1px 1px', true)
+);
 ```
 
 и используем модифицированный CSS — <a href="https://raw.githubusercontent.com/wilddeer/ios7-switch/master/ios7-switch.modernizr.css" class="iconlink"><i class="icon-cloud-download"> </i><span>ios7-switch.modernizr.css</span></a>.

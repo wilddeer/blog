@@ -53,8 +53,9 @@ Run for each slide:
 slide.onfocusin = function() {
   // Reset the scroll
   _this.scrollLeft = 0;
-  // WebKit sets the scroll after the event, we need to reset it with zero timeout.
-  // Keep the first reset to prevent jittering in other browsers
+  // WebKit sets the scroll after the event, we need
+  // to reset it with zero timeout. Keep the first
+  // reset to prevent jittering in other browsers
   setTimeout(function() {
     _this.scrollLeft = 0;
   }, 0);
@@ -63,9 +64,11 @@ slide.onfocusin = function() {
   changeActiveSlide(i);
 };
 
-// Now use the function bound to `onfocusin` in a regular `addEventListener`
+// Now use the function bound to `onfocusin` in
+// a regular `addEventListener`
 if (slide.addEventListener) {
-  slide.addEventListener('focus', slide.onfocusin, true); // `true` turns on the capturing
+  // `true` turns on the capturing
+  slide.addEventListener('focus', slide.onfocusin, true);
 }
 ```
 
@@ -103,7 +106,9 @@ addEvent(dot, 'click', (function(x, d) {
 
 ```js
 function addEvent(el, event, func, bool) {
-  el.addEventListener? el.addEventListener(event, func, !!bool): el.attachEvent('on'+event, func);
+  el.addEventListener ?
+    el.addEventListener(event, func, !!bool) :
+    el.attachEvent('on'+event, func);
 }
 ```
 

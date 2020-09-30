@@ -176,8 +176,11 @@
 
     pre
         margin-bottom: 2em
-        font-size: 0.9em
+        font-size: 0.8em
         overflow: auto
+
+        @media (min-width: $tabletBreakpoint)
+            font-size: 0.9em
 
     .code-max-height > pre
         max-height: 80vh

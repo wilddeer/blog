@@ -51,8 +51,9 @@ layout: layouts/postWrap
 slide.onfocusin = function() {
   // Сбрасываем скролл
   _this.scrollLeft = 0;
-  // И еще раз с нулевым таймаутом, потому что в вебките скролл выставляется позже события.
-  // Первый ресет оставляем, чтобы в других браузерах не дергалось.
+  // И еще раз с нулевым таймаутом, потому что в вебките скролл
+  // выставляется позже события. Первый ресет оставляем, чтобы
+  // в других браузерах не дергалось.
   setTimeout(function() {
     _this.scrollLeft = 0;
   }, 0);
@@ -61,9 +62,11 @@ slide.onfocusin = function() {
   changeActiveSlide(i);
 };
 
-// Используем привязанную к `onfocusin` функцию уже в нормальном `addEventListener`
+// Используем привязанную к `onfocusin` функцию уже
+// в нормальном `addEventListener`
 if (slide.addEventListener) {
-  slide.addEventListener('focus', slide.onfocusin, true); // `true` включает капчуринг
+  // `true` включает капчуринг
+  slide.addEventListener('focus', slide.onfocusin, true);
 }
 ```
 
@@ -101,7 +104,9 @@ addEvent(dot, 'click', (function(x, d) {
 
 ```js
 function addEvent(el, event, func, bool) {
-  el.addEventListener? el.addEventListener(event, func, !!bool): el.attachEvent('on'+event, func);
+  el.addEventListener ?
+    el.addEventListener(event, func, !!bool) :
+    el.attachEvent('on'+event, func);
 }
 ```
 
