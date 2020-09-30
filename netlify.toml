@@ -1,0 +1,47 @@
+[[headers]]
+    for = "*.jpg"
+
+    [headers.values]
+        cache-control = "public, max-age=31536000, s-maxage=31536000"
+
+[[headers]]
+    for = "*.png"
+
+    [headers.values]
+        cache-control = "public, max-age=31536000, s-maxage=31536000"
+
+[[headers]]
+    for = "*.gif"
+
+    [headers.values]
+        cache-control = "public, max-age=31536000, s-maxage=31536000"
+
+[[headers]]
+    for = "*.svg"
+
+    [headers.values]
+        cache-control = "public, max-age=31536000, s-maxage=31536000"
+
+[[headers]]
+    for = "*.woff2"
+
+    [headers.values]
+        cache-control = "public, max-age=31536000, s-maxage=31536000"
+
+[[headers]]
+    for = "*.js"
+
+    [headers.values]
+        cache-control = "public, max-age=10800, s-maxage=10800"
+
+[[headers]]
+    for = "*.css"
+
+    [headers.values]
+        cache-control = "public, max-age=10800, s-maxage=10800"
+
+[[headers]]
+    for = "*.html"
+
+    [headers.values]
+        cache-control = "public, max-age=10800, s-maxage=10800"
