@@ -6,4 +6,4 @@ eleventyComputed:
     date: "<%- $.page.fileSlug.split(' – ')[0] %>"
     permalink:
         "<%- ($.lang.includes('en') ? 'en/' : '') +
-        $.page.fileSlug.split(' – ')[1].replace(/\\s/g, '_') %>/"
+        $.page.fileSlug.split(' – ')[1].replace(/\\s/g, '_').toLowerCase() %>/"
