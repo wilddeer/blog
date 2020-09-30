@@ -19,8 +19,15 @@ layout: layouts/base
 
         <<%= $.tags.includes('root') ? 'h1' : 'div' %> class="site-header__title">
             <a class="site-header__title-link <%= $.tags.includes('root') ? 'is-root' : '' %>" href="/<%= $.lang !== 'ru' ? `${$.lang}/` : ''%>">
-                    <span class="site-header__title-text">Grumpy Blog</span><!--
-             --><span class="site-header__title-icon"><%- include('/svg/happy-sun.svg') %></span>
+                Grumpy
+                <span class="site-header__title-blog-and-icon">
+                    <span class="site-header__title-blog">
+                        Blog<!--
+                 --></span><!--
+                 --><span class="site-header__title-icon">
+                        <%- include('/svg/happy-sun.svg') %>
+                    </span>
+                </span>
             </a>
         </<%= $.tags.includes('root') ? 'h1' : 'div' %>>
     </nav>

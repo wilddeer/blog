@@ -10,7 +10,7 @@
             margin-top: 4.5em
 
         @media (min-width: $pcBreakpoint)
-            margin-top: calc(126px + 11vh)
+            margin-top: calc(123px + 11vh)
 
     &__inner
         @media (min-width: $tabletOverlapBreakpoint)
@@ -40,10 +40,19 @@
             float: right
             padding: 0.5em 0 0 2em
 
-    &__title-text
-        margin-right: 0.2em
+    &__title-blog
+        margin-right: 0.15em
+
+        @media (min-width: $phoneBreakpoint)
+            margin-right: 0.2em
+
+    &__title-blog-and-icon
+        white-space: nowrap
 
     &__title-icon
         display: inline-block
-        transform: translateY(-0.3em)
+        transform: translateY(-0.2em)
         font-size: 0.8em
+
+        @media (min-width: $phoneBreakpoint)
+            transform: translateY(-0.3em)
