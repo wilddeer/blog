@@ -1,7 +1,5 @@
-pre[class*="language-"],
-code[class*="language-"] {
+pre[class*="language-"] {
   color: #000000;
-  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
   font-size: 0.9em;
   direction: ltr;
   text-align: left;

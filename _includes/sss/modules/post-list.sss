@@ -30,4 +30,8 @@
         @mixin link $inactiveTextColor, $inactiveTextColor, $inactiveTextColor
 
     &__item-badge
-        margin-left: 0.1em
+        display: block
+
+        @media (min-width: $phoneBreakpoint)
+            display: inline
+            margin-left: 0.1em

@@ -121,18 +121,20 @@ JS + jQuery:
     var mouseFocusedClass = 'is-mouse-focused';
 
     $(document.body).on('mousedown', function() {
-        //wait for `document.activeElement` to change
+        // wait for `document.activeElement` to change
         setTimeout(function() {
-            //find focused element
+            // find focused element
             var activeElement = document.activeElement,
                 $activeElement = $(activeElement);
 
-            //if found and it’s not body...
+            // if found and it’s not body...
             if (activeElement && activeElement !== document.body) {
-                //add special class, remove it after `blur`
-                $activeElement.addClass(mouseFocusedClass).one('blur', function() {
-                    $activeElement.removeClass(mouseFocusedClass);
-                });
+                // add special class, remove it after `blur`
+                $activeElement
+                    .addClass(mouseFocusedClass)
+                    .one('blur', function() {
+                        $activeElement.removeClass(mouseFocusedClass);
+                    });
             }
         }, 0);
     });
@@ -146,20 +148,27 @@ Vanilla JS (не будет работать в IE8, потому что `addEve
     var mouseFocusedClass = 'is-mouse-focused';
 
     document.body.addEventListener('mousedown', function() {
-        //wait for `document.activeElement` to change
+        // wait for `document.activeElement` to change
         setTimeout(function() {
-            //find focused element
+            // find focused element
             var activeElement = document.activeElement;
 
-            //if found and it’s not body...
+            // if found and it’s not body...
             if (activeElement && activeElement !== document.body) {
-                //add special class, remove it after `blur`
+                // add special class, remove it after `blur`
                 activeElement.className += ' ' + mouseFocusedClass;
                 activeElement.addEventListener('blur', function(e) {
                     e.target.removeEventListener(e.type, arguments.callee);
 
                     activeElement.className = activeElement.className
-                        .replace(new RegExp('(\\s+|^)'+mouseFocusedClass+'(\\s+|$)', 'g'), ' ')
+                        .replace(
+                            new RegExp(
+                                '(\\s+|^)' +
+                                mouseFocusedClass +
+                                '(\\s+|$)', 'g'
+                            ),
+                            ' '
+                        )
                         .replace(/^\s+|\s+$/g, '');
                 });
             }

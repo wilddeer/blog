@@ -14,7 +14,7 @@
 
 ## Живой пример
 
-<pre><code id="test_console"></code></pre>
+<pre class="pre-wrap"><code id="test_console"></code></pre>
 
 <script src="/js/sniffer.min.js"></script>
 <script>

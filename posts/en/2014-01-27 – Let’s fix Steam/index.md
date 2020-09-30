@@ -489,7 +489,7 @@ To adhere to the principle of the universal code, it is important to properly st
 
 Substitution of basic element behaviour with scripts and lack of proper fallbacks leads to a situation where tipical and habitual functions of HTML elements are completely lost.
 
-For instance, Steam website contains all the classic mistakes collected in my [post about proper link usage](/en/Links,_please/). Here’s, for example, "View all screenshots" link, which isn’t actually a link, since it doesn’t lead anywhere:
+For instance, Steam website contains all the classic mistakes collected in my [post about proper link usage](/en/Links,_please/). Here’s, for example, “View all screenshots” link, which isn’t actually a link, since it doesn’t lead anywhere:
 
 ```html
 <a class="linkbar" href="javascript:screenshot_popup('http://store.steampowered.com/screenshot/view/205100/0?snr=1_5_9__400', 800, 635, 0, 0);">...</a>
@@ -557,7 +557,7 @@ To implement this approach it’s enough to give the gallary `inactive` class, w
 </div>
 
 <div class="align-center block is-mt-big">
-    <button class="button is-white" id="launch-it">Запусти меня</button>
+    <button class="button is-white" id="launch-it">Launch me</button>
 </div>
 
 :::
