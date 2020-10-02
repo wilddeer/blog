@@ -1,4 +1,5 @@
 ---
+image: cover.png
 tags:
     - archive
 ---
