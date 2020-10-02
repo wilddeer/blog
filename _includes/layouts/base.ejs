@@ -1,8 +1,17 @@
 <!doctype html>
-<html>
+<html lang="<%= $.lang %>">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta property="og:title" content="<%= $.title %>">
+        <meta property="og:locale" content="<%= $.lang %>">
+        <% if ($.image) { %>
+            <meta property="og:image" content="<%= $.image %>">
+        <% } %>
+        <% if ($.description) { %>
+            <meta property="og:description" content="<%= $.description %>">
+        <% } %>
 
         <title><%= $.title %></title>
 
