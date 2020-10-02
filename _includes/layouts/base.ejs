@@ -5,6 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <meta property="og:title" content="<%= $.title %>">
+        <meta property="og:url" content="/<%= $.permalink.replace(/^\//, '') %>">
+        <meta property="og:type" content="<%= $.tags.includes('page') ? 'website' : 'article' %>">
         <meta property="og:locale" content="<%= $.lang %>">
         <% if ($.image) { %>
             <meta property="og:image" content="<%= $.image %>">
