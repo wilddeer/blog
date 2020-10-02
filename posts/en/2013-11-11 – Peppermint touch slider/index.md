@@ -2,6 +2,7 @@
 layout: layouts/postWrap
 postMod: is-no-padding-top
 image: cover.png
+description: 'Yet another touch slider. Only better.'
 ---
 
 # Peppermint touch slider {.sr-only}

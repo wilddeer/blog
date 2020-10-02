@@ -1,4 +1,5 @@
 ---
+description: 'iOS 7 switch imitation using HTML + CSS'
 image: cover.png
 ---
 

@@ -1,5 +1,6 @@
 ---
 layout: layouts/postWrap
+description: 'Reworking the Steam game page.'
 image: cover.png
 tags:
     - archive

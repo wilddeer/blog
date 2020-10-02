@@ -1,5 +1,6 @@
 ---
 image: kindle-keyboard.jpg
+description: 'Rare species: Exploring the Kindle Keyboard browser.'
 ---
 
 # Kindle Keyboard<div class="small">browser</div> {.is-small-mb}

@@ -1,5 +1,6 @@
 ---
 image: dsi.jpg
+description: 'Rare species: Exploring the Nintendo DSi browser.'
 ---
 
 # Nintendo DSi<div class="small">browser</div> {.is-small-mb}

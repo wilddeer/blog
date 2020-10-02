@@ -1,4 +1,5 @@
 ---
+description: 'As many good fellows have already noticed, it’s not enought to test your responsive creation on an iPhone. You should at least bother to check it on several major platforms: iOS, Android (which has a swarm of different browsers), Windows Phone, Blackberry.'
 image: whiteboard.jpg
 tags:
     - archive

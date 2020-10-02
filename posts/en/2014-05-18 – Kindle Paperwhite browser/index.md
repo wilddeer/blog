@@ -1,5 +1,6 @@
 ---
 image: device.jpg
+description: 'Rare species: Exploring the Kindle Paperwhite browser.'
 ---
 
 # Kindle Paperwhite <div class="small">browser</div> {.is-small-mb}
