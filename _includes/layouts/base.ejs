@@ -8,11 +8,11 @@
 
         <!-- og -->
         <meta property="og:title" content="<%= $.title %>">
-        <meta property="og:url" content="/<%= $.permalink.replace(/^\//, '') %>">
+        <meta property="og:url" content="https://grumpy.blog/<%= $.permalink.replace(/^\//, '') %>">
         <meta property="og:type" content="<%= $.tags.includes('page') ? 'website' : 'article' %>">
         <meta property="og:locale" content="<%= $.lang %>">
         <% if ($.image) { %>
-            <meta property="og:image" content="<%= $.image %>">
+            <meta property="og:image" content="https://grumpy.blog<%= $.image %>">
         <% } %>
         <% if ($.description) { %>
             <meta property="og:description" content="<%= $.description %>">
