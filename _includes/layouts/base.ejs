@@ -1,3 +1,7 @@
+<%_
+    let imageUrl;
+    const baseUrl = 'https://grumpy.blog';
+_%>
 <!doctype html>
 <html lang="<%= $.lang %>">
     <head>
@@ -8,25 +12,36 @@
 
         <!-- og -->
         <meta property="og:title" content="<%= $.title %>">
-        <meta property="og:url" content="https://grumpy.blog/<%= $.permalink.replace(/^\//, '') %>">
+        <meta property="og:url" content="<%= baseUrl %>/<%= $.permalink.replace(/^\//, '') %>">
         <meta property="og:type" content="<%= $.tags.includes('page') ? 'website' : 'article' %>">
         <meta property="og:locale" content="<%= $.lang %>">
-        <% if ($.image) { %>
-            <meta property="og:image" content="https://grumpy.blog<%= $.image %>">
+        <% if ($.image) {
+            imageUrl = baseUrl;
+
+            if (!$.image.startsWith('/')) {
+                imageUrl += `/${$.permalink.replace(/^\//, '')}/`;
+            }
+
+            imageUrl += $.image;
+        %>
+            <meta property="og:image" content="<%= imageUrl %>">
         <% } %>
         <% if ($.description) { %>
             <meta property="og:description" content="<%= $.description %>">
         <% } %>
 
         <!-- twitter -->
-        <meta name="twitter:card" content="summary_large_image"></meta>
+        <meta name="twitter:card" content="<%- $.image ? 'summary_large_image' : 'summary' %>"></meta>
         <meta name="twitter:creator" content="@wildir"></meta>
         <meta name="twitter:site" content="@wildir"></meta>
         <% if ($.image) { %>
-            <meta name="twitter:image" content="https://grumpy.blog<%= $.image %>">
+            <meta name="twitter:image" content="<%= imageUrl %>">
         <% } %>
 
+        <!-- favicon -->
         <link rel="icon" type="image/svg+xml" href="/pics/happy-sun.svg">
+
+        <!-- styles -->
         <link rel="stylesheet" href="/css/styles.css">
     </head>
 
