@@ -19,7 +19,7 @@ _%>
             imageUrl = baseUrl;
 
             if (!$.image.startsWith('/')) {
-                imageUrl += `/${$.permalink.replace(/^\//, '')}/`;
+                imageUrl += `/${$.permalink.replace(/^\//, '')}`;
             }
 
             imageUrl += $.image;
