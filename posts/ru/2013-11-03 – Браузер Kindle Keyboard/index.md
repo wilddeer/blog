@@ -1,3 +1,8 @@
+---
+description: 'Редкие звери: Исследование браузера Kindle Keyboard'
+image: kindle-keyboard.jpg
+---
+
 # <div class="small">Браузер</div>Kindle Keyboard {.is-small-mb}
 
 <%- include('/svg/history-solid.svg') %>**Редкие звери:** когда-то давно я развлекался исследованием экзотических браузеров на всяких не сильно распространенных устройствах. Это — одно из таких исследований.

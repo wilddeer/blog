@@ -1,4 +1,6 @@
 ---
+description: 'Переделка страницы игры на сайте Стима.'
+image: cover.png
 layout: layouts/postWrap
 tags:
     - archive

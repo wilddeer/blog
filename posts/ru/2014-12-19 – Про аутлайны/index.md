@@ -1,3 +1,8 @@
+---
+description: 'Как убрать бесящие аутлайны не убивая доступность.'
+image: cover.png
+---
+
 <style>
 .outline-demo {
     outline: 1px dotted #666;

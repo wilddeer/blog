@@ -1,4 +1,6 @@
 ---
+description: 'Еще один тач-слайдер. Только круче.'
+image: cover.png
 layout: layouts/postWrap
 postMod: is-no-padding-top
 ---

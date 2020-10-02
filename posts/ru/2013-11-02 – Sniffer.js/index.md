@@ -1,3 +1,8 @@
+---
+description: 'Сниффер определяет браузер, движок и операционку/девайс по юзер-агенту.'
+image: cover.png
+---
+
 # [Sniffer.js](https://github.com/wilddeer/Sniffer)
 
 ## If you can’t detect it, you should sniff it!

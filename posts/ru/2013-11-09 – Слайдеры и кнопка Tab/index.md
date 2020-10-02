@@ -1,4 +1,6 @@
 ---
+description: 'Все js-слайдеры подвержены одному смешному багу: они ломаются при использовании кнопки Tab.'
+image: cover.png
 layout: layouts/postWrap
 ---
 

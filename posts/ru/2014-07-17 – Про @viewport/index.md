@@ -1,4 +1,6 @@
 ---
+description: 'Альтернатива <meta name="viewport" ...> в CSS.'
+image: cover.png
 tags:
     - archive
 ---

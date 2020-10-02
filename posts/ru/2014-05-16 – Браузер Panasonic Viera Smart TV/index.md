@@ -1,3 +1,8 @@
+---
+description: 'Редкие звери: Исследование браузера Panasonic Viera Smart TV'
+image: tv.jpg
+---
+
 # <div class="small">Браузер</div>Panasonic Viera Smart&nbsp;TV<div class="small">(TX-LR32E6)</div> {.is-small-mb}
 
 <%- include('/svg/history-solid.svg') %>**Редкие звери:** когда-то давно я развлекался исследованием экзотических браузеров на всяких не сильно распространенных устройствах. Это — одно из таких исследований.
