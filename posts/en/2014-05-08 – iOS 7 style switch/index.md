@@ -1,3 +1,7 @@
+---
+image: cover.png
+---
+
 # iOS 7 style switch {.sr-only}
 
 <style>

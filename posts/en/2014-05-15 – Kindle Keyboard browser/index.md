@@ -1,3 +1,7 @@
+---
+image: kindle-keyboard.jpg
+---
+
 # Kindle Keyboard<div class="small">browser</div> {.is-small-mb}
 
 <%- include('/svg/history-solid.svg') %>**Rare species:** some time ago I had fun exploring exotic browsers on some not so common devices. This is one of such studies.

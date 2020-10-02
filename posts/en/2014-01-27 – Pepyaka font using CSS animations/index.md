@@ -1,6 +1,7 @@
 ---
 layout: layouts/postWrap
 postMod: is-no-padding-top
+image: cover.png
 ---
 
 # Pepyaka font using CSS animations {.sr-only}

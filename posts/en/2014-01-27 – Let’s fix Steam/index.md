@@ -1,5 +1,6 @@
 ---
 layout: layouts/postWrap
+image: cover.png
 tags:
     - archive
 ---

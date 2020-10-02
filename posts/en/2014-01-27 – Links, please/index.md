@@ -1,3 +1,7 @@
+---
+image: cover.png
+---
+
 # Links, please
 
 <%- include('/svg/history-solid.svg') %>The examples referenced in the post are long outdated, but the meaning of the post is still relevant.

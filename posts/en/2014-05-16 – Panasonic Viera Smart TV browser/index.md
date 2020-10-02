@@ -1,3 +1,7 @@
+---
+image: tv.jpg
+---
+
 # Panasonic Viera Smart TV<div class="small">browser (TX-LR32E6)</div> {.is-small-mb}
 
 <%- include('/svg/history-solid.svg') %>**Rare species:** some time ago I had fun exploring exotic browsers on some not so common devices. This is one of such studies.

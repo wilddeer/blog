@@ -1,6 +1,7 @@
 ---
 layout: layouts/postWrap
 postMod: is-no-padding-top
+image: cover.png
 ---
 
 # Peppermint touch slider {.sr-only}

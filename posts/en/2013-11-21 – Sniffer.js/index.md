@@ -1,3 +1,7 @@
+---
+image: cover.png
+---
+
 # [Sniffer.js](https://github.com/wilddeer/Sniffer)
 
 ## If you can’t detect it, you should sniff it!

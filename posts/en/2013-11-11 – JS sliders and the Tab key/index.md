@@ -1,5 +1,6 @@
 ---
 layout: layouts/postWrap
+image: cover.png
 ---
 
 <link rel="stylesheet" href="/css/peppermint.suggested.css">

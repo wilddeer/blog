@@ -1,4 +1,5 @@
 ---
+image: whiteboard.jpg
 tags:
     - archive
 ---
