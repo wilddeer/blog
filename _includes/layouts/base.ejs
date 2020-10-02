@@ -4,6 +4,9 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <title><%= $.title %></title>
+
+        <!-- og -->
         <meta property="og:title" content="<%= $.title %>">
         <meta property="og:url" content="/<%= $.permalink.replace(/^\//, '') %>">
         <meta property="og:type" content="<%= $.tags.includes('page') ? 'website' : 'article' %>">
@@ -15,7 +18,9 @@
             <meta property="og:description" content="<%= $.description %>">
         <% } %>
 
-        <title><%= $.title %></title>
+        <!-- twitter -->
+        <meta name="twitter:card" content="summary"></meta>
+        <meta name="twitter:creator" content="@wildir"></meta>
 
         <link rel="icon" type="image/svg+xml" href="/pics/happy-sun.svg">
         <link rel="stylesheet" href="/css/styles.css">
