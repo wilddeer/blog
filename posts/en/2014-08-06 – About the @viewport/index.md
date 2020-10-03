@@ -30,8 +30,10 @@ You might overlook the difference between iOS and Windows Phone views in portrai
 However in the landscape mode the enourmousness of Windows Phone view becomes clear:
 
 ![Windows Phone 8.1](before-landscape.png =640x360)
+{.is-phone-fullwidth}
 
 ![iOS 7](ipod-landscape.png =640x360)
+{.is-phone-fullwidth}
 
 It turned out that Windows Phone considers usual `<meta name="viewport" content="width=device-width, initial-scale=1">` as a designation to make the viewport 320 logical pixels wide, no matter what real device resolution is (because iPhone).
 
@@ -40,8 +42,10 @@ Instead, fresh and lush `@viewport {width: device-width;}`, which is currently s
 This is how it should work:
 
 ![Before](before-landscape.png =640x360)
+{.is-phone-fullwidth}
 
 ![After](after-landscape.png =640x360)
+{.is-phone-fullwidth}
 
 The portrait mode also undergoes a change. HTC 8x has higher resolution then iPod and same pixel density, so its viewport should be a little bit wider than 320 pixels:
 
@@ -60,8 +64,10 @@ Third update came out a while ago, older phones running WP7 are not affected by 
 Furthermore, [it turns out](http://timkadlec.com/2013/01/windows-phone-8-and-device-width/) that IE in Windows 8 ignores the meta tag in metro mode but correctly interprets `@-ms-viewport`. Here’s a couple of explanatory GIFs:
 
 ![The web site is zoomed when using meta tag](win8-before.gif =640x427)
+{.is-phone-fullwidth}
 
 ![The website adapts when using <code>@-ms-viwport</code>](win8-after.gif =640x427)
+{.is-phone-fullwidth}
 
 In the first case we get a non-adaptive web site. Bad. The second approach gives a mobile version snapped to the edge of the screen. Splendid!
 

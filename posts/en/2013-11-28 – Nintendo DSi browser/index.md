@@ -169,6 +169,7 @@ Pages can be scrolled with the D-pad, using dragscroll or with a constantly visi
 Surprisingly enough, the browser’s support for new input types is reasonable. It supports `url`, `email`, `datetime`, `date`, `month`, `week`, `time`, `datetime-local`, `number` and `range`:
 
 ![](form.jpg =669x500)
+{.is-phone-fullwidth}
 
 All the fields are validated according to their types when the form is submitted, `pattern` validation also works. Datepicker is buggy:
 

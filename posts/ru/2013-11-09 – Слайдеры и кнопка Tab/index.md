@@ -18,10 +18,13 @@ layout: layouts/postWrap
   <div class="text peppermint js-peppermint">
 
 ![Сломанный слайдер на [apple.com](https://apple.com)](p_apple.jpg =777x500)
+{.is-phone-fullwidth}
 
 ![Сломанный слайдер [Swipe](http://swipejs.com)](p_swipejs.jpg =777x500)
+{.is-phone-fullwidth}
 
 ![Сломанный слайдер [Стима](https://store.steampowered.com)](p_steam.jpg =777x500)
+{.is-phone-fullwidth}
 
   </div>
   <div class="js-dots">

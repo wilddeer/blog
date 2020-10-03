@@ -88,6 +88,10 @@
         @media (min-width: $tabletOverlapBreakpoint)
             box-shadow: none
 
+    figure.is-phone-fullwidth
+        @media (max-width: calc($phoneBreakpoint - 1px))
+            @mixin contentFullwidth
+
     figure.is-ootb
         @media (max-width: calc($tabletOverlapBreakpoint - 1px))
             @mixin contentFullwidth
@@ -103,6 +107,13 @@
 
     figure img
         border-radius: 0.2em
+
+    figure.is-phone-fullwidth img
+        @media (min-width: $phoneBreakpoint)
+            @mixin contentBoxMaxWidth
+
+        @media (max-width: calc($phoneBreakpoint - 1px))
+            border-radius: 0
 
     figure.is-ootb img
         @media (max-width: calc($tabletOverlapBreakpoint - 1px))

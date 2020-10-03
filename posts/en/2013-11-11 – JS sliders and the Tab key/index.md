@@ -18,10 +18,13 @@ Almost every JS slider has one particularly funny bug: the <kbd>Tab</kbd> key br
   <div class="text peppermint js-peppermint">
 
 ![Broken slider at [apple.com](https://apple.com)](p_apple.jpg =777x500)
+{.is-phone-fullwidth}
 
 ![Broken [Swipe](http://swipejs.com) slider](p_swipejs.jpg =777x500)
+{.is-phone-fullwidth}
 
 ![Broken [Steam](https://store.steampowered.com) slider](p_steam.jpg =777x500)
+{.is-phone-fullwidth}
 
   </div>
   <div class="js-dots">

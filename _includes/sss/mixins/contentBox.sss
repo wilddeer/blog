@@ -1,5 +1,4 @@
 @define-mixin contentBox $maxwidth: $contentMaxWith
-    width: $contentWidth
-    max-width: $maxwidth
+    width: min($maxwidth, $contentWidth)
     margin-left: auto
     margin-right: auto
