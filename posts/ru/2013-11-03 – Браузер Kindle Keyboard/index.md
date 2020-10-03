@@ -1,6 +1,7 @@
 ---
 description: 'Редкие звери: Исследование браузера Kindle Keyboard'
 image: kindle-keyboard.jpg
+langLink: 'kindle_keyboard_browser'
 ---
 
 # <div class="small">Браузер</div>Kindle Keyboard {.is-small-mb}

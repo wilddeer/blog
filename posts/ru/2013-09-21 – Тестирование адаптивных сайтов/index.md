@@ -1,6 +1,7 @@
 ---
 description: 'Как правильно замечают многие хорошие ребята, проверить работоспособность вашего адаптивного творения на айфончике недостаточно. Как минимум, стоит озаботиться несколькими основными платформами: iOS, Android (а там свой зоопарк браузеров), Windows Phone, Blackberry.'
 image: whiteboard.jpg
+langLink: 'testing_responsive_websites'
 tags:
     - archive
 ---

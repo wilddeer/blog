@@ -2,6 +2,7 @@
 description: 'Все js-слайдеры подвержены одному смешному багу: они ломаются при использовании кнопки Tab.'
 image: cover.png
 layout: layouts/postWrap
+langLink: 'js_sliders_and_the_tab_key'
 ---
 
 <link rel="stylesheet" href="/css/peppermint.suggested.css">

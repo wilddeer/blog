@@ -3,6 +3,7 @@ description: 'Еще один тач-слайдер. Только круче.'
 image: cover.png
 layout: layouts/postWrap
 postMod: is-no-padding-top
+langLink: 'peppermint_touch_slider'
 ---
 
 # Тач-слайдер Peppermint {.sr-only}

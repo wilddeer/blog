@@ -3,6 +3,7 @@ layout: layouts/postWrap
 postMod: is-no-padding-top
 image: cover.png
 description: 'Yet another touch slider. Only better.'
+langLink: 'тач-слайдер_peppermint.js'
 ---
 
 # Peppermint touch slider {.sr-only}

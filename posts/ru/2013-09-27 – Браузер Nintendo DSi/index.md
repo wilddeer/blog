@@ -1,6 +1,7 @@
 ---
 description: 'Редкие звери: Исследование браузера Nintendo DSi'
 image: dsi.jpg
+langLink: 'nintendo_dsi_browser'
 ---
 
 # <div class="small">Браузер</div>Nintendo DSi {.is-small-mb}

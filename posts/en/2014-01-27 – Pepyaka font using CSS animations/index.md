@@ -3,6 +3,7 @@ layout: layouts/postWrap
 postMod: is-no-padding-top
 description: 'My old epileptic font from Pepyaka, remastered using CSS3 animations.'
 image: cover.png
+langLink: 'пепякошрифт_средствами_css-анимаций'
 ---
 
 # Pepyaka font using CSS animations {.sr-only}

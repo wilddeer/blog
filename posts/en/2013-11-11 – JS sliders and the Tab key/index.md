@@ -2,6 +2,7 @@
 layout: layouts/postWrap
 image: cover.png
 description: 'Almost every JS slider has one particularly funny bug: the Tab key breaks them.'
+langLink: 'слайдеры_и_кнопка_tab'
 ---
 
 <link rel="stylesheet" href="/css/peppermint.suggested.css">

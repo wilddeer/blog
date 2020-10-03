@@ -1,6 +1,7 @@
 ---
 image: device.jpg
 description: 'Rare species: Exploring the Kindle Paperwhite browser.'
+langLink: 'браузер_kindle_paperwhite'
 ---
 
 # Kindle Paperwhite <div class="small">browser</div> {.is-small-mb}

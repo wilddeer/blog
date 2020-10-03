@@ -1,6 +1,7 @@
 ---
 description: 'Редкие звери: Исследование браузера Kindle Paperwhite'
 image: device.jpg
+langLink: 'kindle_paperwhite_browser'
 ---
 
 # <div class="small">Браузер</div>Kindle Paperwhite {.is-small-mb}

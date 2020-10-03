@@ -3,6 +3,7 @@ description: 'Мой старый эпилептичный шрифт с Пеп�
 image: cover.png
 layout: layouts/postWrap
 postMod: is-no-padding-top
+langLink: 'pepyaka_font_using_css_animations'
 ---
 
 # Пепякошрифт средствами css-анимаций {.sr-only}

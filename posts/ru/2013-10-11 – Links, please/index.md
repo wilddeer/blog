@@ -1,6 +1,7 @@
 ---
 description: 'Однажды наступит тот день, когда самые продвинутые IT-компании научатся пользоваться ссылками. Тогда заживем.'
 image: cover.png
+langLink: 'links,_please'
 ---
 
 # Links, please

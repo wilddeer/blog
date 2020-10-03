@@ -1,6 +1,7 @@
 ---
 description: 'CSS alternative to <meta name="viewport" ...>.'
 image: cover.png
+langLink: 'про_@viewport'
 tags:
     - archive
 ---

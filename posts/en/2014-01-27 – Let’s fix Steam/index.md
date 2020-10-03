@@ -2,6 +2,7 @@
 layout: layouts/postWrap
 description: 'Reworking the Steam game page.'
 image: cover.png
+langLink: 'чиним_steam'
 tags:
     - archive
 ---

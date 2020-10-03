@@ -1,6 +1,7 @@
 ---
 image: tv.jpg
 description: 'Rare species: Exploring the Panasonic Viera Smart TV browser.'
+langLink: 'браузер_panasonic_viera_smart_tv'
 ---
 
 # Panasonic Viera Smart TV<div class="small">browser (TX-LR32E6)</div> {.is-small-mb}

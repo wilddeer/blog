@@ -1,6 +1,7 @@
 ---
 description: 'Имитация переключателя из iOS 7 на HTML + CSS.'
 image: cover.png
+langLink: 'ios_7_style_switch'
 ---
 
 # Переключатель в стиле iOS 7 {.sr-only}

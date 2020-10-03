@@ -1,6 +1,7 @@
 ---
 image: cover.png
 description: 'Sniffer.js is a browser/engine/os/device detection tool.'
+langLink: 'sniffer.js'
 ---
 
 # [Sniffer.js](https://github.com/wilddeer/Sniffer)

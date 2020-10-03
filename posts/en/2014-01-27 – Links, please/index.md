@@ -1,6 +1,7 @@
 ---
 description: 'There will come a day when the most advanced IT companies will finally learn to use links. Those will be good times.'
 image: cover.png
+langLink: 'links,_please'
 ---
 
 # Links, please
