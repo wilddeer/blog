@@ -1,7 +1,10 @@
 <% // Args: posts, lang %>
 <%
     $.posts
-        .filter(post => post.data.lang === $.lang)
+        .filter(post => (
+            post.data.lang === $.lang &&
+            !post.data.tags.includes('draft')
+        ))
         .reverse()
         .forEach((post, index, filteredPosts) => {
 %>
