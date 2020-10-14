@@ -31,8 +31,8 @@
     <% } %>
 
     <% if (yearHeading === 2014) { %>
-        <h2 class="post-list-title tinted">
-            2015...2020
+        <h2 class="post-list-title is-empty">
+            2015...<%= $.lang === 'en' ? '2020' : '2019' %>
             <span class="post-list-title__tumble">
                 <%- include('/svg/tumbleweed.svg') %>
             </span>

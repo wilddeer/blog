@@ -3,8 +3,12 @@
     margin-bottom: 0.25em
     margin-top: 2em
 
-    & + &
-        margin-top: 0
+    &.is-empty
+        color: $inactiveTextColor
+
+    // &.is-empty,
+    // &.is-empty + &
+    //     margin-top: 0
 
     &__tumble
         font-size: 1.5em
