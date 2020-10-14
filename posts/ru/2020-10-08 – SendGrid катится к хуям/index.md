@@ -150,14 +150,24 @@ tags:
 
 Когда начался этот пиздец, я пошел искать других пострадавших от обезумевшего сендгрида. Не можем же мы быть одни такими счастливчиками? Так и есть, я нашел многочисленные подтверждения того, что сендгрид банит аккаунты без предупреждения и не отвечает на запросы месяцами.
 
-Вот, например, чувак пишет в твиттере:
+Вот пара примеров из твиттера:
 
-<blockquote class="twitter-tweet" data-dnt="true"><p lang="en" dir="ltr">Apparently completely suspending an account and cancelling all emails for a 5m+ ARR SAAS business is a P3 ticket according to their logic.</p>&mdash; Matthew Schone (@matthewschone) <a href="https://twitter.com/matthewschone/status/1303591569354760192?ref_src=twsrc%5Etfw">September 9, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet" data-dnt="true"><p lang="en" dir="ltr">Apparently completely suspending an account and cancelling all emails for a 5m+ ARR SAAS business is a P3 ticket according to their logic.</p>&mdash; Matthew Schone (@matthewschone) <a href="https://twitter.com/matthewschone/status/1303591569354760192?ref_src=twsrc%5Etfw">September 9, 2020</a></blockquote>
+
+<blockquote class="twitter-tweet" data-dnt="true"><p lang="en" dir="ltr"><a href="https://twitter.com/SendGrid?ref_src=twsrc%5Etfw">@SendGrid</a> - our accounts were blocked due to issue on your side and support not reacting. We need immediate help. Really not happy with this after being a long term customer!</p>&mdash; Petr Royce (@petrroyce) <a href="https://twitter.com/petrroyce/status/1316396251458482176?ref_src=twsrc%5Etfw">October 14, 2020</a></blockquote>
+
+Там их сотни, можно [поискать в твиттере «sendgrid blocked»](https://twitter.com/search?q=sendgrid%20blocked&src=typed_query&f=live) и наслаждаться пиздецом в прямом эфире.
 
 А вот еще интересно: статья [Sendgrid Under Siege from Hacked Accounts](https://krebsonsecurity.com/2020/08/sendgrid-under-siege-from-hacked-accounts/) рассказывает, как сендгрид годами забивал на проблему огромного количества угнанных аккаунтов, через которые херачили спам. Это заебало всех, включая крупные мейл-сервисы: сендгрид постепенно становится признаком спама, хотя им и пользуется много легитимных отправителей.
 
 Комментарии к статье прекрасны: там переписка админов, дружно обсирающих сендгрид. Некоторые просто жалуются на невозможность отличить спам, пришедший от сендгрида, от легитимных сообщений, другие пишут, что в какой-то момент их терпение лопнуло, и они просто заблочили любые письма от сендгрида.
 
+А вот уже люди жалуются на доставляемость:
+
+<blockquote class="twitter-tweet" data-dnt="true"><p lang="en" dir="ltr">We started off using <a href="https://twitter.com/SendGrid?ref_src=twsrc%5Etfw">@SendGrid</a> as our email provider, a decision we are now regretting<br><br>They have no vetting process for new accounts, and so rogue users ruin the reputation of their IPs, which end up on Spamhaus blocklists<br><br>Consequently, emails to Hotmail/Outlook are all blocked</p>&mdash; Adam Alton (@altonpowers) <a href="https://twitter.com/altonpowers/status/1316097837449580544?ref_src=twsrc%5Etfw">October 13, 2020</a></blockquote>
+
 Видимо, эффективные менеджеры в сендгриде почувствовали приближающийся пиздец, засуетились, и в лучших традициях эффективного менеджмента придумали невероятно уебанский план выхода из ситуации: ковровые бомбардировки своих же клиентов. Проскочила спаммерская ссылочка? Хуяк, блядь, аккаунт в бан, нахуй. Потом разберемся.
 
 Штош.
+
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
