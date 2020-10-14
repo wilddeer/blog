@@ -167,7 +167,7 @@ tags:
 
 <blockquote class="twitter-tweet" data-dnt="true"><p lang="en" dir="ltr">We started off using <a href="https://twitter.com/SendGrid?ref_src=twsrc%5Etfw">@SendGrid</a> as our email provider, a decision we are now regretting<br><br>They have no vetting process for new accounts, and so rogue users ruin the reputation of their IPs, which end up on Spamhaus blocklists<br><br>Consequently, emails to Hotmail/Outlook are all blocked</p>&mdash; Adam Alton (@altonpowers) <a href="https://twitter.com/altonpowers/status/1316097837449580544?ref_src=twsrc%5Etfw">October 13, 2020</a></blockquote>
 
-Про доставляемость сендгрида [вот интересная статья](https://krebsonsecurity.com/2020/08/sendgrid-under-siege-from-hacked-accounts/): оказывается, сендгрид годами забивал на проблему огромного количества угнанных аккаунтов, через которые херачили спам. Это заебало всех, включая крупные мейл-сервисы: они стали пессимизировать письма от сендгрида, хотя им и пользуется много легитимных отправителей.
+Про доставляемость сендгрида [есть интересная статья](https://krebsonsecurity.com/2020/08/sendgrid-under-siege-from-hacked-accounts/): оказывается, сендгрид годами забивал на проблему огромного количества угнанных аккаунтов, через которые херачили спам. Это заебало всех, включая крупные мейл-сервисы: они стали пессимизировать письма от сендгрида, хотя им и пользуется много легитимных отправителей.
 
 В комментариях к статье прекрасная переписка админов, дружно обсирающих сендгрид. Некоторые просто жалуются на невозможность отличить спам, пришедший от сендгрида, от легитимных сообщений, другие пишут, что в какой-то момент их терпение лопнуло, и они просто заблочили любые письма от сендгрида.
 
