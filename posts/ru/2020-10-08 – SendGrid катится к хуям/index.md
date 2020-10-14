@@ -7,7 +7,7 @@ tags:
 
 ## Чё за сендгрид?
 
-Сендгрид — это <abbr title="Бузинес ту бузинес">B2B</abbr>-сервис для рассылки почты. Все эти «confirm your email address» и «новости нашего сраного стартапа» обычно посылаются через таких ребят. Еще из известных есть мейлган, мейлчимп, постмарк, амазон сес — наверняка что-то слышали.
+Сендгрид — это <abbr title="Бузинес ту бузинес" tabindex="-1">B2B</abbr>-сервис для рассылки почты. Все эти «confirm your email address» и «новости нашего сраного стартапа» обычно посылаются через таких ребят. Еще из известных есть мейлган, мейлчимп, постмарк, амазон сес — наверняка что-то слышали.
 
 Сендгрид год назад был куплен Twilio, компанией с многомиллиардной капитализацией. Сириуз бизнес, можно положиться на таких ребят.
 
@@ -156,15 +156,17 @@ tags:
 
 <blockquote class="twitter-tweet" data-dnt="true"><p lang="en" dir="ltr"><a href="https://twitter.com/SendGrid?ref_src=twsrc%5Etfw">@SendGrid</a> - our accounts were blocked due to issue on your side and support not reacting. We need immediate help. Really not happy with this after being a long term customer!</p>&mdash; Petr Royce (@petrroyce) <a href="https://twitter.com/petrroyce/status/1316396251458482176?ref_src=twsrc%5Etfw">October 14, 2020</a></blockquote>
 
-Там их сотни, можно [поискать в твиттере «sendgrid blocked»](https://twitter.com/search?q=sendgrid%20blocked&src=typed_query&f=live) и наслаждаться пиздецом в прямом эфире.
+Там их сотни, можно поискать в твиттере [«sendgrid account»](https://twitter.com/search?q=sendgrid%20account&src=typed_query&f=live) и наслаждаться пиздецом в прямом эфире.
 
-А вот еще интересно: статья [Sendgrid Under Siege from Hacked Accounts](https://krebsonsecurity.com/2020/08/sendgrid-under-siege-from-hacked-accounts/) рассказывает, как сендгрид годами забивал на проблему огромного количества угнанных аккаунтов, через которые херачили спам. Это заебало всех, включая крупные мейл-сервисы: сендгрид постепенно становится признаком спама, хотя им и пользуется много легитимных отправителей.
+А вот жалобы на доставляемость почты (больше по запросу [«sendgrid blocked»](https://twitter.com/search?q=sendgrid%20blocked&src=typed_query&f=live):
 
-Комментарии к статье прекрасны: там переписка админов, дружно обсирающих сендгрид. Некоторые просто жалуются на невозможность отличить спам, пришедший от сендгрида, от легитимных сообщений, другие пишут, что в какой-то момент их терпение лопнуло, и они просто заблочили любые письма от сендгрида.
-
-А вот уже люди жалуются на доставляемость:
+<blockquote class="twitter-tweet" data-dnt="true"><p lang="en" dir="ltr">Decided to use a email provider to ensure email deliverability to client&#39;s inbox. Now I find out they don&#39;t guarantee it; emails are now blocked by iCloud because of SENDGRID&#39;s bad IP address! Now they want me to contact Apple? What am I paying them for? <a href="https://twitter.com/hashtag/sendgrid?src=hash&amp;ref_src=twsrc%5Etfw">#sendgrid</a></p>&mdash; Gerald Bailey (@gbailey) <a href="https://twitter.com/gbailey/status/1314597580131663873?ref_src=twsrc%5Etfw">October 9, 2020</a></blockquote>
 
 <blockquote class="twitter-tweet" data-dnt="true"><p lang="en" dir="ltr">We started off using <a href="https://twitter.com/SendGrid?ref_src=twsrc%5Etfw">@SendGrid</a> as our email provider, a decision we are now regretting<br><br>They have no vetting process for new accounts, and so rogue users ruin the reputation of their IPs, which end up on Spamhaus blocklists<br><br>Consequently, emails to Hotmail/Outlook are all blocked</p>&mdash; Adam Alton (@altonpowers) <a href="https://twitter.com/altonpowers/status/1316097837449580544?ref_src=twsrc%5Etfw">October 13, 2020</a></blockquote>
+
+Про доставляемость [вот интересная статья](https://krebsonsecurity.com/2020/08/sendgrid-under-siege-from-hacked-accounts/): оказывается, сендгрид годами забивал на проблему огромного количества угнанных аккаунтов, через которые херачили спам. Это заебало всех, включая крупные мейл-сервисы: они стали пессимизировать письма от сендгрида, хотя им и пользуется много легитимных отправителей.
+
+В комментариях к статье прекрасная переписка админов, дружно обсирающих сендгрид. Некоторые просто жалуются на невозможность отличить спам, пришедший от сендгрида, от легитимных сообщений, другие пишут, что в какой-то момент их терпение лопнуло, и они просто заблочили любые письма от сендгрида.
 
 Видимо, эффективные менеджеры в сендгриде почувствовали приближающийся пиздец, засуетились, и в лучших традициях эффективного менеджмента придумали невероятно уебанский план выхода из ситуации: ковровые бомбардировки своих же клиентов. Проскочила спаммерская ссылочка? Хуяк, блядь, аккаунт в бан, нахуй. Потом разберемся.
 

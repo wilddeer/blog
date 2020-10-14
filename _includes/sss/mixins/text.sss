@@ -168,6 +168,42 @@
         text-decoration: underline
         text-decoration-style: dotted
         text-decoration-color: $regularBorderColor
+        cursor: pointer
+
+        &:focus
+            background: $infoBgColor
+            color: $infoColor
+            outline: none
+            text-decoration: none
+            border-radius: .1em
+            box-shadow: 0 0 0 1px $infoBgColor, 0 0 0 3px $infoColor
+            pointer-events: none
+
+        &:after
+            @mixin contentBoxMaxWidth
+            text-transform: none
+            letter-spacing: normal
+            content: attr(title)
+            display: inline-block
+            position: fixed
+            left: 0
+            bottom: 0
+            background: $infoBgColor
+            color: $infoColor
+            box-shadow: 0 1px 3px rgba($infoColor, 0.5)
+            transform: translateX(calc(50 * $vw - 50%)) translateY(100%)
+            border-radius: .25em
+            padding: 0.5em 1em
+            visibility: hidden
+            opacity: 0
+            transition: 0.15s ease-in
+            transition-property: opacity, visibility, transform
+
+        &:focus:after
+            visibility: visible
+            opacity: 1
+            transition-timing-function: cubic-bezier(.09,.75,.38,1.15)
+            transform: translateX(calc(50 * $vw - 50%)) translateY(-1.5rem)
 
     del
         text-decoration: line-through
