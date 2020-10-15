@@ -1,8 +1,6 @@
 ---
 description: 'Прочитайте пост, чтобы узнать, кто вселенская протомразь'
 image: cover.png
-tags:
-    - draft
 ---
 
 # SendGrid катится к хуям
