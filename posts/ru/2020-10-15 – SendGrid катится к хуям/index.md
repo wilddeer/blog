@@ -157,7 +157,7 @@ image: cover.png
 
 <blockquote class="twitter-tweet" data-dnt="true"><p lang="en" dir="ltr">Apparently completely suspending an account and cancelling all emails for a 5m+ ARR SAAS business is a P3 ticket according to their logic.</p>&mdash; Matthew Schone (@matthewschone) <a href="https://twitter.com/matthewschone/status/1303591569354760192?ref_src=twsrc%5Etfw">September 9, 2020</a></blockquote>
 
-<blockquote class="twitter-tweet" data-dnt="true"><p lang="en" dir="ltr"><a href="https://twitter.com/SendGrid?ref_src=twsrc%5Etfw">@SendGrid</a> - our accounts were blocked due to issue on your side and support not reacting. We need immediate help. Really not happy with this after being a long term customer!</p>&mdash; Petr Royce (@petrroyce) <a href="https://twitter.com/petrroyce/status/1316396251458482176?ref_src=twsrc%5Etfw">October 14, 2020</a></blockquote>
+<blockquote class="twitter-tweet" data-conversation="none" data-dnt="true"><p lang="en" dir="ltr">your customer service is terrible! we are locked out of our account, it&#39;s been over a week with production down for us and the case is at the lowest priority p3. to check the status we have to log in to the account, which we can&#39;t - it&#39;s why we put the case, to begin with</p>&mdash; trainermade (@TrainerMade) <a href="https://twitter.com/TrainerMade/status/1316085781191155712?ref_src=twsrc%5Etfw">October 13, 2020</a></blockquote>
 
 Таких твитов сотни, можно поискать в твиттере [«sendgrid account»](https://twitter.com/search?q=sendgrid%20account&src=typed_query&f=live) и наслаждаться пиздецом в прямом эфире.
 
