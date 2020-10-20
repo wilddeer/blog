@@ -5,6 +5,14 @@ image: cover.png
 
 # Заебали со своими попапами 🙃 {.align-center}
 
+:::.hidden .js-bonus
+Бонус за усидчивость — купон на скидку 5% в <a href="https://chatra.com">Чатре</a>:
+
+<strong class="js-skidon font-size is-heading-3"></strong>
+
+(Да-да, это что-то типа постиронии или метасарказма.)
+:::
+
 <script>
 window.addEventListener('DOMContentLoaded', () => {
     confirm('Are you ready? 😉');
@@ -17,6 +25,11 @@ window.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
         alert('Добро пожаловать в бложек!!');
     }, 20 * 1000);
+
+    setTimeout(() => {
+        document.querySelector('.js-bonus').classList.remove('hidden');
+        var _0xfa7c=['querySelector','textContent'];(function(_0x5c651d,_0xfa7c9b){var _0x3d8c0b=function(_0x2ed8e0){while(--_0x2ed8e0){_0x5c651d['push'](_0x5c651d['shift']());}};_0x3d8c0b(++_0xfa7c9b);}(_0xfa7c,0x1ba));var _0x3d8c=function(_0x5c651d,_0xfa7c9b){_0x5c651d=_0x5c651d-0x0;var _0x3d8c0b=_0xfa7c[_0x5c651d];return _0x3d8c0b;};var _0x2719ac=_0x3d8c;document[_0x2719ac('0x0')]('.js-skidon')[_0x2719ac('0x1')]=atob('UjdGVFNLUFBWWVlQ');
+    }, 30 * 1000);
 });
 </script>
 
