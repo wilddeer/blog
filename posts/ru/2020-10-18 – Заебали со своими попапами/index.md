@@ -1,8 +1,6 @@
 ---
 description: 'ВАМ ПОВЕЗЛО! СКИДКА НА ВЕСЬ АССОРТИМЕНТ!!1 ОСТАВЬТЕ ЕМЕЙЛ, МЫ ПЕРЕЗВОНИМ!'
 image: cover.png
-tags:
-    - draft
 ---
 
 # Заебали со своими попапами 🙃 {.align-center}
@@ -11,16 +9,14 @@ tags:
 window.addEventListener('DOMContentLoaded', () => {
     confirm('Are you ready? 😉');
 
+    window.addEventListener('beforeunload', event => {
+        event.preventDefault();
+        event.returnValue = '';
+    });
+
     setTimeout(() => {
         alert('Добро пожаловать в бложек!!');
     }, 20 * 1000);
-});
-</script>
-
-<script>
-window.addEventListener('beforeunload', event => {
-    event.preventDefault();
-    event.returnValue = '';
 });
 </script>
 
