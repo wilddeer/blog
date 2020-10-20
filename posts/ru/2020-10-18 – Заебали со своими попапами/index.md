@@ -1,5 +1,5 @@
 ---
-description: '!!!'
+description: 'ВАМ ПОВЕЗЛО! СКИДКА НА ВЕСЬ АССОРТИМЕНТ!!1 ОСТАВЬ ЕМЕЙЛ, МЫ ПЕРЕЗВОНИМ!'
 image: cover.png
 tags:
     - draft
@@ -8,16 +8,20 @@ tags:
 # Заебали со своими попапами 🙃 {.align-center}
 
 <script>
-window.addEventListener('beforeunload', event => {
-    event.preventDefault();
-    event.returnValue = '';
+window.addEventListener('DOMContentLoaded', () => {
+    confirm('Are you ready? 😉');
+
+    setTimeout(() => {
+        alert('Добро пожаловать в бложек!!');
+    }, 20 * 1000);
 });
 </script>
 
 <script>
-setTimeout(() => {
-    alert('Добро пожаловать в бложек!!');
-}, 15 * 1000);
+window.addEventListener('beforeunload', event => {
+    event.preventDefault();
+    event.returnValue = '';
+});
 </script>
 
 <script>
@@ -221,6 +225,12 @@ drift.SNIPPET_VERSION = '0.3.1';
 drift.load('xn58t8uzb8kr');
 </script>
 <!-- End of Async Drift Code -->
+
+<style>
+    .drift-frame-controller-align-right {
+        right: 120px !important;
+    }
+</style>
 
 <!-- Gorgias Chat Widget Start -->
 <div id="gorgias-chat">
