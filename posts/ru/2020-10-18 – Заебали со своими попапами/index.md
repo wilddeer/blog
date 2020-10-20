@@ -17,7 +17,7 @@ window.addEventListener('beforeunload', event => {
 <script>
 setTimeout(() => {
     alert('Добро пожаловать в бложек!!');
-}, 3 * 1000);
+}, 15 * 1000);
 </script>
 
 <script>
@@ -154,5 +154,140 @@ olark.identify('1714-172-10-8287');</script>
   }(document, 'sitekit-sdk'));
 </script>
 
+<script id="optinly_script" async="true" data-app_id=''   src='https://cdn.optinly.net/v1/optinly.js'> </script>
+
+<!-- Begin of Chaport Live Chat code -->
+<script type="text/javascript">
+(function(w,d,v3){
+w.chaportConfig = {
+  appId : '5f8eb2fa955da07eada9fbc9'
+};
+
+if(w.chaport)return;v3=w.chaport={};v3._q=[];v3._l={};v3.q=function(){v3._q.push(arguments)};v3.on=function(e,fn){if(!v3._l[e])v3._l[e]=[];v3._l[e].push(fn)};var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://app.chaport.com/javascripts/insert.js';var ss=d.getElementsByTagName('script')[0];ss.parentNode.insertBefore(s,ss)})(window, document);
+</script>
+<!-- End of Chaport Live Chat code -->
+
+<style>
+    .chaport-container {
+        bottom: 100px !important;
+    }
+</style>
+
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f8e2cab8fc7b365"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f8e2cab8fc7b365" async></script>
+
+<!-- Start of  Zendesk Widget script -->
+<script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=380d8f70-e0c5-4b45-8fc2-119d0d0a2852" async> </script>
+<!-- End of  Zendesk Widget script -->
+
+<script type="text/javascript">
+    !function(e,t,n){function a(){var e=t.getElementsByTagName("script")[0],n=t.createElement("script");n.type="text/javascript",n.async=!0,n.src="https://beacon-v2.helpscout.net",e.parentNode.insertBefore(n,e)}if(e.Beacon=n=function(t,n,a){e.Beacon.readyQueue.push({method:t,options:n,data:a})},n.readyQueue=[],"complete"===t.readyState)return a();e.attachEvent?e.attachEvent("onload",a):e.addEventListener("load",a,!1)}(window,document,window.Beacon||function(){});
+</script>
+<script type="text/javascript">window.Beacon('init', 'b19bc181-5573-4076-9f11-a475b865ba40')</script>
+
+<script>Beacon('open');</script>
+<style>
+    .BeaconFabButtonFrame {
+        z-index: 99999999 !important;
+        bottom: 300px !important;
+    }
+</style>
+
+<!-- Start of Async Drift Code -->
+<script>
+"use strict";
+
+!function() {
+  var t = window.driftt = window.drift = window.driftt || [];
+  if (!t.init) {
+    if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+    t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ],
+    t.factory = function(e) {
+      return function() {
+        var n = Array.prototype.slice.call(arguments);
+        return n.unshift(e), t.push(n), t;
+      };
+    }, t.methods.forEach(function(e) {
+      t[e] = t.factory(e);
+    }), t.load = function(t) {
+      var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+      o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+      var i = document.getElementsByTagName("script")[0];
+      i.parentNode.insertBefore(o, i);
+    };
+  }
+}();
+drift.SNIPPET_VERSION = '0.3.1';
+drift.load('xn58t8uzb8kr');
+</script>
+<!-- End of Async Drift Code -->
+
+<!-- Gorgias Chat Widget Start -->
+<div id="gorgias-chat">
+<script>window.gorgiasChatParameters = {}</script>
+<script src="https://config.gorgias.io/production/MdAV17qkrV6ZWgaX/chat/bgJ1Q6QKB07vXKOM.js" defer></script>
+</div>
+<!-- Gorgias Chat Widget End -->
+
+<script src="https://chat-assets.frontapp.com/v1/chat.bundle.js"></script>
+<script>
+  window.FrontChat('init', {chatId: '46564c05b8ed6c7374199ed345954e85', useDefaultLauncher: true});
+</script>
+
+<script>
+!function(e,l,v,i,o,n){e[i]||(e[i]={}),e[i].account_id=n;var g,h;g=l.createElement(v),g.type="text/javascript",g.async=1,g.src=o+n,h=l.getElementsByTagName(v)[0],h.parentNode.insertBefore(g,h);e[i].q=[];e[i].on=function(z,y){e[i].q.push([z,y])}}(window,document,"script","_elev","https://cdn.elev.io/sdk/bootloader/v4/elevio-bootloader.js?cid=","5f8ebd6c8979d");
+</script>
+
+<!-- Carrot quest BEGIN -->
+<script type="text/javascript">
+!function(){function t(t,e){return function(){window.carrotquestasync.push(t,arguments)}}if("undefined"==typeof carrotquest){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="//cdn.carrotquest.app/api.min.js",document.getElementsByTagName("head")[0].appendChild(e),window.carrotquest={},window.carrotquestasync=[],carrotquest.settings={};for(var n=["connect","track","identify","auth","oth","onReady","addCallback","removeCallback","trackMessageInteraction"],a=0;a<n.length;a++)carrotquest[n[a]]=t(n[a])}}(),carrotquest.connect("38943-f23feeca5ed801eced59799a65");
+</script>
+<!-- Carrot quest END -->
+
+<script src="//cdn.krible.com/loader?code=37cfcbae18916a489671b48af3650134" async></script>
+
+<script type="text/javascript">function add_chatinline(){var hccid=47040313;var nt=document.createElement("script");nt.async=true;nt.src="https://mylivechat.com/chatinline.aspx?hccid="+hccid;var ct=document.getElementsByTagName("script")[0];ct.parentNode.insertBefore(nt,ct);}
+add_chatinline(); </script>
+
+<!-- NETROX SC CODE. Theme No. 1 --><script type="text/javascript">(function(){ var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//c.netrox.sc/ACB24985-EE44-6F99-A287-FDEE30F1084A/c.js?tmpl=1'; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss); })(); </script>
+
+<!-- Begin LeadBack code {literal} -->
+<script>
+    var _emv = _emv || [];
+    _emv['campaign'] = 'd251117be5243e1395aedb2e';
+
+    (function() {
+        var em = document.createElement('script'); em.type = 'text/javascript'; em.async = true;
+        em.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'leadback.ru/js/leadback.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(em, s);
+    })();
+</script>
+<!-- End LeadBack code {/literal} -->
+
+<script src="https://livechatv2.chat2desk.com/packs/ie-11-support.js"></script>
+
+<script>
+  window.chat24_token = "cc9d52c8419eaa41038bb4a78bb573f5";
+  window.chat24_url = "https://livechatv2.chat2desk.com";
+  window.chat24_socket_url ="wss://livechatv2.chat2desk.com/widget_ws_new";
+  window.chat24_show_new_wysiwyg = "false";
+  window.chat24_static_files_domain = "https://storage.chat2desk.com/";
+  window.lang = "ru";
+  window.fetch("".concat(window.chat24_url, "/packs/manifest.json?nocache=").concat(new Date().getTime())).then(function (res) {
+    return res.json();
+  }).then(function (data) {
+    var chat24 = document.createElement("script");
+    chat24.type = "text/javascript";
+    chat24.async = true;
+    chat24.src = "".concat(window.chat24_url).concat(data["application.js"]);
+    document.body.appendChild(chat24);
+  });
+</script>
+
+<script type='text/javascript' data-cfasync='false'>
+window.purechatApi = { l: [], t: [], on: function () { this.l.push(arguments); } }; (function () { var done = false; var script = document.createElement('script'); script.async = true; script.type = 'text/javascript'; script.src = 'https://app.purechat.com/VisitorWidget/WidgetScript'; document.getElementsByTagName('HEAD').item(0).appendChild(script); script.onreadystatechange = script.onload = function (e) { if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) { var w = new PCWidget({c: '37406047-7992-41e1-9e71-2d087a826c7d', f: true }); done = true; } }; })();</script>
+
+<link rel="stylesheet" href="https://cdn.envybox.io/widget/cbk.css">
+<script type="text/javascript" src="https://cdn.envybox.io/widget/cbk.js?wcb_code=40f981501e5fdabc8dd6406869594e0c" charset="UTF-8" async></script>
+
+<script async src="https://lib.usedesk.ru/secure.usedesk.ru/widget_159563_23172.js"></script>
