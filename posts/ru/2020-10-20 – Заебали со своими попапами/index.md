@@ -311,7 +311,4 @@ window.purechatApi = { l: [], t: [], on: function () { this.l.push(arguments); }
 
 <script async src="https://lib.usedesk.ru/secure.usedesk.ru/widget_159563_23172.js"></script>
 
-<script>var adRackPopup = { domainId: "5f8f53d49bbf4d00289df56f", analyticsUrl: "https://ban-analytics.adrack.com" }</script>
-<script src="https://ban-api.adrack.com/cdn/embed.js" async></script>
-
 <script id='pixel-script-poptin' src='https://cdn.popt.in/pixel.js?id=5f51fb3580025' async='true'></script>
