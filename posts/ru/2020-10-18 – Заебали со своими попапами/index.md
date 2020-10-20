@@ -222,6 +222,12 @@ drift.load('xn58t8uzb8kr');
 </script>
 <!-- End of Async Drift Code -->
 
+<style>
+    .drift-frame-controller-align-right {
+        right: 120px !important;
+    }
+</style>
+
 <!-- Gorgias Chat Widget Start -->
 <div id="gorgias-chat">
 <script>window.gorgiasChatParameters = {}</script>
