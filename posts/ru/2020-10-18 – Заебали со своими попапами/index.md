@@ -8,6 +8,19 @@ tags:
 # Заебали со своими попапами 🙃 {.align-center}
 
 <script>
+window.addEventListener('beforeunload', event => {
+    event.preventDefault();
+    event.returnValue = '';
+});
+</script>
+
+<script>
+setTimeout(() => {
+    alert('Добро пожаловать в бложек!!');
+}, 3 * 1000);
+</script>
+
+<script>
     (function(d, w, c) {
         w.ChatraID = 'whfSp9BioNEGNq3rf';
         var s = d.createElement('script');
