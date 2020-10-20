@@ -312,3 +312,5 @@ window.purechatApi = { l: [], t: [], on: function () { this.l.push(arguments); }
 <script async src="https://lib.usedesk.ru/secure.usedesk.ru/widget_159563_23172.js"></script>
 
 <script id='pixel-script-poptin' src='https://cdn.popt.in/pixel.js?id=5f51fb3580025' async='true'></script>
+
+<script async id="socital-script" src="https://plugin.socital.com/static/v1/socital.js" data-socital-user-id="5f8f5bc2d1741c0191c74d59"></script>
