@@ -376,3 +376,7 @@ window.smartsupp||(function(d) {
     </script>
 <script type="text/javascript" defer src="https://a.plerdy.com/public/js/click/main.js"></script>
 <!-- END PLERDY CODE -->
+
+<!-- MailMunch for Grumpy Blog -->
+<!-- Paste this code right before the </head> tag on every page of your site. -->
+<script src="//a.mailmunch.co/app/v1/site.js" id="mailmunch-script" data-mailmunch-site-id="847044" async="async"></script>
