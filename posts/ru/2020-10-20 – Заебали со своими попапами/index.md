@@ -140,6 +140,15 @@ olark.identify('1714-172-10-8287');</script>
 
 <script>Intercom('show');</script>
 
+<style>
+  .intercom-launcher-frame {
+    bottom: 100px !important;
+  }
+  .intercom-messenger-frame {
+    bottom: 180px !important;
+  }
+</style>
+
 <script type="text/javascript" src="//cdn.callbackhunter.com/cbh.js?hunter_code=425a649fa22d084d2799f544e022d32b" charset="UTF-8" async></script>
 
 <script type="text/javascript" src="//cdn.callbackhunter.com/cbh.js?hunter_code=3c21510f8e4ec4b152ffb027100a36f2" charset="UTF-8"></script>
@@ -332,3 +341,27 @@ window.purechatApi = { l: [], t: [], on: function () { this.l.push(arguments); }
     right: 220px !important;
   }
 </style>
+
+<!-- ClickDesk Live Chat Service for websites -->
+<script type='text/javascript'>
+var _glc =_glc || []; _glc.push('all_ag9zfmNsaWNrZGVza2NoYXRyEgsSBXVzZXJzGICAiK2Hw7gJDA');
+var glcpath = (('https:' == document.location.protocol) ? 'https://my.clickdesk.com/clickdesk-ui/browser/' :
+'http://my.clickdesk.com/clickdesk-ui/browser/');
+var glcp = (('https:' == document.location.protocol) ? 'https://' : 'http://');
+var glcspt = document.createElement('script'); glcspt.type = 'text/javascript';
+glcspt.async = true; glcspt.src = glcpath + 'livechat-cloud-new.js';
+var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(glcspt, s);
+</script>
+<!-- End of ClickDesk -->
+
+<!-- Smartsupp Live Chat script -->
+<script type="text/javascript">
+var _smartsupp = _smartsupp || {};
+_smartsupp.key = '549eb4dd80ed7a0705b4cd553357593969429ec0';
+window.smartsupp||(function(d) {
+  var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+  s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+  c.type='text/javascript';c.charset='utf-8';c.async=true;
+  c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+})(document);
+</script>
