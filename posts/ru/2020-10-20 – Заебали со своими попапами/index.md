@@ -365,3 +365,5 @@ window.smartsupp||(function(d) {
   c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
 })(document);
 </script>
+
+<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="81740726-6cea-459d-b2f8-5711b311703d";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
