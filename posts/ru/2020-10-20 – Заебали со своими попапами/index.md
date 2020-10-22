@@ -314,3 +314,21 @@ window.purechatApi = { l: [], t: [], on: function () { this.l.push(arguments); }
 <script id='pixel-script-poptin' src='https://cdn.popt.in/pixel.js?id=5f51fb3580025' async='true'></script>
 
 <script async id="socital-script" src="https://plugin.socital.com/static/v1/socital.js" data-socital-user-id="5f8f5bc2d1741c0191c74d59"></script>
+
+<script>
+  function initFreshChat() {
+    window.fcWidget.init({
+      token: "b5be79a7-768f-4257-869a-ea790ffc3367",
+      host: "https://wchat.freshchat.com",
+      open: true
+    });
+  }
+  function initialize(i,t){var e;i.getElementById(t)?initFreshChat():((e=i.createElement("script")).id=t,e.async=!0,e.src="https://wchat.freshchat.com/js/widget.js",e.onload=initFreshChat,i.head.appendChild(e))}function initiateCall(){initialize(document,"freshchat-js-sdk")}window.addEventListener?window.addEventListener("load",initiateCall,!1):window.attachEvent("load",initiateCall,!1);
+</script>
+
+<style>
+  #fc_frame,
+  #fc_frame.fc-widget-normal {
+    right: 220px !important;
+  }
+</style>
