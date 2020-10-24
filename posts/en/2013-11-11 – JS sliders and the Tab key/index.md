@@ -110,6 +110,7 @@ addEvent(dot, 'click', (function(x, d) {
 
 <%- include('/svg/code-solid.svg') %>Simple and universal `addEvent` function is used above:
 
+::: .pre-contained
 ```js
 function addEvent(el, event, func, bool) {
   el.addEventListener ?
@@ -117,6 +118,7 @@ function addEvent(el, event, func, bool) {
     el.attachEvent('on'+event, func);
 }
 ```
+:::
 
 </div>
 </del>

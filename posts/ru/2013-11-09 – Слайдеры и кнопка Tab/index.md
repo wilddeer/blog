@@ -108,6 +108,7 @@ addEvent(dot, 'click', (function(x, d) {
 
 <%- include('/svg/code-solid.svg') %>Выше используется простая универсальная функция `addEvent`{.is-colored-bg}:
 
+::: .pre-contained
 ```js
 function addEvent(el, event, func, bool) {
   el.addEventListener ?
@@ -115,6 +116,7 @@ function addEvent(el, event, func, bool) {
     el.attachEvent('on'+event, func);
 }
 ```
+:::
 
 </div>
 </del>
