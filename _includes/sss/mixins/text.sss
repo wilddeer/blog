@@ -254,9 +254,10 @@
 
     pre
         background-color: $codeBg
+        padding-left: 1.5em
+        padding-right: 1.5em
         padding-top: 1.5em
         padding-bottom: 1.5em
-        @mixin contentFullwidth
         margin-bottom: 2em
         font-size: 0.8em
         overflow: auto
@@ -264,7 +265,14 @@
         @media (min-width: $tabletBreakpoint)
             font-size: 0.9em
 
-    pre code
+    > pre,
+    :not(.pre-contained) > pre
+        padding-left: 0
+        padding-right: 0
+        @mixin contentFullwidth
+
+    > pre code,
+    :not(.pre-contained) > pre code
         display: block
         @mixin contentBox
 
