@@ -70,6 +70,12 @@
             color: $inverseTextColor
             background: $demoBgColor
 
+    figure.is-demo.is-arbitrary
+        padding-top: 2.5em
+        padding-bottom: 2.5em
+        color: $inverseTextColor
+        background: $demoBgColor
+
     figure.is-demo.is-light
         @media (min-width: $tabletOverlapBreakpoint)
             background-color: $demoLightBgColor
@@ -80,6 +86,10 @@
         @media (min-width: $tabletOverlapBreakpoint)
             @mixin contentBox $contentOOTBMaxWith
             color: $inverseTextTintedColor
+
+    figure.is-demo.is-arbitrary figcaption
+        @mixin contentBox $contentOOTBMaxWith
+        color: $inverseTextTintedColor
 
     figure.is-demo.is-light figcaption
         @media (min-width: $tabletOverlapBreakpoint)
@@ -243,12 +253,20 @@
         @mixin code
 
     pre
+        background-color: $codeBg
+        padding-top: 1.5em
+        padding-bottom: 1.5em
+        @mixin contentFullwidth
         margin-bottom: 2em
         font-size: 0.8em
         overflow: auto
 
         @media (min-width: $tabletBreakpoint)
             font-size: 0.9em
+
+    pre code
+        display: block
+        @mixin contentBox
 
     .code-max-height > pre
         max-height: 80vh

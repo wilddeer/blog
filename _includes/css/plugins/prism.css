@@ -16,7 +16,6 @@ pre[class*="language-"] {
   hyphens: none;
 }
 pre[class*="language-"] {
-  padding-bottom: 0.5em;
   overflow: auto;
 }
 :not(pre) > code[class*="language-"] {
