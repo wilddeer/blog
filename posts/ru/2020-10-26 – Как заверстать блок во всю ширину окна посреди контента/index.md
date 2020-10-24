@@ -1,18 +1,19 @@
 ---
-description: 'Пока переделывал блог, захотелось, чтобы посреди контента можно было ворваться с каким-нибудь блоком во всю ширину окна'
+description: 'Пока переделывал блог, захотелось, чтобы посреди контента можно было ворваться с каким-нибудь блоком во всю ширину окна.'
 image: cover.png
-tags:
-    - draft
 ---
 
-# Как заверстать блок во всю ширину, не разбивая контент
+<% const title = 'Как заверстать блок во всю ширину окна посреди контента' %>
 
-Пока переделывал блог, захотелось, чтобы посреди контента можно было ворваться с каким-нибудь блоком во всю ширину окна:
+# <%= title %> {.sr-only}
+
+Пока переделывал блог, захотелось, чтобы посреди контента можно было ворваться с каким-нибудь блоком во всю ширину окна. Например, вот так:
 
 <figure class="is-demo is-arbitrary" style="background: #0f364d no-repeat center/cover url(lucas-benjamin-wQLAGv4_OYs-unsplash.jpg); padding-top: 6em; padding-bottom: 6em;">
-    <div class="content-box text-container" style="color: rgba(255, 255, 255, 0.9); text-align: center;">
-        <div style="font-size: 5em; line-height: 1em;">Ууу&shy;ааа&shy;аааа!</div>
+    <div class="content-box text-container" style="color: rgba(255, 255, 255, 0.9); text-align: center;" aria-hidden="true">
+        <h1 class="is-smaller"><%= title %></h1>
     </div>
+    <img class="sr-only" src="lucas-benjamin-wQLAGv4_OYs-unsplash.jpg" alt="Просто рандомная абстрактная фотка с Ансплеша. Красивенькая.">
     <figcaption>
         Фотка <a class="is-colored-bg" href="https://unsplash.com/@aznbokchoy?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Лукаса Бенджамина</a> с <a class="is-colored-bg" href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Ансплеша</a>
     </figcaption>
