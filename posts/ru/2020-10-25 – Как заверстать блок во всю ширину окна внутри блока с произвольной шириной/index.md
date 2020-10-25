@@ -3,17 +3,20 @@ description: 'Пока переделывал блог, захотелось, ч
 image: cover.jpg?v=2
 ---
 
-<% const title = 'Как заверстать блок во всю ширину окна внутри блока с произвольной шириной' %>
+<%
+    const title = 'Как заверстать блок во всю ширину окна внутри блока с произвольной шириной';
+    const pic = 'wil-stewart-RpDA3uYkJWM-unsplash.jpg';
+%>
 
 # <%= title %> {.sr-only}
 
 Пока переделывал блог, захотелось, чтобы посреди контента можно было ворваться с каким-нибудь блоком во всю ширину окна. Например, вот так:
 
-<figure class="is-demo is-arbitrary" style="background: #011126 no-repeat center/cover url(wil-stewart-RpDA3uYkJWM-unsplash.jpg); padding-top: 6em; padding-bottom: 6em; text-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);">
+<figure class="is-demo is-arbitrary" style="background: #011126 no-repeat center/cover url(<%= pic %>); padding-top: 6em; padding-bottom: 6em; text-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);">
     <div class="content-box text-container" style="color: rgba(255, 255, 255, 0.9); text-align: center;" aria-hidden="true">
         <h1 class="is-smaller"><%= title %></h1>
     </div>
-    <img class="sr-only" src="lucas-benjamin-wQLAGv4_OYs-unsplash.jpg" alt="Просто рандомная абстрактная фотка с Ансплеша. Красивенькая.">
+    <img class="sr-only" src="<%= pic %>" alt="Просто рандомная абстрактная фотка с Ансплеша. Красивенькая.">
     <figcaption>
         Фотка <a class="is-colored-bg" href="https://unsplash.com/@wilstewart3?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Вила Стюарта</a> из <a class="is-colored-bg" href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Ансплеша</a>
     </figcaption>
