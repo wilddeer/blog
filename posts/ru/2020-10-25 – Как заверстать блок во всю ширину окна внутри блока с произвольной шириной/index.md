@@ -16,7 +16,7 @@ image: cover.jpg?v=2
     <div class="content-box text-container" style="color: rgba(255, 255, 255, 0.9); text-align: center;" aria-hidden="true">
         <h1 class="is-smaller"><%= title %></h1>
     </div>
-    <img class="sr-only" src="<%= pic %>" alt="Просто рандомная абстрактная фотка с Ансплеша. Красивенькая.">
+    <img class="sr-only" src="<%= pic %>" alt="Просто рандомная космическая фотка с Ансплеша. Красивенькая.">
     <figcaption>
         Фотка <a class="is-colored-bg" href="https://unsplash.com/@wilstewart3?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Вила Стюарта</a> из <a class="is-colored-bg" href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Ансплеша</a>
     </figcaption>
