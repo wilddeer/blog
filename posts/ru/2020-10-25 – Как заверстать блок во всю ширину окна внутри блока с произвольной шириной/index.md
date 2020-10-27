@@ -124,7 +124,7 @@ image: cover.jpg?v=2
 </script>
 ```
 
-Теперь у нас есть `var(--vw)`, в котором лежит нужное нам количество пикселей. Но по [старой традиции](https://htmlacademy.ru/blog/boost/frontend/graceful-degradation) лучше использовать ее с фоллбеком на обычный `1vw`, вот так: `var(--vw, 1vw)`{.nowrap}.
+Теперь у нас есть переменная `var(--vw)`, в которой лежит нужное нам количество пикселей. Но по [старой традиции](https://htmlacademy.ru/blog/boost/frontend/graceful-degradation) лучше использовать ее с фоллбеком на обычный `1vw`, вот так: `var(--vw, 1vw)`{.nowrap}.
 
 В результате стиль блока превращается в...
 
