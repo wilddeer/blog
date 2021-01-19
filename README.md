@@ -1,7 +1,7 @@
 blog
 ====
 
-<http://wd.dizaina.net/>
+<https://grumpy.blog/>
 
 ```
 npm install
