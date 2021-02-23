@@ -2,8 +2,8 @@ tags:
     - post
 layout: layouts/post
 eleventyComputed:
-    title: "<%- $.page.fileSlug.split(' – ')[1] %>"
+    title: "<%- decodeURIComponent($.page.fileSlug.split(' – ')[1]) %>"
     date: "<%- $.page.fileSlug.split(' – ')[0] %>"
     permalink:
         "<%- ($.lang.includes('en') ? 'en/' : '') +
-        $.page.fileSlug.split(' – ')[1].replace(/\\s/g, '_').toLowerCase() %>/"
+        decodeURIComponent($.page.fileSlug.split(' – ')[1]).replace(/(\\s|:)/g, '_').toLowerCase() %>/"

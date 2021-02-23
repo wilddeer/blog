@@ -70,7 +70,7 @@ module.exports = config => {
                     folder,
                     fileName
                 ] = entry.split('/');
-                const slug = folder.split(' – ')[1].replace(/\s/g, '_');
+                const slug = decodeURIComponent(folder.split(' – ')[1]).replace(/(\s|:)/g, '_');
 
                 console.log('[asets copy] Slug', slug);
 
