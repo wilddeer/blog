@@ -1,12 +1,12 @@
 ---
-description: 'A tiny library that corrects incorrectly selected layout as you type – if a field you type to only accepts English letters, e.g. cardholder name field.'
+description: 'A tiny library that fixes incorrectly selected layout if a field the user types to only accepts English letters, e.g. cardholder name field.'
 tags:
     - draft
 ---
 
 # Whoops, wrong layout!
 
-[A tiny library](https://github.com/wilddeer/whoops-wrong-layout) that corrects incorrectly selected layout as you type – if a field you type to only accepts English letters, e.g. cardholder name field:
+[A tiny library](https://github.com/wilddeer/whoops-wrong-layout) that fixes incorrectly selected layout if a field the user types to only accepts English letters, e.g. cardholder name field:
 
 <style>
     .post_inputWrap {
