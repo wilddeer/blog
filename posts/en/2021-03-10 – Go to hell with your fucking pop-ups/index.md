@@ -1,6 +1,7 @@
 ---
 description: "YOU'RE LUCKY! DISCOUNT ON THE WHOLE ASSORTMENT!!!1 LEAVE YOUR EMAIL, WE'LL CALL YOU BACK!"
 image: cover.png
+langLink: 'заебали_со_своими_попапами'
 ---
 
 # Go to hell with your fucking pop-ups 🙃 {.align-center}
