@@ -9,57 +9,57 @@ image: cover.png
 
 Sendgrid is a <abbr title="Business-to-business" tabindex="-1">B2B</abbr> email service. All those “confirm your email address” and “news from our fucking startup” are usually sent through these guys. Other big ones are mailgan, mailchimp, postmark, amazon ses – you’ve probably heard of them.
 
-Sendgrid was bought a year ago by Twilio, a multibillion-cap company. Sirius business, you can rely on guys like that.
+Sendgrid was bought a year ago by Twilio, a multibillion-cap company. Serious business, you can rely on guys like that.
 
 ## And what about you?
 
 [Chatra](https://chatra.com), in addition to “reset-your-password”, has several functions that are tightly tied to sending emails: in chat it’s sending unread support responses to the visitor’s email, a symmetrical thing – sending unread messages from the visitor to support’s email; in mail it is actually sending mail messages from support. All of this worked through sendgrid until recently.
 
-And then one fine evening, at about 11 o’clock, our production tests checking the mail delivery fail. Let’s take this moment as the start of the incident.
+Until one fine evening, at about 11 o’clock, our production tests checking the mail delivery fail. Let’s take this moment as the start of the incident.
 
 ## Start of the incident {.arrow-header}
 
-It should be said that delivery of an email through Sendgrid could often take a couple of minutes, and sometimes even longer. We had a three-minute pause in our tests before checking the inbox, but it didn’t always save us either. Quite often we had false test fails whenever the email took longer than that to go though.
+It should be said that delivery of an email through sendgrid could often take a couple of minutes, and sometimes even longer. We had a three-minute pause in our tests before checking the inbox, but it didn’t always save us either. Quite often we had false test fails whenever the email took longer than that to go though.
 
 If you think of it, it’s a terrible delivery speed, especially if you have to confirm the email after you sign up. But we don’t require email confirmation right away, so it wasn’t a bottleneck in our signup process.
 
-Anyway, I get into my phone to make sure it’s yet another false alarm. But no, the email still hasn’t arrived. I sign up for a new account in Chatra – the mail doesn’t come. I refresh the mail for about 5 minutes. Fuck.
+Anyway, I take my phone to make sure it’s yet another false alarm. But no, the email still hasn’t arrived. I sign up for a new account in Chatra – nothing, signup emails don’t come. I refresh the inbox for about 5 minutes. Fuck.
 
-I get up, scratch my butt and go to my computer. I log in to Sendgrid and see this:
+I get up, scratch my butt and go to my computer, log in to sendgrid and see this:
 
 ![](fuck_you_too,_sendgrid.png =1788x390)
 {.is-ootb}
 
-Что, блядь? Эти уебки просто взяли и заблочили нам почту? Мы шлем миллионы сообщений в месяц, платим этим мудакам дохуя денег, у нас в их собственной системе рейтинга 98% «всё охуенно, вы совсем не спамеры», и они просто блокируют нам отсылку почты в продакшене без предупреждений?
+What the fuck? These motherfuckers just blocked our emails? We send millions of messages a month, we pay these assholes shitloads of money, we have a 98% “everything is fucking great, you’re not spammers at all” rating in their own rating system, and they just block us from sending mail in production without a warning?
 
-В саппорт-чат моментально улетает вопрос «какого хуя» (с более культурными английскими эпитетами, так как пишу не я), на что саппорт мнется и отвечает, что наш вопрос очень важен, ай хэв эливейтед ёр тикет приорити. Тикет приорити при этом остаётся где-то в районе «нихуя не срочно», саппорт откровенно пиздит. На любые дополнительные вопросы саппорт кормит нас голубцами с говном.
+The question “what the fuck” (with more cultured epithets, since I’m not the one writing) immediately flies into their support chat, to which the support agent falters and responds with a boilerplate “your question is very important, I heave elevated your ticket priority”. Ticket priority remains somewhere in the region of “not fucking urgent”, support is blatantly bullshitting us. Any additional questions are met with more bullshit.
 
-## 2 часа с начала инцидента {.arrow-header}
+## 2 hours since the incident started {.arrow-header}
 
-Становится понятно, что ребята в сендгриде массируют свои соски от нашего баттхерта, и в ближайшее время ничего не решится, надо что-то делать самим.
+It’s becoming apparent that dudes at sendgrid are massaging their nipples over our butthurt, and nothing is going to be resolved anytime soon. We have to do something ourselves.
 
 ![](https://media.giphy.com/media/gaZ51cn7sUY4U/giphy-downsized-large.gif =480x267)
 
-Мы вспоминаем, что по счастливой случайности у нас завалялся ещё один аккаунт сендгрида для сайдпроектов. Достаточно поменять апи-ключ, чтобы отправить туда весь поток наших емейлов, но это стремно по двум причинам:
+We remember that we happen to have one more sendgrid account for our side-projects. Changing the api key is enough to send all of our emails via that account, but there are two reasons why this can go sideways:
 
-1.  Мы до сих пор не знаем, какого хуя нас забанили. Не хочется стриггерить бан и на втором аккаунте и потерять любую возможность быстро восстановить отправку почты.
-2.  Резкая отправка почты с новых айпи-адресов может сильно просадить доставляемость почты, потому что почтовики привыкли получать нашу почту с наших выделенных айпи, оставшихся в основном акке.
+1.  We still don’t know why the fuck we got banned. We don’t want to get banned on a second account and lose any chance to quickly restore email delivery.
+2.  Abruptly sending mail from new IP addresses can severely impact mail deliverability, because email services are used to receiving our mail from our dedicated IPs left in our main account.
 
-    Если вы не понимаете, о чем речь, добро пожаловать в ебанутый мир суперлегаси технологии, обмазанной невероятными костылями, — электронной почты.
+    If you don’t know what’s all this about, welcome to the fucked up world of superlegacy technology overlaid with layers of scaffolding and patches: email.
 
-На второй пункт сейчас в целом насрать, потому что какая-то доставляемость лучше никакой доставляемости. Но получить второй бан от сервиса, платящим, сука блядь, <del>клиентом</del> заложником которого мы являемся, стремно.
+The second point doesn’t really matter right now, because some deliverability is better than no deliverability at all. But it’s scary to get a second ban from a service that we are a paying <del>customer</del> hostage of.
 
-В течение ночи я плавно перевожу отправку почты на запасной акк. К утру весь функционал восстанавливается, акк не забанен. Ура, блядь. Можно поспать.
+Throughout the night, I gradually transfer email sending to the spare account. By morning all functionality is restored and the account is not banned. Fucking hooray. I can have some sleep now.
 
-## 16 часов с начала инцидента {.arrow-header}
+## 16 hours since the incident started {.arrow-header}
 
-Аккаунт все ещё забанен, в тикете тишина. Поразительно, насколько им просто похуй на платящих клиентов. Что у них там, блядь, происходит?
+The account is still banned, the ticket is silent. It's amazing how much they just don’t give a fuck about paying customers. What the fuck is going on over there?
 
-Очевидно, что надо срочно валить на другой сервис. Пока я изучал альтернативы, [Тёме](https://twitter.com/artpolikarpov) кто-то подсказал попробовать [Постмарк](https://postmarkapp.com/). После такого факапа с сендгридом я изучил про постмарк буквально всё: чё за компания, чё за основатели, сколько клиентов, сколько зарабатывают, отзывы, весь сайт до дыр.
+It is obvious that we have to urgently move to another service. While I was exploring alternatives, someone suggested to try [Postmark](https://postmarkapp.com/). After fiasco with Sendgrid, I studied literally everything about Postmark: what kind of company it is, who the founders are, how many clients they have, how much they earn, reviews, the whole site to the ground.
 
-Чуваки оставили очень приятное впечатление, что их ебет, что они делают:
+I was left with a pleasant impression that they actually give a fuck about what they do:
 
-- они гордятся скоростью доставки почты и показывают реалтаймовые данные о скорости доставки прямо на ленде,
+- they pride themselves on mail delivery speeds and show real-time data on delivery speeds right on the landing page,
 - там же на ленде они показывают рейтинг саппорта и обещают отвечать в течение пары часов,
 - они очень парятся за свою репутацию как отправителя, и поэтому строго разделяют транзакционные письма и почтовые рассылки (настолько строго, что до недавнего времени вообще не занимались почтовыми рассылками, а теперь шлют рассылки с отдельного пула айпи и очень рекомендуют использовать для них отдельный поддомен),
 - они не пытаются развести на покупку выделенных айпи и прямо говорят, что в большинстве случаев выделенные айпи не нужны, а шейред айпи с хорошим рейтингом будут работать на доставляемость почты гораздо лучше.
