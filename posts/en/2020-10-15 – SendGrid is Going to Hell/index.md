@@ -10,15 +10,15 @@ tags:
 
 ## What's SendGrid?
 
-SendGrid is a <abbr title=Business to Business" tabindex="-1">B2B</abbr> email delivery service. All those "confirm your email address" and "news from our crappy startup" emails usually get sent through such services. Other well-known services include Mailgun, Mailchimp, Postmark, and Amazon SES — you've probably heard of some of these.
+SendGrid is a <abbr title="Business to Business" tabindex="-1">B2B</abbr> email delivery service. All those “confirm your email address” and “news from our crappy startup” emails usually get sent through such services. Other well-known services include Mailgun, Mailchimp, Postmark, and Amazon SES — you’ve probably heard of some of these.
 
 SendGrid was acquired a year ago by Twilio, a company with a multibillion-dollar market cap. Serious business, you can rely on these guys.
 
 ## So, what happened?
 
-At [Chatra](https://chatra.com), apart from "reset your password," there are several functions heavily dependent on sending emails: in the chat, it involves sending unread support replies to the visitor's email, and vice versa; in email, it means sending email messages from support. All this was running through SendGrid until recently.
+At [Chatra](https://chatra.com), apart from “reset your password,” there are several functions heavily dependent on sending emails: in the chat, it involves sending unread support replies to the visitor’s email, and vice versa; in email, it means sending email messages from support. All this was running through SendGrid until recently.
 
-Then, one fine evening around 11 PM, our production email sending tests failed. Let's consider this the start of the incident.
+Then, one fine evening around 11 PM, our production email sending tests failed. Let’s consider this the start of the incident.
 
 ## The Start of the Incident {.arrow-header}
 
