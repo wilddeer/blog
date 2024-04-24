@@ -1,6 +1,7 @@
 ---
 description: 'Прочитайте пост, чтобы узнать, кто вселенская протомразь'
 image: cover.png
+langLink: 'sendgrid_is_going_to_hell'
 ---
 
 # SendGrid катится к хуям
