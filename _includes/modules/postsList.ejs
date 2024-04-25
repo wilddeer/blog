@@ -39,6 +39,15 @@
         </h2>
     <% } %>
 
+    <% if (yearHeading === 2021) { %>
+        <h2 class="post-list-title is-empty">
+            2022...2023
+            <span class="post-list-title__tumble">
+                <%- include('/svg/khinkali.svg') %>
+            </span>
+        </h2>
+    <% } %>
+
     <% if (yearHeading) { %>
         <h2 class="post-list-title"><%= yearHeading %></h2>
 
