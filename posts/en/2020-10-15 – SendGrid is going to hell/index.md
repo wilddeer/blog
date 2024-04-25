@@ -56,7 +56,7 @@ Overnight, I smoothly transition our mail delivery to the backup account. By mor
 
 The account is still banned, silence in the ticket. Astonishing how they just don’t give a fuck about paying customers. What the fuck is going on there?
 
-Obviously, we need to urgently switch to another service. While I was researching alternatives, someone suggested [Postmark](https://postmarkapp.com/) to [Tyoma](https://twitter.com/artpolikarpov). After such a fuck-up with SendGrid, I studied everything about Postmark: what kind of company, who are the founders, how many clients they have, how much they earn, reviews, the entire website inside out.
+Obviously, we need to urgently switch to another service. While I was researching alternatives, someone suggested [Postmark](https://postmarkapp.com/) to [Tyoma](https://twitter.com/artpolikarpov). After such a fuck-up with SendGrid, I studied everything about Postmark: what kind of company they are, who are the founders, how many clients they have, how much they earn, reviews, the entire website inside out.
 
 The guys made a very good impression, they give a fuck about what they’re doing:
 
