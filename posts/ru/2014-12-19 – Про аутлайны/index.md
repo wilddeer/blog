@@ -1,6 +1,6 @@
 ---
 description: 'Как убрать бесящие аутлайны не убивая доступность.'
-image: cover.png
+image: cover.webp
 ---
 
 <style>
@@ -50,7 +50,7 @@ image: cover.png
 Ситуация отличается не только между браузерами, но и у различных фокусируемых элементов внутри одного браузера. Три вида фокусируемых «нажимабельных» элементов — кнопка, ссылка и элемент с `tabindex="0"`:
 
 <figure>
-    <iframe class="demo-frame js-demo-frame" width="100%" src="/demos/outline-demo.html" frameborder="0"></iframe>
+    <iframe class="demo-frame js-demo-frame" width="100%" src="/demos/outline-demo/ru.html" frameborder="0"></iframe>
     <figcaption>
         Для чистоты эксперимента элементы сидят в айфрейме
     </figcaption>
