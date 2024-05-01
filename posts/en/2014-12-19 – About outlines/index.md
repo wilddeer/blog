@@ -1,6 +1,7 @@
 ---
 description: 'How to remove annoying outlines without killing accessibility.'
 image: cover.webp
+langLink: 'про_аутлайны'
 ---
 
 <style>

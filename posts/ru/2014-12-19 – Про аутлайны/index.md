@@ -1,6 +1,7 @@
 ---
 description: 'Как убрать бесящие аутлайны не убивая доступность.'
 image: cover.webp
+langLink: 'about_outlines'
 ---
 
 <style>
