@@ -145,7 +145,7 @@ And... our account is still banned! AAAAAaaaahaaa-ha-ha-haa-hah-aaaaaahaaahhaa-p
 
 And what about the phishing link? Could someone have spammed this link from Chatra? Nope! Exactly one (one, fucking ONE) email was sent with this link. And the juicy part—where this link came from.
 
-One of our clients has a Facebook business page connected to Chatra. And someone sent him this link in a chat on that page. The client didn’t read the message in Chatra, and we sent it to his email. Ta-daa, the phishing link went by mail! Quickly ban these sick fucks, we’ll figure it out later.
+One of our clients has a Facebook business page connected to Chatra. And someone sent him this link in a chat on that page. The client didn’t read the message in Chatra, and we sent it to their email. Ta-daa, the phishing link went by mail! Quickly ban these sick fucks, we’ll figure it out later.
 
 And the juicy part is this: Facebook didn’t filter this link and allowed it to be sent to a person in Messenger. Facebook, which suddenly banned our domain months ago without explaining why (yeah, try writing a post on Facebook with a link to chatra.com, nothing will happen!), which meticulously removed any available means of communication so that you can’t even complain about an unfair domain ban, let alone question the decision made by Facebook, this company with a colossal fuck-ton of dollars in capitalization calmly lets an obvious phishing link through to us, for which another company with a capitalization an order of magnitude smaller, but still in fucking trillions, bans us.
 
