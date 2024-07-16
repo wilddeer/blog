@@ -1,5 +1,5 @@
 ---
-description: 'Мой старый эпилептичный шрифт с Пепяки, воссозданный средствами CSS3.'
+description: 'Мой старый эпилептичный шрифт, воссозданный средствами CSS3.'
 image: cover.png
 layout: layouts/postWrap
 postMod: is-no-padding-top
