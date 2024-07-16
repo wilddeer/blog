@@ -14,7 +14,7 @@ A year ago, SendGrid was acquired by Twilio, a company with a multibillion-dolla
 
 ## And you are?
 
-At [Chatra](https://chatra.com), besides “reset your password,” there are several features tightly linked to sending emails: in the chat, it’s sending unread support replies to the visitor’s email, and the symmetrical feature—sending unread visitor messages to support’s email; in the mail, it’s actually sending email messages from support. All this was recently handled through SendGrid.
+In [Chatra](https://chatra.com), besides “reset your password,” there are several features tightly linked to sending emails: in chat conversations, it’s sending unread support replies to the visitor’s email, and a symmetrical feature—sending unread visitor messages to support’s email; in email threads, it’s actually sending email messages from support. All this was recently handled through SendGrid.
 
 And then one beautiful evening, around 11 PM, our prod tests for sending emails failed. Let’s take this moment as the start of the incident.
 
@@ -54,7 +54,7 @@ Overnight, I smoothly transition our mail delivery to the backup account. By mor
 
 ## 16 hours from the start of the incident {.arrow-header}
 
-The account is still banned, silence in the ticket. Astonishing how they just don’t give a fuck about paying customers. What the fuck is going on there?
+The main account is still banned, silence in the ticket. Astonishing how they just don’t give a fuck about paying customers. What the fuck is going on there?
 
 Obviously, we need to urgently switch to another service. While I was researching alternatives, someone suggested [Postmark](https://postmarkapp.com/) to [Tyoma](https://twitter.com/artpolikarpov). After such a fuck-up with SendGrid, I studied everything about Postmark: what kind of company they are, who are the founders, how many clients they have, how much they earn, reviews, the entire website inside out.
 
@@ -102,7 +102,7 @@ And also, Postmark has a nice pleasant interface. It’s convenient and cool to 
 
 At this point, the incident for Chatra, as a product, is over, but SendGrid doesn’t let go so easily: the account is still banned, and the ticket is still silent.
 
-We try to downgrade our tariff at SendGrid, but the scumbag doesn’t let us downgrade and sends us to support. Hahaha. We write another ticket to support to get downgraded and get a refund.
+We try to downgrade our plan at SendGrid, but this scumbag doesn’t let us downgrade and sends us to support. Hahaha. We write another ticket to support to get downgraded and get a refund.
 
 ## 3 days from the start of the incident {.arrow-header}
 
@@ -145,9 +145,9 @@ And... our account is still banned! AAAAAaaaahaaa-ha-ha-haa-hah-aaaaaahaaahhaa-p
 
 And what about the phishing link? Could someone have spammed this link from Chatra? Nope! Exactly one (one, fucking ONE) email was sent with this link. And the juicy part—where this link came from.
 
-One of our clients has a Facebook business page connected to Chatra. And someone sent him this link in a chat on that page. The client didn’t read the message in Chatra, and we sent it to his email. Ta-daa, the phishing link went by mail! Quickly ban these sick fucks, we’ll figure it out later.
+One of our clients has a Facebook business page connected to Chatra. And someone sent him this link in a chat on that page. The client didn’t read the message in Chatra, and we sent it to their email. Ta-daa, the phishing link went by mail! Quickly ban these sick fucks, we’ll figure it out later.
 
-And the juicy part is this: Facebook didn’t filter this link and allowed it to be sent to a person in Messenger. Facebook, which suddenly banned our domain months ago without explaining why (yeah, try writing a post on Facebook with a link to chatra.com, nothing will happen!), which meticulously removed any available means of communication so that you can’t even complain about an unfair domain ban, let alone question the decision made by Facebook, this company with a colossal fuck-ton of dollars in capitalization calmly lets an obvious phishing link through to us, for which another company with a capitalization an order of magnitude smaller, but still in fucking trillions, bans us.
+And the juicy part is this: Facebook didn’t filter this link and allowed it to be sent to a person in Messenger. Facebook, which suddenly banned our domain months ago without explaining why (yeah, try writing a post on Facebook with a link to chatra.com, it won’t allow you!), which meticulously removed any available means of communication so that you can’t even complain about an unfair domain ban, let alone question the decision made by Facebook, this company with a colossal fuck-ton of dollars in capitalization calmly lets an obvious phishing link through to us, for which another company with a capitalization an order of magnitude smaller, but still in fucking trillions, bans us.
 
 If SendGrid is a scumbag that shits on its customers, Facebook is the ultimate universal protoscumbag, shitting on everyone: on users, advertisers, businesses, media, its own employees, the sense of beauty, and common sense.
 
@@ -203,7 +203,7 @@ Looks like effective managers at SendGrid felt the approaching shitstorm, hustle
 
 Oh well.
 
-**Disclaimer.** Dear lawyers! The post reflects only my personal attitude towards the described events, which may not coincide (but does it not coincide? we will never know) with the position of the company Roger Wilco LLC.
+**Disclaimer.** Dear lawyers! The post reflects only my personal attitude towards the described events, which may not coincide (but does it not coincide? we will never know) with the position of Roger Wilco LLC.
 {.notice .block .is-mt}
 
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
