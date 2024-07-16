@@ -102,7 +102,7 @@ And also, Postmark has a nice pleasant interface. It’s convenient and cool to 
 
 At this point, the incident for Chatra, as a product, is over, but SendGrid doesn’t let go so easily: the account is still banned, and the ticket is still silent.
 
-We try to downgrade our tariff at SendGrid, but the scumbag doesn’t let us downgrade and sends us to support. Hahaha. We write another ticket to support to get downgraded and get a refund.
+We try to downgrade our plan at SendGrid, but this scumbag doesn’t let us downgrade and sends us to support. Hahaha. We write another ticket to support to get downgraded and get a refund.
 
 ## 3 days from the start of the incident {.arrow-header}
 
