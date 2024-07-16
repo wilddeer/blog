@@ -1,12 +1,12 @@
 ---
 layout: layouts/postWrap
 postMod: is-no-padding-top
-description: 'My old epileptic font from Pepyaka, remastered using CSS3 animations.'
+description: 'My old epileptic font remastered using CSS3 animations.'
 image: cover.png
 langLink: 'пепякошрифт_средствами_css-анимаций'
 ---
 
-# Pepyaka font using CSS animations {.sr-only}
+# Epileptic font using CSS animations {.sr-only}
 
 <style>
     <%- include('pepyaka-font.css') %>
@@ -75,7 +75,7 @@ langLink: 'пепякошрифт_средствами_css-анимаций'
 
 <div class="text">
 
-My old epileptic font from [Pepyaka](http://pepyaka.su/en/), remastered using CSS3 animations.
+My old epileptic font remastered using CSS3 animations.
 
 Had to use an obscene amount of styles. Unlike `box-shadow`, `text-shadow` doesn’t have `spread` parameter, so I had to emulate the stroke using eight shadows. Moreover, you can’t just change the color of the shadows, so I also had to redefine all eight shadows in each keyframe.
 
