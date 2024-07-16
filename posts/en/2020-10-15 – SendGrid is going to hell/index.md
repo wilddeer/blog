@@ -14,7 +14,7 @@ A year ago, SendGrid was acquired by Twilio, a company with a multibillion-dolla
 
 ## And you are?
 
-At [Chatra](https://chatra.com), besides “reset your password,” there are several features tightly linked to sending emails: in the chat, it’s sending unread support replies to the visitor’s email, and the symmetrical feature—sending unread visitor messages to support’s email; in the mail, it’s actually sending email messages from support. All this was recently handled through SendGrid.
+In [Chatra](https://chatra.com), besides “reset your password,” there are several features tightly linked to sending emails: in chat conversations, it’s sending unread support replies to the visitor’s email, and a symmetrical feature—sending unread visitor messages to support’s email; in email threads, it’s actually sending email messages from support. All this was recently handled through SendGrid.
 
 And then one beautiful evening, around 11 PM, our prod tests for sending emails failed. Let’s take this moment as the start of the incident.
 
@@ -54,7 +54,7 @@ Overnight, I smoothly transition our mail delivery to the backup account. By mor
 
 ## 16 hours from the start of the incident {.arrow-header}
 
-The account is still banned, silence in the ticket. Astonishing how they just don’t give a fuck about paying customers. What the fuck is going on there?
+The main account is still banned, silence in the ticket. Astonishing how they just don’t give a fuck about paying customers. What the fuck is going on there?
 
 Obviously, we need to urgently switch to another service. While I was researching alternatives, someone suggested [Postmark](https://postmarkapp.com/) to [Tyoma](https://twitter.com/artpolikarpov). After such a fuck-up with SendGrid, I studied everything about Postmark: what kind of company they are, who are the founders, how many clients they have, how much they earn, reviews, the entire website inside out.
 
