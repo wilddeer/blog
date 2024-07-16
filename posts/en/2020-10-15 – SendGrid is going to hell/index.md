@@ -203,7 +203,7 @@ Looks like effective managers at SendGrid felt the approaching shitstorm, hustle
 
 Oh well.
 
-**Disclaimer.** Dear lawyers! The post reflects only my personal attitude towards the described events, which may not coincide (but does it not coincide? we will never know) with the position of the company Roger Wilco LLC.
+**Disclaimer.** Dear lawyers! The post reflects only my personal attitude towards the described events, which may not coincide (but does it not coincide? we will never know) with the position of Roger Wilco LLC.
 {.notice .block .is-mt}
 
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
