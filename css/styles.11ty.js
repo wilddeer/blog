@@ -1,35 +1,42 @@
-const fs = require('fs');
-const path = require('path');
-const postcss = require('postcss');
+import fs from 'node:fs';
+import path from 'node:path';
+import postcss from 'postcss';
+import easyImport from 'postcss-easy-import';
+import mixins from 'postcss-mixins';
+import simpleVars from 'postcss-simple-vars';
+import hexrgba from 'postcss-hexrgba';
+import nested from 'postcss-nested';
+import cssnano from 'cssnano';
+import sugarss from 'sugarss';
 
-module.exports = {
+export default {
     data: {
         permalink: 'css/styles.css'
     },
 
     async render () {
-        const includesPath = path.join(__dirname, '../_includes');
+        const includesPath = path.join(import.meta.dirname, '../_includes');
 
 
         /*
          * Project css
          */
         const projectStylesFilepath = `${includesPath}/sss/styles.sss`;
-        const projectRawCss = await fs.readFileSync(projectStylesFilepath);
+        const projectRawCss = await fs.promises.readFile(projectStylesFilepath);
 
         const projectCss = await postcss([
-            require('postcss-easy-import')({
+            easyImport({
                 extensions: '.sss'
             }),
-            require('postcss-mixins'),
-            require('postcss-simple-vars'),
-            require('postcss-hexrgba'),
-            require('postcss-nested'),
-            require('cssnano')
+            mixins,
+            simpleVars,
+            hexrgba,
+            nested,
+            cssnano
         ])
         .process(projectRawCss, {
             from: projectStylesFilepath,
-            parser: require('sugarss')
+            parser: sugarss
         })
         .then(result => result.css);
 
@@ -38,13 +45,13 @@ module.exports = {
          * Plugins css
          */
         const pluginsStylesFilepath = `${includesPath}/css/styles.css`;
-        const pluginsRawCss = await fs.readFileSync(pluginsStylesFilepath);
+        const pluginsRawCss = await fs.promises.readFile(pluginsStylesFilepath);
 
         const pluginsCss = await postcss([
-            require('postcss-easy-import')({
+            easyImport({
                 extensions: '.css'
             }),
-            require('cssnano')
+            cssnano
         ])
         .process(pluginsRawCss, {
             from: pluginsStylesFilepath

@@ -1,31 +1,33 @@
 {
   "name": "blog",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "It’s a blog",
   "author": "Oleg Korsunskiy",
+  "type": "module",
   "scripts": {
-    "start": "npx @11ty/eleventy --serve"
+    "start": "eleventy --serve",
+    "build": "eleventy"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^0.11.0",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
-    "@infinity-interactive/eleventy-plugin-injector": "0.0.9",
-    "cssnano": "^4.1.10",
-    "fast-glob": "^3.2.4",
-    "js-yaml": "^3.14.0",
-    "markdown-it": "^11.0.1",
-    "markdown-it-attrs": "^3.0.3",
+    "@11ty/eleventy": "^3.1.6",
+    "@11ty/eleventy-plugin-ejs": "^1.0.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
+    "cssnano": "^8.0.2",
+    "fast-glob": "^3.3.3",
+    "js-yaml": "^5.2.1",
+    "markdown-it": "^14.3.0",
+    "markdown-it-attrs": "^5.0.0",
     "markdown-it-div": "^1.1.0",
-    "markdown-it-implicit-figures": "^0.10.0",
+    "markdown-it-implicit-figures": "^0.12.0",
     "markdown-it-imsize": "^2.0.1",
-    "markdown-it-kbd": "^2.2.0",
-    "markdown-it-multimd-table": "^4.0.3",
-    "postcss": "^7.0.32",
-    "postcss-easy-import": "^3.0.0",
-    "postcss-hexrgba": "^2.0.1",
-    "postcss-mixins": "^6.2.3",
-    "postcss-nested": "^4.2.3",
-    "postcss-simple-vars": "^5.0.2",
-    "sugarss": "^2.0.0"
+    "markdown-it-kbd": "^3.0.2",
+    "markdown-it-multimd-table": "^4.2.3",
+    "postcss": "^8.5.16",
+    "postcss-easy-import": "^4.0.0",
+    "postcss-hexrgba": "^2.1.0",
+    "postcss-mixins": "^12.1.2",
+    "postcss-nested": "^7.0.2",
+    "postcss-simple-vars": "^7.0.1",
+    "sugarss": "^5.0.1"
   }
 }
