@@ -1,4 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 612 612">
+    <style>
+        g { stroke: #000; }
+
+        @media (prefers-color-scheme: dark) {
+            g { stroke: #fff; }
+        }
+    </style>
     <g fill="none" stroke="currentColor" stroke-width="28" stroke-linecap="round" stroke-linejoin="round">
         <path d="M306 118C410 112 496 200 492 306C488 412 404 496 300 494C200 492 116 408 120 302C124 202 206 124 306 118"/>
         <path d="M306 68V16"/>
