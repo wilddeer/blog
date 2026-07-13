@@ -2,11 +2,16 @@
 image: cover.png
 description: 'Sniffer.js is a browser/engine/os/device detection tool.'
 langLink: 'sniffer.js'
+tags:
+    - archive
 ---
 
 # [Sniffer.js](https://github.com/wilddeer/Sniffer)
 
-## If you can’t detect it, you should sniff it!
+<%- include('/svg/history-solid.svg') %>**Deprecated!** The library has been unmaintained for ages, go find something fresher.
+{.notice .is-with-icon .is-warning .block}
+
+## If you can’t detect it, you should sniff it! {.block .is-mt-0}
 
 [Sniffer](https://github.com/wilddeer/Sniffer) is a browser/engine/os/device detection tool.
 

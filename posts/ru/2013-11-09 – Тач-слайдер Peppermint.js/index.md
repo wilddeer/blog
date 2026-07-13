@@ -4,9 +4,14 @@ image: cover.png
 layout: layouts/postWrap
 postMod: is-no-padding-top
 langLink: 'peppermint_touch_slider'
+tags:
+    - archive
 ---
 
 # Тач-слайдер Peppermint {.sr-only}
+
+<%- include('/svg/history-solid.svg') %>**Устаревшая фигня!** Любой агент сделает вам слайдер лучше, современней и на свежих нативных технологиях с одного промпта.
+{.notice .is-with-icon .is-warning .block .is-mb-big}
 
 <link rel="stylesheet" href="/css/peppermint.suggested.css">
 

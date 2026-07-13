@@ -3,6 +3,8 @@ layout: layouts/postWrap
 image: cover.png
 description: 'Almost every JS slider has one particularly funny bug: the Tab key breaks them.'
 langLink: 'слайдеры_и_кнопка_tab'
+tags:
+    - archive
 ---
 
 <link rel="stylesheet" href="/css/peppermint.suggested.css">
@@ -10,6 +12,9 @@ langLink: 'слайдеры_и_кнопка_tab'
 <div class="text">
 
 # JS sliders and the <kbd>Tab</kbd> key
+
+<%- include('/svg/history-solid.svg') %>**Deprecated!** This post contains irrelevant old crap and is left for history and lulz.
+{.notice .is-with-icon .is-warning .block .is-mb-big}
 
 Almost every JS slider has one particularly funny bug: the <kbd>Tab</kbd> key breaks them. The slider will inevitably break if a link, placed in one of the slides, cathes focus. Some examples on a [slider that doesn’t break](/en/Peppermint_touch_slider/) (oh, the irony):
 

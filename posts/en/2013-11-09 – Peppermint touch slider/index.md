@@ -4,9 +4,14 @@ postMod: is-no-padding-top
 image: cover.png
 description: 'Yet another touch slider. Only better.'
 langLink: 'тач-слайдер_peppermint.js'
+tags:
+    - archive
 ---
 
 # Peppermint touch slider {.sr-only}
+
+<%- include('/svg/history-solid.svg') %>**Deprecated!** Any agent will build you a better, more modern slider on fresh native tech from a single prompt.
+{.notice .is-with-icon .is-warning .block .is-mb-big}
 
 <link rel="stylesheet" href="/css/peppermint.suggested.css">
 

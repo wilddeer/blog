@@ -3,6 +3,8 @@ description: 'Все js-слайдеры подвержены одному см�
 image: cover.png
 layout: layouts/postWrap
 langLink: 'js_sliders_and_the_tab_key'
+tags:
+    - archive
 ---
 
 <link rel="stylesheet" href="/css/peppermint.suggested.css">
@@ -10,6 +12,9 @@ langLink: 'js_sliders_and_the_tab_key'
 <div class="text">
 
 # Слайдеры и кнопка <kbd>Tab</kbd>
+
+<%- include('/svg/history-solid.svg') %>**Устаревшая фигня!** Этот пост содержит неактуальное старье и оставлен для истории и лулзов.
+{.notice .is-with-icon .is-warning .block .is-mb-big}
 
 Все js-слайдеры подвержены одному смешному багу: они ломаются при использовании кнопки <kbd>Tab</kbd>. Если на каком-то слайде есть ссылка, слайдер обязательно сломается при переходе на нее табом. Несколько примеров на [слайдере, который не ломается](/Тач-слайдер_Peppermint.js/) (oh, the irony):
 

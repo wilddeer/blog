@@ -57,21 +57,13 @@ layout: layouts/base
             </span>
         </p>
 
-        <p class="footer__section">
-            <% if ($.tags.includes('root')) { %>
-                <span class="footer__el">
-                    Tumbleweed icon and happy sun icon by <a class="link" href="https://www.flaticon.com/authors/freepik">Freepik</a> from <a class="link" href="https://www.flaticon.com/">Flaticon</a>
-                </span>
-            <% } else { %>
-                <span class="footer__el">
-                    Happy sun icon by <a class="link" href="https://www.flaticon.com/authors/freepik">Freepik</a> from <a class="link" href="https://www.flaticon.com/">Flaticon</a>
-                </span>
-
+        <% if (!$.tags.includes('root')) { %>
+            <p class="footer__section">
                 <span class="footer__el">
                     Icons by <a class="link" href="https://fontawesome.com/">Font Awesome</a>
                 </span>
-            <% } %>
-        </p>
+            </p>
+        <% } %>
     <% } else { %>
         <p class="footer__section">
             <span class="footer__el">
@@ -95,20 +87,12 @@ layout: layouts/base
             </span>
         </p>
 
-        <p class="footer__section">
-            <% if ($.tags.includes('root')) { %>
-                <span class="footer__el">
-                    Перекати-поле и упоротое солнце — <a class="link" href="https://www.flaticon.com/authors/freepik">Freepik</a> из <a class="link" href="https://www.flaticon.com/">Flaticon</a>
-                </span>
-            <% } else { %>
-                <span class="footer__el">
-                    Упоротое солнце — <a class="link" href="https://www.flaticon.com/authors/freepik">Freepik</a> из <a class="link" href="https://www.flaticon.com/">Flaticon</a>
-                </span>
-
+        <% if (!$.tags.includes('root')) { %>
+            <p class="footer__section">
                 <span class="footer__el">
                     Иконки — <a class="link" href="https://fontawesome.com/">Font Awesome</a>
                 </span>
-            <% } %>
-        </p>
+            </p>
+        <% } %>
     <% } %>
 </footer>

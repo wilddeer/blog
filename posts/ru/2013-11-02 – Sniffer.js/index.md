@@ -2,11 +2,16 @@
 description: 'Сниффер определяет браузер, движок и операционку/девайс по юзер-агенту.'
 image: cover.png
 langLink: 'sniffer.js'
+tags:
+    - archive
 ---
 
 # [Sniffer.js](https://github.com/wilddeer/Sniffer)
 
-## If you can’t detect it, you should sniff it!
+<%- include('/svg/history-solid.svg') %>**Устаревшая фигня!** Библиотека давно не поддерживается, поищите что-то посвежее.
+{.notice .is-with-icon .is-warning .block}
+
+## If you can’t detect it, you should sniff it! {.block .is-mt-0}
 
 [Сниффер](https://github.com/wilddeer/Sniffer) определяет браузер, движок и операционку/девайс по юзер-агенту.
 
