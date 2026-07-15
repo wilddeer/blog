@@ -405,7 +405,7 @@
     }
 
     :where(tbody tr:nth-child(odd)) {
-        background: #f8f8f8;
+        background: var(--color-table-stripe);
     }
 
     :where(th) {

@@ -107,6 +107,11 @@ ol {
     list-style-type: decimal;
 }
 
+/* Both themes are first-class: UA scrollbars/controls follow the theme */
+html {
+    color-scheme: light dark;
+}
+
 body {
     /*
      * Size query container: everything inside measures the viewport

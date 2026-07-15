@@ -92,7 +92,7 @@
     vertical-align: 0.1em;
     margin: 0 0.2em;
     line-height: 1.25;
-    background: #f9f9f9;
+    background: var(--color-kbd-bg);
     border: 0.09em solid var(--color-border-light-opaque);
     border-radius: 0.25em;
     padding: 0 0.25em 0.1em;
@@ -100,7 +100,7 @@
     font-family: inherit;
     box-shadow:
         0 0.15em 0 0.1em var(--color-border-light-opaque),
-        inset 0 0 0 0.1em #fff;
+        inset 0 0 0 0.1em var(--color-kbd-highlight);
     white-space: nowrap;
 }
 
@@ -136,8 +136,8 @@
     cursor: pointer;
 
     &:hover:not([disabled]) {
-        background: var(--color-link);
-        border-color: var(--color-link);
+        background: var(--color-button-hover-bg);
+        border-color: var(--color-button-hover-bg);
         color: white;
         box-shadow: 0 0.1em 0 0 rgb(0 0 0 / 10%);
     }
@@ -330,8 +330,8 @@ table.key-value-table {
 .post {
     padding-top: 2.5em;
     padding-bottom: 2.5em;
-    background: #fff;
-    box-shadow: 0 0 10px rgb(100 80 0 / 12%);
+    background: var(--color-card);
+    box-shadow: 0 0 10px var(--color-card-shadow);
 
     @variant tablet-overlap {
         padding-top: 4em;

@@ -1,0 +1,124 @@
+/*
+ * Dark theme: the same paper, at night.
+ *
+ * Follows the OS preference (prefers-color-scheme), matching Tailwind's
+ * default `dark:` variant, so token overrides here and dark: utilities
+ * in templates switch together.
+ *
+ * Design notes:
+ * - Warm charcoal, not cold slate: the light theme's paper (#fffff9)
+ *   carries a drop of warmth, so the night surfaces do too. The post
+ *   card reuses #242222 — the exact color the light theme already uses
+ *   for demo blocks; the blog always knew its night color.
+ * - Surface order inverts with the light: page below, card above,
+ *   demo blocks sink darker than the card instead of standing out.
+ * - The electric primaries survive translation: links stay voltage
+ *   (periwinkle #8091ff reads like #0014ff does on white), and the
+ *   red hover is deliberately IDENTICAL in both themes — hovering a
+ *   link on this blog always screams white-on-red.
+ * - State colors flip strategy: saturated text on deep tinted grounds
+ *   instead of pastel grounds. All text/ground pairs hold ≥ 4.5:1.
+ */
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* Text */
+        --color-ink: #eae7e0;
+        --color-inactive: #99928a;
+
+        /* Surfaces */
+        --color-paper: #1a1817;
+        --color-card: #242222;
+        --color-card-shadow: rgb(0 0 0 / 45%);
+        --color-demo-bg: #151312;
+        --color-table-stripe: rgb(255 255 255 / 3.5%);
+        --color-kbd-bg: #34302d;
+        --color-kbd-highlight: rgb(255 255 255 / 14%);
+
+        /* Links: --color-link-hover intentionally NOT overridden */
+        --color-link: #8091ff;
+        --color-visited: #a5a2da;
+        --color-button-hover-bg: #2d40e8;
+
+        /* Borders */
+        --color-border-light: rgb(255 255 255 / 14%);
+        --color-border-light-opaque: #4c4743;
+        --color-border-regular: rgb(255 255 255 / 32%);
+
+        /* State colors */
+        --color-danger: #ff6f63;
+        --color-danger-bg: #361b15;
+        --color-success: #35d654;
+        --color-success-bg: #16291a;
+        --color-warning: #ff9457;
+        --color-warning-bg: #33200f;
+        --color-note: #eda73d;
+        --color-note-bg: #302710;
+        --color-info: #4cc7ff;
+        --color-info-bg: #10283a;
+        --color-unimportant: #99928a;
+        --color-unimportant-bg: #2c2927;
+    }
+
+    /*
+     * Prism at night: the same candy palette, lifted to read on dark.
+     * (Kept next to the tokens rather than in the vendor file.)
+     */
+    pre[class*='language-'] {
+        color: var(--color-ink);
+    }
+
+    .token.comment,
+    .token.prolog,
+    .token.doctype,
+    .token.cdata {
+        color: #948e87;
+    }
+
+    .token.punctuation {
+        color: #8091ff;
+    }
+
+    .token.property,
+    .token.tag,
+    .token.boolean,
+    .token.number,
+    .token.constant,
+    .token.symbol,
+    .token.deleted {
+        color: #ff64b8;
+    }
+
+    .token.operator,
+    .token.entity,
+    .token.url,
+    .language-css .token.string,
+    .style .token.string,
+    .token.function {
+        color: #ff7a6e;
+    }
+
+    .token.atrule,
+    .token.attr-value,
+    .token.keyword {
+        color: #4cc7ff;
+    }
+
+    .token.regex,
+    .token.important,
+    .token.variable {
+        color: #e26bff;
+    }
+
+    .highlight-line-active {
+        background: rgb(255 240 100 / 15%);
+        box-shadow: inset 5px 0 0 rgb(255 240 100 / 15%);
+    }
+
+    .highlight-line-add {
+        background-color: rgb(80 220 100 / 15%);
+    }
+
+    .highlight-line-remove {
+        background-color: rgb(255 90 80 / 15%);
+    }
+}

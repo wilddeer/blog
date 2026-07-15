@@ -37,14 +37,20 @@
 
     /* Background colors */
     --color-paper: #fffff9;
+    --color-card: #fff;
+    --color-card-shadow: rgb(100 80 0 / 12%);
     --color-demo-bg: #242222;
     --color-demo-light-bg: rgb(183 167 167 / 10%);
     --color-code-bg: rgb(183 167 167 / 10%);
+    --color-table-stripe: #f8f8f8;
+    --color-kbd-bg: #f9f9f9;
+    --color-kbd-highlight: #fff;
 
     /* Link colors */
     --color-link: #0014ff;
     --color-visited: #464da4;
     --color-link-hover: #ff0000;
+    --color-button-hover-bg: #0014ff;
 
     /* Border colors */
     --color-border-light: rgb(0 0 0 / 15%);
