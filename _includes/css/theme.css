@@ -1,0 +1,92 @@
+/*
+ * Design tokens.
+ *
+ * The default Tailwind theme is wiped (`--*: initial`) so the generated
+ * CSS contains only this blog's design system. Sizes are intentionally
+ * em-based — the whole design scales off the 1.15em body font size.
+ */
+@theme {
+    --*: initial;
+
+    /* Spacing base for numeric utilities (p-0, mx-auto etc.) */
+    --spacing: 0.25rem;
+
+    /* Fonts */
+    --font-sans: 'Nunito', sans-serif;
+    --font-mono: 'Fira Code', monospace;
+
+    /* Breakpoints */
+    --breakpoint-phone: 640px;
+    --breakpoint-tablet: 880px;
+    --breakpoint-tablet-overlap: 960px;
+    --breakpoint-pc: 1200px;
+
+    /* Text colors */
+    --color-white: #fff;
+    --color-ink: #000;
+    --color-inactive: #6d6d6d;
+    --color-inverse: #fff;
+    --color-inverse-tinted: rgba(255, 255, 255, 0.7);
+    --color-inverse-inactive: rgba(255, 255, 255, 0.15);
+
+    /* Background colors */
+    --color-paper: #fffff9;
+    --color-demo-bg: #242222;
+    --color-demo-light-bg: rgba(183, 167, 167, 0.1);
+    --color-code-bg: rgba(183, 167, 167, 0.1);
+
+    /* Link colors */
+    --color-link: #0014ff;
+    --color-visited: #464da4;
+    --color-link-hover-bg: #ff0000;
+
+    /* Border colors */
+    --color-border-light: rgba(0, 0, 0, 0.15);
+    --color-border-light-opaque: #d4d4d4;
+    --color-border-regular: rgba(0, 0, 0, 0.3);
+    --color-border-inverse-light: rgba(255, 255, 255, 0.15);
+    --color-border-inverse-regular: rgba(255, 255, 255, 0.3);
+
+    /* State colors */
+    --color-danger: #ff0000;
+    --color-danger-bg: #fff4f0;
+    --color-success: #00c500;
+    --color-success-bg: #dfffdf;
+    --color-warning: #ff5200;
+    --color-warning-bg: #ffe2c5;
+    --color-note: #ec8300;
+    --color-note-bg: #fff9c5;
+    --color-info: #00b9ff;
+    --color-info-bg: #e5f8ff;
+    --color-unimportant: #6d6d6d;
+    --color-unimportant-bg: #f5f3f3;
+
+    /* Type scale */
+    --text-h1: 2.9em;
+    --text-h1--line-height: 1.1;
+    --text-h1-med: 4em;
+    --text-h1-med--line-height: 1.1;
+    --text-h1-full: 6em;
+    --text-h1-full--line-height: 1.1;
+    --text-h1-full-smaller: 5em;
+    --text-h1-full-smaller--line-height: 1.1;
+    --text-h2: 2em;
+    --text-h2--line-height: 1.2;
+    --text-h3: 1.5em;
+    --text-h3--line-height: 1.2;
+    --text-small: 0.9em;
+    --text-smaller: 0.8em;
+    --text-tiny: 0.7em;
+
+    /* Line height */
+    --leading-base: 1.65;
+
+    /*
+     * Content box. --vw is set by an inline script in the page head:
+     * 1% of the viewport width *excluding* the scrollbar (unlike 1vw).
+     */
+    --content-padding: calc(4 * min(var(--vw, 1vw), 10px));
+    --content-max-width: 50rem;
+    --content-width: calc(100 * var(--vw, 1vw) - var(--content-padding) * 2);
+    --content-ootb-max-width: calc(var(--content-max-width) + var(--content-padding) * 2);
+}

@@ -1,0 +1,427 @@
+/*
+ * Markdown typography.
+ *
+ * Rendered markdown is wrapped in `<div class="text">`, and everything
+ * inside is styled through element selectors, so the content never has
+ * to carry layout classes (except intentional modifiers via
+ * markdown-it-attrs, e.g. `{.is-ootb}`).
+ *
+ * This file comes after the component classes so that its cascade
+ * position matches the pre-Tailwind stylesheet.
+ */
+.text {
+    h1 {
+        font-size: var(--text-h1);
+        line-height: var(--text-h1--line-height);
+        margin-bottom: 0.7em;
+
+        @variant tablet-overlap {
+            font-size: var(--text-h1-med);
+            @apply ootb;
+        }
+
+        @variant pc {
+            font-size: var(--text-h1-full);
+
+            &.is-smaller {
+                font-size: var(--text-h1-full-smaller);
+            }
+        }
+    }
+
+    h1.is-small-mb {
+        margin-bottom: 0.2em;
+    }
+
+    h2 {
+        font-size: var(--text-h2);
+        line-height: var(--text-h2--line-height);
+        margin-top: 2em;
+        margin-bottom: 0.6em;
+    }
+
+    h3 {
+        font-size: var(--text-h3);
+        line-height: var(--text-h3--line-height);
+        margin-top: 2em;
+        margin-bottom: 0.6em;
+    }
+
+    h2 + h3 {
+        margin-top: 0;
+    }
+
+    p {
+        margin-bottom: 1.5em;
+    }
+
+    blockquote {
+        padding-left: 1em;
+        border-left: 2px solid var(--color-border-regular);
+        margin-bottom: 1.5em;
+    }
+
+    .text-container > :last-child {
+        margin-bottom: 0;
+    }
+
+    hr {
+        border-top: 1px solid var(--color-border-light);
+        margin-bottom: 1.5em;
+    }
+
+    ul,
+    ol {
+        margin-bottom: 1.5em;
+    }
+
+    ul > li {
+        padding-left: 2.2em;
+        margin-bottom: 1em;
+        @apply dash-marker;
+    }
+
+    ol > li {
+        margin-left: 2.2em;
+        margin-bottom: 1em;
+    }
+
+    figure {
+        text-align: center;
+        margin-bottom: 2.5em;
+    }
+
+    figure.is-demo {
+        @apply content-fullwidth;
+
+        @variant tablet-overlap {
+            padding-top: 2.5em;
+            padding-bottom: 2.5em;
+            color: var(--color-inverse);
+            background: var(--color-demo-bg);
+        }
+    }
+
+    figure.is-demo.is-arbitrary {
+        padding-top: 2.5em;
+        padding-bottom: 2.5em;
+        color: var(--color-inverse);
+        background: var(--color-demo-bg);
+    }
+
+    figure.is-demo.is-light {
+        @variant tablet-overlap {
+            background-color: var(--color-demo-light-bg);
+        }
+    }
+
+    figure.is-demo figcaption {
+        @apply content-box;
+
+        @variant tablet-overlap {
+            @apply content-box-wide;
+            color: var(--color-inverse-tinted);
+        }
+    }
+
+    figure.is-demo.is-arbitrary figcaption {
+        @apply content-box-wide;
+        color: var(--color-inverse-tinted);
+    }
+
+    figure.is-demo.is-light figcaption {
+        @variant tablet-overlap {
+            color: var(--color-inactive);
+        }
+    }
+
+    figure.is-demo img {
+        @variant max-tablet-overlap {
+            border-radius: 0;
+        }
+
+        @variant tablet-overlap {
+            @apply content-box-wide;
+            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+        }
+    }
+
+    figure.is-demo.is-light img {
+        @variant tablet-overlap {
+            box-shadow: none;
+        }
+    }
+
+    figure.is-phone-fullwidth {
+        @variant max-phone {
+            @apply content-fullwidth;
+        }
+    }
+
+    figure.is-ootb {
+        @variant max-tablet-overlap {
+            @apply content-fullwidth;
+        }
+
+        @variant tablet-overlap {
+            @apply ootb;
+        }
+    }
+
+    figure.is-float-right {
+        @variant tablet {
+            float: right;
+            margin-left: 1em;
+            margin-bottom: 1em;
+        }
+    }
+
+    figure img {
+        border-radius: 0.2em;
+    }
+
+    figure.is-phone-fullwidth img {
+        @variant phone {
+            max-width: min(var(--content-max-width), var(--content-width));
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @variant max-phone {
+            border-radius: 0;
+        }
+    }
+
+    figure.is-ootb img {
+        @variant max-tablet-overlap {
+            border-radius: 0;
+        }
+    }
+
+    figcaption {
+        padding-top: 0.8em;
+        font-style: italic;
+        color: var(--color-inactive);
+        font-size: 0.8em;
+    }
+
+    .pics {
+        text-align: center;
+        margin-left: -0.5em;
+        margin-right: -0.5em;
+    }
+
+    .pics figure {
+        display: inline-block;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+    }
+
+    img {
+        vertical-align: middle;
+        max-width: 100%;
+        height: auto;
+    }
+
+    a svg {
+        margin-right: 0.2em;
+    }
+
+    abbr {
+        text-transform: uppercase;
+        font-size: 0.9em;
+        letter-spacing: 0.05em;
+        text-decoration: underline;
+        text-decoration-style: dotted;
+        text-decoration-color: var(--color-border-regular);
+        cursor: pointer;
+
+        &:focus {
+            background: var(--color-info-bg);
+            color: var(--color-info);
+            outline: none;
+            text-decoration: none;
+            border-radius: 0.1em;
+            box-shadow:
+                0 0 0 1px var(--color-info-bg),
+                0 0 0 3px var(--color-info);
+            pointer-events: none;
+        }
+
+        &:after {
+            max-width: min(var(--content-max-width), var(--content-width));
+            margin-left: auto;
+            margin-right: auto;
+            text-transform: none;
+            letter-spacing: normal;
+            content: attr(title);
+            display: inline-block;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            background: var(--color-info-bg);
+            color: var(--color-info);
+            box-shadow: 0 1px 3px --alpha(var(--color-info) / 50%);
+            transform: translateX(calc(50 * var(--vw, 1vw) - 50%)) translateY(100%);
+            border-radius: 0.25em;
+            padding: 0.5em 1em;
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.15s ease-in;
+            transition-property: opacity, visibility, transform;
+        }
+
+        &:focus:after {
+            visibility: visible;
+            opacity: 1;
+            transition-timing-function: cubic-bezier(0.09, 0.75, 0.38, 1.15);
+            transform: translateX(calc(50 * var(--vw, 1vw) - 50%)) translateY(-1.5rem);
+        }
+    }
+
+    del {
+        text-decoration: line-through;
+        text-decoration-color: red !important;
+    }
+
+    del.deleted-block {
+        text-decoration: none;
+        position: relative;
+        display: block;
+    }
+
+    del.deleted-block:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: -0.5em;
+        left: -0.5em;
+        right: -0.5em;
+        bottom: -0.5em;
+        border-radius: 1em;
+        z-index: 100;
+        pointer-events: none;
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 1000 1000"><path d="M1000 0 L0 1000" stroke="red" stroke-width="5" stroke-linecap="round"/><path d="M0 0 L1000 1000" stroke="red" stroke-width="5" stroke-linecap="round"/></svg>');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+
+        @variant phone {
+            top: -1em;
+            left: -1em;
+            right: -1em;
+            bottom: -1em;
+        }
+    }
+
+    pre {
+        background-color: var(--color-code-bg);
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+        padding-top: 1.5em;
+        padding-bottom: 1.5em;
+        margin-bottom: 2em;
+        font-size: 0.8em;
+        overflow: auto;
+
+        @variant tablet {
+            font-size: 0.9em;
+        }
+    }
+
+    > pre,
+    :not(.pre-contained) > pre {
+        padding-left: 0;
+        padding-right: 0;
+        @apply content-fullwidth;
+    }
+
+    > pre code,
+    :not(.pre-contained) > pre code {
+        display: block;
+        @apply content-box;
+    }
+
+    .code-max-height > pre {
+        max-height: 80vh;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+        margin-bottom: 2.5em;
+
+        @variant max-tablet {
+            @apply content-fullwidth;
+        }
+
+        @variant tablet-overlap {
+            @apply ootb;
+        }
+    }
+
+    tr {
+        border-top: 1px solid var(--color-border-light);
+    }
+
+    tbody tr:last-child {
+        border-bottom: 1px solid var(--color-border-light);
+    }
+
+    tbody tr:nth-child(odd) {
+        background: #f8f8f8;
+    }
+
+    th {
+        font-weight: bold;
+    }
+
+    td,
+    th {
+        padding: 0.3em 0.5em;
+        text-align: left;
+    }
+
+    td:first-child,
+    th:first-child {
+        @variant max-tablet {
+            padding-left: var(--content-padding);
+        }
+
+        @variant tablet-overlap {
+            padding-left: var(--content-padding);
+        }
+    }
+
+    td:last-child,
+    th:last-child {
+        @variant max-tablet {
+            padding-right: var(--content-padding);
+        }
+
+        @variant tablet-overlap {
+            padding-right: var(--content-padding);
+        }
+    }
+
+    td.is-true {
+        color: var(--color-success);
+        background-color: var(--color-success-bg);
+    }
+
+    td.is-bug {
+        color: var(--color-note);
+        background-color: var(--color-note-bg);
+    }
+
+    td.is-false {
+        color: var(--color-danger);
+        background-color: var(--color-danger-bg);
+    }
+
+    .twitter-tweet {
+        margin-top: 0 !important;
+        margin-bottom: 2em !important;
+    }
+}
+

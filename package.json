@@ -12,7 +12,7 @@
     "@11ty/eleventy": "^3.1.6",
     "@11ty/eleventy-plugin-ejs": "^1.0.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
-    "cssnano": "^8.0.2",
+    "@tailwindcss/postcss": "^4.3.2",
     "fast-glob": "^3.3.3",
     "js-yaml": "^5.2.1",
     "markdown-it": "^14.3.0",
@@ -23,11 +23,6 @@
     "markdown-it-kbd": "^3.0.2",
     "markdown-it-multimd-table": "^4.2.3",
     "postcss": "^8.5.16",
-    "postcss-easy-import": "^4.0.0",
-    "postcss-hexrgba": "^2.1.0",
-    "postcss-mixins": "^12.1.2",
-    "postcss-nested": "^7.0.2",
-    "postcss-simple-vars": "^7.0.1",
-    "sugarss": "^5.0.1"
+    "tailwindcss": "^4.3.2"
   }
 }

@@ -1,1 +1,36 @@
-@import './plugins/*.css';
+/*
+ * Stylesheet entry point, compiled by css/styles.11ty.js.
+ *
+ * Deliberately NO cascade layers here: posts load their own standalone
+ * stylesheets via plain <link> tags (peppermint.suggested.css, per-post
+ * demo CSS), and unlayered CSS always beats layered CSS — which would
+ * invert the legacy cascade these pages rely on. Instead, source order
+ * mirrors the pre-Tailwind bundle: vendor CSS first, then base styles,
+ * components and markdown typography, with utilities emitted last so
+ * they win ties against components, like `@layer utilities` would.
+ *
+ * Tailwind's Preflight is intentionally not used — see base.css.
+ */
+@import './plugins/prism.css';
+
+@import './theme.css';
+@import './base.css';
+@import './components.css';
+@import './typography.css';
+
+@tailwind utilities source(none);
+
+/*
+ * Utility classes are only picked up from the templates. Markdown posts
+ * are deliberately not scanned: they reference component classes defined
+ * here, and scanning prose would generate stray utilities (e.g. `block`)
+ * that would override same-named component classes.
+ */
+@source '../../_includes/layouts';
+@source '../../_includes/modules';
+@source '../../index';
+@source '../../404.ejs';
+
+/* Classes referenced from markdown/JS only, invisible to the scanner */
+@source inline('content-box');
+@source inline('content-fullwidth');

@@ -1,13 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import postcss from 'postcss';
-import easyImport from 'postcss-easy-import';
-import mixins from 'postcss-mixins';
-import simpleVars from 'postcss-simple-vars';
-import hexrgba from 'postcss-hexrgba';
-import nested from 'postcss-nested';
-import cssnano from 'cssnano';
-import sugarss from 'sugarss';
+import tailwindcss from '@tailwindcss/postcss';
 
 export default {
     data: {
@@ -15,50 +9,19 @@ export default {
     },
 
     async render () {
-        const includesPath = path.join(import.meta.dirname, '../_includes');
+        const entryFilepath = path.join(import.meta.dirname, '../_includes/css/styles.css');
+        const rawCss = await fs.promises.readFile(entryFilepath);
 
-
-        /*
-         * Project css
-         */
-        const projectStylesFilepath = `${includesPath}/sss/styles.sss`;
-        const projectRawCss = await fs.promises.readFile(projectStylesFilepath);
-
-        const projectCss = await postcss([
-            easyImport({
-                extensions: '.sss'
-            }),
-            mixins,
-            simpleVars,
-            hexrgba,
-            nested,
-            cssnano
+        return await postcss([
+            tailwindcss({
+                optimize: {
+                    minify: true
+                }
+            })
         ])
-        .process(projectRawCss, {
-            from: projectStylesFilepath,
-            parser: sugarss
+        .process(rawCss, {
+            from: entryFilepath
         })
         .then(result => result.css);
-
-
-        /*
-         * Plugins css
-         */
-        const pluginsStylesFilepath = `${includesPath}/css/styles.css`;
-        const pluginsRawCss = await fs.promises.readFile(pluginsStylesFilepath);
-
-        const pluginsCss = await postcss([
-            easyImport({
-                extensions: '.css'
-            }),
-            cssnano
-        ])
-        .process(pluginsRawCss, {
-            from: pluginsStylesFilepath
-        })
-        .then(result => result.css);
-
-
-        return `${pluginsCss}\n\n${projectCss}`;
     }
 };

@@ -1,0 +1,509 @@
+/*
+ * Layout primitives (custom utilities) and component classes.
+ *
+ * Everything here is referenced from markdown posts (via markdown-it-attrs
+ * or raw HTML), so the class names are part of the content contract and
+ * can't be replaced with inline utilities.
+ */
+
+/* Centered content column */
+@utility content-box {
+    width: min(var(--content-max-width), var(--content-width));
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Like content-box, but a bit wider: content width + side paddings */
+@utility content-box-wide {
+    width: min(var(--content-ootb-max-width), var(--content-width));
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Full window width, regardless of the parent's width */
+@utility content-fullwidth {
+    width: calc(100 * var(--vw, 1vw));
+    margin-left: calc(-50 * var(--vw, 1vw) + 50%);
+}
+
+/* Poke out of the content box, into its side paddings */
+@utility ootb {
+    width: calc(100% + 2 * var(--content-padding));
+    margin-left: calc(-1 * var(--content-padding));
+}
+
+/* Em-dash list marker that doesn't shift the text position */
+@utility dash-marker {
+    &::before {
+        content: '—';
+        margin-left: -1em;
+
+        /*
+         * The real width of the m-dash is unknown.
+         *
+         * The dash is absolutely positioned to keep the
+         * position of the text unaffected.
+         */
+        position: absolute;
+
+        /*
+         * If the dash is too long, we cut it with max-width
+         * and overflow: hidden
+         */
+        display: inline-block;
+        width: 0.75em;
+        overflow: hidden;
+    }
+}
+
+.link,
+.text a {
+    color: var(--color-link);
+    text-decoration: underline;
+    text-decoration-color: --alpha(var(--color-link) / 50%);
+
+    &:visited {
+        color: var(--color-visited);
+        text-decoration-color: --alpha(var(--color-visited) / 50%);
+    }
+
+    &:hover {
+        color: #fff;
+        background: var(--color-link-hover-bg);
+        text-decoration: none;
+    }
+
+    /* Colored background */
+    &.is-colored-bg {
+        color: inherit;
+        text-decoration-color: currentColor;
+    }
+
+    &.is-colored-bg:hover {
+        -webkit-text-fill-color: white;
+        background: currentColor;
+    }
+
+    /* Visited links look like unvisited ones */
+    &.is-unvisited:visited {
+        color: var(--color-link);
+        text-decoration-color: --alpha(var(--color-link) / 50%);
+    }
+
+    /* Gray links (archive posts etc.) */
+    &.is-muted {
+        color: var(--color-inactive);
+        text-decoration-color: --alpha(var(--color-inactive) / 50%);
+    }
+
+    &.is-muted:visited {
+        color: var(--color-inactive);
+        text-decoration-color: --alpha(var(--color-inactive) / 50%);
+    }
+
+    &.is-muted:hover {
+        color: #fff;
+        background: var(--color-inactive);
+        text-decoration: none;
+    }
+}
+
+.kbd,
+.text kbd {
+    display: inline-block;
+    vertical-align: 0.1em;
+    margin: 0 0.2em;
+    line-height: 1.25;
+    background: #f9f9f9;
+    border: 0.09em solid var(--color-border-light-opaque);
+    border-radius: 0.25em;
+    padding: 0 0.25em 0.1em;
+    font-size: 0.75em;
+    font-family: inherit;
+    box-shadow:
+        0 0.15em 0 0.1em var(--color-border-light-opaque),
+        inset 0 0 0 0.1em #fff;
+    white-space: nowrap;
+}
+
+.code,
+.text :not(pre) > code {
+    background-color: var(--color-danger-bg);
+    color: var(--color-danger);
+    border-radius: 0.25em;
+    padding: 0 0.25em;
+    font-size: var(--text-small);
+    font-style: normal;
+
+    &.is-inverse {
+        background-color: rgba(255, 255, 255, 0.2);
+        color: var(--color-inverse);
+    }
+
+    &.is-colored-bg {
+        color: inherit;
+        background-color: rgba(255, 255, 255, 0.6);
+    }
+}
+
+.button,
+.text button {
+    background: transparent;
+    border: 1px solid var(--color-border-regular);
+    border-radius: 0.2em;
+    padding: 0.5em 1em;
+    transition: 0.05s linear;
+    transition-property: background-color, color;
+    cursor: pointer;
+
+    &:hover:not([disabled]) {
+        background: var(--color-link);
+        border-color: var(--color-link);
+        color: white;
+        box-shadow: 0 0.1em 0 0 rgba(0, 0, 0, 0.1);
+    }
+
+    &:active:not([disabled]) {
+        box-shadow: none;
+    }
+
+    &[disabled] {
+        border-color: var(--color-border-light);
+        color: var(--color-inactive);
+        cursor: default;
+    }
+
+    /* White */
+    &.is-white {
+        border-color: var(--color-border-inverse-regular);
+        color: var(--color-inverse);
+    }
+
+    &.is-white[disabled] {
+        border-color: var(--color-border-inverse-light);
+        color: var(--color-inverse-inactive);
+    }
+}
+
+.input {
+    padding: 0.5em 0.7em;
+    border: 1px solid var(--color-border-regular);
+    border-radius: 0.2em;
+    transition: 0.1s ease;
+    transition-property: box-shadow;
+
+    &:focus {
+        border-color: var(--color-link);
+        outline: none;
+        box-shadow: 0 0 0 5px --alpha(var(--color-link) / 10%);
+    }
+}
+
+.icon,
+.svg-inline--fa {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.1em;
+    fill: currentColor;
+}
+
+.small,
+.text small {
+    font-size: var(--text-tiny);
+}
+
+.align-center {
+    text-align: center;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.pre-wrap {
+    white-space: pre-wrap;
+}
+
+.hidden {
+    display: none;
+}
+
+.sr-only {
+    clip: rect(0 0 0 0) !important;
+    clip-path: inset(50%) !important;
+    height: 1px !important;
+    overflow: hidden !important;
+    position: absolute !important;
+    white-space: nowrap !important;
+    width: 1px !important;
+}
+
+.arrow-header {
+    text-align: center;
+    margin-top: 2em;
+
+    &::before {
+        display: block;
+        content: '↓';
+        color: var(--color-inactive);
+        margin-bottom: 2em;
+    }
+}
+
+/*
+ * Legacy spacing class, still referenced from markdown. It shares its
+ * name with Tailwind's `block` display utility, which the templates
+ * may legitimately use — the guard at the bottom of this file keeps
+ * the utility from flipping inline-block notices to block.
+ */
+.block {
+    &.is-mt {
+        margin-top: 1.5em;
+    }
+
+    &.is-mt-big {
+        margin-top: 2.5em;
+    }
+
+    &.is-mb {
+        margin-bottom: 1.5em;
+    }
+
+    &.is-mb-big {
+        margin-bottom: 2.5em;
+    }
+}
+
+.font-size {
+    &.is-heading-2 {
+        font-size: var(--text-h2);
+    }
+
+    &.is-heading-3 {
+        font-size: var(--text-h3);
+    }
+
+    &.is-small {
+        font-size: var(--text-small);
+    }
+
+    &.is-smaller {
+        font-size: var(--text-smaller);
+    }
+}
+
+.state-color {
+    color: var(--color-unimportant);
+}
+
+.state-color--info {
+    color: var(--color-info);
+}
+
+.state-color--success {
+    color: var(--color-success);
+}
+
+.state-color--warning {
+    color: var(--color-warning);
+}
+
+.state-color--danger {
+    color: var(--color-danger);
+}
+
+.notice {
+    display: inline-block;
+    border-radius: 0.25em;
+    padding: 0.5em 1em;
+    color: var(--color-unimportant);
+    background: var(--color-unimportant-bg);
+
+    &.is-inline {
+        display: inline;
+        padding: 0.1em 0.3em;
+    }
+
+    &.is-info {
+        color: var(--color-info);
+        background: var(--color-info-bg);
+    }
+
+    &.is-success {
+        color: var(--color-success);
+        background: var(--color-success-bg);
+    }
+
+    &.is-warning {
+        color: var(--color-warning);
+        background: var(--color-warning-bg);
+    }
+
+    &.is-danger {
+        color: var(--color-danger);
+        background: var(--color-danger-bg);
+    }
+
+    &.is-inverse {
+        color: var(--color-inverse);
+        border: 1px solid var(--color-border-inverse-regular);
+        background: transparent;
+    }
+
+    &.is-with-icon {
+        padding-left: 2.3em;
+    }
+
+    &.is-with-icon svg {
+        margin-left: -1.3em;
+        margin-right: 0.3em;
+    }
+
+    &.is-with-big-icon {
+        display: block;
+        padding-top: 0.7em;
+        padding-bottom: 0.7em;
+        padding-left: calc(1.5em * 1.5 + 1em);
+    }
+
+    &.is-with-big-icon svg {
+        font-size: 1.5em;
+        vertical-align: -0.3em;
+        margin-left: -1.5em;
+        margin-right: 0.5em;
+    }
+}
+
+.demo {
+    @apply content-fullwidth;
+    padding: 5em var(--content-padding);
+    margin-bottom: 2.5em;
+    color: var(--color-inverse);
+    background: var(--color-demo-bg);
+
+    &.is-fullwidth {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    &.is-light {
+        background: var(--color-demo-light-bg);
+        color: var(--color-ink);
+    }
+
+    &.is-small-padding {
+        padding-top: 2.5em;
+        padding-bottom: 2.5em;
+    }
+}
+
+/* Only applies out of the box on wide-enough screens */
+.out-of-the-box {
+    @variant tablet-overlap {
+        @apply ootb;
+    }
+}
+
+table.key-value-table {
+    @variant max-phone {
+        display: block;
+
+        td,
+        tr,
+        thead,
+        tbody {
+            display: block;
+        }
+
+        td {
+            padding-right: 4vw;
+            padding-left: 4vw;
+        }
+    }
+
+    @variant phone {
+        td:first-child {
+            width: 25%;
+        }
+    }
+}
+
+
+/*
+ * Guard against the `block` display utility: markdown combines the legacy
+ * `.block` spacing class with `.notice` (an inline-block component). If any
+ * template uses the `block` utility, Tailwind emits `.block{display:block}`
+ * in the utilities layer, which would otherwise override the notices'
+ * display. These rules sit in the same layer, later in the file, and win.
+ */
+.notice.block {
+    display: inline-block;
+}
+
+.notice.is-with-big-icon.block {
+    display: block;
+}
+
+
+/*
+ * Post page chrome. The class names are a public hook for per-post
+ * stylesheets (e.g. the Stickyfill post restyles `.post`), so they stay
+ * semantic instead of being inlined as utilities in the layout.
+ */
+.post {
+    padding-top: 2.5em;
+    padding-bottom: 2.5em;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(100, 80, 0, 0.12);
+
+    @variant tablet-overlap {
+        padding-top: 4em;
+        padding-bottom: 4em;
+    }
+
+    @variant pc {
+        padding-top: 11vh;
+        padding-bottom: 11vh;
+    }
+
+    &.is-no-padding-top {
+        padding-top: 0;
+    }
+}
+
+.post__content {
+    @apply content-box;
+}
+
+.post__meta {
+    @apply content-box;
+    padding-top: 2em;
+    color: var(--color-inactive);
+    font-size: var(--text-small);
+}
+
+/* Referenced from .ejs posts (Stickyfill demo) */
+.sticky {
+    position: sticky;
+    top: 0;
+
+    &::before,
+    &::after {
+        content: '';
+        display: table;
+    }
+}
+
+.list {
+    margin-bottom: 1.5em;
+}
+
+.list__item {
+    padding-left: 2.2em;
+    margin-bottom: 1em;
+    @apply dash-marker;
+}
+
+.del {
+    text-decoration: line-through;
+}
