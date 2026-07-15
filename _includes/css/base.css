@@ -107,9 +107,32 @@ ol {
     list-style-type: decimal;
 }
 
-/* Both themes are first-class: UA scrollbars/controls follow the theme */
+/*
+ * Both themes are first-class. color-scheme drives everything:
+ * light-dark() tokens, UA scrollbars and form controls. By default it
+ * follows the OS; the sun/moon toggle pins it via data-theme.
+ */
 html {
     color-scheme: light dark;
+}
+
+:root[data-theme='light'] {
+    color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+    color-scheme: dark;
+}
+
+/*
+ * Theme switch animation: the default view-transition crossfade is
+ * replaced by a circular reveal from the toggle (clip-path animated
+ * from the click point in JS, see base.ejs).
+ */
+::view-transition-old(root),
+::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal;
 }
 
 body {

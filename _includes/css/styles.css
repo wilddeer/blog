@@ -14,10 +14,26 @@
 @import './plugins/prism.css';
 
 @import './theme.css';
-@import './theme-dark.css';
 @import './base.css';
 @import './components.css';
 @import './typography.css';
+
+/*
+ * `dark:` matches the resolved theme: an explicit reader choice
+ * (data-theme, set by the sun/moon toggle) or the OS preference when
+ * no choice was made. Mirrors how light-dark() tokens resolve.
+ */
+@custom-variant dark {
+    &:where([data-theme='dark'], [data-theme='dark'] *) {
+        @slot;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        &:where(:not([data-theme='light'], [data-theme='light'] *)) {
+            @slot;
+        }
+    }
+}
 
 @tailwind utilities source(none);
 

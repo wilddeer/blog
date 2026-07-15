@@ -23,18 +23,17 @@ _%>
             <% }); %>
         </aside>
 
-        <<%= isRoot ? 'h1' : 'div' %> class="text-h1 mb-[0.7em] <%= isRoot ? 'tablet-overlap:text-h1-med pc:text-h1-full' : '' %>">
-            <a class="<%= isRoot ? '' : unvisitedLink %>" href="/<%= $.lang !== 'ru' ? `${$.lang}/` : ''%>">
-                Grumpy
-                <span class="whitespace-nowrap">
-                    <span class="mr-[0.15em] phone:mr-[0.2em]">
-                        Blog<!--
-                 --></span><!--
-                 --><span class="inline-block text-[0.8em] -translate-y-[0.2em] phone:-translate-y-[0.3em] dark:text-[#ffc94d] dark:drop-shadow-[0_0_0.45em_rgba(255,201,77,0.4)]">
-                        <%- include('/svg/happy-sun.svg') %>
-                    </span>
-                </span>
-            </a>
+        <%_ // The title is nowrap so “Blog” never separates from the
+            // sun/moon button (inline-blocks are break opportunities);
+            // the only allowed break is the space after “Grumpy”,
+            // re-enabled on its own span. _%>
+        <<%= isRoot ? 'h1' : 'div' %> class="text-h1 mb-[0.7em] whitespace-nowrap <%= isRoot ? 'tablet-overlap:text-h1-med pc:text-h1-full' : '' %>">
+            <a class="<%= isRoot ? '' : unvisitedLink %>" href="/<%= $.lang !== 'ru' ? `${$.lang}/` : ''%>"><span class="whitespace-normal">Grumpy </span><span class="mr-[0.15em] phone:mr-[0.2em]">Blog</span></a><!--
+         --><button
+                type="button"
+                class="theme-toggle js-theme-toggle text-[0.8em] -translate-y-[0.2em] phone:-translate-y-[0.3em] <%= isRoot ? '' : 'text-link' %>"
+                aria-label="<%= $.lang === 'ru' ? 'Переключить тему' : 'Toggle theme' %>"
+            ><%- include('/svg/happy-sun.svg') %><%- include('/svg/happy-moon.svg') %></button>
         </<%= isRoot ? 'h1' : 'div' %>>
     </nav>
 </header>

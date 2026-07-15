@@ -27,51 +27,62 @@
     --breakpoint-tablet-overlap: 960px;
     --breakpoint-pc: 1200px;
 
-    /* Text colors */
+    /*
+     * Colors: light-dark() pairs resolved by the color-scheme set on
+     * <html> — the OS preference by default, or the reader's explicit
+     * choice via the sun/moon toggle (data-theme, see base.css).
+     *
+     * Dark design notes: warm charcoal, not cold slate — the light
+     * paper (#fffff9) carries a drop of warmth, so night surfaces do
+     * too. The dark card reuses #242222, the exact color light-mode
+     * demo blocks always had. Links keep their voltage (#8091ff reads
+     * like #0014ff does on white), and the white-on-red hover is
+     * deliberately identical in both themes.
+     */
     --color-white: #fff;
-    --color-ink: #000;
-    --color-inactive: #6d6d6d;
+    --color-ink: light-dark(#000, #eae7e0);
+    --color-inactive: light-dark(#6d6d6d, #99928a);
     --color-inverse: #fff;
     --color-inverse-tinted: rgb(255 255 255 / 70%);
     --color-inverse-inactive: rgb(255 255 255 / 15%);
 
     /* Background colors */
-    --color-paper: #fffff9;
-    --color-card: #fff;
-    --color-card-shadow: rgb(100 80 0 / 12%);
-    --color-demo-bg: #242222;
+    --color-paper: light-dark(#fffff9, #1a1817);
+    --color-card: light-dark(#fff, #242222);
+    --color-card-shadow: light-dark(rgb(100 80 0 / 12%), rgb(0 0 0 / 45%));
+    --color-demo-bg: light-dark(#242222, #151312);
     --color-demo-light-bg: rgb(183 167 167 / 10%);
     --color-code-bg: rgb(183 167 167 / 10%);
-    --color-table-stripe: #f8f8f8;
-    --color-kbd-bg: #f9f9f9;
-    --color-kbd-highlight: #fff;
+    --color-table-stripe: light-dark(#f8f8f8, rgb(255 255 255 / 3.5%));
+    --color-kbd-bg: light-dark(#f9f9f9, #34302d);
+    --color-kbd-highlight: light-dark(#fff, rgb(255 255 255 / 14%));
 
-    /* Link colors */
-    --color-link: #0014ff;
-    --color-visited: #464da4;
+    /* Link colors; --color-link-hover is intentionally theme-invariant */
+    --color-link: light-dark(#0014ff, #8091ff);
+    --color-visited: light-dark(#464da4, #a5a2da);
     --color-link-hover: #ff0000;
-    --color-button-hover-bg: #0014ff;
+    --color-button-hover-bg: light-dark(#0014ff, #2d40e8);
 
     /* Border colors */
-    --color-border-light: rgb(0 0 0 / 15%);
-    --color-border-light-opaque: #d4d4d4;
-    --color-border-regular: rgb(0 0 0 / 30%);
+    --color-border-light: light-dark(rgb(0 0 0 / 15%), rgb(255 255 255 / 14%));
+    --color-border-light-opaque: light-dark(#d4d4d4, #4c4743);
+    --color-border-regular: light-dark(rgb(0 0 0 / 30%), rgb(255 255 255 / 32%));
     --color-border-inverse-light: rgb(255 255 255 / 15%);
     --color-border-inverse-regular: rgb(255 255 255 / 30%);
 
-    /* State colors */
-    --color-danger: #ff0000;
-    --color-danger-bg: #fff4f0;
-    --color-success: #00c500;
-    --color-success-bg: #dfffdf;
-    --color-warning: #ff5200;
-    --color-warning-bg: #ffe2c5;
-    --color-note: #ec8300;
-    --color-note-bg: #fff9c5;
-    --color-info: #00b9ff;
-    --color-info-bg: #e5f8ff;
-    --color-unimportant: #6d6d6d;
-    --color-unimportant-bg: #f5f3f3;
+    /* State colors: pastel grounds by day, deep tinted grounds by night */
+    --color-danger: light-dark(#ff0000, #ff6f63);
+    --color-danger-bg: light-dark(#fff4f0, #361b15);
+    --color-success: light-dark(#00c500, #35d654);
+    --color-success-bg: light-dark(#dfffdf, #16291a);
+    --color-warning: light-dark(#ff5200, #ff9457);
+    --color-warning-bg: light-dark(#ffe2c5, #33200f);
+    --color-note: light-dark(#ec8300, #eda73d);
+    --color-note-bg: light-dark(#fff9c5, #302710);
+    --color-info: light-dark(#00b9ff, #4cc7ff);
+    --color-info-bg: light-dark(#e5f8ff, #10283a);
+    --color-unimportant: light-dark(#6d6d6d, #99928a);
+    --color-unimportant-bg: light-dark(#f5f3f3, #2c2927);
 
     /* Type scale */
     --text-h1: 2.9em;
