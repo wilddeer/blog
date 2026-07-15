@@ -2,6 +2,8 @@
 <%_
     const titleClass = 'text-[1.5em] mt-8 mb-1';
     const tumbleClass = 'leading-[0] text-[1.5em] ml-[0.2em] align-[-0.2em]';
+    // Like `link`, but gray in all states (archive posts)
+    const mutedLink = 'underline text-inactive decoration-inactive/50 hover:no-underline hover:text-white hover:bg-inactive';
 _%>
 <%
     $.posts
@@ -60,7 +62,7 @@ _%>
 
     <%_ const isArchive = post.data.tags.includes('archive'); _%>
     <li class="mb-4 pc:dash-marker <%= isArchive ? 'text-inactive' : '' %>">
-        <a class="link <%= isArchive ? 'is-muted' : '' %>" href="<%= post.url %>"><%=
+        <a class="<%= isArchive ? mutedLink : 'link' %>" href="<%= post.url %>"><%=
             post.data.title
         %></a>
 

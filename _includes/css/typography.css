@@ -227,8 +227,31 @@
         height: auto;
     }
 
-    :where(a svg) {
-        margin-right: 0.2em;
+    a {
+        @apply link;
+
+        & svg {
+            margin-right: 0.2em;
+        }
+
+        /* Colored background (used on links inside colored notices) */
+        &.is-colored-bg {
+            color: inherit;
+            text-decoration-color: currentColor;
+        }
+
+        &.is-colored-bg:hover {
+            -webkit-text-fill-color: white;
+            background: currentColor;
+        }
+    }
+
+    small {
+        font-size: var(--text-tiny);
+    }
+
+    kbd {
+        @apply kbd;
     }
 
     :where(abbr) {
@@ -266,7 +289,7 @@
             background: var(--color-info-bg);
             color: var(--color-info);
             box-shadow: 0 1px 3px --alpha(var(--color-info) / 50%);
-            transform: translateX(calc(50 * var(--vw, 1vw) - 50%)) translateY(100%);
+            transform: translateX(calc(50cqw - 50%)) translateY(100%);
             border-radius: 0.25em;
             padding: 0.5em 1em;
             visibility: hidden;
@@ -279,7 +302,7 @@
             visibility: visible;
             opacity: 1;
             transition-timing-function: cubic-bezier(0.09, 0.75, 0.38, 1.15);
-            transform: translateX(calc(50 * var(--vw, 1vw) - 50%)) translateY(-1.5rem);
+            transform: translateX(calc(50cqw - 50%)) translateY(-1.5rem);
         }
     }
 
@@ -315,6 +338,10 @@
             right: -1em;
             bottom: -1em;
         }
+    }
+
+    :not(pre) > code {
+        @apply code;
     }
 
     /*
@@ -423,6 +450,10 @@
     td.is-false {
         color: var(--color-danger);
         background-color: var(--color-danger-bg);
+    }
+
+    button {
+        @apply button;
     }
 
     .twitter-tweet {

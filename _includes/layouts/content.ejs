@@ -1,7 +1,11 @@
 ---
 layout: layouts/base
 ---
-<%_ const isRoot = $.tags.includes('root'); _%>
+<%_
+    const isRoot = $.tags.includes('root');
+    // Like `link`, but :visited keeps the regular link color
+    const unvisitedLink = 'underline text-link decoration-link/50 hover:no-underline hover:text-white hover:bg-link-hover';
+_%>
 
 <header class="content-box <%= isRoot ? 'phone:mt-18 pc:mt-[calc(123px+11vh)]' : 'phone:pt-6' %>">
     <nav class="tablet-overlap:ootb">
@@ -12,7 +16,7 @@ layout: layouts/base
                     <span class="<%= langClass %> text-inactive"><%= el %></span>
                 <% } else { %>
                     <a
-                        class="<%= langClass %> link is-unvisited"
+                        class="<%= langClass %> <%= unvisitedLink %>"
                         href="/<%= el !== 'ru' ? `${el}/` : '' %><%= $.langLink ? `${$.langLink}/` : '' %>"
                     ><%= el %></a>
                 <% } %>
@@ -20,7 +24,7 @@ layout: layouts/base
         </aside>
 
         <<%= isRoot ? 'h1' : 'div' %> class="text-h1 mb-[0.7em] <%= isRoot ? 'tablet-overlap:text-h1-med pc:text-h1-full' : '' %>">
-            <a class="<%= isRoot ? '' : 'link is-unvisited' %>" href="/<%= $.lang !== 'ru' ? `${$.lang}/` : ''%>">
+            <a class="<%= isRoot ? '' : unvisitedLink %>" href="/<%= $.lang !== 'ru' ? `${$.lang}/` : ''%>">
                 Grumpy
                 <span class="whitespace-nowrap">
                     <span class="mr-[0.15em] phone:mr-[0.2em]">

@@ -10,27 +10,25 @@
 /* Centered content column */
 @utility content-box {
     width: min(var(--content-max-width), var(--content-width));
-    margin-left: auto;
-    margin-right: auto;
+    margin-inline: auto;
 }
 
 /* Like content-box, but a bit wider: content width + side paddings */
 @utility content-box-wide {
     width: min(var(--content-ootb-max-width), var(--content-width));
-    margin-left: auto;
-    margin-right: auto;
+    margin-inline: auto;
 }
 
 /* Full window width, regardless of the parent's width */
 @utility content-fullwidth {
-    width: calc(100 * var(--vw, 1vw));
-    margin-left: calc(-50 * var(--vw, 1vw) + 50%);
+    width: 100cqw;
+    margin-inline-start: calc(-50cqw + 50%);
 }
 
 /* Poke out of the content box, into its side paddings */
 @utility ootb {
     width: calc(100% + 2 * var(--content-padding));
-    margin-left: calc(-1 * var(--content-padding));
+    margin-inline-start: calc(-1 * var(--content-padding));
 }
 
 /* Pokes out of the content box, but only on wide-enough screens */
@@ -44,7 +42,7 @@
 @utility dash-marker {
     &::before {
         content: '—';
-        margin-left: -1em;
+        margin-inline-start: -1em;
 
         /*
          * The real width of the m-dash is unknown.
@@ -64,8 +62,13 @@
     }
 }
 
-.link,
-.text a {
+/*
+ * Interactive patterns as custom utilities: they compose with variants,
+ * show up in editor autocomplete, and can be @apply'd onto markdown
+ * elements (see typography.css). Nested `is-*` classes are content
+ * contract — markdown uses them as modifiers.
+ */
+@utility link {
     color: var(--color-link);
     text-decoration: underline;
     text-decoration-color: --alpha(var(--color-link) / 50%);
@@ -77,47 +80,12 @@
 
     &:hover {
         color: #fff;
-        background: var(--color-link-hover-bg);
-        text-decoration: none;
-    }
-
-    /* Colored background */
-    &.is-colored-bg {
-        color: inherit;
-        text-decoration-color: currentColor;
-    }
-
-    &.is-colored-bg:hover {
-        -webkit-text-fill-color: white;
-        background: currentColor;
-    }
-
-    /* Visited links look like unvisited ones */
-    &.is-unvisited:visited {
-        color: var(--color-link);
-        text-decoration-color: --alpha(var(--color-link) / 50%);
-    }
-
-    /* Gray links (archive posts etc.) */
-    &.is-muted {
-        color: var(--color-inactive);
-        text-decoration-color: --alpha(var(--color-inactive) / 50%);
-    }
-
-    &.is-muted:visited {
-        color: var(--color-inactive);
-        text-decoration-color: --alpha(var(--color-inactive) / 50%);
-    }
-
-    &.is-muted:hover {
-        color: #fff;
-        background: var(--color-inactive);
+        background: var(--color-link-hover);
         text-decoration: none;
     }
 }
 
-.kbd,
-.text kbd {
+@utility kbd {
     display: inline-block;
     vertical-align: 0.1em;
     margin: 0 0.2em;
@@ -134,8 +102,7 @@
     white-space: nowrap;
 }
 
-.code,
-.text :not(pre) > code {
+@utility code {
     background-color: var(--color-danger-bg);
     color: var(--color-danger);
     border-radius: 0.25em;
@@ -144,18 +111,17 @@
     font-style: normal;
 
     &.is-inverse {
-        background-color: rgba(255, 255, 255, 0.2);
+        background-color: rgb(255 255 255 / 20%);
         color: var(--color-inverse);
     }
 
     &.is-colored-bg {
         color: inherit;
-        background-color: rgba(255, 255, 255, 0.6);
+        background-color: rgb(255 255 255 / 60%);
     }
 }
 
-.button,
-.text button {
+@utility button {
     background: transparent;
     border: 1px solid var(--color-border-regular);
     border-radius: 0.2em;
@@ -168,7 +134,7 @@
         background: var(--color-link);
         border-color: var(--color-link);
         color: white;
-        box-shadow: 0 0.1em 0 0 rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0.1em 0 0 rgb(0 0 0 / 10%);
     }
 
     &:active:not([disabled]) {
@@ -193,7 +159,7 @@
     }
 }
 
-.input {
+@utility input {
     padding: 0.5em 0.7em;
     border: 1px solid var(--color-border-regular);
     border-radius: 0.2em;
@@ -213,10 +179,6 @@
     height: 1em;
     vertical-align: -0.1em;
     fill: currentColor;
-}
-
-.text small {
-    font-size: var(--text-tiny);
 }
 
 /*
@@ -316,8 +278,7 @@
     background: var(--color-demo-bg);
 
     &.is-fullwidth {
-        padding-left: 0;
-        padding-right: 0;
+        padding-inline: 0;
     }
 
     &.is-light {
@@ -364,7 +325,7 @@ table.key-value-table {
     padding-top: 2.5em;
     padding-bottom: 2.5em;
     background: #fff;
-    box-shadow: 0 0 10px rgba(100, 80, 0, 0.12);
+    box-shadow: 0 0 10px rgb(100 80 0 / 12%);
 
     @variant tablet-overlap {
         padding-top: 4em;
