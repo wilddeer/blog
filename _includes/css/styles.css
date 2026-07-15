@@ -9,8 +9,8 @@
  * components and markdown typography, with utilities emitted last so
  * they win ties against components, like `@layer utilities` would.
  *
- * Tailwind's Preflight is intentionally not used — see base.css.
  */
+@import 'tailwindcss/preflight.css';
 @import './plugins/prism.css';
 
 @import './theme.css';

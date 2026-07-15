@@ -15,9 +15,11 @@
      */
     --spacing: 0.25em;
 
-    /* Fonts */
+    /* Fonts (the --default-* pair feeds Preflight's html/pre rules) */
     --font-sans: 'Nunito', sans-serif;
     --font-mono: 'Fira Code', monospace;
+    --default-font-family: var(--font-sans);
+    --default-mono-font-family: var(--font-mono);
 
     /* Breakpoints */
     --breakpoint-phone: 640px;

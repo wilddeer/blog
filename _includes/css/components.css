@@ -71,6 +71,7 @@
 @utility link {
     color: var(--color-link);
     text-decoration: underline;
+    box-decoration-break: clone;
     text-decoration-color: --alpha(var(--color-link) / 50%);
 
     &:visited {
@@ -87,6 +88,7 @@
 
 @utility kbd {
     display: inline-block;
+    box-decoration-break: clone;
     vertical-align: 0.1em;
     margin: 0 0.2em;
     line-height: 1.25;
@@ -103,6 +105,7 @@
 }
 
 @utility code {
+    box-decoration-break: clone;
     background-color: var(--color-danger-bg);
     color: var(--color-danger);
     border-radius: 0.25em;
@@ -122,6 +125,8 @@
 }
 
 @utility button {
+    /* Compact control, not a text block (Preflight inherits 1.65) */
+    line-height: normal;
     background: transparent;
     border: 1px solid var(--color-border-regular);
     border-radius: 0.2em;
@@ -218,6 +223,7 @@
     &.is-inline {
         display: inline;
         padding: 0.1em 0.3em;
+        box-decoration-break: clone;
     }
 
     &.is-info {

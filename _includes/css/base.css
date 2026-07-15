@@ -1,9 +1,7 @@
 /*
- * Fonts and base element styles.
- *
- * Tailwind's Preflight is intentionally not used: the design predates it
- * and relies on this universal reset (font-size: 1em everywhere, inline
- * images, ol numbering etc.), including the per-post demo stylesheets.
+ * Fonts and project base styles, applied on top of Tailwind's Preflight
+ * (imported in styles.css). Anything here is a deliberate design
+ * decision, not a reset.
  */
 
 /* nunito-regular - latin-ext_latin_cyrillic-ext_cyrillic */
@@ -75,29 +73,38 @@
     }
 }
 
-*,
-*::before,
-*::after {
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    font-size: 1em;
-    font-weight: inherit;
-    color: inherit;
-    border: 0;
-    box-sizing: border-box;
-    overflow-wrap: break-word;
-    background: transparent;
-    -webkit-tap-highlight-color: transparent;
-    box-decoration-break: clone;
+/*
+ * This is a text blog: media sits inline in the typographic flow
+ * (figures center via text-align, icons align to text), unlike
+ * Preflight's block-by-default replaced elements.
+ */
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+    display: inline;
+    vertical-align: baseline;
 }
 
-ul {
-    list-style-type: none;
+/*
+ * Roll back Preflight's max-width: 100%; height: auto to the UA
+ * behavior: in-post demos (e.g. the Steam gallery) size images with
+ * width/height attributes. Markdown images are still constrained by
+ * `.text img`.
+ */
+img,
+video {
+    max-width: revert;
+    height: revert;
 }
 
-html {
-    font-size: 100%;
+/* Preflight unstyles all lists; this design keeps ordered ones numbered */
+ol {
+    list-style-type: decimal;
 }
 
 body {
@@ -110,31 +117,16 @@ body {
      */
     container-type: inline-size;
     font-size: 1.15em;
-    width: 100%;
+    color: var(--color-ink);
     background: var(--color-paper);
     line-height: var(--leading-base);
+    overflow-wrap: break-word;
     -webkit-font-smoothing: antialiased;
     overflow-y: scroll;
     overflow-anchor: none;
 }
 
-body,
-input,
-select,
-textarea,
-button {
-    color: var(--color-ink);
-    font-family: var(--font-sans);
-}
-
-input,
-textarea {
-    line-height: var(--leading-base);
-}
-
 ::placeholder {
-    font-weight: normal;
-    opacity: 1;
     color: var(--color-ink);
 }
 
@@ -154,15 +146,6 @@ label[for] {
 strong,
 b {
     font-weight: 600;
-}
-
-em {
-    font-style: italic;
-}
-
-pre,
-code {
-    font-family: var(--font-mono);
 }
 
 
