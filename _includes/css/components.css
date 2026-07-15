@@ -1,9 +1,10 @@
 /*
- * Layout primitives (custom utilities) and component classes.
+ * Layout primitives (custom utilities) and genuine components.
  *
- * Everything here is referenced from markdown posts (via markdown-it-attrs
- * or raw HTML), so the class names are part of the content contract and
- * can't be replaced with inline utilities.
+ * One-off styling in posts and templates is done with plain Tailwind
+ * utilities. What lives here is either a layout primitive (@utility) or
+ * a real component with internal structure/variants (notice, kbd,
+ * button…), referenced from markdown and per-post stylesheets.
  */
 
 /* Centered content column */
@@ -30,6 +31,13 @@
 @utility ootb {
     width: calc(100% + 2 * var(--content-padding));
     margin-left: calc(-1 * var(--content-padding));
+}
+
+/* Pokes out of the content box, but only on wide-enough screens */
+@utility out-of-the-box {
+    @variant tablet-overlap {
+        @apply ootb;
+    }
 }
 
 /* Em-dash list marker that doesn't shift the text position */
@@ -207,27 +215,15 @@
     fill: currentColor;
 }
 
-.small,
 .text small {
     font-size: var(--text-tiny);
 }
 
-.align-center {
-    text-align: center;
-}
-
-.nowrap {
-    white-space: nowrap;
-}
-
-.pre-wrap {
-    white-space: pre-wrap;
-}
-
-.hidden {
-    display: none;
-}
-
+/*
+ * Hardened screen-reader-only utility. Tailwind's own `sr-only` has no
+ * !important and loses to sizing rules like `figure.is-demo img`
+ * (0,2,1), so markdown images marked {.sr-only} would keep their box.
+ */
 .sr-only {
     clip: rect(0 0 0 0) !important;
     clip-path: inset(50%) !important;
@@ -248,68 +244,6 @@
         color: var(--color-inactive);
         margin-bottom: 2em;
     }
-}
-
-/*
- * Legacy spacing class, still referenced from markdown. It shares its
- * name with Tailwind's `block` display utility, which the templates
- * may legitimately use — the guard at the bottom of this file keeps
- * the utility from flipping inline-block notices to block.
- */
-.block {
-    &.is-mt {
-        margin-top: 1.5em;
-    }
-
-    &.is-mt-big {
-        margin-top: 2.5em;
-    }
-
-    &.is-mb {
-        margin-bottom: 1.5em;
-    }
-
-    &.is-mb-big {
-        margin-bottom: 2.5em;
-    }
-}
-
-.font-size {
-    &.is-heading-2 {
-        font-size: var(--text-h2);
-    }
-
-    &.is-heading-3 {
-        font-size: var(--text-h3);
-    }
-
-    &.is-small {
-        font-size: var(--text-small);
-    }
-
-    &.is-smaller {
-        font-size: var(--text-smaller);
-    }
-}
-
-.state-color {
-    color: var(--color-unimportant);
-}
-
-.state-color--info {
-    color: var(--color-info);
-}
-
-.state-color--success {
-    color: var(--color-success);
-}
-
-.state-color--warning {
-    color: var(--color-warning);
-}
-
-.state-color--danger {
-    color: var(--color-danger);
 }
 
 .notice {
@@ -397,13 +331,6 @@
     }
 }
 
-/* Only applies out of the box on wide-enough screens */
-.out-of-the-box {
-    @variant tablet-overlap {
-        @apply ootb;
-    }
-}
-
 table.key-value-table {
     @variant max-phone {
         display: block;
@@ -427,23 +354,6 @@ table.key-value-table {
         }
     }
 }
-
-
-/*
- * Guard against the `block` display utility: markdown combines the legacy
- * `.block` spacing class with `.notice` (an inline-block component). If any
- * template uses the `block` utility, Tailwind emits `.block{display:block}`
- * in the utilities layer, which would otherwise override the notices'
- * display. These rules sit in the same layer, later in the file, and win.
- */
-.notice.block {
-    display: inline-block;
-}
-
-.notice.is-with-big-icon.block {
-    display: block;
-}
-
 
 /*
  * Post page chrome. The class names are a public hook for per-post
@@ -492,18 +402,4 @@ table.key-value-table {
         content: '';
         display: table;
     }
-}
-
-.list {
-    margin-bottom: 1.5em;
-}
-
-.list__item {
-    padding-left: 2.2em;
-    margin-bottom: 1em;
-    @apply dash-marker;
-}
-
-.del {
-    text-decoration: line-through;
 }

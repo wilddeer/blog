@@ -3,9 +3,9 @@ layout: layouts/base
 ---
 <%_ const isRoot = $.tags.includes('root'); _%>
 
-<header class="content-box <%= isRoot ? 'phone:mt-[4.5em] pc:mt-[calc(123px+11vh)]' : 'phone:pt-[1.5em]' %>">
+<header class="content-box <%= isRoot ? 'phone:mt-18 pc:mt-[calc(123px+11vh)]' : 'phone:pt-6' %>">
     <nav class="tablet-overlap:ootb">
-        <aside class="text-smaller mt-[2em] mb-[1em] phone:float-right phone:mt-0 phone:pt-[0.5em] phone:pl-[2em]">
+        <aside class="text-smaller mt-8 mb-4 phone:float-right phone:mt-0 phone:pt-2 phone:pl-8">
             <% ['ru', 'en'].forEach((el, index) => { %>
                 <% const langClass = `inline-block pt-[0.2em] px-[0.3em] pb-[0.1em] uppercase text-[0.9em] tracking-[0.05em] ${index > 0 ? 'ml-[0.6em]' : ''}`; %>
                 <% if ($.lang === el) { %>
@@ -40,7 +40,7 @@ layout: layouts/base
 </main>
 
 <%_ const footerElClass = `not-last-of-type:after:content-['_•_']`; _%>
-<footer class="content-box mt-[3em] mb-[2em] text-inactive text-smaller <%= isRoot ? 'phone:mb-[6em] pc:mb-[20vh]' : '' %>">
+<footer class="content-box mt-12 mb-8 text-inactive text-smaller <%= isRoot ? 'phone:mb-24 pc:mb-[20vh]' : '' %>">
     <% if ($.lang === 'en') { %>
         <p>
             <span class="<%= footerElClass %>">
@@ -60,7 +60,7 @@ layout: layouts/base
             </span>
         </p>
 
-        <p class="mt-[0.5em]">
+        <p class="mt-2">
             <% if (isRoot) { %>
                 <span class="<%= footerElClass %>">
                     Tumbleweed icon and happy sun icon by <a class="link" href="https://www.flaticon.com/authors/freepik">Freepik</a> from <a class="link" href="https://www.flaticon.com/">Flaticon</a>
@@ -98,7 +98,7 @@ layout: layouts/base
             </span>
         </p>
 
-        <p class="mt-[0.5em]">
+        <p class="mt-2">
             <% if (isRoot) { %>
                 <span class="<%= footerElClass %>">
                     Перекати-поле и упоротое солнце — <a class="link" href="https://www.flaticon.com/authors/freepik">Freepik</a> из <a class="link" href="https://www.flaticon.com/">Flaticon</a>

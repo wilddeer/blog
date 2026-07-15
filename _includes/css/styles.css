@@ -21,16 +21,13 @@
 @tailwind utilities source(none);
 
 /*
- * Utility classes are only picked up from the templates. Markdown posts
- * are deliberately not scanned: they reference component classes defined
- * here, and scanning prose would generate stray utilities (e.g. `block`)
- * that would override same-named component classes.
+ * Utility classes are picked up from the templates and from post
+ * content (markdown-it-attrs and raw HTML both use utilities directly).
+ * Auto-detection is off (`source(none)`) so that unrelated files —
+ * standalone demos, vendored JS, this CSS — don't feed the scanner.
  */
 @source '../../_includes/layouts';
 @source '../../_includes/modules';
 @source '../../index';
 @source '../../404.ejs';
-
-/* Classes referenced from markdown/JS only, invisible to the scanner */
-@source inline('content-box');
-@source inline('content-fullwidth');
+@source '../../posts';

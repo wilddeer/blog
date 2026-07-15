@@ -4,10 +4,10 @@ image: tv.jpg
 langLink: 'panasonic_viera_smart_tv_browser'
 ---
 
-# <div class="small">Браузер</div>Panasonic Viera Smart&nbsp;TV<div class="small">(TX-LR32E6)</div> {.is-small-mb}
+# <div class="text-tiny">Браузер</div>Panasonic Viera Smart&nbsp;TV<div class="text-tiny">(TX-LR32E6)</div> {.is-small-mb}
 
 <%- include('/svg/history-solid.svg') %>**Редкие звери:** когда-то давно я развлекался исследованием экзотических браузеров на всяких не сильно распространенных устройствах. Это — одно из таких исследований.
-{.notice .is-with-icon .is-info .out-of-the-box .block .is-mb}
+{.notice .is-with-icon .is-info .out-of-the-box .mb-6}
 
 ![](tv.jpg =960x450)
 {.is-ootb}

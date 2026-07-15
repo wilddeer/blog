@@ -9,7 +9,7 @@ tags:
 # Testing responsive websites {.is-small-mb}
 
 <%- include('/svg/history-solid.svg') %>**Deprecated!** This post contains irrelevant old crap and is left for history and lulz.
-{.notice .is-with-icon .is-warning .out-of-the-box .block .is-mb}
+{.notice .is-with-icon .is-warning .out-of-the-box .mb-6}
 
 ![](whiteboard.jpg =900x506)
 {.is-ootb}
@@ -19,7 +19,7 @@ As [many good fellows](http://www.quirksmode.org/blog/archives/2010/02/the_iphon
 If you are tough enough, all the above is your absolute minimum, which you happily extend with everything that comes to hand.
 
 <%- include('/svg/comment-regular.svg') %>The more you use the principle of [progressive enhancement](https://en.wikipedia.org/wiki/Progressive_enhancement), [proper fallbacks](https://en.wikipedia.org/wiki/Fault_tolerance) and [unobtrusive javascript](https://en.wikipedia.org/wiki/Unobtrusive_JavaScript), the easier it is to test and fix the site on different devices, and the better the site will look on the devices you didn’t event bother to test on.
-{.notice .is-with-big-icon .font-size .is-smaller}
+{.notice .is-with-big-icon .text-smaller}
 
 ## Briefly about desktop browsers
 

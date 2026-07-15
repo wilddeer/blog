@@ -4,12 +4,12 @@ image: cover.png
 langLink: 'go_to_hell_with_your_fucking_pop-ups'
 ---
 
-# Заебали со своими попапами 🙃 {.align-center}
+# Заебали со своими попапами 🙃 {.text-center}
 
 :::.hidden .js-bonus
 Бонус за усидчивость — купон на скидку 5% в <a href="https://chatra.com">Чатре</a>:
 
-<strong class="js-skidon font-size is-heading-3"></strong>
+<strong class="js-skidon text-[1.5em]"></strong>
 
 (Да-да, это что-то типа постиронии или метасарказма.)
 :::

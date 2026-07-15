@@ -6,11 +6,16 @@
  * to carry layout classes (except intentional modifiers via
  * markdown-it-attrs, e.g. `{.is-ootb}`).
  *
+ * Bare element selectors are wrapped in :where() (like the official
+ * typography plugin's `prose`), so their specificity is (0,1,0) and any
+ * Tailwind utility applied to an element in markdown wins over these
+ * defaults. Selectors with modifier classes keep their specificity.
+ *
  * This file comes after the component classes so that its cascade
  * position matches the pre-Tailwind stylesheet.
  */
 .text {
-    h1 {
+    :where(h1) {
         font-size: var(--text-h1);
         line-height: var(--text-h1--line-height);
         margin-bottom: 0.7em;
@@ -33,29 +38,29 @@
         margin-bottom: 0.2em;
     }
 
-    h2 {
+    :where(h2) {
         font-size: var(--text-h2);
         line-height: var(--text-h2--line-height);
         margin-top: 2em;
         margin-bottom: 0.6em;
     }
 
-    h3 {
+    :where(h3) {
         font-size: var(--text-h3);
         line-height: var(--text-h3--line-height);
         margin-top: 2em;
         margin-bottom: 0.6em;
     }
 
-    h2 + h3 {
+    :where(h2 + h3) {
         margin-top: 0;
     }
 
-    p {
+    :where(p) {
         margin-bottom: 1.5em;
     }
 
-    blockquote {
+    :where(blockquote) {
         padding-left: 1em;
         border-left: 2px solid var(--color-border-regular);
         margin-bottom: 1.5em;
@@ -65,28 +70,27 @@
         margin-bottom: 0;
     }
 
-    hr {
+    :where(hr) {
         border-top: 1px solid var(--color-border-light);
         margin-bottom: 1.5em;
     }
 
-    ul,
-    ol {
+    :where(ul, ol) {
         margin-bottom: 1.5em;
     }
 
-    ul > li {
+    :where(ul > li) {
         padding-left: 2.2em;
         margin-bottom: 1em;
         @apply dash-marker;
     }
 
-    ol > li {
+    :where(ol > li) {
         margin-left: 2.2em;
         margin-bottom: 1em;
     }
 
-    figure {
+    :where(figure) {
         text-align: center;
         margin-bottom: 2.5em;
     }
@@ -176,7 +180,7 @@
         }
     }
 
-    figure img {
+    :where(figure img) {
         border-radius: 0.2em;
     }
 
@@ -198,7 +202,7 @@
         }
     }
 
-    figcaption {
+    :where(figcaption) {
         padding-top: 0.8em;
         font-style: italic;
         color: var(--color-inactive);
@@ -217,17 +221,17 @@
         padding-right: 0.5em;
     }
 
-    img {
+    :where(img) {
         vertical-align: middle;
         max-width: 100%;
         height: auto;
     }
 
-    a svg {
+    :where(a svg) {
         margin-right: 0.2em;
     }
 
-    abbr {
+    :where(abbr) {
         text-transform: uppercase;
         font-size: 0.9em;
         letter-spacing: 0.05em;
@@ -279,7 +283,7 @@
         }
     }
 
-    del {
+    :where(del) {
         text-decoration: line-through;
         text-decoration-color: red !important;
     }
@@ -313,6 +317,11 @@
         }
     }
 
+    /*
+     * Deliberately NOT :where()-wrapped: this must out-rank Prism's
+     * `pre[class*="language-"]` (0,1,1) font-size, which the old
+     * stylesheet beat by source order at equal specificity.
+     */
     pre {
         background-color: var(--color-code-bg);
         padding-left: 1.5em;
@@ -345,7 +354,7 @@
         max-height: 80vh;
     }
 
-    table {
+    :where(table) {
         width: 100%;
         border-collapse: collapse;
         border-spacing: 0;
@@ -360,30 +369,28 @@
         }
     }
 
-    tr {
+    :where(tr) {
         border-top: 1px solid var(--color-border-light);
     }
 
-    tbody tr:last-child {
+    :where(tbody tr:last-child) {
         border-bottom: 1px solid var(--color-border-light);
     }
 
-    tbody tr:nth-child(odd) {
+    :where(tbody tr:nth-child(odd)) {
         background: #f8f8f8;
     }
 
-    th {
+    :where(th) {
         font-weight: bold;
     }
 
-    td,
-    th {
+    :where(td, th) {
         padding: 0.3em 0.5em;
         text-align: left;
     }
 
-    td:first-child,
-    th:first-child {
+    :where(td:first-child, th:first-child) {
         @variant max-tablet {
             padding-left: var(--content-padding);
         }
@@ -393,8 +400,7 @@
         }
     }
 
-    td:last-child,
-    th:last-child {
+    :where(td:last-child, th:last-child) {
         @variant max-tablet {
             padding-right: var(--content-padding);
         }

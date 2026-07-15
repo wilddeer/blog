@@ -143,7 +143,7 @@ tags:
 # Чиним Steam
 
 <%- include('/svg/history-solid.svg') %>**Устаревшая фигня!** Этот пост содержит неактуальное старье и оставлен для истории и лулзов.
-{.notice .is-with-icon .is-warning .block .is-mb-big}
+{.notice .is-with-icon .is-warning .mb-10}
 
 [Стим](http://store.steampowered.com/) всем хорош, но сайт у ребят ужасный. Все классные идеи чуваков из Валва, получившие то или иное воплощение на сайте, страдают от плохой реализации фронтэнда.
 
@@ -155,13 +155,13 @@ tags:
 
 А теперь про проблемы сайта Стима и как я их решал, по полочкам:
 
-## <small class="state-color state-color--danger">Проблема</small><br>Урезанная мобильная версия
+## <small class="text-danger">Проблема</small><br>Урезанная мобильная версия
 
 Мобильная версия сайта не распознает многие мобильные девайсы и не обладает и половиной функционала полной версии. Например, недавно добавленные пользовательские обзоры игр полностью отсутствуют в мобильной версии.
 
 Между тем давать мобильным пользователям обрезанный функционал — очень плохая практика. Пользователь, зашедший с мобильника, хочет использовать все возможностями сайта, так же как и пользователь на десктопе. Есть [очень хорошая и короткая книжка](http://www.abookapart.com/products/mobile-first) по этому поводу.
 
-## <small class="state-color state-color--success">Решение</small><br>Адаптивная верстка
+## <small class="text-success">Решение</small><br>Адаптивная верстка
 
 Делаем адаптивную демку. Адаптивная верстка увеличивает время и сложность разработки, зато весь функционал сайта будет доступен сразу на любом устройстве, а поддержка и добавление фич упростится. В особо сложных ситуациях можно использовать комбинированный подход: генерировать на сервере часть страницы по-разному в зависимости от устройства. Например, можно отдавать на разные устройства картинки разных размеров.
 
@@ -237,7 +237,7 @@ tags:
 
 Чтобы мобильники еще больше нас любили, убираем для них почти все тени, полупрозрачные фоны заменяем на непрозрачные.
 
-## <small class="state-color state-color--danger">Проблема</small><br>Контент подчиняется дизайну
+## <small class="text-danger">Проблема</small><br>Контент подчиняется дизайну
 
 Вот так, например, сейчас выглядит блок про DLC на сайте Стима:
 
@@ -249,7 +249,7 @@ tags:
 
 У блока фиксированная высота и ширина (ширина непонятно зачем, ведь у родительского блока точно такая же ширина), а на фоне [картинка](http://cdn4.store.steampowered.com/public/images/v5/game_area_dlc.png). Даже в то время, когда не было классных CSS3-свойств, можно было сделать подобный блок резиновым. С костылями, но без особых проблем.
 
-## <small class="state-color state-color--success">Решение</small><br>Подчиняем дизайн контенту
+## <small class="text-success">Решение</small><br>Подчиняем дизайн контенту
 
 </div>
 
@@ -261,7 +261,7 @@ tags:
 ::: .content-box
 <%- include('steam-dlc.html') %>
 
-<div class="align-center block is-mt-big">
+<div class="text-center mt-10">
     <button class="button is-white" id="fill-it">наполни меня</button>
 </div>
 
@@ -274,7 +274,7 @@ tags:
     var i = 0;
 
     $('#fill-it').click(function() {
-        $('.game-dlc-notice').append('<p class="small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet nulla non est malesuada, vitae dapibus libero congue. Integer cursus magna ut neque commodo fermentum sed a enim. Ut pharetra urna facilisis laoreet iaculis. Sed sapien nulla, venenatis sit amet magna eu, ultrices aliquam nibh.</p>');
+        $('.game-dlc-notice').append('<p class="text-tiny">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet nulla non est malesuada, vitae dapibus libero congue. Integer cursus magna ut neque commodo fermentum sed a enim. Ut pharetra urna facilisis laoreet iaculis. Sed sapien nulla, venenatis sit amet magna eu, ultrices aliquam nibh.</p>');
 
         if (i++ > 3) {
             $(this).text('ну прекрати!').attr('disabled','disabled');
@@ -304,11 +304,11 @@ tags:
 
 Это наталкивает нас на еще одну проблему:
 
-## <small class="state-color state-color--danger">Проблема</small><br>Неуниверсальный код
+## <small class="text-danger">Проблема</small><br>Неуниверсальный код
 
 Два одинаковых по виду блока используют совершенно разную верстку, хотя, по сути, должны быть идентичны.
 
-## <small class="state-color state-color--success">Решение</small><br>Делаем код универсальным
+## <small class="text-success">Решение</small><br>Делаем код универсальным
 
 Делаем универсальный блок с ценой:
 
@@ -319,7 +319,7 @@ tags:
 <%- include('price-area.css') %>
 </style>
 
-<div class="steam-demo white align-center">
+<div class="steam-demo white text-center">
   <div class="price-area" style="font-size: 0.7em;">
     <span class="discount">
       <span>-1%</span>
@@ -403,7 +403,7 @@ tags:
 </div>
 
 ::: .demo .is-fullwidth .is-light
-<div class="steam-demo white align-center">
+<div class="steam-demo white text-center">
     <div class="price-area" style="font-size: 1.5em;">
         <span class="price">
             ¥ 999
@@ -488,7 +488,7 @@ tags:
 - **Модули** — это как раз отдельные повторяющиеся блоки, базовые стили которых не должны зависеть от контекста (но могут быть изменены стилями контекста, см. далее). Модули могут вкладываться друг в друга.
 - **Стили страницы** — стили специфичных для страницы блоков. Это как раз то место, где можно модифицировать стили модулей, расположенных в конкретных блоках страницы.
 
-## <small class="state-color state-color--danger">Проблема</small><br>«Навязчивый» яваскрипт
+## <small class="text-danger">Проблема</small><br>«Навязчивый» яваскрипт
 
 Подмена базовых функций HTML скриптами и отсутствие фоллбеков приводит к тому, что стандартный функционал элементов полностью теряется.
 
@@ -520,7 +520,7 @@ tags:
 
 Мало того, что эти посты открываются в ужасных модальных окнах (их, кстати, придумали люди, которые ненавидят вкладки), так еще их совсем никак нельзя открыть по-нормальному, ведь это не ссылка. Не говоря уже об инлайновых стилях и жирном инлайновом вызове функции.
 
-## <small class="state-color state-color--success">Решение</small><br>Делаем яваскрипт [ненавязчивым](https://en.wikipedia.org/wiki/Unobtrusive_JavaScript)
+## <small class="text-success">Решение</small><br>Делаем яваскрипт [ненавязчивым](https://en.wikipedia.org/wiki/Unobtrusive_JavaScript)
 
 Весь блок можно сделать ссылкой и открывать попап (если ну прям очень хочется попап) только по нажатию левой кнопки.
 
@@ -528,7 +528,7 @@ tags:
 
 Кроме всего перечисленного, «навязчивый» яваскрипт напрямую ведет к еще одной проблеме:
 
-## <small class="state-color state-color--danger">Проблема</small><br>Низкая отказоустойчивость
+## <small class="text-danger">Проблема</small><br>Низкая отказоустойчивость
 
 Что произойдет, если упадет CDN-сервер со скриптами? Если один из скриптов выполнится с ошибкой? Правильно, половина функционала сайта просто перестанет работать. А могла бы работать, хоть и не так хорошо, как со скриптами.
 
@@ -536,7 +536,7 @@ tags:
 
 ![](gallery-nojs.jpg =621x443)
 
-## <small class="state-color state-color--success">Решение</small><br>Используем грамотные фоллбеки
+## <small class="text-success">Решение</small><br>Используем грамотные фоллбеки
 
 Кладем картинки из галереи в блок с горизонтальным скроллом, который после инициализации превратится в нормальную галерею. Так как элементы управления без яваскрипта бесполезны, их не стоит показывать до инициализации:
 
@@ -557,7 +557,7 @@ tags:
     </section>
 </div>
 
-<div class="align-center block is-mt-big">
+<div class="text-center mt-10">
     <button class="button is-white" id="launch-it">Запусти меня</button>
 </div>
 

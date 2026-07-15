@@ -12,7 +12,7 @@ tags:
 {.notice .is-with-icon .is-warning}
 
 Originally translated by [Varya Stepanova](http://varya.me/) and posted on [Frontend Babel](http://frontendbabel.info/articles/about-viewport/).
-{.notice .block .is-mb-big}
+{.notice .mb-10}
 
 Once Opera’s guys proposed to use `@viewport { ... }` in CSS instead of `<meta name="viewport" ...>` tag. Regarding the reasons [you’d better watch and listen to @ppk](http://vimeo.com/100523275) and I will explain why you should use this right now.
 

@@ -13,13 +13,13 @@ tags:
   </style>
 
   <section style="height: 120em;">
-    <div class="sticky-1 sticky align-center">
+    <div class="sticky-1 sticky text-center">
       <h1 class="article-title">
         <a href="https://github.com/wilddeer/stickyfill">Stickyfill</a><br>
         <small class="tagline">Полифилл для <code class="code is-inverse">position:&nbsp;sticky</code></small>
       </h1>
 
-      <div class="notice is-inverse block is-mt is-mb font-size is-smaller">
+      <div class="notice is-inverse mt-6 mb-6 text-smaller">
         <%- include('/svg/history-solid.svg') %> <strong>Устаревшая фигня!</strong><br>Полифилл хорошо поработал, пока браузеры внедряли поддержку <code class="code is-inverse">position:&nbsp;sticky</code>. Сейчас стики можно смело использовать без полифилла, все современные браузеры <a href="https://caniuse.com/?search=position%3Asticky">поддерживают&nbsp;их</a>.
       </div>
     </div>
@@ -52,7 +52,7 @@ tags:
     </div>
 
     <p class="sticky-4 sticky" style="top: 16em; margin-top: 40em; margin-bottom: 0;">
-      <small class="small"><code class="code is-inverse">top</code> меняет отступ стики от края окна. Еще можно указать <code class="code is-inverse">margin-bottom</code>, чтобы стика останавливалась чуть раньше, чем обычно.</small>
+      <small class="text-tiny"><code class="code is-inverse">top</code> меняет отступ стики от края окна. Еще можно указать <code class="code is-inverse">margin-bottom</code>, чтобы стика останавливалась чуть раньше, чем обычно.</small>
     </p>
   </section>
 
@@ -72,28 +72,28 @@ tags:
 
   <section style="min-height: 90em;">
     <div class="sticky-7 sticky" style="top: 5em; margin-top: 10em;">
-      <h2 class="font-size is-heading-3">Что умеет:</h2>
+      <h2 class="text-[1.5em]">Что умеет:</h2>
 
-      <ul class="list">
-        <li class="list__item">Работает со стиками, прилипающими к верхнему краю</li>
-        <li class="list__item"><del class="del">Работает c ячейками таблицы</del> Отключил, пока Фаерфокс <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=975644">не реализует это нативно</a></li>
-        <li class="list__item">Работает в IE9+</li>
-        <li class="list__item">Отключается в старых браузерах и в браузерах с нативной поддержкой стик</li>
-        <li class="list__item">Эмулирует нативное поведение стик (там, где умеет)</li>
-        <li class="list__item">Учитывает <a href="http://wilddeer.github.io/stickyfill/test/">кучу разных кейсов</a></li>
+      <ul class="mb-6">
+        <li class="pl-[2.2em] mb-4 dash-marker">Работает со стиками, прилипающими к верхнему краю</li>
+        <li class="pl-[2.2em] mb-4 dash-marker"><del class="line-through">Работает c ячейками таблицы</del> Отключил, пока Фаерфокс <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=975644">не реализует это нативно</a></li>
+        <li class="pl-[2.2em] mb-4 dash-marker">Работает в IE9+</li>
+        <li class="pl-[2.2em] mb-4 dash-marker">Отключается в старых браузерах и в браузерах с нативной поддержкой стик</li>
+        <li class="pl-[2.2em] mb-4 dash-marker">Эмулирует нативное поведение стик (там, где умеет)</li>
+        <li class="pl-[2.2em] mb-4 dash-marker">Учитывает <a href="http://wilddeer.github.io/stickyfill/test/">кучу разных кейсов</a></li>
       </ul>
     </div>
   </section>
 
   <section style="min-height: 80em;">
     <div class="sticky-8 sticky" style="top: 5em; margin-top: 5em;">
-      <h2 class="font-size is-heading-3">Что не умеет:</h2>
+      <h2 class="text-[1.5em]">Что не умеет:</h2>
 
-      <ul class="list">
-        <li class="list__item">Не умеет левые, правые, нижние и комбинированные стики</li>
-        <li class="list__item">Не «стыкует» табличные стики</li>
-        <li class="list__item">Не работает во внутренних блоках со скроллом</li>
-        <li class="list__item">Не парсит CSS (включается ручками)</li>
+      <ul class="mb-6">
+        <li class="pl-[2.2em] mb-4 dash-marker">Не умеет левые, правые, нижние и комбинированные стики</li>
+        <li class="pl-[2.2em] mb-4 dash-marker">Не «стыкует» табличные стики</li>
+        <li class="pl-[2.2em] mb-4 dash-marker">Не работает во внутренних блоках со скроллом</li>
+        <li class="pl-[2.2em] mb-4 dash-marker">Не парсит CSS (включается ручками)</li>
       </ul>
     </div>
   </section>
@@ -108,7 +108,7 @@ tags:
   </section>
 
 
-  <div class="notice is-with-big-icon is-inverse font-size is-smaller" style="margin-top: 30em;">
+  <div class="notice is-with-big-icon is-inverse text-smaller" style="margin-top: 30em;">
     <%- include('/svg/heart-regular.svg') %>За четыре дня погружения в ад блоковых моделей браузеров я узнал, чем отличаются <code class="code is-inverse">window.pageYOffset</code>, <code class="code is-inverse">document.documentElement.scrollTop</code>, <code class="code is-inverse">window.scrollY</code> и <code class="code is-inverse">document.body.scrollTop</code>, в чем расхождения <code class="code is-inverse">offsetWidth</code> у блока с <code class="code is-inverse">box-sizing: border-box</code> в разных браузерах, какая разница между <code class="code is-inverse">element.offsetWidth</code> и <code class="code is-inverse">node.getBoundingClientRect().width</code>, в чем разница между <code class="code is-inverse">getComputedStyle(element)</code> и реальными значениями, как посчитать ширину вьюпорта без ширины скролла и как ошибки округления любят накопиться в самый неподходящий момент.
   </div>
 </div>

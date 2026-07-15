@@ -7,7 +7,7 @@ langLink: 'links,_please'
 # Links, please
 
 <%- include('/svg/history-solid.svg') %>Примеры, на которые ссылается пост, давно протухли, но смысл поста до сих пор актуален.
-{.notice .is-with-icon .is-info .block .is-mb-big}
+{.notice .is-with-icon .is-info .mb-10}
 
 Однажды наступит тот день, когда [самые](//twitter.com) [продвинутые](//instagram.com) [IT-компании](//plus.google.com) научатся пользоваться ссылками. Тогда заживем.
 
@@ -19,7 +19,7 @@ langLink: 'links,_please'
 
 Кнопка воспринимает событие `click`, стили `:hover` и `:active` и попадает в общий _tabindex_ точно так же, как и ссылка. Невероятно!
 
-<div class="text-container notice is-with-big-icon font-size is-smaller block is-mb">
+<div class="text-container notice is-with-big-icon text-smaller mb-6">
           
 <%- include('/svg/umbrella-solid.svg') %>Можно также использовать любой другой тег, например `span`, но он не будет ловить фокус, а событие *click* не будет вызываться по нажатию энтера, что убивает все преимущества кнопки в плане доступности использования.
 

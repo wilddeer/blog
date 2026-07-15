@@ -7,7 +7,7 @@ langLink: 'links,_please'
 # Links, please
 
 <%- include('/svg/history-solid.svg') %>The examples referenced in the post are long outdated, but the meaning of the post is still relevant.
-{.notice .is-with-icon .is-info .block .is-mb-big}
+{.notice .is-with-icon .is-info .mb-10}
 
 There will come a day when the [most](//twitter.com) [advanced](//instagram.com) [IT companies](//plus.google.com) will finally learn to use links. Those will be good times.
 
@@ -19,7 +19,7 @@ If you desperately want to put `javascript: void(0);`, `#` or something similar 
 
 Buttons work with `click` events, `:hover` and `:active` styles and catch focus when <kbd>tab</kbd>&rsquo;bing just like links do. Unbelievable!
 
-<div class="text-container notice is-with-big-icon font-size is-smaller block is-mb">
+<div class="text-container notice is-with-big-icon text-smaller mb-6">
 
 <%- include('/svg/umbrella-solid.svg') %>You can use any other element, e.&nbsp;g. `span`, but it won’t be focusable, and <kbd>enter</kbd> won’t trigger `click` event handlers, which is far from ideal for accessibility reasons.
 

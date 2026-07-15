@@ -8,8 +8,12 @@
 @theme {
     --*: initial;
 
-    /* Spacing base for numeric utilities (p-0, mx-auto etc.) */
-    --spacing: 0.25rem;
+    /*
+     * NB: em, not rem! The whole design scales off the element's font
+     * size, so numeric spacing utilities are em-based: mb-6 = 1.5em,
+     * mt-10 = 2.5em — relative to the element they're applied to.
+     */
+    --spacing: 0.25em;
 
     /* Fonts */
     --font-sans: 'Nunito', sans-serif;

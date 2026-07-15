@@ -13,13 +13,13 @@ tags:
   </style>
 
   <section style="height: 120em;">
-    <div class="sticky-1 sticky align-center">
+    <div class="sticky-1 sticky text-center">
       <h1 class="article-title">
         <a href="https://github.com/wilddeer/stickyfill">Stickyfill</a><br>
         <small class="tagline"><code class="code is-inverse">position:&nbsp;sticky</code> polyfill</small>
       </h1>
 
-      <div class="notice is-inverse block is-mt is-mb font-size is-smaller">
+      <div class="notice is-inverse mt-6 mb-6 text-smaller">
         <%- include('/svg/history-solid.svg') %> <strong>Deprecated!</strong><br>Stickyfill did a good job while the browsers were implementing <code class="code is-inverse">position:&nbsp;sticky</code> support. Now you can safely use stickies without a polyfill, all modern browsers <a href="https://caniuse.com/?search=position%3Asticky">support&nbsp;them</a>.
       </div>
     </div>
@@ -52,7 +52,7 @@ tags:
     </div>
 
     <p class="sticky-4 sticky" style="top: 16em; margin-top: 40em; margin-bottom: 0;">
-      <small class="small"><code class="code is-inverse">top</code> changes sticky’s position relatively to the edge of the viewport. You may also specify <code class="code is-inverse">margin-bottom</code> to alter sticky’s bottom limit a bit.</small>
+      <small class="text-tiny"><code class="code is-inverse">top</code> changes sticky’s position relatively to the edge of the viewport. You may also specify <code class="code is-inverse">margin-bottom</code> to alter sticky’s bottom limit a bit.</small>
     </p>
   </section>
 
@@ -72,28 +72,28 @@ tags:
 
   <section style="min-height: 90em;">
     <div class="sticky-7 sticky" style="top: 5em; margin-top: 10em;">
-      <h2 class="font-size is-heading-3">What it does:</h2>
+      <h2 class="text-[1.5em]">What it does:</h2>
 
-      <ul class="list">
-        <li class="list__item">Supports top-positioned stickies</li>
-        <li class="list__item"><del class="del">Supports table cell stickies</del> Disabled until Firefox <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=975644">makes a native implementation</a></li>
-        <li class="list__item">Works in IE9+</li>
-        <li class="list__item">Disables in older browsers and in browsers with native sticky support</li>
-        <li class="list__item">Mimics the original sticky behavior (where it can)</li>
-        <li class="list__item">Considers <a href="http://wilddeer.github.io/stickyfill/test/">a whole lot of different use cases</a></li>
+      <ul class="mb-6">
+        <li class="pl-[2.2em] mb-4 dash-marker">Supports top-positioned stickies</li>
+        <li class="pl-[2.2em] mb-4 dash-marker"><del class="line-through">Supports table cell stickies</del> Disabled until Firefox <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=975644">makes a native implementation</a></li>
+        <li class="pl-[2.2em] mb-4 dash-marker">Works in IE9+</li>
+        <li class="pl-[2.2em] mb-4 dash-marker">Disables in older browsers and in browsers with native sticky support</li>
+        <li class="pl-[2.2em] mb-4 dash-marker">Mimics the original sticky behavior (where it can)</li>
+        <li class="pl-[2.2em] mb-4 dash-marker">Considers <a href="http://wilddeer.github.io/stickyfill/test/">a whole lot of different use cases</a></li>
       </ul>
     </div>
   </section>
 
   <section style="min-height: 80em;">
     <div class="sticky-8 sticky" style="top: 5em; margin-top: 5em;">
-      <h2 class="font-size is-heading-3">What it doesn’t do:</h2>
+      <h2 class="text-[1.5em]">What it doesn’t do:</h2>
 
-      <ul class="list">
-        <li class="list__item">Doesn’t support left, right, bottom or combined stickies</li>
-        <li class="list__item">Doesn’t support stacking of table cell stickies</li>
-        <li class="list__item">Doesn’t work in overflowed blocks</li>
-        <li class="list__item">Doesn’t parse your CSS (launch it manually)</li>
+      <ul class="mb-6">
+        <li class="pl-[2.2em] mb-4 dash-marker">Doesn’t support left, right, bottom or combined stickies</li>
+        <li class="pl-[2.2em] mb-4 dash-marker">Doesn’t support stacking of table cell stickies</li>
+        <li class="pl-[2.2em] mb-4 dash-marker">Doesn’t work in overflowed blocks</li>
+        <li class="pl-[2.2em] mb-4 dash-marker">Doesn’t parse your CSS (launch it manually)</li>
       </ul>
     </div>
   </section>
@@ -108,7 +108,7 @@ tags:
   </section>
 
 
-  <div class="notice is-with-big-icon is-inverse font-size is-smaller" style="margin-top: 30em;">
+  <div class="notice is-with-big-icon is-inverse text-smaller" style="margin-top: 30em;">
     <%- include('/svg/heart-regular.svg') %>In four days of diving into browser box models’ hell I discovered the difference between <code class="code is-inverse">window.pageYOffset</code>, <code class="code is-inverse">document.documentElement.scrollTop</code>, <code class="code is-inverse">window.scrollY</code> and <code class="code is-inverse">document.body.scrollTop</code>, discrepancies in <code class="code is-inverse">offsetWidth</code> of a block with  <code class="code is-inverse">box-sizing: border-box</code> in different browsers, how <code class="code is-inverse">element.offsetWidth</code> and <code class="code is-inverse">node.getBoundingClientRect().width</code> differ and why, what’s the difference between <code class="code is-inverse">getComputedStyle(element)</code> and real values, how to get viewport’s width without scroll width and how rounding errors tend to accumulate in the most inopportune moment.
   </div>
 </div>

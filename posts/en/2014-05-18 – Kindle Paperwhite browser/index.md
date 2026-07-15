@@ -4,10 +4,10 @@ description: 'Rare species: Exploring the Kindle Paperwhite browser.'
 langLink: 'браузер_kindle_paperwhite'
 ---
 
-# Kindle Paperwhite <div class="small">browser</div> {.is-small-mb}
+# Kindle Paperwhite <div class="text-tiny">browser</div> {.is-small-mb}
 
 <%- include('/svg/history-solid.svg') %>**Rare species:** some time ago I had fun exploring exotic browsers on some not so common devices. This is one of such studies.
-{.notice .is-with-icon .is-info .out-of-the-box .block .is-mb}
+{.notice .is-with-icon .is-info .out-of-the-box .mb-6}
 
 ![](device.jpg =960x448)
 {.is-ootb}

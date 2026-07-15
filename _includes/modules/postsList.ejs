@@ -1,6 +1,6 @@
 <% // Args: posts, lang %>
 <%_
-    const titleClass = 'text-[1.5em] mt-[2em] mb-[0.25em]';
+    const titleClass = 'text-[1.5em] mt-8 mb-1';
     const tumbleClass = 'leading-[0] text-[1.5em] ml-[0.2em] align-[-0.2em]';
 _%>
 <%
@@ -55,11 +55,11 @@ _%>
     <% if (yearHeading) { %>
         <h2 class="<%= titleClass %>"><%= yearHeading %></h2>
 
-        <ul class="mb-[1.5em]">
+        <ul class="mb-6">
     <% } %>
 
     <%_ const isArchive = post.data.tags.includes('archive'); _%>
-    <li class="mb-[1em] pc:dash-marker <%= isArchive ? 'text-inactive' : '' %>">
+    <li class="mb-4 pc:dash-marker <%= isArchive ? 'text-inactive' : '' %>">
         <a class="link <%= isArchive ? 'is-muted' : '' %>" href="<%= post.url %>"><%=
             post.data.title
         %></a>

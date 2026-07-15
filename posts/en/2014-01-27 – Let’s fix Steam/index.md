@@ -143,7 +143,7 @@ tags:
 # Let’s fix Steam
 
 <%- include('/svg/history-solid.svg') %>**Deprecated!** This post contains irrelevant old crap and is left for history and lulz.
-{.notice .is-with-icon .is-warning .block .is-mb-big}
+{.notice .is-with-icon .is-warning .mb-10}
 
 Everything is good about [Steam](http://store.steampowered.com/), except for its website. All the great ideas Valve guys come up with recieve a pretty poor frontend implementation.
 
@@ -155,13 +155,13 @@ Without further ado, here’s the result:
 
 And now on the problems current Steam website has and how I tried to fix them:
 
-## <small class="state-color state-color--danger">Problem</small><br>Incomplete mobile version
+## <small class="text-danger">Problem</small><br>Incomplete mobile version
 
 Steam’s mobile website doesn’t recognize a lot of mobile devices and doesn’t have half the functions desktop version provides. For instance, it doesn’t have recently added user reviews in any shape or form.
 
 Meanwhile, limiting the functionality of your mobile website is a really bad practice. Mobile users should be able to use all the functions available in "full" version. Both versions should be "full" versions, actually. There’s [a pretty good read](http://www.abookapart.com/products/mobile-first) on the theme.
 
-## <small class="state-color state-color--success">Solution</small><br>Responsive design
+## <small class="text-success">Solution</small><br>Responsive design
 
 Responsive design increases the time and complexity of the development, but, on the bright side, it allowes the whole functionality of the site to be available on any device and removes the need to maintain both versions and bother about adding new features to both of them. You still can use a combined approach in particularly difficult situations: generate part of the page on the server differently depending on the device, e. g. serve different picture sizes to different devices, or even substitute some of the templates with more simple or complex ones.
 
@@ -237,7 +237,7 @@ Since every store page has its own background, I put the style directly into the
 
 To make mobile devices love the site even more I limited the amount of performance heavy CSS features (like shadows, gradients and opacity) on smaller screens.
 
-## <small class="state-color state-color--danger">Problem</small><br>Content obeys the design
+## <small class="text-danger">Problem</small><br>Content obeys the design
 
 Here’s the DLC info block in its current form:
 
@@ -249,7 +249,7 @@ What happens if the phrase is twice as big? What if the translated version is ev
 
 This block has fixed width and height (no idea why the width is even defined, since it’s same as parent’s) and [a picture](http://cdn4.store.steampowered.com/public/images/v5/game_area_dlc.png) on the background. Even back in the days when there were no fancy CSS3 features you could make this block fluid. You would need a sprite and some hacks, but everything worked with hacks back then.
 
-## <small class="state-color state-color--success">Solution</small><br>Make design obey the content
+## <small class="text-success">Solution</small><br>Make design obey the content
 
 </div>
 
@@ -261,7 +261,7 @@ This block has fixed width and height (no idea why the width is even defined, si
 ::: .content-box
 <%- include('steam-dlc.html') %>
 
-<div class="align-center block is-mt-big">
+<div class="text-center mt-10">
     <button class="button is-white" id="fill-it">fill me, baby</button>
 </div>
 
@@ -274,7 +274,7 @@ This block has fixed width and height (no idea why the width is even defined, si
     var i = 0;
 
     $('#fill-it').click(function() {
-        $('.game-dlc-notice').append('<p class="small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet nulla non est malesuada, vitae dapibus libero congue. Integer cursus magna ut neque commodo fermentum sed a enim. Ut pharetra urna facilisis laoreet iaculis. Sed sapien nulla, venenatis sit amet magna eu, ultrices aliquam nibh.</p>');
+        $('.game-dlc-notice').append('<p class="text-tiny">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet nulla non est malesuada, vitae dapibus libero congue. Integer cursus magna ut neque commodo fermentum sed a enim. Ut pharetra urna facilisis laoreet iaculis. Sed sapien nulla, venenatis sit amet magna eu, ultrices aliquam nibh.</p>');
 
         if (i++ > 3) {
             $(this).text('oh stop it, you!').attr('disabled','disabled');
@@ -304,11 +304,11 @@ There is a similar block in the neighborhood, which, surprisingly enough, is fee
 
 This leads us to another problem:
 
-## <small class="state-color state-color--danger">Problem</small><br>Non-universal code
+## <small class="text-danger">Problem</small><br>Non-universal code
 
 Two similar looking blocks are using completely different markup, although, in fact, they must be identical.
 
-## <small class="state-color state-color--success">Solution</small><br>Make the code universal
+## <small class="text-success">Solution</small><br>Make the code universal
 
 Let’s make a universal price block:
 
@@ -319,7 +319,7 @@ Let’s make a universal price block:
 <%- include('price-area.css') %>
 </style>
 
-<div class="steam-demo white align-center">
+<div class="steam-demo white text-center">
   <div class="price-area" style="font-size: 0.7em;">
     <span class="discount">
       <span>-1%</span>
@@ -403,7 +403,7 @@ And everything just works.
 </div>
 
 ::: .demo .is-fullwidth .is-light
-<div class="steam-demo white align-center">
+<div class="steam-demo white text-center">
     <div class="price-area" style="font-size: 1.5em;">
         <span class="price">
             ¥ 999
@@ -488,7 +488,7 @@ To adhere to the principle of the universal code, it is important to properly st
 - **Modules** – this are the guys I was talking about. Modules are repeating blocks, their base styles should not depend on the context (but can be modified by the styles of the context, see below). Modules can be nested.
 - **Page styles** – styles of the blocks specific to the page. This is the place where you can modify the styles of the modules located in a specific block on the page.
 
-## <small class="state-color state-color--danger">Problem</small><br>“Obtrusive” javascript
+## <small class="text-danger">Problem</small><br>“Obtrusive” javascript
 
 Substitution of basic element behaviour with scripts and lack of proper fallbacks leads to a situation where tipical and habitual functions of HTML elements are completely lost.
 
@@ -520,7 +520,7 @@ Their code looks like this:
 
 Not only these posts are opened in horrible modal popups (which are invented by the people who hate tabs), they also can’t be opened in a regular way, since they are not links. Not to mention the usage of inline styles and huge inline function calls, which are an example of poor code style.
 
-## <small class="state-color state-color--success">Solution</small><br>Make the javascript [unobtrusive](https://en.wikipedia.org/wiki/Unobtrusive_JavaScript)
+## <small class="text-success">Solution</small><br>Make the javascript [unobtrusive](https://en.wikipedia.org/wiki/Unobtrusive_JavaScript)
 
 Whole block containing community hub post can be made of an `a` element, popup (if you desperately want a popup) should only be opened if the block is clicked with left mouse button without any modifier keys.
 
@@ -528,7 +528,7 @@ Same is applicable to other UI elements: if the element leads somewhere, make a 
 
 Besides all the above, “obtrusive” javascript directly leads to another problem:
 
-## <small class="state-color state-color--danger">Problem</small><br>Low fault tolerance
+## <small class="text-danger">Problem</small><br>Low fault tolerance
 
 What would happen if the CDN server serving js files goes down? If one of the scripts fails to execute correctly? That’s right, half of the functionality won’t work. It could’ve been working though, even if not as good as with the scripts.
 
@@ -536,7 +536,7 @@ Screenshot gallery becomes an empty rectangle without js, thumbs and scroll aren
 
 ![](gallery-nojs.jpg =621x443)
 
-## <small class="state-color state-color--success">Solution</small><br>Use proper fallbacks
+## <small class="text-success">Solution</small><br>Use proper fallbacks
 
 Put the screenshots into a horizontally scrollable block, which will then become a normal gallery after the initialization. Since all the UI element are useless without javascript, hide them until the init.
 
@@ -559,7 +559,7 @@ To implement this approach it’s enough to give the gallary `inactive` class, w
     </section>
 </div>
 
-<div class="align-center block is-mt-big">
+<div class="text-center mt-10">
     <button class="button is-white" id="launch-it">Launch me</button>
 </div>
 

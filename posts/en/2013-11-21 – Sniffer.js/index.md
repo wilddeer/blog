@@ -20,7 +20,7 @@ I feature-detect like a boss. But when I can’t, I use dirty hacks to help me o
 
 ## Live example
 
-<pre class="pre-wrap"><code id="test_console"></code></pre>
+<pre class="whitespace-pre-wrap"><code id="test_console"></code></pre>
 
 <script src="/js/sniffer.min.js"></script>
 <script>
