@@ -88,6 +88,9 @@ _%>
 
                 document.querySelectorAll('.js-theme-toggle').forEach(button => {
                     button.addEventListener('click', () => {
+                        // arm the icon morph transitions (see .theme-toggle)
+                        root.classList.add('theme-anim');
+
                         const next = current() === 'dark' ? 'light' : 'dark';
 
                         if (

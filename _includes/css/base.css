@@ -4,12 +4,18 @@
  * decision, not a reset.
  */
 
+/*
+ * font-display: fallback — the ~100ms block period absorbs loading
+ * from HTTP cache, so navigating between pages never flashes the
+ * fallback font; on a slow first visit the fallback shows instead of
+ * blocking the text indefinitely.
+ */
 /* nunito-regular - latin-ext_latin_cyrillic-ext_cyrillic */
 @font-face {
     font-family: 'Nunito';
     font-style: normal;
     font-weight: 400;
-    font-display: swap;
+    font-display: fallback;
     src: url('/fonts/nunito-v14-latin-ext_latin_cyrillic-ext_cyrillic-regular.woff2') format('woff2');
 }
 
@@ -18,7 +24,7 @@
     font-family: 'Nunito';
     font-style: italic;
     font-weight: 400;
-    font-display: swap;
+    font-display: fallback;
     src: url('/fonts/nunito-v14-latin-ext_latin_cyrillic-ext_cyrillic-italic.woff2') format('woff2');
 }
 
@@ -27,7 +33,7 @@
     font-family: 'Nunito';
     font-style: normal;
     font-weight: 700;
-    font-display: swap;
+    font-display: fallback;
     src: url('/fonts/nunito-v14-latin-ext_latin_cyrillic-ext_cyrillic-700.woff2') format('woff2');
 }
 
@@ -36,7 +42,7 @@
     font-family: 'Nunito';
     font-style: italic;
     font-weight: 700;
-    font-display: swap;
+    font-display: fallback;
     src: url('/fonts/nunito-v14-latin-ext_latin_cyrillic-ext_cyrillic-700italic.woff2') format('woff2');
 }
 
@@ -45,7 +51,7 @@
     font-family: 'Fira Code';
     font-style: normal;
     font-weight: 400;
-    font-display: swap;
+    font-display: fallback;
     src: url('/fonts/fira-code-v9-latin_cyrillic-regular.woff2') format('woff2');
 }
 
@@ -54,7 +60,7 @@
     font-family: 'Fira Code';
     font-style: normal;
     font-weight: 700;
-    font-display: swap;
+    font-display: fallback;
     src: url('/fonts/fira-code-v9-latin_cyrillic-700.woff2') format('woff2');
 }
 

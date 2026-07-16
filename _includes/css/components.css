@@ -207,6 +207,15 @@
         width: 100%;
         height: 100%;
         fill: currentColor;
+    }
+
+    /*
+     * The sun/moon morph only animates once the reader actually flips
+     * the theme (.theme-anim is added on the first toggle click):
+     * some engines play stylesheet transitions during initial render,
+     * which would show a chunk of the morph on every page load.
+     */
+    :root.theme-anim & svg {
         transition:
             opacity 0.4s ease,
             transform 0.5s cubic-bezier(0.3, 1.4, 0.5, 1);
