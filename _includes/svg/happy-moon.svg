@@ -2,10 +2,8 @@
     <circle cx="306" cy="306" r="235.9" fill="none" stroke="currentColor" stroke-width="28.2"/>
     <path d="M223.6,100.1 A21,21 0 1 1 187.8,118.3" fill="none" stroke="currentColor" stroke-width="12" stroke-linecap="round"/>
     <path d="M434.2,125.0 A13,13 0 0 1 412.5,111.4" fill="none" stroke="currentColor" stroke-width="11" stroke-linecap="round"/>
-    <circle cx="311.8" cy="141.1" r="16" fill="none" stroke="currentColor" stroke-width="12"/>
-    <circle cx="230.2" cy="286.4" r="26.9"/>
-    <path d="M213.1,273.0 Q193.6,265.7 181.4,277.9" fill="none" stroke="currentColor" stroke-width="19" stroke-linecap="round"/>
-    <circle cx="467.3" cy="286.4" r="26.9"/>
-    <path d="M450.2,273.0 Q430.6,265.7 418.4,277.9" fill="none" stroke="currentColor" stroke-width="19" stroke-linecap="round"/>
+    <circle cx="337" cy="143" r="16" fill="none" stroke="currentColor" stroke-width="12"/>
+    <path d="M176.2,267.4 Q194.2,255.4 218.8,262.0 A26.9,26.9 0 1 1 204.2,293.4 Q192.2,283.4 173.2,276.4 A5,5 0 0 1 176.2,267.4 Z"/>
+    <path d="M401.0,267.4 Q419.0,255.4 443.6,262.0 A26.9,26.9 0 1 1 429.0,293.4 Q417.0,283.4 398.0,276.4 A5,5 0 0 1 401.0,267.4 Z"/>
     <path d="M218.0,367.1 Q308.4,445.3 398.9,357.3" fill="none" stroke="currentColor" stroke-width="28" stroke-linecap="round"/>
 </svg>
