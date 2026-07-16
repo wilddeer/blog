@@ -114,6 +114,15 @@ ol {
  */
 html {
     color-scheme: light dark;
+
+    /*
+     * The scrollbar lives on the viewport, not on body: body is a
+     * query container (an independent formatting context), so its
+     * overflow would no longer propagate to the viewport and it would
+     * grow a second, useless scrollbar next to the real one.
+     */
+    overflow-y: scroll;
+    overflow-anchor: none;
 }
 
 :root[data-theme='light'] {
@@ -150,8 +159,6 @@ body {
     line-height: var(--leading-base);
     overflow-wrap: break-word;
     -webkit-font-smoothing: antialiased;
-    overflow-y: scroll;
-    overflow-anchor: none;
 }
 
 ::placeholder {
