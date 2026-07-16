@@ -106,7 +106,7 @@ addEvent(dot, 'click', (function(x, d) {
 })(i, dot), false);
 ```
 
-<div class="text-container notice is-with-big-icon font-size is-smaller block is-mb">
+<div class="text-container notice is-with-big-icon text-smaller mb-6">
 
 <%- include('/svg/code-solid.svg') %>Simple and universal `addEvent` function is used above:
 

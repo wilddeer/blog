@@ -9,7 +9,7 @@ tags:
 # Про `@viewport`
 
 <%- include('/svg/history-solid.svg') %>**Устаревшая фигня!** За прошедшие годы винфон и ИЕ умерли, а остальные браузеры не стали поддерживать `@viewport`{.is-colored-bg}.
-{.notice .is-with-icon .is-warning .block .is-mb-big}
+{.notice .is-with-icon .is-warning .mb-10}
 
 Однажды чуваки из Оперы предложили вместо мета-тега `<meta name="viewport" ...>` использовать цсс-ный `@viewport { ... }`. Как, зачем и почему, [послушайте у ппк](https://vimeo.com/100523275), а я расскажу, зачем его стоит начать использовать прямо сейчас.
 

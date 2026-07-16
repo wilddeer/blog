@@ -61,7 +61,7 @@ langLink: 'пепякошрифт_средствами_css-анимаций'
     <input class="input" type="text" value="Yarrr!" id="pep_input" placeholder="Type something">
 </p>
 
-<div class="content-fullwidth block is-mb-big">
+<div class="content-fullwidth mb-10">
     <div class="pep-holder">
         <p class="pepyaka async">
             <span class="pep1">Y</span><span class="pep6">a</span><span class="pep2">r</span><span class="pep0">r</span><span class="pep4">r</span><span class="pep7">!</span>

@@ -4,12 +4,12 @@ image: cover.png
 langLink: 'заебали_со_своими_попапами'
 ---
 
-# Go to hell with your fucking pop-ups 🙃 {.align-center}
+# Go to hell with your fucking pop-ups 🙃 {.text-center}
 
 :::.hidden .js-bonus
 Diligence Bonus – 5% off coupon at <a href="https://chatra.com">Chatra</a>:
 
-<strong class="js-skidon font-size is-heading-3"></strong>
+<strong class="js-skidon text-[1.5em]"></strong>
 
 (Yep, it’s some sort of post-irony or metasarcasm.)
 :::

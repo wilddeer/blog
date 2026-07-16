@@ -1,4 +1,10 @@
 <% // Args: posts, lang %>
+<%_
+    const titleClass = 'text-[1.5em] mt-8 mb-1';
+    const tumbleClass = 'leading-[0] text-[1.5em] ml-[0.2em] align-[-0.2em]';
+    // Like `link`, but gray in all states (archive posts)
+    const mutedLink = 'underline text-inactive decoration-inactive/50 hover:no-underline hover:text-white hover:bg-inactive';
+_%>
 <%
     $.posts
         .filter(post => (
@@ -31,41 +37,42 @@
     <% } %>
 
     <% if (yearHeading === 2014) { %>
-        <h2 class="post-list-title is-empty">
+        <h2 class="<%= titleClass %> text-inactive">
             2015...2019
-            <span class="post-list-title__tumble">
+            <span class="<%= tumbleClass %>">
                 <%- include('/svg/tumbleweed.svg') %>
             </span>
         </h2>
     <% } %>
 
     <% if (yearHeading === 2021) { %>
-        <h2 class="post-list-title is-empty">
+        <h2 class="<%= titleClass %> text-inactive">
             2022...2023
-            <span class="post-list-title__tumble">
+            <span class="<%= tumbleClass %>">
                 <%- include('/svg/khinkali.svg') %>
             </span>
         </h2>
     <% } %>
 
     <% if (yearHeading) { %>
-        <h2 class="post-list-title"><%= yearHeading %></h2>
+        <h2 class="<%= titleClass %>"><%= yearHeading %></h2>
 
-        <ul class="post-list">
+        <ul class="mb-6">
     <% } %>
 
-    <li class="post-list__item <%= post.data.tags.includes('archive') ? 'is-archive' : '' %>">
-        <a class="post-list__item-link" href="<%= post.url %>"><%=
+    <%_ const isArchive = post.data.tags.includes('archive'); _%>
+    <li class="mb-4 pc:dash-marker <%= isArchive ? 'text-inactive' : '' %>">
+        <a class="<%= isArchive ? mutedLink : 'link' %>" href="<%= post.url %>"><%=
             post.data.title
         %></a>
 
-        <% if (post.data.tags.includes('archive')) { %>
-            <span class="post-list__item-badge">
-                <span class="badge"><%= $.lang === 'ru' ? 'устаревшая фигня' : 'deprecated' %></span>
+        <% if (isArchive) { %>
+            <span class="max-phone:block phone:ml-[0.1em]">
+                <span class="inline-block text-tiny px-[0.3em] rounded-[0.3em] border border-current align-[0.15em]"><%= $.lang === 'ru' ? 'устаревшая фигня' : 'deprecated' %></span>
             </span>
         <% } %>
 
-        <time class="post-list__item-date">
+        <time class="max-phone:block text-tiny italic phone:text-smaller phone:before:content-['—']">
             <%-
                 include('/modules/parsedDate', {
                     dateString: post.data.date,

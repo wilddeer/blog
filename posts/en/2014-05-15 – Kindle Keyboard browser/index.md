@@ -4,10 +4,10 @@ description: 'Rare species: Exploring the Kindle Keyboard browser.'
 langLink: 'браузер_kindle_keyboard'
 ---
 
-# Kindle Keyboard<div class="small">browser</div> {.is-small-mb}
+# Kindle Keyboard<div class="text-tiny">browser</div> {.is-small-mb}
 
 <%- include('/svg/history-solid.svg') %>**Rare species:** some time ago I had fun exploring exotic browsers on some not so common devices. This is one of such studies.
-{.notice .is-with-icon .is-info .out-of-the-box .block .is-mb}
+{.notice .is-with-icon .is-info .out-of-the-box .mb-6}
 
 ![](kindle-keyboard.jpg =960x510)
 {.is-ootb}

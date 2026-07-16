@@ -1,0 +1,201 @@
+/*
+ * Fonts and project base styles, applied on top of Tailwind's Preflight
+ * (imported in styles.css). Anything here is a deliberate design
+ * decision, not a reset.
+ */
+
+/*
+ * font-display: fallback — the ~100ms block period absorbs loading
+ * from HTTP cache, so navigating between pages never flashes the
+ * fallback font; on a slow first visit the fallback shows instead of
+ * blocking the text indefinitely.
+ */
+/* nunito-regular - latin-ext_latin_cyrillic-ext_cyrillic */
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-display: fallback;
+    src: url('/fonts/nunito-v14-latin-ext_latin_cyrillic-ext_cyrillic-regular.woff2') format('woff2');
+}
+
+/* nunito-italic - latin-ext_latin_cyrillic-ext_cyrillic */
+@font-face {
+    font-family: 'Nunito';
+    font-style: italic;
+    font-weight: 400;
+    font-display: fallback;
+    src: url('/fonts/nunito-v14-latin-ext_latin_cyrillic-ext_cyrillic-italic.woff2') format('woff2');
+}
+
+/* nunito-700 - latin-ext_latin_cyrillic-ext_cyrillic */
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-display: fallback;
+    src: url('/fonts/nunito-v14-latin-ext_latin_cyrillic-ext_cyrillic-700.woff2') format('woff2');
+}
+
+/* nunito-700italic - latin-ext_latin_cyrillic-ext_cyrillic */
+@font-face {
+    font-family: 'Nunito';
+    font-style: italic;
+    font-weight: 700;
+    font-display: fallback;
+    src: url('/fonts/nunito-v14-latin-ext_latin_cyrillic-ext_cyrillic-700italic.woff2') format('woff2');
+}
+
+/* fira-code-regular - latin_cyrillic */
+@font-face {
+    font-family: 'Fira Code';
+    font-style: normal;
+    font-weight: 400;
+    font-display: fallback;
+    src: url('/fonts/fira-code-v9-latin_cyrillic-regular.woff2') format('woff2');
+}
+
+/* fira-code-700 - latin_cyrillic */
+@font-face {
+    font-family: 'Fira Code';
+    font-style: normal;
+    font-weight: 700;
+    font-display: fallback;
+    src: url('/fonts/fira-code-v9-latin_cyrillic-700.woff2') format('woff2');
+}
+
+/* Used by per-post demo stylesheets (pepyaka-font.css) */
+@keyframes heartbeat {
+    from {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+/*
+ * This is a text blog: media sits inline in the typographic flow
+ * (figures center via text-align, icons align to text), unlike
+ * Preflight's block-by-default replaced elements.
+ */
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+    display: inline;
+    vertical-align: baseline;
+}
+
+/*
+ * Roll back Preflight's max-width: 100%; height: auto to the UA
+ * behavior: in-post demos (e.g. the Steam gallery) size images with
+ * width/height attributes. Markdown images are still constrained by
+ * `.text img`.
+ */
+img,
+video {
+    max-width: revert;
+    height: revert;
+}
+
+/* Preflight unstyles all lists; this design keeps ordered ones numbered */
+ol {
+    list-style-type: decimal;
+}
+
+/*
+ * Both themes are first-class. color-scheme drives everything:
+ * light-dark() tokens, UA scrollbars and form controls. By default it
+ * follows the OS; the sun/moon toggle pins it via data-theme.
+ */
+html {
+    color-scheme: light dark;
+
+    /*
+     * The scrollbar lives on the viewport, not on body: body is a
+     * query container (an independent formatting context), so its
+     * overflow would no longer propagate to the viewport and it would
+     * grow a second, useless scrollbar next to the real one.
+     */
+    overflow-y: scroll;
+    overflow-anchor: none;
+}
+
+:root[data-theme='light'] {
+    color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+    color-scheme: dark;
+}
+
+/*
+ * Theme switch animation: the default view-transition crossfade is
+ * replaced by a circular reveal from the toggle (clip-path animated
+ * from the click point in JS, see base.ejs).
+ */
+::view-transition-old(root),
+::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal;
+}
+
+body {
+    /*
+     * Size query container: everything inside measures the viewport
+     * width sans scrollbar with cq units (100cqw), replacing the old
+     * JS-computed --vw variable. inline-size containment doesn't
+     * capture position: fixed (that's paint containment), so the abbr
+     * tooltip stays viewport-anchored.
+     */
+    container-type: inline-size;
+    font-size: 1.15em;
+    color: var(--color-ink);
+    background: var(--color-paper);
+    line-height: var(--leading-base);
+    overflow-wrap: break-word;
+    -webkit-font-smoothing: antialiased;
+}
+
+::placeholder {
+    color: var(--color-ink);
+}
+
+/*
+ * Only show focus rings for keyboard/assistive focus. Modern
+ * replacement for the old is-mouse-focused JS hack and the blanket
+ * :hover/:active outline suppression.
+ */
+:focus:not(:focus-visible) {
+    outline: none;
+}
+
+label[for] {
+    cursor: pointer;
+}
+
+strong,
+b {
+    font-weight: 600;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

@@ -61,7 +61,7 @@ langLink: 'pepyaka_font_using_css_animations'
     <input class="input" type="text" value="Яррр!" id="pep_input" placeholder="Запепячить">
 </p>
 
-<div class="content-fullwidth block is-mb-big">
+<div class="content-fullwidth mb-10">
     <div class="pep-holder">
         <p class="pepyaka async">
             <span class="pep5">Я</span><span class="pep2">р</span><span class="pep7">р</span><span class="pep3">р</span><span class="pep0">!</span>

@@ -1,0 +1,437 @@
+/*
+ * Layout primitives (custom utilities) and genuine components.
+ *
+ * One-off styling in posts and templates is done with plain Tailwind
+ * utilities. What lives here is either a layout primitive (@utility) or
+ * a real component with internal structure/variants (notice, kbd,
+ * button…), referenced from markdown and per-post stylesheets.
+ */
+
+/* Centered content column */
+@utility content-box {
+    width: min(var(--content-max-width), var(--content-width));
+    margin-inline: auto;
+}
+
+/* Like content-box, but a bit wider: content width + side paddings */
+@utility content-box-wide {
+    width: min(var(--content-ootb-max-width), var(--content-width));
+    margin-inline: auto;
+}
+
+/* Full window width, regardless of the parent's width */
+@utility content-fullwidth {
+    width: 100cqw;
+    margin-inline-start: calc(-50cqw + 50%);
+}
+
+/* Poke out of the content box, into its side paddings */
+@utility ootb {
+    width: calc(100% + 2 * var(--content-padding));
+    margin-inline-start: calc(-1 * var(--content-padding));
+}
+
+/* Pokes out of the content box, but only on wide-enough screens */
+@utility out-of-the-box {
+    @variant tablet-overlap {
+        @apply ootb;
+    }
+}
+
+/* Em-dash list marker that doesn't shift the text position */
+@utility dash-marker {
+    &::before {
+        content: '—';
+        margin-inline-start: -1em;
+
+        /*
+         * The real width of the m-dash is unknown.
+         *
+         * The dash is absolutely positioned to keep the
+         * position of the text unaffected.
+         */
+        position: absolute;
+
+        /*
+         * If the dash is too long, we cut it with max-width
+         * and overflow: hidden
+         */
+        display: inline-block;
+        width: 0.75em;
+        overflow: hidden;
+    }
+}
+
+/*
+ * Interactive patterns as custom utilities: they compose with variants,
+ * show up in editor autocomplete, and can be @apply'd onto markdown
+ * elements (see typography.css). Nested `is-*` classes are content
+ * contract — markdown uses them as modifiers.
+ */
+@utility link {
+    color: var(--color-link);
+    text-decoration: underline;
+    box-decoration-break: clone;
+    text-decoration-color: --alpha(var(--color-link) / 50%);
+
+    &:visited {
+        color: var(--color-visited);
+        text-decoration-color: --alpha(var(--color-visited) / 50%);
+    }
+
+    &:hover {
+        color: #fff;
+        background: var(--color-link-hover);
+        text-decoration: none;
+    }
+}
+
+@utility kbd {
+    display: inline-block;
+    box-decoration-break: clone;
+    vertical-align: 0.1em;
+    margin: 0 0.2em;
+    line-height: 1.25;
+    background: var(--color-kbd-bg);
+    border: 0.09em solid var(--color-border-light-opaque);
+    border-radius: 0.25em;
+    padding: 0 0.25em 0.1em;
+    font-size: 0.75em;
+    font-family: inherit;
+    box-shadow:
+        0 0.15em 0 0.1em var(--color-border-light-opaque),
+        inset 0 0 0 0.1em var(--color-kbd-highlight);
+    white-space: nowrap;
+}
+
+@utility code {
+    box-decoration-break: clone;
+    background-color: var(--color-danger-bg);
+    color: var(--color-danger);
+    border-radius: 0.25em;
+    padding: 0 0.25em;
+    font-size: var(--text-small);
+    font-style: normal;
+
+    &.is-inverse {
+        background-color: rgb(255 255 255 / 20%);
+        color: var(--color-inverse);
+    }
+
+    &.is-colored-bg {
+        color: inherit;
+        background-color: rgb(255 255 255 / 60%);
+    }
+}
+
+@utility button {
+    /* Compact control, not a text block (Preflight inherits 1.65) */
+    line-height: normal;
+    background: transparent;
+    border: 1px solid var(--color-border-regular);
+    border-radius: 0.2em;
+    padding: 0.5em 1em;
+    transition: 0.05s linear;
+    transition-property: background-color, color;
+    cursor: pointer;
+
+    &:hover:not([disabled]) {
+        background: var(--color-button-hover-bg);
+        border-color: var(--color-button-hover-bg);
+        color: white;
+        box-shadow: 0 0.1em 0 0 rgb(0 0 0 / 10%);
+    }
+
+    &:active:not([disabled]) {
+        box-shadow: none;
+    }
+
+    &[disabled] {
+        border-color: var(--color-border-light);
+        color: var(--color-inactive);
+        cursor: default;
+    }
+
+    /* White */
+    &.is-white {
+        border-color: var(--color-border-inverse-regular);
+        color: var(--color-inverse);
+    }
+
+    &.is-white[disabled] {
+        border-color: var(--color-border-inverse-light);
+        color: var(--color-inverse-inactive);
+    }
+}
+
+@utility input {
+    padding: 0.5em 0.7em;
+    border: 1px solid var(--color-border-regular);
+    border-radius: 0.2em;
+    transition: 0.1s ease;
+    transition-property: box-shadow;
+
+    &:focus {
+        border-color: var(--color-link);
+        outline: none;
+        box-shadow: 0 0 0 5px --alpha(var(--color-link) / 10%);
+    }
+}
+
+/*
+ * Sun/moon theme toggle in the site header: the sun (light) and the
+ * smirking moon (dark) sit stacked in one button and swap with a
+ * roll-and-fade morph whenever the resolved theme changes.
+ */
+.theme-toggle {
+    position: relative;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.1em;
+    cursor: pointer;
+    view-transition-name: theme-toggle;
+    transition: scale 0.15s ease;
+
+    &:hover {
+        scale: 1.1;
+    }
+
+    &:active {
+        scale: 0.9;
+    }
+
+    & svg {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        fill: currentColor;
+    }
+
+    /*
+     * The sun/moon morph only animates once the reader actually flips
+     * the theme (.theme-anim is added on the first toggle click):
+     * some engines play stylesheet transitions during initial render,
+     * which would show a chunk of the morph on every page load.
+     */
+    :root.theme-anim & svg {
+        transition:
+            opacity 0.4s ease,
+            transform 0.5s cubic-bezier(0.3, 1.4, 0.5, 1);
+    }
+
+    /* the moon waits backstage… */
+    & svg:last-of-type {
+        opacity: 0;
+        transform: rotate(-100deg) scale(0.4);
+    }
+
+    @variant dark {
+        /* soft moonlight instead of the daytime ink */
+        filter: drop-shadow(0 0 0.45em rgb(210 220 255 / 35%));
+
+        & svg:first-of-type {
+            opacity: 0;
+            transform: rotate(100deg) scale(0.4);
+        }
+
+        & svg:last-of-type {
+            opacity: 1;
+            transform: none;
+        }
+    }
+}
+
+.icon,
+.svg-inline--fa {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.1em;
+    fill: currentColor;
+}
+
+/*
+ * Hardened screen-reader-only utility. Tailwind's own `sr-only` has no
+ * !important and loses to sizing rules like `figure.is-demo img`
+ * (0,2,1), so markdown images marked {.sr-only} would keep their box.
+ */
+.sr-only {
+    clip: rect(0 0 0 0) !important;
+    clip-path: inset(50%) !important;
+    height: 1px !important;
+    overflow: hidden !important;
+    position: absolute !important;
+    white-space: nowrap !important;
+    width: 1px !important;
+}
+
+.arrow-header {
+    text-align: center;
+    margin-top: 2em;
+
+    &::before {
+        display: block;
+        content: '↓';
+        color: var(--color-inactive);
+        margin-bottom: 2em;
+    }
+}
+
+.notice {
+    display: inline-block;
+    border-radius: 0.25em;
+    padding: 0.5em 1em;
+    color: var(--color-unimportant);
+    background: var(--color-unimportant-bg);
+
+    &.is-inline {
+        display: inline;
+        padding: 0.1em 0.3em;
+        box-decoration-break: clone;
+    }
+
+    &.is-info {
+        color: var(--color-info);
+        background: var(--color-info-bg);
+    }
+
+    &.is-success {
+        color: var(--color-success);
+        background: var(--color-success-bg);
+    }
+
+    &.is-warning {
+        color: var(--color-warning);
+        background: var(--color-warning-bg);
+    }
+
+    &.is-danger {
+        color: var(--color-danger);
+        background: var(--color-danger-bg);
+    }
+
+    &.is-inverse {
+        color: var(--color-inverse);
+        border: 1px solid var(--color-border-inverse-regular);
+        background: transparent;
+    }
+
+    &.is-with-icon {
+        padding-left: 2.3em;
+    }
+
+    &.is-with-icon svg {
+        margin-left: -1.3em;
+        margin-right: 0.3em;
+    }
+
+    &.is-with-big-icon {
+        display: block;
+        padding-top: 0.7em;
+        padding-bottom: 0.7em;
+        padding-left: calc(1.5em * 1.5 + 1em);
+    }
+
+    &.is-with-big-icon svg {
+        font-size: 1.5em;
+        vertical-align: -0.3em;
+        margin-left: -1.5em;
+        margin-right: 0.5em;
+    }
+}
+
+.demo {
+    @apply content-fullwidth;
+    padding: 5em var(--content-padding);
+    margin-bottom: 2.5em;
+    color: var(--color-inverse);
+    background: var(--color-demo-bg);
+
+    &.is-fullwidth {
+        padding-inline: 0;
+    }
+
+    &.is-light {
+        background: var(--color-demo-light-bg);
+        color: var(--color-ink);
+    }
+
+    &.is-small-padding {
+        padding-top: 2.5em;
+        padding-bottom: 2.5em;
+    }
+}
+
+table.key-value-table {
+    @variant max-phone {
+        display: block;
+
+        td,
+        tr,
+        thead,
+        tbody {
+            display: block;
+        }
+
+        td {
+            padding-right: 4vw;
+            padding-left: 4vw;
+        }
+    }
+
+    @variant phone {
+        td:first-child {
+            width: 25%;
+        }
+    }
+}
+
+/*
+ * Post page chrome. The class names are a public hook for per-post
+ * stylesheets (e.g. the Stickyfill post restyles `.post`), so they stay
+ * semantic instead of being inlined as utilities in the layout.
+ */
+.post {
+    padding-top: 2.5em;
+    padding-bottom: 2.5em;
+    background: var(--color-card);
+    box-shadow: 0 0 10px var(--color-card-shadow);
+
+    @variant tablet-overlap {
+        padding-top: 4em;
+        padding-bottom: 4em;
+    }
+
+    @variant pc {
+        padding-top: 11vh;
+        padding-bottom: 11vh;
+    }
+
+    &.is-no-padding-top {
+        padding-top: 0;
+    }
+}
+
+.post__content {
+    @apply content-box;
+}
+
+.post__meta {
+    @apply content-box;
+    padding-top: 2em;
+    color: var(--color-inactive);
+    font-size: var(--text-small);
+}
+
+/* Referenced from .ejs posts (Stickyfill demo) */
+.sticky {
+    position: sticky;
+    top: 0;
+
+    &::before,
+    &::after {
+        content: '';
+        display: table;
+    }
+}

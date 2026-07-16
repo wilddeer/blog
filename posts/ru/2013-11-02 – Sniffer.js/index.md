@@ -20,7 +20,7 @@ langLink: 'sniffer.js'
 
 ## Живой пример
 
-<pre class="pre-wrap"><code id="test_console"></code></pre>
+<pre class="whitespace-pre-wrap"><code id="test_console"></code></pre>
 
 <script src="/js/sniffer.min.js"></script>
 <script>

@@ -1,5 +1,9 @@
+/*
+ * Custom candy Prism theme; colors are light-dark() pairs so the
+ * palette follows the site theme.
+ */
 pre[class*="language-"] {
-  color: #000000;
+  color: light-dark(#000000, #eae7e0);
   font-size: 0.9em;
   direction: ltr;
   text-align: left;
@@ -34,10 +38,10 @@ pre[class*="language-"] {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  color: #949494;
+  color: light-dark(#949494, #948e87);
 }
 .token.punctuation {
-  color: #0037ff;
+  color: light-dark(#0037ff, #8091ff);
 }
 .token.property,
 .token.tag,
@@ -46,7 +50,7 @@ pre[class*="language-"] {
 .token.constant,
 .token.symbol,
 .token.deleted {
-  color: #ff008c;
+  color: light-dark(#ff008c, #ff64b8);
 }
 .token.selector,
 .token.attr-name,
@@ -61,20 +65,20 @@ pre[class*="language-"] {
 .token.url,
 .language-css .token.string,
 .style .token.string {
-  color: #ff0000;
+  color: light-dark(#ff0000, #ff7a6e);
 }
 .token.atrule,
 .token.attr-value,
 .token.keyword {
-  color: #00b3ff;
+  color: light-dark(#00b3ff, #4cc7ff);
 }
 .token.function {
-  color: #ff0000;
+  color: light-dark(#ff0000, #ff7a6e);
 }
 .token.regex,
 .token.important,
 .token.variable {
-  color: #fb00ff;
+  color: light-dark(#fb00ff, #e26bff);
 }
 .token.important,
 .token.bold {
@@ -118,14 +122,14 @@ pre[class*="language-"] > code[class*="language-"] {
 }
 
 .highlight-line-active {
-  background: #fffb8f;
-  box-shadow: inset 5px 0 0 #fffb8f;
+  background: light-dark(#fffb8f, rgb(255 240 100 / 15%));
+  box-shadow: inset 5px 0 0 light-dark(#fffb8f, rgb(255 240 100 / 15%));
 }
 
 .highlight-line-add {
-  background-color: #d7ffd1;
+  background-color: light-dark(#d7ffd1, rgb(80 220 100 / 15%));
 }
 
 .highlight-line-remove {
-  background-color: #ffeeee;
+  background-color: light-dark(#ffeeee, rgb(255 90 80 / 15%));
 }

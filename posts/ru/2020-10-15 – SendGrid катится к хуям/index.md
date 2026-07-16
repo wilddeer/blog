@@ -203,6 +203,6 @@ langLink: 'sendgrid_is_going_to_hell'
 Штош.
 
 **Дисклеймер.** Дорогие юристы! Пост отражает только мое личное отношение к описанным событиям, которое может не совпадать (но не совпадает ли? мы никогда не узнаем) с позицией компании Roger Wilco LLC.
-{.notice .block .is-mt}
+{.notice .mt-6}
 
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

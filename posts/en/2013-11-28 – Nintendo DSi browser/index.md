@@ -4,10 +4,10 @@ description: 'Rare species: Exploring the Nintendo DSi browser.'
 langLink: 'браузер_nintendo_dsi'
 ---
 
-# Nintendo DSi<div class="small">browser</div> {.is-small-mb}
+# Nintendo DSi<div class="text-tiny">browser</div> {.is-small-mb}
 
 <%- include('/svg/history-solid.svg') %>**Rare species:** some time ago I had fun exploring exotic browsers on some not so common devices. This is one of such studies.
-{.notice .is-with-icon .is-info .out-of-the-box .block .is-mb}
+{.notice .is-with-icon .is-info .out-of-the-box .mb-6}
 
 ![](dsi.jpg =960x509)
 {.is-ootb}

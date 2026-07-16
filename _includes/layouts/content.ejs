@@ -1,35 +1,40 @@
 ---
 layout: layouts/base
 ---
+<%_
+    const isRoot = $.tags.includes('root');
+    // Like `link`, but :visited keeps the regular link color
+    const unvisitedLink = 'underline text-link decoration-link/50 hover:no-underline hover:text-white hover:bg-link-hover';
+_%>
 
-<header class="site-header <%= $.tags.includes('root') ? 'is-root' : '' %>">
-    <nav class="site-header__inner">
-        <aside class="site-header__lang-switcher lang-switcher">
-            <% ['ru', 'en'].forEach(el => { %>
+<header class="content-box <%= isRoot ? 'phone:mt-18 pc:mt-[calc(123px+11vh)]' : 'phone:pt-6' %>">
+    <nav class="tablet-overlap:ootb">
+        <aside class="text-smaller mt-8 mb-4 phone:float-right phone:mt-0 phone:pt-2 phone:pl-8">
+            <% ['ru', 'en'].forEach((el, index) => { %>
+                <% const langClass = `inline-block pt-[0.2em] px-[0.3em] pb-[0.1em] uppercase text-[0.9em] tracking-[0.05em] ${index > 0 ? 'ml-[0.6em]' : ''}`; %>
                 <% if ($.lang === el) { %>
-                    <span class="lang-switcher__lang"><%= el %></span>
+                    <span class="<%= langClass %> text-inactive"><%= el %></span>
                 <% } else { %>
                     <a
-                        class="lang-switcher__lang is-link"
+                        class="<%= langClass %> <%= unvisitedLink %>"
                         href="/<%= el !== 'ru' ? `${el}/` : '' %><%= $.langLink ? `${$.langLink}/` : '' %>"
                     ><%= el %></a>
                 <% } %>
             <% }); %>
         </aside>
 
-        <<%= $.tags.includes('root') ? 'h1' : 'div' %> class="site-header__title">
-            <a class="site-header__title-link <%= $.tags.includes('root') ? 'is-root' : '' %>" href="/<%= $.lang !== 'ru' ? `${$.lang}/` : ''%>">
-                Grumpy
-                <span class="site-header__title-blog-and-icon">
-                    <span class="site-header__title-blog">
-                        Blog<!--
-                 --></span><!--
-                 --><span class="site-header__title-icon">
-                        <%- include('/svg/happy-sun.svg') %>
-                    </span>
-                </span>
-            </a>
-        </<%= $.tags.includes('root') ? 'h1' : 'div' %>>
+        <%_ // The title is nowrap so “Blog” never separates from the
+            // sun/moon button (inline-blocks are break opportunities);
+            // the only allowed break is the space after “Grumpy”,
+            // re-enabled on its own span. _%>
+        <<%= isRoot ? 'h1' : 'div' %> class="text-h1 mb-[0.7em] whitespace-nowrap <%= isRoot ? 'tablet-overlap:text-h1-med pc:text-h1-full' : '' %>">
+            <a class="<%= isRoot ? '' : unvisitedLink %>" href="/<%= $.lang !== 'ru' ? `${$.lang}/` : ''%>"><span class="whitespace-normal">Grumpy </span><span class="mr-[0.15em] phone:mr-[0.2em]">Blog</span></a><!--
+         --><button
+                type="button"
+                class="theme-toggle js-theme-toggle text-[0.8em] -translate-y-[0.2em] phone:-translate-y-[0.3em] <%= isRoot ? '' : 'text-link' %>"
+                aria-label="<%= $.lang === 'ru' ? 'Переключить тему' : 'Toggle theme' %>"
+            ><%- include('/svg/happy-sun.svg') %><%- include('/svg/happy-moon.svg') %></button>
+        </<%= isRoot ? 'h1' : 'div' %>>
     </nav>
 </header>
 
@@ -37,75 +42,76 @@ layout: layouts/base
     <%- $.content %>
 </main>
 
-<footer class="footer <%= $.tags.includes('root') ? 'is-root' : '' %>">
+<%_ const footerElClass = `not-last-of-type:after:content-['_•_']`; _%>
+<footer class="content-box mt-12 mb-8 text-inactive text-smaller <%= isRoot ? 'phone:mb-24 pc:mb-[20vh]' : '' %>">
     <% if ($.lang === 'en') { %>
-        <p class="footer__section">
-            <span class="footer__el">
+        <p>
+            <span class="<%= footerElClass %>">
                 Oleg Korsunsky’s Blog
             </span>
 
-            <span class="footer__el">
+            <span class="<%= footerElClass %>">
                 <a class="link" href="https://github.com/wilddeer">GitHub</a>
             </span>
 
-            <span class="footer__el">
+            <span class="<%= footerElClass %>">
                 I work at <a class="link" href="https://brevo.com">Brevo</a>
             </span>
 
-            <span class="footer__el">
+            <span class="<%= footerElClass %>">
                 Comments, bugs, suggestions &rarr; <a class="link" href="mailto:me@grumpy.blog">me@grumpy.blog</a>
             </span>
         </p>
 
-        <p class="footer__section">
-            <% if ($.tags.includes('root')) { %>
-                <span class="footer__el">
+        <p class="mt-2">
+            <% if (isRoot) { %>
+                <span class="<%= footerElClass %>">
                     Tumbleweed icon and happy sun icon by <a class="link" href="https://www.flaticon.com/authors/freepik">Freepik</a> from <a class="link" href="https://www.flaticon.com/">Flaticon</a>
                 </span>
             <% } else { %>
-                <span class="footer__el">
+                <span class="<%= footerElClass %>">
                     Happy sun icon by <a class="link" href="https://www.flaticon.com/authors/freepik">Freepik</a> from <a class="link" href="https://www.flaticon.com/">Flaticon</a>
                 </span>
 
-                <span class="footer__el">
+                <span class="<%= footerElClass %>">
                     Icons by <a class="link" href="https://fontawesome.com/">Font Awesome</a>
                 </span>
             <% } %>
         </p>
     <% } else { %>
-        <p class="footer__section">
-            <span class="footer__el">
+        <p>
+            <span class="<%= footerElClass %>">
                 Бложек Олега Корсунского
             </span>
 
-            <span class="footer__el">
+            <span class="<%= footerElClass %>">
                 <a class="link" href="https://github.com/wilddeer">ГитХаб</a>
             </span>
 
-            <span class="footer__el">
+            <span class="<%= footerElClass %>">
                 <a class="link" href="https://twitter.com/wildir">Твиттер</a>
             </span>
 
-            <span class="footer__el">
+            <span class="<%= footerElClass %>">
                 Работаю в <a class="link" href="https://brevo.com">Брево</a>
             </span>
 
-            <span class="footer__el">
+            <span class="<%= footerElClass %>">
                 Комментарии, баги, замечания &rarr; <a class="link" href="mailto:me@grumpy.blog">me@grumpy.blog</a>
             </span>
         </p>
 
-        <p class="footer__section">
-            <% if ($.tags.includes('root')) { %>
-                <span class="footer__el">
+        <p class="mt-2">
+            <% if (isRoot) { %>
+                <span class="<%= footerElClass %>">
                     Перекати-поле и упоротое солнце — <a class="link" href="https://www.flaticon.com/authors/freepik">Freepik</a> из <a class="link" href="https://www.flaticon.com/">Flaticon</a>
                 </span>
             <% } else { %>
-                <span class="footer__el">
+                <span class="<%= footerElClass %>">
                     Упоротое солнце — <a class="link" href="https://www.flaticon.com/authors/freepik">Freepik</a> из <a class="link" href="https://www.flaticon.com/">Flaticon</a>
                 </span>
 
-                <span class="footer__el">
+                <span class="<%= footerElClass %>">
                     Иконки — <a class="link" href="https://fontawesome.com/">Font Awesome</a>
                 </span>
             <% } %>

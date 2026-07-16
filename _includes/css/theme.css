@@ -1,0 +1,116 @@
+/*
+ * Design tokens.
+ *
+ * The default Tailwind theme is wiped (`--*: initial`) so the generated
+ * CSS contains only this blog's design system. Sizes are intentionally
+ * em-based — the whole design scales off the 1.15em body font size.
+ */
+@theme {
+    --*: initial;
+
+    /*
+     * NB: em, not rem! The whole design scales off the element's font
+     * size, so numeric spacing utilities are em-based: mb-6 = 1.5em,
+     * mt-10 = 2.5em — relative to the element they're applied to.
+     */
+    --spacing: 0.25em;
+
+    /* Fonts (the --default-* pair feeds Preflight's html/pre rules) */
+    --font-sans: 'Nunito', sans-serif;
+    --font-mono: 'Fira Code', monospace;
+    --default-font-family: var(--font-sans);
+    --default-mono-font-family: var(--font-mono);
+
+    /* Breakpoints */
+    --breakpoint-phone: 640px;
+    --breakpoint-tablet: 880px;
+    --breakpoint-tablet-overlap: 960px;
+    --breakpoint-pc: 1200px;
+
+    /*
+     * Colors: light-dark() pairs resolved by the color-scheme set on
+     * <html> — the OS preference by default, or the reader's explicit
+     * choice via the sun/moon toggle (data-theme, see base.css).
+     *
+     * Dark design notes: warm charcoal, not cold slate — the light
+     * paper (#fffff9) carries a drop of warmth, so night surfaces do
+     * too. The dark card reuses #242222, the exact color light-mode
+     * demo blocks always had. Links keep their voltage (#8091ff reads
+     * like #0014ff does on white), and the white-on-red hover is
+     * deliberately identical in both themes.
+     */
+    --color-white: #fff;
+    --color-ink: light-dark(#000, #eae7e0);
+    --color-inactive: light-dark(#6d6d6d, #99928a);
+    --color-inverse: #fff;
+    --color-inverse-tinted: rgb(255 255 255 / 70%);
+    --color-inverse-inactive: rgb(255 255 255 / 15%);
+
+    /* Background colors */
+    --color-paper: light-dark(#fffff9, #1a1817);
+    --color-card: light-dark(#fff, #242222);
+    --color-card-shadow: light-dark(rgb(100 80 0 / 12%), rgb(0 0 0 / 45%));
+    --color-demo-bg: light-dark(#242222, #151312);
+    --color-demo-light-bg: rgb(183 167 167 / 10%);
+    --color-code-bg: rgb(183 167 167 / 10%);
+    --color-table-stripe: light-dark(#f8f8f8, rgb(255 255 255 / 3.5%));
+    --color-kbd-bg: light-dark(#f9f9f9, #34302d);
+    --color-kbd-highlight: light-dark(#fff, rgb(255 255 255 / 14%));
+
+    /* Link colors; --color-link-hover is intentionally theme-invariant */
+    --color-link: light-dark(#0014ff, #8091ff);
+    --color-visited: light-dark(#464da4, #a5a2da);
+    --color-link-hover: #ff0000;
+    --color-button-hover-bg: light-dark(#0014ff, #2d40e8);
+
+    /* Border colors */
+    --color-border-light: light-dark(rgb(0 0 0 / 15%), rgb(255 255 255 / 14%));
+    --color-border-light-opaque: light-dark(#d4d4d4, #4c4743);
+    --color-border-regular: light-dark(rgb(0 0 0 / 30%), rgb(255 255 255 / 32%));
+    --color-border-inverse-light: rgb(255 255 255 / 15%);
+    --color-border-inverse-regular: rgb(255 255 255 / 30%);
+
+    /* State colors: pastel grounds by day, deep tinted grounds by night */
+    --color-danger: light-dark(#ff0000, #ff6f63);
+    --color-danger-bg: light-dark(#fff4f0, #361b15);
+    --color-success: light-dark(#00c500, #35d654);
+    --color-success-bg: light-dark(#dfffdf, #16291a);
+    --color-warning: light-dark(#ff5200, #ff9457);
+    --color-warning-bg: light-dark(#ffe2c5, #33200f);
+    --color-note: light-dark(#ec8300, #eda73d);
+    --color-note-bg: light-dark(#fff9c5, #302710);
+    --color-info: light-dark(#00b9ff, #4cc7ff);
+    --color-info-bg: light-dark(#e5f8ff, #10283a);
+    --color-unimportant: light-dark(#6d6d6d, #99928a);
+    --color-unimportant-bg: light-dark(#f5f3f3, #2c2927);
+
+    /* Type scale */
+    --text-h1: 2.9em;
+    --text-h1--line-height: 1.1;
+    --text-h1-med: 4em;
+    --text-h1-med--line-height: 1.1;
+    --text-h1-full: 6em;
+    --text-h1-full--line-height: 1.1;
+    --text-h1-full-smaller: 5em;
+    --text-h1-full-smaller--line-height: 1.1;
+    --text-h2: 2em;
+    --text-h2--line-height: 1.2;
+    --text-h3: 1.5em;
+    --text-h3--line-height: 1.2;
+    --text-small: 0.9em;
+    --text-smaller: 0.8em;
+    --text-tiny: 0.7em;
+
+    /* Line height */
+    --leading-base: 1.65;
+
+    /*
+     * Content box. `body` is a size query container (see base.css), so
+     * 1cqw is 1% of the viewport width *excluding* the scrollbar —
+     * unlike 1vw. This used to be a JS-computed --vw variable.
+     */
+    --content-padding: calc(4 * min(1cqw, 10px));
+    --content-max-width: 50rem;
+    --content-width: calc(100cqw - var(--content-padding) * 2);
+    --content-ootb-max-width: calc(var(--content-max-width) + var(--content-padding) * 2);
+}
