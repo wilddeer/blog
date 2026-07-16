@@ -57,6 +57,19 @@ _%>
         <!-- favicon -->
         <link rel="icon" type="image/svg+xml" href="/pics/happy-sun.svg">
 
+        <!--
+            fonts used at first paint, fetched in parallel with the
+            render-blocking stylesheet: without preload the browser
+            only discovers them after parsing the CSS, i.e. after the
+            first paint whenever they aren't in cache (the dev server
+            sends no cache headers at all), which flashed the fallback
+            font and its layout on every local reload
+        -->
+        <link rel="preload" href="/fonts/nunito-v14-latin-ext_latin_cyrillic-ext_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/fonts/nunito-v14-latin-ext_latin_cyrillic-ext_cyrillic-italic.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/fonts/nunito-v14-latin-ext_latin_cyrillic-ext_cyrillic-700.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/fonts/fira-code-v9-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin>
+
         <!-- styles -->
         <link rel="stylesheet" href="/css/styles.css">
     </head>
