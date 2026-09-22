@@ -29,7 +29,7 @@ Browser runs on WebKit (looks like a modified version of Chrome). It’s pretty 
 ![Remote control](remote.jpg =184x400)
 {.is-float-right}
 
-The browser is controlled with a remote control (you can optionally plug in keyboard and mouse). The cursor is controlled with directional keys on the remote. Colored keys are contextual. When viewing sites, they control zooming and switching between "moving" and "dragging" cursor modes. Zooming doesn’t affect the viewport size.
+The browser is controlled with a remote control (you can optionally plug in keyboard and mouse). The cursor is controlled with directional keys on the remote. Colored keys are contextual. When viewing sites, they control zooming and switching between “moving” and “dragging” cursor modes. Zooming doesn’t affect the viewport size.
 
 Both `:hover` and `:active` states work fine, but `:active` state is triggered after a short delay.
 

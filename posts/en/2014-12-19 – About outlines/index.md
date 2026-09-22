@@ -53,7 +53,7 @@ However, the outline continues to be annoying when using a mouse. This issue is 
 
 Now browsers are slowly improving and introducing a special focus state for mouse clicks, where the default outline is disabled. However, not all are updating, and if you want a custom style for keyboard focus, nothing can be achieved without hacks and JavaScript.
 
-The situation varies not only between browsers but also among different focusable elements within a single browser. Three types of focusable “clickable” elements—button, link, and element with `tabindex="0"`:
+The situation varies not only between browsers but also among different focusable elements within a single browser. Three types of focusable “clickable” elements – button, link, and element with `tabindex="0"`:
 
 <figure>
     <iframe class="demo-frame js-demo-frame" width="100%" src="/demos/outline-demo/en.html" frameborder="0"></iframe>
@@ -62,7 +62,7 @@ The situation varies not only between browsers but also among different focusabl
     </figcaption>
 </figure>
 
-And now by browser—whether there is an outline after clicking:
+And now by browser – whether there is an outline after clicking:
 
 <table>
     <thead>
@@ -111,7 +111,7 @@ And now by browser—whether there is an outline after clicking:
             <td class="is-true">No</td>
         </tr>
         <tr>
-            <td>IE 7—9</td>
+            <td>IE 7–9</td>
             <td class="is-false">Yes</td>
             <td class="is-false">Yes</td>
             <td class="is-false">Yes</td>

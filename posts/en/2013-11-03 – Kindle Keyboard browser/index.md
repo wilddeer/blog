@@ -137,7 +137,7 @@ Amusingly enough, it supports animations and transitions. [Animation](/en/Pepyak
 
 ## Zoom {#zoom}
 
-Websites not optimized for mobile devices are shown "zoomed-out", while the cursor is replaced with a zooming frame:
+Websites not optimized for mobile devices are shown “zoomed-out”, while the cursor is replaced with a zooming frame:
 
 ![](screen-zoom.gif =600x800)
 

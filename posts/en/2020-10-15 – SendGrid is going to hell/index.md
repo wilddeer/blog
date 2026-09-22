@@ -14,7 +14,7 @@ A year ago, SendGrid was acquired by Twilio, a company with a multibillion-dolla
 
 ## And you are?
 
-In [Chatra](https://chatra.com), besides “reset your password,” there are several features tightly linked to sending emails: in chat conversations, it’s sending unread support replies to the visitor’s email, and a symmetrical feature—sending unread visitor messages to support’s email; in email threads, it’s actually sending email messages from support. All this was recently handled through SendGrid.
+In [Chatra](https://chatra.com), besides “reset your password,” there are several features tightly linked to sending emails: in chat conversations, it’s sending unread support replies to the visitor’s email, and a symmetrical feature – sending unread visitor messages to support’s email; in email threads, it’s actually sending email messages from support. All this was recently handled through SendGrid.
 
 And then one beautiful evening, around 11 PM, our prod tests for sending emails failed. Let’s take this moment as the start of the incident.
 
@@ -24,7 +24,7 @@ It’s worth noting that emails sent through SendGrid could often take several m
 
 If you think about it, this is a terrible delivery speed, especially when email confirmation is required at registration. But we don’t require immediate email confirmation, so it wasn’t a bottleneck in our registration process.
 
-So, I check my phone to make sure it’s a false alarm. But no, the mail still hasn’t arrived. I register a new account in Chatra—no mail. I refresh my mail for about 5 minutes. Fuck.
+So, I check my phone to make sure it’s a false alarm. But no, the mail still hasn’t arrived. I register a new account in Chatra – no mail. I refresh my mail for about 5 minutes. Fuck.
 
 I get up, scratch my ass, and go to the computer. I log into SendGrid and see this:
 
@@ -46,7 +46,7 @@ We remember that, by a happy coincidence, we have another SendGrid account for s
 1.  We still don’t know why the fuck we were banned. Don’t want to trigger a ban on the second account and lose any chance to quickly restore mail delivery.
 2.  Sending mail from new IP addresses might significantly drop deliverability, because mail services are used to receiving our mail from our dedicated IPs, which remain on the main account.
 
-    If you don’t understand what I’m talking about, welcome to the fucked-up world of superlegacy technology encrusted with a bewildering array of makeshift fixes—email.
+    If you don’t understand what I’m talking about, welcome to the fucked-up world of superlegacy technology encrusted with a bewildering array of makeshift fixes – email.
 
 For the second point, we don’t give a shit right now because some deliverability is better than none. But getting a second ban from a service, where we are paying <del>clients</del> hostages, is risky.
 
@@ -143,7 +143,7 @@ Nick from SendGrid writes to us:
 
 And... our account is still banned! AAAAAaaaahaaa-ha-ha-haa-hah-aaaaaahaaahhaa-pffffhhhhhh...
 
-And what about the phishing link? Could someone have spammed this link from Chatra? Nope! Exactly one (one, fucking ONE) email was sent with this link. And the juicy part—where this link came from.
+And what about the phishing link? Could someone have spammed this link from Chatra? Nope! Exactly one (one, fucking ONE) email was sent with this link. And the juicy part – where this link came from.
 
 One of our clients has a Facebook business page connected to Chatra. And someone sent him this link in a chat on that page. The client didn’t read the message in Chatra, and we sent it to their email. Ta-daa, the phishing link went by mail! Quickly ban these sick fucks, we’ll figure it out later.
 

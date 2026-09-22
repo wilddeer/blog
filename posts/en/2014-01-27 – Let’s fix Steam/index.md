@@ -163,7 +163,7 @@ Meanwhile, limiting the functionality of your mobile website is a really bad pra
 
 ## <small class="text-success">Solution</small><br>Responsive design
 
-Responsive design increases the time and complexity of the development, but, on the bright side, it allowes the whole functionality of the site to be available on any device and removes the need to maintain both versions and bother about adding new features to both of them. You still can use a combined approach in particularly difficult situations: generate part of the page on the server differently depending on the device, e. g. serve different picture sizes to different devices, or even substitute some of the templates with more simple or complex ones.
+Responsive design increases the time and complexity of the development, but, on the bright side, it allowes the whole functionality of the site to be available on any device and removes the need to maintain both versions and bother about adding new features to both of them. You still can use a combined approach in particularly difficult situations: generate part of the page on the server differently depending on the device, e.&nbsp;g. serve different picture sizes to different devices, or even substitute some of the templates with more simple or complex ones.
 
 My demo uses mobile first approach, i.&nbsp;e. base styles for small screens, media queries for larger ones.
 

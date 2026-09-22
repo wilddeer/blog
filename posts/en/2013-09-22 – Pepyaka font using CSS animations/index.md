@@ -92,7 +92,7 @@ animation-timing-function: steps(1);
 
 For continuous animation replace `steps()` with `linear` (or just remove `animation-timing-function` completely, as `linear` is used by default).
 
-<del>"Wobbling" strength vary a bit between browsers. I used Chrome to tweak it, it seem to wobble a bit quieter in the others.</del> After yet another update Chrome is wobbling just like the others. That’s great.
+<del>“Wobbling” strength vary a bit between browsers. I used Chrome to tweak it, it seem to wobble a bit quieter in the others.</del> After yet another update Chrome is wobbling just like the others. That’s great.
 
 IE10 on winphone wins the “Tough guy” nomination among the mobile devices. Animates like a boss. Weak mobile webkits constantly loose desync and deliver pretty weak framerate overall. The weakest is Opera Classic on Android (as well as on the desktop, btw).
 
