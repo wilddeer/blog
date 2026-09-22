@@ -24,12 +24,22 @@
         <path d="M258 330q50 54 100-4"/>
     </g>
     <g id="moon">
-    <circle cx="306" cy="306" r="235.9" fill="none" stroke="currentColor" stroke-width="28.2"/>
-    <path d="M223.6,100.1 A21,21 0 1 1 187.8,118.3" fill="none" stroke="currentColor" stroke-width="12" stroke-linecap="round"/>
-    <path d="M434.2,125.0 A13,13 0 0 1 412.5,111.4" fill="none" stroke="currentColor" stroke-width="11" stroke-linecap="round"/>
-    <circle cx="337" cy="143" r="16" fill="none" stroke="currentColor" stroke-width="12"/>
-    <path d="M176.2,267.4 Q194.2,255.4 218.8,262.0 A26.9,26.9 0 1 1 204.2,293.4 Q192.2,283.4 173.2,276.4 A5,5 0 0 1 176.2,267.4 Z"/>
-    <path d="M401.0,267.4 Q419.0,255.4 443.6,262.0 A26.9,26.9 0 1 1 429.0,293.4 Q417.0,283.4 398.0,276.4 A5,5 0 0 1 401.0,267.4 Z"/>
-    <path d="M218.0,367.1 Q308.4,445.3 398.9,357.3" fill="none" stroke="currentColor" stroke-width="28" stroke-linecap="round"/>
+<g fill="none" stroke="currentColor" stroke-width="28" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M306 71A235 235 0 0 1 412.69 96.61C416.34 98.48 419.54 101.22 422.38 104.43C425.21 107.64 427.71 111.26 430.31 114.57C432.91 117.88 435.65 120.84 438.84 123.16C442.03 125.48 445.69 127.17 449.64 128.62C453.59 130.07 457.81 131.33 461.74 133.03C465.67 134.74 469.27 136.93 472.17 139.83A235 235 0 1 1 94.78 409.02C93.38 406.15 92.76 402.91 92.6 399.53C92.43 396.15 92.7 392.64 92.69 389.31C92.69 385.97 92.37 382.82 91.37 379.9C90.36 376.99 88.67 374.31 86.62 371.68C84.57 369.05 82.21 366.45 80.25 363.68C78.3 360.92 76.8 357.98 76.14 354.86A235 235 0 0 1 306 71Z" stroke-width="20"/>
+        <g stroke-width="20">
+            <path d="M178 278Q210 265 244 273"/>
+            <path d="M354 270Q386 257 420 265"/>
+        </g>
+        <g fill="currentColor" stroke="none">
+            <circle cx="229" cy="283" r="18"/>
+            <circle cx="405" cy="275" r="18"/>
+        </g>
+        <path d="M228 365C266 389 323 389 365 367C379 360 390 350 398 339"/>
+        <g stroke-width="14">
+            <ellipse cx="204" cy="167" rx="23" ry="19" transform="rotate(-34 204 167)"/>
+            <circle cx="420" cy="190" r="12"/>
+            <ellipse cx="147" cy="375" rx="11" ry="16" transform="rotate(-24 147 375)"/>
+        </g>
+    </g>
     </g>
 </svg>
