@@ -230,7 +230,7 @@
     a {
         @apply link;
 
-        & svg {
+        & :where(svg) {
             margin-right: 0.2em;
         }
 

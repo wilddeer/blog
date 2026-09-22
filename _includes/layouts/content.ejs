@@ -42,60 +42,43 @@ _%>
     <%- $.content %>
 </main>
 
-<%_ const footerElClass = `not-last-of-type:after:content-['_•_']`; _%>
 <footer class="content-box mt-12 mb-8 text-inactive text-smaller <%= isRoot ? 'phone:mb-24 pc:mb-[20vh]' : '' %>">
     <% if ($.lang === 'en') { %>
-        <p>
-            <span class="<%= footerElClass %>">
+        <p class="bulleted">
+            <span>
                 Oleg Korsunsky’s Blog
             </span>
 
-            <span class="<%= footerElClass %>">
-                <a class="link" href="https://github.com/wilddeer">GitHub</a>
-            </span>
+            <%- include('/modules/socialLinks', { lang: $.lang }) %>
 
-            <span class="<%= footerElClass %>">
-                I work at <a class="link" href="https://brevo.com">Brevo</a>
-            </span>
-
-            <span class="<%= footerElClass %>">
+            <span>
                 Comments, bugs, suggestions &rarr; <a class="link" href="mailto:me@grumpy.blog">me@grumpy.blog</a>
             </span>
         </p>
 
         <% if (!isRoot) { %>
             <p class="mt-2">
-                <span class="<%= footerElClass %>">
+                <span>
                     Icons by <a class="link" href="https://fontawesome.com/">Font Awesome</a>
                 </span>
             </p>
         <% } %>
     <% } else { %>
-        <p>
-            <span class="<%= footerElClass %>">
+        <p class="bulleted">
+            <span>
                 Бложек Олега Корсунского
             </span>
 
-            <span class="<%= footerElClass %>">
-                <a class="link" href="https://github.com/wilddeer">ГитХаб</a>
-            </span>
+            <%- include('/modules/socialLinks', { lang: $.lang }) %>
 
-            <span class="<%= footerElClass %>">
-                <a class="link" href="https://twitter.com/wildir">Твиттер</a>
-            </span>
-
-            <span class="<%= footerElClass %>">
-                Работаю в <a class="link" href="https://brevo.com">Брево</a>
-            </span>
-
-            <span class="<%= footerElClass %>">
+            <span>
                 Комментарии, баги, замечания &rarr; <a class="link" href="mailto:me@grumpy.blog">me@grumpy.blog</a>
             </span>
         </p>
 
         <% if (!isRoot) { %>
             <p class="mt-2">
-                <span class="<%= footerElClass %>">
+                <span>
                     Иконки — <a class="link" href="https://fontawesome.com/">Font Awesome</a>
                 </span>
             </p>

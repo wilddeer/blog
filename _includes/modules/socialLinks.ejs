@@ -1,0 +1,18 @@
+<% // Args: lang. Renders the profile links as items for a `bulleted` container. %>
+<%_
+    const links = $.lang === 'ru'
+        ? [
+            ['github', 'https://github.com/wilddeer', 'ГитХаб'],
+            ['linkedin', 'https://www.linkedin.com/in/oleg-korsunskiy/', 'Линкедин'],
+            ['telegram', 'https://t.me/grumpyblog', 'Шитпосты в телеге'],
+        ]
+        : [
+            ['github', 'https://github.com/wilddeer', 'GitHub'],
+            ['linkedin', 'https://www.linkedin.com/in/oleg-korsunskiy/', 'LinkedIn'],
+        ];
+_%>
+<% links.forEach(([icon, href, text]) => { %>
+    <span>
+        <a class="link icon-link" href="<%= href %>"><%- include(`/svg/${icon}.svg`) %><%= text %></a>
+    </span>
+<% }); %>

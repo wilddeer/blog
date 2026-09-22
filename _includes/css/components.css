@@ -86,6 +86,35 @@
     }
 }
 
+/*
+ * Inline list with small bullets between the items (footer, intro links).
+ * Applied to the container; every child but the last gets a bullet.
+ */
+@utility bulleted {
+    & > :not(:last-of-type)::after {
+        content: '•';
+        margin: 0 0.5em;
+        font-size: 0.6em;
+        vertical-align: 0.3em;
+    }
+}
+
+/*
+ * Link with a leading icon. Flex keeps the gap free of underline; the
+ * text keeps the line's baseline (items-center would synthesize one
+ * from the box edge and lift the text), the icon centers on the line.
+ */
+@utility icon-link {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.3em;
+
+    & > svg {
+        align-self: center;
+        margin: 0;
+    }
+}
+
 @utility kbd {
     display: inline-block;
     box-decoration-break: clone;
