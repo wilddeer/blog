@@ -60,7 +60,7 @@ What if our bot follows the same link right behind the user, but with the parame
 
 As an extra bonus, even if the page has no scripts sending data to Facebook, the bot can add and run them itself.
 
-“Hold on”, you’ll say, “why does the bot go with the parameter? It knows which user it’s following, it could follow the link without the parameter and collect all the information it needs about the page.” The answer is very simple: nobody wants to rewrite the scripts that already collect all the needed information and send it to Facebook. That it ruins someone’s caching and stats is, of course, of no concern to Facebook.
+“Hold on”, you’ll say, “why does the bot go with the parameter? It knows which user it’s following, it could follow the link without the parameter and collect all the information it needs about the page”. The answer is very simple: nobody wants to rewrite the scripts that already collect all the needed information and send it to Facebook. That it ruins someone’s caching and stats is, of course, of no concern to Facebook.
 
 Oh, and the user agent must never ever reveal that it’s a bot, or the haters will block it!
 
