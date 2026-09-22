@@ -11,9 +11,6 @@ langLink: 'how_to_make_a_full-window-width_block_inside_a_block_of_arbitrary_wid
 
 # <%= title %> {.sr-only}
 
-<%- include('/svg/history-solid.svg') %>**Апдейт.** Теперь всё это делается контейнерными единицами и без костылей: объявляем `body` size-контейнером (`container-type: inline-size`) и вместо `100vw` и `50vw` берём `100cqw` и `50cqw`. Они меряют ширину `body`, то есть окно без скроллбара. Этот блог так и свёрстан.
-{.notice .is-with-icon .is-info .mb-10}
-
 Пока переделывал блог, захотелось, чтобы посреди поста можно было ворваться с каким-нибудь блоком во всю ширину окна. Например, вот так:
 
 <figure class="is-demo is-arbitrary" style="background: #011126 no-repeat center/cover url(<%= pic %>); padding-top: 6em; padding-bottom: 6em; text-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);">
@@ -112,51 +109,27 @@ langLink: 'how_to_make_a_full-window-width_block_inside_a_block_of_arbitrary_wid
 
 Оказывается, ширина вертикального скроллбара включается в ширину вьюпорта, то есть `100vw` — это больше, чем нам нужно, и появляется горизонтальный скролл. Не представляю, зачем это сделано именно так, не могу придумать случая, когда это было бы полезным.
 
-<del class="deleted-block">
+<%- include('/svg/history-solid.svg') %>В оригинале пост предлагал тут JS-костыль: скрипт считал ширину окна без скроллбара и клал её в CSS-переменную. С тех пор появилось решение получше.
+{.notice .is-with-icon .is-info}
 
-А счастье было так близко. Окей, время костылей. Гуглением находится один приемлемый костыль: засунуть в `<head>` скрипт, который будет класть в css-переменную `1vw` здорового человека (то есть без учета ширины скроллбара) и пересчитывать его при ресайзах:
-
-```html
-<script>
-(function () {
-    function setVw() {
-        const vw = document.documentElement.clientWidth / 100;
-        document.documentElement.style.setProperty('--vw', `${vw}px`);
-    }
-
-    setVw();
-    window.addEventListener('resize', setVw);
-}());
-</script>
-```
-
-Теперь у нас есть переменная `var(--vw)`, в которой лежит нужное нам количество пикселей. Но по [старой традиции](https://htmlacademy.ru/blog/boost/frontend/graceful-degradation) лучше использовать ее с фоллбеком на обычный `1vw`, вот так: `var(--vw, 1vw)`{.whitespace-nowrap}.
-
-В результате стиль блока превращается в...
+Значит, нужна единица, которая меряет окно без скроллбара. Такая есть: контейнерные единицы. Объявляем `body` size-контейнером:
 
 ```css
-.fullwidth {
-    width: calc(100 * var(--vw, 1vw));
-    margin-left: calc(50% - 50 * var(--vw, 1vw));
+body {
+    container-type: inline-size;
 }
 ```
 
-Мде.
-
-Препроцессоры немного сглаживают эту жесть. Я себе сделал переменную `$vw: var(--vw, 1vw)`{.whitespace-nowrap}, мой стиль теперь выглядит как-то так:
+Теперь `100cqw` — это ширина `body`, то есть ровно ширина окна без скроллбара. Меняем `vw` на `cqw`, и всё:
 
 ```css
-.fullwidth
-    width: calc(100 * $vw)
-    margin-left: calc(50% - (50 * $vw))
+.fullwidth {
+    width: 100cqw;
+    margin-left: calc(50% - 50cqw);
+}
 ```
 
-Жить можно.
-
-</del>
-
-<%- include('/svg/history-solid.svg') %>Костыль больше не нужен, см. апдейт в начале поста.
-{.notice .is-warning .is-with-icon}
+Никаких скриптов, никаких переменных. Этот блог так и свёрстан.
 
 ## P.S. Скроллбары на маке
 

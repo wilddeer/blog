@@ -11,9 +11,6 @@ langLink: 'как_заверстать_блок_во_всю_ширину_окн�
 
 # <%= title %> {.sr-only}
 
-<%- include('/svg/history-solid.svg') %>**Update.** These days all of this is done with container query units and no hacks: declare `body` a size container (`container-type: inline-size`) and use `100cqw` and `50cqw` instead of `100vw` and `50vw`. They measure the width of `body`, that is the window without the scrollbar. This very blog is built that way.
-{.notice .is-with-icon .is-info .mb-10}
-
 While rebuilding the blog I wanted to be able to barge into the middle of a post with some block spanning the full width of the window. Like this:
 
 <figure class="is-demo is-arbitrary" style="background: #011126 no-repeat center/cover url(<%= pic %>); padding-top: 6em; padding-bottom: 6em; text-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);">
@@ -112,51 +109,27 @@ A horizontal scrollbar, where the hell did it come from?
 
 Turns out the width of the vertical scrollbar is included in the viewport width, so `100vw` is more than we need, hence the horizontal scroll. I have no idea why it was made this way, I can’t think of a single case where it would be useful.
 
-<del class="deleted-block">
+<%- include('/svg/history-solid.svg') %>Originally the post suggested a JS hack here: a script measured the window width without the scrollbar and put it into a CSS variable. A better solution has appeared since.
+{.notice .is-with-icon .is-info}
 
-Happiness was so close. Okay, hack time. Googling turns up one acceptable hack: put a script into `<head>` that stores a sane `1vw` (that is, without the scrollbar width) in a CSS variable and recalculates it on resize:
-
-```html
-<script>
-(function () {
-    function setVw() {
-        const vw = document.documentElement.clientWidth / 100;
-        document.documentElement.style.setProperty('--vw', `${vw}px`);
-    }
-
-    setVw();
-    window.addEventListener('resize', setVw);
-}());
-</script>
-```
-
-Now we have a `var(--vw)` variable holding the number of pixels we need. But following [the old tradition](https://developer.mozilla.org/en-US/docs/Glossary/Graceful_degradation) it’s better to use it with a fallback to a regular `1vw`, like this: `var(--vw, 1vw)`{.whitespace-nowrap}.
-
-As a result, the block’s style turns into...
+So we need a unit that measures the window without the scrollbar. There is one: container query units. Declare `body` a size container:
 
 ```css
-.fullwidth {
-    width: calc(100 * var(--vw, 1vw));
-    margin-left: calc(50% - 50 * var(--vw, 1vw));
+body {
+    container-type: inline-size;
 }
 ```
 
-Meh.
-
-Preprocessors smooth this horror out a bit. I made myself a `$vw: var(--vw, 1vw)`{.whitespace-nowrap} variable, and my style now looks something like this:
+Now `100cqw` is the width of `body`, that is exactly the window width without the scrollbar. Swap `vw` for `cqw`, and that’s it:
 
 ```css
-.fullwidth
-    width: calc(100 * $vw)
-    margin-left: calc(50% - (50 * $vw))
+.fullwidth {
+    width: 100cqw;
+    margin-left: calc(50% - 50cqw);
+}
 ```
 
-Livable.
-
-</del>
-
-<%- include('/svg/history-solid.svg') %>The hack is no longer needed, see the update at the top of the post.
-{.notice .is-warning .is-with-icon}
+No scripts, no variables. This very blog is built that way.
 
 ## P.S. Scrollbars on the Mac
 
