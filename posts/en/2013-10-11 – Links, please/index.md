@@ -6,7 +6,7 @@ langLink: 'links,_please'
 
 # Links, please
 
-<%- include('/svg/history-solid.svg') %>The examples referenced in the post are long outdated, but the meaning of the post is still relevant.
+<%- include('/svg/history.svg') %>The examples referenced in the post are long outdated, but the meaning of the post is still relevant.
 {.notice .is-with-icon .is-info .mb-10}
 
 There will come a day when the [most](//twitter.com) [advanced](//instagram.com) [IT companies](//plus.google.com) will finally learn to use links. Those will be good times.
@@ -21,7 +21,7 @@ Buttons work with `click` events, `:hover` and `:active` styles and catch focus 
 
 <div class="text-container notice is-with-big-icon text-smaller mb-6">
 
-<%- include('/svg/umbrella-solid.svg') %>You can use any other element, e.&nbsp;g. `span`, but it won’t be focusable, and <kbd>enter</kbd> won’t trigger `click` event handlers, which is far from ideal for accessibility reasons.
+<%- include('/svg/umbrella.svg') %>You can use any other element, e.&nbsp;g. `span`, but it won’t be focusable, and <kbd>enter</kbd> won’t trigger `click` event handlers, which is far from ideal for accessibility reasons.
 
 You can set `tabindex="0"` to make it focusable and add a `keypress` event listener, or you can just use a `button`, which is also semantically more appropriate.
 
@@ -60,7 +60,7 @@ Result:
 <%- include('proper-link.js') %>
 </script>
 
-In IE8 and lower, click events have `button` property always set to `0`. As a result, middle mouse button clicks also pass the check, but everything else is working just fine. <del>I wouldn’t make a fuss over this, but if you really want to get it working as intended, [you may try](http://unixpapa.com/js/mouse.html).</del> <span class="notice is-info is-inline"><%- include('/svg/history-solid.svg') %> No need, IE8 is long dead.</span>
+In IE8 and lower, click events have `button` property always set to `0`. As a result, middle mouse button clicks also pass the check, but everything else is working just fine. <del>I wouldn’t make a fuss over this, but if you really want to get it working as intended, [you may try](http://unixpapa.com/js/mouse.html).</del> <span class="notice is-info is-inline"><%- include('/svg/history.svg') %> No need, IE8 is long dead.</span>
 
 ## Good guys
 

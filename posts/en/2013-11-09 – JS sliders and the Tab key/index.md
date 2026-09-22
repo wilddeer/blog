@@ -13,7 +13,7 @@ tags:
 
 # JS sliders and the <kbd>Tab</kbd> key
 
-<%- include('/svg/history-solid.svg') %>**Deprecated!** This post contains irrelevant old crap and is left for history and lulz.
+<%- include('/svg/history.svg') %>**Deprecated!** This post contains irrelevant old crap and is left for history and lulz.
 {.notice .is-with-icon .is-warning .mb-10}
 
 Almost every JS slider has one particularly funny bug: the <kbd>Tab</kbd> key breaks them. The slider will inevitably break if a link, placed in one of the slides, cathes focus. Some examples on a [slider that doesn’t break](/en/Peppermint_touch_slider/) (oh, the irony):
@@ -113,7 +113,7 @@ addEvent(dot, 'click', (function(x, d) {
 
 <div class="text-container notice is-with-big-icon text-smaller mb-6">
 
-<%- include('/svg/code-solid.svg') %>Simple and universal `addEvent` function is used above:
+<%- include('/svg/code.svg') %>Simple and universal `addEvent` function is used above:
 
 ::: .pre-contained
 ```js
@@ -128,7 +128,7 @@ function addEvent(el, event, func, bool) {
 </div>
 </del>
 
-<%- include('/svg/history-solid.svg') %>This is a shitty way to get rid of the outlines – you shouldn’t reset the focus position. Use [this method](https://github.com/wilddeer/focus-fix){.is-colored-bg} instead.
+<%- include('/svg/history.svg') %>This is a shitty way to get rid of the outlines – you shouldn’t reset the focus position. Use [this method](https://github.com/wilddeer/focus-fix){.is-colored-bg} instead.
 {.notice .is-warning .is-with-icon}
 
 Now our slider properly works with the keyboard and seems to meet the requirements of the [Web Content Accessibility Guidelines](http://www.w3.org/TR/WCAG20/).

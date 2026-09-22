@@ -78,7 +78,7 @@ langLink: 'ios_7_style_switch'
 - все размеры в `em`-ах, размер переключателя зависит от размера текста,
 - доступен с клавиатуры.
 
-[<%- include('/svg/code-branch.svg') %>Форк ми, бейби](https://github.com/wilddeer/ios7-switch)
+[<%- include('/svg/git-branch.svg') %>Форк ми, бейби](https://github.com/wilddeer/ios7-switch)
 
 ## Разметка
 
@@ -124,7 +124,7 @@ Modernizr.addTest(
 
 </del>
 
-<%- include('/svg/history-solid.svg') %> В 2020 это не проблемы :—)
+<%- include('/svg/history.svg') %> В 2020 это не проблемы :—)
 {.notice .is-success}
 
 Есть проблемы с ошибками округления в некоторых браузерах при определенных размерах шрифта. Обходятся небольшими твиками размера шрифта.

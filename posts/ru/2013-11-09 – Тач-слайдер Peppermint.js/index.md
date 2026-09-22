@@ -10,8 +10,8 @@ tags:
 
 # Тач-слайдер Peppermint {.sr-only}
 
-<%- include('/svg/history-solid.svg') %>**Устаревшая фигня!** Любой агент сделает вам слайдер лучше, современней и на свежих нативных технологиях с одного промпта.
-{.notice .is-with-icon .is-warning .mb-10}
+<%- include('/svg/history.svg') %>**Устаревшая фигня!** Любой агент сделает вам слайдер лучше, современней и на свежих нативных технологиях с одного промпта.
+{.notice .is-with-icon .is-warning .mt-10 .mb-10}
 
 <link rel="stylesheet" href="/css/peppermint.suggested.css">
 
@@ -25,7 +25,7 @@ tags:
     <p class="h3">Правильный тач-слайдер</p>
     <p>
       <a href="https://github.com/wilddeer/Peppermint" class="github">
-        <%- include('/svg/github-alt-brands.svg') %>
+        <%- include('/svg/github.svg') %>
         Форкни меня
       </a>
     </p>
@@ -36,7 +36,7 @@ tags:
   </figure>
   <figure class="green">
       <h2 class="h2">Работает везде</h2>
-      <p>Работает на <%- include('/svg/apple-brands.svg') %>&nbsp;айфонах, <%- include('/svg/android-brands.svg') %>&nbsp;андроидах, <%- include('/svg/windows-brands.svg') %>&nbsp;винфонах. Не зависит от сторонних библиотек. Работает в <%- include('/svg/internet-explorer-brands.svg') %>&nbsp;IE7+.</p>
+      <p>Работает на <%- include('/svg/apple.svg') %>&nbsp;айфонах, <%- include('/svg/android.svg') %>&nbsp;андроидах, <%- include('/svg/windows.svg') %>&nbsp;винфонах. Не зависит от сторонних библиотек. Работает в <%- include('/svg/internet-explorer.svg') %>&nbsp;IE7+.</p>
   </figure>
   <figure class="blue">
     <p class="h2"><a href="/Слайдеры_и_кнопка_Tab/">Дружит</a> с кнопкой <kbd class="kbd">Tab</kbd></p>

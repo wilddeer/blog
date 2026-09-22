@@ -8,7 +8,7 @@ tags:
 
 # About the `@viewport`
 
-<%- include('/svg/history-solid.svg') %>**Depricated!** Over the past years, windows phones and IE have died, and other browsers decided not to support `@viewport`{.is-colored-bg}.
+<%- include('/svg/history.svg') %>**Depricated!** Over the past years, windows phones and IE have died, and other browsers decided not to support `@viewport`{.is-colored-bg}.
 {.notice .is-with-icon .is-warning}
 
 Originally translated by [Varya Stepanova](http://varya.me/) and posted on [Frontend Babel](http://frontendbabel.info/articles/about-viewport/).
@@ -100,7 +100,7 @@ Advantages:
 
 - Responsiveness in IE on Windows 8
 - Native viewport in IE on Windows Phones
-- <del>Future-proof!</del> <span class="notice is-info is-inline"><%- include('/svg/history-solid.svg') %> Nope.</span>
+- <del>Future-proof!</del> <span class="notice is-info is-inline"><%- include('/svg/history.svg') %> Nope.</span>
 
 Drawbacks:
 

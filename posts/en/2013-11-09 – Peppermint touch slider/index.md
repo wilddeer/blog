@@ -10,8 +10,8 @@ tags:
 
 # Peppermint touch slider {.sr-only}
 
-<%- include('/svg/history-solid.svg') %>**Deprecated!** Any agent will build you a better, more modern slider on fresh native tech from a single prompt.
-{.notice .is-with-icon .is-warning .mb-10}
+<%- include('/svg/history.svg') %>**Deprecated!** Any agent will build you a better, more modern slider on fresh native tech from a single prompt.
+{.notice .is-with-icon .is-warning .mt-10 .mb-10}
 
 <link rel="stylesheet" href="/css/peppermint.suggested.css">
 
@@ -25,7 +25,7 @@ tags:
     <p class="h3">Proper touch slider</p>
     <p>
       <a href="https://github.com/wilddeer/Peppermint" class="github">
-        <%- include('/svg/github-alt-brands.svg') %>
+        <%- include('/svg/github.svg') %>
         Fork me on GitHub
       </a>
     </p>
@@ -36,7 +36,7 @@ tags:
   </figure>
   <figure class="green">
       <h2 class="h2">Works everywhere</h2>
-      <p>Works on <%- include('/svg/apple-brands.svg') %>&nbsp;iPhones, <%- include('/svg/android-brands.svg') %>&nbsp;Androids, <%- include('/svg/windows-brands.svg') %>&nbsp;Winphones. Library agnostic. <%- include('/svg/internet-explorer-brands.svg') %>&nbsp;IE7+ compatible.</p>
+      <p>Works on <%- include('/svg/apple.svg') %>&nbsp;iPhones, <%- include('/svg/android.svg') %>&nbsp;Androids, <%- include('/svg/windows.svg') %>&nbsp;Winphones. Library agnostic. <%- include('/svg/internet-explorer.svg') %>&nbsp;IE7+ compatible.</p>
   </figure>
   <figure class="blue">
     <p class="h2"><a href="/en/JS_sliders_and_the_Tab_key/">On good terms</a> with the <kbd class="kbd">Tab</kbd> key</p>

@@ -109,7 +109,7 @@ A horizontal scrollbar, where the hell did it come from?
 
 Turns out the width of the vertical scrollbar is included in the viewport width, so `100vw` is more than we need, hence the horizontal scroll. I have no idea why it was made this way, I can’t think of a single case where it would be useful.
 
-<%- include('/svg/history-solid.svg') %>Originally the post suggested a JS hack here: a script measured the window width without the scrollbar and put it into a CSS variable. A better solution has appeared since.
+<%- include('/svg/history.svg') %>Originally the post suggested a JS hack here: a script measured the window width without the scrollbar and put it into a CSS variable. A better solution has appeared since.
 {.notice .is-with-icon .is-info}
 
 So we need a unit that measures the window without the scrollbar. There is one: container query units. Declare `body` a size container:

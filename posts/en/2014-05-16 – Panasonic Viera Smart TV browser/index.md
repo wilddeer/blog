@@ -6,7 +6,7 @@ langLink: 'браузер_panasonic_viera_smart_tv'
 
 # Panasonic Viera Smart TV<div class="text-tiny">browser (TX-LR32E6)</div> {.is-small-mb}
 
-<%- include('/svg/history-solid.svg') %>**Rare species:** some time ago I had fun exploring exotic browsers on some not so common devices. This is one of such studies.
+<%- include('/svg/history.svg') %>**Rare species:** some time ago I had fun exploring exotic browsers on some not so common devices. This is one of such studies.
 {.notice .is-with-icon .is-info .out-of-the-box .mb-6}
 
 ![](tv.jpg =960x450)

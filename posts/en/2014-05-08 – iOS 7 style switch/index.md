@@ -78,7 +78,7 @@ iOS 7 switch imitation. Made it initially for new [Pepyaka](http://pepyaka.su/en
 - made with `em`s, sizes approprietaly to the font size,
 - keyboard accessible.
 
-[<%- include('/svg/code-branch.svg') %>Fork me, baby](https://github.com/wilddeer/ios7-switch)
+[<%- include('/svg/git-branch.svg') %>Fork me, baby](https://github.com/wilddeer/ios7-switch)
 
 ## Markup
 
@@ -124,7 +124,7 @@ and modified stylesheet – <a href="https://raw.githubusercontent.com/wilddeer/
 
 </del>
 
-<%- include('/svg/history-solid.svg') %> No longer relevant in 2020 :—)
+<%- include('/svg/history.svg') %> No longer relevant in 2020 :—)
 {.notice .is-success}
 
 Has some rounding error problems in some browsers at some font sizes. Tweak the font size a bit to get rid of those.

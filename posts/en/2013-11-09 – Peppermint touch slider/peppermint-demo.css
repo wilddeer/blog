@@ -153,6 +153,8 @@
 }
 
 .stage.peppermint kbd {
+    /* the hero looks the same in both themes, so the key stays light */
+    color-scheme: light;
     color: #333;
     text-shadow: none;
 }

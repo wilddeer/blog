@@ -69,7 +69,7 @@ And one thing that really got to me: they write right on the landing that they a
 
 ### Fucking black holes for investments
 
-<%- include('/svg/couch-solid.svg') %>**Caution:** couch analytics
+<%- include('/svg/sofa.svg') %>**Caution:** couch analytics
 {.notice .is-with-icon .is-warning}
 
 Most Silicon Valley companies are now developing not for users, but for investors.

@@ -8,7 +8,7 @@ tags:
 
 # Тестирование адаптивных сайтов {.is-small-mb}
 
-<%- include('/svg/history-solid.svg') %>**Устаревшая фигня!** Этот пост содержит неактуальное старье и оставлен для истории и лулзов.
+<%- include('/svg/history.svg') %>**Устаревшая фигня!** Этот пост содержит неактуальное старье и оставлен для истории и лулзов.
 {.notice .is-with-icon .is-warning .out-of-the-box .mb-6}
 
 ![](whiteboard.jpg =900x506)
@@ -20,7 +20,7 @@ Blackberry.
 Если вы Лев Толстой не только на словах, то все перечисленное — ваш обязательный
 минимум, который вы радостно расширяете любыми попадающимися под руку железками и эмуляторами.
 
-<%- include('/svg/comment-regular.svg') %>Чем больше вы используете [принцип прогрессивного улучшения](https://en.wikipedia.org/wiki/Progressive_enhancement), [грамотные фоллбеки](https://en.wikipedia.org/wiki/Fault_tolerance) и [ненавязчивый javascript](https://en.wikipedia.org/wiki/Unobtrusive_JavaScript), тем проще тестировать и исправлять сайт на всем зоопарке железок, и тем лучше сайт будет выглядеть там, где вы его даже не задумывались протестировать.
+<%- include('/svg/message-circle.svg') %>Чем больше вы используете [принцип прогрессивного улучшения](https://en.wikipedia.org/wiki/Progressive_enhancement), [грамотные фоллбеки](https://en.wikipedia.org/wiki/Fault_tolerance) и [ненавязчивый javascript](https://en.wikipedia.org/wiki/Unobtrusive_JavaScript), тем проще тестировать и исправлять сайт на всем зоопарке железок, и тем лучше сайт будет выглядеть там, где вы его даже не задумывались протестировать.
 {.notice .is-with-big-icon .text-smaller}
 
 ## Коротко про десктопные браузеры

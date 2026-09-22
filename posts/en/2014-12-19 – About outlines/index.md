@@ -14,7 +14,7 @@ tags:
 
 # About outlines
 
-<%- include('/svg/history-solid.svg') %>**Deprecated!** Luckily, outlines haven’t been a problem in modern browsers for ages.
+<%- include('/svg/history.svg') %>**Deprecated!** Luckily, outlines haven’t been a problem in modern browsers for ages.
 {.notice .is-with-icon .is-warning .mb-10}
 
 There’s a banal problem with default outlines: you click on a link or a button, and an <span class="outline-demo js-outline-demo">outline</span> appears. This annoys novice developers, and they joyfully kill it using something like `*:focus {outline: none}`. Experienced developers know that you can’t kill the outline because it helps with navigation using a keyboard and assistive devices.

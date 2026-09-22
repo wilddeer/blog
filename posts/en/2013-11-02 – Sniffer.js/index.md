@@ -8,7 +8,7 @@ tags:
 
 # [Sniffer.js](https://github.com/wilddeer/Sniffer)
 
-<%- include('/svg/history-solid.svg') %>**Deprecated!** The library has been unmaintained for ages, go find something fresher.
+<%- include('/svg/history.svg') %>**Deprecated!** The library has been unmaintained for ages, go find something fresher.
 {.notice .is-with-icon .is-warning .block}
 
 ## If you can’t detect it, you should sniff it! {.mt-0}

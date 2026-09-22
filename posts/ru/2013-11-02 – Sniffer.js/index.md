@@ -8,7 +8,7 @@ tags:
 
 # [Sniffer.js](https://github.com/wilddeer/Sniffer)
 
-<%- include('/svg/history-solid.svg') %>**Устаревшая фигня!** Библиотека давно не поддерживается, поищите что-то посвежее.
+<%- include('/svg/history.svg') %>**Устаревшая фигня!** Библиотека давно не поддерживается, поищите что-то посвежее.
 {.notice .is-with-icon .is-warning .block}
 
 ## If you can’t detect it, you should sniff it! {.mt-0}

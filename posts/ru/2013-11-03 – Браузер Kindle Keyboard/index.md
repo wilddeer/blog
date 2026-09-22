@@ -6,7 +6,7 @@ langLink: 'kindle_keyboard_browser'
 
 # <div class="text-tiny">Браузер</div>Kindle Keyboard {.is-small-mb}
 
-<%- include('/svg/history-solid.svg') %>**Редкие звери:** когда-то давно я развлекался исследованием экзотических браузеров на всяких не сильно распространенных устройствах. Это — одно из таких исследований.
+<%- include('/svg/history.svg') %>**Редкие звери:** когда-то давно я развлекался исследованием экзотических браузеров на всяких не сильно распространенных устройствах. Это — одно из таких исследований.
 {.notice .is-with-icon .is-info .out-of-the-box .mb-6}
 
 ![](kindle-keyboard.jpg =960x510)

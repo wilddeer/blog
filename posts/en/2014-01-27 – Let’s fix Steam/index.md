@@ -142,7 +142,7 @@ tags:
 
 # Let’s fix Steam
 
-<%- include('/svg/history-solid.svg') %>**Deprecated!** This post contains irrelevant old crap and is left for history and lulz.
+<%- include('/svg/history.svg') %>**Deprecated!** This post contains irrelevant old crap and is left for history and lulz.
 {.notice .is-with-icon .is-warning .mb-10}
 
 Everything is good about [Steam](http://store.steampowered.com/), except for its website. All the great ideas Valve guys come up with recieve a pretty poor frontend implementation.
