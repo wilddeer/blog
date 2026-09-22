@@ -117,6 +117,34 @@ _%>
                         // day breaks (or night falls) in a circle from the toggle
                         const transition = document.startViewTransition(() => apply(next));
 
+                        // The snapshot hides the page from hit-testing for the whole
+                        // transition: the button would lose :hover under it and
+                        // visibly re-grow once the transition ends. Emulate hover
+                        // meanwhile: pointermove still reaches the window, so hold
+                        // the hover scale exactly while the pointer stays over the
+                        // button and drop it the moment it leaves.
+                        if (button.matches(':hover')) {
+                            const rect = button.getBoundingClientRect();
+                            const cx = rect.left + rect.width / 2;
+                            const cy = rect.top + rect.height / 2;
+                            const half = button.offsetWidth * 1.1 / 2; // hovered size
+
+                            const settle = () => {
+                                removeEventListener('pointermove', track);
+                                button.classList.remove('is-switching');
+                            };
+                            const track = e => {
+                                if (Math.abs(e.clientX - cx) > half || Math.abs(e.clientY - cy) > half) {
+                                    settle();
+                                }
+                            };
+
+                            button.classList.add('is-switching');
+                            addEventListener('pointermove', track);
+                            // real :hover is back in the frame the snapshot goes away
+                            transition.finished.finally(() => requestAnimationFrame(settle));
+                        }
+
                         transition.ready.then(() => {
                             const rect = button.getBoundingClientRect();
                             const x = rect.left + rect.width / 2;

@@ -190,10 +190,15 @@
     height: 1em;
     vertical-align: -0.1em;
     cursor: pointer;
-    view-transition-name: theme-toggle;
     transition: scale 0.15s ease;
 
-    &:hover {
+    /*
+     * .is-switching emulates :hover during the theme switch (base.ejs):
+     * the view-transition snapshot hides the page from hit-testing, so
+     * the real :hover is lost for the whole transition.
+     */
+    &:hover,
+    &.is-switching {
         scale: 1.1;
     }
 
