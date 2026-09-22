@@ -11,6 +11,9 @@ langLink: 'как_заверстать_блок_во_всю_ширину_окн�
 
 # <%= title %> {.sr-only}
 
+<%- include('/svg/history-solid.svg') %>**Update.** These days all of this is done with container query units and no hacks: declare `body` a size container (`container-type: inline-size`) and use `100cqw` and `50cqw` instead of `100vw` and `50vw`. They measure the width of `body`, that is the window without the scrollbar. This very blog is built that way.
+{.notice .is-with-icon .is-info .mb-10}
+
 While rebuilding the blog I wanted to be able to barge into the middle of a post with some block spanning the full width of the window. Like this:
 
 <figure class="is-demo is-arbitrary" style="background: #011126 no-repeat center/cover url(<%= pic %>); padding-top: 6em; padding-bottom: 6em; text-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);">
@@ -152,7 +155,7 @@ Livable.
 
 </del>
 
-<%- include('/svg/history-solid.svg') %>The hack is no longer needed: make `body` a size container (`container-type: inline-size`), and `100cqw` gives you the window width without the scrollbar. This very blog is built that way.
+<%- include('/svg/history-solid.svg') %>The hack is no longer needed, see the update at the top of the post.
 {.notice .is-warning .is-with-icon}
 
 ## P.S. Scrollbars on the Mac

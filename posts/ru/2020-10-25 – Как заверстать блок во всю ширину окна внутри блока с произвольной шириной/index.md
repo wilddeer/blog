@@ -11,6 +11,9 @@ langLink: 'how_to_make_a_full-window-width_block_inside_a_block_of_arbitrary_wid
 
 # <%= title %> {.sr-only}
 
+<%- include('/svg/history-solid.svg') %>**Апдейт.** Теперь всё это делается контейнерными единицами и без костылей: объявляем `body` size-контейнером (`container-type: inline-size`) и вместо `100vw` и `50vw` берём `100cqw` и `50cqw`. Они меряют ширину `body`, то есть окно без скроллбара. Этот блог так и свёрстан.
+{.notice .is-with-icon .is-info .mb-10}
+
 Пока переделывал блог, захотелось, чтобы посреди поста можно было ворваться с каким-нибудь блоком во всю ширину окна. Например, вот так:
 
 <figure class="is-demo is-arbitrary" style="background: #011126 no-repeat center/cover url(<%= pic %>); padding-top: 6em; padding-bottom: 6em; text-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);">
@@ -152,7 +155,7 @@ langLink: 'how_to_make_a_full-window-width_block_inside_a_block_of_arbitrary_wid
 
 </del>
 
-<%- include('/svg/history-solid.svg') %>Костыль больше не нужен: сделайте `body` size-контейнером (`container-type: inline-size`), и `100cqw` даст ширину окна без скроллбара. Этот блог так и свёрстан.
+<%- include('/svg/history-solid.svg') %>Костыль больше не нужен, см. апдейт в начале поста.
 {.notice .is-warning .is-with-icon}
 
 ## P.S. Скроллбары на маке
