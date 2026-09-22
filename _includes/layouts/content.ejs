@@ -63,21 +63,13 @@ _%>
             </span>
         </p>
 
-        <p class="mt-2">
-            <% if (isRoot) { %>
-                <span class="<%= footerElClass %>">
-                    Tumbleweed icon and happy sun icon by <a class="link" href="https://www.flaticon.com/authors/freepik">Freepik</a> from <a class="link" href="https://www.flaticon.com/">Flaticon</a>
-                </span>
-            <% } else { %>
-                <span class="<%= footerElClass %>">
-                    Happy sun icon by <a class="link" href="https://www.flaticon.com/authors/freepik">Freepik</a> from <a class="link" href="https://www.flaticon.com/">Flaticon</a>
-                </span>
-
+        <% if (!isRoot) { %>
+            <p class="mt-2">
                 <span class="<%= footerElClass %>">
                     Icons by <a class="link" href="https://fontawesome.com/">Font Awesome</a>
                 </span>
-            <% } %>
-        </p>
+            </p>
+        <% } %>
     <% } else { %>
         <p>
             <span class="<%= footerElClass %>">
@@ -101,20 +93,12 @@ _%>
             </span>
         </p>
 
-        <p class="mt-2">
-            <% if (isRoot) { %>
-                <span class="<%= footerElClass %>">
-                    Перекати-поле и упоротое солнце — <a class="link" href="https://www.flaticon.com/authors/freepik">Freepik</a> из <a class="link" href="https://www.flaticon.com/">Flaticon</a>
-                </span>
-            <% } else { %>
-                <span class="<%= footerElClass %>">
-                    Упоротое солнце — <a class="link" href="https://www.flaticon.com/authors/freepik">Freepik</a> из <a class="link" href="https://www.flaticon.com/">Flaticon</a>
-                </span>
-
+        <% if (!isRoot) { %>
+            <p class="mt-2">
                 <span class="<%= footerElClass %>">
                     Иконки — <a class="link" href="https://fontawesome.com/">Font Awesome</a>
                 </span>
-            <% } %>
-        </p>
+            </p>
+        <% } %>
     <% } %>
 </footer>
