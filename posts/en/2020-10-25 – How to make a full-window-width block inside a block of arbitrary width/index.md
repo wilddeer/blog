@@ -109,6 +109,8 @@ A horizontal scrollbar, where the hell did it come from?
 
 Turns out the width of the vertical scrollbar is included in the viewport width, so `100vw` is more than we need, hence the horizontal scroll. I have no idea why it was made this way, I can’t think of a single case where it would be useful.
 
+<del class="deleted-block">
+
 Happiness was so close. Okay, hack time. Googling turns up one acceptable hack: put a script into `<head>` that stores a sane `1vw` (that is, without the scrollbar width) in a CSS variable and recalculates it on resize:
 
 ```html
@@ -147,6 +149,11 @@ Preprocessors smooth this horror out a bit. I made myself a `$vw: var(--vw, 1vw)
 ```
 
 Livable.
+
+</del>
+
+<%- include('/svg/history-solid.svg') %>The hack is no longer needed: make `body` a size container (`container-type: inline-size`), and `100cqw` gives you the window width without the scrollbar. This very blog is built that way.
+{.notice .is-warning .is-with-icon}
 
 ## P.S. Scrollbars on the Mac
 
