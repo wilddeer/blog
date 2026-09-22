@@ -14,7 +14,7 @@ A year ago, SendGrid was acquired by Twilio, a company with a multibillion-dolla
 
 ## And you are?
 
-In [Chatra](https://chatra.com), besides “reset your password,” there are several features tightly linked to sending emails: in chat conversations, it’s sending unread support replies to the visitor’s email, and a symmetrical feature – sending unread visitor messages to support’s email; in email threads, it’s actually sending email messages from support. All this was recently handled through SendGrid.
+In [Chatra](https://chatra.com), besides “reset your password”, there are several features tightly linked to sending emails: in chat conversations, it’s sending unread support replies to the visitor’s email, and a symmetrical feature – sending unread visitor messages to support’s email; in email threads, it’s actually sending email messages from support. All this was recently handled through SendGrid.
 
 And then one beautiful evening, around 11 PM, our prod tests for sending emails failed. Let’s take this moment as the start of the incident.
 
@@ -33,7 +33,7 @@ I get up, scratch my ass, and go to the computer. I log into SendGrid and see th
 
 What the fuck? These assholes just blocked our mail? We send millions of messages a month, pay these fuckers a shitload of money, we have a 98% “everything is awesome, you are totally not spammers” rating in their own system, and they just block our mail delivery in production without any warning?
 
-A question “what the fuck” flies into support chat (with more cultured English epithets, as it’s not me writing), to which support waffles and responds that our issue is very important, “I have elevated your ticket priority.” Meanwhile, the ticket priority remains somewhere around “not fucking urgent,” support is blatantly lying. Any further questions are met with support feeding us shit-stuffed cabbage rolls.
+A question “what the fuck” flies into support chat (with more cultured English epithets, as it’s not me writing), to which support waffles and responds that our issue is very important, “I have elevated your ticket priority”. Meanwhile, the ticket priority remains somewhere around “not fucking urgent”, support is blatantly lying. Any further questions are met with support feeding us shit-stuffed cabbage rolls.
 
 ## 2 hours from the start of the incident {.arrow-header}
 
@@ -122,7 +122,7 @@ SendGrid sends a copypaste response to a month-old ticket!!1
 
 ![](valued_motherfucking_customer.png =691x303)
 
-And in this ticket, our last message was “thanks, we figured it out ourselves, close the ticket.” In the ticket about the account ban, still silence.
+And in this ticket, our last message was “thanks, we figured it out ourselves, close the ticket”. In the ticket about the account ban, still silence.
 
 ## 7 days from the start of the incident {.arrow-header}
 
