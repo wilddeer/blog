@@ -26,7 +26,7 @@ If it’s a bot, it most likely follows links left by users for some reason. So 
 
 I made a local trap, proxied it to the internet with [ngrok](https://ngrok.com/) and put the link into my Instagram profile. Nothing happened. But then I tapped the link: my browser showed up in the online visitors, and about 10 seconds later the headless Facebook stinker came along too.
 
-I poked the stinker with a stick from every side. Interesting details came up that could well be used to identify and filter it, but I’m not going to tell you about them here because *EHEHE TRADE SECRET*. But I also noticed a detail I had missed from the very beginning: the bot came to the page with a `?fbclid=xxxx...`{.whitespace-nowrap} parameter added. And googling that parameter does turn up something interesting.
+I poked the stinker with a stick from every side. Interesting details came up that could well be used to identify and filter it, but I’m not going to tell you about them here because *TRADE SECRET EHEHE*. But I also noticed a detail I had missed from the very beginning: the bot came to the page with a `?fbclid=xxxx...`{.whitespace-nowrap} parameter added. And googling that parameter does turn up something interesting.
 
 What follows is a timeline I pieced together from scraps of information on the internet, my own and other people’s assumptions and guesswork. That is, **not fucking reliable information at all**.
 
