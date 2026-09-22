@@ -1,6 +1,7 @@
 ---
 description: 'Невероятная детективная история. Кто же окажется злодеем? Никогда, блядь, не догадаетесь!'
 image: cover.jpg
+langLink: 'headless_browser__how_facebook_saved_its_tracking'
 ---
 
 # Браузер без головы:<div class="text-tiny">как Фейсбук спасал свой трекинг</div>

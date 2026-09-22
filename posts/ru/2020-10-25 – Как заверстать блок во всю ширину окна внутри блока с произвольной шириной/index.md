@@ -1,6 +1,7 @@
 ---
 description: 'Пока переделывал блог, захотелось, чтобы посреди поста можно было ворваться с каким-нибудь блоком во всю ширину окна.'
 image: cover.jpg?v=2
+langLink: 'how_to_make_a_full-window-width_block_inside_a_block_of_arbitrary_width'
 ---
 
 <%
