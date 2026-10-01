@@ -22,6 +22,12 @@ permalink: en/
     </p>
 </div>
 
+<%- include('/modules/projectsList', { lang: $.lang }) %>
+
+<div class="text">
+    <h2>Scribbles</h2>
+</div>
+
 <%-
     include('/modules/postsList', {
         posts: $.collections.post,

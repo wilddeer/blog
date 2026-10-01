@@ -1,0 +1,39 @@
+<% // Args: lang. Our projects with their favicons; both sites have the same ru/en locales. %>
+<%_
+    // 10% off at Close Enough's Lemon Squeezy checkout
+    const promoCode = 'IREADABANDONEDBLOGS';
+
+    // `text` is raw HTML: escape `&` and friends by hand
+    const projects = [
+        {
+            name: 'Close Enough',
+            href: `https://closeenough.ai/${$.lang}`,
+            // black/white like the original favicon, not the link color
+            icon: include('/svg/close-enough.svg'),
+            text: {
+                ru: `Дешёвые и честные AI-портреты: загружаешь три селфи, через 5 минут получаешь 24 фотки для Линкедина. С промокодом <code>${promoCode}</code> ещё на 10% дешевле.`,
+                en: `Cheap &amp; honest AI headshots: upload three selfies, get 24 photos for your LinkedIn in 5 minutes. Use <code>${promoCode}</code> for another 10% off.`
+            }
+        },
+        {
+            name: 'Celebrity.Compare',
+            href: `https://celebrity.compare/${$.lang}`,
+            // the site has no vector favicon, only this 180px PNG
+            icon: '<img class="w-[1em] h-[1em] self-center" src="/pics/celebrity-compare.png" width="180" height="180" alt="">',
+            text: {
+                ru: 'Поиск похожих знаменитостей, который работает: 146k+ знаменитостей, 300k+ фоток. Лендинг собран на коленке и пылился два года, пока я с клодом внезапно не собрал продукт за выходные.',
+                en: 'A celebrity lookalike finder that doesn’t suck: 146K+ celebrities, 300K+ photos. The landing page was slapped together and gathered dust for two years, until I suddenly built the actual product with claude over a weekend.'
+            }
+        }
+    ];
+_%>
+<div class="text">
+    <h2><%= $.lang === 'ru' ? 'Пет-проекты' : 'Pet projects' %></h2>
+
+    <% projects.forEach(({ name, href, icon, text }) => { %>
+        <div class="mb-[1.2em]">
+            <a class="icon-link text-[1.2em]" href="<%= href %>"><%- icon %><%= name %></a>
+            <div><%- text[$.lang] %></div>
+        </div>
+    <% }); %>
+</div>

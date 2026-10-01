@@ -1,0 +1,6 @@
+<svg class="icon" style="color: light-dark(#000, #fff)" xmlns="http://www.w3.org/2000/svg" viewBox="96 96 320 320" aria-hidden="true">
+    <g fill="none" stroke="currentColor" stroke-width="44" stroke-linecap="round">
+        <path d="M120 196C163 140 213 140 256 196C299 252 349 252 392 196"/>
+        <path d="M120 316C163 260 213 260 256 316C299 372 349 372 392 316"/>
+    </g>
+</svg>

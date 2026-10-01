@@ -1,6 +1,6 @@
 <% // Args: posts, lang %>
 <%_
-    const titleClass = 'text-[1.5em] mt-8 mb-1';
+    const titleClass = 'text-[1.25em] mt-8 mb-1';
     // Empty-years heading: gray, flex so the icon centers on the text
     const emptyTitleClass = `${titleClass} text-inactive flex items-center`;
     const tumbleClass = 'leading-[0] text-[1.5em] ml-[0.2em]';
@@ -39,32 +39,32 @@ _%>
     <% } %>
 
     <% if (yearHeading === 2014) { %>
-        <h2 class="<%= emptyTitleClass %>">
+        <h3 class="<%= emptyTitleClass %>">
             2015...2019
             <span class="<%= tumbleClass %>">
                 <%- include('/svg/tumbleweed.svg') %>
             </span>
-        </h2>
+        </h3>
     <% } %>
 
     <% if (yearHeading === 2021) { %>
-        <h2 class="<%= emptyTitleClass %>">
+        <h3 class="<%= emptyTitleClass %>">
             2024...2025
             <span class="<%= tumbleClass %>">
                 <%- include('/svg/jamon.svg') %>
             </span>
-        </h2>
+        </h3>
 
-        <h2 class="<%= emptyTitleClass %>">
+        <h3 class="<%= emptyTitleClass %>">
             2022...2023
             <a class="<%= tumbleClass %>" href="https://t.me/grumpyblog/42">
                 <%- include('/svg/khinkali.svg') %>
             </a>
-        </h2>
+        </h3>
     <% } %>
 
     <% if (yearHeading) { %>
-        <h2 class="<%= titleClass %>"><%= yearHeading %></h2>
+        <h3 class="<%= titleClass %>"><%= yearHeading %></h3>
 
         <ul class="mb-6">
     <% } %>
